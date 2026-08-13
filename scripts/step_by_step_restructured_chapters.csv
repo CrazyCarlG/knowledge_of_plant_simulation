@@ -1,0 +1,48 @@
+new_level,parent_chapter,new_chapter,start_page,end_page,page_count,source_scope
+1,,01. Onboarding and Plant Simulation Basics,1471,1521,51,Step-by-Step Help; Getting to Know Plant Simulation
+2,01. Onboarding and Plant Simulation Basics,01.1 Step-by-Step Help Entry,1471,1471,1,Step-by-Step Help
+2,01. Onboarding and Plant Simulation Basics,01.2 Simulation and Modeling Concepts,1472,1479,8,Simulation and Modeling Concepts
+2,01. Onboarding and Plant Simulation Basics,01.3 Getting Started in the UI and Basic Operations,1480,1521,42,"Getting to Know Plant Simulation; Working with Plant Simulation, Basics"
+1,,02. Core Model Construction Workflow,1522,1620,99,Modeling the Material Flow; Creating a Simulation Model
+2,02. Core Model Construction Workflow,02.1 Material Flow Chapter Entry,1522,1523,2,Modeling the Material Flow
+2,02. Core Model Construction Workflow,02.2 Classes Libraries and Toolboxes,1524,1568,45,Creating a Simulation Model; Introducing Classes; Working with Classes in the Class Library; Working with Objects in the Toolbox
+2,02. Core Model Construction Workflow,02.3 Frame Modeling Simulation Control and Drag-and-Drop,1569,1620,52,Modeling Hierarchically; Working with the Frame; EventController; Drag-and-Drop
+1,,03. Material Flow Fundamentals,1621,1773,153,"Modeling the Flow of Materials, Basics"
+2,03. Material Flow Fundamentals,03.1 Sources Routing and Transfer Logic,1621,1691,71,Sources; Work Plan; Transfer Strategies; FlowControl; TransferStation
+2,03. Material Flow Fundamentals,03.2 Processing Setup Failures Buffers and Inventory,1692,1739,48,Set-up; Processing Times; Failures; Buffers; Store Inventory
+2,03. Material Flow Fundamentals,03.3 Pull Systems Carriers and Line Balancing,1740,1773,34,Supermarket; Stacking; Workpiece Carriers; Production Line Balancing
+1,,04. Advanced Material Flow Behavior,1774,1842,69,"Random Processes; Modeling the Flow of Materials, Advanced"
+2,04. Advanced Material Flow Behavior,04.1 Randomness and Distributions,1774,1778,5,Modeling Random Processes
+2,04. Advanced Material Flow Behavior,04.2 Controls Sensors Observers and Distance Control,1779,1842,64,Customizing Object Behavior; Entrance/Exit Controls; Sensors; Observers; Distance Control
+1,,05. Fluids Energy Workforce and Shift Logic,1843,2055,213,Fluids; Costs; Power; Workers; Shift; Lockout
+2,05. Fluids Energy Workforce and Shift Logic,05.1 Fluids and Free-Flowing Materials,1843,1884,42,Simulating Free-Flowing Materials and Fluids
+2,05. Fluids Energy Workforce and Shift Logic,05.2 Cost and Power Analysis,1885,1906,22,Accrued Costs; Power Consumption
+2,05. Fluids Energy Workforce and Shift Logic,05.3 Worker Modeling and Job Execution,1907,2028,122,Modeling Workers and the Jobs They Do
+2,05. Fluids Energy Workforce and Shift Logic,05.4 Shift Calendars and Lockout Zones,2029,2055,27,Modeling a Shift System; Modeling a Lockout Zone
+1,,06. Assembly Robots and Conveyance Patterns,2056,2220,165,Assembly; Dismantle; PickAndPlace; Converter; AngularConverter; Turnplate; Turntable
+2,06. Assembly Robots and Conveyance Patterns,06.1 Assembly and Dismantling Workflows,2056,2109,54,AssemblyStation; Dismantle Station
+2,06. Assembly Robots and Conveyance Patterns,06.2 PickAndPlace Robot Scenarios,2110,2174,65,Pick and Place Parts with the PickAndPlace Robot
+2,06. Assembly Robots and Conveyance Patterns,06.3 Converter and Turntable-Based Routing Patterns,2175,2220,46,Converter; AngularConverter; Turnplate; Turntable
+1,,07. Transport Systems and Experimentation,2221,2357,137,Transport Systems; DataFit; Experiments; Packaging
+2,07. Transport Systems and Experimentation,07.1 Conveyor Track AGV and Battery Transport Systems,2221,2324,104,Modeling Transport Systems
+2,07. Transport Systems and Experimentation,07.2 DataFit Preparation and Distribution Fitting,2325,2333,9,Preparing Data for the Simulation with DataFit
+2,07. Transport Systems and Experimentation,07.3 ExperimentManager and Genetic Optimization,2334,2355,22,Running Simulation Experiments
+2,07. Transport Systems and Experimentation,07.4 Packaging and Sharing Models,2356,2357,2,Pack a Model and Send It to Another User
+1,,08. 3D Scene and Object Foundations,2358,2455,98,Visualizing the Material Flow
+2,08. 3D Scene and Object Foundations,08.1 Scene Navigation Camera and Grid Control,2358,2389,32,Visualizing intro; Scene; View control; Grid
+2,08. 3D Scene and Object Foundations,08.2 Object Placement Transformation and Frame Editing,2390,2455,66,Objects in Frame; Length-oriented Objects; Capacity; Context Menus; 2D-3D adaptation
+1,,09. Graphics and Animation Authoring,2456,2588,133,Graphics; Animation objects and paths; MU animation; Joints and Poses
+2,09. Graphics and Animation Authoring,09.1 Graphics Authoring and State Visualization,2456,2508,53,Working with Graphics
+2,09. Graphics and Animation Authoring,09.2 Building Animation-Capable Simulation Objects,2509,2540,32,Creating a Simulation Object with Animation; Complex Receiving Department
+2,09. Graphics and Animation Authoring,09.3 Animation Paths MU Animation Joints and Poses,2541,2588,48,Animation Paths; MU Animation; Joints and Poses
+1,,10. Realism Media and Omniverse Output,2589,2633,45,Realistic model; optimization; video; Omniverse
+2,10. Realism Media and Omniverse Output,10.1 Realistic Scene Construction and Graphic Optimization,2589,2619,31,Creating a Realistic Looking Model; Optimizing a Graphic
+2,10. Realism Media and Omniverse Output,10.2 Model Optimization Video and Omniverse Publishing,2620,2633,14,Optimizing the Model; Recording a Video; Visualizing in Omniverse
+1,,11. Runtime Animation Statistics and Interaction,2634,2783,150,Animation runtime; statistics; interactive UI actions
+2,11. Runtime Animation Statistics and Interaction,11.1 Runtime Animation and Icon Behavior,2634,2638,5,Animating the Simulation Model
+2,11. Runtime Animation Statistics and Interaction,11.2 Statistics Charts Reports and Visual Analytics,2639,2765,127,Viewing and Visualizing Statistics
+2,11. Runtime Animation Statistics and Interaction,11.3 Interactive Controls State Toggles and Actions,2766,2783,18,Toggling States and Executing Actions
+1,,12. Data Integration and Parameterization,2784,2930,147,Importing Data; Lists/Tables; Socket; Parameters
+2,12. Data Integration and Parameterization,12.1 Data Import Export Databases and External Media,2784,2827,44,Importing and Exporting Data; External Program Data
+2,12. Data Integration and Parameterization,12.2 Lists Tables and Network Socket Exchange,2828,2875,48,Working with Lists and Tables; Exchange Data via a Network Socket
+2,12. Data Integration and Parameterization,12.3 Dialog-Based and AttributeExplorer Parameterization,2876,2930,55,Setting Parameters in the Model; Own Dialog; AttributeExplorer

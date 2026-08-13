@@ -1,0 +1,13 @@
+new_level,new_chapter,start_page,end_page,page_count,source_scope
+1,01. SimTalk Overview and Migration,9105,9116,12,"SimTalk Reference; SimTalk 2.0 and SimTalk 1.0 Compared; A Quick Tour Through SimTalk 2.0"
+1,02. Language Fundamentals,9117,9223,107,"General Access to SimTalk; Names; Constant Values; Variables; Parameters in SimTalk"
+1,03. Data Types and Expressions,9224,9332,109,"Data Types; Operators and Expressions"
+1,04. Control Flow and Error Handling,9333,9369,37,"Control Flow Statements"
+1,05. Predefined Functions I (OS/Math/String/DateTime),9370,9472,103,"Predefined Functions: Operating System; Mathematical; Bit; String; Date/Time"
+1,06. Predefined Functions II (HTTP and Utilities),9473,9644,172,"Predefined Functions: HTTP Server Communication; Miscellaneous Global Functions"
+1,07. Predefined Functions III (Type Query/InputOutput/Conversion/Debug),9645,9743,99,"Predefined Functions: Type Query; Input; Output; Type Conversion; Debugging"
+1,08. 3D API Fundamentals (Window/Object/Appearance),9744,9867,124,"SimTalk Access to 3D Functions: Intro to Store Appearance"
+1,09. 3D Animation and Motion Control,9868,10051,184,"Length-oriented Objects; Extrusion; Animation Area; MU/Self/Camera/RobotArm Animations; Joints; Poses"
+1,10. 3D Graphics Modeling (Worker/Shapes/Properties),10052,10295,244,"Worker; Graphic Shape Methods/Attributes/Properties"
+1,11. 3D Graphics Advanced (Graphics Groups/State/PointCloud/Video),10296,10393,98,"Graphics; Detailed Graphics; Graphic Groups; State Graphics; Point Clouds; Video Recording"
+1,12. Deprecated and Unsupported SimTalk Names,10394,10418,25,"Outdated SimTalk Names; No Longer Supported SimTalk Names of the 2D Visualization"
