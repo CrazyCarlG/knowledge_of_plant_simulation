@@ -1,0 +1,1083 @@
+2,Information Flow Objects,6493,7481,11. Objects Reference Help,11. Objects Reference Help
+3,Information Flow Objects,6493,6494,Information Flow Objects,11. Objects Reference Help
+3,Method,6495,6653,Information Flow Objects,11. Objects Reference Help
+4,Method [object],6495,6497,Method,11. Objects Reference Help
+4,Programming a Method,6498,6501,Method,11. Objects Reference Help
+4,Working in the Method Window,6502,6506,Method,11. Objects Reference Help
+4,Calling a Method,6507,6507,Method,11. Objects Reference Help
+4,Colors for Syntax Highlighting,6508,6509,Method,11. Objects Reference Help
+4,Working with Breakpoints,6510,6511,Method,11. Objects Reference Help
+4,States of the Method,6512,6512,Method,11. Objects Reference Help
+4,The Method Editor,6512,6599,Method,11. Objects Reference Help
+5,The Method Editor,6512,6512,The Method Editor,11. Objects Reference Help
+5,Edit Ribbon Tab,6513,6561,The Method Editor,11. Objects Reference Help
+6,Edit Ribbon Tab [Method],6513,6516,Edit Ribbon Tab,11. Objects Reference Help
+6,Import from File,6517,6517,Edit Ribbon Tab,11. Objects Reference Help
+6,Export to File [source code],6518,6518,Edit Ribbon Tab,11. Objects Reference Help
+6,Print [source code],6519,6519,Edit Ribbon Tab,11. Objects Reference Help
+6,Find Text,6519,6531,Edit Ribbon Tab,11. Objects Reference Help
+7,Find Text [in Method],6519,6520,Find Text,11. Objects Reference Help
+7,Find What,6521,6521,Find Text,11. Objects Reference Help
+7,Regular Expressions,6522,6522,Find Text,11. Objects Reference Help
+7,Replace With,6523,6523,Find Text,11. Objects Reference Help
+7,Match Whole Word Only,6524,6524,Find Text,11. Objects Reference Help
+7,Match Case,6525,6525,Find Text,11. Objects Reference Help
+7,Regular Expression,6526,6526,Find Text,11. Objects Reference Help
+7,Direction [in Search],6527,6527,Find Text,11. Objects Reference Help
+7,Find Next [source code],6528,6528,Find Text,11. Objects Reference Help
+7,Replace [source code],6529,6529,Find Text,11. Objects Reference Help
+7,Mark All,6530,6530,Find Text,11. Objects Reference Help
+7,Replace All,6531,6531,Find Text,11. Objects Reference Help
+6,Find Previous [source code],6532,6532,Edit Ribbon Tab,11. Objects Reference Help
+6,Find Next [source code],6533,6533,Edit Ribbon Tab,11. Objects Reference Help
+6,Incremental Search,6534,6534,Edit Ribbon Tab,11. Objects Reference Help
+6,Undo [source code],6535,6535,Edit Ribbon Tab,11. Objects Reference Help
+6,Redo [source code],6536,6536,Edit Ribbon Tab,11. Objects Reference Help
+6,Auto Complete,6537,6539,Edit Ribbon Tab,11. Objects Reference Help
+6,Toggle Comment,6540,6540,Edit Ribbon Tab,11. Objects Reference Help
+6,Increase Indent,6541,6541,Edit Ribbon Tab,11. Objects Reference Help
+6,Decrease Indent,6542,6542,Edit Ribbon Tab,11. Objects Reference Help
+6,Reformat Selection,6543,6543,Edit Ribbon Tab,11. Objects Reference Help
+6,Move Up [source code],6544,6544,Edit Ribbon Tab,11. Objects Reference Help
+6,Move Down [source code],6545,6545,Edit Ribbon Tab,11. Objects Reference Help
+6,Line Operations,6546,6546,Edit Ribbon Tab,11. Objects Reference Help
+6,Select Template,6546,6548,Edit Ribbon Tab,11. Objects Reference Help
+7,Select Template,6546,6547,Select Template,11. Objects Reference Help
+7,Create Your Own Method Templates,6548,6548,Select Template,11. Objects Reference Help
+6,Insert Control Structure,6549,6559,Edit Ribbon Tab,11. Objects Reference Help
+7,Insert Control Structure,6549,6550,Insert Control Structure,11. Objects Reference Help
+7,if-else,6551,6551,Insert Control Structure,11. Objects Reference Help
+7,if-else-end,6552,6552,Insert Control Structure,11. Objects Reference Help
+7,if-elseif-end,6553,6553,Insert Control Structure,11. Objects Reference Help
+7,switch-case-end,6554,6554,Insert Control Structure,11. Objects Reference Help
+7,switch-case-else-end,6555,6555,Insert Control Structure,11. Objects Reference Help
+7,while-end,6556,6556,Insert Control Structure,11. Objects Reference Help
+7,repeat-until,6557,6557,Insert Control Structure,11. Objects Reference Help
+7,for-next,6558,6558,Insert Control Structure,11. Objects Reference Help
+7,for-downto-next,6559,6559,Insert Control Structure,11. Objects Reference Help
+6,Inherit Source Code,6560,6560,Edit Ribbon Tab,11. Objects Reference Help
+6,Apply Changes [source code],6561,6561,Edit Ribbon Tab,11. Objects Reference Help
+6,Help on Word,6562,6562,Edit Ribbon Tab,11. Objects Reference Help
+5,Tools Ribbon Tab,6562,6596,The Method Editor,11. Objects Reference Help
+6,Tools Ribbon Tab,6562,6565,Tools Ribbon Tab,11. Objects Reference Help
+6,Run [button] - Method,6566,6566,Tools Ribbon Tab,11. Objects Reference Help
+6,Debug Method [button],6567,6567,Tools Ribbon Tab,11. Objects Reference Help
+6,Toggle Bookmarks,6568,6568,Tools Ribbon Tab,11. Objects Reference Help
+6,Clear All Bookmarks,6569,6569,Tools Ribbon Tab,11. Objects Reference Help
+6,Previous Bookmark,6570,6570,Tools Ribbon Tab,11. Objects Reference Help
+6,Next Bookmark,6571,6571,Tools Ribbon Tab,11. Objects Reference Help
+6,Toggle Class Breakpoint,6572,6573,Tools Ribbon Tab,11. Objects Reference Help
+6,Toggle Instance Breakpoint,6574,6575,Tools Ribbon Tab,11. Objects Reference Help
+6,Delete All Class Breakpoints,6576,6576,Tools Ribbon Tab,11. Objects Reference Help
+6,Delete All Instance Breakpoints,6577,6577,Tools Ribbon Tab,11. Objects Reference Help
+6,Delete All Breakpoints [Tools ribbon],6578,6578,Tools Ribbon Tab,11. Objects Reference Help
+6,Previous Breakpoint [Tools ribbon],6579,6579,Tools Ribbon Tab,11. Objects Reference Help
+6,Next Breakpoint [Tools ribbon],6580,6580,Tools Ribbon Tab,11. Objects Reference Help
+6,Toggle Outline,6581,6581,Tools Ribbon Tab,11. Objects Reference Help
+6,Previous Outline,6582,6582,Tools Ribbon Tab,11. Objects Reference Help
+6,Next Outline,6583,6583,Tools Ribbon Tab,11. Objects Reference Help
+6,Collapse All Outlines,6584,6584,Tools Ribbon Tab,11. Objects Reference Help
+6,Expand All Outlines,6585,6585,Tools Ribbon Tab,11. Objects Reference Help
+6,Hide/Unhide Text,6586,6586,Tools Ribbon Tab,11. Objects Reference Help
+6,Encrypt Method,6587,6587,Tools Ribbon Tab,11. Objects Reference Help
+6,Decrypt Method,6588,6588,Tools Ribbon Tab,11. Objects Reference Help
+6,New Syntax [command],6589,6590,Tools Ribbon Tab,11. Objects Reference Help
+6,Syntax-controlled Indentation [Tools ribbon],6591,6591,Tools Ribbon Tab,11. Objects Reference Help
+6,Show Line Numbers [Tools ribbon],6592,6592,Tools Ribbon Tab,11. Objects Reference Help
+6,View,6592,6596,Tools Ribbon Tab,11. Objects Reference Help
+7,View [Method],6592,6593,View,11. Objects Reference Help
+7,Show Outlining [Method],6594,6594,View,11. Objects Reference Help
+7,Highlight Current Line [source code],6595,6595,View,11. Objects Reference Help
+7,Show Completion Tooltip [command],6596,6596,View,11. Objects Reference Help
+5,Context Menu of the Method,6597,6598,The Method Editor,11. Objects Reference Help
+5,Drag-and-Drop in the Method Editor,6599,6599,The Method Editor,11. Objects Reference Help
+4,The Method Debugger,6600,6630,Method,11. Objects Reference Help
+5,Method Debugger,6600,6602,The Method Debugger,11. Objects Reference Help
+6,Remarks,6600,6602,Method Debugger,11. Objects Reference Help
+6,See also,6603,6603,Method Debugger,11. Objects Reference Help
+6,Video on YouTube,6603,6603,Method Debugger,11. Objects Reference Help
+5,Watch Window,6603,6611,The Method Debugger,11. Objects Reference Help
+6,Watch Window [described],6603,6603,Watch Window,11. Objects Reference Help
+7,Open the Watch Window,6603,6603,Watch Window [described],11. Objects Reference Help
+7,See also,6603,6603,Watch Window [described],11. Objects Reference Help
+6,Tab Variables [Watch window],6604,6604,Watch Window,11. Objects Reference Help
+7,Remarks,6604,6604,Tab Variables [Watch window],11. Objects Reference Help
+7,See also,6604,6604,Tab Variables [Watch window],11. Objects Reference Help
+6,Tab Anonymous Indentifiers,6604,6606,Watch Window,11. Objects Reference Help
+7,Tab Anonymous Identifiers [Watch window],6604,6605,Tab Anonymous Indentifiers,11. Objects Reference Help
+8,Remarks,6604,6604,Tab Anonymous Identifiers [Watch window],11. Objects Reference Help
+8,See also,6605,6605,Tab Anonymous Identifiers [Watch window],11. Objects Reference Help
+8,Video on YouTube,6605,6605,Tab Anonymous Identifiers [Watch window],11. Objects Reference Help
+7,"@ [at sign, Method Debugger]",6606,6606,Tab Anonymous Indentifiers,11. Objects Reference Help
+7,"? [question mark, Method Debugger]",6607,6607,Tab Anonymous Indentifiers,11. Objects Reference Help
+6,Tab Call Stack [Watch window],6607,6607,Watch Window,11. Objects Reference Help
+7,,6608,6608,Tab Call Stack [Watch window],11. Objects Reference Help
+7,Remarks,6608,6608,Tab Call Stack [Watch window],11. Objects Reference Help
+7,SimTalk,6608,6608,Tab Call Stack [Watch window],11. Objects Reference Help
+7,Video on YouTube,6608,6608,Tab Call Stack [Watch window],11. Objects Reference Help
+6,Tab Call Chains [Watch window],6608,6608,Watch Window,11. Objects Reference Help
+7,,6608,6608,Tab Call Chains [Watch window],11. Objects Reference Help
+7,Remarks,6608,6608,Tab Call Chains [Watch window],11. Objects Reference Help
+7,Video on YouTube,6609,6609,Tab Call Chains [Watch window],11. Objects Reference Help
+6,Tab Suspended [Watch window],6609,6610,Watch Window,11. Objects Reference Help
+7,,6609,6609,Tab Suspended [Watch window],11. Objects Reference Help
+7,Remarks,6609,6609,Tab Suspended [Watch window],11. Objects Reference Help
+7,SimTalk,6610,6610,Tab Suspended [Watch window],11. Objects Reference Help
+7,See also,6611,6611,Tab Suspended [Watch window],11. Objects Reference Help
+7,Video on YouTube,6611,6611,Tab Suspended [Watch window],11. Objects Reference Help
+6,Tab Expressions [Watch window],6611,6611,Watch Window,11. Objects Reference Help
+7,,6611,6611,Tab Expressions [Watch window],11. Objects Reference Help
+7,Remarks,6611,6611,Tab Expressions [Watch window],11. Objects Reference Help
+7,Video on YouTube,6611,6611,Tab Expressions [Watch window],11. Objects Reference Help
+5,Toolbar of the Method Debugger,6612,6612,The Method Debugger,11. Objects Reference Help
+5,Menu Bar of the Method Debugger,6613,6627,The Method Debugger,11. Objects Reference Help
+6,Menu Bar of the Method Debugger,6613,6613,Menu Bar of the Method Debugger,11. Objects Reference Help
+6,File Menu [Method Debugger],6613,6613,Menu Bar of the Method Debugger,11. Objects Reference Help
+6,Edit Menu [Method Debugger],6613,6613,Menu Bar of the Method Debugger,11. Objects Reference Help
+6,Navigate Menu,6613,6613,Menu Bar of the Method Debugger,11. Objects Reference Help
+7,Navigate Menu,6613,6613,Navigate Menu,11. Objects Reference Help
+7,Open Frame [Method Debugger],6613,6613,Navigate Menu,11. Objects Reference Help
+6,Debug Menu,6614,6626,Menu Bar of the Method Debugger,11. Objects Reference Help
+7,Debug Menu,6614,6614,Debug Menu,11. Objects Reference Help
+7,Stop On,6614,6614,Debug Menu,11. Objects Reference Help
+8,Stop on Controls,6614,6614,Stop On,11. Objects Reference Help
+8,Stop on Formulas,6614,6614,Stop On,11. Objects Reference Help
+8,Stop on Error Handler,6615,6615,Stop On,11. Objects Reference Help
+8,Stop on Wakeup,6615,6615,Stop On,11. Objects Reference Help
+7,On Step Into [submenu],6615,6616,Debug Menu,11. Objects Reference Help
+8,Step into Controls,6615,6615,On Step Into [submenu],11. Objects Reference Help
+8,Step into Formulas,6615,6615,On Step Into [submenu],11. Objects Reference Help
+8,Step into Encrypted Methods,6616,6616,On Step Into [submenu],11. Objects Reference Help
+7,Ignore,6617,6617,Debug Menu,11. Objects Reference Help
+7,Step Over,6618,6618,Debug Menu,11. Objects Reference Help
+8,Remarks,6618,6618,Step Over,11. Objects Reference Help
+8,Video on YouTube,6619,6619,Step Over,11. Objects Reference Help
+7,Step Into,6619,6619,Debug Menu,11. Objects Reference Help
+8,Remarks,6619,6619,Step Into,11. Objects Reference Help
+8,Video on YouTube,6620,6620,Step Into,11. Objects Reference Help
+7,Step Out,6620,6620,Debug Menu,11. Objects Reference Help
+8,Remarks,6620,6620,Step Out,11. Objects Reference Help
+8,Video on YouTube,6621,6621,Step Out,11. Objects Reference Help
+7,Continue [method execution],6621,6621,Debug Menu,11. Objects Reference Help
+7,Run to Cursor,6621,6621,Debug Menu,11. Objects Reference Help
+8,Remarks,6621,6621,Run to Cursor,11. Objects Reference Help
+7,Set Next Statement,6622,6622,Debug Menu,11. Objects Reference Help
+8,Remarks,6622,6622,Set Next Statement,11. Objects Reference Help
+7,Return From Current Call Chain,6622,6622,Debug Menu,11. Objects Reference Help
+7,Terminate Simulation,6623,6623,Debug Menu,11. Objects Reference Help
+7,Restart Simulation,6623,6623,Debug Menu,11. Objects Reference Help
+8,Remarks,6623,6623,Restart Simulation,11. Objects Reference Help
+7,Class Breakpoint,6623,6623,Debug Menu,11. Objects Reference Help
+8,Remarks,6623,6623,Class Breakpoint,11. Objects Reference Help
+7,Instance Breakpoint,6624,6624,Debug Menu,11. Objects Reference Help
+7,Breakpoint Active [Debug menu],6624,6624,Debug Menu,11. Objects Reference Help
+8,See also,6624,6624,Breakpoint Active [Debug menu],11. Objects Reference Help
+7,Breakpoint Settings,6624,6624,Debug Menu,11. Objects Reference Help
+8,Breakpoint Settings [Debug menu],6624,6624,Breakpoint Settings,11. Objects Reference Help
+9,Active,6625,6625,Breakpoint Settings [Debug menu],11. Objects Reference Help
+9,Start Time,6625,6625,Breakpoint Settings [Debug menu],11. Objects Reference Help
+9,Condition,6625,6625,Breakpoint Settings [Debug menu],11. Objects Reference Help
+9,See also,6625,6625,Breakpoint Settings [Debug menu],11. Objects Reference Help
+7,Next Breakpoint [Debug menu],6625,6625,Debug Menu,11. Objects Reference Help
+8,See also,6625,6625,Next Breakpoint [Debug menu],11. Objects Reference Help
+7,Previous Breakpoint [Debug menu],6625,6625,Debug Menu,11. Objects Reference Help
+8,See also,6626,6626,Previous Breakpoint [Debug menu],11. Objects Reference Help
+7,Delete Class Breakpoints,6626,6626,Debug Menu,11. Objects Reference Help
+8,See also,6626,6626,Delete Class Breakpoints,11. Objects Reference Help
+7,Delete Instance Breakpoints,6626,6626,Debug Menu,11. Objects Reference Help
+8,See also,6626,6626,Delete Instance Breakpoints,11. Objects Reference Help
+7,Delete All Breakpoints [Debug menu],6626,6626,Debug Menu,11. Objects Reference Help
+8,Remarks,6626,6626,Delete All Breakpoints [Debug menu],11. Objects Reference Help
+8,See also,6626,6626,Delete All Breakpoints [Debug menu],11. Objects Reference Help
+7,Delete Breakpoints in All Methods,6626,6626,Debug Menu,11. Objects Reference Help
+8,Remarks,6626,6626,Delete Breakpoints in All Methods,11. Objects Reference Help
+8,SimTalk,6627,6627,Delete Breakpoints in All Methods,11. Objects Reference Help
+7,Watch Window [Debug menu],6627,6627,Debug Menu,11. Objects Reference Help
+8,See also,6627,6627,Watch Window [Debug menu],11. Objects Reference Help
+6,View Menu,6627,6627,Menu Bar of the Method Debugger,11. Objects Reference Help
+7,View Menu [Method],6627,6627,View Menu,11. Objects Reference Help
+7,MUs and States [Method Debugger],6627,6627,View Menu,11. Objects Reference Help
+8,Remarks,6627,6627,MUs and States [Method Debugger],11. Objects Reference Help
+8,See also,6627,6627,MUs and States [Method Debugger],11. Objects Reference Help
+6,Tools Menu,6627,6627,Menu Bar of the Method Debugger,11. Objects Reference Help
+7,Tools Menu,6627,6627,Tools Menu,11. Objects Reference Help
+7,User-defined Attributes [Method Debugger],6628,6628,Tools Menu,11. Objects Reference Help
+7,Rename [Method],6628,6628,Tools Menu,11. Objects Reference Help
+6,Help Menu [Method Debugger],6628,6628,Menu Bar of the Method Debugger,11. Objects Reference Help
+7,Help on Debugger,6628,6628,Help Menu [Method Debugger],11. Objects Reference Help
+7,Help on Word,6628,6628,Help Menu [Method Debugger],11. Objects Reference Help
+5,Context Menu of the Method Debugger,6628,6630,The Method Debugger,11. Objects Reference Help
+6,Context Menu of the Method Debugger,6628,6628,Context Menu of the Method Debugger,11. Objects Reference Help
+7,See also,6629,6629,Context Menu of the Method Debugger,11. Objects Reference Help
+6,Breakpoint Active [context menu],6629,6629,Context Menu of the Method Debugger,11. Objects Reference Help
+7,See also,6629,6629,Breakpoint Active [context menu],11. Objects Reference Help
+6,Breakpoint Settings [context menu],6629,6629,Context Menu of the Method Debugger,11. Objects Reference Help
+7,See also,6629,6629,Breakpoint Settings [context menu],11. Objects Reference Help
+6,Open Object [Method Debugger],6629,6629,Context Menu of the Method Debugger,11. Objects Reference Help
+6,Show Object [Method Debugger],6630,6630,Context Menu of the Method Debugger,11. Objects Reference Help
+7,Remarks,6630,6630,Show Object [Method Debugger],11. Objects Reference Help
+6,Cut [in Method Debugger],6630,6630,Context Menu of the Method Debugger,11. Objects Reference Help
+6,Copy [in Method Debugger],6631,6631,Context Menu of the Method Debugger,11. Objects Reference Help
+6,Paste [in Method Debugger],6631,6631,Context Menu of the Method Debugger,11. Objects Reference Help
+6,Delete [in Method Debugger],6631,6631,Context Menu of the Method Debugger,11. Objects Reference Help
+4,Methods of the Method,6631,6644,Method,11. Objects Reference Help
+5,_Methods of the Method,6631,6633,Methods of the Method,11. Objects Reference Help
+5,checkArguments [SimTalk],6634,6634,Methods of the Method,11. Objects Reference Help
+5,decrypt [SimTalk],6635,6635,Methods of the Method,11. Objects Reference Help
+5,deleteMethCall [SimTalk],6636,6636,Methods of the Method,11. Objects Reference Help
+5,encrypt [SimTalk],6637,6637,Methods of the Method,11. Objects Reference Help
+5,execute [SimTalk] - Method,6638,6639,Methods of the Method,11. Objects Reference Help
+5,executeIn [SimTalk],6640,6641,Methods of the Method,11. Objects Reference Help
+5,executeNewCallChain [SimTalk],6642,6643,Methods of the Method,11. Objects Reference Help
+5,hasSyntaxError [SimTalk],6644,6644,Methods of the Method,11. Objects Reference Help
+5,load [SimTalk] - source code,6645,6645,Methods of the Method,11. Objects Reference Help
+4,Read-Only Attributes of the Method,6645,6647,Method,11. Objects Reference Help
+5,Read-Only Attributes of the Method,6645,6646,Read-Only Attributes of the Method,11. Objects Reference Help
+5,Encrypted [SimTalk],6647,6647,Read-Only Attributes of the Method,11. Objects Reference Help
+5,NumInExecution [SimTalk],6648,6648,Read-Only Attributes of the Method,11. Objects Reference Help
+4,Attributes of the Method,6648,6653,Method,11. Objects Reference Help
+5,_Attributes of the Method,6648,6649,Attributes of the Method,11. Objects Reference Help
+5,Program [SimTalk],6650,6650,Attributes of the Method,11. Objects Reference Help
+5,RandomSeed [SimTalk] - Method/User-defined Attribute,6651,6652,Attributes of the Method,11. Objects Reference Help
+5,UsingNewSyntax [SimTalk],6653,6653,Attributes of the Method,11. Objects Reference Help
+3,PythonModule,6654,6691,Information Flow Objects,11. Objects Reference Help
+4,PythonModule,6654,6657,PythonModule,11. Objects Reference Help
+4,What You Can Do With the PythonModule,6658,6661,PythonModule,11. Objects Reference Help
+4,Dialog Box of the PythonModule,6662,6674,PythonModule,11. Objects Reference Help
+5,Dialog Box of the PythonModule,6662,6662,Dialog Box of the PythonModule,11. Objects Reference Help
+5,Import [button] - PythonModule,6662,6662,Dialog Box of the PythonModule,11. Objects Reference Help
+5,Tab Content,6663,6673,Dialog Box of the PythonModule,11. Objects Reference Help
+6,Tab Content,6663,6664,Tab Content,11. Objects Reference Help
+6,Access the Model Frame from the Python Code,6665,6665,Tab Content,11. Objects Reference Help
+6,Access Attributes and Methods from the Python Code,6666,6667,Tab Content,11. Objects Reference Help
+6,Access DataTables from the Python Code,6668,6668,Tab Content,11. Objects Reference Help
+6,Access Variables from the Python Code,6669,6669,Tab Content,11. Objects Reference Help
+6,Call Global SimTalk Functions from the Python Code,6670,6671,Tab Content,11. Objects Reference Help
+6,Call a Function Written in a Another PythonModule,6672,6672,Tab Content,11. Objects Reference Help
+6,Execute External Python Code,6673,6673,Tab Content,11. Objects Reference Help
+5,Tab User-defined,6674,6674,Dialog Box of the PythonModule,11. Objects Reference Help
+5,Navigate Menu,6674,6674,Dialog Box of the PythonModule,11. Objects Reference Help
+5,View Menu,6674,6674,Dialog Box of the PythonModule,11. Objects Reference Help
+5,Tools Menu,6674,6674,Dialog Box of the PythonModule,11. Objects Reference Help
+5,Help Menu,6675,6675,Dialog Box of the PythonModule,11. Objects Reference Help
+4,Methods of the PythonModule,6675,6687,PythonModule,11. Objects Reference Help
+5,_Methods of the PythonModule,6675,6675,Methods of the PythonModule,11. Objects Reference Help
+5,call [SimTalk],6676,6676,Methods of the PythonModule,11. Objects Reference Help
+5,callKw [SimTalk],6677,6679,Methods of the PythonModule,11. Objects Reference Help
+5,callMethod [SimTalk],6680,6681,Methods of the PythonModule,11. Objects Reference Help
+5,callMethodKw [SimTalk],6682,6683,Methods of the PythonModule,11. Objects Reference Help
+5,get [SimTalk],6684,6684,Methods of the PythonModule,11. Objects Reference Help
+5,import [SimTalk] - Python,6685,6686,Methods of the PythonModule,11. Objects Reference Help
+5,importPythonModule [SimTalk],6687,6687,Methods of the PythonModule,11. Objects Reference Help
+5,set [SimTalk],6688,6688,Methods of the PythonModule,11. Objects Reference Help
+4,Read-Only Attributes of the PythonModule,6688,6689,PythonModule,11. Objects Reference Help
+5,Read-Only Attributes of the PythonModule,6688,6689,Read-Only Attributes of the PythonModule,11. Objects Reference Help
+5,ModuleName [SimTalk],6690,6690,Read-Only Attributes of the PythonModule,11. Objects Reference Help
+4,Attributes of the PythonModule,6690,6691,PythonModule,11. Objects Reference Help
+5,_Attributes of the PythonModule,6690,6690,Attributes of the PythonModule,11. Objects Reference Help
+5,PythonCode [SimTalk],6691,6691,Attributes of the PythonModule,11. Objects Reference Help
+3,Variable,6692,6750,Information Flow Objects,11. Objects Reference Help
+4,Variable [object],6692,6693,Variable,11. Objects Reference Help
+4,Dialog Box of the Variable,6694,6720,Variable,11. Objects Reference Help
+5,Dialog Box of the Variable,6694,6694,Dialog Box of the Variable,11. Objects Reference Help
+5,Name [text box] - Variable,6695,6695,Dialog Box of the Variable,11. Objects Reference Help
+5,Tab Value,6695,6700,Dialog Box of the Variable,11. Objects Reference Help
+6,Tab Value [Variable],6695,6695,Tab Value,11. Objects Reference Help
+6,Data Type [Variable],6696,6697,Tab Value,11. Objects Reference Help
+6,Value [Variable],6698,6699,Tab Value,11. Objects Reference Help
+6,Inherit Value [Variable],6700,6700,Tab Value,11. Objects Reference Help
+6,Initial Value [Variable],6701,6701,Tab Value,11. Objects Reference Help
+5,Tab Display,6701,6710,Dialog Box of the Variable,11. Objects Reference Help
+6,Tab Display [Variable],6701,6701,Tab Display,11. Objects Reference Help
+6,Font Size [drop-down list] - Variable,6702,6702,Tab Display,11. Objects Reference Help
+6,Font Color [Variable],6703,6703,Tab Display,11. Objects Reference Help
+6,Background Color [drop-down list] - Variable,6704,6704,Tab Display,11. Objects Reference Help
+6,Alignment [Variable],6705,6705,Tab Display,11. Objects Reference Help
+6,Integer Places [text box] - Variable,6706,6706,Tab Display,11. Objects Reference Help
+6,Decimal Places [text box] - Variable,6707,6707,Tab Display,11. Objects Reference Help
+6,Transparent [check box] - Variable,6708,6708,Tab Display,11. Objects Reference Help
+6,Show Data Type [Variable],6709,6709,Tab Display,11. Objects Reference Help
+6,Show Units [Variable],6710,6710,Tab Display,11. Objects Reference Help
+5,Tab Statistics,6711,6715,Dialog Box of the Variable,11. Objects Reference Help
+6,Tab Statistics [Variable],6711,6711,Tab Statistics,11. Objects Reference Help
+6,"Active [check box] - statistics, Variable",6712,6712,Tab Statistics,11. Objects Reference Help
+6,Statistics Table [Variable],6713,6713,Tab Statistics,11. Objects Reference Help
+6,Charts [Variable],6714,6714,Tab Statistics,11. Objects Reference Help
+6,Frequency Histogram [Variable],6715,6715,Tab Statistics,11. Objects Reference Help
+5,Tab Comment [Variable],6716,6716,Dialog Box of the Variable,11. Objects Reference Help
+5,Navigate Menu,6717,6717,Dialog Box of the Variable,11. Objects Reference Help
+5,View Menu,6718,6718,Dialog Box of the Variable,11. Objects Reference Help
+5,Tools Menu,6719,6719,Dialog Box of the Variable,11. Objects Reference Help
+5,Help Menu,6720,6720,Dialog Box of the Variable,11. Objects Reference Help
+4,Assigning a Value to a Variable,6721,6721,Variable,11. Objects Reference Help
+4,Calling the Contents of a Variable,6722,6722,Variable,11. Objects Reference Help
+4,Reading the Contents of a Variable,6723,6723,Variable,11. Objects Reference Help
+4,Methods of the Variable,6723,6731,Variable,11. Objects Reference Help
+5,_Methods of the Variable,6723,6725,Methods of the Variable,11. Objects Reference Help
+5,& [SimTalk] - Variable,6726,6726,Methods of the Variable,11. Objects Reference Help
+5,create [SimTalk] - Variable,6727,6727,Methods of the Variable,11. Objects Reference Help
+5,getStatisticsTable [SimTalk] - Variable,6728,6729,Methods of the Variable,11. Objects Reference Help
+5,increment [SimTalk] - Variable,6730,6730,Methods of the Variable,11. Objects Reference Help
+5,ref [SimTalk] - Variable,6731,6731,Methods of the Variable,11. Objects Reference Help
+5,rollDice [SimTalk],6732,6732,Methods of the Variable,11. Objects Reference Help
+4,Read-Only Attributes of the Variable,6732,6733,Variable,11. Objects Reference Help
+5,Read-Only Attributes of the Variable,6732,6733,Read-Only Attributes of the Variable,11. Objects Reference Help
+5,asString [SimTalk] - Variable,6734,6734,Read-Only Attributes of the Variable,11. Objects Reference Help
+4,Attributes of the Variable,6734,6750,Variable,11. Objects Reference Help
+5,_Attributes of the Variable,6734,6735,Attributes of the Variable,11. Objects Reference Help
+5,Alignment [SimTalk] - Variable,6736,6736,Attributes of the Variable,11. Objects Reference Help
+5,BackgroundColor [SimTalk] - Variable,6737,6737,Attributes of the Variable,11. Objects Reference Help
+5,Color [SimTalk] - Variable,6738,6738,Attributes of the Variable,11. Objects Reference Help
+5,Comment [SimTalk] - Variable,6739,6739,Attributes of the Variable,11. Objects Reference Help
+5,DataType [SimTalk] - Variable,6740,6740,Attributes of the Variable,11. Objects Reference Help
+5,DecimalPlaces [SimTalk] - Variable,6741,6741,Attributes of the Variable,11. Objects Reference Help
+5,Font [SimTalk] - Variable,6742,6742,Attributes of the Variable,11. Objects Reference Help
+5,HasInitValue [SimTalk] - Variable,6743,6743,Attributes of the Variable,11. Objects Reference Help
+5,InitValue [SimTalk] - Variable,6744,6744,Attributes of the Variable,11. Objects Reference Help
+5,IntegerPlaces [SimTalk] - Variable,6745,6745,Attributes of the Variable,11. Objects Reference Help
+5,Name [SimTalk] - Variable,6746,6746,Attributes of the Variable,11. Objects Reference Help
+5,ShowDataType [SimTalk] - Variable,6747,6747,Attributes of the Variable,11. Objects Reference Help
+5,ShowUnit [SimTalk] - Variable,6748,6748,Attributes of the Variable,11. Objects Reference Help
+5,StatisticsActive [SimTalk] - Variable,6749,6749,Attributes of the Variable,11. Objects Reference Help
+5,Transparent [SimTalk] - Variable,6750,6750,Attributes of the Variable,11. Objects Reference Help
+5,Value [SimTalk] - Variable,6751,6751,Attributes of the Variable,11. Objects Reference Help
+3,Properties of Lists and Tables,6751,7033,Information Flow Objects,11. Objects Reference Help
+4,Properties of Lists and Tables,6751,6752,Properties of Lists and Tables,11. Objects Reference Help
+4,Window of Lists and Tables,6753,6863,Properties of Lists and Tables,11. Objects Reference Help
+5,Window of Lists and Tables,6753,6753,Window of Lists and Tables,11. Objects Reference Help
+5,List Ribbon Tab,6754,6824,Window of Lists and Tables,11. Objects Reference Help
+6,List Ribbon Tab,6754,6757,List Ribbon Tab,11. Objects Reference Help
+6,Import File,6758,6759,List Ribbon Tab,11. Objects Reference Help
+6,Export to File [lists],6760,6760,List Ribbon Tab,11. Objects Reference Help
+6,Export Text File,6761,6762,List Ribbon Tab,11. Objects Reference Help
+6,Export Object File,6763,6763,List Ribbon Tab,11. Objects Reference Help
+6,Export Excel File,6764,6765,List Ribbon Tab,11. Objects Reference Help
+6,Export XML File,6766,6766,List Ribbon Tab,11. Objects Reference Help
+6,Text File Format,6767,6768,List Ribbon Tab,11. Objects Reference Help
+6,Print List,6769,6769,List Ribbon Tab,11. Objects Reference Help
+6,Print Setup,6770,6770,List Ribbon Tab,11. Objects Reference Help
+6,Find [lists],6771,6772,List Ribbon Tab,11. Objects Reference Help
+6,Replace [lists],6773,6774,List Ribbon Tab,11. Objects Reference Help
+6,Go To Cell,6775,6775,List Ribbon Tab,11. Objects Reference Help
+6,Insert Row [lists],6776,6776,List Ribbon Tab,11. Objects Reference Help
+6,Insert Column [lists],6777,6777,List Ribbon Tab,11. Objects Reference Help
+6,Sort Ascending [lists],6778,6778,List Ribbon Tab,11. Objects Reference Help
+6,Sort Descending [lists],6779,6779,List Ribbon Tab,11. Objects Reference Help
+6,Create Formula,6780,6780,List Ribbon Tab,11. Objects Reference Help
+6,Activate Column Index,6781,6783,List Ribbon Tab,11. Objects Reference Help
+6,Activate Row Index,6784,6785,List Ribbon Tab,11. Objects Reference Help
+6,Edit Format,6786,6817,List Ribbon Tab,11. Objects Reference Help
+7,Edit Format,6786,6787,Edit Format,11. Objects Reference Help
+7,Tab Settings,6788,6793,Edit Format,11. Objects Reference Help
+8,Tab Settings,6788,6788,Tab Settings,11. Objects Reference Help
+8,Alignment [cells and columns],6789,6789,Tab Settings,11. Objects Reference Help
+8,"Font Size [drop-down list] - cells, columns",6790,6790,Tab Settings,11. Objects Reference Help
+8,Font Color [cells],6791,6791,Tab Settings,11. Objects Reference Help
+8,Background Color [cells],6792,6792,Tab Settings,11. Objects Reference Help
+8,Column Index Belongs to Contents,6793,6793,Tab Settings,11. Objects Reference Help
+7,Tab Permissions,6794,6795,Edit Format,11. Objects Reference Help
+8,Tab Permissions,6794,6794,Tab Permissions,11. Objects Reference Help
+8,Editor [check box],6795,6795,Tab Permissions,11. Objects Reference Help
+8,Information Flow [check box],6796,6796,Tab Permissions,11. Objects Reference Help
+7,Tab Dimension,6796,6798,Edit Format,11. Objects Reference Help
+8,Tab Dimension,6796,6796,Tab Dimension,11. Objects Reference Help
+8,Number of Rows [lists],6797,6797,Tab Dimension,11. Objects Reference Help
+8,Number of Columns [lists],6798,6798,Tab Dimension,11. Objects Reference Help
+8,Column Width [text box],6799,6799,Tab Dimension,11. Objects Reference Help
+7,Tab Data Type,6799,6815,Edit Format,11. Objects Reference Help
+8,Tab Data Type,6799,6799,Tab Data Type,11. Objects Reference Help
+8,Data Type [lists],6800,6801,Tab Data Type,11. Objects Reference Help
+8,Format String [text box],6802,6804,Tab Data Type,11. Objects Reference Help
+8,Common Format [check box],6805,6806,Tab Data Type,11. Objects Reference Help
+8,Activating and Deactivating Common Format,6807,6808,Tab Data Type,11. Objects Reference Help
+8,Data Type for the Column Index,6809,6809,Tab Data Type,11. Objects Reference Help
+8,Fast Index Access [columns],6810,6810,Tab Data Type,11. Objects Reference Help
+8,Unique Index Key [columns],6811,6811,Tab Data Type,11. Objects Reference Help
+8,Data Type for the Row Index,6812,6813,Tab Data Type,11. Objects Reference Help
+8,Fast Index Access [rows],6814,6814,Tab Data Type,11. Objects Reference Help
+8,Unique Index Key [rows],6815,6815,Tab Data Type,11. Objects Reference Help
+7,Tab Contents,6816,6817,Edit Format,11. Objects Reference Help
+6,Inherit Format [button],6818,6818,List Ribbon Tab,11. Objects Reference Help
+6,Inherit Contents [lists],6819,6819,List Ribbon Tab,11. Objects Reference Help
+6,Inherit Comment [button],6820,6820,List Ribbon Tab,11. Objects Reference Help
+6,Recompute Formulas,6821,6821,List Ribbon Tab,11. Objects Reference Help
+6,Show Comment [lists],6822,6822,List Ribbon Tab,11. Objects Reference Help
+6,Show Data Type [lists],6823,6823,List Ribbon Tab,11. Objects Reference Help
+6,Highlight Empty Cells,6824,6824,List Ribbon Tab,11. Objects Reference Help
+6,Open Object [list ribbon],6825,6825,List Ribbon Tab,11. Objects Reference Help
+5,Context Menu of Embedded Lists,6825,6843,Window of Lists and Tables,11. Objects Reference Help
+6,Context Menu of Embedded Lists,6825,6826,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Open Object [embedded objects],6827,6827,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Select Object [embedded lists],6828,6828,Context Menu of Embedded Lists,11. Objects Reference Help
+6,"Cut [cell, column, row]",6829,6829,Context Menu of Embedded Lists,11. Objects Reference Help
+6,"Copy [cell, column, row]",6830,6830,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Paste [embedded objects],6831,6831,Context Menu of Embedded Lists,11. Objects Reference Help
+6,"Delete [cell, column, row]",6832,6832,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Select All [embedded lists],6833,6833,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Delete Row,6834,6834,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Insert Row [embedded objects],6835,6835,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Append Row [embedded objects],6836,6836,Context Menu of Embedded Lists,11. Objects Reference Help
+6,"Sort Ascending [context menu, embedded objects]",6837,6837,Context Menu of Embedded Lists,11. Objects Reference Help
+6,"Sort Descending [context menu, embedded objects]",6838,6838,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Show Comment [embedded objects],6839,6839,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Import [embedded objects],6840,6841,Context Menu of Embedded Lists,11. Objects Reference Help
+6,Export [embedded objects],6842,6843,Context Menu of Embedded Lists,11. Objects Reference Help
+5,Context Menu of the Contents of List Objects,6844,6863,Window of Lists and Tables,11. Objects Reference Help
+6,Context Menu of the Contents of List Objects,6844,6845,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Open Location [context menu, lists]",6846,6846,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Open Origin [context menu, lists]",6847,6847,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Open Class [context menu, lists]",6848,6848,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Cut [context menu, lists]",6849,6849,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Copy [context menu, lists]",6850,6850,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Paste [context menu, lists]",6851,6851,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Delete [context menu, lists]",6852,6852,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Select All [context menu, lists]",6853,6853,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Open Object [context menu, lists]",6854,6854,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Show Object [context menu, DataTable]",6855,6855,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Insert Row [context menu, lists]",6856,6856,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Remove Row [context menu, lists]",6857,6857,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Insert Column [context menu, lists]",6858,6858,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Remove Column [context menu, lists]",6859,6859,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Insert [context menu, lists]",6860,6860,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Format [context menu, lists]",6861,6861,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Find [context menu, lists]",6862,6862,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Sort Ascending [context menu, lists]",6863,6863,Context Menu of the Contents of List Objects,11. Objects Reference Help
+6,"Sort Descending [context menu, lists]",6864,6864,Context Menu of the Contents of List Objects,11. Objects Reference Help
+4,Accessing a Range of Cells with a Method,6864,6874,Properties of Lists and Tables,11. Objects Reference Help
+5,Accessing a Range of Cells with a Method,6864,6864,Accessing a Range of Cells with a Method,11. Objects Reference Help
+5,Ranges in Lists with One Column,6864,6867,Accessing a Range of Cells with a Method,11. Objects Reference Help
+6,Cell Ranges in Lists with One Column,6864,6865,Ranges in Lists with One Column,11. Objects Reference Help
+6,Specify the Identifier of a Cell [one column],6866,6866,Ranges in Lists with One Column,11. Objects Reference Help
+6,Specifying a Range of Cells [one column],6867,6867,Ranges in Lists with One Column,11. Objects Reference Help
+6,Address a User-defined Index [one column],6868,6868,Ranges in Lists with One Column,11. Objects Reference Help
+5,Cell Ranges in Tables with Several Columns,6868,6874,Accessing a Range of Cells with a Method,11. Objects Reference Help
+6,Cell Ranges in Tables with Several Columns,6868,6868,Cell Ranges in Tables with Several Columns,11. Objects Reference Help
+6,Specify the Identifier of a Cell [several columns],6869,6869,Cell Ranges in Tables with Several Columns,11. Objects Reference Help
+6,Specifying a Range of Cells [several columns],6870,6873,Cell Ranges in Tables with Several Columns,11. Objects Reference Help
+6,Address a User-defined Index [several columns],6874,6874,Cell Ranges in Tables with Several Columns,11. Objects Reference Help
+5,Drag-and-Drop in Lists and Tables,6875,6875,Accessing a Range of Cells with a Method,11. Objects Reference Help
+4,Creating Lists within Lists and Tables,6875,6887,Properties of Lists and Tables,11. Objects Reference Help
+5,Creating Lists within Lists and Tables,6875,6875,Creating Lists within Lists and Tables,11. Objects Reference Help
+5,Creating a List within a DataQueue or DataStack,6876,6877,Creating Lists within Lists and Tables,11. Objects Reference Help
+6,Creating a List within a DataQueue or DataStack,6876,6876,Creating a List within a DataQueue or DataStack,11. Objects Reference Help
+6,Assign a DataList to a DataQueue or a DataStack in a Method,6877,6877,Creating a List within a DataQueue or DataStack,11. Objects Reference Help
+5,Creating a List within a DataList,6878,6881,Creating Lists within Lists and Tables,11. Objects Reference Help
+6,Creating a List within a DataList,6878,6878,Creating a List within a DataList,11. Objects Reference Help
+6,Insert a List into a DataList from a Frame,6879,6880,Creating a List within a DataList,11. Objects Reference Help
+6,Assign a List to a DataList in a Method,6881,6881,Creating a List within a DataList,11. Objects Reference Help
+5,Creating a List within a DataTable,6882,6886,Creating Lists within Lists and Tables,11. Objects Reference Help
+6,Creating a List within a DataTable,6882,6882,Creating a List within a DataTable,11. Objects Reference Help
+6,Insert a List into a DataTable from a Frame,6883,6884,Creating a List within a DataTable,11. Objects Reference Help
+6,Assign a List to a DataTable in a Method,6885,6886,Creating a List within a DataTable,11. Objects Reference Help
+5,Accessing the Name of a Sublist with a Method,6887,6887,Creating Lists within Lists and Tables,11. Objects Reference Help
+4,Methods of Lists and Tables,6888,6991,Properties of Lists and Tables,11. Objects Reference Help
+5,Methods of Lists and Tables,6888,6889,Methods of Lists and Tables,11. Objects Reference Help
+5,Methods for Accessing Lists and Tables,6890,6907,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for Accessing Lists and Tables,6890,6891,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,closeDialog [SimTalk] - lists,6892,6892,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,copy [SimTalk] - lists,6893,6894,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,countMatches [SimTalk],6895,6895,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,delete [SimTalk] - lists,6896,6897,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,insert [SimTalk] - lists,6898,6898,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,insertList [SimTalk],6899,6900,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,intersection [SimTalk],6901,6902,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,openDialog [SimTalk] - lists,6903,6903,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,openDialogBox [SimTalk],6904,6905,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,printList [SimTalk],6906,6906,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,refillDialog [SimTalk],6907,6907,Methods for Accessing Lists and Tables,11. Objects Reference Help
+6,showPrintDialog [SimTalk] - lists,6908,6908,Methods for Accessing Lists and Tables,11. Objects Reference Help
+5,Methods for the Order of Cells within Lists and Tables,6908,6925,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for the Order of Cells within Lists and Tables,6908,6909,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,find [SimTalk] - lists,6910,6912,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,findCeil [SimTalk],6913,6914,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,findFirst [SimTalk],6915,6917,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,findFloor [SimTalk],6918,6919,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,inOrder [SimTalk],6920,6921,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,setCursor [SimTalk] - lists,6922,6922,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+6,sort [SimTalk] - lists,6923,6925,Methods for the Order of Cells within Lists and Tables,11. Objects Reference Help
+5,Methods for the Format of Lists and Tables,6926,6949,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for the Format of Lists and Tables,6926,6927,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,copyContentTo [SimTalk],6928,6928,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,copyFormatTo [SimTalk],6929,6930,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,deleteCellFormat [SimTalk],6931,6931,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getAlignmentCell [SimTalk],6932,6932,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getBackgroundColorCell [SimTalk],6933,6933,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getCommonFormatData [SimTalk] - lists,6934,6934,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getEditorRightsCell [SimTalk],6935,6935,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getFontColorCell [SimTalk],6936,6936,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getFontSizeCell [SimTalk],6937,6937,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,getHTMLCode [SimTalk] - lists,6938,6938,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,isAlignment [SimTalk],6939,6939,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setAlignmentCells [SimTalk],6940,6941,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setBackgroundColorCells [SimTalk],6942,6943,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setCommonFormatData [SimTalk] - lists,6944,6944,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setEditorRightsCells [SimTalk],6945,6946,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setFontColorCells [SimTalk],6947,6948,Methods for the Format of Lists and Tables,11. Objects Reference Help
+6,setFontSizeCells [SimTalk],6949,6949,Methods for the Format of Lists and Tables,11. Objects Reference Help
+5,Methods for Querying Statistics Values of List and Tables,6950,6958,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for Querying Statistics Values of Lists and Tables,6950,6951,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+6,max [SimTalk] - lists,6952,6953,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+6,meanValue [SimTalk],6954,6954,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+6,min [SimTalk] - lists,6955,6956,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+6,standardDeviation [SimTalk],6957,6957,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+6,sum [SimTalk] - lists,6958,6958,Methods for Querying Statistics Values of List and Tables,11. Objects Reference Help
+5,Methods for Importing and Exporting Data in Text Format,6959,6975,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for Importing and Exporting Data in Text Format,6959,6959,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,readExcelFile [SimTalk],6960,6961,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,readFile [SimTalk] - lists,6962,6963,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,readXMLFile [SimTalk],6964,6965,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,readXMLString [SimTalk],6966,6966,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,writeExcelFile [SimTalk],6967,6968,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,writeExcelXMLFile [SimTalk],6969,6970,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,writeFile [SimTalk] - lists,6971,6972,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,writeObjectFile [SimTalk],6973,6974,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+6,writeXMLFile [SimTalk],6975,6975,Methods for Importing and Exporting Data in Text Format,11. Objects Reference Help
+5,Methods for Indirectly Accessing Lists and Tables,6976,6989,Methods of Lists and Tables,11. Objects Reference Help
+6,_Methods for Indirectly Accessing Lists and Tables,6976,6977,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,asObject [SimTalk],6978,6979,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,asString [SimTalk] - DataTable,6980,6980,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,findAttr [SimTalk],6981,6982,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,maxAttr [SimTalk],6983,6984,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,meanValueAttr [SimTalk],6985,6985,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,minAttr [SimTalk],6986,6987,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,standardDeviationAttr [SimTalk],6988,6988,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+6,sumAttr [SimTalk],6989,6989,Methods for Indirectly Accessing Lists and Tables,11. Objects Reference Help
+5,Read-only Attributes and Attributes of Cells,6990,6991,Methods of Lists and Tables,11. Objects Reference Help
+6,_Read-only Attributes and Attributes of Cells,6990,6990,Read-only Attributes and Attributes of Cells,11. Objects Reference Help
+6,Name [SimTalk] - cells,6991,6991,Read-only Attributes and Attributes of Cells,11. Objects Reference Help
+6,Void [SimTalk] - cells of lists/tables,6992,6992,Read-only Attributes and Attributes of Cells,11. Objects Reference Help
+4,Read-Only Attributes of Lists and Tables,6992,6996,Properties of Lists and Tables,11. Objects Reference Help
+5,_Read-Only Attributes of Lists and Tables,6992,6993,Read-Only Attributes of Lists and Tables,11. Objects Reference Help
+5,Dim [SimTalk] - lists,6994,6994,Read-Only Attributes of Lists and Tables,11. Objects Reference Help
+5,Empty [SimTalk] - lists,6995,6995,Read-Only Attributes of Lists and Tables,11. Objects Reference Help
+5,Full [SimTalk] - lists,6996,6996,Read-Only Attributes of Lists and Tables,11. Objects Reference Help
+5,Occupied [SimTalk] - lists,6997,6997,Read-Only Attributes of Lists and Tables,11. Objects Reference Help
+4,Attributes of Lists and Tables,6997,7033,Properties of Lists and Tables,11. Objects Reference Help
+5,Attributes of Lists and Tables,6997,6998,Attributes of Lists and Tables,11. Objects Reference Help
+5,Attributes for the Format of Lists and Tables,6999,7009,Attributes of Lists and Tables,11. Objects Reference Help
+6,_Attributes for the Format of Lists and Tables,6999,6999,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,Alignment [SimTalk] - lists,7000,7000,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,BackgroundColor [SimTalk] - lists,7001,7001,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,ColumnWidth [SimTalk],7002,7002,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,DataType [SimTalk] - lists,7003,7004,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,EditorReadOnly [SimTalk],7005,7005,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,FontColor [SimTalk],7006,7007,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,FontSize [SimTalk] - DataTable,7008,7008,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,FormatString [SimTalk] - lists,7009,7009,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+6,InfoflowReadOnly [SimTalk],7010,7010,Attributes for the Format of Lists and Tables,11. Objects Reference Help
+5,Attributes for the Text Format of Lists and Tables,7010,7014,Attributes of Lists and Tables,11. Objects Reference Help
+6,_Attributes for the Text Format of Lists and Tables,7010,7011,Attributes for the Text Format of Lists and Tables,11. Objects Reference Help
+6,ColumnSeparator [SimTalk],7012,7012,Attributes for the Text Format of Lists and Tables,11. Objects Reference Help
+6,DecimalSeparator [SimTalk],7013,7013,Attributes for the Text Format of Lists and Tables,11. Objects Reference Help
+6,TimeFormat [SimTalk],7014,7014,Attributes for the Text Format of Lists and Tables,11. Objects Reference Help
+5,Attributes for Printing Lists and Tables,7015,7021,Attributes of Lists and Tables,11. Objects Reference Help
+6,_Attributes for Printing Lists and Tables,7015,7015,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,GenerateColumnWidth [SimTalk],7016,7016,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,PrintColumnNumber [SimTalk],7017,7017,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,PrintDataType [SimTalk],7018,7018,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,PrintInternalLists [SimTalk],7019,7019,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,PrintRowNumber [SimTalk],7020,7020,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,RepeatColumnIndex [SimTalk],7021,7021,Attributes for Printing Lists and Tables,11. Objects Reference Help
+6,RepeatRowIndex [SimTalk],7022,7022,Attributes for Printing Lists and Tables,11. Objects Reference Help
+5,Attributes for Showing Settings of Lists and Tables,7022,7025,Attributes of Lists and Tables,11. Objects Reference Help
+6,_Attributes for Showing Settings of Lists and Tables,7022,7023,Attributes for Showing Settings of Lists and Tables,11. Objects Reference Help
+6,ShowComment [SimTalk] - lists,7024,7024,Attributes for Showing Settings of Lists and Tables,11. Objects Reference Help
+6,ShowDataType [SimTalk] - lists,7025,7025,Attributes for Showing Settings of Lists and Tables,11. Objects Reference Help
+6,ShowVoid [SimTalk],7026,7026,Attributes for Showing Settings of Lists and Tables,11. Objects Reference Help
+5,Miscellaneous Attributes of Lists and Tables,7026,7033,Attributes of Lists and Tables,11. Objects Reference Help
+6,_Miscellaneous Attributes of Lists and Tables,7026,7027,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,Comment [SimTalk] - lists,7028,7028,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,Cursor [SimTalk],7029,7030,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,InheritComment [SimTalk],7031,7031,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,InheritContents [SimTalk],7032,7032,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,InheritFormat [SimTalk],7033,7033,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+6,MaxDim [SimTalk],7034,7034,Miscellaneous Attributes of Lists and Tables,11. Objects Reference Help
+3,DataTable,7034,7149,Information Flow Objects,11. Objects Reference Help
+4,DataTable [object],7034,7036,DataTable,11. Objects Reference Help
+4,Window of the DataTable,7037,7037,DataTable,11. Objects Reference Help
+4,Methods of the DataTable,7038,7117,DataTable,11. Objects Reference Help
+5,Methods of the DataTable,7038,7039,Methods of the DataTable,11. Objects Reference Help
+5,Methods of Columns of the DataTable,7040,7072,Methods of the DataTable,11. Objects Reference Help
+6,_Methods of Columns of the DataTable,7040,7041,Methods of Columns of the DataTable,11. Objects Reference Help
+6,cutColumn [SimTalk],7042,7042,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getAlignmentColumn [SimTalk] - DataTable,7043,7043,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getBackgroundColorColumn [SimTalk] - DataTable,7044,7044,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getColumnNo [SimTalk],7045,7046,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getColumnUniqueValues [SimTalk],7047,7047,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getColumnWidth [SimTalk] - DataTable,7048,7048,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getColumnYDim [SimTalk],7049,7049,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getCommonFormat [SimTalk],7049,7050,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getDataType [SimTalk],7051,7051,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getEditorRightsColumn [SimTalk] - DataTable,7052,7052,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getFontColorColumn [SimTalk] - DataTable,7053,7053,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getFontSizeColumn [SimTalk] - DataTable,7054,7054,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getFormatString [SimTalk] - DataTable,7055,7055,Methods of Columns of the DataTable,11. Objects Reference Help
+6,getVisibility [SimTalk] - DataTable,7056,7056,Methods of Columns of the DataTable,11. Objects Reference Help
+6,insertColumn [SimTalk],7057,7058,Methods of Columns of the DataTable,11. Objects Reference Help
+6,isAlignmentColumn [SimTalk] - DataTable,7059,7059,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setAlignmentColumn [SimTalk] - DataTable,7060,7060,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setBackgroundColorColumn [SimTalk] - DataTable,7061,7062,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setColumnWidth [SimTalk] - DataTable,7063,7063,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setCommonFormat [SimTalk],7064,7065,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setDataType [SimTalk],7066,7067,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setDataTypeDefault [SimTalk],7068,7068,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setEditorRightsColumn [SimTalk] - DataTable,7069,7069,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setFontColorColumn [SimTalk] - DataTable,7070,7070,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setFontsizeColumn [SimTalk] - DataTable,7071,7071,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setFormatString [SimTalk] - DataTable,7072,7072,Methods of Columns of the DataTable,11. Objects Reference Help
+6,setVisibility [SimTalk] - DataTable,7073,7073,Methods of Columns of the DataTable,11. Objects Reference Help
+5,Methods of Rows of the DataTable,7073,7090,Methods of the DataTable,11. Objects Reference Help
+6,_Methods of Rows of the DataTable,7073,7074,Methods of Rows of the DataTable,11. Objects Reference Help
+6,appendRow [SimTalk],7075,7075,Methods of Rows of the DataTable,11. Objects Reference Help
+6,cutEmptyRows [SimTalk],7076,7076,Methods of Rows of the DataTable,11. Objects Reference Help
+6,cutRow [SimTalk] - DataTable,7077,7077,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getAlignmentRow [SimTalk] - DataTable,7078,7078,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getBackgroundColorRow [SimTalk] - DataTable,7079,7079,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getEditorRightsRow [SimTalk] - DataTable,7080,7080,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getFontColorRow [SimTalk] - DataTable,7081,7081,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getFontSizeRow [SimTalk] - DataTable,7082,7082,Methods of Rows of the DataTable,11. Objects Reference Help
+6,getRowNo [SimTalk],7083,7083,Methods of Rows of the DataTable,11. Objects Reference Help
+6,insertRow [SimTalk],7084,7084,Methods of Rows of the DataTable,11. Objects Reference Help
+6,isAlignmentRow [SimTalk] - DataTable,7085,7085,Methods of Rows of the DataTable,11. Objects Reference Help
+6,setAlignmentRow [SimTalk] - DataTable,7086,7086,Methods of Rows of the DataTable,11. Objects Reference Help
+6,setBackgroundColorRow [SimTalk] - DataTable,7087,7088,Methods of Rows of the DataTable,11. Objects Reference Help
+6,setEditorRightsRow [SimTalk] - DataTable,7089,7089,Methods of Rows of the DataTable,11. Objects Reference Help
+6,setFontColorRow [SimTalk] - DataTable,7090,7090,Methods of Rows of the DataTable,11. Objects Reference Help
+6,setFontSizeRow [SimTalk] - DataTable,7091,7091,Methods of Rows of the DataTable,11. Objects Reference Help
+5,Miscellaneous Methods of the DataTable,7091,7108,Methods of the DataTable,11. Objects Reference Help
+6,_Miscellaneous Methods of the DataTable,7091,7092,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,calculateList [SimTalk],7093,7093,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,copyFilteredTableTo [SimTalk],7094,7094,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,copyRangeTo [SimTalk],7095,7096,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,determineRange [SimTalk] - DataTable,7097,7098,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,getCommonFormatData [SimTalk] - DataTable,7099,7099,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,getFormula [SimTalk],7100,7100,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,initialize [SimTalk],7101,7101,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,mergeTable [SimTalk],7102,7103,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,setCommonFormatData [SimTalk] - DataTable,7104,7105,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,setCursor [SimTalk] - DataTable,7106,7107,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+6,setFormula [SimTalk],7108,7108,Miscellaneous Methods of the DataTable,11. Objects Reference Help
+5,Methods for Accessing the DataTable,7109,7114,Methods of the DataTable,11. Objects Reference Help
+6,_Methods for Accessing the DataTable,7109,7109,Methods for Accessing the DataTable,11. Objects Reference Help
+6,"[ , ] [SimTalk] - read cell contents, DataTable",7110,7111,Methods for Accessing the DataTable,11. Objects Reference Help
+6,"[ , ] [SimTalk] - write cell contents, DataTable",7112,7112,Methods for Accessing the DataTable,11. Objects Reference Help
+6,deleteContents [SimTalk],7113,7113,Methods for Accessing the DataTable,11. Objects Reference Help
+6,writeRow [SimTalk],7114,7114,Methods for Accessing the DataTable,11. Objects Reference Help
+5,Methods for Instantiating the DataTable,7115,7117,Methods of the DataTable,11. Objects Reference Help
+6,_Methods for Instantiating the DataTable,7115,7115,Methods for Instantiating the DataTable,11. Objects Reference Help
+6,create [SimTalk] - DataTable,7116,7116,Methods for Instantiating the DataTable,11. Objects Reference Help
+6,createNestedList [SimTalk] - DataTable,7117,7117,Methods for Instantiating the DataTable,11. Objects Reference Help
+4,Read-Only Attributes of the DataTable,7118,7121,DataTable,11. Objects Reference Help
+5,_Read-Only Attributes of the DataTable,7118,7118,Read-Only Attributes of the DataTable,11. Objects Reference Help
+5,XDim [SimTalk] - DataTable,7119,7119,Read-Only Attributes of the DataTable,11. Objects Reference Help
+5,XDimIndex [SimTalk],7120,7120,Read-Only Attributes of the DataTable,11. Objects Reference Help
+5,YDim [SimTalk] - DataTable,7121,7121,Read-Only Attributes of the DataTable,11. Objects Reference Help
+5,YDimIndex [SimTalk],7122,7122,Read-Only Attributes of the DataTable,11. Objects Reference Help
+4,Attributes of the DataTable,7122,7149,DataTable,11. Objects Reference Help
+5,_Attributes of the DataTable,7122,7123,Attributes of the DataTable,11. Objects Reference Help
+5,Alignment [SimTalk] - DataTable,7124,7124,Attributes of the DataTable,11. Objects Reference Help
+5,Changed [SimTalk],7125,7125,Attributes of the DataTable,11. Objects Reference Help
+5,ColumnIndex [SimTalk],7126,7126,Attributes of the DataTable,11. Objects Reference Help
+5,ColumnIndexContents [SimTalk],7127,7127,Attributes of the DataTable,11. Objects Reference Help
+5,CommonFormatColumnIndex [SimTalk],7128,7129,Attributes of the DataTable,11. Objects Reference Help
+5,CursorX [SimTalk],7130,7131,Attributes of the DataTable,11. Objects Reference Help
+5,CursorY [SimTalk],7132,7133,Attributes of the DataTable,11. Objects Reference Help
+5,DataType [SimTalk] - DataTable,7134,7135,Attributes of the DataTable,11. Objects Reference Help
+5,DataTypeColumnIndex [SimTalk],7136,7137,Attributes of the DataTable,11. Objects Reference Help
+5,FastAccessColumnIndex [SimTalk],7138,7138,Attributes of the DataTable,11. Objects Reference Help
+5,FastAccessRowIndex [SimTalk],7139,7139,Attributes of the DataTable,11. Objects Reference Help
+5,FormatString [SimTalk] - DataTable,7140,7140,Attributes of the DataTable,11. Objects Reference Help
+5,FormatStringColumnIndex [SimTalk],7141,7141,Attributes of the DataTable,11. Objects Reference Help
+5,FormatStringRowIndex [SimTalk],7142,7142,Attributes of the DataTable,11. Objects Reference Help
+5,MaxXDim [SimTalk],7143,7143,Attributes of the DataTable,11. Objects Reference Help
+5,MaxYDim [SimTalk],7144,7144,Attributes of the DataTable,11. Objects Reference Help
+5,Name [SimTalk] - DataTable,7145,7145,Attributes of the DataTable,11. Objects Reference Help
+5,RowIndex [SimTalk],7146,7146,Attributes of the DataTable,11. Objects Reference Help
+5,ShowColumnIndex [SimTalk] - DataTable,7147,7147,Attributes of the DataTable,11. Objects Reference Help
+5,ShowRowIndex [SimTalk] - DataTable,7148,7148,Attributes of the DataTable,11. Objects Reference Help
+5,UniqueKeyColumnIndex [SimTalk],7149,7149,Attributes of the DataTable,11. Objects Reference Help
+5,UniqueKeyRowIndex [SimTalk],7150,7150,Attributes of the DataTable,11. Objects Reference Help
+3,DataList,7150,7166,Information Flow Objects,11. Objects Reference Help
+4,DataList,7150,7152,DataList,11. Objects Reference Help
+4,Window of the DataList,7153,7153,DataList,11. Objects Reference Help
+4,Methods of the DataList,7154,7164,DataList,11. Objects Reference Help
+5,_Methods of the DataList,7154,7156,Methods of the DataList,11. Objects Reference Help
+5,[row] [SimTalk],7157,7157,Methods of the DataList,11. Objects Reference Help
+5,append [SimTalk] - DataList,7158,7158,Methods of the DataList,11. Objects Reference Help
+5,appendList [SimTalk],7159,7160,Methods of the DataList,11. Objects Reference Help
+5,createNestedList [SimTalk] - DataList,7161,7162,Methods of the DataList,11. Objects Reference Help
+5,determineRange [SimTalk] - DataList,7163,7164,Methods of the DataList,11. Objects Reference Help
+5,remove [SimTalk] - DataList,7165,7165,Methods of the DataList,11. Objects Reference Help
+4,Read-Only Attributes of the DataList,7165,7165,DataList,11. Objects Reference Help
+5,Read-Only Attributes of the DataList,7165,7165,Read-Only Attributes of the DataList,11. Objects Reference Help
+4,Attributes of the DataList,7166,7166,DataList,11. Objects Reference Help
+5,Attributes of the DataList,7166,7166,Attributes of the DataList,11. Objects Reference Help
+3,DataStack,7167,7173,Information Flow Objects,11. Objects Reference Help
+4,DataStack,7167,7168,DataStack,11. Objects Reference Help
+4,Properties of the DataStack,7169,7169,DataStack,11. Objects Reference Help
+4,Window of the DataStack,7170,7170,DataStack,11. Objects Reference Help
+4,Methods of the DataStack,7170,7171,DataStack,11. Objects Reference Help
+5,Methods of the DataStack,7170,7171,Methods of the DataStack,11. Objects Reference Help
+4,Read-Only Attributes of DataQueue and DataStack,7172,7172,DataStack,11. Objects Reference Help
+5,Read-Only Attributes of DataQueue and DataStack,7172,7172,Read-Only Attributes of DataQueue and DataStack,11. Objects Reference Help
+4,Attributes of DataQueue and DataStack,7173,7173,DataStack,11. Objects Reference Help
+5,Attributes of DataQueue and DataStack,7173,7173,Attributes of DataQueue and DataStack,11. Objects Reference Help
+3,DataQueue,7174,7186,Information Flow Objects,11. Objects Reference Help
+4,DataQueue,7174,7175,DataQueue,11. Objects Reference Help
+4,Properties of the DataQueue,7176,7176,DataQueue,11. Objects Reference Help
+4,Window of the DataQueue,7177,7177,DataQueue,11. Objects Reference Help
+4,Methods of DataQueue and DataStack,7177,7184,DataQueue,11. Objects Reference Help
+5,_Methods of DataQueue and DataStack,7177,7179,Methods of DataQueue and DataStack,11. Objects Reference Help
+5,createNestedList [SimTalk] - DataQueue,7180,7181,Methods of DataQueue and DataStack,11. Objects Reference Help
+5,pop [SimTalk] - DataStack,7182,7182,Methods of DataQueue and DataStack,11. Objects Reference Help
+5,push [SimTalk] - Stack,7183,7183,Methods of DataQueue and DataStack,11. Objects Reference Help
+5,pushList [SimTalk],7184,7184,Methods of DataQueue and DataStack,11. Objects Reference Help
+5,top [SimTalk],7185,7185,Methods of DataQueue and DataStack,11. Objects Reference Help
+4,Read-Only Attributes of DataQueue and DataStack,7185,7185,DataQueue,11. Objects Reference Help
+5,Read-Only Attributes of DataQueue and DataStack,7185,7185,Read-Only Attributes of DataQueue and DataStack,11. Objects Reference Help
+4,Attributes of DataQueue and DataStack,7186,7186,DataQueue,11. Objects Reference Help
+5,Attributes of DataQueue and DataStack,7186,7186,Attributes of DataQueue and DataStack,11. Objects Reference Help
+3,TimeSequence,7187,7265,Information Flow Objects,11. Objects Reference Help
+4,TimeSequence,7187,7187,TimeSequence,11. Objects Reference Help
+4,Dialog Box of the TimeSequence,7188,7204,TimeSequence,11. Objects Reference Help
+5,Dialog Box of the TimeSequence,7188,7189,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,File Menu [TimeSequence],7190,7190,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Edit Menu [TimeSequence],7191,7191,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Format Menu [TimeSequence],7192,7192,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Navigate Menu,7193,7193,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,View Menu,7194,7194,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Tools Menu,7195,7195,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Help Menu,7196,7196,Dialog Box of the TimeSequence,11. Objects Reference Help
+5,Tab Contents,7196,7197,Dialog Box of the TimeSequence,11. Objects Reference Help
+6,Tab Contents [TimeSequence],7196,7196,Tab Contents,11. Objects Reference Help
+6,Sort [TimeSequence],7197,7197,Tab Contents,11. Objects Reference Help
+6,Set Value [TimeSequence],7198,7198,Tab Contents,11. Objects Reference Help
+5,Tab Start Values,7198,7200,Dialog Box of the TimeSequence,11. Objects Reference Help
+6,Tab Start Values,7198,7198,Tab Start Values,11. Objects Reference Help
+6,Time Reference [TimeSequence],7199,7199,Tab Start Values,11. Objects Reference Help
+6,Reference Time/Reference Date [TimeSequence],7200,7200,Tab Start Values,11. Objects Reference Help
+6,Default Value [TimeSequence],7201,7201,Tab Start Values,11. Objects Reference Help
+5,Tab Record,7201,7204,Dialog Box of the TimeSequence,11. Objects Reference Help
+6,Tab Record,7201,7201,Tab Record,11. Objects Reference Help
+6,Value [TimeSequence],7202,7202,Tab Record,11. Objects Reference Help
+6,Mode [drop-down list] - TimeSequence,7203,7203,Tab Record,11. Objects Reference Help
+6,Interval [TimeSequence],7204,7204,Tab Record,11. Objects Reference Help
+6,Active [check box] - TimeSequence,7205,7205,Tab Record,11. Objects Reference Help
+4,Methods of the TimeSequence,7205,7253,TimeSequence,11. Objects Reference Help
+5,Methods for Columns of the TimeSequence,7205,7206,Methods of the TimeSequence,11. Objects Reference Help
+5,Methods for Columns,7207,7224,Methods of the TimeSequence,11. Objects Reference Help
+6,_Methods for Columns,7207,7208,Methods for Columns,11. Objects Reference Help
+6,getAlignmentColumn [SimTalk] - TimeSequence,7209,7209,Methods for Columns,11. Objects Reference Help
+6,getBackgroundColorColumn [SimTalk] - TimeSequence,7210,7210,Methods for Columns,11. Objects Reference Help
+6,getColumnWidth [SimTalk] - TimeSequence,7211,7211,Methods for Columns,11. Objects Reference Help
+6,getEditorRightsColumn [SimTalk] - TimeSequence,7212,7212,Methods for Columns,11. Objects Reference Help
+6,getFontColorColumn [SimTalk] - TimeSequence,7213,7213,Methods for Columns,11. Objects Reference Help
+6,getFontSizeColumn [SimTalk] - TimeSequence,7214,7214,Methods for Columns,11. Objects Reference Help
+6,getFormatString [SimTalk] - TimeSequence,7215,7215,Methods for Columns,11. Objects Reference Help
+6,getVisibility [SimTalk] - TimeSequence,7216,7216,Methods for Columns,11. Objects Reference Help
+6,isAlignmentColumn [SimTalk] - TimeSequence,7217,7217,Methods for Columns,11. Objects Reference Help
+6,setAlignmentColumn [SimTalk] - TimeSequence,7218,7218,Methods for Columns,11. Objects Reference Help
+6,setBackgroundColorColumn [SimTalk] - TimeSequence,7219,7219,Methods for Columns,11. Objects Reference Help
+6,setColumnWidth [SimTalk] - TimeSequence,7220,7220,Methods for Columns,11. Objects Reference Help
+6,setEditorRightsColumn [SimTalk] - TimeSequence,7221,7221,Methods for Columns,11. Objects Reference Help
+6,setFontColorColumn [SimTalk] - TimeSequence,7222,7222,Methods for Columns,11. Objects Reference Help
+6,setFontsizeColumn [SimTalk] - TimeSequence,7223,7223,Methods for Columns,11. Objects Reference Help
+6,setFormatString [SimTalk] - TimeSequence,7224,7224,Methods for Columns,11. Objects Reference Help
+6,setVisibility [SimTalk] - TimeSequence,7225,7225,Methods for Columns,11. Objects Reference Help
+5,Methods for Rows of the TimeSequence,7225,7237,Methods of the TimeSequence,11. Objects Reference Help
+6,_Methods for Rows,7225,7226,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,getAlignmentRow [SimTalk] - TimeSequence,7227,7227,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,getBackgroundColorRow [SimTalk] - TimeSequence,7228,7228,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,getEditorRightsRow [SimTalk] - TimeSequence,7229,7229,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,getFontColorRow [SimTalk] - TimeSequence,7230,7230,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,getFontSizeRow [SimTalk] - TimeSequence,7231,7231,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,isAlignmentRow [SimTalk] - TimeSequence,7232,7232,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,setAlignmentRow [SimTalk] - TimeSequence,7233,7233,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,setBackgroundColorRow [SimTalk] - TimeSequence,7234,7235,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,setEditorRightsRow [SimTalk] - TimeSequence,7236,7236,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,setFontColorRow [SimTalk] - TimeSequence,7237,7237,Methods for Rows of the TimeSequence,11. Objects Reference Help
+6,setFontSizeRow [SimTalk] - TimeSequence,7238,7238,Methods for Rows of the TimeSequence,11. Objects Reference Help
+5,Methods for Accessing the TimeSequence,7238,7253,Methods of the TimeSequence,11. Objects Reference Help
+6,_Methods for Accessing the TimeSequence,7238,7239,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,"[ , ] [SimTalk] - read cell contents, TimeSequence",7240,7240,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,"[ , ] [SimTalk] - write cell contents, TimeSequence",7241,7241,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,add [SimTalk],7242,7242,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,and [SimTalk] - operator,7243,7243,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,deleteInterval [SimTalk],7244,7244,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,divide [SimTalk],7245,7245,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,include [SimTalk],7246,7246,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,insert [SimTalk] - TimeSequence,7247,7247,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,multiply [SimTalk],7248,7248,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,not [SimTalk] - TimeSequence,7249,7249,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,or [SimTalk] - operator,7250,7250,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,repeat [SimTalk] - TimeSequence,7251,7251,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,repeatTo [SimTalk],7252,7252,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,subtract [SimTalk],7253,7253,Methods for Accessing the TimeSequence,11. Objects Reference Help
+6,value [SimTalk] - TimeSequence,7254,7254,Methods for Accessing the TimeSequence,11. Objects Reference Help
+4,Read-Only Attributes of the TimeSequence,7254,7254,TimeSequence,11. Objects Reference Help
+5,Read-Only Attributes of the TimeSequence,7254,7254,Read-Only Attributes of the TimeSequence,11. Objects Reference Help
+4,Attributes of the TimeSequence,7255,7265,TimeSequence,11. Objects Reference Help
+5,_Attributes of the TimeSequence,7255,7256,Attributes of the TimeSequence,11. Objects Reference Help
+5,Absolute [SimTalk] - TimeSequence,7257,7257,Attributes of the TimeSequence,11. Objects Reference Help
+5,Active [SimTalk] - TimeSequence,7258,7258,Attributes of the TimeSequence,11. Objects Reference Help
+5,DefaultValue [SimTalk],7259,7259,Attributes of the TimeSequence,11. Objects Reference Help
+5,Path [SimTalk] - TimeSequence,7260,7260,Attributes of the TimeSequence,11. Objects Reference Help
+5,ReferenceDate [SimTalk] - TimeSequence,7261,7261,Attributes of the TimeSequence,11. Objects Reference Help
+5,ReferenceTime [SimTalk] - TimeSequence,7262,7262,Attributes of the TimeSequence,11. Objects Reference Help
+5,Sample [SimTalk],7263,7263,Attributes of the TimeSequence,11. Objects Reference Help
+5,ShowColumnIndex [SimTalk] - TimeSequence,7264,7264,Attributes of the TimeSequence,11. Objects Reference Help
+5,ShowRowIndex [SimTalk] - TimeSequence,7265,7265,Attributes of the TimeSequence,11. Objects Reference Help
+5,SmpPeriod [SimTalk] - TimeSequence,7266,7266,Attributes of the TimeSequence,11. Objects Reference Help
+3,Trigger,7266,7307,Information Flow Objects,11. Objects Reference Help
+4,Trigger [object],7266,7266,Trigger,11. Objects Reference Help
+4,Dialog Box of the Trigger,7267,7287,Trigger,11. Objects Reference Help
+5,Dialog Box of the Trigger,7267,7267,Dialog Box of the Trigger,11. Objects Reference Help
+5,Tab Period,7268,7274,Dialog Box of the Trigger,11. Objects Reference Help
+6,Tab Period,7268,7268,Tab Period,11. Objects Reference Help
+6,Active [check box] - Trigger,7269,7269,Tab Period,11. Objects Reference Help
+6,Time Reference [Trigger],7270,7270,Tab Period,11. Objects Reference Help
+6,Start Time [Trigger],7271,7271,Tab Period,11. Objects Reference Help
+6,Start Date [Trigger],7272,7272,Tab Period,11. Objects Reference Help
+6,Active Interval,7273,7273,Tab Period,11. Objects Reference Help
+6,Repeat Periodically,7274,7274,Tab Period,11. Objects Reference Help
+6,Period Length,7275,7275,Tab Period,11. Objects Reference Help
+5,Tab Values,7275,7278,Dialog Box of the Trigger,11. Objects Reference Help
+6,Tab Values,7275,7275,Tab Values,11. Objects Reference Help
+6,Trigger Type,7276,7276,Tab Values,11. Objects Reference Help
+6,Values [Trigger],7277,7277,Tab Values,11. Objects Reference Help
+6,Combination Table,7278,7278,Tab Values,11. Objects Reference Help
+6,Formula [Trigger],7279,7279,Tab Values,11. Objects Reference Help
+5,Tab Actions,7279,7281,Dialog Box of the Trigger,11. Objects Reference Help
+6,Tab Actions,7279,7279,Tab Actions,11. Objects Reference Help
+6,Attributes [Trigger],7280,7280,Tab Actions,11. Objects Reference Help
+6,Methods [Trigger],7281,7281,Tab Actions,11. Objects Reference Help
+6,Objects [Trigger],7282,7282,Tab Actions,11. Objects Reference Help
+5,Tab Representation,7282,7284,Dialog Box of the Trigger,11. Objects Reference Help
+6,Tab Representation,7282,7282,Tab Representation,11. Objects Reference Help
+6,Value Pattern,7283,7283,Tab Representation,11. Objects Reference Help
+6,Time Unit,7284,7284,Tab Representation,11. Objects Reference Help
+5,Navigate Menu,7285,7285,Dialog Box of the Trigger,11. Objects Reference Help
+5,View Menu,7286,7286,Dialog Box of the Trigger,11. Objects Reference Help
+5,Tools Menu,7287,7287,Dialog Box of the Trigger,11. Objects Reference Help
+5,Help Menu,7288,7288,Dialog Box of the Trigger,11. Objects Reference Help
+4,Methods of the Trigger,7288,7293,Trigger,11. Objects Reference Help
+5,_Methods of the Trigger,7288,7289,Methods of the Trigger,11. Objects Reference Help
+5,compute [SimTalk],7290,7290,Methods of the Trigger,11. Objects Reference Help
+5,deleteTriggeredAttr [SimTalk],7291,7291,Methods of the Trigger,11. Objects Reference Help
+5,deleteTriggeredMeth [SimTalk],7292,7292,Methods of the Trigger,11. Objects Reference Help
+5,insertTriggeredAttr [SimTalk],7293,7293,Methods of the Trigger,11. Objects Reference Help
+5,insertTriggeredMeth [SimTalk],7294,7294,Methods of the Trigger,11. Objects Reference Help
+4,Read-Only Attributes of the Trigger,7294,7295,Trigger,11. Objects Reference Help
+5,Read-Only Attributes of the Trigger,7294,7295,Read-Only Attributes of the Trigger,11. Objects Reference Help
+5,CurrentValue [SimTalk],7296,7296,Read-Only Attributes of the Trigger,11. Objects Reference Help
+4,Attributes of the Trigger,7296,7307,Trigger,11. Objects Reference Help
+5,_Attributes of the Trigger,7296,7297,Attributes of the Trigger,11. Objects Reference Help
+5,Absolute [SimTalk] - Trigger,7298,7298,Attributes of the Trigger,11. Objects Reference Help
+5,Active [SimTalk] - Trigger,7299,7299,Attributes of the Trigger,11. Objects Reference Help
+5,ActiveInterval [SimTalk],7300,7300,Attributes of the Trigger,11. Objects Reference Help
+5,Combination [SimTalk],7301,7301,Attributes of the Trigger,11. Objects Reference Help
+5,CombinationTable [SimTalk],7302,7302,Attributes of the Trigger,11. Objects Reference Help
+5,Formula [SimTalk],7303,7303,Attributes of the Trigger,11. Objects Reference Help
+5,Periodic [SimTalk],7304,7304,Attributes of the Trigger,11. Objects Reference Help
+5,PeriodLength [SimTalk],7305,7305,Attributes of the Trigger,11. Objects Reference Help
+5,ReferenceDate [SimTalk] - Trigger,7306,7306,Attributes of the Trigger,11. Objects Reference Help
+5,ReferenceTime [SimTalk] - Trigger,7307,7307,Attributes of the Trigger,11. Objects Reference Help
+5,ValueTable [SimTalk],7308,7308,Attributes of the Trigger,11. Objects Reference Help
+3,Generator,7308,7334,Information Flow Objects,11. Objects Reference Help
+4,Generator,7308,7308,Generator,11. Objects Reference Help
+4,Dialog Box of the Generator,7309,7324,Generator,11. Objects Reference Help
+5,Dialog Box of the Generator,7309,7309,Dialog Box of the Generator,11. Objects Reference Help
+5,Tab Times,7310,7314,Dialog Box of the Generator,11. Objects Reference Help
+6,Tab Times,7310,7310,Tab Times,11. Objects Reference Help
+6,Active [check box] - Generator,7311,7311,Tab Times,11. Objects Reference Help
+6,Start [text box] - Generator,7312,7312,Tab Times,11. Objects Reference Help
+6,Stop [text box] - Generator,7313,7313,Tab Times,11. Objects Reference Help
+6,Interval [text box] - Generator,7314,7314,Tab Times,11. Objects Reference Help
+6,Duration [text box] - Generator,7315,7315,Tab Times,11. Objects Reference Help
+5,Tab Controls,7315,7320,Dialog Box of the Generator,11. Objects Reference Help
+6,Tab Controls,7315,7316,Tab Controls,11. Objects Reference Help
+6,Interval Control [Generator],7317,7318,Tab Controls,11. Objects Reference Help
+6,Duration Control [Generator],7319,7320,Tab Controls,11. Objects Reference Help
+5,Tab User-defined,7321,7321,Dialog Box of the Generator,11. Objects Reference Help
+5,Navigate Menu,7322,7322,Dialog Box of the Generator,11. Objects Reference Help
+5,View Menu,7323,7323,Dialog Box of the Generator,11. Objects Reference Help
+5,Tools Menu,7324,7324,Dialog Box of the Generator,11. Objects Reference Help
+5,Help Menu,7325,7325,Dialog Box of the Generator,11. Objects Reference Help
+4,Methods of the Generator,7325,7325,Generator,11. Objects Reference Help
+5,Methods of the Generator,7325,7325,Methods of the Generator,11. Objects Reference Help
+4,Read-Only Attributes of the Generator,7326,7326,Generator,11. Objects Reference Help
+5,Read-Only Attributes of the Generator,7326,7326,Read-Only Attributes of the Generator,11. Objects Reference Help
+4,Attributes of the Generator,7327,7334,Generator,11. Objects Reference Help
+5,_Attributes of the Generator,7327,7328,Attributes of the Generator,11. Objects Reference Help
+5,Active [SimTalk] - Generator,7329,7329,Attributes of the Generator,11. Objects Reference Help
+5,Duration [SimTalk] - Generator,7330,7330,Attributes of the Generator,11. Objects Reference Help
+5,DurationCtrl [SimTalk],7331,7331,Attributes of the Generator,11. Objects Reference Help
+5,Interval [SimTalk] - Generator,7332,7332,Attributes of the Generator,11. Objects Reference Help
+5,IntervalCtrl [SimTalk],7333,7333,Attributes of the Generator,11. Objects Reference Help
+5,Start [SimTalk] - Generator,7334,7334,Attributes of the Generator,11. Objects Reference Help
+5,Stop [SimTalk] - Generator,7335,7335,Attributes of the Generator,11. Objects Reference Help
+3,AttributeExplorer,7335,7385,Information Flow Objects,11. Objects Reference Help
+4,AttributeExplorer [object],7335,7336,AttributeExplorer,11. Objects Reference Help
+4,Dialog Box of the AttributeExplorer,7337,7369,AttributeExplorer,11. Objects Reference Help
+5,Dialog Box of the AttributeExplorer,7337,7338,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Show Explorer,7339,7339,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Tab Data,7340,7348,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+6,Tab Data,7340,7341,Tab Data,11. Objects Reference Help
+6,Watch [AttributeExplorer],7342,7342,Tab Data,11. Objects Reference Help
+6,Edit [AttributeExplorer],7343,7343,Tab Data,11. Objects Reference Help
+6,Read Only [AttributeExplorer],7344,7344,Tab Data,11. Objects Reference Help
+6,Show Objects With,7345,7345,Tab Data,11. Objects Reference Help
+6,Show Attributes With,7346,7346,Tab Data,11. Objects Reference Help
+6,Show Comment [AttributeExplorer],7347,7347,Tab Data,11. Objects Reference Help
+6,Comment [AttributeExplorer],7348,7348,Tab Data,11. Objects Reference Help
+5,Tab Objects [AttributeExplorer],7349,7350,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Tab Attributes [AttributeExplorer],7351,7352,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Tab Query,7353,7364,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+6,Tab Query,7353,7354,Tab Query,11. Objects Reference Help
+6,Parentheses [opening],7355,7355,Tab Query,11. Objects Reference Help
+6,Attribute [AttributeExplorer],7356,7356,Tab Query,11. Objects Reference Help
+6,Condition [AttributeExplorer],7357,7357,Tab Query,11. Objects Reference Help
+6,Value [AttributeExplorer],7358,7358,Tab Query,11. Objects Reference Help
+6,Parentheses [closing],7359,7359,Tab Query,11. Objects Reference Help
+6,Operator [AttributeExplorer],7360,7360,Tab Query,11. Objects Reference Help
+6,Comment [query],7361,7361,Tab Query,11. Objects Reference Help
+6,Frame [find attribute in],7362,7362,Tab Query,11. Objects Reference Help
+6,Include Subframes [AttributeExplorer],7363,7363,Tab Query,11. Objects Reference Help
+6,Include MUs [AttributeExplorer],7364,7364,Tab Query,11. Objects Reference Help
+5,Tab User-defined,7365,7365,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Navigate Menu,7366,7366,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,View Menu,7367,7367,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+5,Tools Menu,7367,7369,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+6,Tools Menu,7367,7367,Tools Menu,11. Objects Reference Help
+6,Export [AttributeExplorer],7368,7368,Tools Menu,11. Objects Reference Help
+6,Import [AttributeExplorer],7369,7369,Tools Menu,11. Objects Reference Help
+5,Help Menu,7370,7370,Dialog Box of the AttributeExplorer,11. Objects Reference Help
+4,Methods of the AttributeExplorer,7370,7370,AttributeExplorer,11. Objects Reference Help
+5,Methods of the AttributeExplorer,7370,7370,Methods of the AttributeExplorer,11. Objects Reference Help
+4,Read-Only Attributes of the AttributeExplorer,7371,7371,AttributeExplorer,11. Objects Reference Help
+5,Read-Only Attributes of the AttributeExplorer,7371,7371,Read-Only Attributes of the AttributeExplorer,11. Objects Reference Help
+4,Attributes of the AttributeExplorer,7372,7385,AttributeExplorer,11. Objects Reference Help
+5,_Attributes of the AttributeExplorer,7372,7373,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,AttributeRepresentation [SimTalk],7374,7374,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,AttributeTable [SimTalk],7375,7375,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,Comment [SimTalk] - AttributeExplorer,7376,7376,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,ExplorerTable [SimTalk],7377,7377,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,IncludeMUs [SimTalk],7378,7378,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,IncludeSubframes [SimTalk],7379,7379,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,IsShown [SimTalk] - AttributeExplorer,7380,7380,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,Mode [SimTalk] - AttributeExplorer,7381,7381,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,ObjectRepresentation [SimTalk],7382,7382,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,ObjectTable [SimTalk],7383,7383,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,QueryTable [SimTalk],7384,7384,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,ShowComment [SimTalk] - AttributeExplorer,7385,7385,Attributes of the AttributeExplorer,11. Objects Reference Help
+5,StartNode [SimTalk],7386,7386,Attributes of the AttributeExplorer,11. Objects Reference Help
+3,FileLink,7386,7402,Information Flow Objects,11. Objects Reference Help
+4,FileLink,7386,7387,FileLink,11. Objects Reference Help
+4,Dialog Box of the FileLink,7388,7396,FileLink,11. Objects Reference Help
+5,Dialog Box of the FileLink,7388,7388,Dialog Box of the FileLink,11. Objects Reference Help
+5,Tab Attributes,7389,7392,Dialog Box of the FileLink,11. Objects Reference Help
+6,Tab Attributes,7389,7390,Tab Attributes,11. Objects Reference Help
+6,Filename [FileLink],7391,7391,Tab Attributes,11. Objects Reference Help
+6,Embed File [check box],7392,7392,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,7393,7393,Dialog Box of the FileLink,11. Objects Reference Help
+5,Navigate Menu,7394,7394,Dialog Box of the FileLink,11. Objects Reference Help
+5,View Menu,7395,7395,Dialog Box of the FileLink,11. Objects Reference Help
+5,Tools Menu,7396,7396,Dialog Box of the FileLink,11. Objects Reference Help
+5,Help Menu,7397,7397,Dialog Box of the FileLink,11. Objects Reference Help
+4,Methods of the FileLink,7397,7398,FileLink,11. Objects Reference Help
+5,Methods of the FileLink,7397,7398,Methods of the FileLink,11. Objects Reference Help
+5,openFile [SimTalk],7399,7399,Methods of the FileLink,11. Objects Reference Help
+4,Read-Only Attributes of the FileLink,7399,7399,FileLink,11. Objects Reference Help
+5,Read-Only Attributes of the FileLink,7399,7399,Read-Only Attributes of the FileLink,11. Objects Reference Help
+4,Attributes of the FileLink,7400,7402,FileLink,11. Objects Reference Help
+5,_Attributes of the FileLink,7400,7401,Attributes of the FileLink,11. Objects Reference Help
+5,Embed [SimTalk],7402,7402,Attributes of the FileLink,11. Objects Reference Help
+5,FileName [SimTalk] - FileLink,7403,7403,Attributes of the FileLink,11. Objects Reference Help
+3,FileInterface,7403,7432,Information Flow Objects,11. Objects Reference Help
+4,FileInterface,7403,7404,FileInterface,11. Objects Reference Help
+4,Dialog Box of the FileInterface,7405,7413,FileInterface,11. Objects Reference Help
+5,Dialog Box of the FileInterface,7405,7405,Dialog Box of the FileInterface,11. Objects Reference Help
+5,Tab Attributes,7406,7409,Dialog Box of the FileInterface,11. Objects Reference Help
+6,Tab Attributes,7406,7406,Tab Attributes,11. Objects Reference Help
+6,Filename [FileInterface],7407,7407,Tab Attributes,11. Objects Reference Help
+6,Encoding [drop-down list],7408,7408,Tab Attributes,11. Objects Reference Help
+6,Delete File [FileInterface],7409,7409,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,7410,7410,Dialog Box of the FileInterface,11. Objects Reference Help
+5,Navigate Menu,7411,7411,Dialog Box of the FileInterface,11. Objects Reference Help
+5,View Menu,7412,7412,Dialog Box of the FileInterface,11. Objects Reference Help
+5,Tools Menu,7413,7413,Dialog Box of the FileInterface,11. Objects Reference Help
+5,Help Menu,7414,7414,Dialog Box of the FileInterface,11. Objects Reference Help
+4,Methods of the FileInterface,7414,7427,FileInterface,11. Objects Reference Help
+5,_Methods of the FileInterface,7414,7415,Methods of the FileInterface,11. Objects Reference Help
+5,close [SimTalk] - FileInterface,7416,7416,Methods of the FileInterface,11. Objects Reference Help
+5,formFeed [SimTalk],7417,7417,Methods of the FileInterface,11. Objects Reference Help
+5,goBottom [SimTalk],7418,7418,Methods of the FileInterface,11. Objects Reference Help
+5,goToLine [SimTalk],7419,7419,Methods of the FileInterface,11. Objects Reference Help
+5,goTop [SimTalk],7420,7420,Methods of the FileInterface,11. Objects Reference Help
+5,newLine [SimTalk],7421,7421,Methods of the FileInterface,11. Objects Reference Help
+5,open [SimTalk] - FileInterface,7422,7422,Methods of the FileInterface,11. Objects Reference Help
+5,read [SimTalk] - FileInterface,7423,7423,Methods of the FileInterface,11. Objects Reference Help
+5,readLn [SimTalk],7424,7424,Methods of the FileInterface,11. Objects Reference Help
+5,remove [SimTalk] - FileInterface,7425,7425,Methods of the FileInterface,11. Objects Reference Help
+5,write [SimTalk] - FileInterface,7426,7426,Methods of the FileInterface,11. Objects Reference Help
+5,writeLn [SimTalk],7427,7427,Methods of the FileInterface,11. Objects Reference Help
+4,Read-Only Attributes of the FileInterface,7428,7429,FileInterface,11. Objects Reference Help
+5,_Read-Only Attributes of the FileInterface,7428,7428,Read-Only Attributes of the FileInterface,11. Objects Reference Help
+5,EoF [SimTalk],7429,7429,Read-Only Attributes of the FileInterface,11. Objects Reference Help
+5,IsOpen [SimTalk] - FileInterface,7430,7430,Read-Only Attributes of the FileInterface,11. Objects Reference Help
+4,Attributes of the FileInterface,7430,7432,FileInterface,11. Objects Reference Help
+5,_Attributes of the FileInterface,7430,7431,Attributes of the FileInterface,11. Objects Reference Help
+5,Encoding [SimTalk],7432,7432,Attributes of the FileInterface,11. Objects Reference Help
+5,FileName [SimTalk] - FileInterface,7433,7433,Attributes of the FileInterface,11. Objects Reference Help
+3,XMLInterface,7433,7481,Information Flow Objects,11. Objects Reference Help
+4,XMLInterface,7433,7433,XMLInterface,11. Objects Reference Help
+4,Dialog Box of the XML Interface,7434,7445,XMLInterface,11. Objects Reference Help
+5,Dialog Box of the XMLInterface,7434,7434,Dialog Box of the XML Interface,11. Objects Reference Help
+5,Tab Attributes,7435,7441,Dialog Box of the XML Interface,11. Objects Reference Help
+6,Tab Attributes,7435,7435,Tab Attributes,11. Objects Reference Help
+6,Filename [XMLInterface],7436,7436,Tab Attributes,11. Objects Reference Help
+6,Context [text box],7437,7437,Tab Attributes,11. Objects Reference Help
+6,Import Method [XML Interface],7438,7440,Tab Attributes,11. Objects Reference Help
+6,Delete File [XML Interface],7441,7441,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,7442,7442,Dialog Box of the XML Interface,11. Objects Reference Help
+5,Navigate Menu,7443,7443,Dialog Box of the XML Interface,11. Objects Reference Help
+5,View Menu,7444,7444,Dialog Box of the XML Interface,11. Objects Reference Help
+5,Tools Menu,7445,7445,Dialog Box of the XML Interface,11. Objects Reference Help
+5,Help Menu,7446,7446,Dialog Box of the XML Interface,11. Objects Reference Help
+4,Methods of the XML Interface,7446,7475,XMLInterface,11. Objects Reference Help
+5,_Methods of the XML Interface,7446,7447,Methods of the XML Interface,11. Objects Reference Help
+5,addAttribute [SimTalk],7448,7448,Methods of the XML Interface,11. Objects Reference Help
+5,close [SimTalk] - XML Interface,7449,7449,Methods of the XML Interface,11. Objects Reference Help
+5,closeChildren [SimTalk],7450,7450,Methods of the XML Interface,11. Objects Reference Help
+5,deleteNodes [SimTalk],7451,7451,Methods of the XML Interface,11. Objects Reference Help
+5,endElement [SimTalk],7452,7452,Methods of the XML Interface,11. Objects Reference Help
+5,getAttributeName [SimTalk],7453,7453,Methods of the XML Interface,11. Objects Reference Help
+5,getAttributeValue [SimTalk],7454,7454,Methods of the XML Interface,11. Objects Reference Help
+5,getContainer [SimTalk],7455,7456,Methods of the XML Interface,11. Objects Reference Help
+5,getNextNode [SimTalk],7457,7457,Methods of the XML Interface,11. Objects Reference Help
+5,getNodeName [SimTalk],7458,7458,Methods of the XML Interface,11. Objects Reference Help
+5,getNodes [SimTalk],7459,7459,Methods of the XML Interface,11. Objects Reference Help
+5,getNodeValue [SimTalk],7460,7460,Methods of the XML Interface,11. Objects Reference Help
+5,insertNodes [SimTalk],7461,7461,Methods of the XML Interface,11. Objects Reference Help
+5,newDocument [SimTalk],7462,7463,Methods of the XML Interface,11. Objects Reference Help
+5,openDocument [SimTalk],7464,7464,Methods of the XML Interface,11. Objects Reference Help
+5,openRead [SimTalk],7465,7465,Methods of the XML Interface,11. Objects Reference Help
+5,openWrite [SimTalk],7466,7466,Methods of the XML Interface,11. Objects Reference Help
+5,remove [SimTalk] - XML Interface,7467,7467,Methods of the XML Interface,11. Objects Reference Help
+5,selectChildren [SimTalk],7468,7468,Methods of the XML Interface,11. Objects Reference Help
+5,selectNodes [SimTalk],7469,7469,Methods of the XML Interface,11. Objects Reference Help
+5,setContext [SimTalk],7470,7471,Methods of the XML Interface,11. Objects Reference Help
+5,startElement [SimTalk],7472,7472,Methods of the XML Interface,11. Objects Reference Help
+5,updateNodes [SimTalk],7473,7473,Methods of the XML Interface,11. Objects Reference Help
+5,write [SimTalk] - XML Interface,7474,7474,Methods of the XML Interface,11. Objects Reference Help
+5,writeElement [SimTalk],7475,7475,Methods of the XML Interface,11. Objects Reference Help
+4,Read-Only Attributes of the XMLInterface,7476,7476,XMLInterface,11. Objects Reference Help
+5,Read-Only Attributes of the XMLInterface,7476,7476,Read-Only Attributes of the XMLInterface,11. Objects Reference Help
+5,GetNumberAttributes [SimTalk],7477,7477,Read-Only Attributes of the XMLInterface,11. Objects Reference Help
+4,Attributes of the XML Interface,7477,7481,XMLInterface,11. Objects Reference Help
+5,_Attributes of the XML Interface,7477,7478,Attributes of the XML Interface,11. Objects Reference Help
+5,Context [SimTalk],7479,7479,Attributes of the XML Interface,11. Objects Reference Help
+5,FileName [SimTalk] - XML Interface,7480,7480,Attributes of the XML Interface,11. Objects Reference Help
+5,ImportMethod [SimTalk],7481,7481,Attributes of the XML Interface,11. Objects Reference Help
+2,User Interface Objects,7482,8150,11. Objects Reference Help,11. Objects Reference Help
+3,Display and User Interface Objects,7482,7483,User Interface Objects,11. Objects Reference Help

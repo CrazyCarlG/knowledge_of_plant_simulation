@@ -1,0 +1,615 @@
+User Interface Objects,7482,8150,11. Objects Reference Help,11. Objects Reference Help
+3,Display and User Interface Objects,7482,7483,User Interface Objects,11. Objects Reference Help
+3,Comment,7484,7523,User Interface Objects,11. Objects Reference Help
+4,Comment [object],7484,7484,Comment,11. Objects Reference Help
+4,Dialog Box of the Comment,7485,7511,Comment,11. Objects Reference Help
+5,Dialog Box of the Comment,7485,7486,Dialog Box of the Comment,11. Objects Reference Help
+5,Name [text box] - Comment,7487,7487,Dialog Box of the Comment,11. Objects Reference Help
+5,Tab Comment,7487,7502,Dialog Box of the Comment,11. Objects Reference Help
+6,Tab Comment [Comment],7487,7489,Tab Comment,11. Objects Reference Help
+6,Formatting Toolbar,7490,7490,Tab Comment,11. Objects Reference Help
+6,Inherit Contents [Comment],7491,7491,Tab Comment,11. Objects Reference Help
+6,Save the Content in Rich-text Format,7492,7492,Tab Comment,11. Objects Reference Help
+6,Context Menu for Formatting the Comment,7492,7502,Tab Comment,11. Objects Reference Help
+7,Context Menu for Formatting the Comment,7492,7492,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Undo [Comment],7493,7493,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Font [Comment],7494,7494,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Color [Comment],7495,7495,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Bold [Comment],7496,7496,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Italic [Comment],7497,7497,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Underline,7498,7498,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Align Left,7499,7499,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Center [Comment],7500,7500,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Align Right,7501,7501,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Bullets,7502,7502,Context Menu for Formatting the Comment,11. Objects Reference Help
+7,Insert Date or Time,7503,7503,Context Menu for Formatting the Comment,11. Objects Reference Help
+5,Tab Display,7503,7508,Dialog Box of the Comment,11. Objects Reference Help
+6,Tab Display,7503,7503,Tab Display,11. Objects Reference Help
+6,Text [text box] - Comment,7504,7504,Tab Display,11. Objects Reference Help
+6,Font Size [drop-down list] - Comment,7505,7505,Tab Display,11. Objects Reference Help
+6,Font Color [Comment],7506,7506,Tab Display,11. Objects Reference Help
+6,Background Color [drop-down list] - Comment,7507,7507,Tab Display,11. Objects Reference Help
+6,Transparent [check box] - Comment,7508,7508,Tab Display,11. Objects Reference Help
+5,Navigate Menu,7509,7509,Dialog Box of the Comment,11. Objects Reference Help
+5,View Menu,7510,7510,Dialog Box of the Comment,11. Objects Reference Help
+5,Tools Menu,7511,7511,Dialog Box of the Comment,11. Objects Reference Help
+5,Help Menu,7512,7512,Dialog Box of the Comment,11. Objects Reference Help
+4,Methods of the Comment,7512,7514,Comment,11. Objects Reference Help
+5,_Methods of the Comment,7512,7513,Methods of the Comment,11. Objects Reference Help
+5,appendToContent [SimTalk],7514,7514,Methods of the Comment,11. Objects Reference Help
+5,openComment [SimTalk],7515,7515,Methods of the Comment,11. Objects Reference Help
+4,Read-Only Attributes of the Comment,7515,7515,Comment,11. Objects Reference Help
+5,Read-Only Attributes of the Comment,7515,7515,Read-Only Attributes of the Comment,11. Objects Reference Help
+4,Attributes of the Comment,7516,7523,Comment,11. Objects Reference Help
+5,_Attributes of the Comment,7516,7517,Attributes of the Comment,11. Objects Reference Help
+5,BackgroundColor [SimTalk] - Comment,7518,7518,Attributes of the Comment,11. Objects Reference Help
+5,Color [SimTalk] - Comment,7519,7519,Attributes of the Comment,11. Objects Reference Help
+5,Cont [SimTalk] - Comment,7520,7520,Attributes of the Comment,11. Objects Reference Help
+5,Font [SimTalk] - Comment,7521,7521,Attributes of the Comment,11. Objects Reference Help
+5,SaveAsRichedit [SimTalk],7522,7522,Attributes of the Comment,11. Objects Reference Help
+5,Text [SimTalk] - Comment,7523,7523,Attributes of the Comment,11. Objects Reference Help
+5,Transparent [SimTalk] - Comment,7524,7524,Attributes of the Comment,11. Objects Reference Help
+3,Display,7524,7569,User Interface Objects,11. Objects Reference Help
+4,Display [object],7524,7525,Display,11. Objects Reference Help
+4,Dialog Box of the Display,7526,7546,Display,11. Objects Reference Help
+5,Dialog Box of the Display,7526,7527,Dialog Box of the Display,11. Objects Reference Help
+5,Active [check box] - Display,7528,7528,Dialog Box of the Display,11. Objects Reference Help
+5,Tab Data,7528,7535,Dialog Box of the Display,11. Objects Reference Help
+6,Tab Data,7528,7528,Tab Data,11. Objects Reference Help
+6,Path [text box] - Display,7529,7529,Tab Data,11. Objects Reference Help
+6,Comment [text box] - Display,7530,7530,Tab Data,11. Objects Reference Help
+6,Mode [drop-down list] - Display,7531,7531,Tab Data,11. Objects Reference Help
+6,Interval [text box] - Display,7532,7532,Tab Data,11. Objects Reference Help
+6,Value [Display],7533,7533,Tab Data,11. Objects Reference Help
+6,Minimum [Display],7534,7534,Tab Data,11. Objects Reference Help
+6,Maximum [Display],7535,7535,Tab Data,11. Objects Reference Help
+6,Reset Values [button],7536,7536,Tab Data,11. Objects Reference Help
+5,Tab Display,7536,7542,Dialog Box of the Display,11. Objects Reference Help
+6,Tab Display,7536,7536,Tab Display,11. Objects Reference Help
+6,Type [drop-down list] - Display,7537,7538,Tab Display,11. Objects Reference Help
+6,Font Size [drop-down list] - Display,7539,7539,Tab Display,11. Objects Reference Help
+6,Decimal Places [text box] - Display,7540,7540,Tab Display,11. Objects Reference Help
+6,Color [Display],7541,7541,Tab Display,11. Objects Reference Help
+6,Transparent [check box] - Display,7542,7542,Tab Display,11. Objects Reference Help
+5,Tab User-defined,7543,7543,Dialog Box of the Display,11. Objects Reference Help
+5,Navigate Menu,7544,7544,Dialog Box of the Display,11. Objects Reference Help
+5,View Menu,7545,7545,Dialog Box of the Display,11. Objects Reference Help
+5,Tools Menu,7546,7546,Dialog Box of the Display,11. Objects Reference Help
+5,Help Menu,7547,7547,Dialog Box of the Display,11. Objects Reference Help
+4,Methods of the Display,7547,7549,Display,11. Objects Reference Help
+5,_Methods of the Display,7547,7548,Methods of the Display,11. Objects Reference Help
+5,resetMinMax [SimTalk],7549,7549,Methods of the Display,11. Objects Reference Help
+5,update [SimTalk] - Display,7550,7550,Methods of the Display,11. Objects Reference Help
+4,Read-Only Attributes of the Display,7550,7554,Display,11. Objects Reference Help
+5,_Read-Only Attributes of the Display,7550,7551,Read-Only Attributes of the Display,11. Objects Reference Help
+5,GetAverage [SimTalk],7552,7552,Read-Only Attributes of the Display,11. Objects Reference Help
+5,GetMaximum [SimTalk],7553,7553,Read-Only Attributes of the Display,11. Objects Reference Help
+5,GetMinimum [SimTalk],7554,7554,Read-Only Attributes of the Display,11. Objects Reference Help
+5,GetStandardDeviation [SimTalk],7555,7555,Read-Only Attributes of the Display,11. Objects Reference Help
+4,Attributes of the Display,7555,7569,Display,11. Objects Reference Help
+5,_Attributes of the Display,7555,7556,Attributes of the Display,11. Objects Reference Help
+5,Active [SimTalk] - Display,7557,7557,Attributes of the Display,11. Objects Reference Help
+5,Color [SimTalk] - Display,7558,7558,Attributes of the Display,11. Objects Reference Help
+5,Comment [SimTalk] - Display,7559,7559,Attributes of the Display,11. Objects Reference Help
+5,DecimalPlaces [SimTalk] - Display,7560,7560,Attributes of the Display,11. Objects Reference Help
+5,DisplayType [SimTalk],7561,7561,Attributes of the Display,11. Objects Reference Help
+5,Font [SimTalk] - Display,7562,7562,Attributes of the Display,11. Objects Reference Help
+5,MaxVal [SimTalk],7563,7563,Attributes of the Display,11. Objects Reference Help
+5,MinVal [SimTalk],7564,7564,Attributes of the Display,11. Objects Reference Help
+5,Path [SimTalk] - Display,7565,7565,Attributes of the Display,11. Objects Reference Help
+5,Sampler [SimTalk],7566,7566,Attributes of the Display,11. Objects Reference Help
+5,SmpPeriod [SimTalk] - Display,7567,7567,Attributes of the Display,11. Objects Reference Help
+5,Transparent [SimTalk] - Display,7568,7568,Attributes of the Display,11. Objects Reference Help
+5,Value [SimTalk] - Display,7569,7569,Attributes of the Display,11. Objects Reference Help
+3,Chart,7570,7743,User Interface Objects,11. Objects Reference Help
+4,Chart [object],7570,7573,Chart,11. Objects Reference Help
+4,Statistics Wizard [described],7574,7577,Chart,11. Objects Reference Help
+4,Drag-and-Drop in the Chart,7578,7578,Chart,11. Objects Reference Help
+4,Dialog Box of the Chart,7579,7658,Chart,11. Objects Reference Help
+5,Dialog Box of the Chart,7579,7579,Dialog Box of the Chart,11. Objects Reference Help
+5,Show Chart [button] - Chart,7580,7581,Dialog Box of the Chart,11. Objects Reference Help
+5,Collect Data [check box] - Chart,7582,7582,Dialog Box of the Chart,11. Objects Reference Help
+5,Tab Data,7582,7590,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Data,7582,7583,Tab Data,11. Objects Reference Help
+6,Data Source [Chart],7584,7588,Tab Data,11. Objects Reference Help
+6,Data [Chart],7589,7589,Tab Data,11. Objects Reference Help
+6,Mode [drop-down list] - Chart,7590,7590,Tab Data,11. Objects Reference Help
+5,Tab Display,7591,7611,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Display,7591,7591,Tab Display,11. Objects Reference Help
+6,Chart Category,7592,7597,Tab Display,11. Objects Reference Help
+7,Category [drop-down list],7592,7594,Chart Category,11. Objects Reference Help
+7,Category - 3D Chart,7595,7596,Chart Category,11. Objects Reference Help
+7,Category - 3D Histogram,7597,7597,Chart Category,11. Objects Reference Help
+6,Chart Type [drop-down list],7598,7600,Tab Display,11. Objects Reference Help
+6,3D Effect,7601,7603,Tab Display,11. Objects Reference Help
+6,Graph/table [drop-down list],7604,7605,Tab Display,11. Objects Reference Help
+6,Display in Frame,7606,7609,Tab Display,11. Objects Reference Help
+7,Display in Frame [check box] - Chart,7606,7606,Display in Frame,11. Objects Reference Help
+7,Width [text box] - display in frame,7607,7607,Display in Frame,11. Objects Reference Help
+7,Height [text box] - display in frame,7608,7608,Display in Frame,11. Objects Reference Help
+7,3D Image Quality [drop-down list],7609,7609,Display in Frame,11. Objects Reference Help
+6,Gap When Null [check box],7610,7610,Tab Display,11. Objects Reference Help
+6,Accumulated [check box] - Chart,7611,7611,Tab Display,11. Objects Reference Help
+6,Step Curve [check box],7612,7612,Tab Display,11. Objects Reference Help
+5,Tab Axes,7612,7624,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Axes,7612,7613,Tab Axes,11. Objects Reference Help
+6,Grid Lines Y-Axis,7614,7614,Tab Axes,11. Objects Reference Help
+6,Grid Lines X-Axis,7615,7615,Tab Axes,11. Objects Reference Help
+6,Logarithmic Y-Axis,7616,7616,Tab Axes,11. Objects Reference Help
+6,Logarithmic X-Axis,7617,7617,Tab Axes,11. Objects Reference Help
+6,Number of Values [text box],7618,7618,Tab Axes,11. Objects Reference Help
+6,Scrollbar [check box],7619,7619,Tab Axes,11. Objects Reference Help
+6,Feed Rate [text box],7620,7620,Tab Axes,11. Objects Reference Help
+6,Step Size [text box],7621,7621,Tab Axes,11. Objects Reference Help
+6,Range Y,7622,7623,Tab Axes,11. Objects Reference Help
+6,Range X,7624,7624,Tab Axes,11. Objects Reference Help
+5,Tab Labels,7625,7635,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Labels [Chart],7625,7626,Tab Labels,11. Objects Reference Help
+6,Title [text box] - Chart,7627,7627,Tab Labels,11. Objects Reference Help
+6,Subtitle [text box] - Chart,7628,7628,Tab Labels,11. Objects Reference Help
+6,X-Axis [text box] - Chart,7629,7629,Tab Labels,11. Objects Reference Help
+6,Y-Axis [text box] - Chart,7630,7630,Tab Labels,11. Objects Reference Help
+6,Z-Axis [text box] - Chart,7631,7631,Tab Labels,11. Objects Reference Help
+6,Legend,7632,7632,Tab Labels,11. Objects Reference Help
+6,Annotations [button],7633,7635,Tab Labels,11. Objects Reference Help
+5,Tab Color,7636,7645,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Color [Chart],7636,7637,Tab Color,11. Objects Reference Help
+6,Color [Chart],7638,7639,Tab Color,11. Objects Reference Help
+6,Opacity,7640,7640,Tab Color,11. Objects Reference Help
+6,Line Style,7641,7641,Tab Color,11. Objects Reference Help
+6,Line Weight,7642,7642,Tab Color,11. Objects Reference Help
+6,Marker Type,7643,7643,Tab Color,11. Objects Reference Help
+6,Add [color],7644,7644,Tab Color,11. Objects Reference Help
+6,Delete [color],7645,7645,Tab Color,11. Objects Reference Help
+6,Marker Size,7646,7646,Tab Color,11. Objects Reference Help
+5,Tab Font,7646,7651,Dialog Box of the Chart,11. Objects Reference Help
+6,Tab Font [Chart],7646,7647,Tab Font,11. Objects Reference Help
+6,Labels [Chart],7648,7648,Tab Font,11. Objects Reference Help
+6,Title [font] - Chart,7649,7649,Tab Font,11. Objects Reference Help
+6,Subtitle [font] - Chart,7650,7650,Tab Font,11. Objects Reference Help
+6,Table [font] - Chart,7651,7651,Tab Font,11. Objects Reference Help
+5,Tab User-defined,7652,7652,Dialog Box of the Chart,11. Objects Reference Help
+5,Navigate Menu,7653,7653,Dialog Box of the Chart,11. Objects Reference Help
+5,View Menu,7654,7654,Dialog Box of the Chart,11. Objects Reference Help
+5,Tools Menu,7654,7658,Dialog Box of the Chart,11. Objects Reference Help
+6,Tools Menu,7654,7654,Tools Menu,11. Objects Reference Help
+6,Use Metric Prefix [command],7655,7655,Tools Menu,11. Objects Reference Help
+6,Reset Values [command],7656,7656,Tools Menu,11. Objects Reference Help
+6,Print [Chart],7657,7657,Tools Menu,11. Objects Reference Help
+6,Copy to Clipboard,7658,7658,Tools Menu,11. Objects Reference Help
+5,Help Menu,7659,7659,Dialog Box of the Chart,11. Objects Reference Help
+4,Methods of the Chart,7659,7686,Chart,11. Objects Reference Help
+5,_Methods of the Chart,7659,7660,Methods of the Chart,11. Objects Reference Help
+5,addObject [SimTalk] - Chart,7661,7661,Methods of the Chart,11. Objects Reference Help
+5,copyBitmapToClipboard [SimTalk] - Chart,7662,7662,Methods of the Chart,11. Objects Reference Help
+5,copyBitmapToFile [SimTalk] - Chart,7663,7663,Methods of the Chart,11. Objects Reference Help
+5,copyBitmapToIcon [SimTalk],7664,7664,Methods of the Chart,11. Objects Reference Help
+5,getAnnotations [SimTalk],7665,7665,Methods of the Chart,11. Objects Reference Help
+5,getColor [SimTalk],7666,7667,Methods of the Chart,11. Objects Reference Help
+5,getHTMLCode [SimTalk] - Chart,7668,7668,Methods of the Chart,11. Objects Reference Help
+5,getLineStyle [SimTalk],7669,7670,Methods of the Chart,11. Objects Reference Help
+5,printChart [SimTalk],7671,7671,Methods of the Chart,11. Objects Reference Help
+5,putValuesIntoTable [SimTalk] - Chart,7672,7672,Methods of the Chart,11. Objects Reference Help
+5,resetValues [SimTalk],7673,7673,Methods of the Chart,11. Objects Reference Help
+5,setAnnotations [SimTalk],7674,7679,Methods of the Chart,11. Objects Reference Help
+5,setColor [SimTalk],7680,7681,Methods of the Chart,11. Objects Reference Help
+5,setLineStyle [SimTalk],7682,7684,Methods of the Chart,11. Objects Reference Help
+5,setWindowPosition [SimTalk] - Chart,7685,7685,Methods of the Chart,11. Objects Reference Help
+5,showPrintDialog [SimTalk] - Chart,7686,7686,Methods of the Chart,11. Objects Reference Help
+5,update [SimTalk] - Chart,7687,7687,Methods of the Chart,11. Objects Reference Help
+4,Read-Only Attributes of the Chart,7687,7687,Chart,11. Objects Reference Help
+5,Read-Only Attributes of the Chart,7687,7687,Read-Only Attributes of the Chart,11. Objects Reference Help
+4,Attributes of the Chart,7688,7743,Chart,11. Objects Reference Help
+5,_Attributes of the Chart,7688,7689,Attributes of the Chart,11. Objects Reference Help
+5,Accumulated [SimTalk],7690,7690,Attributes of the Chart,11. Objects Reference Help
+5,Category [SimTalk],7691,7691,Attributes of the Chart,11. Objects Reference Help
+5,ChartType [SimTalk],7692,7692,Attributes of the Chart,11. Objects Reference Help
+5,CollectData [SimTalk] - Chart,7693,7693,Attributes of the Chart,11. Objects Reference Help
+5,DataInColumn [SimTalk],7694,7694,Attributes of the Chart,11. Objects Reference Help
+5,DataRange [SimTalk],7695,7696,Attributes of the Chart,11. Objects Reference Help
+5,DataTable [SimTalk] - Chart,7697,7697,Attributes of the Chart,11. Objects Reference Help
+5,DisplayInFrame [SimTalk],7698,7698,Attributes of the Chart,11. Objects Reference Help
+5,Effect [SimTalk],7699,7699,Attributes of the Chart,11. Objects Reference Help
+5,FeedRate [SimTalk],7700,7700,Attributes of the Chart,11. Objects Reference Help
+5,FirstInterval [SimTalk],7701,7701,Attributes of the Chart,11. Objects Reference Help
+5,GapWhenNull [SimTalk],7702,7702,Attributes of the Chart,11. Objects Reference Help
+5,GraphTable [SimTalk],7703,7703,Attributes of the Chart,11. Objects Reference Help
+5,Height [SimTalk] - 3D charts,7704,7704,Attributes of the Chart,11. Objects Reference Help
+5,ImageQuality3D [SimTalk],7705,7705,Attributes of the Chart,11. Objects Reference Help
+5,InputChannels [SimTalk],7706,7706,Attributes of the Chart,11. Objects Reference Help
+5,IsShown [SimTalk] - Chart,7707,7707,Attributes of the Chart,11. Objects Reference Help
+5,LabelFont [SimTalk],7708,7709,Attributes of the Chart,11. Objects Reference Help
+5,LegendLocation [SimTalk],7710,7710,Attributes of the Chart,11. Objects Reference Help
+5,Mode [SimTalk] - Chart,7711,7711,Attributes of the Chart,11. Objects Reference Help
+5,NullValue [SimTalk],7712,7712,Attributes of the Chart,11. Objects Reference Help
+5,NumIntervals [SimTalk],7713,7713,Attributes of the Chart,11. Objects Reference Help
+5,NumValues [SimTalk],7714,7714,Attributes of the Chart,11. Objects Reference Help
+5,Rotation [SimTalk] - Chart,7715,7715,Attributes of the Chart,11. Objects Reference Help
+5,SampleInterval [SimTalk],7716,7716,Attributes of the Chart,11. Objects Reference Help
+5,ScrollBar [SimTalk],7717,7717,Attributes of the Chart,11. Objects Reference Help
+5,SizeInFrame [SimTalk],7718,7718,Attributes of the Chart,11. Objects Reference Help
+5,StepCurve [SimTalk],7719,7719,Attributes of the Chart,11. Objects Reference Help
+5,StepSize [SimTalk],7720,7720,Attributes of the Chart,11. Objects Reference Help
+5,SubTitle [SimTalk],7721,7721,Attributes of the Chart,11. Objects Reference Help
+5,SubtitleFont [SimTalk],7722,7723,Attributes of the Chart,11. Objects Reference Help
+5,TableFont [SimTalk],7724,7725,Attributes of the Chart,11. Objects Reference Help
+5,Title [SimTalk],7726,7726,Attributes of the Chart,11. Objects Reference Help
+5,TitleFont [SimTalk],7727,7728,Attributes of the Chart,11. Objects Reference Help
+5,UseInputChannels [SimTalk],7729,7729,Attributes of the Chart,11. Objects Reference Help
+5,UseMetricPrefix [SimTalk],7730,7730,Attributes of the Chart,11. Objects Reference Help
+5,XGrid [SimTalk],7731,7731,Attributes of the Chart,11. Objects Reference Help
+5,XGridlines [SimTalk],7732,7732,Attributes of the Chart,11. Objects Reference Help
+5,XLabel [SimTalk],7733,7733,Attributes of the Chart,11. Objects Reference Help
+5,XLog [SimTalk],7734,7734,Attributes of the Chart,11. Objects Reference Help
+5,XRange [SimTalk],7735,7735,Attributes of the Chart,11. Objects Reference Help
+5,XScaleMax [SimTalk],7736,7736,Attributes of the Chart,11. Objects Reference Help
+5,XScaleMin [SimTalk],7737,7737,Attributes of the Chart,11. Objects Reference Help
+5,YGrid [SimTalk],7738,7738,Attributes of the Chart,11. Objects Reference Help
+5,YGridLineInterval [SimTalk],7739,7739,Attributes of the Chart,11. Objects Reference Help
+5,YLabel [SimTalk],7740,7740,Attributes of the Chart,11. Objects Reference Help
+5,YLog [SimTalk],7741,7741,Attributes of the Chart,11. Objects Reference Help
+5,YScaleMax [SimTalk],7742,7742,Attributes of the Chart,11. Objects Reference Help
+5,YScaleMin [SimTalk],7743,7743,Attributes of the Chart,11. Objects Reference Help
+5,ZLabel [SimTalk],7744,7744,Attributes of the Chart,11. Objects Reference Help
+3,GanttChart,7744,7789,User Interface Objects,11. Objects Reference Help
+4,GanttChart [object],7744,7745,GanttChart,11. Objects Reference Help
+4,Dialog Box of the GanttChart,7746,7767,GanttChart,11. Objects Reference Help
+5,Dialog Box of the GanttChart,7746,7747,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Collect Data [check box] - GanttChart,7748,7748,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Show Chart [button] - GanttChart,7749,7751,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Tab Attributes,7752,7761,Dialog Box of the GanttChart,11. Objects Reference Help
+6,Tab Attributes [GanttChart],7752,7752,Tab Attributes,11. Objects Reference Help
+6,View Mode,7753,7756,Tab Attributes,11. Objects Reference Help
+6,Show Resource Labels [check box],7757,7757,Tab Attributes,11. Objects Reference Help
+6,Show Bar Text [check box],7758,7758,Tab Attributes,11. Objects Reference Help
+6,Show Resource States [check box],7759,7759,Tab Attributes,11. Objects Reference Help
+6,Edit Lanes,7760,7761,Tab Attributes,11. Objects Reference Help
+5,Tab Parts [GanttChart],7762,7762,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Tab Resources [GanttChart],7763,7763,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Tab User-defined,7764,7764,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Navigate Menu,7765,7765,Dialog Box of the GanttChart,11. Objects Reference Help
+5,View Menu,7766,7766,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Tools Menu,7767,7767,Dialog Box of the GanttChart,11. Objects Reference Help
+5,Help Menu,7768,7768,Dialog Box of the GanttChart,11. Objects Reference Help
+4,Methods of the GanttChart,7768,7776,GanttChart,11. Objects Reference Help
+5,_Methods of the GanttChart,7768,7769,Methods of the GanttChart,11. Objects Reference Help
+5,exportChart [SimTalk],7770,7770,Methods of the GanttChart,11. Objects Reference Help
+5,getData [SimTalk],7771,7771,Methods of the GanttChart,11. Objects Reference Help
+5,getHTMLCode [SimTalk] - GanttChart,7772,7772,Methods of the GanttChart,11. Objects Reference Help
+5,getLanes [SimTalk],7773,7773,Methods of the GanttChart,11. Objects Reference Help
+5,setData [SimTalk],7774,7775,Methods of the GanttChart,11. Objects Reference Help
+5,setLanes [SimTalk],7776,7776,Methods of the GanttChart,11. Objects Reference Help
+5,update [SimTalk] - GanttChart,7777,7777,Methods of the GanttChart,11. Objects Reference Help
+4,Read-Only Attributes of the GanttChart,7777,7777,GanttChart,11. Objects Reference Help
+5,Read-Only Attributes of the GanttChart,7777,7777,Read-Only Attributes of the GanttChart,11. Objects Reference Help
+4,Attributes of the GanttChart,7778,7789,GanttChart,11. Objects Reference Help
+5,_Attributes of the GanttChart,7778,7779,Attributes of the GanttChart,11. Objects Reference Help
+5,CollectData [SimTalk] - GanttChart,7780,7780,Attributes of the GanttChart,11. Objects Reference Help
+5,EnableVisualTracking [SimTalk],7781,7781,Attributes of the GanttChart,11. Objects Reference Help
+5,IsShown [SimTalk] - GanttChart,7782,7782,Attributes of the GanttChart,11. Objects Reference Help
+5,NumVisibleBars [SimTalk],7783,7783,Attributes of the GanttChart,11. Objects Reference Help
+5,Parts [SimTalk],7784,7784,Attributes of the GanttChart,11. Objects Reference Help
+5,Resources [SimTalk] - GanttChart,7785,7785,Attributes of the GanttChart,11. Objects Reference Help
+5,ShowBarText [SimTalk],7786,7786,Attributes of the GanttChart,11. Objects Reference Help
+5,ShowPartView [SimTalk],7787,7787,Attributes of the GanttChart,11. Objects Reference Help
+5,ShowResourceLabels [SimTalk],7788,7788,Attributes of the GanttChart,11. Objects Reference Help
+5,ShowResourceStates [SimTalk],7789,7789,Attributes of the GanttChart,11. Objects Reference Help
+5,TimeScale [SimTalk],7790,7790,Attributes of the GanttChart,11. Objects Reference Help
+3,SankeyDiagram,7790,7812,User Interface Objects,11. Objects Reference Help
+4,SankeyDiagram [object],7790,7790,SankeyDiagram,11. Objects Reference Help
+4,Dialog Box of the SankeyDiagram,7791,7802,SankeyDiagram,11. Objects Reference Help
+5,Dialog Box of the SankeyDiagram,7791,7792,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Show Diagram,7793,7794,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Collect Data [check box] - SankeyDiagram,7795,7795,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Tab Attributes,7795,7796,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+6,Tab Attributes,7795,7795,Tab Attributes,11. Objects Reference Help
+6,Maximum Width [SankeyDiagram],7796,7796,Tab Attributes,11. Objects Reference Help
+6,Color [SankeyDiagram],7797,7797,Tab Attributes,11. Objects Reference Help
+5,Tab Objects,7797,7798,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+6,Objects,7797,7797,Tab Objects,11. Objects Reference Help
+6,Objects [SankeyDiagram],7798,7798,Tab Objects,11. Objects Reference Help
+5,Tab User-defined,7799,7799,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Navigate Menu,7800,7800,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,View Menu,7801,7801,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Tools Menu,7802,7802,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+5,Help Menu,7803,7803,Dialog Box of the SankeyDiagram,11. Objects Reference Help
+4,Methods of the SankeyDiagram,7803,7805,SankeyDiagram,11. Objects Reference Help
+5,_Methods of the SankeyDiagram,7803,7804,Methods of the SankeyDiagram,11. Objects Reference Help
+5,getPartFlowData [SimTalk],7805,7805,Methods of the SankeyDiagram,11. Objects Reference Help
+5,update [SimTalk] - SankeyDiagram,7806,7806,Methods of the SankeyDiagram,11. Objects Reference Help
+4,Read-Only Attributes of the SankeyDiagram,7806,7806,SankeyDiagram,11. Objects Reference Help
+5,Read-Only Attributes of the SankeyDiagram,7806,7806,Read-Only Attributes of the SankeyDiagram,11. Objects Reference Help
+4,Attributes of the SankeyDiagram,7807,7812,SankeyDiagram,11. Objects Reference Help
+5,_Attributes of the SankeyDiagram,7807,7808,Attributes of the SankeyDiagram,11. Objects Reference Help
+5,CollectData [SimTalk] - SankeyDiagram,7809,7809,Attributes of the SankeyDiagram,11. Objects Reference Help
+5,Color [SimTalk] - SankeyDiagram,7810,7810,Attributes of the SankeyDiagram,11. Objects Reference Help
+5,IsShown [SimTalk] - SankeyDiagram,7811,7811,Attributes of the SankeyDiagram,11. Objects Reference Help
+5,MaximumWidth [SimTalk],7812,7812,Attributes of the SankeyDiagram,11. Objects Reference Help
+5,Objects [SimTalk] - SankeyDiagram,7813,7813,Attributes of the SankeyDiagram,11. Objects Reference Help
+3,CostAnalyzer,7813,7840,User Interface Objects,11. Objects Reference Help
+4,CostAnalyzer,7813,7817,CostAnalyzer,11. Objects Reference Help
+4,How the CostAnalyzer Assigns Costs to Part Types,7818,7819,CostAnalyzer,11. Objects Reference Help
+4,Costs Shown in the Costs Report,7820,7822,CostAnalyzer,11. Objects Reference Help
+4,Dialog Box of the Cost Analyzer,7823,7830,CostAnalyzer,11. Objects Reference Help
+5,Dialog Box of the CostAnalyzer,7823,7823,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Collect Data [check box] - CostAnalyzer,7824,7824,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Investment Costs [button],7825,7825,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Piece Costs [button],7826,7826,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Tab User-defined,7827,7827,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Navigate Menu,7828,7828,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,View Menu,7829,7829,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Tools Menu,7830,7830,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+5,Help Menu,7831,7831,Dialog Box of the Cost Analyzer,11. Objects Reference Help
+4,Methods of the CostAnalyzer,7831,7837,CostAnalyzer,11. Objects Reference Help
+5,_Methods of the CostAnalyzer,7831,7832,Methods of the CostAnalyzer,11. Objects Reference Help
+5,getInvestmentCostsTable [SimTalk],7833,7834,Methods of the CostAnalyzer,11. Objects Reference Help
+5,getPieceCostsTable [SimTalk],7835,7835,Methods of the CostAnalyzer,11. Objects Reference Help
+5,putInvestmentCostsIntoTable [SimTalk],7836,7837,Methods of the CostAnalyzer,11. Objects Reference Help
+5,putPieceCostsIntoTable [SimTalk],7838,7838,Methods of the CostAnalyzer,11. Objects Reference Help
+4,Read-Only Attributes of the CostAnalyzer,7838,7838,CostAnalyzer,11. Objects Reference Help
+5,Read-Only Attributes of the CostAnalyzer,7838,7838,Read-Only Attributes of the CostAnalyzer,11. Objects Reference Help
+4,Attributes of the CostAnalyzer,7839,7840,CostAnalyzer,11. Objects Reference Help
+5,Attributes of the CostAnalyzer,7839,7840,Attributes of the CostAnalyzer,11. Objects Reference Help
+5,CollectData [SimTalk] - CostAnalyzer,7841,7841,Attributes of the CostAnalyzer,11. Objects Reference Help
+3,HtmlReport,7841,7959,User Interface Objects,11. Objects Reference Help
+4,HtmlReport [object],7841,7842,HtmlReport,11. Objects Reference Help
+4,Dialog Box of the HtmlReport,7843,7943,HtmlReport,11. Objects Reference Help
+5,Dialog Box of the HtmlReport,7843,7843,Dialog Box of the HtmlReport,11. Objects Reference Help
+5,Show Report,7844,7849,Dialog Box of the HtmlReport,11. Objects Reference Help
+6,Show Report,7844,7846,Show Report,11. Objects Reference Help
+6,Structure Pane of the Display Window,7847,7848,Show Report,11. Objects Reference Help
+6,Display Pane of the Display Window,7849,7849,Show Report,11. Objects Reference Help
+5,Tab Content,7850,7939,Dialog Box of the HtmlReport,11. Objects Reference Help
+6,Tab Content [HtmlReport],7850,7853,Tab Content,11. Objects Reference Help
+6,Toolbar of the HtmlReport,7854,7854,Tab Content,11. Objects Reference Help
+6,Default Settings of the HtmlReport,7855,7856,Tab Content,11. Objects Reference Help
+6,Define a Heading,7857,7857,Tab Content,11. Objects Reference Help
+6,Create a Bulleted List,7858,7858,Tab Content,11. Objects Reference Help
+6,Create a Numbered List,7859,7860,Tab Content,11. Objects Reference Help
+6,Highlight Text by Bolding and/or Italicizing It,7861,7861,Tab Content,11. Objects Reference Help
+6,Indent Text,7862,7862,Tab Content,11. Objects Reference Help
+6,Center Text,7863,7863,Tab Content,11. Objects Reference Help
+6,Add a Reference to an Object,7863,7913,Tab Content,11. Objects Reference Help
+7,Add a Reference to an Object on the HTML Page,7863,7868,Add a Reference to an Object,11. Objects Reference Help
+7,Display an Attribute of an Object,7869,7869,Add a Reference to an Object,11. Objects Reference Help
+7,Display an AttributeExplorer,7870,7871,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Broker,7872,7873,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Chart,7874,7876,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Checkbox,7877,7878,Add a Reference to an Object,11. Objects Reference Help
+7,Display an Object of Type Comment,7879,7880,Add a Reference to an Object,11. Objects Reference Help
+7,Display a DataTable or a DataList,7881,7882,Add a Reference to an Object,11. Objects Reference Help
+7,Display an Object of Type Display,7883,7884,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Drain,7885,7886,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Dropdown List,7887,7887,Add a Reference to an Object,11. Objects Reference Help
+7,Display a FileLink,7888,7890,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Frame,7891,7893,Add a Reference to an Object,11. Objects Reference Help
+7,Display a GanttChart,7894,7895,Add a Reference to an Object,11. Objects Reference Help
+7,Display a HtmlReport,7896,7897,Add a Reference to an Object,11. Objects Reference Help
+7,Display an Icon of an Object,7898,7900,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Method,7901,7901,Add a Reference to an Object,11. Objects Reference Help
+7,Display a PythonModule,7901,7902,Add a Reference to an Object,11. Objects Reference Help
+7,Display a SankeyDiagram,7903,7906,Add a Reference to an Object,11. Objects Reference Help
+7,Display Statistics Values of an Object as a Table,7907,7911,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Table from the SQLite Interface,7912,7912,Add a Reference to an Object,11. Objects Reference Help
+7,Display a Variable,7913,7913,Add a Reference to an Object,11. Objects Reference Help
+6,Display a Picture of a Scene,7914,7919,Tab Content,11. Objects Reference Help
+6,Compute a Formula,7920,7920,Tab Content,11. Objects Reference Help
+6,Add an Image of an Object,7921,7923,Tab Content,11. Objects Reference Help
+6,Add a Bitmap File,7924,7924,Tab Content,11. Objects Reference Help
+6,Collect Object Instances and Show Them,7925,7931,Tab Content,11. Objects Reference Help
+6,Insert a Comment into Your Report,7932,7932,Tab Content,11. Objects Reference Help
+6,Insert a Horizontal Line,7933,7933,Tab Content,11. Objects Reference Help
+6,Insert HTML Tags,7934,7935,Tab Content,11. Objects Reference Help
+6,Protect Characters,7936,7936,Tab Content,11. Objects Reference Help
+6,Spell Check the Content of the HtmlReport,7937,7937,Tab Content,11. Objects Reference Help
+6,Use a String Unchanged in the HTML Code,7938,7939,Tab Content,11. Objects Reference Help
+5,Tab User-defined,7940,7940,Dialog Box of the HtmlReport,11. Objects Reference Help
+5,Navigate Menu,7941,7941,Dialog Box of the HtmlReport,11. Objects Reference Help
+5,View Menu,7942,7942,Dialog Box of the HtmlReport,11. Objects Reference Help
+5,Tools Menu,7943,7943,Dialog Box of the HtmlReport,11. Objects Reference Help
+5,Help Menu,7944,7944,Dialog Box of the HtmlReport,11. Objects Reference Help
+4,Methods of the HtmlReport,7944,7952,HtmlReport,11. Objects Reference Help
+5,_Methods of the HtmlReport,7944,7945,Methods of the HtmlReport,11. Objects Reference Help
+5,append [SimTalk] - HtmlReport,7946,7946,Methods of the HtmlReport,11. Objects Reference Help
+5,appendLine [SimTalk],7947,7947,Methods of the HtmlReport,11. Objects Reference Help
+5,appendPlainText [SimTalk],7948,7948,Methods of the HtmlReport,11. Objects Reference Help
+5,close [SimTalk] - HtmlReport,7949,7949,Methods of the HtmlReport,11. Objects Reference Help
+5,getHTMLCode [SimTalk] - HtmlReport,7950,7950,Methods of the HtmlReport,11. Objects Reference Help
+5,refresh [SimTalk],7951,7951,Methods of the HtmlReport,11. Objects Reference Help
+5,save [SimTalk] - HtmlReport,7952,7952,Methods of the HtmlReport,11. Objects Reference Help
+5,show [SimTalk],7953,7953,Methods of the HtmlReport,11. Objects Reference Help
+4,Read-Only Attributes of the HtmlReport,7953,7953,HtmlReport,11. Objects Reference Help
+5,Read-Only Attributes of the HtmlReport,7953,7953,Read-Only Attributes of the HtmlReport,11. Objects Reference Help
+4,Attributes of the HtmlReport,7954,7959,HtmlReport,11. Objects Reference Help
+5,_Attributes of the HtmlReport,7954,7955,Attributes of the HtmlReport,11. Objects Reference Help
+5,Content [SimTalk] - HtmlReport,7956,7956,Attributes of the HtmlReport,11. Objects Reference Help
+5,IsShown [SimTalk] - HtmlReport,7957,7957,Attributes of the HtmlReport,11. Objects Reference Help
+5,TocLevels [SimTalk],7958,7958,Attributes of the HtmlReport,11. Objects Reference Help
+5,WindowHeight [SimTalk],7959,7959,Attributes of the HtmlReport,11. Objects Reference Help
+5,WindowWidth [SimTalk],7960,7960,Attributes of the HtmlReport,11. Objects Reference Help
+3,Dialog,7960,8093,User Interface Objects,11. Objects Reference Help
+4,Dialog [object],7960,7963,Dialog,11. Objects Reference Help
+4,Dialog Box of the Dialog,7964,8022,Dialog,11. Objects Reference Help
+5,Dialog Box of the Object Dialog,7964,7964,Dialog Box of the Dialog,11. Objects Reference Help
+5,Label [text box] - Dialog,7965,7965,Dialog Box of the Dialog,11. Objects Reference Help
+5,Show Dialog [Dialog],7966,7967,Dialog Box of the Dialog,11. Objects Reference Help
+5,Edit Dialog [described],7968,7968,Dialog Box of the Dialog,11. Objects Reference Help
+5,Tab Elements,7969,8010,Dialog Box of the Dialog,11. Objects Reference Help
+6,Tab Elements,7969,7969,Tab Elements,11. Objects Reference Help
+6,Inserting a Dialog Item into Your Dialog,7970,7996,Tab Elements,11. Objects Reference Help
+7,Insert a Dialog Item into Your Dialog,7970,7971,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Button,7972,7972,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Check Box,7973,7975,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New DropDownList Box,7976,7977,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Edit Text Box,7978,7979,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Group Box,7980,7980,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Image,7981,7981,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New List Box,7982,7983,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New List View,7984,7985,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Menu/New Menu Command,7986,7988,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Radio Button,7989,7992,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Static Text Box,7993,7993,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Tab Control,7994,7995,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+7,New Tab Page,7996,7996,Inserting a Dialog Item into Your Dialog,11. Objects Reference Help
+6,Defining Properties of a Dialog Item,7997,8009,Tab Elements,11. Objects Reference Help
+7,Define Properties of a Dialog Item,7997,7997,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Name [dialog item in Dialog],7998,7998,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Caption [text box] - Dialog,7999,8000,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Callback Argument [text box] - Dialog,8001,8001,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,X [text box] - Dialog,8002,8002,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Y [text box] - Dialog,8003,8003,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Group ID,8004,8004,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Image ID,8005,8005,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Width [text box] - dialog item,8006,8006,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Height [text box] - dialog item,8007,8007,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Enable [check box] - dialog item,8008,8008,Defining Properties of a Dialog Item,11. Objects Reference Help
+7,Items [Dialog],8009,8009,Defining Properties of a Dialog Item,11. Objects Reference Help
+6,Show Default Buttons [check box],8010,8010,Tab Elements,11. Objects Reference Help
+6,Open Modal [check box],8011,8011,Tab Elements,11. Objects Reference Help
+5,Tab Position,8011,8012,Dialog Box of the Dialog,11. Objects Reference Help
+6,Tab Position,8011,8011,Tab Position,11. Objects Reference Help
+6,X-Position [dialog item],8012,8012,Tab Position,11. Objects Reference Help
+6,Y-Position [dialog item],8013,8013,Tab Position,11. Objects Reference Help
+5,Tab Method,8013,8018,Dialog Box of the Dialog,11. Objects Reference Help
+6,Tab Method,8013,8013,Tab Method,11. Objects Reference Help
+6,Callback Method [text box] - Dialog,8014,8015,Tab Method,11. Objects Reference Help
+6,Argument for Open [text box],8016,8016,Tab Method,11. Objects Reference Help
+6,Argument for Apply [text box],8017,8017,Tab Method,11. Objects Reference Help
+6,Argument for Close [text box],8018,8018,Tab Method,11. Objects Reference Help
+5,Tab User-defined,8019,8019,Dialog Box of the Dialog,11. Objects Reference Help
+5,Navigate Menu,8020,8020,Dialog Box of the Dialog,11. Objects Reference Help
+5,View Menu,8021,8021,Dialog Box of the Dialog,11. Objects Reference Help
+5,Tools Menu,8022,8022,Dialog Box of the Dialog,11. Objects Reference Help
+5,Help Menu,8023,8023,Dialog Box of the Dialog,11. Objects Reference Help
+4,Methods of the Dialog,8023,8078,Dialog,11. Objects Reference Help
+5,_Methods of the Dialog,8023,8024,Methods of the Dialog,11. Objects Reference Help
+5,clearData [SimTalk],8025,8025,Methods of the Dialog,11. Objects Reference Help
+5,close [SimTalk] - Dialog,8026,8026,Methods of the Dialog,11. Objects Reference Help
+5,closeDialog [SimTalk] - Dialog,8027,8027,Methods of the Dialog,11. Objects Reference Help
+5,createButton [SimTalk],8028,8028,Methods of the Dialog,11. Objects Reference Help
+5,createCheckBox [SimTalk],8029,8029,Methods of the Dialog,11. Objects Reference Help
+5,createDropDownListBox [SimTalk],8030,8031,Methods of the Dialog,11. Objects Reference Help
+5,createEditTextBox [SimTalk],8032,8032,Methods of the Dialog,11. Objects Reference Help
+5,createGroupBox [SimTalk],8033,8033,Methods of the Dialog,11. Objects Reference Help
+5,createImage [SimTalk],8034,8034,Methods of the Dialog,11. Objects Reference Help
+5,createListBox [SimTalk],8035,8035,Methods of the Dialog,11. Objects Reference Help
+5,createListView [SimTalk],8036,8036,Methods of the Dialog,11. Objects Reference Help
+5,createMenu [SimTalk],8037,8037,Methods of the Dialog,11. Objects Reference Help
+5,createRadioButton [SimTalk],8038,8040,Methods of the Dialog,11. Objects Reference Help
+5,createStaticTextBox [SimTalk],8041,8041,Methods of the Dialog,11. Objects Reference Help
+5,createTabControl [SimTalk],8042,8042,Methods of the Dialog,11. Objects Reference Help
+5,createTabPage [SimTalk],8043,8043,Methods of the Dialog,11. Objects Reference Help
+5,deleteItem [SimTalk],8044,8044,Methods of the Dialog,11. Objects Reference Help
+5,getCheckBox [SimTalk],8045,8045,Methods of the Dialog,11. Objects Reference Help
+5,getIcon [SimTalk],8046,8046,Methods of the Dialog,11. Objects Reference Help
+5,getIndex [SimTalk],8047,8048,Methods of the Dialog,11. Objects Reference Help
+5,getInheritanceBox [SimTalk],8049,8050,Methods of the Dialog,11. Objects Reference Help
+5,getItemsList [SimTalk],8051,8051,Methods of the Dialog,11. Objects Reference Help
+5,getPasswordMasking [SimTalk],8052,8052,Methods of the Dialog,11. Objects Reference Help
+5,getTable [SimTalk] - Dialog,8053,8053,Methods of the Dialog,11. Objects Reference Help
+5,getTableRow [SimTalk],8054,8054,Methods of the Dialog,11. Objects Reference Help
+5,getUserDialogXYWH [SimTalk],8055,8055,Methods of the Dialog,11. Objects Reference Help
+5,getValue [SimTalk] - Dialog,8056,8056,Methods of the Dialog,11. Objects Reference Help
+5,open [SimTalk] - Dialog,8057,8057,Methods of the Dialog,11. Objects Reference Help
+5,openDialog [SimTalk] - Dialog,8058,8058,Methods of the Dialog,11. Objects Reference Help
+5,setActiveTabPage [SimTalk],8059,8059,Methods of the Dialog,11. Objects Reference Help
+5,setCallbackArgument [SimTalk],8060,8060,Methods of the Dialog,11. Objects Reference Help
+5,setCaption [SimTalk],8061,8062,Methods of the Dialog,11. Objects Reference Help
+5,setCheckBox [SimTalk],8063,8063,Methods of the Dialog,11. Objects Reference Help
+5,setEditType [SimTalk],8064,8065,Methods of the Dialog,11. Objects Reference Help
+5,setGroupID [SimTalk],8066,8066,Methods of the Dialog,11. Objects Reference Help
+5,setIcon [SimTalk],8067,8067,Methods of the Dialog,11. Objects Reference Help
+5,setIndex [SimTalk],8068,8069,Methods of the Dialog,11. Objects Reference Help
+5,setInheritanceBox [SimTalk],8070,8071,Methods of the Dialog,11. Objects Reference Help
+5,setList [SimTalk],8072,8073,Methods of the Dialog,11. Objects Reference Help
+5,setPasswordMasking [SimTalk],8074,8074,Methods of the Dialog,11. Objects Reference Help
+5,setSensitive [SimTalk],8075,8075,Methods of the Dialog,11. Objects Reference Help
+5,setTab [SimTalk],8076,8076,Methods of the Dialog,11. Objects Reference Help
+5,setTable [SimTalk] - Dialog,8077,8077,Methods of the Dialog,11. Objects Reference Help
+5,setTableRow [SimTalk],8078,8078,Methods of the Dialog,11. Objects Reference Help
+5,updateUserDialog [SimTalk],8079,8079,Methods of the Dialog,11. Objects Reference Help
+4,Read-Only Attributes of the Dialog,8079,8079,Dialog,11. Objects Reference Help
+5,Read-Only Attributes of the Dialog,8079,8079,Read-Only Attributes of the Dialog,11. Objects Reference Help
+4,Attributes of the Dialog,8080,8093,Dialog,11. Objects Reference Help
+5,_Attributes of the Dialog,8080,8081,Attributes of the Dialog,11. Objects Reference Help
+5,ArgumentForApply [SimTalk],8082,8083,Attributes of the Dialog,11. Objects Reference Help
+5,ArgumentForClose [SimTalk],8084,8084,Attributes of the Dialog,11. Objects Reference Help
+5,ArgumentForOpen [SimTalk],8085,8085,Attributes of the Dialog,11. Objects Reference Help
+5,CallbackMethod [SimTalk] - Dialog,8086,8089,Attributes of the Dialog,11. Objects Reference Help
+5,DialogX [SimTalk],8090,8090,Attributes of the Dialog,11. Objects Reference Help
+5,DialogY [SimTalk],8091,8091,Attributes of the Dialog,11. Objects Reference Help
+5,Locked [SimTalk],8092,8092,Attributes of the Dialog,11. Objects Reference Help
+5,OpenModal [SimTalk],8093,8093,Attributes of the Dialog,11. Objects Reference Help
+5,ShowStandardButtons [SimTalk],8094,8094,Attributes of the Dialog,11. Objects Reference Help
+3,Checkbox,8094,8109,User Interface Objects,11. Objects Reference Help
+4,Checkbox [object],8094,8095,Checkbox,11. Objects Reference Help
+4,Dialog Box of the Checkbox,8096,8104,Checkbox,11. Objects Reference Help
+5,Dialog Box of the Checkbox,8096,8096,Dialog Box of the Checkbox,11. Objects Reference Help
+5,Tab Data,8097,8100,Dialog Box of the Checkbox,11. Objects Reference Help
+6,Tab Data [Checkbox],8097,8097,Tab Data,11. Objects Reference Help
+6,Value [drop-down list] - Checkbox,8098,8098,Tab Data,11. Objects Reference Help
+6,Control [Checkbox],8099,8100,Tab Data,11. Objects Reference Help
+5,Tab User-defined,8101,8101,Dialog Box of the Checkbox,11. Objects Reference Help
+5,Navigate Menu,8102,8102,Dialog Box of the Checkbox,11. Objects Reference Help
+5,View Menu,8103,8103,Dialog Box of the Checkbox,11. Objects Reference Help
+5,Tools Menu,8104,8104,Dialog Box of the Checkbox,11. Objects Reference Help
+5,Help Menu,8105,8105,Dialog Box of the Checkbox,11. Objects Reference Help
+4,Methods of the Checkbox,8105,8105,Checkbox,11. Objects Reference Help
+5,Methods of the Checkbox,8105,8105,Methods of the Checkbox,11. Objects Reference Help
+4,Read-Only Attributes of the Checkbox,8106,8106,Checkbox,11. Objects Reference Help
+5,Read-Only Attributes of the Checkbox,8106,8106,Read-Only Attributes of the Checkbox,11. Objects Reference Help
+4,Attributes of the Checkbox,8107,8109,Checkbox,11. Objects Reference Help
+5,_Attributes of the Checkbox,8107,8108,Attributes of the Checkbox,11. Objects Reference Help
+5,Control [SimTalk] - Checkbox,8109,8109,Attributes of the Checkbox,11. Objects Reference Help
+5,Value [SimTalk] - Checkbox,8110,8110,Attributes of the Checkbox,11. Objects Reference Help
+3,Button,8110,8127,User Interface Objects,11. Objects Reference Help
+4,Button [object],8110,8112,Button,11. Objects Reference Help
+4,Dialog Box of the Button,8113,8121,Button,11. Objects Reference Help
+5,Dialog Box of the Button,8113,8113,Dialog Box of the Button,11. Objects Reference Help
+5,Tab Attributes,8113,8117,Dialog Box of the Button,11. Objects Reference Help
+6,Tab Attributes,8113,8113,Tab Attributes,11. Objects Reference Help
+6,Width [text box] - Button,8114,8114,Tab Attributes,11. Objects Reference Help
+6,Height [text box] - Button,8115,8115,Tab Attributes,11. Objects Reference Help
+6,Control [Button],8116,8117,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,8118,8118,Dialog Box of the Button,11. Objects Reference Help
+5,Navigate Menu,8119,8119,Dialog Box of the Button,11. Objects Reference Help
+5,View Menu,8120,8120,Dialog Box of the Button,11. Objects Reference Help
+5,Tools Menu,8121,8121,Dialog Box of the Button,11. Objects Reference Help
+5,Help Menu,8122,8122,Dialog Box of the Button,11. Objects Reference Help
+4,Methods of the Button,8122,8122,Button,11. Objects Reference Help
+5,Methods of the Button,8122,8122,Methods of the Button,11. Objects Reference Help
+4,Read-Only Attributes of the Button,8123,8123,Button,11. Objects Reference Help
+5,Read-Only Attributes of the Button,8123,8123,Read-Only Attributes of the Button,11. Objects Reference Help
+4,Attributes of the Button,8124,8127,Button,11. Objects Reference Help
+5,_Attributes of the Button,8124,8125,Attributes of the Button,11. Objects Reference Help
+5,Control [SimTalk] - Button,8126,8126,Attributes of the Button,11. Objects Reference Help
+5,ObjectHeight [SimTalk] - Button,8127,8127,Attributes of the Button,11. Objects Reference Help
+5,ObjectWidth [SimTalk] - Button,8128,8128,Attributes of the Button,11. Objects Reference Help
+3,DropDownList,8128,8150,User Interface Objects,11. Objects Reference Help
+4,DropDownList [object],8128,8129,DropDownList,11. Objects Reference Help
+4,Dialog Box of the DropDownList,8130,8141,DropDownList,11. Objects Reference Help
+5,Dialog Box of the DropDownList,8130,8130,Dialog Box of the DropDownList,11. Objects Reference Help
+5,Tab Attributes,8131,8137,Dialog Box of the DropDownList,11. Objects Reference Help
+6,Tab Attributes,8131,8131,Tab Attributes,11. Objects Reference Help
+6,Width [text box] - DropDownList,8132,8132,Tab Attributes,11. Objects Reference Help
+6,Height [text box] - DropDownList,8133,8133,Tab Attributes,11. Objects Reference Help
+6,Value [text box] - DropDownList,8134,8134,Tab Attributes,11. Objects Reference Help
+6,Items [button] - DropDownList,8135,8135,Tab Attributes,11. Objects Reference Help
+6,Control [DropDownList],8136,8137,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,8138,8138,Dialog Box of the DropDownList,11. Objects Reference Help
+5,Navigate Menu,8139,8139,Dialog Box of the DropDownList,11. Objects Reference Help
+5,View Menu,8140,8140,Dialog Box of the DropDownList,11. Objects Reference Help
+5,Tools Menu,8141,8141,Dialog Box of the DropDownList,11. Objects Reference Help
+5,Help Menu,8142,8142,Dialog Box of the DropDownList,11. Objects Reference Help
+4,Methods of the DropDownList,8142,8142,DropDownList,11. Objects Reference Help
+5,Methods of the DropDownList,8142,8142,Methods of the DropDownList,11. Objects Reference Help
+4,Read-Only Attributes of the DropDownList,8143,8143,DropDownList,11. Objects Reference Help
+5,Read-Only Attributes of the DropDownList,8143,8143,Read-Only Attributes of the DropDownList,11. Objects Reference Help
+4,Attributes of the DropDownList,8144,8150,DropDownList,11. Objects Reference Help
+5,_Attributes of the DropDownList,8144,8145,Attributes of the DropDownList,11. Objects Reference Help
+5,Control [SimTalk] - DropDownList,8146,8146,Attributes of the DropDownList,11. Objects Reference Help
+5,Item [SimTalk] - DropDownList,8147,8147,Attributes of the DropDownList,11. Objects Reference Help
+5,Items [SimTalk] - DropDownList,8148,8148,Attributes of the DropDownList,11. Objects Reference Help
+5,ObjectHeight [SimTalk] - DropDownList,8149,8149,Attributes of the DropDownList,11. Objects Reference Help
+5,ObjectWidth [SimTalk] - DropDownList,8150,8150,Attributes of the DropDownList,11. Objects Reference Help
+5,Value [SimTalk] - DropDownList,8151,8151,Attributes of the DropDownList,11. Objects Reference Help

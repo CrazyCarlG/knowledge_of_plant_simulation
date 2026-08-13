@@ -1,0 +1,575 @@
+Resource Objects,5900,6492,11. Objects Reference Help,11. Objects Reference Help
+3,Resource Objects,5900,5901,Resource Objects,11. Objects Reference Help
+3,Workplace,5902,5976,Resource Objects,11. Objects Reference Help
+4,Workplace,5902,5905,Workplace,11. Objects Reference Help
+4,How Workers Queue Up in Front of the Workplace,5906,5907,Workplace,11. Objects Reference Help
+4,Dialog Box of the Workplace,5908,5944,Workplace,11. Objects Reference Help
+5,Dialog Box of the Workplace,5908,5908,Dialog Box of the Workplace,11. Objects Reference Help
+5,Tab Attributes,5908,5923,Dialog Box of the Workplace,11. Objects Reference Help
+6,Tab Attributes,5908,5908,Tab Attributes,11. Objects Reference Help
+6,Station [Workplace],5909,5909,Tab Attributes,11. Objects Reference Help
+6,At Entrance [check box],5910,5911,Tab Attributes,11. Objects Reference Help
+6,At Exit [check box],5912,5913,Tab Attributes,11. Objects Reference Help
+6,Capacity [text box] - Workplace,5914,5914,Tab Attributes,11. Objects Reference Help
+6,Supported Services [button],5915,5916,Tab Attributes,11. Objects Reference Help
+6,Worker Stays Here After Completing the Job,5917,5917,Tab Attributes,11. Objects Reference Help
+6,Distance in Queue,5918,5918,Tab Attributes,11. Objects Reference Help
+6,Walk to the End of the Animation Path of the Queue,5919,5919,Tab Attributes,11. Objects Reference Help
+6,Walk Along the Animation Path of the Queue,5920,5920,Tab Attributes,11. Objects Reference Help
+6,Pick/Drop at Store,5921,5923,Tab Attributes,11. Objects Reference Help
+5,Tab Times,5924,5929,Dialog Box of the Workplace,11. Objects Reference Help
+6,Tab Times [Workplace],5924,5924,Tab Times,11. Objects Reference Help
+6,Loading Time [Workplace],5925,5926,Tab Times,11. Objects Reference Help
+6,Unloading Time [Workplace],5927,5928,Tab Times,11. Objects Reference Help
+6,Recovery Time [Workplace],5929,5929,Tab Times,11. Objects Reference Help
+5,Tab Controls,5930,5940,Dialog Box of the Workplace,11. Objects Reference Help
+6,Tab Controls [Workplace],5930,5931,Tab Controls,11. Objects Reference Help
+6,Entrance Control [Workplace],5932,5933,Tab Controls,11. Objects Reference Help
+6,Exit Control [Workplace],5934,5935,Tab Controls,11. Objects Reference Help
+6,Load Control,5936,5937,Tab Controls,11. Objects Reference Help
+6,Unload Control,5938,5940,Tab Controls,11. Objects Reference Help
+5,Tab User-defined,5941,5941,Dialog Box of the Workplace,11. Objects Reference Help
+5,Navigate Menu,5942,5942,Dialog Box of the Workplace,11. Objects Reference Help
+5,View Menu,5942,5943,Dialog Box of the Workplace,11. Objects Reference Help
+6,View Menu,5942,5942,View Menu,11. Objects Reference Help
+6,Contents [Workplace],5943,5943,View Menu,11. Objects Reference Help
+5,Tools Menu,5944,5944,Dialog Box of the Workplace,11. Objects Reference Help
+5,Help Menu,5945,5945,Dialog Box of the Workplace,11. Objects Reference Help
+4,Methods of the Workplace,5945,5948,Workplace,11. Objects Reference Help
+5,_Methods of the Workplace,5945,5946,Methods of the Workplace,11. Objects Reference Help
+5,contentsList [SimTalk] - Workplace,5947,5947,Methods of the Workplace,11. Objects Reference Help
+5,getRouteCoordinates [SimTalk],5947,5948,Methods of the Workplace,11. Objects Reference Help
+5,getRouteLength [SimTalk] - Workplace,5949,5949,Methods of the Workplace,11. Objects Reference Help
+4,Read-Only Attributes of the Workplace,5949,5949,Workplace,11. Objects Reference Help
+5,Read-Only Attributes of the Workplace,5949,5949,Read-Only Attributes of the Workplace,11. Objects Reference Help
+4,Attributes of the Workplace,5950,5976,Workplace,11. Objects Reference Help
+5,_Attributes of the Workplace,5950,5951,Attributes of the Workplace,11. Objects Reference Help
+5,AtEntrance [SimTalk],5952,5952,Attributes of the Workplace,11. Objects Reference Help
+5,AtExit [SimTalk],5953,5953,Attributes of the Workplace,11. Objects Reference Help
+5,Capacity [SimTalk] - Workplace,5954,5954,Attributes of the Workplace,11. Objects Reference Help
+5,DistanceInQueue [SimTalk],5955,5955,Attributes of the Workplace,11. Objects Reference Help
+5,EntranceCtrl [SimTalk] - Workplace,5956,5957,Attributes of the Workplace,11. Objects Reference Help
+5,ExitCtrl [SimTalk] - Workplace,5958,5958,Attributes of the Workplace,11. Objects Reference Help
+5,LoadCtrl [SimTalk],5959,5960,Attributes of the Workplace,11. Objects Reference Help
+5,LoadingTime [SimTalk] - Workplace,5961,5962,Attributes of the Workplace,11. Objects Reference Help
+5,PickDropAtStore [SimTalk],5963,5966,Attributes of the Workplace,11. Objects Reference Help
+5,RecoveryTime [SimTalk]- Workplace,5967,5967,Attributes of the Workplace,11. Objects Reference Help
+5,Station [SimTalk],5968,5968,Attributes of the Workplace,11. Objects Reference Help
+5,SupportedServices [SimTalk],5969,5969,Attributes of the Workplace,11. Objects Reference Help
+5,UnloadCtrl [SimTalk],5970,5971,Attributes of the Workplace,11. Objects Reference Help
+5,UnloadingTime [SimTalk] - Workplace,5972,5973,Attributes of the Workplace,11. Objects Reference Help
+5,WalkAlongQueuePath [SimTalk],5974,5974,Attributes of the Workplace,11. Objects Reference Help
+5,WalkToQueuePathEnd [SimTalk],5975,5975,Attributes of the Workplace,11. Objects Reference Help
+5,WorkerStaysHere [SimTalk],5976,5976,Attributes of the Workplace,11. Objects Reference Help
+3,FootPath,5977,5992,Resource Objects,11. Objects Reference Help
+4,FootPath [object],5977,5980,FootPath,11. Objects Reference Help
+4,Dialog Box of the FootPath,5981,5987,FootPath,11. Objects Reference Help
+5,Dialog Box of the FootPath,5981,5981,Dialog Box of the FootPath,11. Objects Reference Help
+5,Tab Attributes,5981,5983,Dialog Box of the FootPath,11. Objects Reference Help
+6,Tab Attributes,5981,5981,Tab Attributes,11. Objects Reference Help
+6,Length [text box] - FootPath,5982,5982,Tab Attributes,11. Objects Reference Help
+6,Width [text box] - FootPath,5983,5983,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,5984,5984,Dialog Box of the FootPath,11. Objects Reference Help
+5,Navigate Menu,5985,5985,Dialog Box of the FootPath,11. Objects Reference Help
+5,View Menu,5986,5986,Dialog Box of the FootPath,11. Objects Reference Help
+5,Tools Menu,5987,5987,Dialog Box of the FootPath,11. Objects Reference Help
+5,Help Menu,5988,5988,Dialog Box of the FootPath,11. Objects Reference Help
+4,Methods of the Footpath,5988,5988,FootPath,11. Objects Reference Help
+5,Methods of the FootPath,5988,5988,Methods of the Footpath,11. Objects Reference Help
+4,Read-Only Attributes of the FootPath,5989,5989,FootPath,11. Objects Reference Help
+5,Read-Only Attributes of the FootPath,5989,5989,Read-Only Attributes of the FootPath,11. Objects Reference Help
+4,Attributes of the FootPath,5990,5992,FootPath,11. Objects Reference Help
+5,_Attributes of the FootPath,5990,5991,Attributes of the FootPath,11. Objects Reference Help
+5,Length [SimTalk] - FootPath,5992,5992,Attributes of the FootPath,11. Objects Reference Help
+5,Width [SimTalk] - FootPath,5993,5993,Attributes of the FootPath,11. Objects Reference Help
+3,WorkerPool,5993,6068,Resource Objects,11. Objects Reference Help
+4,WorkerPool,5993,5997,WorkerPool,11. Objects Reference Help
+4,Dialog Box of the WorkerPool,5998,6030,WorkerPool,11. Objects Reference Help
+5,Dialog Box of the WorkerPool,5998,5998,Dialog Box of the WorkerPool,11. Objects Reference Help
+5,Tab Attributes,5999,6017,Dialog Box of the WorkerPool,11. Objects Reference Help
+6,Tab Attributes,5999,5999,Tab Attributes,11. Objects Reference Help
+6,Workers to Create,6000,6004,Tab Attributes,11. Objects Reference Help
+6,Get Job Orders At Home Only,6005,6005,Tab Attributes,11. Objects Reference Help
+6,Workers Can Work Remotely,6006,6006,Tab Attributes,11. Objects Reference Help
+6,Travel Mode,6006,6014,Tab Attributes,11. Objects Reference Help
+7,Travel Mode [drop-down list],6006,6007,Travel Mode,11. Objects Reference Help
+7,Move freely within area,6008,6011,Travel Mode,11. Objects Reference Help
+7,Walk along footpaths,6012,6013,Travel Mode,11. Objects Reference Help
+7,Beam to workplace,6014,6014,Travel Mode,11. Objects Reference Help
+6,Broker [WorkerPool],6015,6015,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [WorkerPool],6016,6016,Tab Attributes,11. Objects Reference Help
+6,Parts Buffer,6017,6017,Tab Attributes,11. Objects Reference Help
+5,Tab Statistics [WorkerPool],6018,6018,Dialog Box of the WorkerPool,11. Objects Reference Help
+5,Tab Controls,6019,6024,Dialog Box of the WorkerPool,11. Objects Reference Help
+6,Tab Controls [WorkerPool],6019,6020,Tab Controls,11. Objects Reference Help
+6,Entrance Control [WorkerPool],6021,6022,Tab Controls,11. Objects Reference Help
+6,Exit Control [WorkerPool],6023,6024,Tab Controls,11. Objects Reference Help
+5,Tab User-defined,6025,6025,Dialog Box of the WorkerPool,11. Objects Reference Help
+5,Navigate Menu,6026,6026,Dialog Box of the WorkerPool,11. Objects Reference Help
+5,View Menu,6026,6027,Dialog Box of the WorkerPool,11. Objects Reference Help
+6,View Menu [WorkerPool],6026,6026,View Menu,11. Objects Reference Help
+6,Assigned Workers [WorkerPool],6027,6027,View Menu,11. Objects Reference Help
+6,Working Workers [WorkerPool],6028,6028,View Menu,11. Objects Reference Help
+5,Tools Menu,6028,6030,Dialog Box of the WorkerPool,11. Objects Reference Help
+6,Tools Menu,6028,6028,Tools Menu,11. Objects Reference Help
+6,Init Control [WorkerPool],6029,6030,Tools Menu,11. Objects Reference Help
+5,Help Menu,6031,6031,Dialog Box of the WorkerPool,11. Objects Reference Help
+4,Methods of the WorkerPool,6031,6042,WorkerPool,11. Objects Reference Help
+5,_Methods of the WorkerPool,6031,6032,Methods of the WorkerPool,11. Objects Reference Help
+5,getAssignedWorker [SimTalk],6033,6033,Methods of the WorkerPool,11. Objects Reference Help
+5,getAssignedWorkersTable [SimTalk],6034,6034,Methods of the WorkerPool,11. Objects Reference Help
+5,getIdleWorker [SimTalk],6035,6035,Methods of the WorkerPool,11. Objects Reference Help
+5,getWorkersToCreateTable [SimTalk],6036,6037,Methods of the WorkerPool,11. Objects Reference Help
+5,getWorkersToCreateTableRow [SimTalk] - WorkerPool,6038,6040,Methods of the WorkerPool,11. Objects Reference Help
+5,getWorkingWorkersTable [SimTalk],6041,6041,Methods of the WorkerPool,11. Objects Reference Help
+5,setWorkersToCreateTable [SimTalk],6042,6042,Methods of the WorkerPool,11. Objects Reference Help
+4,Read-Only Attributes of the WorkerPool,6043,6046,WorkerPool,11. Objects Reference Help
+5,_Read-Only Attributes of the WorkerPool,6043,6044,Read-Only Attributes of the WorkerPool,11. Objects Reference Help
+5,NumAssignedWorkers [SimTalk],6045,6045,Read-Only Attributes of the WorkerPool,11. Objects Reference Help
+5,NumIdleWorkers [SimTalk],6046,6046,Read-Only Attributes of the WorkerPool,11. Objects Reference Help
+5,StatAverageTraveledDistance [SimTalk] - WorkerPool,6047,6047,Read-Only Attributes of the WorkerPool,11. Objects Reference Help
+4,Attributes of the WorkerPool,6047,6068,WorkerPool,11. Objects Reference Help
+5,_Attributes of the WorkerPool,6047,6048,Attributes of the WorkerPool,11. Objects Reference Help
+5,AdditionalServices [SimTalk],6049,6049,Attributes of the WorkerPool,11. Objects Reference Help
+5,Amount [SimTalk] - WorkerPool,6050,6050,Attributes of the WorkerPool,11. Objects Reference Help
+5,BrokerPath [SimTalk] - WorkerPool,6051,6051,Attributes of the WorkerPool,11. Objects Reference Help
+5,Efficiency [SimTalk] - WorkerPool,6052,6053,Attributes of the WorkerPool,11. Objects Reference Help
+5,EntranceCtrl [SimTalk] - WorkerPool,6054,6054,Attributes of the WorkerPool,11. Objects Reference Help
+5,ExitCtrl [SimTalk] - WorkerPool,6055,6055,Attributes of the WorkerPool,11. Objects Reference Help
+5,GetJobOrdersAtHomeOnly [SimTalk],6056,6056,Attributes of the WorkerPool,11. Objects Reference Help
+5,HomeLocation [SimTalk] - WorkerPool,6057,6058,Attributes of the WorkerPool,11. Objects Reference Help
+5,InitCtrl [SimTalk] - WorkerPool,6059,6059,Attributes of the WorkerPool,11. Objects Reference Help
+5,PartsBuffer [SimTalk],6060,6060,Attributes of the WorkerPool,11. Objects Reference Help
+5,Scope [SimTalk] - WorkerPool,6061,6062,Attributes of the WorkerPool,11. Objects Reference Help
+5,Shift [SimTalk] - WorkerPool,6063,6063,Attributes of the WorkerPool,11. Objects Reference Help
+5,Speed [SimTalk] - WorkerPool,6064,6065,Attributes of the WorkerPool,11. Objects Reference Help
+5,Worker [SimTalk] - WorkerPool,6066,6066,Attributes of the WorkerPool,11. Objects Reference Help
+5,WorkersCanWorkRemotely [SimTalk],6067,6067,Attributes of the WorkerPool,11. Objects Reference Help
+5,WorkersTravelMode [SimTalk],6068,6068,Attributes of the WorkerPool,11. Objects Reference Help
+3,Worker,6069,6201,Resource Objects,11. Objects Reference Help
+4,Worker [object],6069,6073,Worker,11. Objects Reference Help
+4,How the Worker Travels in the Plant,6074,6081,Worker,11. Objects Reference Help
+5,How the Worker Finds the Shortest Route,6074,6074,How the Worker Travels in the Plant,11. Objects Reference Help
+5,Move freely within area,6075,6078,How the Worker Travels in the Plant,11. Objects Reference Help
+5,Walk along footpaths,6079,6080,How the Worker Travels in the Plant,11. Objects Reference Help
+5,Beam to workplace,6081,6081,How the Worker Travels in the Plant,11. Objects Reference Help
+4,How the Worker Decides Where to Work,6082,6083,Worker,11. Objects Reference Help
+4,How the Worker Carries Parts,6084,6085,Worker,11. Objects Reference Help
+4,Dialog Box of the Worker,6086,6126,Worker,11. Objects Reference Help
+5,Dialog Box of the Worker,6086,6086,Dialog Box of the Worker,11. Objects Reference Help
+5,Stopped [check box] - Worker,6087,6087,Dialog Box of the Worker,11. Objects Reference Help
+5,Tab Attributes,6087,6101,Dialog Box of the Worker,11. Objects Reference Help
+6,Tab Attributes,6087,6087,Tab Attributes,11. Objects Reference Help
+6,Priority [Worker],6088,6088,Tab Attributes,11. Objects Reference Help
+6,Efficiency [text box],6089,6089,Tab Attributes,11. Objects Reference Help
+6,Speed [Worker],6090,6090,Tab Attributes,11. Objects Reference Help
+6,X-Dimension [Worker],6091,6091,Tab Attributes,11. Objects Reference Help
+6,Y-Dimension [Worker],6092,6092,Tab Attributes,11. Objects Reference Help
+6,Z-Dimension [Worker],6093,6093,Tab Attributes,11. Objects Reference Help
+6,Shift [Worker],6094,6094,Tab Attributes,11. Objects Reference Help
+6,Services [Worker],6095,6097,Tab Attributes,11. Objects Reference Help
+6,Service [text box],6098,6098,Tab Attributes,11. Objects Reference Help
+6,Broker [Worker],6099,6099,Tab Attributes,11. Objects Reference Help
+6,Home Location,6100,6101,Tab Attributes,11. Objects Reference Help
+5,Tab Failures,6102,6102,Dialog Box of the Worker,11. Objects Reference Help
+5,Tab Scope,6102,6104,Dialog Box of the Worker,11. Objects Reference Help
+6,Tab Scope,6102,6103,Tab Scope,11. Objects Reference Help
+6,Objects [Scope],6104,6104,Tab Scope,11. Objects Reference Help
+5,Tab Controls,6105,6110,Dialog Box of the Worker,11. Objects Reference Help
+6,Tab Controls [Worker],6105,6106,Tab Controls,11. Objects Reference Help
+6,Order Control [Worker],6107,6108,Tab Controls,11. Objects Reference Help
+6,Release Control [Worker],6109,6110,Tab Controls,11. Objects Reference Help
+5,Tab Statistics,6111,6115,Dialog Box of the Worker,11. Objects Reference Help
+6,Tab Statistics [Worker],6111,6114,Tab Statistics,11. Objects Reference Help
+6,Exporter Statistics [Worker],6115,6115,Tab Statistics,11. Objects Reference Help
+5,Tab User-defined,6116,6116,Dialog Box of the Worker,11. Objects Reference Help
+5,Navigate Menu,6117,6117,Dialog Box of the Worker,11. Objects Reference Help
+5,View Menu,6117,6122,Dialog Box of the Worker,11. Objects Reference Help
+6,View Menu [Worker],6117,6117,View Menu,11. Objects Reference Help
+6,Contents [Worker],6118,6118,View Menu,11. Objects Reference Help
+6,Position [Worker],6119,6119,View Menu,11. Objects Reference Help
+6,Importers [Worker],6120,6120,View Menu,11. Objects Reference Help
+6,Exported Services [Worker],6121,6121,View Menu,11. Objects Reference Help
+6,Route to Destination [Worker],6122,6122,View Menu,11. Objects Reference Help
+5,Tools Menu,6123,6123,Dialog Box of the Worker,11. Objects Reference Help
+5,Help Menu,6124,6124,Dialog Box of the Worker,11. Objects Reference Help
+5,States of the Worker,6125,6126,Dialog Box of the Worker,11. Objects Reference Help
+4,Methods of the Worker,6127,6143,Worker,11. Objects Reference Help
+5,_Methods of the Worker,6127,6128,Methods of the Worker,11. Objects Reference Help
+5,cancelTransportPart [SimTalk],6129,6130,Methods of the Worker,11. Objects Reference Help
+5,create [SimTalk] - Worker,6131,6131,Methods of the Worker,11. Objects Reference Help
+5,getRouteLength [SimTalk] - Worker,6132,6133,Methods of the Worker,11. Objects Reference Help
+5,getServices [SimTalk] - Worker,6134,6134,Methods of the Worker,11. Objects Reference Help
+5,goTo [SimTalk],6135,6135,Methods of the Worker,11. Objects Reference Help
+5,goToHome [SimTalk],6136,6137,Methods of the Worker,11. Objects Reference Help
+5,goToPool [SimTalk],6138,6138,Methods of the Worker,11. Objects Reference Help
+5,setServices [SimTalk] - Worker,6139,6139,Methods of the Worker,11. Objects Reference Help
+5,teleportTo [SimTalk],6140,6140,Methods of the Worker,11. Objects Reference Help
+5,teleportToHome [SimTalk],6141,6141,Methods of the Worker,11. Objects Reference Help
+5,teleportToPool [SimTalk],6142,6142,Methods of the Worker,11. Objects Reference Help
+5,transportPart [SimTalk],6143,6143,Methods of the Worker,11. Objects Reference Help
+4,Read-Only Attributes of the Worker,6144,6179,Worker,11. Objects Reference Help
+5,_Read-Only Attributes of the Worker,6144,6145,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,AvailableForMediation [SimTalk] - Worker,6146,6146,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,CurrentSpeed [SimTalk] - Worker,6147,6147,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,HasOrder [SimTalk] - Worker,6148,6148,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,ResCurrentState [SimTalk] - Worker,6149,6150,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteIdleCount [SimTalk],6151,6151,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteIdlePortion [SimTalk],6152,6152,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteIdleTime [SimTalk],6153,6153,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteToJobCount [SimTalk],6154,6154,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteToJobPortion [SimTalk],6155,6155,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesEnRouteToJobTime [SimTalk],6156,6156,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesFailedCount [SimTalk] - Worker,6157,6157,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesFailedPortion [SimTalk] - Worker,6158,6158,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesFailedTime [SimTalk] - Worker,6159,6159,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesRepairingCount [SimTalk] - Worker,6160,6160,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesRepairingPortion [SimTalk] - Worker,6161,6161,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesRepairingTime [SimTalk] - Worker,6162,6162,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesSetupCount [SimTalk] - Worker,6163,6163,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesSetupPortion [SimTalk] - Worker,6164,6164,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesSetupTime [SimTalk] - Worker,6165,6165,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesTransportingCount [SimTalk],6166,6166,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesTransportingPortion [SimTalk],6167,6167,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesTransportingTime [SimTalk],6168,6168,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingImpCount [SimTalk] - Worker,6169,6169,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingImpPortion [SimTalk] - Worker,6170,6170,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingImpTime [SimTalk] - Worker,6171,6171,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingMUCount [SimTalk] - Worker,6172,6172,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingMUPortion [SimTalk] - Worker,6173,6173,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingMUTime [SimTalk] - Worker,6174,6174,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingPortion [SimTalk] - Worker,6175,6175,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWaitingTime [SimTalk] - Worker,6176,6176,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWorkingCount [SimTalk] - Worker,6177,6177,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWorkingPortion [SimTalk] - Worker,6178,6178,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatServicesWorkingTime [SimTalk] - Worker,6179,6179,Read-Only Attributes of the Worker,11. Objects Reference Help
+5,StatTraveledDistance [SimTalk] - Worker,6180,6180,Read-Only Attributes of the Worker,11. Objects Reference Help
+4,Attributes of the Worker,6180,6201,Worker,11. Objects Reference Help
+5,_Attributes of the Worker,6180,6181,Attributes of the Worker,11. Objects Reference Help
+5,AutomaticMediation [SimTalk] - Worker,6182,6183,Attributes of the Worker,11. Objects Reference Help
+5,BrokerPath [SimTalk] - Worker,6184,6184,Attributes of the Worker,11. Objects Reference Help
+5,Efficiency [SimTalk] - Worker,6185,6185,Attributes of the Worker,11. Objects Reference Help
+5,HomeLocation [SimTalk] - Worker,6186,6187,Attributes of the Worker,11. Objects Reference Help
+5,IsIdle [SimTalk] - Worker,6188,6188,Attributes of the Worker,11. Objects Reference Help
+5,OrderCtrl [SimTalk] - Worker,6189,6189,Attributes of the Worker,11. Objects Reference Help
+5,Priority [SimTalk] - Worker,6190,6190,Attributes of the Worker,11. Objects Reference Help
+5,ReleaseCtrl [SimTalk] - Worker,6191,6192,Attributes of the Worker,11. Objects Reference Help
+5,Scope [SimTalk] - Worker,6193,6193,Attributes of the Worker,11. Objects Reference Help
+5,Services [SimTalk] - Worker,6194,6194,Attributes of the Worker,11. Objects Reference Help
+5,Shift [SimTalk] - Worker,6195,6195,Attributes of the Worker,11. Objects Reference Help
+5,Speed [SimTalk] - Worker,6196,6196,Attributes of the Worker,11. Objects Reference Help
+5,Stopped [SimTalk] - Worker,6197,6197,Attributes of the Worker,11. Objects Reference Help
+5,WorkerPool [SimTalk],6198,6198,Attributes of the Worker,11. Objects Reference Help
+5,XDim [SimTalk] - Worker,6199,6199,Attributes of the Worker,11. Objects Reference Help
+5,YDim [SimTalk] - Worker,6200,6200,Attributes of the Worker,11. Objects Reference Help
+5,ZDim [SimTalk] - Worker,6201,6201,Attributes of the Worker,11. Objects Reference Help
+3,Exporter,6202,6297,Resource Objects,11. Objects Reference Help
+4,Exporter [object],6202,6203,Exporter,11. Objects Reference Help
+4,Dialog Box of the Exporter,6204,6230,Exporter,11. Objects Reference Help
+5,Dialog Box of the Exporter,6204,6204,Dialog Box of the Exporter,11. Objects Reference Help
+5,Tab Attributes,6204,6209,Dialog Box of the Exporter,11. Objects Reference Help
+6,Tab Attributes,6204,6204,Tab Attributes,11. Objects Reference Help
+6,Services [Exporter],6205,6205,Tab Attributes,11. Objects Reference Help
+6,Fail Services [text box],6206,6206,Tab Attributes,11. Objects Reference Help
+6,Priority [Exporter],6207,6207,Tab Attributes,11. Objects Reference Help
+6,Capacity [text box] - Exporter,6208,6208,Tab Attributes,11. Objects Reference Help
+6,Broker [Exporter],6209,6209,Tab Attributes,11. Objects Reference Help
+5,Tab Failures,6210,6210,Dialog Box of the Exporter,11. Objects Reference Help
+5,Tab Controls,6210,6215,Dialog Box of the Exporter,11. Objects Reference Help
+6,Tab Controls [Exporter],6210,6211,Tab Controls,11. Objects Reference Help
+6,Order Control [Exporter],6212,6213,Tab Controls,11. Objects Reference Help
+6,Release Control [Exporter],6214,6215,Tab Controls,11. Objects Reference Help
+6,Shift Calendar [Exporter],6216,6216,Tab Controls,11. Objects Reference Help
+5,Tab Statistics,6216,6220,Dialog Box of the Exporter,11. Objects Reference Help
+6,Tab Statistics [Exporter],6216,6219,Tab Statistics,11. Objects Reference Help
+6,Exporter Statistics [Exporter],6220,6220,Tab Statistics,11. Objects Reference Help
+5,Tab User-defined,6221,6221,Dialog Box of the Exporter,11. Objects Reference Help
+5,Navigate Menu,6222,6222,Dialog Box of the Exporter,11. Objects Reference Help
+5,View Menu,6222,6223,Dialog Box of the Exporter,11. Objects Reference Help
+6,View Menu [Exporter],6222,6222,View Menu,11. Objects Reference Help
+6,Importers [Exporter],6223,6223,View Menu,11. Objects Reference Help
+6,Exported Services [Exporter],6224,6224,View Menu,11. Objects Reference Help
+5,Tools Menu,6224,6229,Dialog Box of the Exporter,11. Objects Reference Help
+6,Tools Menu,6224,6225,Tools Menu,11. Objects Reference Help
+6,Available Control [Exporter],6226,6227,Tools Menu,11. Objects Reference Help
+6,Not Available Control [Exporter],6228,6229,Tools Menu,11. Objects Reference Help
+5,Help Menu,6230,6230,Dialog Box of the Exporter,11. Objects Reference Help
+5,States of the Exporter,6231,6231,Dialog Box of the Exporter,11. Objects Reference Help
+4,Methods of the Exporter,6231,6237,Exporter,11. Objects Reference Help
+5,_Methods of the Exporter,6231,6233,Methods of the Exporter,11. Objects Reference Help
+5,expStat [SimTalk],6234,6234,Methods of the Exporter,11. Objects Reference Help
+5,findNewImporter [SimTalk],6235,6235,Methods of the Exporter,11. Objects Reference Help
+5,getExportedServices [SimTalk],6236,6236,Methods of the Exporter,11. Objects Reference Help
+5,getImporters [SimTalk],6237,6237,Methods of the Exporter,11. Objects Reference Help
+5,hasService [SimTalk],6238,6238,Methods of the Exporter,11. Objects Reference Help
+4,Read-Only Attributes of the Exporter,6238,6284,Exporter,11. Objects Reference Help
+5,_Read-Only Attributes of the Exporter,6238,6239,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,AvailableForMediation [SimTalk] - Exporter,6240,6240,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,FreeCapacity [SimTalk],6241,6241,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,MediatedCapacity [SimTalk] - Exporter,6242,6242,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterFailedCount [SimTalk],6243,6243,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterFailedDelta [SimTalk],6244,6244,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterFailedMu [SimTalk],6245,6245,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterFailedPortion [SimTalk],6246,6246,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterFailedTime [SimTalk],6247,6247,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterOperationalPortion [SimTalk],6248,6248,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterOperationalTime [SimTalk],6249,6249,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterPausedCount [SimTalk],6250,6250,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterPausedDelta [SimTalk],6251,6251,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterPausedMu [SimTalk],6252,6252,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterPausedPortion [SimTalk],6253,6253,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterPausedTime [SimTalk],6254,6254,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterUnplannedCount [SimTalk],6255,6255,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterUnplannedDelta [SimTalk],6256,6256,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterUnplannedMu [SimTalk],6257,6257,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterUnplannedPortion [SimTalk],6258,6258,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatExporterUnplannedTime [SimTalk],6259,6259,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatMaxFreeCapacity [SimTalk],6260,6260,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatMaxMediatedCapacity [SimTalk],6261,6261,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatMinFreeCapacity [SimTalk],6262,6262,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatMinMediatedCapacity [SimTalk],6263,6263,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesFailedCount [SimTalk] - Exporter,6264,6264,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesFailedPortion [SimTalk] - Exporter,6265,6265,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesFailedTime [SimTalk] - Exporter,6266,6266,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesRepairingCount [SimTalk] - Exporter,6267,6267,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesRepairingPortion [SimTalk] - Exporter,6268,6268,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesRepairingTime [SimTalk] - Exporter,6269,6269,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesSetupCount [SimTalk] - Exporter,6270,6270,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesSetupPortion [SimTalk] - Exporter,6271,6271,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesSetupTime [SimTalk] - Exporter,6272,6272,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingImpCount [SimTalk] - Exporter,6273,6273,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingImpPortion [SimTalk] - Exporter,6274,6274,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingImpTime [SimTalk] - Exporter,6275,6275,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingMUCount [SimTalk] - Exporter,6276,6276,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingMUPortion [SimTalk] - Exporter,6277,6277,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingMUTime [SimTalk] - Exporter,6278,6278,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingPortion [SimTalk] - Exporter,6279,6279,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWaitingTime [SimTalk] - Exporter,6280,6280,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWorkingCount [SimTalk] - Exporter,6281,6281,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWorkingPortion [SimTalk] - Exporter,6282,6282,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatServicesWorkingTime [SimTalk] - Exporter,6283,6283,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatSumFreeCapacity [SimTalk],6284,6284,Read-Only Attributes of the Exporter,11. Objects Reference Help
+5,StatSumMediatedCapacity [SimTalk],6285,6285,Read-Only Attributes of the Exporter,11. Objects Reference Help
+4,Attributes of the Exporter,6285,6297,Exporter,11. Objects Reference Help
+5,_Attributes of the Exporter,6285,6286,Attributes of the Exporter,11. Objects Reference Help
+5,AutomaticMediation [SimTalk] - Exporter,6287,6287,Attributes of the Exporter,11. Objects Reference Help
+5,BrokerPath [SimTalk] - Exporter,6288,6288,Attributes of the Exporter,11. Objects Reference Help
+5,Capacity [SimTalk] - Exporter,6289,6289,Attributes of the Exporter,11. Objects Reference Help
+5,ExpStatOn [SimTalk],6290,6290,Attributes of the Exporter,11. Objects Reference Help
+5,FailServices [SimTalk],6291,6292,Attributes of the Exporter,11. Objects Reference Help
+5,OrderCtrl [SimTalk] - Exporter,6293,6293,Attributes of the Exporter,11. Objects Reference Help
+5,Priority [SimTalk] - Exporter,6294,6294,Attributes of the Exporter,11. Objects Reference Help
+5,ReleaseCtrl [SimTalk] - Exporter,6295,6296,Attributes of the Exporter,11. Objects Reference Help
+5,Services [SimTalk] - Exporter,6297,6297,Attributes of the Exporter,11. Objects Reference Help
+3,Broker,6298,6369,Resource Objects,11. Objects Reference Help
+4,Broker [object],6298,6300,Broker,11. Objects Reference Help
+4,How the Broker Mediates Jobs to the Worker,6301,6301,Broker,11. Objects Reference Help
+4,Dialog Box of the Broker,6302,6324,Broker,11. Objects Reference Help
+5,Dialog Box of the Broker,6302,6302,Dialog Box of the Broker,11. Objects Reference Help
+5,Tab Attributes,6303,6311,Dialog Box of the Broker,11. Objects Reference Help
+6,Tab Attributes [Broker],6303,6303,Tab Attributes,11. Objects Reference Help
+6,Choose the Nearest Worker [check box],6304,6304,Tab Attributes,11. Objects Reference Help
+6,Controls of the Broker,6305,6311,Tab Attributes,11. Objects Reference Help
+7,Controls [Broker],6305,6306,Controls of the Broker,11. Objects Reference Help
+7,Importer Request Control [Broker],6307,6309,Controls of the Broker,11. Objects Reference Help
+7,Exporter Request Control [Broker],6310,6311,Controls of the Broker,11. Objects Reference Help
+5,Tab Statistics,6312,6316,Dialog Box of the Broker,11. Objects Reference Help
+6,Tab Statistics [Broker],6312,6313,Tab Statistics,11. Objects Reference Help
+6,Broker Statistics [activate],6314,6314,Tab Statistics,11. Objects Reference Help
+6,Service Statistics [Broker],6315,6316,Tab Statistics,11. Objects Reference Help
+5,Tab User-defined,6317,6317,Dialog Box of the Broker,11. Objects Reference Help
+5,Navigate Menu,6318,6318,Dialog Box of the Broker,11. Objects Reference Help
+5,View Menu,6318,6323,Dialog Box of the Broker,11. Objects Reference Help
+6,View Menu [Broker],6318,6318,View Menu,11. Objects Reference Help
+6,Open Importers [Broker],6319,6319,View Menu,11. Objects Reference Help
+6,Satisfied Importers [Broker],6320,6320,View Menu,11. Objects Reference Help
+6,Exporters [Broker],6321,6321,View Menu,11. Objects Reference Help
+6,Offered Services [Broker],6322,6323,View Menu,11. Objects Reference Help
+5,Tools Menu,6324,6324,Dialog Box of the Broker,11. Objects Reference Help
+5,Help Menu,6325,6325,Dialog Box of the Broker,11. Objects Reference Help
+4,Methods of the Broker,6325,6347,Broker,11. Objects Reference Help
+5,_Methods of the Broker,6325,6326,Methods of the Broker,11. Objects Reference Help
+5,brokerStat [SimTalk],6327,6328,Methods of the Broker,11. Objects Reference Help
+5,doStandardExport [SimTalk],6329,6329,Methods of the Broker,11. Objects Reference Help
+5,doStandardImport [SimTalk],6330,6331,Methods of the Broker,11. Objects Reference Help
+5,engage [SimTalk],6332,6333,Methods of the Broker,11. Objects Reference Help
+5,forgetOpenRequest [SimTalk],6334,6334,Methods of the Broker,11. Objects Reference Help
+5,getExportersForService [SimTalk],6335,6335,Methods of the Broker,11. Objects Reference Help
+5,getOfferedServices [SimTalk],6336,6336,Methods of the Broker,11. Objects Reference Help
+5,getOpenImporters [SimTalk],6337,6337,Methods of the Broker,11. Objects Reference Help
+5,getSatisfiedImporters [SimTalk],6338,6338,Methods of the Broker,11. Objects Reference Help
+5,globalOpenRequestsFor [SimTalk],6339,6339,Methods of the Broker,11. Objects Reference Help
+5,globalTestImportFor [SimTalk],6340,6341,Methods of the Broker,11. Objects Reference Help
+5,localOpenRequestsFor [SimTalk],6342,6342,Methods of the Broker,11. Objects Reference Help
+5,localTestImportFor [SimTalk],6343,6343,Methods of the Broker,11. Objects Reference Help
+5,serviceStat [SimTalk],6344,6346,Methods of the Broker,11. Objects Reference Help
+5,testImportFor [SimTalk],6347,6347,Methods of the Broker,11. Objects Reference Help
+4,Read-Only Attributes of the Broker,6348,6362,Broker,11. Objects Reference Help
+5,_Read-Only Attributes of the Broker,6348,6348,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,AdministeredExporters [SimTalk],6349,6349,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,MediatedCapacity [SimTalk] - Broker,6350,6350,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,OpenCapacity [SimTalk],6351,6351,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,OpenRequests [SimTalk],6352,6352,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,SatisfiedRequests [SimTalk],6353,6353,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatMediatedCapacity [SimTalk],6354,6354,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatMediationTime [SimTalk],6355,6355,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatMediationTimeDelta [SimTalk],6356,6356,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatMediationTimeMu [SimTalk],6357,6357,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatOpenCapacity [SimTalk],6358,6358,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatOpenRequests [SimTalk],6359,6359,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatSatisfiedRequests [SimTalk],6360,6360,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatStayTime [SimTalk],6361,6361,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatStayTimeDelta [SimTalk],6362,6362,Read-Only Attributes of the Broker,11. Objects Reference Help
+5,StatStayTimeMu [SimTalk],6363,6363,Read-Only Attributes of the Broker,11. Objects Reference Help
+4,Attributes of the Broker,6363,6369,Broker,11. Objects Reference Help
+5,_Attributes of the Broker,6363,6364,Attributes of the Broker,11. Objects Reference Help
+5,BrokerStatOn [SimTalk],6365,6365,Attributes of the Broker,11. Objects Reference Help
+5,ChooseNearestWorker [SimTalk],6366,6367,Attributes of the Broker,11. Objects Reference Help
+5,ExpRequestCtrl [SimTalk],6368,6368,Attributes of the Broker,11. Objects Reference Help
+5,ImpRequestCtrl [SimTalk],6369,6369,Attributes of the Broker,11. Objects Reference Help
+3,AGVPool,6370,6393,Resource Objects,11. Objects Reference Help
+4,AGVPool,6370,6371,AGVPool,11. Objects Reference Help
+4,Dialog Box of the AGVPool,6372,6382,AGVPool,11. Objects Reference Help
+5,Dialog Box of the AGVPool,6372,6372,Dialog Box of the AGVPool,11. Objects Reference Help
+5,Tab Attributes,6373,6376,Dialog Box of the AGVPool,11. Objects Reference Help
+6,Tab Attributes,6373,6373,Tab Attributes,11. Objects Reference Help
+6,AGV [text box],6374,6374,Tab Attributes,11. Objects Reference Help
+6,Amount [text box] - AGVPool,6375,6375,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [AGVPool],6376,6376,Tab Attributes,11. Objects Reference Help
+5,Tab Statistics [AGVPool],6377,6378,Dialog Box of the AGVPool,11. Objects Reference Help
+5,Tab User-defined,6379,6379,Dialog Box of the AGVPool,11. Objects Reference Help
+5,Navigate Menu,6380,6380,Dialog Box of the AGVPool,11. Objects Reference Help
+5,View Menu,6380,6381,Dialog Box of the AGVPool,11. Objects Reference Help
+6,View Menu,6380,6380,View Menu,11. Objects Reference Help
+6,Assigned AGVs [AGVPool],6381,6381,View Menu,11. Objects Reference Help
+5,Tools Menu,6382,6382,Dialog Box of the AGVPool,11. Objects Reference Help
+5,Help Menu,6383,6383,Dialog Box of the AGVPool,11. Objects Reference Help
+4,Methods of the AGVPool,6383,6386,AGVPool,11. Objects Reference Help
+5,_Methods of the AGVPool,6383,6384,Methods of the AGVPool,11. Objects Reference Help
+5,getAssignedAGV [SimTalk],6385,6385,Methods of the AGVPool,11. Objects Reference Help
+5,getAssignedAGVsTable [SimTalk],6386,6386,Methods of the AGVPool,11. Objects Reference Help
+5,getIdleAGV [SimTalk],6387,6387,Methods of the AGVPool,11. Objects Reference Help
+4,Read-Only Attributes of the AGVPool,6387,6389,AGVPool,11. Objects Reference Help
+5,_Read-Only Attributes of the AGVPool,6387,6388,Read-Only Attributes of the AGVPool,11. Objects Reference Help
+5,NumIdleAGVs [SimTalk],6389,6389,Read-Only Attributes of the AGVPool,11. Objects Reference Help
+5,StatAverageTraveledDistance [SimTalk] - AGVPool,6390,6390,Read-Only Attributes of the AGVPool,11. Objects Reference Help
+4,Attributes of the AGVPool,6390,6393,AGVPool,11. Objects Reference Help
+5,_Attributes of the AGVPool,6390,6391,Attributes of the AGVPool,11. Objects Reference Help
+5,AGV [SimTalk],6392,6393,Attributes of the AGVPool,11. Objects Reference Help
+5,Amount [SimTalk] - AGVPool,6394,6394,Attributes of the AGVPool,11. Objects Reference Help
+3,Marker,6394,6414,Resource Objects,11. Objects Reference Help
+4,Marker,6394,6396,Marker,11. Objects Reference Help
+4,Directional and Omidirectional Markers,6397,6397,Marker,11. Objects Reference Help
+4,Dialog Box of the Marker,6398,6408,Marker,11. Objects Reference Help
+5,Dialog Box of the Marker,6398,6398,Dialog Box of the Marker,11. Objects Reference Help
+5,Tab Attributes,6399,6404,Dialog Box of the Marker,11. Objects Reference Help
+6,Tab Attributes,6399,6399,Tab Attributes,11. Objects Reference Help
+6,Use Rotation of Marker [check box],6400,6402,Tab Attributes,11. Objects Reference Help
+6,Arrival Control [Marker],6403,6404,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,6405,6405,Dialog Box of the Marker,11. Objects Reference Help
+5,Navigate Menu,6406,6406,Dialog Box of the Marker,11. Objects Reference Help
+5,View Menu,6407,6407,Dialog Box of the Marker,11. Objects Reference Help
+5,Tools Menu,6408,6408,Dialog Box of the Marker,11. Objects Reference Help
+5,Help Menu,6409,6409,Dialog Box of the Marker,11. Objects Reference Help
+4,Methods of the Marker,6409,6410,Marker,11. Objects Reference Help
+5,Methods of the Marker,6409,6410,Methods of the Marker,11. Objects Reference Help
+5,getRouteLength [SimTalk] - Marker,6411,6411,Methods of the Marker,11. Objects Reference Help
+4,Read-Only Attributes of the Marker,6411,6411,Marker,11. Objects Reference Help
+5,Read-Only Attributes of the Marker,6411,6411,Read-Only Attributes of the Marker,11. Objects Reference Help
+4,Attributes of the Marker,6412,6414,Marker,11. Objects Reference Help
+5,_Attributes of the Marker,6412,6413,Attributes of the Marker,11. Objects Reference Help
+5,ArrivalCtrl [SimTalk],6414,6414,Attributes of the Marker,11. Objects Reference Help
+5,UseRotationOfMarker [SimTalk],6415,6415,Attributes of the Marker,11. Objects Reference Help
+3,ShiftCalendar,6415,6454,Resource Objects,11. Objects Reference Help
+4,ShiftCalendar [object],6415,6416,ShiftCalendar,11. Objects Reference Help
+4,Dialog Box of the ShiftCalendar,6417,6440,ShiftCalendar,11. Objects Reference Help
+5,Dialog Box of the ShiftCalendar,6417,6418,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+5,Active [check box] - ShiftCalendar,6419,6419,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+5,Tab Shift Times,6419,6424,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+6,Tab Shift Times,6419,6420,Tab Shift Times,11. Objects Reference Help
+6,Shift [ShiftCalendar],6421,6421,Tab Shift Times,11. Objects Reference Help
+6,From,6422,6422,Tab Shift Times,11. Objects Reference Help
+6,To,6423,6423,Tab Shift Times,11. Objects Reference Help
+6,"Mo, Tu, We, Th, Fr, Sa, Su",6424,6424,Tab Shift Times,11. Objects Reference Help
+6,Pauses [ShiftCalendar],6425,6425,Tab Shift Times,11. Objects Reference Help
+5,Tab Calendar,6425,6429,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+6,Tab Calendar,6425,6426,Tab Calendar,11. Objects Reference Help
+6,Date From,6427,6427,Tab Calendar,11. Objects Reference Help
+6,Date To,6428,6428,Tab Calendar,11. Objects Reference Help
+6,Reduce Time To,6429,6429,Tab Calendar,11. Objects Reference Help
+6,Comment [reduce time to],6430,6430,Tab Calendar,11. Objects Reference Help
+5,Tab Resources,6430,6432,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+6,Tab Resources [ShiftCalendar],6430,6431,Tab Resources,11. Objects Reference Help
+6,Objects [ShiftCalendar],6432,6432,Tab Resources,11. Objects Reference Help
+5,Tab User-defined,6433,6433,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+5,File Menu,6433,6437,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+6,File Menu [ShiftCalendar],6433,6433,File Menu,11. Objects Reference Help
+6,Import Shift Times,6434,6434,File Menu,11. Objects Reference Help
+6,Export Shift Times,6435,6435,File Menu,11. Objects Reference Help
+6,Import Calendar,6436,6436,File Menu,11. Objects Reference Help
+6,Export Calendar,6437,6437,File Menu,11. Objects Reference Help
+5,Navigate Menu,6438,6438,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+5,View Menu,6438,6439,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+6,View Menu,6438,6438,View Menu,11. Objects Reference Help
+6,Show Assigned Objects [ShiftCalendar],6439,6439,View Menu,11. Objects Reference Help
+5,Tools Menu,6440,6440,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+5,Help Menu,6441,6441,Dialog Box of the ShiftCalendar,11. Objects Reference Help
+4,Methods of the ShiftCalendar,6441,6444,ShiftCalendar,11. Objects Reference Help
+5,_Methods of the ShiftCalendar,6441,6442,Methods of the ShiftCalendar,11. Objects Reference Help
+5,calculateWorkingDuration [SimTalk],6443,6443,Methods of the ShiftCalendar,11. Objects Reference Help
+5,schedule [SimTalk] - ShiftCalendar,6444,6444,Methods of the ShiftCalendar,11. Objects Reference Help
+4,Read-Only Attributes of the ShiftCalendar,6445,6448,ShiftCalendar,11. Objects Reference Help
+5,_Read-Only Attributes of the ShiftCalendar,6445,6446,Read-Only Attributes of the ShiftCalendar,11. Objects Reference Help
+5,GetCurrShift [SimTalk],6447,6447,Read-Only Attributes of the ShiftCalendar,11. Objects Reference Help
+5,Pause [SimTalk] - ShiftCalendar,6448,6448,Read-Only Attributes of the ShiftCalendar,11. Objects Reference Help
+5,Unplanned [SimTalk] - ShiftCalendar,6449,6449,Read-Only Attributes of the ShiftCalendar,11. Objects Reference Help
+4,Attributes of the ShiftCalendar,6449,6454,ShiftCalendar,11. Objects Reference Help
+5,_Attributes of the ShiftCalendar,6449,6450,Attributes of the ShiftCalendar,11. Objects Reference Help
+5,Active [SimTalk] - ShiftCalendar,6451,6451,Attributes of the ShiftCalendar,11. Objects Reference Help
+5,Calendar [SimTalk],6452,6452,Attributes of the ShiftCalendar,11. Objects Reference Help
+5,Resources [SimTalk] - ShiftCalendar,6453,6453,Attributes of the ShiftCalendar,11. Objects Reference Help
+5,ShiftPlan [SimTalk],6454,6454,Attributes of the ShiftCalendar,11. Objects Reference Help
+3,LockoutZone,6455,6492,Resource Objects,11. Objects Reference Help
+4,LockoutZone,6455,6456,LockoutZone,11. Objects Reference Help
+4,Dialog Box of the LockoutZone,6457,6473,LockoutZone,11. Objects Reference Help
+5,Dialog Box of the LockoutZone,6457,6458,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,Active [check box] - LockoutZone,6459,6459,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,Tab Controls,6459,6465,Dialog Box of the LockoutZone,11. Objects Reference Help
+6,Tab Controls [LockoutZone],6459,6460,Tab Controls,11. Objects Reference Help
+6,Stop Control [LockoutZone],6461,6462,Tab Controls,11. Objects Reference Help
+6,Resume Control [LockoutZone],6463,6464,Tab Controls,11. Objects Reference Help
+6,Stop Mode [drop-down list],6465,6465,Tab Controls,11. Objects Reference Help
+5,Tab Objects,6466,6467,Dialog Box of the LockoutZone,11. Objects Reference Help
+6,Tab Objects,6466,6466,Tab Objects,11. Objects Reference Help
+6,Objects [LockoutZone],6467,6467,Tab Objects,11. Objects Reference Help
+5,Tab Statistics [LockoutZone],6468,6469,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,Tab User-defined,6470,6470,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,Navigate Menu,6471,6471,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,View Menu,6471,6472,Dialog Box of the LockoutZone,11. Objects Reference Help
+6,View Menu [LockoutZone],6471,6471,View Menu,11. Objects Reference Help
+6,Show Assigned Objects [LockoutZone],6472,6472,View Menu,11. Objects Reference Help
+5,Tools Menu,6473,6473,Dialog Box of the LockoutZone,11. Objects Reference Help
+5,Help Menu,6474,6474,Dialog Box of the LockoutZone,11. Objects Reference Help
+4,Methods of the LockoutZone,6474,6475,LockoutZone,11. Objects Reference Help
+5,Methods of the LockoutZone,6474,6475,Methods of the LockoutZone,11. Objects Reference Help
+5,addObject [SimTalk] - LockoutZone,6476,6476,Methods of the LockoutZone,11. Objects Reference Help
+4,Read-Only Attributes of the LockoutZone,6476,6484,LockoutZone,11. Objects Reference Help
+5,_Read-Only Attributes of the LockoutZone,6476,6477,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedCount [SimTalk] - LockoutZone,6478,6478,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedDelta [SimTalk] - LockoutZone,6479,6479,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedIntervalDelta [SimTalk],6480,6480,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedIntervalMu [SimTalk],6481,6481,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedIntervalTime [SimTalk],6482,6482,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedMu [SimTalk] - LockoutZone,6483,6483,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedPortion [SimTalk] - LockoutZone,6484,6484,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+5,StatStoppedTime [SimTalk],6485,6485,Read-Only Attributes of the LockoutZone,11. Objects Reference Help
+4,Attributes of the LockoutZone,6485,6492,LockoutZone,11. Objects Reference Help
+5,_Attributes of the LockoutZone,6485,6486,Attributes of the LockoutZone,11. Objects Reference Help
+5,Active [SimTalk] - LockoutZone,6487,6487,Attributes of the LockoutZone,11. Objects Reference Help
+5,Objects [SimTalk] - LockoutZone,6488,6488,Attributes of the LockoutZone,11. Objects Reference Help
+5,ResumeCtrl [SimTalk],6489,6489,Attributes of the LockoutZone,11. Objects Reference Help
+5,StopCtrl [SimTalk],6490,6490,Attributes of the LockoutZone,11. Objects Reference Help
+5,StopMode [SimTalk],6491,6492,Attributes of the LockoutZone,11. Objects Reference Help
+5,Stopped [SimTalk] - LockoutZone,6493,6493,Attributes of the LockoutZone,11. Objects Reference Help
+2,Information Flow Objects,6493,7481,11. Objects Reference Help,11. Objects Reference Help
+3,Information Flow Objects,6493,6494,Information Flow Objects,11. Objects Reference Help

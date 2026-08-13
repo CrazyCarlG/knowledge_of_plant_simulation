@@ -1,0 +1,381 @@
+EntranceOnlyOnCycle [SimTalk],5577,5577,Attributes of the Object Cycle,11. Objects Reference Help
+2,Fluid Objects,5577,5899,11. Objects Reference Help,11. Objects Reference Help
+3,Fluid Objects,5577,5579,Fluid Objects,11. Objects Reference Help
+3,Shared Properties,5580,5607,Fluid Objects,11. Objects Reference Help
+4,Shared Properties,5580,5580,Shared Properties,11. Objects Reference Help
+4,Dialog Items of the Fluid Objects,5581,5589,Shared Properties,11. Objects Reference Help
+5,Dialog Items of the Fluid Objects,5581,5582,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Entrance Locked [fluid objects],5583,5583,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Exit Locked [fluid objects],5584,5584,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Tab Statistics [fluid objects],5585,5586,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Navigate Menu,5587,5587,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,View Menu,5588,5588,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Tools Menu,5589,5589,Dialog Items of the Fluid Objects,11. Objects Reference Help
+5,Help Menu,5590,5590,Dialog Items of the Fluid Objects,11. Objects Reference Help
+4,Methods of the Fluid Objects,5590,5590,Shared Properties,11. Objects Reference Help
+5,Methods of the Fluid Objects,5590,5590,Methods of the Fluid Objects,11. Objects Reference Help
+4,Read-Only Attributes of the Fluid Objects,5591,5601,Shared Properties,11. Objects Reference Help
+5,_Read-Only Attributes of the Fluid Objects,5591,5592,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,CurrentInFlowrate [SimTalk],5593,5593,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,CurrentMaterialColor [SimTalk],5594,5594,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,CurrentMaterialDensity [SimTalk],5595,5595,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,CurrentOutFlowrate [SimTalk],5596,5596,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,CurrentWeight [SimTalk],5597,5597,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,ResBlocked [SimTalk] - fluid objects,5598,5598,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,ResCurrentState [SimTalk] - fluid objects,5599,5599,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,ResSetup [SimTalk] - fluid objects,5600,5600,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,ResWaiting [SimTalk] - fluid objects,5601,5601,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+5,ResWorking [SimTalk] - fluid objects,5602,5602,Read-Only Attributes of the Fluid Objects,11. Objects Reference Help
+4,Attributes of the Fluid Objects,5602,5607,Shared Properties,11. Objects Reference Help
+5,_Attributes of the Fluid Objects,5602,5603,Attributes of the Fluid Objects,11. Objects Reference Help
+5,EntranceLocked [SimTalk] - fluid objects,5604,5604,Attributes of the Fluid Objects,11. Objects Reference Help
+5,ExitLocked [SimTalk] - fluid objects,5605,5605,Attributes of the Fluid Objects,11. Objects Reference Help
+5,RandomSeed [SimTalk] - fluid objects,5606,5607,Attributes of the Fluid Objects,11. Objects Reference Help
+5,SetupTime [SimTalk] - fluid objects,5608,5608,Attributes of the Fluid Objects,11. Objects Reference Help
+3,Pipe,5608,5636,Fluid Objects,11. Objects Reference Help
+4,Pipe,5608,5610,Pipe,11. Objects Reference Help
+4,Dialog Box of the Pipe,5611,5624,Pipe,11. Objects Reference Help
+5,Dialog Box of the Pipe,5611,5611,Dialog Box of the Pipe,11. Objects Reference Help
+5,Tab Attributes,5612,5618,Dialog Box of the Pipe,11. Objects Reference Help
+6,Tab Attributes [Pipe],5612,5612,Tab Attributes,11. Objects Reference Help
+6,Outflow Rate [Pipe],5613,5613,Tab Attributes,11. Objects Reference Help
+6,Pipe Opened [check box],5614,5614,Tab Attributes,11. Objects Reference Help
+6,Exit Strategy,5614,5616,Tab Attributes,11. Objects Reference Help
+7,Exit Strategy - Pipe,5614,5614,Exit Strategy,11. Objects Reference Help
+7,Evenly distributed,5615,5615,Exit Strategy,11. Objects Reference Help
+7,Percentage [Pipe],5616,5616,Exit Strategy,11. Objects Reference Help
+6,Current Material [Pipe],5617,5617,Tab Attributes,11. Objects Reference Help
+6,Current Flow Rate [text box],5618,5618,Tab Attributes,11. Objects Reference Help
+5,Tab Times,5619,5619,Dialog Box of the Pipe,11. Objects Reference Help
+5,Tab Statistics,5620,5620,Dialog Box of the Pipe,11. Objects Reference Help
+5,Tab User-defined Attributes,5621,5621,Dialog Box of the Pipe,11. Objects Reference Help
+5,Navigate Menu,5622,5622,Dialog Box of the Pipe,11. Objects Reference Help
+5,View Menu,5623,5623,Dialog Box of the Pipe,11. Objects Reference Help
+5,Tools Menu,5624,5624,Dialog Box of the Pipe,11. Objects Reference Help
+5,Help Menu,5625,5625,Dialog Box of the Pipe,11. Objects Reference Help
+4,Methods of the Pipe,5625,5625,Pipe,11. Objects Reference Help
+5,Methods of the Pipe,5625,5625,Methods of the Pipe,11. Objects Reference Help
+4,Read-Only Attributes of the Pipe,5626,5629,Pipe,11. Objects Reference Help
+5,_Read-Only Attributes of the Pipe,5626,5627,Read-Only Attributes of the Pipe,11. Objects Reference Help
+5,CurrentFlowrate [SimTalk],5628,5628,Read-Only Attributes of the Pipe,11. Objects Reference Help
+5,CurrentMaterial [SimTalk] - Pipe,5629,5629,Read-Only Attributes of the Pipe,11. Objects Reference Help
+5,LengthOfPipe [SimTalk],5630,5630,Read-Only Attributes of the Pipe,11. Objects Reference Help
+4,Attributes of the Pipe,5630,5636,Pipe,11. Objects Reference Help
+5,_Attributes of the Pipe,5630,5631,Attributes of the Pipe,11. Objects Reference Help
+5,ExitStrategy [SimTalk] - Pipe,5632,5632,Attributes of the Pipe,11. Objects Reference Help
+5,ExitStrategyPercentageValues [SimTalk] - Pipe,5633,5633,Attributes of the Pipe,11. Objects Reference Help
+5,OutflowRate [SimTalk] - Pipe,5634,5635,Attributes of the Pipe,11. Objects Reference Help
+5,PipeOpened [SimTalk],5636,5636,Attributes of the Pipe,11. Objects Reference Help
+3,FluidSource,5637,5665,Fluid Objects,11. Objects Reference Help
+4,FluidSource,5637,5637,FluidSource,11. Objects Reference Help
+4,Dialog Box of the FluidSource,5638,5654,FluidSource,11. Objects Reference Help
+5,Dialog Box of the FluidSource,5638,5638,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Tab Attributes,5639,5648,Dialog Box of the FluidSource,11. Objects Reference Help
+6,Tab Attributes,5639,5639,Tab Attributes,11. Objects Reference Help
+6,Outflow Rate [FluidSource],5640,5640,Tab Attributes,11. Objects Reference Help
+6,Material Selection [drop-down list],5641,5642,Tab Attributes,11. Objects Reference Help
+6,Material [text box] - FluidSource,5643,5645,Tab Attributes,11. Objects Reference Help
+6,Materials Table [FluidSource],5646,5646,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [FluidSource],5647,5647,Tab Attributes,11. Objects Reference Help
+6,Current Outflow Rate [FluidSource],5648,5648,Tab Attributes,11. Objects Reference Help
+5,Tab Failures,5649,5649,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Tab Statistics [FluidSource],5650,5650,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Tab User-defined Attributes,5651,5651,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Navigate Menu,5652,5652,Dialog Box of the FluidSource,11. Objects Reference Help
+5,View Menu,5653,5653,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Tools Menu,5654,5654,Dialog Box of the FluidSource,11. Objects Reference Help
+5,Help Menu,5655,5655,Dialog Box of the FluidSource,11. Objects Reference Help
+4,Methods of the FluidSource,5655,5655,FluidSource,11. Objects Reference Help
+5,Methods of the FluidSource,5655,5655,Methods of the FluidSource,11. Objects Reference Help
+4,Read-Only Attributes of the FluidSource,5656,5657,FluidSource,11. Objects Reference Help
+5,Read-Only Attributes of the FluidSource,5656,5657,Read-Only Attributes of the FluidSource,11. Objects Reference Help
+5,StatAmount [SimTalk],5658,5658,Read-Only Attributes of the FluidSource,11. Objects Reference Help
+4,Attributes of the FluidSource,5658,5665,FluidSource,11. Objects Reference Help
+5,_Attributes of the FluidSource,5658,5659,Attributes of the FluidSource,11. Objects Reference Help
+5,Material [SimTalk] - FluidSource,5660,5661,Attributes of the FluidSource,11. Objects Reference Help
+5,MaterialSelection [SimTalk],5662,5663,Attributes of the FluidSource,11. Objects Reference Help
+5,MaterialsTable [SimTalk] - FluidSource,5664,5664,Attributes of the FluidSource,11. Objects Reference Help
+5,OutflowRate [SimTalk] - FluidSource,5665,5665,Attributes of the FluidSource,11. Objects Reference Help
+3,FluidDrain,5666,5684,Fluid Objects,11. Objects Reference Help
+4,FluidDrain,5666,5666,FluidDrain,11. Objects Reference Help
+4,Dialog Box of the FluidDrain,5667,5676,FluidDrain,11. Objects Reference Help
+5,Dialog Box of the FluidDrain,5667,5667,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,Tab Attributes,5668,5670,Dialog Box of the FluidDrain,11. Objects Reference Help
+6,Tab Attributes,5668,5668,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [FluidDrain],5669,5669,Tab Attributes,11. Objects Reference Help
+6,Current Inflow Rate [FluidDrain],5670,5670,Tab Attributes,11. Objects Reference Help
+5,Tab Failures,5671,5671,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,Tab Statistics,5671,5672,Dialog Box of the FluidDrain,11. Objects Reference Help
+6,Tab Statistics [FluidDrain],5671,5671,Tab Statistics,11. Objects Reference Help
+6,Detailed Statistics Table [FluidDrain],5672,5672,Tab Statistics,11. Objects Reference Help
+5,Tab User-defined,5673,5673,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,Navigate Menu,5674,5674,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,View Menu,5675,5675,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,Tools Menu,5676,5676,Dialog Box of the FluidDrain,11. Objects Reference Help
+5,Help Menu,5677,5677,Dialog Box of the FluidDrain,11. Objects Reference Help
+4,Methods of the FluidDrain,5677,5678,FluidDrain,11. Objects Reference Help
+5,Methods of the FluidDrain,5677,5678,Methods of the FluidDrain,11. Objects Reference Help
+5,typeStatistics [SimTalk] - FluidDrain,5679,5679,Methods of the FluidDrain,11. Objects Reference Help
+4,Read-Only Attributes of the FluidDrain,5679,5683,FluidDrain,11. Objects Reference Help
+5,_Read-Only Attributes of the FluidDrain,5679,5680,Read-Only Attributes of the FluidDrain,11. Objects Reference Help
+5,StatMaxFlowRate [SimTalk],5681,5681,Read-Only Attributes of the FluidDrain,11. Objects Reference Help
+5,StatThroughput [SimTalk] - FluidDrain,5682,5682,Read-Only Attributes of the FluidDrain,11. Objects Reference Help
+5,StatThroughputPerDay [SimTalk] - FluidDrain,5683,5683,Read-Only Attributes of the FluidDrain,11. Objects Reference Help
+5,StatThroughputPerHour [SimTalk] - FluidDrain,5684,5684,Read-Only Attributes of the FluidDrain,11. Objects Reference Help
+4,Attributes of the FluidDrain,5684,5684,FluidDrain,11. Objects Reference Help
+5,Attributes of the FluidDrain,5684,5684,Attributes of the FluidDrain,11. Objects Reference Help
+3,Tank,5685,5742,Fluid Objects,11. Objects Reference Help
+4,Tank [object],5685,5686,Tank,11. Objects Reference Help
+4,Dialog Box of the Tank,5687,5711,Tank,11. Objects Reference Help
+5,Dialog Box of the Tank,5687,5687,Dialog Box of the Tank,11. Objects Reference Help
+5,Tab Attributes,5688,5703,Dialog Box of the Tank,11. Objects Reference Help
+6,Tab Attributes,5688,5688,Tab Attributes,11. Objects Reference Help
+6,Outflow Rate [Tank],5689,5689,Tab Attributes,11. Objects Reference Help
+6,Volume [Tank],5690,5690,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [Tank],5691,5691,Tab Attributes,11. Objects Reference Help
+6,Current Material [Tank],5692,5692,Tab Attributes,11. Objects Reference Help
+6,Current Fill Level [Tank],5693,5693,Tab Attributes,11. Objects Reference Help
+6,Current Amount [Tank],5694,5694,Tab Attributes,11. Objects Reference Help
+6,Current Inflow Rate [Tank],5695,5695,Tab Attributes,11. Objects Reference Help
+6,Current Outflow Rate [Tank],5696,5696,Tab Attributes,11. Objects Reference Help
+6,Sensors,5696,5703,Tab Attributes,11. Objects Reference Help
+7,Sensors [Tank],5696,5697,Sensors,11. Objects Reference Help
+7,Position [Tank],5698,5699,Sensors,11. Objects Reference Help
+7,Exceeded [check box],5700,5700,Sensors,11. Objects Reference Help
+7,Underrun [check box],5701,5701,Sensors,11. Objects Reference Help
+7,Control [Tank],5702,5703,Sensors,11. Objects Reference Help
+5,Tab Times,5704,5704,Dialog Box of the Tank,11. Objects Reference Help
+5,Tab Failures,5705,5705,Dialog Box of the Tank,11. Objects Reference Help
+5,Tab Statistics [Tank],5706,5706,Dialog Box of the Tank,11. Objects Reference Help
+5,Tab Importer,5707,5707,Dialog Box of the Tank,11. Objects Reference Help
+5,Tab User-defined,5708,5708,Dialog Box of the Tank,11. Objects Reference Help
+5,Navigate Menu,5709,5709,Dialog Box of the Tank,11. Objects Reference Help
+5,View Menu,5710,5710,Dialog Box of the Tank,11. Objects Reference Help
+5,Tools Menu,5711,5711,Dialog Box of the Tank,11. Objects Reference Help
+5,Help Menu,5712,5712,Dialog Box of the Tank,11. Objects Reference Help
+4,Methods of the Tank,5712,5721,Tank,11. Objects Reference Help
+5,Methods of the Tank,5712,5712,Methods of the Tank,11. Objects Reference Help
+5,General Methods of the Tank,5713,5714,Methods of the Tank,11. Objects Reference Help
+6,General Methods of the Tank,5713,5713,General Methods of the Tank,11. Objects Reference Help
+6,setCurrentContent [SimTalk] - Tank,5714,5714,General Methods of the Tank,11. Objects Reference Help
+5,Methods of the Sensors of the Tank,5715,5721,Methods of the Tank,11. Objects Reference Help
+6,_Methods of the Sensors of the Tank,5715,5715,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,createSensor [SimTalk] - Tank,5716,5717,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,deleteSensor [SimTalk] - Tank,5718,5718,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,existsSensorID [SimTalk] - Tank,5719,5719,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,sensorID [SimTalk] - Tank,5720,5720,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,sensorNo [SimTalk] - Tank,5721,5721,Methods of the Sensors of the Tank,11. Objects Reference Help
+6,sensors.ID [SimTalk] - Tank,5722,5722,Methods of the Sensors of the Tank,11. Objects Reference Help
+4,Read-Only Attributes of the Tank,5722,5733,Tank,11. Objects Reference Help
+5,Read-Only Attributes of the Tank,5722,5722,Read-Only Attributes of the Tank,11. Objects Reference Help
+5,General Read-Only Attributes of the Tank,5723,5730,Read-Only Attributes of the Tank,11. Objects Reference Help
+6,_General Read-Only Attributes of the Tank,5723,5723,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,CurrentAmount [SimTalk] - Tank,5724,5724,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,CurrentFillLevel [SimTalk] - Tank,5725,5725,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,CurrentMaterial [SimTalk] - Tank,5726,5727,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,Empty [SimTalk] - Tank,5728,5728,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,Full [SimTalk] - Tank,5729,5729,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,StatRelativeOccupation [SimTalk] - Tank,5730,5730,General Read-Only Attributes of the Tank,11. Objects Reference Help
+6,StatThroughput [SimTalk] - Tank,5731,5731,General Read-Only Attributes of the Tank,11. Objects Reference Help
+5,Read-Only Attributes of the Sensors of the Tank,5731,5733,Read-Only Attributes of the Tank,11. Objects Reference Help
+6,_Read-Only Attributes of the Sensors of the Tank,5731,5731,Read-Only Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,ID [SimTalk] - Tank,5732,5732,Read-Only Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,NumSensors [SimTalk] - Tank,5733,5733,Read-Only Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,Origin [SimTalk] - Tank,5734,5734,Read-Only Attributes of the Sensors of the Tank,11. Objects Reference Help
+4,Attributes of the Tank,5734,5742,Tank,11. Objects Reference Help
+5,Attributes of the Tank,5734,5734,Attributes of the Tank,11. Objects Reference Help
+5,General Attributes of the Tank,5735,5737,Attributes of the Tank,11. Objects Reference Help
+6,_General Attributes of the Tank,5735,5735,General Attributes of the Tank,11. Objects Reference Help
+6,OutflowRate [SimTalk] - Tank,5736,5737,General Attributes of the Tank,11. Objects Reference Help
+6,Volume [SimTalk] - Tank,5738,5738,General Attributes of the Tank,11. Objects Reference Help
+5,Attributes of the Sensors of the Tank,5738,5742,Attributes of the Tank,11. Objects Reference Help
+6,_Attributes of the Sensors of the Tank,5738,5738,Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,"Control [SimTalk] - senor, Tank",5739,5739,Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,Exceeded [SimTalk],5740,5740,Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,Position [SimTalk] - Tank,5741,5741,Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,PositionType [SimTalk],5742,5742,Attributes of the Sensors of the Tank,11. Objects Reference Help
+6,Underrun [SimTalk],5743,5743,Attributes of the Sensors of the Tank,11. Objects Reference Help
+3,Mixer,5743,5788,Fluid Objects,11. Objects Reference Help
+4,Mixer,5743,5744,Mixer,11. Objects Reference Help
+4,Dialog Box of the Mixer,5745,5767,Mixer,11. Objects Reference Help
+5,Dialog Box of the Mixer,5745,5745,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tab Attributes,5746,5755,Dialog Box of the Mixer,11. Objects Reference Help
+6,Tab Attributes,5746,5746,Tab Attributes,11. Objects Reference Help
+6,Outflow Rate [Mixer],5747,5747,Tab Attributes,11. Objects Reference Help
+6,Volume [Mixer],5748,5748,Tab Attributes,11. Objects Reference Help
+6,Product [text box] - Mixer,5749,5749,Tab Attributes,11. Objects Reference Help
+6,Product Amount [text box],5750,5750,Tab Attributes,11. Objects Reference Help
+6,Materials Table [Mixer],5751,5751,Tab Attributes,11. Objects Reference Help
+6,Current Fill Level [Mixer],5752,5752,Tab Attributes,11. Objects Reference Help
+6,Current Amount [Mixer],5753,5753,Tab Attributes,11. Objects Reference Help
+6,Current Inflow Rate [Mixer],5754,5754,Tab Attributes,11. Objects Reference Help
+6,Current Outflow Rate [Mixer],5755,5755,Tab Attributes,11. Objects Reference Help
+5,Tab Times,5756,5756,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tab Failures,5757,5757,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tab Controls,5757,5761,Dialog Box of the Mixer,11. Objects Reference Help
+6,Tab Controls,5757,5758,Tab Controls,11. Objects Reference Help
+6,Ingredient Complete Control,5759,5760,Tab Controls,11. Objects Reference Help
+6,Shift Calendar [Mixer],5761,5761,Tab Controls,11. Objects Reference Help
+5,Tab Statistics [Mixer],5762,5762,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tab Importer,5763,5763,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tab User-defined,5764,5764,Dialog Box of the Mixer,11. Objects Reference Help
+5,Navigate Menu,5765,5765,Dialog Box of the Mixer,11. Objects Reference Help
+5,View Menu,5766,5766,Dialog Box of the Mixer,11. Objects Reference Help
+5,Tools Menu,5767,5767,Dialog Box of the Mixer,11. Objects Reference Help
+5,Help Menu,5768,5768,Dialog Box of the Mixer,11. Objects Reference Help
+4,Methods of the Mixer,5768,5771,Mixer,11. Objects Reference Help
+5,_Methods of the Mixer,5768,5769,Methods of the Mixer,11. Objects Reference Help
+5,addContent [SimTalk],5770,5770,Methods of the Mixer,11. Objects Reference Help
+5,setCurrentContent [SimTalk] - Mixer,5771,5771,Methods of the Mixer,11. Objects Reference Help
+4,Read-Only Attributes of the Mixer,5772,5779,Mixer,11. Objects Reference Help
+5,_Read-Only Attributes of the Mixer,5772,5772,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,CurrentAmount [SimTalk] - Mixer,5773,5773,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,CurrentFillLevel [SimTalk] - Mixer,5774,5774,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,Empty [SimTalk] - Mixer,5775,5775,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,EntranceOpen [SimTalk] - Mixer,5776,5776,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,Full [SimTalk] - Mixer,5777,5777,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,Ready [SimTalk] - Mixer,5778,5778,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,StatThroughput [SimTalk] - Mixer,5779,5779,Read-Only Attributes of the Mixer,11. Objects Reference Help
+5,TimeUntilEntranceOpen [SimTalk] - Mixer,5780,5780,Read-Only Attributes of the Mixer,11. Objects Reference Help
+4,Attributes of the Mixer,5780,5788,Mixer,11. Objects Reference Help
+5,Attributes of the Mixer,5780,5781,Attributes of the Mixer,11. Objects Reference Help
+5,IngredientCompleteCtrl [SimTalk],5782,5782,Attributes of the Mixer,11. Objects Reference Help
+5,MaterialsTable [SimTalk] - Mixer,5783,5783,Attributes of the Mixer,11. Objects Reference Help
+5,OutflowRate [SimTalk] - Mixer,5784,5784,Attributes of the Mixer,11. Objects Reference Help
+5,ProcTime [SimTalk] - Mixer,5785,5785,Attributes of the Mixer,11. Objects Reference Help
+5,Product [SimTalk],5786,5786,Attributes of the Mixer,11. Objects Reference Help
+5,ProductAmount [SimTalk],5787,5787,Attributes of the Mixer,11. Objects Reference Help
+5,RecoveryTime [SimTalk] - Mixer,5788,5788,Attributes of the Mixer,11. Objects Reference Help
+5,Volume [SimTalk] - Mixer,5789,5789,Attributes of the Mixer,11. Objects Reference Help
+3,ContinuousMixer,5789,5809,Fluid Objects,11. Objects Reference Help
+4,ContinuousMixer,5789,5789,ContinuousMixer,11. Objects Reference Help
+4,Dialog Box of the ContinuousMixer,5790,5804,ContinuousMixer,11. Objects Reference Help
+5,Dialog Box of the ContinuousMixer,5790,5790,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tab Attributes,5791,5796,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+6,Tab Attributes,5791,5791,Tab Attributes,11. Objects Reference Help
+6,Product [text box] - ContinuousMixer,5792,5792,Tab Attributes,11. Objects Reference Help
+6,Materials Table [ContinuousMixer],5793,5793,Tab Attributes,11. Objects Reference Help
+6,Shift Calendar [ContinuousMixer],5794,5794,Tab Attributes,11. Objects Reference Help
+6,Current Inflow Rate [ContinuousMixer],5795,5795,Tab Attributes,11. Objects Reference Help
+6,Current Outflow Rate [ContinuousMixer],5796,5796,Tab Attributes,11. Objects Reference Help
+5,Tab Failures,5797,5797,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tab Times,5798,5798,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tab Statistics [ContinuousMixer],5799,5799,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tab Importer,5800,5800,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tab User-defined,5801,5801,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Navigate Menu,5802,5802,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,View Menu,5803,5803,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Tools Menu,5804,5804,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+5,Help Menu,5805,5805,Dialog Box of the ContinuousMixer,11. Objects Reference Help
+4,Methods of the ContinuousMixer,5805,5805,ContinuousMixer,11. Objects Reference Help
+5,Methods of the ContinuousMixer,5805,5805,Methods of the ContinuousMixer,11. Objects Reference Help
+4,Read-Only Attributes of the ContinuousMixer,5806,5806,ContinuousMixer,11. Objects Reference Help
+5,Read-Only Attributes of the ContinuousMixer,5806,5806,Read-Only Attributes of the ContinuousMixer,11. Objects Reference Help
+4,Attributes of the ContinuousMixer,5807,5809,ContinuousMixer,11. Objects Reference Help
+5,Attributes of the ContinuousMixer,5807,5808,Attributes of the ContinuousMixer,11. Objects Reference Help
+5,MaterialsTable [SimTalk] - ContinuousMixer,5809,5809,Attributes of the ContinuousMixer,11. Objects Reference Help
+5,Product [SimTalk] - ContinuousMixer,5810,5810,Attributes of the ContinuousMixer,11. Objects Reference Help
+3,Portioner,5810,5838,Fluid Objects,11. Objects Reference Help
+4,Portioner,5810,5811,Portioner,11. Objects Reference Help
+4,Dialog Box of the Portioner,5812,5830,Portioner,11. Objects Reference Help
+5,Dialog Box of the Portioner,5812,5812,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Attributes,5813,5819,Dialog Box of the Portioner,11. Objects Reference Help
+6,Tab Attributes,5813,5813,Tab Attributes,11. Objects Reference Help
+6,MU [Portioner],5814,5814,Tab Attributes,11. Objects Reference Help
+6,Amount per MU [Portioner],5815,5815,Tab Attributes,11. Objects Reference Help
+6,Fluid from Predecessor [text box],5816,5816,Tab Attributes,11. Objects Reference Help
+6,Current Amount [Portioner],5817,5817,Tab Attributes,11. Objects Reference Help
+6,Current Inflow Rate [Portioner],5818,5818,Tab Attributes,11. Objects Reference Help
+6,Current Material [Portioner],5819,5819,Tab Attributes,11. Objects Reference Help
+5,Tab Times,5820,5820,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Failures,5821,5821,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Controls,5822,5823,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Exit,5824,5824,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Statistics,5825,5825,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab Importer,5826,5826,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tab User-defined,5827,5827,Dialog Box of the Portioner,11. Objects Reference Help
+5,Navigate Menu,5828,5828,Dialog Box of the Portioner,11. Objects Reference Help
+5,View Menu,5829,5829,Dialog Box of the Portioner,11. Objects Reference Help
+5,Tools Menu,5830,5830,Dialog Box of the Portioner,11. Objects Reference Help
+5,Help Menu,5831,5831,Dialog Box of the Portioner,11. Objects Reference Help
+4,Methods of the Portioner,5831,5831,Portioner,11. Objects Reference Help
+5,Methods of the Portioner,5831,5831,Methods of the Portioner,11. Objects Reference Help
+4,Read-Only Attributes of the Portioner,5832,5834,Portioner,11. Objects Reference Help
+5,_Read-Only Attributes of the Portioner,5832,5833,Read-Only Attributes of the Portioner,11. Objects Reference Help
+5,CurrentAmount [SimTalk] - Portioner,5834,5834,Read-Only Attributes of the Portioner,11. Objects Reference Help
+5,CurrentMaterial [SimTalk] - Portioner,5835,5835,Read-Only Attributes of the Portioner,11. Objects Reference Help
+4,Attributes of the Portioner,5835,5838,Portioner,11. Objects Reference Help
+5,_Attributes of the Portioner,5835,5836,Attributes of the Portioner,11. Objects Reference Help
+5,AmountPerMU [SimTalk] - Portioner,5837,5837,Attributes of the Portioner,11. Objects Reference Help
+5,MUPath [SimTalk],5838,5838,Attributes of the Portioner,11. Objects Reference Help
+5,PredecessorNumber [SimTalk],5839,5839,Attributes of the Portioner,11. Objects Reference Help
+3,DePortioner,5839,5877,Fluid Objects,11. Objects Reference Help
+4,DePortioner,5839,5840,DePortioner,11. Objects Reference Help
+4,Dialog Box of the DePortioner,5841,5864,DePortioner,11. Objects Reference Help
+5,Dialog Box of the DePortioner,5841,5841,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Attributes,5842,5853,Dialog Box of the DePortioner,11. Objects Reference Help
+6,Tab Attributes,5842,5842,Tab Attributes,11. Objects Reference Help
+6,Outflow Rate [DePortioner],5843,5843,Tab Attributes,11. Objects Reference Help
+6,Fluid Depends On,5844,5845,Tab Attributes,11. Objects Reference Help
+6,Material [DePortioner],5846,5846,Tab Attributes,11. Objects Reference Help
+6,Amount per MU [DePortioner],5847,5847,Tab Attributes,11. Objects Reference Help
+6,Mapping Table,5848,5848,Tab Attributes,11. Objects Reference Help
+6,Material Attribute,5849,5849,Tab Attributes,11. Objects Reference Help
+6,Amount Attribute,5850,5850,Tab Attributes,11. Objects Reference Help
+6,Materials Table [DePortioner],5851,5851,Tab Attributes,11. Objects Reference Help
+6,Current Amount [DePortioner],5852,5852,Tab Attributes,11. Objects Reference Help
+6,Current Outflow Rate [DePortioner],5853,5853,Tab Attributes,11. Objects Reference Help
+5,Tab Times,5854,5854,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Setup,5855,5855,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Failures,5856,5856,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Controls,5857,5858,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Statistics,5859,5859,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab Importer [DePortioner],5860,5860,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tab User-defined,5861,5861,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Navigate Menu,5862,5862,Dialog Box of the DePortioner,11. Objects Reference Help
+5,View Menu,5863,5863,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Tools Menu,5864,5864,Dialog Box of the DePortioner,11. Objects Reference Help
+5,Help Menu,5865,5865,Dialog Box of the DePortioner,11. Objects Reference Help
+4,Methods of the DePortioner,5865,5865,DePortioner,11. Objects Reference Help
+5,Methods of the DePortioner,5865,5865,Methods of the DePortioner,11. Objects Reference Help
+4,Read-Only Attributes of the DePortioner,5866,5867,DePortioner,11. Objects Reference Help
+5,Read-Only Attributes of the DePortioner,5866,5867,Read-Only Attributes of the DePortioner,11. Objects Reference Help
+5,CurrentAmount [SimTalk] - DePortioner,5868,5868,Read-Only Attributes of the DePortioner,11. Objects Reference Help
+4,Attributes of the DePortioner,5868,5877,DePortioner,11. Objects Reference Help
+5,_Attributes of the DePortioner,5868,5869,Attributes of the DePortioner,11. Objects Reference Help
+5,AmountPerMU [SimTalk] - DePortioner,5870,5870,Attributes of the DePortioner,11. Objects Reference Help
+5,AttrNameAmount [SimTalk],5871,5871,Attributes of the DePortioner,11. Objects Reference Help
+5,AttrNameMaterial [SimTalk],5872,5872,Attributes of the DePortioner,11. Objects Reference Help
+5,FluidDependsOn [SimTalk],5873,5873,Attributes of the DePortioner,11. Objects Reference Help
+5,MappingTable [SimTalk],5874,5874,Attributes of the DePortioner,11. Objects Reference Help
+5,Material [SimTalk] - DePortioner,5875,5875,Attributes of the DePortioner,11. Objects Reference Help
+5,MaterialsTable [SimTalk] - DePortioner,5876,5876,Attributes of the DePortioner,11. Objects Reference Help
+5,OutflowRate [SimTalk] - DePortioner,5877,5877,Attributes of the DePortioner,11. Objects Reference Help
+5,RecoveryTime [SimTalk] - DePortioner,5878,5878,Attributes of the DePortioner,11. Objects Reference Help
+3,PatchMatrix,5878,5894,Fluid Objects,11. Objects Reference Help
+4,PatchMatrix,5878,5880,PatchMatrix,11. Objects Reference Help
+4,Dialog Box of the PatchMatrix,5881,5887,PatchMatrix,11. Objects Reference Help
+5,Dialog Box of the PatchMatrix,5881,5881,Dialog Box of the PatchMatrix,11. Objects Reference Help
+5,Tab Attributes,5881,5883,Dialog Box of the PatchMatrix,11. Objects Reference Help
+6,Tab Attributes,5881,5881,Tab Attributes,11. Objects Reference Help
+6,Connections [PatchMatrix],5882,5883,Tab Attributes,11. Objects Reference Help
+5,Tab User-defined,5884,5884,Dialog Box of the PatchMatrix,11. Objects Reference Help
+5,Navigate Menu,5885,5885,Dialog Box of the PatchMatrix,11. Objects Reference Help
+5,View Menu,5886,5886,Dialog Box of the PatchMatrix,11. Objects Reference Help
+5,Tools Menu,5887,5887,Dialog Box of the PatchMatrix,11. Objects Reference Help
+5,Help Menu,5888,5888,Dialog Box of the PatchMatrix,11. Objects Reference Help
+4,Methods of the PatchMatrix,5888,5893,PatchMatrix,11. Objects Reference Help
+5,_Methods of the PatchMatrix,5888,5889,Methods of the PatchMatrix,11. Objects Reference Help
+5,getConnectionsForPred [SimTalk],5890,5890,Methods of the PatchMatrix,11. Objects Reference Help
+5,getConnectionsForSucc [SimTalk],5891,5891,Methods of the PatchMatrix,11. Objects Reference Help
+5,resetConnections [SimTalk],5892,5892,Methods of the PatchMatrix,11. Objects Reference Help
+5,setConnections [SimTalk],5893,5893,Methods of the PatchMatrix,11. Objects Reference Help
+4,Read-Only Attributes of the PatchMatrix,5894,5894,PatchMatrix,11. Objects Reference Help
+5,Read-Only Attributes of the PatchMatrix,5894,5894,Read-Only Attributes of the PatchMatrix,11. Objects Reference Help
+4,Attributes of the PatchMatrix,5894,5894,PatchMatrix,11. Objects Reference Help
+5,Attributes of the PatchMatrix,5894,5894,Attributes of the PatchMatrix,11. Objects Reference Help
+3,MaterialsTable,5895,5899,Fluid Objects,11. Objects Reference Help
+4,MaterialsTable,5895,5898,MaterialsTable,11. Objects Reference Help
+4,Add Additional Ingredients to the MaterialsTable,5899,5899,MaterialsTable,11. Objects Reference Help
+2,Resource Objects,5900,6492,11. Objects Reference Help,11. Objects Reference Help
+3,Resource Objects,5900,5901,Resource Objects,11. Objects Reference Help
