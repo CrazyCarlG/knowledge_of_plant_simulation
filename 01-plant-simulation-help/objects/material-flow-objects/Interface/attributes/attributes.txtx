@@ -1,0 +1,110 @@
+IsExit [SimTalk]
+Returns if the Interface designated by <Path> is of type Exit (true) or not (false).
+Remarks
+The Interface has to be connected with a Connector.
+Type
+Read-only attribute
+Syntax
+<Path>.IsExit → boolean
+Return Value
+The return value has the data type boolean.
+Example
+print .Models.Model.Frame.interface.IsExit
+SimTalk
+IsEntry [SimTalk]
+See also
+Type [Interface]
+Attributes of the Interface
+_Attributes of the Interface
+The Interface provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+IsExit [SimTalk]
+Plant Simulation Help 11-1563
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+Interface1.Position := 53
+• To get the value of an attribute, you might, for example, type:
+print Interface1.Position
+posit := MyStation.Cont.XPos
+_Attributes of the Interface
+11-1564 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+MaxConnections [SimTalk] - Interface
+Sets the Maximum Number of External Connections of the Interface designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.MaxConnections:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify -1 for an infinite number of connections.
+Example
+Interface1.MaxConnections := 2
+See also
+Maximum Number of External Connections [Interface]
+MaxConnections [SimTalk] - Interface
+Plant Simulation Help 11-1565
+Unpublished work. © 2026 Siemens
+
+Position [SimTalk] - Interface
+Sets the Position in % of the Interface designated by <Path> at which an incoming or outgoing Connector
+is shown at the icon of the Frame.
+Remarks
+Plant Simulation uses the value you specify, when you activate File > Preferences > General > Connect
+Objects Automatically.
+Connecting objects automatically only works, when the exit of FrameA and the entrance of FrameB are not
+more than three pixels apart.
+Type
+Attribute
+Syntax
+<Path>.Position:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify a value between 0 and 100 percent.
+Position 0 is either the top or the left-hand side at the icon of the Frame.
+Position 100 is the bottom or the right-hand side at the icon.
+Example
+interface.Position := 53
+See also
+Position in % [Interface]
+Connect Objects Automatically [model settings]
+Position [SimTalk] - Interface
+11-1566 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Side [SimTalk]
+Sets the Side of the Frame on which the Interface designated by <Path> is located.
+Type
+Attribute
+Syntax
+<Path>.Side:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Top", "Right", "Bottom", "Left", or "Angle-dependent".
+"Angle-dependent" takes the angle between the objects into account when determining the starting
+point or the end point of the Connector.
+Example
+interface.Side := "right"
+See also
+Side [drop-down list]
+Source
+Source
+Use the object Source for producing the parts that move through your model. It usually represents the
+receiving department of your plant or the main machine producing the parts.
+Image
+Side [SimTalk]
+Plant Simulation Help 11-1567
+Unpublished work. © 2026 Siemens

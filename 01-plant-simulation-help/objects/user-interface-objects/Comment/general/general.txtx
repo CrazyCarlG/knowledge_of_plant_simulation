@@ -1,0 +1,424 @@
+• Use the object Chart 
+  for presenting current data and results of the simulation run.
+• Use the object Checkbox 
+  for toggling between the states on and off, for toggling operating modes,
+etc.
+• Use the object Comment 
+  for showing explanatory notes which you added to your simulation model.
+• Use the object CostAnalyzer 
+  for analyzing costs that the individual machines and the Worker cause.
+• Use the object Dialog 
+  for designing a dialog box for an object which is similar to the built-in dialog
+boxes.
+• Use the object Display 
+  for presenting current data and results of the simulation run.
+• Use the object DropDownList 
+  for showing a drop-down list in the Frame. When you select one of the
+items, it executes the action which you programmed in the control.
+• Use the object GanttChart 
+  for showing the chronological sequence of activities as bars on the time
+axis.
+• Use the object HtmlReport 
+  for presenting current data and results of the simulation run in a report
+that you can share with co-workers and customers.
+• Use the object SankeyDiagram 
+  for visualizing the Sankey flows of parts as well as Sankey flows of
+Workers, who walk freely within the area or walk on FootPaths.
+Comment
+Comment [object]
+Use the object Comment for showing explanatory notes which you added to your simulation model.
+Image
+Description
+A comment helps you and your colleagues to better understand the intentions behind your model and
+how it is supposed to work.
+You can access it like you do any other object, be aware though that the Comment usually is not involved
+in the simulation itself. Select Options > Show Comments on the View ribbon tab of the Frame or click
+ to display all Comment objects, which you inserted into that Frame. Plant Simulation displays the text
+in the Frame window which you entered under Display > Text.
+Comment
+11-4554 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To open a window that only shows the comment you entered, without formatting and editing options,
+click the Comment object with the right mouse button and select Open Comment Window on the context
+menu.
+To show a tooltip with information about the Comment, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Comment, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Comment to your simulation model, click 
+  Manage Class Library > Basic Objects >
+UserInterface > Comment on the Home ribbon tab.
+See also
+Add Text and Display Boards
+Dialog Box of the Comment
+Dialog Box of the Comment
+Double-click the icon of the Comment, which you inserted into a Frame, to open its dialog box.
+Edit Simulation Properties
+To make the dialog box larger or smaller, grab any of its sides or corners, and drag the mouse.
+Dialog Box of the Comment
+Plant Simulation Help 11-4555
+Unpublished work. © 2026 Siemens
+
+To open a window that only shows the comment you entered, without formatting and editing options,
+click the Comment object with the right mouse button and select Open Comment Window on the context
+menu.
+Plant Simulation opens the comment window with the size that the tab Comment in the dialog box had,
+when you entered the comment and with the formatting you applied.
+To close the comment window, click Close 
+  in the title bar.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Dialog Box of the Comment
+11-4556 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Name [text box] - Comment
+Shows the name of the object here, either the predefined name or a name that you specify. To change the
+name, double-click and type over it.
+Remarks
+You can type in a combination of letters, digits, and underscore (_) characters, for example MyComment,
+MyComment1, My_Comment_1. The name of an object cannot start with a digit, i.e., you cannot type in
+1Comment.
+SimTalk
+Name [SimTalk] - general description
+Tab Comment
+Tab Comment [Comment]
+Type a detailed description appending the short note you entered into the Text box on the Tab Display.
+Name [text box] - Comment
+Plant Simulation Help 11-4557
+Unpublished work. © 2026 Siemens
+
+Note
+The formatting properties only apply if you select 
+ .
+• Apply formatting properties to the selected text with the buttons of the Formatting Toolbar
+ or the commands of the Context Menu for Formatting
+the Comment.
+Note
+The buttons are only active if you select the check box Save the Content in Rich-text Format.
+• For each character format property you can:
+◦ Apply a typeface, a Font size, and a font color.
+◦ Apply Bold face, Underline, or italicize text.
+Tab Comment [Comment]
+11-4558 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ For each paragraph format property you may:
+◊ Set the alignment: Align Left, Center, or Align Right.
+◊ Set an indentation with Bullets.
+• Or copy text you formatted in a word processing application that works with rich text format (.rtf),
+such as the MS Windows WordPad or MS Word, to the clipboard and paste that text, including all of its
+formatting properties into the text box.
+• Or type text into the text box, copy it back to the word processing application, apply formatting and
+paste it back to the text box. Press Ctrl+A to select all of the text into the text box, Ctrl+C to copy the
+text, and Ctrl+V to paste it.
+To open a window that only shows the comment you typed in, without formatting and editing options,
+click the Comment object with the right mouse button and select Open Comment Window on the context
+menu.
+SimTalk
+Cont [SimTalk] - Comment
+appendToContent [SimTalk]
+openComment [SimTalk]
+See also
+Inherit Contents [Comment]
+Tab Comment [Comment]
+Plant Simulation Help 11-4559
+Unpublished work. © 2026 Siemens
+
+Formatting Toolbar
+Apply formatting properties to the selected text in rtf format with the buttons on the toolbar.
+The settings only apply when you select Save the Content in Rich-text Format.
+To do this Click Attribute
+Undo your most recent action.
+ —
+Open the dialog Font. Then, select a Font, a Font style, the font Size, and
+font Effects.
+Font [SimTalk]
+- Comment
+Open the dialog Colors. Select a Color for the selected text.
+ Color
+[SimTalk] -
+Comment
+Apply bold face to the text which you selected in the text box.
+ —
+Italicize the text which you selected in the text box.
+ —
+Underline the text which you selected in the text box.
+ —
+Align the text on the left.
+ —
+Center the text.
+ —
+Align the text on the right.
+ —
+Add bullets in front of the text which you selected in the text box. Press
+Enter to insert a line break in front of a sentence where you want to add a
+bullet.
+—
+Open the dialog Insert Date and Time. Select one of the available formats
+from the list box.
+—
+Note
+You can also select most of the formatting options on the Context Menu for Formatting the Comment.
+Formatting Toolbar
+11-4560 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Inherit Contents [Comment]
+To inherit or not inherit the contents of the Comment, click the inheritance check box next to the text box.
+Inherit Contents [Comment]
+Plant Simulation Help 11-4561
+Unpublished work. © 2026 Siemens
+
+Save the Content in Rich-text Format
+To save the contents of the text box in rich-text format, which preserves all of the formatting properties
+which you applied, select this check box.
+Remarks
+When you select the check box, Plant Simulation activates the settings of the Formatting Toolbar and on
+the Context Menu for Formatting the Comment.
+SimTalk
+SaveAsRichedit [SimTalk]
+Context Menu for Formatting the Comment
+Context Menu for Formatting the Comment
+The context menu provides the menu commands listed in the table of contents to the left.
+Note
+You can also select the formatting options on the Formatting Toolbar
+.
+Save the Content in Rich-text Format
+11-4562 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Undo [Comment]
+Undoes your most recent action.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Undo [Comment]
+Plant Simulation Help 11-4563
+Unpublished work. © 2026 Siemens
+
+Font [Comment]
+Select font settings for displaying the Comment in the dialog Font.
+Remarks
+You can:
+• Select the Font, the Font Style, the font Size, and font Effects.
+• Click OK to apply these settings to the text, which you selected in the text box.
+Instead, you can also click 
+  the Formatting Toolbar 
+ .
+See also
+Font [SimTalk] - Comment
+Font [Comment]
+11-4564 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Color [Comment]
+Select color settings for displaying the Comment in the dialog Color.
+Remarks
+Proceed as follows to set a color:
+• Select a Color.
+• Click Apply to apply these settings to the selected text into the text box and leave the dialog open.
+• Click OK to apply this color to the selected text into the text box and close the dialog.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+See also
+Color [SimTalk] - Comment
+Color [Comment]
+Plant Simulation Help 11-4565
+Unpublished work. © 2026 Siemens
+
+Bold [Comment]
+Applies bold face to the text which you selected in the text box.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Bold [Comment]
+11-4566 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Italic [Comment]
+Italicizes the text which you selected in the text box.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Italic [Comment]
+Plant Simulation Help 11-4567
+Unpublished work. © 2026 Siemens
+
+Underline
+Underlines the text which you selected in the text box.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Underline
+11-4568 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Align Left
+Aligns the text on the left.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Align Left
+Plant Simulation Help 11-4569
+Unpublished work. © 2026 Siemens
+
+Center [Comment]
+Centers the text.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Center [Comment]
+11-4570 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Align Right
+Aligns the text on the right.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Align Right
+Plant Simulation Help 11-4571
+Unpublished work. © 2026 Siemens
+
+Bullets
+Adds a bullet in front of the text which you selected in the text box.
+Remarks
+Press Enter to insert a line break in front of a sentence where you want to add a bullet.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Bullets
+11-4572 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insert Date or Time
+Opens the dialog Insert Date and Time.
+Remarks
+Proceed as follows to insert a date and a time into the comment:
+• Select one of the available formats from the list box.
+• Click OK to enter this time or date at the position of the cursor into the text box.
+Instead, you can also click 
+  on the Formatting Toolbar 
+ .
+Tab Display
+Tab Display
+On the tab Display you can select how to display the Comment in your simulation model.
+The tab Display provides the settings listed in the table of contents to the left.
+Insert Date or Time
+Plant Simulation Help 11-4573
+Unpublished work. © 2026 Siemens
+
+Text [text box] - Comment
+Type in the text that Plant Simulation shows when you insert the Comment object into a Frame.
+Remarks
+Type in a short text, or you will not be able to see or select the Comment in the Frame.
+If you only entered Text here and nothing on the tab Comment, Plant Simulation shows the tab Display
+when you open the dialog of the Comment the next time.
+Inherit text
+To inherit 
+  or not inherit 
+  the Text of the Comment, which you type into the box to the left, click the
+inheritance check box.
+SimTalk
+Text [SimTalk] - Comment
+Text [text box] - Comment
+11-4574 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Font Size [drop-down list] - Comment
+Select a font size for displaying the Comment in the Frame into which you inserted it.
+SimTalk
+Font [SimTalk] - Comment
+Font Size [drop-down list] - Comment
+Plant Simulation Help 11-4575
+Unpublished work. © 2026 Siemens
+
+Font Color [Comment]
+To select the color of the text proper with which Plant Simulation shows the Comment in the Frame, click
+the drop-down arrow.
+Remarks
+Plant Simulation only shows the color in the Frame into which you inserted the Comment, not in the open
+dialog box.
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+Color [SimTalk] - Comment
+Font Color [Comment]
+11-4576 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Background Color [drop-down list] - Comment
+To select the color of the background of the Comment which you inserted into a Frame, click the drop-
+down arrow.
+Remarks
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+BackgroundColor [SimTalk] - Comment
+Background Color [drop-down list] - Comment
+Plant Simulation Help 11-4577
+Unpublished work. © 2026 Siemens
+
+Transparent [check box] - Comment
+To make the background of a Comment object, which you inserted into a Frame, shine through the hollow
+parts of the text, select this check box.
+Remarks
+With a Transparent Background, Plant Simulation shows the Comment in the color which you selected as
+the Font Color on the background of the Frame.
+To show the text on a white background, clear the check box.
+Not transparent Transparent
+SimTalk
+Transparent [SimTalk] - Comment
+Transparent [check box] - Comment
+11-4578 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-4579
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+11-4580 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Observers
+Tools Menu
+Plant Simulation Help 11-4581
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Comment
+_Methods of the Comment
+The Comment provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-4582 Plant Simulation Help
+Unpublished work. © 2026 Siemens

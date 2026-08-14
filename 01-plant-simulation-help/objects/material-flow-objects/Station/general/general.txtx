@@ -1,0 +1,316 @@
+TypeStatOn [SimTalk]
+Activates collecting statistics values of the Drain designated by <Path> depending on the type of MU
+(true) or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.TypeStatOn:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDrain.TypeStatOn := false
+See also
+Type Dependent Statistics
+typeStatistics [SimTalk] - Drain
+typeStatisticsCumulated [SimTalk]
+Station
+Station [object]
+Use the object Station for processing parts on a single processing place. You’ll use it for modeling most of
+your machines.
+Image
+TypeStatOn [SimTalk]
+Plant Simulation Help 11-1695
+Unpublished work. © 2026 Siemens
+
+Description
+The Station receives a single MU from its predecessor, processes it and moves it on to one of its successors
+after the set-up time and the processing time has elapsed. If the types of MUs are not identical, i.e., if
+they do not have the same name, the Station has to set up to process this new type of MU. While a part
+is located on the Station, it does not receive any additional parts but enters them into its Blocking List. It
+only accepts the blocked MUs one after the other and processes them after it is available again.
+If the Station has several successors, it moves the MUs one after the other onto them. If the successor to
+which the part is to be moved is blocked, meaning it is full or failed, the Station does not select another
+available successor onto which it moves the part. Instead, it does not move the part and thus is blocked.
+It only moves the part after the successor becomes available again and is not blocked any longer, it moves
+the part and will then be unblocked. You can set a different moving behavior with a Method.
+Note
+Plant Simulation always moves the MU as a whole not continually, i.e., as soon as its front, better its
+booking point, is located on the Station, the entire MU is located on it.
+To show a tooltip with information about the Station, hover with the mouse over it.
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+You can use the manipulators to change the dimensions of the object by editing its position or its scaling.
+Station [object]
+11-1696 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Add the Object to the Simulation Model
+To add the object Station to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Station on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+As the Station is such a central object in Plant Simulation, it figures prominently in a number of topics in
+the Step-by-Step Help.
+Station [object]
+Plant Simulation Help 11-1697
+Unpublished work. © 2026 Siemens
+
+See also
+Transfer Parts from Station to Station
+Set a Station Up
+Define Processing Times
+Model Failures
+Dialog Box of the Station
+Dialog Box of the Station
+Double-click the icon of the Station to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Video on YouTube
+https://youtu.be/PQhEriOzVzU?si=HpfLhwtUyoiMFPzx&t=22
+Dialog Box of the Station
+11-1698 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Define Processing Times
+Select the Set-Up Time
+Processing Time [general description]
+Set-up Time [general description]
+Recovery Time [general description]
+Recovery Time Starts
+Cycle Time [general description]
+Tab Times
+Plant Simulation Help 11-1699
+Unpublished work. © 2026 Siemens
+
+Tab Set-Up
+Define properties for setting the object up as described under the Tab Set-Up.
+Tab Set-Up
+11-1700 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+Plant Simulation Help 11-1701
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+11-1702 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Select Object [for controls]
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [general description]
+Target Control [Turntable]
+Shift Calendar [tab Controls]
+Tab Controls
+Plant Simulation Help 11-1703
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit
+11-1704 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+Statistics Report [described]
+Resource Statistics [check box]
+Resource Type
+Tab Statistics
+Plant Simulation Help 11-1705
+Unpublished work. © 2026 Siemens
+
+Tab Importer
+On the Tab Importer you can define services for processing the parts, for setting the station up for a
+certain type of part, and for repairing the station.
+To view Importer Statistics in the Statistics Report, click the object in the Frame, and press F6 (Show
+Statistics Report), or click Show Statistics Report on the Home ribbon tab.
+You can also click the object in the Frame with the right mouse button and select Show Statistics Report
+on the context menu.
+See also
+Processing Importer
+Set-up Importer
+Failure Importer
+Transport Importer
+Tab Importer
+11-1706 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+Plant Simulation Help 11-1707
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the Station processes a part costs accrue which result from the sum of the investment costs and the
+operating costs.
+Note
+The investment costs only accrue during the Depreciation Period.
+The costs are allocated to the part as accrued costs.
+If the Station is empty, the costs remain with the Station as general costs.
+See also
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Simulate the Accrued Costs of the Machines
+Tab Costs
+11-1708 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-1709
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh Exporters
+Show Statistics Report Services
+Show Attributes and Methods Unavailable Services
+Contents Associated Workplaces
+Forward Blocking List Associated Lockout Zones
+Exit Blocking List Associated Shift Calendar
+Navigate Menu
+11-1710 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exporters [Station]
+Opens a table, which shows the names of all Exporters exporting services at the moment.
+See also
+getExporters [SimTalk]
+Exporters [Station]
+Plant Simulation Help 11-1711
+Unpublished work. © 2026 Siemens
+
+Services [Station]
+Opens a table, which shows the names of all imported services. The name of the failure service is identical
+with the name of the subtable.
+Remarks
+Double-click the name of the service to open the subtable. Column 1 contains the Name of the Exporter,
+the column Amount the number of services provided.
+See also
+getImportedServices [SimTalk]
+getServices [SimTalk] - importer
+setAlternativeServices [SimTalk]
+setServices [SimTalk] - importer
+Services [Station]
+11-1712 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Unavailable Services [Station]
+Opens a table, which shows the names of the Failure Service, the Set-up Service, the Processing
+Service, and the Transport Service that is unavailable at the moment.
+Remarks
+The table shows the name of the unavailable service white on a red background in the respective cell.
+Double-click the name of the service to open the subtable. Its columns show the Name of the Exporter,
+the Amount of services defined, the Amount of services missing, and the Name of the associated
+Alternative.
+See also
+Start/Stop Simulation [EventDebugger]
+Unavailable Services [Station]
+Plant Simulation Help 11-1713
+Unpublished work. © 2026 Siemens
+
+Associated Workplaces [Station]
+Opens a list showing the names of all the Workplaces, which are assigned to the selected Station.
+See also
+Workplace
+assignedWorkplaces [SimTalk]
+Station [Workplace]
+Associated Workplaces [Station]
+11-1714 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-1715
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+11-1716 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Station
+Methods of the Station
+The Station provides:
+• The Methods of All Objects.
+• The Methods of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-1717
+Unpublished work. © 2026 Siemens

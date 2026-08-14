@@ -1,0 +1,1769 @@
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Window of Lists and Tables Methods of Lists and Tables
+Accessing Data in Lists Read-Only Attributes of Lists and Tables
+Accessing a Range of Cells with a Method Attributes of Lists and Tables
+Creating Lists within Lists and Tables Working with Lists and Tables
+Window of Lists and Tables
+Window of Lists and Tables
+Double-click the icon of the list object which you inserted into you simulation model to open its window.
+Remarks
+To change the properties of the Class of the object, double-click it in the Class Library or on the tab
+Information Flow in the Toolbox. There you can view or change the saved data or enter new data. You can
+also adapt the format and the data types to your needs.
+You can access the functions of the list objects on the List Ribbon Tab.
+To edit the 3D properties of the object in the 3D model, select the object and press the spacebar. Then
+change the respective settings in the dialog box Edit 3D Properties.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Work with Data in a List or Table
+List Ribbon Tab
+Context Menu of the Contents of List Objects
+Context Menu of Embedded Lists
+Window of Lists and Tables
+Plant Simulation Help 11-3823
+Unpublished work. © 2026 Siemens
+
+List Ribbon Tab
+List Ribbon Tab
+The List ribbon tab of the list objects provides a number of commands to access its functions.
+Note
+Not all list objects provide all of the commands shown below.
+Command Looks like this Method or Attribute
+Import File
+ readFile [SimTalk] - lists
+Export to File [lists]
+Export Text File
+Export Object File
+Export Excel File
+Export XML File
+Text File Format
+—
+writeFile [SimTalk] - lists
+writeObjectFile [SimTalk]
+writeExcelFile [SimTalk]
+writeXMLFile [SimTalk]
+ColumnSeparator [SimTalk]
+DecimalSeparator [SimTalk]
+List Ribbon Tab
+11-3824 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Command Looks like this Method or Attribute
+TimeFormat [SimTalk]
+Print List
+Print Setup
+printList [SimTalk]
+showPrintDialog [SimTalk] -
+lists
+PrintRowNumber [SimTalk]
+PrintColumnNumber [SimTalk]
+PrintDataType [SimTalk]
+RepeatRowIndex [SimTalk]
+RepeatColumnIndex [SimTalk]
+PrintInternalLists [SimTalk]
+GenerateColumnWidth
+[SimTalk]
+Find [lists]
+ find [SimTalk] - lists
+findCeil [SimTalk]
+findFloor [SimTalk]
+Replace [lists]
+ find [SimTalk] - lists
+findCeil [SimTalk]
+findFloor [SimTalk]
+Go To Cell
+ Cursor [SimTalk]
+CursorX [SimTalk]
+CursorY [SimTalk]
+CursorY [SimTalk]
+Insert Row [lists]
+ insertRow [SimTalk]
+List Ribbon Tab
+Plant Simulation Help 11-3825
+Unpublished work. © 2026 Siemens
+
+Command Looks like this Method or Attribute
+Insert Column [lists]
+ insertColumn [SimTalk]
+Sort Ascending [lists]
+ sort [SimTalk] - lists
+Sort Descending [lists]
+ sort [SimTalk] - lists
+Create Formula
+ setFormula [SimTalk]
+Activate Column Index
+ ColumnIndex [SimTalk]
+Activate Row Index
+ RowIndex [SimTalk]
+Edit Format
+ various
+Inherit Format [button]
+ InheritFormat [SimTalk]
+Inherit Contents [lists]
+ InheritContents [SimTalk]
+Inherit Comment [button]
+ InheritComment [SimTalk]
+List Ribbon Tab
+11-3826 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Command Looks like this Method or Attribute
+Recompute Formulas
+ calculateList [SimTalk]
+Show Comment [lists]
+ ShowComment [SimTalk] - lists
+Show Data Type [lists]
+ ShowDataType [SimTalk] - lists
+Highlight Empty Cells
+ ShowVoid [SimTalk]
+Open Object [list ribbon]
+ openDialog [SimTalk] - lists
+openDialogBox [SimTalk]
+Note
+The other tabs on the Ribbon Bar provide additional commands pertaining to the list objects.
+List Ribbon Tab
+Plant Simulation Help 11-3827
+Unpublished work. © 2026 Siemens
+
+Import File
+Imports a list which you saved beforehand. The command opens the dialog box Open.
+Remarks
+Double-click the name of a list/table which you exported before with the commands Export Text File or
+Export Object File or click the name once and then click Open.
+You can open files of these types:
+Plant Simulation automatically recognizes the encoding of a text file when opening it.
+• To open a Plant Simulation object file, select the file type Object Files (*.pslist) from the drop-down list
+and the name of the file and click Open.
+The Plant Simulation object file contains the contents and the Plant Simulation-format of the list, for
+example settings about the data format, the dimension of the list, index and column widths, etc. This
+way you can exchange lists between different Plant Simulation simulation models. Plant Simulation
+opens it with all values and formats, which you saved with the extension .psobj. Other programs do not
+recognize this proprietary format.
+• To open a text file, select the file type Text Files (*.txt) from the drop-down list and the name of the file
+and click Open.
+A text file only contains the contents of the list. It does not save any settings that are specific to Plant
+Simulation. You can also create a text file in a text editor or spreadsheet application and then open it as
+a *.txt file in a Plant Simulation list. The format of the text file is described under Text File Format.
+• To open an Excel workbook, select the file type Excel Workbooks (*.xls, .xlsx, xlsm, xlsb) from the
+drop-down list and the name of the file and click Open.
+Note
+Plant Simulation uses Excel as COM-server when reading and writing MS Excel-files. For this reason
+MS Excel has to be installed on your computer. To continue using the previous, no longer supported
+Excel interface, you can use the start option -NativeExcel.
+Import File
+11-3828 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+We import the raw values from Excel and convert the data in Plant Simulation itself. When importing
+date into columns of data type string we convert numerical values in Plant Simulation. The Plant
+Simulation format might not match the format that was set in Excel.
+If Plant Simulation reads an MS Excel table, it attempts to convert the values in the individual column to
+the data types of the columns in your Plant Simulation table. This only works if you created the columns
+on the Excel worksheets so that they only contain a single data type, meaning that, if you, for example,
+assign the data type String to a cell of the specified column, the entire column may only be of data type
+String.
+Row 0 (zero) is the exception: If the Excel table, which Plant Simulation reads, has a column index, it
+interprets row 0 as the column index, and it will not be part of the data type designation of the columns.
+When importing data Plant Simulation considers the dimension of the DataTable. Suppose you set the
+number of rows to 3 and the number of columns to 10, then Plant Simulation only imports the first 3
+rows and the first 10 columns. This way you can improve the performance of large tables if you do not
+need all data from the Excel file.
+See also
+readFile [SimTalk] - lists
+readExcelFile [SimTalk]
+readXMLFile [SimTalk]
+Specifying Start Options, -NativeExcel
+Import File
+Plant Simulation Help 11-3829
+Unpublished work. © 2026 Siemens
+
+Export to File [lists]
+Provides commands to export the list in different formats.
+• Export Text File
+• Export Object File
+• Export Excel File
+• Export XML File
+• Text File Format
+Export to File [lists]
+11-3830 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Export Text File
+Saves the contents of the list as a text file (.txt). A text file only saves the contents of the list without any
+formatting information.
+Remarks
+You can also create a text file in a text editor or a spreadsheet application and then open it as a *.txt file in
+a Plant Simulation list. Click Save to save the file.
+Type in the name with which you want to save the file and select the file type with the encoding you want
+to use:
+• ANSI is an 8-bit character set that enables you to represent up to 256 characters (0 through 255). The
+ANSI character set is a superset of the 7-bit ASCII character set.
+• UTF-8 is another encoding of the Unicode character set. Each character is represented by one to three
+bytes.
+• Unicode is a 16-bit character set that includes almost all of the written languages of the world. Plant
+Simulation saves Unicode in UTF-16 encoding. Each character is represented by two bytes.
+Export Text File
+Plant Simulation Help 11-3831
+Unpublished work. © 2026 Siemens
+
+When saving or loading a list file as a text file, the settings you selected with the command Text File
+Format determine how Plant Simulation saves data and how it interprets that data while opening this
+ASCII file.
+See also
+writeFile [SimTalk] - lists
+Export Text File
+11-3832 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Export Object File
+Saves the list as an object file with the extension *.pslist containing the contents and formatting
+information.
+Remarks
+A Plant Simulation object file contains the contents of the list and, in addition information about Plant
+Simulation-specific formatting, such as data types and other formatting of columns and rows, dimension,
+column and row index etc. Thus, the list will open with the same properties, as when you open it in
+another Plant Simulation simulation model. Other programs do not recognize this proprietary format. Click
+Save to save the file.
+See also
+writeObjectFile [SimTalk]
+readFile [SimTalk] - lists
+Export Object File
+Plant Simulation Help 11-3833
+Unpublished work. © 2026 Siemens
+
+Export Excel File
+Saves the list as a Microsoft Excel worksheet (.xls). The command opens the dialog Save As in which you
+select the drive, the file type, and type in a new name for the file to be saved.
+Remarks
+Click Save to save the file.
+Note
+Plant Simulation uses Excel as COM-server when reading and writing MS Excel files. For this reason MS
+Excel has to be installed on your computer. Use the start option -NativeExcel to continue using the
+previous, no longer supported Excel interface .
+Note
+Plant Simulation only exports integers in the range between -536.870.912 and 536.870.911 in the
+required format. Plant Simulation saves values outside of this range as 0.
+Plant Simulation exports the data with the settings that you selected for the units. Suppose that you
+selected Meter as the length unit for a column of data type Length. Then Plant Simulation exports
+the values in meters to Excel and interprets the values as meters when you import them back to Plant
+Simulation.
+If Plant Simulation reads an MS Excel table, it attempts to convert the values in the individual column to
+the data types of the columns in your Plant Simulation table. This only works if you created the columns
+on the Excel worksheets so that they only contain a single data type, meaning that, if you, for example,
+assign the data type String to a cell of the specified column, the entire column may only be of data type
+String.
+Export Excel File
+11-3834 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Row 0 (zero) is the exception: If the Excel table, which Plant Simulation reads, has a column index, it
+interprets row 0 as the column index, and it will not be part of the data type designation of the columns.
+When importing data Plant Simulation considers the dimension of the DataTable. Suppose you set the
+number of rows to 3 and the number of columns to 10, then Plant Simulation only imports the first 3
+rows and the first 10 columns. This way you can improve the performance of large tables if you do not
+need all data from the Excel file.
+When Plant Simulation exports data to Excel, it converts it like this:
+Plant Simulation data type MS Excel data type MS Excel format
+string String —
+Boolean Boolean —
+Integer Number —
+Real Number —
+Object String —
+Table String —
+List String —
+Stack String —
+Queue String —
+Money Number —
+Length Number —
+Weight Number —
+Speed Number —
+Acceleration Number —
+DateTime Number dd/mm/yyyy hh:mm:ss.000
+Date Number dd/mm/yyyy
+Time Number dd:hh:mm:ss.000
+See also
+writeExcelFile [SimTalk]
+readExcelFile [SimTalk]
+Specifying Start Options, -NativeExcel
+Export Excel File
+Plant Simulation Help 11-3835
+Unpublished work. © 2026 Siemens
+
+Export XML File
+Saves the list as an XML file (.xml).
+Remarks
+The command opens the dialog Save As in which you select the drive, and the file type and type
+in a new name for the file to be saved. Plant Simulation uses the UTF-8 encoding and the tag
+PlantSimulationTable. Click Save to save the file.
+See also
+readXMLFile [SimTalk]
+writeXMLFile [SimTalk]
+Export XML File
+11-3836 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Text File Format
+Opens the dialog Text File Format enabling you to select settings for exporting text files.
+Remarks
+When you save or open a list as a text file (*.txt), the settings you select determine how Plant Simulation
+saves data and how it interprets it when opening the text file. Plant Simulation exports and imports data
+row by row.
+• Select a Column Separator:
+Tab, Space, Semicolon, or Comma.
+Note
+We strongly advise against using the comma (,) as Column Separator as well as as the Decimal
+Separator. Use it only as either the Column Separator or as the Decimal Separator.
+• Select a Decimal Separator for exporting or importing a list:
+(Period) or (Comma).
+• Select how Plant Simulation saves and opens entries of data type time from the drop-down list Time
+format.
+You can pick S for seconds, M:S for minutes:seconds, H:M:S for hours:minutes:seconds or D:H:M:S for
+days:hours:minutes:seconds.
+This way you can save values of data type time in a format that spreadsheet applications that cannot
+read our internal time format, also recognize.
+SimTalk
+ColumnSeparator [SimTalk]
+Text File Format
+Plant Simulation Help 11-3837
+Unpublished work. © 2026 Siemens
+
+DecimalSeparator [SimTalk]
+TimeFormat [SimTalk]
+Text File Format
+11-3838 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Print List
+Opens the dialog Print in which you can select settings for printing the list.
+Remarks
+Select the printer and the paper format from the drop-down lists. Select the orientation, Landscape or
+Portrait, with the radio buttons and type in the number of copies into the text box.
+SimTalk
+printList [SimTalk]
+showPrintDialog [SimTalk] - lists
+Print List
+Plant Simulation Help 11-3839
+Unpublished work. © 2026 Siemens
+
+Print Setup
+Opens the dialog Print Setup in which you can select which items Plant Simulation prints when you print a
+list and a table.
+Remarks
+You can also select the print format, Portrait or Landscape.
+Check Box Description Attribute
+Row Number Prints the row number in front of each cell. PrintRowNumber
+[SimTalk]
+Column Number Prints the column number above each column. PrintColumnNumber
+[SimTalk]
+Data Type Prints the data type of each column PrintDataType [SimTalk]
+Repeat Row Index Prints the user-defined row index on each page. RepeatRowIndex
+[SimTalk]
+Repeat Column Index Prints the user-defined column index on each
+page.
+RepeatColumnIndex
+[SimTalk]
+Internal Lists Prints nested tables the list or table contains as
+well.
+PrintInternalLists
+[SimTalk]
+Column Width Prints columns using the column width of the
+widest column. When you do not check this,
+Plant Simulation uses the value you set under
+List > Edit List > Dimension > Column Width
+and entries may overprint other entries.
+GenerateColumnWidth
+[SimTalk]
+SimTalk
+printList [SimTalk]
+showPrintDialog [SimTalk] - lists
+Print Setup
+11-3840 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Find [lists]
+Finds the expression that you enter into the dialog Find and selects the cell in which the expression is
+located.
+Remarks
+Plant Simulation searches the entire list/table if you do not click in a cell.
+If you click in a cell, it starts searching at the selected cell toward the end of the list/table.
+Proceed as follows:
+• Type the expression you would like to find into the text box Find What.
+• Select Match Case to only find text that has the same pattern of upper and lower case letters as the
+expression you typed into the text box Find What.
+• Select Match Entire Cell Contents to only find the characters in cells which exactly and completely
+match the expression you typed into the text box Find What.
+• Select if you want to Search in Rows, i.e., to the right across rows, or down through Columns.
+Find [lists]
+Plant Simulation Help 11-3841
+Unpublished work. © 2026 Siemens
+
+• Select the Search criterion from the drop-down list:
+Find: Finds the expression you typed into the text box Find What, compare find.
+Find ceil(ing): Finds a value greater than or equal to the expression you typed into the text box Find
+What, compare findCeil.
+Find floor: Finds a value less than or equal to the expression you typed into the text box Find What,
+compare findFloor.
+• Click Find Next to find the next instance of the expression you typed into the text box Find What toward
+the end of the list.
+• Click Replace to show the text box Replace With. Type the expression into the text box Replace With
+that is to replace the expression you typed into the text box Find What.
+• Click Cancel to close the dialog.
+SimTalk
+find [SimTalk] - lists
+findCeil [SimTalk]
+findFloor [SimTalk]
+Find [lists]
+11-3842 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Replace [lists]
+Finds an expression and replaces it with the expression that you type into the dialog Replace.
+Remarks
+Proceed as follows:
+• Type the expression you would like to find into the text box Find What.
+• Type the expression into the text box Replace With that is to replace the expression you typed into the
+text box Find What.
+• Select Match Case to only find text that has the same pattern of upper and lower case letters as the
+expression you typed into the text box Find What.
+• Select Match Entire Cell Contents to only find the characters in cells which exactly and completely
+match the expression you typed into the text box Find What.
+• Select if you want to Search in Rows, i.e., to the right across rows, or down through Columns.
+• Select the Search Criterion from the drop-down list:
+Find: Finds the expression you typed into the text box Find What, compare find.
+Replace [lists]
+Plant Simulation Help 11-3843
+Unpublished work. © 2026 Siemens
+
+Find ceil(ing): Finds a value greater than or equal to the expression you typed into the text box Find
+What, compare findCeil.
+Find floor: Finds a value less than or equal to the expression you typed into the text box Find What,
+compare findFloor.
+• Click Find Next to find the next instance of the expression you typed into the text box Find What.
+• Click Replace to replace this instance of the search term or to show the text box Replace With.
+• Click Replace All to replace all instances of the search term.
+• Click Cancel to close the dialog.
+SimTalk
+find [SimTalk] - lists
+findCeil [SimTalk]
+findFloor [SimTalk]
+Replace [lists]
+11-3844 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Go To Cell
+Changes to the cell of the list or table, which you type into the dialog Go To.
+Remarks
+Proceed as follows:
+• Type the number of the Column in which the active cell will be located.
+• Type the number of the Row in which the active cell will be located.
+This cell will then be the starting point for scrolling within the list or table. This makes moving within
+large tables easy and comfortable.
+• The box Occupied Columns shows the number of columns of the table that contain an entry.
+• The box Occupied Rows shows the number of rows of the table that contain an entry.
+SimTalk
+Cursor [SimTalk]
+CursorX [SimTalk]
+CursorY [SimTalk]
+Go To Cell
+Plant Simulation Help 11-3845
+Unpublished work. © 2026 Siemens
+
+Insert Row [lists]
+Adds an empty row above the active cell/row.
+SimTalk
+insertRow [SimTalk]
+getRowNo [SimTalk]
+cutRow [SimTalk] - DataTable
+Insert Row [lists]
+11-3846 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insert Column [lists]
+Inserts a new empty column to the left of the selected column. All existing columns move one position to
+the right.
+Remarks
+In the example below we clicked in Column 2 and selected the command Insert Column. Plant Simulation
+then inserted the new empty column in Column 2 and moved the previous Column 2, and the columns to
+the right of it, one position to the right.
+SimTalk
+insertColumn [SimTalk]
+getColumnNo [SimTalk]
+cutColumn [SimTalk]
+Insert Column [lists]
+Plant Simulation Help 11-3847
+Unpublished work. © 2026 Siemens
+
+Sort Ascending [lists]
+Sorts the lowest number (0 to 9), the earliest date, or the start of the alphabet (A to Z) first in the sorted
+list.
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected column of the DataTable.
+Note
+Plant Simulation sorts empty cells at the end of the column for an ascending sort order.
+For a descending sort order it sorts them at the start of the column.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Sort Ascending [lists]
+11-3848 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sort Descending [lists]
+Sorts the highest number (9 to 0), the latest date, or the end of the alphabet (Z to A) first in the sorted list.
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the column of the DataTable.
+Note
+Plant Simulation sorts empty cells at the end of the column for an ascending sort order.
+For a descending sort order it sorts them at the start of the column.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Sort Descending [lists]
+Plant Simulation Help 11-3849
+Unpublished work. © 2026 Siemens
+
+Create Formula
+Activates or deactivates formula mode for the DataTable. A formula can be any expression accessing and
+linking other cells of the list or accessing any of the attributes of the objects.
+Remarks
+When you define a formula, you will use the same notation you use for defining a Method. You can also
+insert and read formulas with methods.
+1. To activate Formula mode, click the button so that it is selected.
+2. To type a formula into a cell, click in it and type the expression in. Instead, you can also type it into
+the text box 
+  above the list.
+Note
+If you call one of the distribution functions in the source code of the formula with z_, you have
+to type in the random number stream, as formulas never use the random number stream of the
+surrounding object.
+3. To show the result of the calculation of the formula, i.e., its value, in the cell, press Enter.
+4. To show the formula itself in the text box, click in the cell containing the formula.
+Note
+The data type of the result of a formula has to have the same data type as the cell or the column in
+which the cell containing the formula is located.
+See also
+Calculate Values with a Formula
+getFormula [SimTalk]
+setFormula [SimTalk]
+Create Formula
+11-3850 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Activate Column Index
+Activates the column index, i.e., the header of the column, of the DataTable. Click the button again to
+deactivate the column index and delete the existing contents.
+Remarks
+Note
+If both column index and row index are active, the cell [0,0], i.e., the cell at which column and row index
+intersect, counts as part of the column index, not as part of the row index.
+To access a cell in a list/table, you can either use the system index, i.e., the number, which Plant
+Simulation assigns, to columns and rows, or you can define your own user-defined index, which can be
+any meaningful expression.
+The advantage of a user-defined index over the standard system index is that assigning names to
+columns and rows is more meaningful than the numbers Plant Simulation assigns by default. The user-
+defined index orders["urgent","preferred customer"] will tell your co-modelers more than the
+system index orders[3,1].
+Note
+When specifying cells with the expression [3,1] the first value in brackets designates the column, the
+second the row.
+Activate Column Index
+Plant Simulation Help 11-3851
+Unpublished work. © 2026 Siemens
+
+Both expressions access the same cell. The user-defined index is more meaningful and less susceptible to
+errors than the system index. Another advantage becomes clear as soon as you add a column or row to the
+table: Plant Simulation increases the system index of succeeding columns by one, while the user-defined
+index remains the same and is still valid. Be aware that accessing a user-defined index is slightly slower
+than accessing the system index.
+You can only define a user-defined index for the data types string, integer, object, and boolean.
+Note
+If you select the data type integer for the column index, you have to type a number sign/hash # in front
+of a user-defined index expression to distinguish it from the system index.
+Example
+orders["urgent","preferred customer"]
+vehicles["truck",#1]
+switch["light",true]
+plant["Chicago",.building1.drill]
+Proceed as follows to set the data type of the column index:
+• Click Activate Column Index on the List ribbon tab to activate it.
+• Select the column of the column index, i.e., the column with the number 0.
+• Click Format on the List ribbon tab. Select the data type from the drop-down list. For the data types
+integer, real, and string you can also type in a Format string.
+• Select the check box Fast Index Access to gain fast access to the user-defined column indexes.
+Activate Column Index
+11-3852 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select the check box Unique Index Key to only allow unique entries in user-defined indexes, depending
+on the data type.
+Note
+Plant Simulation highlights the cell in red and shows a message if you try to type in an expression that
+already exists. Plant Simulation does not show a message if you assign an expression, that already
+exists, to an index in a Method!
+SimTalk
+ColumnIndex [SimTalk]
+ShowColumnIndex [SimTalk] - DataTable
+DataTypeColumnIndex [SimTalk]
+FormatStringColumnIndex [SimTalk]
+XDimIndex [SimTalk]
+See also
+Activate Row Index
+Create a User-defined Column and Row Index
+Address a User-defined Index [several columns]
+Activate Column Index
+Plant Simulation Help 11-3853
+Unpublished work. © 2026 Siemens
+
+Activate Row Index
+Activates the row index, i.e., the header of the row, of the DataTable. Click the button again to deactivate
+the row index and delete the existing contents.
+Remarks
+Note
+If both column index and row index are active, the cell [0,0], i.e., the cell at which column and row index
+intersect, counts as part of the column index, not as part of the row index.
+To access a cell in a list/table, you can either use the system index, i.e., the number, which Plant
+Simulation assigns, to columns and rows, or you can define your own user-defined index, which can be
+any meaningful expression.
+The advantage of a user-defined index over the standard system index is that assigning names to
+columns and rows is more meaningful than the numbers Plant Simulation assigns by default. The user-
+defined index orders["urgent","preferred customer"] will tell your co-modelers more than the
+system index orders[3,1].
+Note
+When specifying cells with the expression [3,1] the first value in brackets designates the column, the
+second the row.
+Activate Row Index
+11-3854 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Both expressions access the same cell. The user-defined index is more meaningful and less susceptible to
+errors than the system index. Another advantage becomes clear as soon as you add a column or row to the
+table: Plant Simulation increases the system index of succeeding columns by one, while the user-defined
+index remains the same and is still valid. Be aware that accessing a user-defined index is slightly slower
+than accessing the system index.
+You can only define a user-defined index for the data types string, integer, object, and boolean.
+Note
+If you select the data type integer for the column index, you have to type a number sign/hash # in front
+of a user-defined index expression to distinguish it from the system index.
+Example
+orders["urgent","preferred customer"]
+vehicles["truck",#1]
+switch["light",true]
+plant["Chicago",.building1.drill]
+To set the data type of the row index:
+• Click Activate Row Index on the List ribbon tab.
+• Select the column for the row index and click Format on the List ribbon tab. Select the data type of the
+row index from the drop-down list on the tab Data Type in the dialog List Format. Depending on the
+data type the list shows or hides additional text boxes or buttons. For the data types integer, real, and
+string you can also type in a Format string.
+• Select the check box Fast index access to gain fast access to the user-defined column indexes.
+• Select the check box Unique index key to only allow unique entries in user-defined indexes, depending
+on the data type.
+Note
+Plant Simulation highlights the cell in red and shows a message if you try to type in an expression that
+already exists. Plant Simulation does not show a message if you assign an expression, that already
+exists, to an index in a Method!
+SimTalk
+ShowRowIndex [SimTalk] - DataTable
+RowIndex [SimTalk]
+FormatStringRowIndex [SimTalk]
+Activate Row Index
+Plant Simulation Help 11-3855
+Unpublished work. © 2026 Siemens
+
+YDimIndex [SimTalk]
+See also
+Activate Column Index
+Create a User-defined Column and Row Index
+Address a User-defined Index [several columns]
+Edit Format
+Edit Format
+Opens the dialog Edit Format. Edit Settings, Permissions, the Dimension, and the Data Type of the list
+here.
+Remarks
+The dialog Edit Format shows different tabs depending on what you select:
+• Select one or several cells, or a range of cells spanning several columns, to show the Tab Settings and
+the Tab Permissions. The settings you select here apply to the selected cell or range of cells.
+Edit Format
+11-3856 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select one or several columns, by clicking the column header, to show the Tab Data Type and the Tab
+Dimension in addition. The settings you select here apply to the selected column or range of columns.
+• Select the entire list, by clicking the Select All button 
+ , to make the settings you select apply
+to the entire list.
+Edit Format
+Plant Simulation Help 11-3857
+Unpublished work. © 2026 Siemens
+
+The box Range shows the selected range of cells or columns. In our example above this encompasses the
+cell in column 1, row 1 to the greatest valid column and row index.
+Click Apply to apply the settings you modified for the selected range. After you clicked Apply, you can
+select another range and select settings for that range, etc. without having to close the dialog.
+Click OK to apply the settings and close the dialog.
+Click Cancel to discard your changes.
+See also
+Tab Settings
+Tab Permissions
+Tab Dimension
+Tab Data Type
+Tab Contents
+Tab Settings
+Tab Settings
+Select various settings of the list on the tab Settings.
+You can select settings for the Alignment, the Font Size, the Font Color, and the Background Color of
+the column(s) or cell(s) you selected.
+You can also activate or deactivate Column Index Belongs to Contents.
+Tab Settings
+11-3858 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Alignment [cells and columns]
+Select the alignment of the cells of the column(s) or of the cell(s) you selected: Left, Right, or Center.
+SimTalk
+Alignment [SimTalk] - lists
+setAlignmentCells [SimTalk]
+getAlignmentCell [SimTalk]
+setAlignmentColumn [SimTalk] - DataTable
+getAlignmentColumn [SimTalk] - DataTable
+setAlignmentRow [SimTalk] - DataTable
+getAlignmentRow [SimTalk] - DataTable
+isAlignmentColumn [SimTalk] - DataTable
+isAlignmentRow [SimTalk] - DataTable
+Alignment [cells and columns]
+Plant Simulation Help 11-3859
+Unpublished work. © 2026 Siemens
+
+Font Size [drop-down list] - cells, columns
+Select the font size for the text you enter into the cells of the column(s) or into the cell(s) you selected.
+Remarks
+The list automatically adjusts the width and the height of the cells to the font size you selected.
+SimTalk
+FontSize [SimTalk] - DataTable
+setFontsizeColumn [SimTalk] - DataTable
+getFontSizeColumn [SimTalk] - DataTable
+setFontSizeRow [SimTalk] - DataTable
+getFontSizeRow [SimTalk] - DataTable
+setFontSizeCells [SimTalk]
+getFontSizeCell [SimTalk]
+Font Size [drop-down list] - cells, columns
+11-3860 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Font Color [cells]
+To select the color of the text, which you type into the cells of the column(s) or into the cell(s) you
+selected, click the drop-down arrow.
+Default
+The setting Default uses the default color according to the User Interface setting > Theme you chose.
+Clear Default and select one of the predefined colors, or click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+FontColor [SimTalk]
+setFontColorCells [SimTalk]
+getFontSizeCell [SimTalk]
+setFontColorColumn [SimTalk] - DataTable
+getFontColorColumn [SimTalk] - DataTable
+setFontColorRow [SimTalk] - DataTable
+getFontColorRow [SimTalk] - DataTable
+Font Color [cells]
+Plant Simulation Help 11-3861
+Unpublished work. © 2026 Siemens
+
+Background Color [cells]
+To select the color of the background of the cells of the column(s) or of the cell(s), which you selected,
+click the drop-down arrow.
+Default
+The setting Default uses the default color according to the User Interface setting > Theme you chose.
+Clear Default and select one of the predefined colors, or click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+BackgroundColor [SimTalk] - lists
+setBackgroundColorCells [SimTalk]
+getBackgroundColorCell [SimTalk]
+setBackgroundColorColumn [SimTalk] - DataTable
+getBackgroundColorColumn [SimTalk] - DataTable
+setBackgroundColorRow [SimTalk] - DataTable
+getBackgroundColorRow [SimTalk] - DataTable
+Background Color [cells]
+11-3862 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Column Index Belongs to Contents
+To set that the column index belongs to the contents of the DataTable, select this check box.
+Remarks
+Selecting the check box causes the column index to be inherited together with the contents of the
+DataTable if Inherit Contents 
+  is active.
+To set that the column index belongs to the format of the DataTable, clear the check box. Then the
+column index is inherited together with the format of the DataTable if Inherit Format 
+  is active.
+When you create a new model the setting is deactivated by default. For new models the column index
+belongs to the format and will thus be inherited when you deactivate inheritance of the contents.
+Note
+Entering the range of cells has different effects on SimTalk instructions, depending whether Column
+Index Belongs to Contents is activated or not.
+Note
+Only the DataTable provides this setting.
+SimTalk
+DataTable.delete [SimTalk] - lists
+ColumnIndexContents [SimTalk]
+See also
+Entering a Range of Cells > Column Index Belongs to Contents
+Inherit Format [button]
+Inherit Contents [lists]
+copyFormatTo [SimTalk]
+Column Index Belongs to Contents
+Plant Simulation Help 11-3863
+Unpublished work. © 2026 Siemens
+
+Tab Permissions
+Tab Permissions
+Select read and write privileges for the list on the tab Permissions.
+You can select access privileges for the list with the check boxes Editor and Information Flow.
+See also
+setEditorRightsCells [SimTalk]
+getEditorRightsColumn [SimTalk] - DataTable
+setEditorRightsColumn [SimTalk] - DataTable
+getEditorRightsColumn [SimTalk] - DataTable
+setEditorRightsRow [SimTalk] - DataTable
+getEditorRightsRow [SimTalk] - DataTable
+Tab Permissions
+11-3864 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Editor [check box]
+To only allow read-only access in the open window of the list object, select this check box. To allow read
+and write access to the entire list in the List Editor, i.e., the window, clear the check box.
+SimTalk
+EditorReadOnly [SimTalk]
+Editor [check box]
+Plant Simulation Help 11-3865
+Unpublished work. © 2026 Siemens
+
+Information Flow [check box]
+To only allow read-only access to the entire list with Methods and Attributes, select this check box. To allow
+read and write access to the entire list with Methods and Attributes, clear the check box.
+Remarks
+The check box Information Flow Read is only active if you select all cells containing an entry.
+SimTalk
+InfoflowReadOnly [SimTalk]
+Tab Dimension
+Tab Dimension
+Select various settings for the dimension for the list on the tab Dimension.
+Remarks
+On the tab Dimension you can type in values for the dimension of the list: The Number of Rows, for the
+DataTable also the Number of Columns, and the Column Width. If you do not type in a value for the
+Number of Columns and/or the Number of Rows, the dimension of the list is not limited.
+Note
+Plant Simulation only shows the Tab Data Type and the Tab Dimension after you selected one or
+several columns by clicking into the column header!
+SimTalk
+MaxDim [SimTalk]
+MaxXDim [SimTalk]
+MaxYDim [SimTalk]
+Information Flow [check box]
+11-3866 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Number of Rows [lists]
+Type in the number of rows of the list. If you do not type in a value, the dimension of the list is not limited.
+SimTalk
+MaxDim [SimTalk]
+MaxYDim [SimTalk]
+Number of Rows [lists]
+Plant Simulation Help 11-3867
+Unpublished work. © 2026 Siemens
+
+Number of Columns [lists]
+Type in the number of columns of the DataTable. If you do not type in a value for the Number of Columns
+and/or the Number of Rows, the dimension of the list is not limited.
+SimTalk
+MaxDim [SimTalk]
+MaxXDim [SimTalk]
+Number of Columns [lists]
+11-3868 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Column Width [text box]
+Type in the Column Width in character widths of a non-proportional font. The default setting is 20, the
+maximum column width is 180. To simultaneously change the width of several columns, mark the range
+of columns before typing in a number.
+SimTalk
+ColumnWidth [SimTalk]
+getColumnWidth [SimTalk] - DataTable
+setColumnWidth [SimTalk] - DataTable
+Tab Data Type
+Tab Data Type
+Select the data type of the list on the tab Data Type.
+Remarks
+You can select the Data Type and type in a Format String for the list.
+For the data types Table, List, Stack, and Queue you can select if you want to use or not use a Common
+Format.
+Note
+Plant Simulation only shows the Tab Data Type and the Tab Dimension after you selected one or
+several columns by clicking into the column header!
+Column Width [text box]
+Plant Simulation Help 11-3869
+Unpublished work. © 2026 Siemens
+
+Data Type [lists]
+Select one of the provided data types from the drop-down list.
+Remarks
+Plant Simulation provides these data types for lists and tables:
+Data type Description
+Acceleration applies for the objects Conveyor, Track, TwoLaneTrack, and Transporter, meter per
+second squared
+Boolean true or false
+Date date statement (dd.MM.yyyy)
+DateTime date statement, including the time (dd.MM.yyyy HH:mm:ss)
+Integer integer value
+Length floating point number, value depends on the unit of the length
+List list with one column, shares properties of the DataList
+Money floating point numbers
+Object reference to a simulation model or an object
+Queue list with one column, shares properties of the DataQueue
+Real floating point number, such as 3.1415
+Speed floating point number, value depends on the unit for speed
+Stack list with one column, shares properties of the DataStack
+String characters, numbers and special characters
+Table table with one or more columns, shares properties of the DataTable
+Time time statement (hh:mm:ss.ss)
+Weight floating point number, value depends on the unit of the weight
+Note
+You cannot change the data type if you select cells or rows only. You can only change the data type for
+an entire column or for several columns!
+Data Type [lists]
+11-3870 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+Double-clicking a cell of data type string or boolean with the value true or false in a list or table toggles
+the value from true to false and vice versa.
+If you select the data type Date, you can type in the day, the month and the year in this order. When you
+apply the date, Plant Simulation converts it to the date format of the language of the model, year, month,
+day for English. Or type in the year-month-day format, 2026/11/11 for example, if your model language
+is English.
+SimTalk
+DataType [SimTalk] - lists
+setDataType [SimTalk]
+getDataType [SimTalk]
+setDataTypeDefault [SimTalk]
+Data Type [lists]
+Plant Simulation Help 11-3871
+Unpublished work. © 2026 Siemens
+
+Format String [text box]
+You can restrict the data the user can specify in the window of the list object to certain values by typing
+a Format String. The Format String applies to the data types Integer, Real, Length, Weight, Speed,
+Acceleration, Money, and String.
+Remarks
+The Format String does not restrict assignments via Methods.
+• For the data type string Plant Simulation differentiates for each digit:
+The letter Outputs
+A Letters only
+U Upper case letters only
+X All characters
+C Upper case letters and numbers
+N Numbers only
+L Letters and numbers
+I All characters permitted for object names: letters, including umlaut, numbers
+and underscore
+If you type in AANXU, the first two digits have to be letters, such as a lower case a or an upper case A.
+The third digit has to be a number, such as 1, the fourth digit may be any character, such as e, E, 5 or a
+special character, such as the question mark ?. The fifth digit has to be an upper case letter, such as B.
+This way you set the length of an expression and the format of each single digit.
+Type in several terms of your choice, separated by a semicolon, and not followed by a blank to create a
+drop-down list in the cell of the formatted range into which the user clicks. The user can then select one
+of the terms you typed in from the drop-down list.
+Typing in Entry1;Entry2;Random, for example, creates a drop-down list with the commands Entry1,
+Entry2, and Random and provides it in the cells you click within the range you formatted.
+Note
+You have to double-click into the cell where you want to show the drop-down list in the list window to
+actually show it there.
+Format String [text box]
+11-3872 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• For the data type integer, you can type in a number into the text box to limit the number of digits Plant
+Simulation shows. If you type in 3, for example, Plant Simulation only shows the first three digits, when
+you type in data, such as 123. Typing in a minus character, such as -3, enables you to type in negative
+values as well, such as -123.
+For the data type integer you can also type in the value color as the format string. If you then
+double-click a cell in this column, Plant Simulation opens the Windows dialog Color. You can then select
+a color for the background of this cell here. Plant Simulation calculates the RGB value and enters it as an
+integer value into the cell, compare makeRGBValue.
+• For the data type real, you can type in two numbers, separated by a point, into the text box to restrict
+the number of digits before and after the decimal point. If you enter 5.3, for example, the number the
+user enters may have 5 digits altogether; three of these digits may be after the decimal point 1.234 for
+example. Typing in a minus character, such as -6.3, allow the user to type in negative values also, such
+as -123.456.
+SimTalk
+FormatString [SimTalk] - lists
+Format String [text box]
+Plant Simulation Help 11-3873
+Unpublished work. © 2026 Siemens
+
+getFormatString [SimTalk] - DataTable
+setFormatString [SimTalk] - DataTable
+makeRGBValue [SimTalk]
+Format String [text box]
+11-3874 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Common Format [check box]
+Plant Simulation shows the check box Common Format instead of the text box Format String and adds
+the Tab Contents. This applies to or the data types Table, List, Stack and Queue.
+Remarks
+To force all lists in the range displayed into the same format, select Common Format. Then click the Tab
+Contents and create a template list there. Lists you create after this will take all formatting properties you
+selected here, compare Creating Lists within Lists and Tables.
+If you activated Common Format for a column, assigning a subtable to a table cell creates a copy of the
+assigned table. Otherwise, Plant Simulation enters a reference to the assigned table. The reason for this
+is that it does not make sense to specify a reference if Common Format is active as the assigned table
+should not be subject to the common format.
+SimTalk
+CommonFormatColumnIndex [SimTalk]
+setCommonFormat [SimTalk]
+setCommonFormatData [SimTalk] - DataTable
+getCommonFormatData [SimTalk] - DataTable
+Common Format [check box]
+Plant Simulation Help 11-3875
+Unpublished work. © 2026 Siemens
+
+See also
+Format String [text box]
+Tab Contents.
+Common Format [check box]
+11-3876 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Activating and Deactivating Common Format
+Describes how to activate and deactivate the setting Common Format
+Remarks
+Suppose you created a list within a table and assigned this list to the local variable named l (lower case l).
+• In the first example we selected the check box Common Format. The following Method uses a local
+variable to access a list in a table. Here Plant Simulation accesses a reference to the list.
+If you activated Common Format for a column, assigning a subtable to a table cell creates a copy of the
+assigned table. Otherwise Plant Simulation enters a reference to the assigned table. The reason for this
+is that it does not make sense to specify a reference when Common Format is active as the assigned
+table should not be subject to the common format.
+var l: list[string]
+MyDataTable.delete
+MyDataTable.createNestedList
+l := MyDataTable[2,1]            // reference
+l.insert(1,"abc")
+l.insert(1,"Hello")
+print MyDataTable[2,1].read(1)  //abc
+print MyDataTable[2,1].read(2 ) // Hello
+• In the second example, we cleared the check box Common Format. Here you arrive at the same result
+by assigning a local list with the same format. Now the format is determined by the local variable, not by
+the table.
+var l:list[string]
+MyDataTable.delete
+l.createNestedList
+Activating and Deactivating Common Format
+Plant Simulation Help 11-3877
+Unpublished work. © 2026 Siemens
+
+l.insert(1,"abc")
+MyDataTable[2,1] := l
+l.insert(1,"Hello")
+print MyDataTable[2,1].read(1) // abc
+print MyDataTable[2,1].read(2) // Hello 
+Note
+If you assign a list or table to a cell with list or table format, and you selected Common Format, Plant
+Simulation may create a copy of the list instead of creating a reference, depending on the format of
+the list or table you assigned.
+SimTalk
+setCommonFormat [SimTalk]
+setCommonFormatData [SimTalk] - DataTable
+getCommonFormatData [SimTalk] - DataTable
+CommonFormatColumnIndex [SimTalk]
+Activating and Deactivating Common Format
+11-3878 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Data Type for the Column Index
+Describes how to set the data type of the column index of a table.
+Remarks
+Proceed as follows to set the data type of the column index:
+• Click Activate Column Index on the List ribbon tab to activate it.
+• Select the column of the column index, i.e., the column with the number 0.
+• Click Format on the List ribbon tab. Select the data type from the drop-down list. For the data types
+integer, real, and string you can also type in a Format String.
+• Select the check box Fast Index Access to gain fast access to the user-defined column indexes.
+• Select the check box Unique Index Key to only allow unique entries in user-defined indexes, depending
+on the data type.
+Note
+Plant Simulation highlights the cell in red and shows a message if you try to type in an expression that
+already exists. Plant Simulation does not show a message if you assign an expression, that already
+exists, to an index in a Method!
+SimTalk
+DataTypeColumnIndex [SimTalk]
+Data Type for the Column Index
+Plant Simulation Help 11-3879
+Unpublished work. © 2026 Siemens
+
+Fast Index Access [columns]
+To allow for quickly accessing the user-defined column/row index, select this check box. Then, Plant
+Simulation internally creates a data structure that reduces the search effort, but slightly increases memory
+usage and the time required for changing the index.
+Remarks
+If you select the row of the column index, which is located above the first row of cells of the list/table, and
+then click Format on the List ribbon tab, the dialog List Format > Data Type shows the check box Fast
+Index Access.
+The more columns and rows your table has, the more you benefit from the improved access speed.
+Note
+If the table contains a large number of entries, we recommend to activate Fast Index Access.
+SimTalk
+FastAccessColumnIndex [SimTalk]
+Fast Index Access [columns]
+11-3880 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Unique Index Key [columns]
+To only allow unique entries in user-defined indexes, depending on the data type, select this check box.
+Plant Simulation shows a warning if you try to assign an entry that already exists.
+Remarks
+If you select the column of the column index, which is located above the first row of cells of the list/table,
+and then select Format > Format > List Format > Data Type, Plant Simulation shows the check box
+Unique Index Key.
+If you assign an entry for an index that already exists in a Method, Plant Simulation does not show a
+warning message!
+SimTalk
+UniqueKeyColumnIndex [SimTalk]
+Unique Index Key [columns]
+Plant Simulation Help 11-3881
+Unpublished work. © 2026 Siemens
+
+Data Type for the Row Index
+Describes how to set the data type of the row index of a table.
+Remarks
+Proceed as follows to set the data type of the row index:
+• Click Activate Row Index on the List ribbon tab to activate it.
+• Select the column of the row index, i.e., the row with the number 0.
+• Click Format on the List ribbon tab. Select the data type from the drop-down list. For the data types
+integer, real, and string you can also type in a Format String.
+• Select the check box Fast Index Access to gain fast access to the user-defined column indexes.
+• Select the check box Unique Index Key to only allow unique entries in user-defined indexes, depending
+on the data type.
+Plant Simulation highlights the cell in red and shows a message if you try to enter an expression that
+already exists.
+Data Type for the Row Index
+11-3882 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Plant Simulation does not show a message if you assign an expression, that already exists, to an index in
+a Method!
+Data Type for the Row Index
+Plant Simulation Help 11-3883
+Unpublished work. © 2026 Siemens
+
+Fast Index Access [rows]
+If you select the column of the row index located to the left of the first column of cells in the list/table, and
+then click Format on the List ribbon tab, the dialog List Format > Data Type shows the check box Fast
+Index Access.
+Remarks
+Select Fast Index Access to allow for quickly accessing the user-defined row index. Then Plant Simulation
+internally creates a data structure that reduces the search effort, but slightly increases memory usage and
+the time required for changing the index.
+The more columns and rows your table has, the more you benefit from the improved access speed.
+Note
+If the table contains a large number of entries, we recommend to activate Fast Index Access.
+See also
+FastAccessRowIndex [SimTalk]
+FastAccessColumnIndex [SimTalk]
+Fast Index Access [rows]
+11-3884 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Unique Index Key [rows]
+If you select the row of the row index located to the left of the first column of cells in the list/table, and
+then select Format > Format > List Format > Data Type, Plant Simulation shows the check box Unique
+Index Key.
+Remarks
+Select Unique Index Key to only allow unique entries in user-defined indexes, depending on the data type.
+Plant Simulation shows a warning if you attempt to assign an entry that already exists. If you assign an
+entry for an index that already exists in a Method, Plant Simulation does not show a warning message!
+SimTalk
+UniqueKeyRowIndex [SimTalk]
+Unique Index Key [rows]
+Plant Simulation Help 11-3885
+Unpublished work. © 2026 Siemens
+
+Tab Contents
+Select the common format of the list on the tab Tab Contents.
+Remarks
+Plant Simulation shows the check box Common Format and adds the Tab Contents for the data types
+Table, List, Stack and Queue.
+To make Plant Simulation use the same format for all lists in the displayed range, select Common format.
+Create a template list here, using the commands on the List ribbon tab, to force all lists in the range
+displayed into the same format. Lists you create after you have done this will apply format settings you
+selected here, compare Create Lists within Lists and Tables.
+SimTalk
+setCommonFormat [SimTalk]
+See also
+Common Format [check box]
+Creating a List within a DataQueue or DataStack
+Creating a List within a DataList
+Creating a List within a DataTable
+Tab Contents
+11-3886 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Accessing the Name of a Sublist with a Method
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - DataTable
+Tab Contents
+Plant Simulation Help 11-3887
+Unpublished work. © 2026 Siemens
+
+Inherit Format [button]
+Turns inheritance of the format of the list off or on.
+Remarks
+When you insert a list into a Frame, it automatically inherits the format from its class. You can only change
+the format of the new, instantiated list after you turn Inherit Format off. Turning this command off also
+turns off Inherit Contents [lists].
+SimTalk
+InheritFormat [SimTalk]
+See also
+Column Index Belongs to Contents
+Inheritance [general description]
+Inherit Format [button]
+11-3888 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Inherit Contents [lists]
+Turns inheritance of the contents of the list off or on.
+Remarks
+When you insert a list into a Frame, it automatically inherits its contents from its class. You can only
+change the contents of the new, instantiated list after you turn Inherit Contents off. Turning off this
+command also turns off Inherit Format [button]. Typing data into a list or table automatically turns
+Inherit Contents off.
+Note
+Plant Simulation does not turn Inherit Contents off, when you instantiate the class of a list containing a
+sublist, and then write to the instance with a Method, or when you write to the sublist with a Method. If
+you model like that, you have to turn Inherit Contents off yourself.
+SimTalk
+InheritContents [SimTalk]
+See also
+Column Index Belongs to Contents
+Inheritance [general description]
+Inherit Contents [lists]
+Plant Simulation Help 11-3889
+Unpublished work. © 2026 Siemens
+
+Inherit Comment [button]
+Turns inheritance of the comments, which you added to the list, on or off.
+Remarks
+If you insert a list into a Frame, it automatically inherits the comment from its class. You can only enter a
+comment for the new, instantiated list after you turn Inherit Comment off.
+SimTalk
+InheritComment [SimTalk]
+See also
+Inheritance [general description]
+Inherit Comment [button]
+11-3890 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Recompute Formulas
+Recomputes formulas you typed in and shows their current values in the respective cells.
+SimTalk
+calculateList [SimTalk]
+Recompute Formulas
+Plant Simulation Help 11-3891
+Unpublished work. © 2026 Siemens
+
+Show Comment [lists]
+Shows or hides the text box for specifying descriptive text above the contents of the table proper in the
+window of the list object.
+Remarks
+Note
+To show the comment you enter as a tooltip, drag the mouse over the object in the Frame.
+Note
+When displaying a table, the object HtmlReport shows the text you type in here as heading above the
+table proper.
+See also
+Comment [SimTalk] - lists
+ShowComment [SimTalk] - lists
+Show Comment [lists]
+11-3892 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Data Type [lists]
+Shows or hides the data type of the columns and rows.
+Remarks
+Plant Simulation shows the data type abbreviated if the name of the data type is too long for the text box.
+Plant Simulation also shows the data types of user-defined indexes.
+SimTalk
+ShowDataType [SimTalk] - lists
+Show Data Type [lists]
+Plant Simulation Help 11-3893
+Unpublished work. © 2026 Siemens
+
+Highlight Empty Cells
+Activates or deactivates displaying empty table cells in a light gray color.
+Remarks
+Note
+Cells containing an empty string "" are not empty!
+SimTalk
+ShowVoid [SimTalk]
+Highlight Empty Cells
+11-3894 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Object [list ribbon]
+Opens the dialog of the object whose name you typed into the cell of data types object, table, stack, or
+queue.
+Instead, you can also press F2.
+SimTalk
+openDialog [SimTalk] - lists
+openDialogBox [SimTalk]
+Context Menu of Embedded Lists
+Context Menu of Embedded Lists
+Embedded lists provide a number of commands on their context menu to access often-used settings.
+Remarks
+Examples of embedded lists are:
+• The Services list of the Failure Importer of the material flow objects.
+• The Services for Setting-Up and Processing list on the Tab Importer of the material flow objects.
+• The Services list on the tab Attributes of the Exporter.
+• The Creation Table on the tab Attributes of the WorkerPool.
+• The Parts Table on the tab Parts of the GanttChart.
+• The lists for the strategies Percentage and Sequence of the FlowControl.
+• The Attributes and Methods lists on the tab Actions of the Trigger.
+• The lists on the tabs of the ShiftCalendar.
+• The lists on the tabs of the AttributeExplorer.
+Note
+Not all embedded lists provide all of the commands listed below.
+The context menu provides the commands listed in the table of contents to the left.
+Open Object [list ribbon]
+Plant Simulation Help 11-3895
+Unpublished work. © 2026 Siemens
+
+See also
+Import a List of Services, Shifts, etc. into an Object
+Open a List as a Dialog in the Foreground
+Context Menu of Embedded Lists
+11-3896 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Object [embedded objects]
+To open the dialog of the object, whose name you entered into the cell, select this command or press F2.
+SimTalk
+openDialog [SimTalk] - lists
+openDialogBox [SimTalk]
+Open Object [embedded objects]
+Plant Simulation Help 11-3897
+Unpublished work. © 2026 Siemens
+
+Select Object [embedded lists]
+To select the object which you would like to type into the cell, select this, navigate to the correct folder and
+pick the object in the dialog Select Object.
+See also
+Select Object
+Select Object [embedded lists]
+11-3898 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Cut [cell, column, row]
+To cut the contents of the cell, column, or row to the clipboard, select this command.
+SimTalk
+cutColumn [SimTalk]
+cutRow [SimTalk] - DataTable
+Cut [cell, column, row]
+Plant Simulation Help 11-3899
+Unpublished work. © 2026 Siemens
+
+Copy [cell, column, row]
+To copy the contents of the cell, column, or row to the clipboard, select this command.
+SimTalk
+copy [SimTalk] - lists
+copyRangeTo [SimTalk]
+Copy [cell, column, row]
+11-3900 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Paste [embedded objects]
+To paste the contents of the clipboard into the selected cell, select this command.
+Paste [embedded objects]
+Plant Simulation Help 11-3901
+Unpublished work. © 2026 Siemens
+
+Delete [cell, column, row]
+To delete the contents of the cell, column, or row, select this command.
+SimTalk
+delete [SimTalk] - lists
+Delete [cell, column, row]
+11-3902 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select All [embedded lists]
+To select the entire contents of the list, select this command.
+Select All [embedded lists]
+Plant Simulation Help 11-3903
+Unpublished work. © 2026 Siemens
+
+Delete Row
+To delete the selected row, select this command.
+Delete Row
+11-3904 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insert Row [embedded objects]
+To insert an empty row above the selected row, select this command.
+SimTalk
+insertRow [SimTalk]
+Insert Row [embedded objects]
+Plant Simulation Help 11-3905
+Unpublished work. © 2026 Siemens
+
+Append Row [embedded objects]
+To insert an empty row below the last row of cells, select this command.
+Append Row [embedded objects]
+11-3906 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sort Ascending [context menu, embedded objects]
+To sort the lowest number (0 to 9), the earliest date or the beginning of the alphabet (A to Z) first in the
+sorted list, select this command.
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected rows or the selected columns.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Sort Ascending [context menu, embedded objects]
+Plant Simulation Help 11-3907
+Unpublished work. © 2026 Siemens
+
+Sort Descending [context menu, embedded objects]
+To sort the highest number (9 to 0), the latest date or the end of the alphabet (Z to A) first in the sorted
+list, select this command.
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected rows or the selected columns
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Sort Descending [context menu, embedded objects]
+11-3908 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Comment [embedded objects]
+To show or hide the text box, into which you can type text describing the contents of the list, select this
+command.
+SimTalk
+ShowComment [SimTalk] - lists
+See also
+Show Comment [lists]
+Comment [SimTalk] - lists
+Show Comment [embedded objects]
+Plant Simulation Help 11-3909
+Unpublished work. © 2026 Siemens
+
+Import [embedded objects]
+To import a tab-delimited text file containing information which you would like to import into the list,
+select this command.
+Remarks
+You can Import a list, which you Exported from another list, or which you were provided with as a file
+from colleagues or customers, in one of the following formats:
+• Object files with the extension .pslist.
+• Text files with the extension .txt.
+• Excel Workbooks with the extensions .xls, .xlsc, .xlsm, or .xlsb.
+• XML files with the extension .xml.
+Note
+Importing a file only works correctly if the file contains the Name of the attribute.
+It does not work correctly if the file only contains the Alias of the attribute.
+Import [embedded objects]
+11-3910 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Import [embedded objects]
+Plant Simulation Help 11-3911
+Unpublished work. © 2026 Siemens
+
+Export [embedded objects]
+To export the contents of the list to a tab-delimited text file, select this command.
+Remarks
+You can select one of these formats:
+• ANSI Text Files saves the list with ANSI encoding.
+ANSI is an 8-bit character set that enables you to represent up to 256 characters (0 through 255). The
+ANSI character set is a superset of the 7-bit ASCII character set.
+• UTF-8 Text Files saves the list with UTF-8 encoding.
+UTF-8 is another encoding of the Unicode character set. Each character is represented by one to three
+bytes.
+• Unicode Text Files saves the list with Unicode encoding.
+Unicode is a 16-bit character set that includes almost all of the written languages of the world. Plant
+Simulation saves Unicode in UTF-16 encoding. Each character is represented by two bytes.
+• Excel Workbooks saves the list as an Excel file with the extension .xls.
+If you scroll to the top on the left-hand side in the dialog Save As, Plant Simulation shows the folder to
+which the list files with the respective formats are saved.
+You can then Import this file into another list.
+Export [embedded objects]
+11-3912 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+Importing a file only works correctly if the file contains the Name of the attribute.
+It does not work correctly if the file only contains the Alias of the attribute.
+Export [embedded objects]
+Plant Simulation Help 11-3913
+Unpublished work. © 2026 Siemens
+
+Context Menu of the Contents of List Objects
+Context Menu of the Contents of List Objects
+The context menu of the contents of list objects provide the most important commands. Some of the
+commands are located on the mini toolbar, while others are commands on the context menu itself.
+Remarks
+You can also close the context menu and leave the mini toolbar open 
+  by
+clicking the border of the mini toolbar with the left mouse button.
+Toolbar of the Context Menu
+Open Location
+ Insert Row
+Open Origin
+ Remove Row -
+Open Class
+ Insert Column
+Copy Objects
+ Remove Column -
+Cut Objects
+ Insert -
+Context Menu of the Contents of List Objects
+11-3914 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Paste Objects
+ Format
+Delete Objects
+ Find
+Select All
+ Sort Ascending
+Open Object
+ Sort Descending
+Context Menu of the Contents of List Objects
+Plant Simulation Help 11-3915
+Unpublished work. © 2026 Siemens
+
+Open Location [context menu, lists]
+To open the object in which the list or table is located, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+Location [SimTalk] - material flow objects
+Open Location [context menu, lists]
+11-3916 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Origin [context menu, lists]
+To open the object from which the selected object was derived, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+Origin [SimTalk] - general description
+Open Origin [context menu, lists]
+Plant Simulation Help 11-3917
+Unpublished work. © 2026 Siemens
+
+Open Class [context menu, lists]
+To open the dialog of the class of the selected object in the Class Library from which you derived the
+selected object, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+derive [SimTalk]
+Open Class [context menu, lists]
+11-3918 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Cut [context menu, lists]
+To cut the contents of a cell, a column, or a row to the Clipboard, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+cutColumn [SimTalk]
+cutRow [SimTalk] - DataTable
+Cut [context menu, lists]
+Plant Simulation Help 11-3919
+Unpublished work. © 2026 Siemens
+
+Copy [context menu, lists]
+To copy the contents of a cell, a column, or a row to the Clipboard, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+copy [SimTalk] - lists
+Copy [context menu, lists]
+11-3920 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Paste [context menu, lists]
+To paste the contents of the Clipboard to the selected cell, column, or row, select this command.
+Image on the Toolbar of the Context Menu
+Paste [context menu, lists]
+Plant Simulation Help 11-3921
+Unpublished work. © 2026 Siemens
+
+Delete [context menu, lists]
+To delete the contents of a cell, a column, or a row, select this command.
+Image on the Toolbar of the Context Menu
+SimTalk
+delete [SimTalk] - lists
+Delete [context menu, lists]
+11-3922 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select All [context menu, lists]
+To select the entire contents of the list object, select this command.
+Image on the Toolbar of the Context Menu
+Select All [context menu, lists]
+Plant Simulation Help 11-3923
+Unpublished work. © 2026 Siemens
+
+Open Object [context menu, lists]
+To open the dialog of the object, whose name you entered into the cell, select this command or press F2.
+Image on the Toolbar of the Context menu
+SimTalk
+openDialog [SimTalk] - lists
+openDialogBox [SimTalk]
+Open Object [context menu, lists]
+11-3924 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Object [context menu, DataTable]
+To show and select the object in the Frame if the column has the data type object, select this command.
+Show Object [context menu, DataTable]
+Plant Simulation Help 11-3925
+Unpublished work. © 2026 Siemens
+
+Insert Row [context menu, lists]
+To insert an empty row above the selected row, select this command.
+Image on the Toolbar of the Context Menu
+Inserting a row increases the number of rows.
+SimTalk
+insertRow [SimTalk]
+Insert Row [context menu, lists]
+11-3926 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remove Row [context menu, lists]
+To remove the selected row from the list or table, select this command. The following rows move one
+position up.
+Remarks
+Note
+The command Remove Row is not available for the row that contains the row index.
+SimTalk
+cutRow [SimTalk] - DataTable
+Remove Row [context menu, lists]
+Plant Simulation Help 11-3927
+Unpublished work. © 2026 Siemens
+
+Insert Column [context menu, lists]
+To insert a new empty column to the left of the selected column into the list, select this command. All
+existing columns move one position to the right.
+Image on the Toolbar of the Context Menu
+Remarks
+In the example below we clicked in Column 2 and selected the command Insert Column. Plant Simulation
+then inserted the new empty column in Column 2 and moved the previous Column 2, and the columns to
+the right of it, one position to the right.
+SimTalk
+insertColumn [SimTalk]
+Insert Column [context menu, lists]
+11-3928 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remove Column [context menu, lists]
+To remove the selected column from the table, select this check box. All existing columns move one
+position to the left.
+Remarks
+Note
+The command Remove Column is not available for the column that contains the column index.
+SimTalk
+insertColumn [SimTalk]
+Remove Column [context menu, lists]
+Plant Simulation Help 11-3929
+Unpublished work. © 2026 Siemens
+
+Insert [context menu, lists]
+To insert an empty row above the selected row into the selected list until it is full, select this command.
+Remarks
+The list is full if cells with content, which are moved down with the command Insert, has reached the end
+of the specified Dimension of the DataList, the DataStack or the DataQueue.
+In our example we set the Number of rows to 5. The first three rows contain an entry each. If we now
+select Insert in row 3, we can do this twice until the end of the specified number of rows is reached. The
+command Insert is now deactivated.
+SimTalk
+insert [SimTalk] - lists
+Insert [context menu, lists]
+11-3930 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Format [context menu, lists]
+To open the dialog Edit Format, select this command. Then change the settings of the list or table in the
+dialog.
+Image on the Toolbar of the Context Menu
+See also
+Edit Format
+Format [context menu, lists]
+Plant Simulation Help 11-3931
+Unpublished work. © 2026 Siemens
+
+Find [context menu, lists]
+To open the dialog Find, select this command.
+Image on the Toolbar of the Context Menu
+Remarks
+Plant Simulation searches the entire list/table if you do not click in a cell.
+If you click in a cell, it starts searching at the selected cell toward the end of the list/table.
+See also
+Find [lists]
+Find [context menu, lists]
+11-3932 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sort Ascending [context menu, lists]
+To sort the lowest number (0 to 9), the earliest date or the beginning of the alphabet (A to Z) first in the
+sorted list, select this command.
+Image on the Toolbar of the Context Menu
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected rows of the selected columns.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Sort Ascending [context menu, lists]
+Plant Simulation Help 11-3933
+Unpublished work. © 2026 Siemens
+
+Sort Descending [context menu, lists]
+To sort the highest number (9 to 0), the latest date or the end of the alphabet (Z to A) first in the sorted
+list, select this command.
+Image on the Toolbar of the Context Menu
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected rows of the selected columns.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Accessing a Range of Cells with a Method
+Accessing a Range of Cells with a Method
+You can not only access individual entries in a single cell of the lists, but you can also process a contiguous
+range of cells.
+Remarks
+A number of methods, such as min, max, only apply to a range. If you access a range of cells, you have to
+use a special syntax.
+We differentiate between
+• Cell Ranges in Lists with One Column
+• Cell Ranges in Tables with Several Columns
+Ranges in Lists with One Column
+Cell Ranges in Lists with One Column
+Access a cell range in a list with one column by typing in the left curly brace {, the number of the first cell
+in the range, the right curly brace }, two periods .., the left curly brace {, the number of the last cell in
+the range, and the closing curly brace }.
+Sort Descending [context menu, lists]
+11-3934 Plant Simulation Help
+Unpublished work. © 2026 Siemens

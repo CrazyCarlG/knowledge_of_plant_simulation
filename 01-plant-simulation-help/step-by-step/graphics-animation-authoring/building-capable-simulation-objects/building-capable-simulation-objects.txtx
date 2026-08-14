@@ -1,0 +1,439 @@
+Creating a Simulation Object with Animation
+Create a Simulation Object with Animation
+While you are creating your simulation model, you will also model simulation objects which animate a
+certain work process in 3D.
+In our example we model our own station in a Frame. We will demonstrate how to:
+• Create the Simulation Object
+• Add Animations and Interactions to the Simulation Objects
+• Test the Station in the Simulation Model
+• Fine-tune the Station
+Back to Visualizing the Material Flow
+Create the Simulation Object
+You can create the simulation object that is required for our animatable object.
+Proceed as follows:
+• Create a new Frame and open it. Open the dialog Edit 3D Properties. Change to the tab Graphics.
+Select the check box Show Content to show the objects contained within it.
+Creating a Simulation Object with Animation
+Plant Simulation Help 10-1039
+Unpublished work. © 2026 Siemens
+
+• Click Show External Graphic Groups 
+  on the View ribbon tab to show the default
+graphic of the Frame. Delete the graphic in the graphic group named default.
+• Click Import Graphics on the Edit ribbon tab to import an appropriate JT file into the graphic group
+named default of the Frame. Our file is called Screwdriver.jt. We received it from a colleague.
+Create the Simulation Object
+10-1040 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Extract the first simulation object: Click the floor plate of the station by pressing the + key on your
+keyboard until only the floor plate, and nothing else, is marked as selected. 3D then shows the floor
+plate in a yellowish green.
+• Click the graphic with the right mouse button and select Make Simulation Object.
+Create the Simulation Object
+Plant Simulation Help 10-1041
+Unpublished work. © 2026 Siemens
+
+• Select .MaterialFlow.Station as the class. Name the object PartCarrierStation and change the
+coordinates of the Object Position until they are located in the center of the screwdriver. Watch how
+the white cross lines change their position in the scene window as you change the position of the object
+in the dialog.
+• Select the trestle that holds the actual screwdriver of our screwdriver station. Notice that when you
+select PartCarrierStation, Plant Simulation shows it in a darker green while it shows the other graphics
+in a light yellowish green. Dark green denotes that an object is selected. Yellowish green denotes that
+a graphic is selected, meaning that you can use the + key to contract the selection along the graphic
+structure.
+Create a second simulation object. Select .MaterialFlow.Station as the class. Name the object
+Trestle and change the coordinates of the Object Position until they are located in the center of
+the screwdriver.
+Back to Create a Simulation Object with Animation
+Create the Simulation Object
+10-1042 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Add Animations and Interactions to the Simulation Objects
+After creating the basic simulation part of our Screwdriver station, we are going to add the animation part
+and the interaction part to it.
+• Click the trestle of the screwdriver with the right mouse button and select Open in New Window. This
+opens the Frame .Models.MyScrewdriver.Trestle. Press the + key until only the graphic of the screw
+arm proper is selected, denoted by the lighter green.
+• Click the graphic with the right mouse button and select the command Make Animatable Object.
+Name the object Arm and select the following coordinates as the Object Position until they are located
+in the center of the screw arm.
+• Click the newly created animatable object with the right mouse button and select Use as Animation
+Object. This means that our trestle forwards the animation of the MUs to the animatable object named
+Arm.
+Close the Frame .Models.MyScrewdriver.Trestle to return to the Frame .Models.MyScrewdriver.
+Click the Trestle with the right mouse button, select Edit 3D Properties, and change to the MU
+Animation [tab]. You’ll notice that the command above entered the animation object Arm as the
+Add Animations and Interactions to the Simulation Objects
+Plant Simulation Help 10-1043
+Unpublished work. © 2026 Siemens
+
+Animation Object. Instead of using the command Use as Animation Object, you could also type the
+name of the animation object into the text box.
+• Open the Trestle in a new window. Click the Arm with the right mouse button and change to the Self
+Animation.
+◦ Add four animation paths of type Lines. We named our paths Setup, DownAdvance, Reset, and
+DownFinal.
+◦ Select the respective path and click Edit to define two anchor points for each path. Click Add in the
+dialog Path Anchor Points, then select the new anchor point, and click Edit Values. Enter these
+values into the dialog that opens:
+0, 0, 0 to 0, 0, 0.9 for Setup.
+0, 0, 0.9 to 0, 0, - 0.1 for DownAdvance.
+0, 0, -0.1 to 0, 0, -0.22 for DownFinal.
+0, 0, -0.22 to 0, 0, 0 for Reset.
+Add Animations and Interactions to the Simulation Objects
+10-1044 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+With these settings, the animation paths of the arm resemble components of a continuous smooth up
+and down movement of the arm.
+◦ Change to the MU Animation [tab], add a new path, name it Default, and add a single animation
+point with the settings 0, 0, -0.38.
+• Finally, we are going to configure the simulation side of the stations, i. e. the stations we created as
+simulation objects above.
+To do so:
+◦ Double-click the PartCarrierStation and configure it. We entered a Processing Time of 10 seconds
+(0:10).
+Add Animations and Interactions to the Simulation Objects
+Plant Simulation Help 10-1045
+Unpublished work. © 2026 Siemens
+
+We also created the Exit Control called self.OnExit and entered this source code:
+if ?.ExitCtrlFront 
+   self.~.~.Trestle.EntranceLocked := false
+   @.move
+end
+In addition we added a user-defined attribute of data type method, named it init, and entered this
+source code:
+self.~.EntranceLocked := true
+• Double-click the Trestle and configure it. We entered a Set-up Time of 6 seconds (0:06) and selected
+these settings on the tab Set-Up.
+Add Animations and Interactions to the Simulation Objects
+10-1046 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• We also created the Entrance Control called self.OnEntrance, the Exit Control named self.OnExit, and
+the Setup Control called self.OnSetup.
+We entered this source code into the Entrance Control:
+var animations : any := self.~._3D.getObject("Arm").SelfAnimations 
+animations.resetAnimation
+animations.DownAdvance.schedule
+animations.startNextAnimationBlock
+animations.DownFinal.schedule
+animations.scheduleRotation(0, 360, 90)
+@.outIn(animations.AnimationTimeTotal)
+animations.playAnimation
+We entered this source code into the Exit Control:
+if ?.ExitCtrlFront
+   @.deleteObject
+   var animations : any := self.~._3D.getObject("Arm").SelfAnimations
+   animations.resetAnimation
+   animations.Reset.schedule
+   animations.playAnimation
+   self.~.EntranceLocked := true
+end
+We entered this source code into the Setup Control:
+param setupStart: boolean 
+if setupStart 
+   var animations : any := self.~._3D.getObject("Arm").SelfAnimations
+   animations.resetAnimation
+Add Animations and Interactions to the Simulation Objects
+Plant Simulation Help 10-1047
+Unpublished work. © 2026 Siemens
+
+   animations.Setup.schedule
+   animations.playAnimation
+else
+   self.~.~.PartCarrierStation.EntranceLocked := false
+end
+In addition we added a user-defined attribute of data type method, named it init, and entered this
+source code:
+self.~.EntranceLocked := false
+Back to Create a Simulation Object with Animation
+Test the Station in the Simulation Model
+Now we are ready to test our screwdriver station in the simulation model.
+• Insert a Source, which produces the pallets which we want to screw together. We named it
+SourcePallets.
+Insert a second Source, which feeds the screws required for screwing together the pallets. We named it
+SourceScrews. We received the screw, including the JT file, from a colleague.
+• Insert a Drain, which removes the finished pallets from the plant.
+• Insert our Screwdriver station.
+• Insert three Conveyors between the Sources, the Drain, and the Screwdriver station.
+• Connect all objects with Connectors. Connect the SourcePallets, that produces the MU > PartsCarrier,
+with the ConveyorPallets, and with the InterfaceInPallet of the Screwdriver. Connect the SourceScrews
+that produces the MU > Screw, with the ConveyorScrews, and with the Interface named InScrew.
+Connect the ConveyorOut with the Interface named Out and then with the Drain. The simulation model
+should now look like this:
+Test the Station in the Simulation Model
+10-1048 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You might be wondering how we inserted the Conveyors with an inclination to smoothly connect to the
+Screwdriver station. We proceeded as follows:
+◦ For the ConveyorPallets we entered an Anchor Point Height of 1 meter for the first anchor point
+and an anchor point height of 0.15 meters for the second anchor point into the dialog Line/Arc
+Parameters. This is the height of the object SourcePallets to which we connect it on the left-hand
+side.
+◦ For the ConveyorOut we edited values in the dialog Edit 3D Properties > Appearance. We entered a
+Base Height of 0.15 meters, which means that the left-hand side of the ConveyorOut is placed 15
+centimeters above the floor. We then clicked Segments and entered 1 meter as the Z dimension so
+that the right-hand side connects smoothly to the Drain.
+◦ When you run the simulation, you might want to run it with a low real-time factor to be able to
+watch how the screwdriver actually screws the screws in.
+Test the Station in the Simulation Model
+Plant Simulation Help 10-1049
+Unpublished work. © 2026 Siemens
+
+Back to Create a Simulation Object with Animation
+Fine-tune the Station
+While running the simulation, you’ll notice that the pallet is not located at the bottom of the Screwdriver
+station, but at the top.
+Proceed as follows to fix this:
+• Open the class of the Screwdriver in a new window.
+• Then, open the dialog Edit 3D Properties of the PartCarrierStation, change to the tab MU Animation,
+and show the Default path.
+• Select the path marker, i, e., the wedge pointing downwards, hold down the Ctrl key, and move it down
+with the down arrow key until it is located flush on the PartCarrierStation.
+You’ll also notice that the screw is not attached to the tip of the arm. Proceed as follows to fix this:
+• Open the class of the Screwdriver in a new window.
+• Open the Trestle of the Screwdriver in a new window.
+• Open the dialog Edit 3D Properties of the Arm, change to the tab MU Animation, and visualize the
+Default path.
+• Select the path marker, hold down the Ctrl key, and move it down with the down arrow key until it was
+located flush at the tip of the Arm.
+Fine-tune the Station
+10-1050 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You’ll finally notice that the wrong side of the screw is attached to the tip of the Screwdriver arm. Proceed
+as follows to fix this:
+• Open the class of the Screwdriver in a new window.
+• Open the Trestle of the Screwdriver in a new window.
+• Open the dialog Edit 3D Properties of the Trestle, change to the tab MU Animation, and visualize the
+Default path.
+• Select Top as the side to which the MU is to be attached.
+Run the simulation again. Now our Screwdriver station does exactly what we designed it to do.
+Fine-tune the Station
+Plant Simulation Help 10-1051
+Unpublished work. © 2026 Siemens
+
+Back to Create a Simulation Object with Animation
+Modeling a Complex Receiving Department
+Model a Complex Receiving Department
+This sample model demonstrates how to model a complex receiving department in a Frame.
+Here three Sources produce three different parts, namely bricks, glass bricks, and brick carriers. The bricks
+and the glass bricks are then loaded onto brick carriers and moved to a ParallelStation that stores them
+before a TransferStation loads them onto a truck that is produced by a fourth Source.
+We will demonstrate how to:
+• Insert the Objects Required for Modeling the Source
+• Configure the Individual Stations
+• Animate Bricks on the Animation Area of the Brick Carrier
+• Animate Brick Carriers on the Animation Area of the Truck
+• Show the Content of the Frame
+Back to Visualizing the Material Flow
+Insert the Objects Required for Modeling the Source
+First, we will insert the objects, which we need to model our receiving department, into a Frame.
+Modeling a Complex Receiving Department
+10-1052 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In the second step, we are going to configure the individual objects.
+• Create a new Frame in the Class Library of your simulation model. We named our Frame
+MySourceTruckLoadedWithBricks.
+• Insert three Sources at the left-hand side of the Frame. We use our own class, named MySource, with
+a modified 3D graphic. We named our Sources SourceGlassBricks, SourceBricksCarrier, and
+SourceBricks. They will produce glass bricks, brick carriers, and normal bricks.
+• Insert two AssemblyStations to the right of the Sources. We named them AssemblyGlassBricks and
+AssemblyBricks. Each of them places 50 glass bricks or 50 normal bricks onto a pallet each.
+• Insert a TransferStation, a short Track, and another Source. This Source, which we named
+SourceTrucks, produces the trucks onto which the commissioned pallets are loaded.
+• Insert an Interface that connects our receiving department with the other objects in the simulation
+model.
+• Connect the objects so that they match the screenshot below. Our finished model looks like this:
+Note
+As the AssemblyStation is connected to two stations, the order in which you connect it with the
+predecessors is important. If the assembly process does not work as expected, check the numbering of
+the predecessors.
+Plant Simulation shows the predecessors and the successors of an object in a tooltip when you drag
+the mouse over the respective Connector.
+Then, enter the correct number of the predecessor into the text box Main MU from Predecessor of
+the AssemblyStation.
+Insert the Objects Required for Modeling the Source
+Plant Simulation Help 10-1053
+Unpublished work. © 2026 Siemens
+
+Back to Model a Complex Receiving Department
+Configure the Individual Stations
+After we have inserted the objects we need to model our receiving department, we are going to configure
+the individual stations.
+First, we are going to configure the MUs:
+• To create the MU representing the truck, duplicate the class .MUs.Transporter and rename it to Truck.
+We deleted its graphic and imported the JT file Truck.jt, which we received from a colleague. Position the
+graphic in its window as shown below. We changed its size to 6.3 by 2.2 by 1.6 meters.
+Configure the Individual Stations
+10-1054 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To create the MU representing the brick carrier, duplicate the class .MUs.Container and rename it to
+BricksCarrier. We deleted its graphic and imported the JT file BricksCarrier.jt. We changed its size to
+1.1 by 1.1 by 0.15 meters and gave it a capacity of 50 parts (X-Dimension of 5 times Y-Dimension of
+10).
+• To create the MU representing the normal brick and the glass brick, duplicate the class .MUs.Part twice.
+We renamed them to Brick and GlassBrick respectively. Both have a size of 0.2 by 0.1 by 0.05
+meters.
+Configure the Individual Stations
+Plant Simulation Help 10-1055
+Unpublished work. © 2026 Siemens
+
+For the bricks we are going to use automatically generated graphics instead of importing JT files.
+◦ Open their class in a new window and open the dialog Edit 3D Properties.
+◦ Change to the tab Transformation and activate the check box Scale Automatically.
+◦ For the GlassBrick, also activate Material Active, select a blueish gray as the Diffuse Color, and select
+a Transparency factor of 0.6 to make the glass brick semi-transparent.
+◦ Activate Material Active for the GlassBrick. Select orange as the Diffuse Color
+The automatically created graphics look like this:
+Configure the Individual Stations
+10-1056 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Brick Glass brick
+Then, we are going to configure the other objects in our Receiving department.
+• Start with the Sources producing the Brick, the GlassBrick, and the BricksCarrier. Select the respective
+MU according to the name of the Source. We did not change any other settings. Compare the example
+below.
+Note
+Make sure that you use the absolute path for the MUs, denoted by an asterisk * at the beginning of
+the path. The relative path starts with a tilde ~.
+• Configure the AssemblyStations to attach the MUs and to make the Main MU exit the station. We also
+want them to load 50 parts, namely the bricks or glass bricks, onto the brick carrier. Click Open next to
+Assembly Table and enter 50 into the column Number.
+Configure the Individual Stations
+Plant Simulation Help 10-1057
+Unpublished work. © 2026 Siemens
+
+Note
+As the AssemblyStation is connected to two stations, the order in which you connect it with the
+predecessors is important. If the assembly process does not work as expected, check the numbering of
+the predecessors.
+Plant Simulation shows the predecessors and the successors of an object in a tooltip when you drag
+the mouse over the respective Connector.
+Then, enter the correct the number of the predecessor into the text box Main MU from Predecessor
+of the AssemblyStation.
+Configure the Individual Stations
+10-1058 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Drag the ParallelStation onto the TransferStation to load parts and to use it as the Part Source. We use
+the default settings of the ParallelStation.
+Drag the Track onto the TransferStation to use it as the Target Station. Accept 0 is the Sensor Position.
+To make the Truck stop and wait for parts until it is fully loaded, select the check box Always Stop
+Container on the tab Advanced Attributes.
+Configure the Individual Stations
+Plant Simulation Help 10-1059
+Unpublished work. © 2026 Siemens
+
+• Open the dialog Edit 3D Properties of the Frame MySourceTruckLoadedWithBricks. Change to the tab
+Graphics and make sure that Show Content is cleared.
+Now we are ready to test our receiving station MySourceTruckLoadedWithBricks. Insert it into our
+simulation model, connect it with a Track and a Drain, and run the simulation. You’ll notice that it creates
+trucks that transport two types of carriers, one loaded with normal bricks and one loaded with glass bricks
+each.
+Back to Model a Complex Receiving Department
+Configure the Individual Stations
+10-1060 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Animate Bricks on the Animation Area of the Brick Carrier
+When Plant Simulation places objects onto other objects, in our example bricks and glass bricks on the
+brick carrier, it automatically distributes them evenly across the animation area of the brick carrier.
+Plant Simulation distributes them according to their size and to the size and dimension of the brick
+carrier.
+In our example the brick carrier can accommodate 50 bricks on its animation area, each of which is 20
+centimeters long and 10 centimeters wide. The brick carrier is 110 centimeters long and wide. According
+to its x-dimension 5 bricks fit in a row side by side in the x-direction. According to its y-dimension 10 bricks
+fit in a row in the y-direction.
+Animate Bricks on the Animation Area of the Brick Carrier
+Plant Simulation Help 10-1061
+Unpublished work. © 2026 Siemens
+
+We used the default settings of the brick carrier/container.
+Back to Model a Complex Receiving Department
+Animate Brick Carriers on the Animation Area of the Truck
+When Plant Simulation places objects onto other objects, in our case brick carriers onto the loading space,
+i.e., the animation area of the truck, we would like to determine where on the bed it places the brick
+carriers.
+We defined animation areas for the objects with matrix loading space ParallelStation, Sorter, Store,
+Transporter, and Container. These should cover your basic modeling needs.
+In our case we changed the graphic of the truck, which we derived from the Transporter. We thus have to
+change the animation area settings.
+Proceed as follows:
+Animate Brick Carriers on the Animation Area of the Truck
+10-1062 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Change to the Class Library and click MUs > Truck with the right mouse button.
+• Click Open In 3D.
+• Click the right mouse button in the window .MUs.Truck and select Edit 3D Properties > MU
+Animation.
+• You can now adjust the area settings under animation area so that the brick carriers are evenly
+distributed across the loading space of the truck. Plant Simulation computes the animation area of the
+object as soon as you click Apply in the dialog Edit 3D Properties. The window of our partial model
+then also shows these changes.
+• We selected the settings above. Now everything is correct.
+Animate Brick Carriers on the Animation Area of the Truck
+Plant Simulation Help 10-1063
+Unpublished work. © 2026 Siemens
+
+We can also replace the simple graphic of the truck with the graphic of the new version of Plant
+Simulation.
+To do so:
+• Duplicate the Transporter, rename it to TruckDumper, and exchange its graphic.
+• Enter the dumper as the MU to be created into the SourceTruck.
+Animate Brick Carriers on the Animation Area of the Truck
+10-1064 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Now only 6 brick carriers are loaded instead of the intended 8.
+To fix this, increase the X-Dimension of the loading space from 3 to 4.
+Animate Brick Carriers on the Animation Area of the Truck
+Plant Simulation Help 10-1065
+Unpublished work. © 2026 Siemens
+
+• We finally adjust the animation area settings of the bed.
+◦ Open the TruckDumper in a new window, click in the background, and press the spacebar.
+◦ Activate the Animation Area [described] on the tab MU Animation and Show it.
+◦ Click in the text boxes and roll the mouse wheel until the animation area has the correct size.
+Animate Brick Carriers on the Animation Area of the Truck
+10-1066 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Model a Complex Receiving Department
+Show the Content of the Frame
+We can also show the content of the Frame named MySourceTruckLoadedWithBricks in the Frame named
+MyPlant instead of the icon of the Frame
+Proceed as follows:
+• Select the Frame named MySourceTruckLoadedWithBricks. Press the spacebar.
+Show the Content of the Frame
+Plant Simulation Help 10-1067
+Unpublished work. © 2026 Siemens
+
+• Select Show Content. This then looks like this:
+Show the Content of the Frame
+10-1068 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Adjust the content of the Frame named MySourceTruckLoadedWithBricks:
+◦ Clear the check box Visible for the graphic group named default, so that the default graphic of the
+Frame is not shown over the content of the Frame.
+Show the Content of the Frame
+Plant Simulation Help 10-1069
+Unpublished work. © 2026 Siemens
+
+◦ Delete the Interface of type Exit. We do not need it as our sub-Frame only contains a single material
+flow object that will be connected externally. Connect the sub-Frame with the Track.
+• We finally adjust the positions of the objects and run the simulation:
+Show the Content of the Frame
+10-1070 Plant Simulation Help
+Unpublished work. © 2026 Siemens

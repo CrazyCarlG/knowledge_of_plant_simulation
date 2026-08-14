@@ -1,0 +1,142 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Drain
+Methods of the Drain
+The Drain provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Station.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Help Menu
+11-1664 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+Methods of the Drain
+Plant Simulation Help 11-1665
+Unpublished work. © 2026 Siemens
+
+typeStatistics [SimTalk] - Drain
+Returns the Detailed Statistics Table of the Drain designated by <Path> and writes it into a table.
+Remarks
+The column Read-only Attribute lists the read-only attributes of the corresponding statistics values for all
+part types.
+Type
+Method
+Syntax
+<Path>.typeStatistics([TypeStatisticsTable:table]) → boolean
+Parameter
+The optional parameter TypeStatisticsTable of data type table designates the name of the table.
+Return Value
+The return value has the data type boolean.
+• true if statistics collection is activated.
+false if statistics collection is deactivated. Then the table remains unaltered.
+• Is the table containing the statistics data if statistics collection is activated if you do not specify the
+optional parameter.
+void if statistics collection is deactivated.
+Examples
+MyDrain.typeStatistics(MyDrainStatisticsTable) 
+// Writes the statistics values to the table named MyDrainStatisticsTable. 
+// The return value is true if statistics collection is activated. 
+// It is false if it is deactivated. Then the table remains unaltered.
+MyDrain.typeStatistics 
+// Writes the statistics values to a table. 
+// The return value is the statistics table if statistics collection is 
+activated. 
+// It is void if statistics collection is cleared. 
+typeStatistics [SimTalk] - Drain
+11-1666 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+typeStatisticsCumulated [SimTalk]
+TypeStatOn [SimTalk]
+See also
+Detailed Statistics Table [Drain]
+Statistics report, Part Types Which the Drain Removed From the Plant
+typeStatistics [SimTalk] - Drain
+Plant Simulation Help 11-1667
+Unpublished work. © 2026 Siemens
+
+typeStatisticsCumulated [SimTalk]
+Returns the cumulated statistics table containing the MU Types which the object designated by <Path>
+removed from the plant.
+Type
+Method
+Syntax
+<Path>.typeStatisticsCumulated([CumulatedTypeStatisticsTable:table]) → 
+boolean
+Parameter
+The optional parameter CumulatedTypeStatisticsTable of data type table designates the name of the table.
+The columns are the same as those in the table which the method typeStatistics fills. The column Type
+remains empty though.
+Return Value
+The return value has the data type boolean.
+• true if statistics collection is activated.
+false if statistics collection is deactivated. Then the table remains unaltered.
+• Is the table containing the statistics data if statistics collection is activated if you do not specify the
+optional parameter.
+void if statistics collection is deactivated.
+Examples
+MyDrain.typeStatisticsCumulated(myCumulatedDrainStatistics) 
+// Writes the statistics values to the table named MyDrainStatisticsTable. 
+// The return value is true if statistics collection is activated. 
+// It is false if it is deactivated. Then the table remains unaltered.
+MyDrain.typeStatisticsCumulated 
+// Writes the statistics values to a table. 
+// The return value is the statistics table if statistics collection is 
+activated. 
+// It is void if statistics collection is deactivated.
+typeStatisticsCumulated [SimTalk]
+11-1668 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+typeStatistics [SimTalk] - Drain
+TypeStatOn [SimTalk]
+Read-Only Attributes of the Drain
+_Read-Only Attributes of the Drain
+The Drain provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print Drain.StatAvgExitInterval
+Read-Only Attributes of the Drain
+Plant Simulation Help 11-1669
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,490 @@
+• Change to the tab Statistics Values. Type in the parameters of the distribution for which you want to
+investigate the effects of the bounds. Then, click Start to compute the real mean value and the real
+standard deviation of the distribution with bounds.
+After the calculation is done, you can click Show to view the density function and the bounds. The
+density visualizes how the bounds cause the mean value to shift.
+The solid vertical line designates the real mean value of the distribution with bounds.
+The dotted line designates the mean value of the distribution without bounds.
+In addition, the TruncDistribution show the probability of a hit, with which a random number of the
+distribution without bounds falls in between the bounds, which you typed in.
+Plant Simulation rolls the dice until a random number falls in between the bounds of the distribution
+with bounds. When its probability is too small, it may happen that the maximum number of samples,
+which you typed in under File > Preferences > Simulation does not suffice and Plant Simulation
+interrupts the simulation.
+• On the tab Parameterization you determine the parameters of the distribution, so that the distribution
+with bounds arrives as the mean value, which you set.
+To a certain degree you execute the reverse conversion of the calculation task you defined on the tab
+Statistics Values.
+Click Start to start computing. Not each mean value between the bounds is viable.
+Back to Step 3: Decide which Distribution to Use
+Running Simulation Experiments
+Run Simulation Experiments
+After creating your model, you have to validate it, i.e., you have to make sure that the model displays the
+intended properties and shows the intended behavior. In a simulation study you will consider how certain
+model parameters as input values influence result values as output values.
+You might, for example, execute a number of simulation experiments with the ExperimentManager 
+to:
+Procedure
+1. Arrive at statistically safe results.
+When you re-created an existing plant, you will compare the data you collected on the shop floor with
+the results of the simulation run.
+When your model contains random components, you will have to investigate how reliable the data
+resulting from the simulation runs is. This is especially important for data you use for drawing
+conclusions about the plant you modeled. Make sure to assign different seed values to the different
+random components of the random number streams. To consider how the random components
+Running Simulation Experiments
+10-864 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+statistically influence the results the ExperimentManager will change the seeds of the corresponding
+random number streams for each set of input values. This way you arrive at a set of observations for
+the output values under consideration.
+For this reason the ExperimentManager generates a statistical evaluation for each set of input
+values you enter. More detailed, for each output value and for fixed input values you will receive a
+confidence interval and a min-max interval combined in a box plot with a desired level of confidence.
+A confidence interval, which results from the observations, is an interval of numbers that contains
+the true mean value of the random number with the confidence level which you entered. The mean
+value of a random component of the simulation model is unknown, and it cannot be measured
+exactly, as the simulation runs only provide a finite number of realizations of the corresponding
+random output values.
+To statistically hedge the resulting data for random data, you not only average out the results of the
+different simulation experiments, but you also have to decide if the data permits to draw conclusions
+about the simulated system, despite fluctuations of the resulting data.
+Be aware that one cannot draw conclusions with absolute safety. One can only make statements
+about a system with random components with a confidence level (level of significance) you define.
+Compare the chapter about confidence intervals in the documentation that comes with the library
+DataFit.
+2. Optimize the results  of the simulation experiment.
+To determine the parameters that will lead to the desired simulation results, or to optimize the results
+of the simulation experiment, you can also use Genetic Algorithms.
+Note
+We modeled the dialog of the ExperimentManager with the object Dialog. For this reason the dialog
+box of the ExperimentManager does not use the Siemens PLM standard design, but the Windows
+design.
+Go to Run Experiments with the ExperimentManager
+Running Experiments with the ExperimentManager
+Run Experiments with the ExperimentManager
+You find the ExperimentManager in the Tools folder in the Class Library or on the toolbar Tools in the
+Toolbox.
+Running Experiments with the ExperimentManager
+Plant Simulation Help 10-865
+Unpublished work. © 2026 Siemens
+
+Your Plant Simulation license determines how you can use the ExperimentManager 
+ .
+• With a Runtime license you can execute experiments with a simulation model. You can modify
+parameters in tables. You cannot change the structure of the ExperimentManager model.
+• With an Application license, you can also change the structure of the model.
+• With a Professional license, a Standard license, or a Foundation license you can, in addition, define
+the experiments in a Method.
+• The Runtime license and the Student license cannot control distributed simulations.
+You can use computers with the following license types as simulation machines:
+With the setting Highest Available for the remote license you can use the different license types for the
+simulation machines. This way you can also use the controlling computer as a simulation machine.
+Run Experiments with the ExperimentManager
+10-866 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+A simulation study contains several experiments. Each experiment executes several simulation runs,
+each of which leads to an observation.
+Running a Simple Simulation Study
+Run a Simple Simulation Study
+You can execute a simple simulation study in three quick-and-easy steps.
+• Step 1: Define input and output values of the experiments.
+• Step 2: Run the experiments with the defined settings.
+• Step 3: Evaluate the results of the simulation study.
+You can also Refine the Settings and Set Static Parameters and Set Dynamic Parameters.
+Step 1: Define input and output values of the experiments
+In a simulation study you’ll examine how a set of input values, which are the model parameters, affects
+output values. The output values can be observed after a single simulation run. Each simulation study
+needs at least one output value.
+Running a Simple Simulation Study
+Plant Simulation Help 10-867
+Unpublished work. © 2026 Siemens
+
+To open the table into which you enter the output values, click the button Define Output Values on the
+tab Definition. An output value can be a method or an attribute of an object in your model. You can enter
+a description for the output values which the ExperimentManager show in all evaluations. This makes the
+results of the simulation study easier to understand.
+When you drag an object onto the ExperimentManager, it offers all numerical attributes and methods
+which can be used as output values.
+If the results of a simulation run are provided in a Plant Simulation table, you can use the entire table as
+output value of the study. To designate a table as the results table drag it onto the ExperimentManager.
+To open the table into which you enter the input values, click the button Define Input Variables on the
+tab Definition. An input value can be an attribute of an object or an entry in a table. Before executing an
+experiment, the ExperimentManager sets the input values in the simulation model. These input values are
+not changed in the simulations runs of an experiment.
+Step 1: Define input and output values of the experiments
+10-868 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Hold down the Shift key and drag an object onto the ExperimentManager and drop it there. This shows
+all attributes of the object in a dialog. To select one or more attributes, hold down Ctrl and click the
+attributes your are interested in. This opens the data table of all input values. Then, add other values. You
+can also enter a description of the input value which the ExperimentManager uses in all evaluations. The
+ExperimentManager checks the entries by closing this data table.
+Input values can also be parameters of probability distributions, which you have to type into the table.
+The ExperimentManager recognizes these probability distributions when holding down Shift, dragging an
+object onto the ExperimentManager and dropping it there: Uniform, Triangle, Normal, Lognorm, Erlang,
+Negexp, Geom, Hypgeo, Weibull, Binomial, Poisson, and Beta. To select one or several attributes of
+interest, hold down Ctrl and click the attributes of interest.
+Step 1: Define input and output values of the experiments
+Plant Simulation Help 10-869
+Unpublished work. © 2026 Siemens
+
+To set the input values for the experiments, as shown in the figure below, click the button Define
+Experiments on the tab Definition.
+After you have finished creating your simulation model, you can start running experiments with it. A
+simulation run always has to end. Many models might continue running after the processes, which interest
+you, have been simulated, for example to simulate failures, etc. When you use the method stop of the
+EventController in your simulation model, you have to call the method endSim of the ExperimentManager
+at the appropriate place. Instead, you can also set the duration of the simulation, by either entering an End
+time in the EventController or setting it with the attribute End.
+See also
+Select the Output Values for the Experiments in the Reference part of the Help
+Select the Input Values for the Experiments in the Reference part of the Help
+Define the Input Values in the Experiment Table in the Reference part of the Help
+Video on YouTube
+https://youtu.be/HKDhTbohV6M?si=tcZ63Doub1SXGZw0&t=68
+https://youtu.be/HKDhTbohV6M?si=1UaMMz81vspoflcj&t=168
+Step 2: Run the experiments with the defined settings
+In this step run the experiments with the defined settings.
+Proceed as follows:
+Video on YouTube
+10-870 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Procedure
+1. Click Reset to reset the ExperimentManager.
+2. Click Start to start the experiment run.
+Depending on the size of your simulation model, running the experiments can take a while. Plant
+Simulation show the currently running simulation in the dialog. At the end of the experiment run the
+ExperimentManager opens a report.
+When you defined several experiments with many simulation runs that take a long time to be executed,
+you can run them overnight.
+See also
+Controlling the Experiment Runs in the Reference part of the Help
+Step 2: Run the experiments with the defined settings
+Plant Simulation Help 10-871
+Unpublished work. © 2026 Siemens
+
+Step 3 Evaluate the results
+Step 3: Evaluate the results of the simulation study
+After the ExperimentManager has executed the simulation experiments, you will want to examine the
+results.
+You can:
+• View the Results as a Table.
+• View the Results in a Chart.
+• View the Results in a HtmlReport.
+See also
+Viewing Evaluations in the Reference part of the Help
+View the Results as a Table
+In this step we display the results of the simulation experiments in the result tables.
+Proceed as follows:
+Step 3 Evaluate the results
+10-872 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Procedure
+1. Click Open Results on the tab Evaluation to show an overview for all simulation experiments. The
+table Results show all input values and all mean values of the output values. To show a results table
+in a subtable, select the respective entry in a cell on the table and press F2.
+Note
+You can execute an experiment run without any input values. But each simulation study requires at
+least one output value.
+2. Click Detailed Results to show the values for all output values.
+The observations of each experiment represent a sample for each output value from which these are
+computed:
+• Mean value
+• Standard deviation
+• Minimum
+• Maximum
+• Left bound of the confidence interval
+• Right bound of the confidence interval
+The confidence intervals belong to the Confidence interval which you entered under Tools > Advanced
+Settings > Settings.
+View the Results as a Table
+Plant Simulation Help 10-873
+Unpublished work. © 2026 Siemens
+
+If you defined a table as output value, the table DetailedResults provides subtables with the following
+statistical values of the numerical entries of this table:
+• Mean value
+• Standard deviation
+• Minimum
+• Maximum
+The column Observations provides the results of all simulation runs for all output values.
+See also
+View Output Values of Interest in the Reference part of the Help
+View the Results in a Chart
+The ExperimentManager can generate a chart of the selected output values.
+You can select to show min-max intervals or confidence intervals for the output values. Under Tools >
+Advanced Settings > Settings you can select 
+  if the ExperimentManager shows
+the 25 percent, the 50 percent, and the 75 percent quartiles for the min-max intervals.
+This type of display is called a box plot. It shows the distribution of the observations of an output value of
+an experiment.
+View the Results in a Chart
+10-874 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also View Output Values of Interest in the Object Reference part of the Plant Simulation Help
+View the Results in a HtmlReport
+In this step we view the results of the simulation run in a HtmlReport.
+To show the results of the simulation experiment as a HtmlReport, click Report.
+You can select what the report shows under Tools > Advanced Settings > Report. You can select to
+automatically show the report at the end of the simulation study and to save the report. You can also
+select if the ExperimentManager saves the data of the table Results to an Excel file. This way you can
+publish the results of a study in a compact format. If you want to save the report or the Excel file to a
+folder, click Folder and select the target folder.
+To add a Chart which you inserted into your model to the Report, drag the Chart over the icon of the
+ExperimentManager and drop it there.
+View the Results in a HtmlReport
+Plant Simulation Help 10-875
+Unpublished work. © 2026 Siemens
+
+See also
+Show the Results in a Report in the Reference part of the Help
+Refining the Settings
+Refine the Settings
+Run a Simple Simulation Study describes the most basic way of running experiments with the
+ExperimentManager. Here you learn how to refine the settings when you Set Static Parameters and
+when you Set Dynamic Parameters.
+Setting Static Parameters
+Set Static Parameters
+Static parameters are specific values for each experiment for each parameter. If you want to, you can also
+Modify Settings in the Configuration Method.
+Modify Settings in the Configuration Method
+Under Tools > Advanced Settings > Settings you can configure the settings of your simulation model with
+a SimTalk method.
+Refining the Settings
+10-876 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Click the 
+  button, select a Method in the dialog Select Object and click Apply. Plant Simulation asks
+if you would like to format the Method. The parameter of data type integer designates the number of
+the experiment whose additional settings you can program. You can use all commands which SimTalk
+provides. The source code you enter into this Method modifies the settings for the experiment.
+Back to Set Static Parameters
+Setting Dynamic Parameters
+Set Dynamic Parameters
+Under Tools > Advanced Settings > Rules you can define dynamic parameters. For this type of
+parameterization the results of previous experiments produce the values for the input values of the current
+experiment.
+A rule is a logic expression that consists of a condition and an action. As soon as the condition of a rule is
+met, the associated action of the rule is taken.
+First enter the number of experiments you want the ExperimentManager to execute.
+Setting Dynamic Parameters
+Plant Simulation Help 10-877
+Unpublished work. © 2026 Siemens
+
+The ExperimentManager checks if the conditions you entered as the table condition and as the method
+condition on the tab do apply. It then takes the action(s) which you typed into the table action and
+programmed in the method action.
+Procedure
+1. To use dynamically changing parameters, select the check box use rules.
+2. Select one of the built-in rules from the drop-down list Select rule, Create a Rule of Your Own.
+3. Select the check box Rule is active, to activate the rule you selected. This rule will then be executed
+before the simulation experiment.
+4. If you want to, you can enter the number of the experiment(s) for which the rule applies.
+5. Enter a Priority. The greater the number you enter, the higher the priority will be: A rule with the
+priority 10 is executed before a rule with the priority 1.
+6. To use the rule which you selected for the first experiment, select the check box Use for first
+simulation run. When you do not select it, the ExperimentManager only uses the rule from the
+second experiment onward.
+Back to Refine the Settings
+Create a Rule of Your Own
+In this step we create a rule of our own.
+Create a Rule of Your Own
+10-878 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Proceed as follows:
+Procedure
+1. Click the button Create New Rule and enter a name for the rule into the dialog that opens.
+The Plant Simulation conventions for the Name of an object do apply.
+2. Click Table Condition. Enter your values into the table that opens.
+• Click into the cell and select the level of the Opening Parenthesis. Plant Simulation evaluates
+expressions in parenthesis from the inside to the outside, i.e., it evaluates the contents of the
+innermost expression in parenthesis first and then proceeds toward the outside one by one.
+• Enter the name of the Object whose attribute value you want to compare to another object.
+• Enter the name of an Attribute of this object.
+• Click into the cell and select an Operator that compares the attribute values: < (less than), >
+(greater than), = (equal to), ~=(about equal), or /= (unequal to).
+• Either enter the Value that the operator compares or the name of the Object whose attribute
+value is compared to the object you entered above.
+• Enter the name of an Attribute of this object.
+• Click into the cell and select the level of the Closing Parenthesis.
+• Click into the cell Boolean Operation and select an operator, AND or OR that connects the
+boolean values that result from evaluating the logical expression you defined in a row of the query
+table.
+3. If you want to, you can also test a condition in a Method. For this, click Method Condition and enter
+your source code into the Method that opens.
+Create a Rule of Your Own
+Plant Simulation Help 10-879
+Unpublished work. © 2026 Siemens
+
+4. Click Table Action. Enter your values into the table that opens:
+• Enter the name of the object whose attribute value you want to manipulate.
+• Enter the name of an attribute of this object.
+• Click into the cell and select an operator that manipulates the attribute value.
+• Enter the value that the operator adds, subtracts or equates to the value of the attribute you
+entered above.
+5. If you want to, you can also program a Method that executes an action. To do so, click Method
+Action and enter your source code into the Method that opens.
+Back to Set Dynamic Parameters
+Optimizing Models with Genetic Algorithms
+Optimize Models with Genetic Algorithms
+When your optimization task has a large number of different solution variants, we recommend to use
+Genetic Algorithms.
+Optimizing Models with Genetic Algorithms
+10-880 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The GAWizard 
+  integrates genetic algorithms into an existing simulation model. You can use it for
+optimizations in which the evaluation is based on a simulation run as well as for optimizations in which the
+evaluation is based on calculations in Methods.
+Note
+Your Plant Simulation license determines how you can use the GAWizard.
+Genetic Algorithms are stochastic optimization procedures that in most cases only produce an
+approximate solution. For the most common practical applications these approximate solutions do suffice.
+Genetic algorithms manage several solution proposals during the optimization. According to evolution in
+biology these solution proposals are called individuals. The individuals managed in a single optimization
+step are combined into a generation. The quality of a solution proposal is evaluated through a numerical
+value, the so-called fitness value.
+Solutions generated by Genetic Algorithms are passed to the simulation model, which in turn will be
+configured accordingly. Plant Simulation starts one or several simulation runs for each solution attempt. At
+the end of a simulation run the simulation model is going to pass the resulting fitness value back to the
+object GAWizard.
+When your evaluation takes place via a model containing random components, such as failures of
+machines, then you have to execute several simulation runs for each newly created individual. The
+fitness value is called observation. The genetic algorithm uses the mean value of all observations of the
+fitness values of an individual. Enter the number of observations per individual on the tab Define of the
+GAWizard. For a deterministic simulation, you will use a single observation per individual.
+When the genetic algorithm creates individuals defining the same parameterization, the GAWizard
+recognizes this and uses the fitness values of the already evaluated individuals. The optimization run
+thus does not waste additional time for multiple evaluations of an individual.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Back to Run Simulation Experiments
+Optimize Models with Genetic Algorithms
+Plant Simulation Help 10-881
+Unpublished work. © 2026 Siemens
+
+Configure the GAWizard
+In this step we configure the GAWizard.
+Proceed as follows to add the GAWizard:
+Procedure
+1. Click the toolbar Tools and insert the GAWizard into your simulation model. Double-click the icon to
+open the dialog of the GAWizard.
+You can define the optimization problem with the GAWizard by using:
+• Drag-and-Drop: Hold down Shift and drag the tables, the sequence of which you would like to
+optimize onto the GAWizard and drop it there. When you would like to optimize an attribute
+of an object, hold down Shift and drag this object onto the GAWizard, drop it and select the
+attribute. Then, you can change the value range of the parameters to be optimized into the table
+ProblemDefinition. To open this table, click the button Open next to Definition of the optimization
+parameter on the tab Define.
+Drag the object, whose attributes and methods you would like to use for evaluating the created
+solutions, onto the GAWizard and drop them there. Then, select the attributes and methods of the
+object. To weight these values differently, click Open next to Fitness calculation by table.
+• If you use the built-in GA objects for describing your optimization problem, first define a
+configuration method on the Tab Define of the GAWizard. Then hold down Shift and drag the
+GA objects (GASelection and/or GASequence and/or GARangeAllocation and/or GASetAllocation)
+onto the Wizard and click Apply. This registers all GA objects with the GAWizard. Then edit the
+configuration method. The attribute individual designates the table of the individual that is to be
+evaluated and that the genetic algorithm created. The first line of the source code shows how you
+can access the chromosomes of the individual. With the configuration method you can transmit all
+properties of the chromosomes to your simulation model. The result of the method is true when
+a parametrization can be executed with the values of the individual. When the parametrization
+fails, the respective individual will be assigned a bad fitness value, a so-called penalty value. The
+penalty value for unrealizable individuals is the attribute penaltyValue of the GAWizard. To change
+the value of this attribute, select the GAWizard in the Frame, into which you inserted it, and press
+the F8 key.
+Configure the GAWizard
+10-882 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+2. Select the direction of the optimization: Minimum or Maximum. Enter the Size of generation and
+the Number of generations on the tab Define.
+3. You can determine the fitness value with the GAWizard by using:
+• The table Fitness. Select the radio button Fitness calculation by table on the tab Define and click
+Open. This opens the table Fitness. Enter the names of the values into the cells of the column
+Target value. When the fitness value is determined by several target values, enter their weighting
+into the cells of the column Weighting.
+• You can let a method compute the fitness. To do so, select the respective radio button, insert a
+Method, and click Apply. If you want to, the Wizard can prepare a Method for computing the
+fitness. The return value is the fitness value and has to have a numeric data type, such as real or
+time for example
+4. Click Reset and Start on the tab Run to start the optimization.
+You can stop the optimization run after the individuals of the active generation have been completely
+evaluated and then modify the settings and the parameters of the object GAWizard. During the simulation
+run, you can click Stop on the tab Run. As long as Plant Simulation is still evaluating the individuals of the
+active generation the button shows Wait. When the button shows Start again you can click it to continue
+the optimization run for creating new generations.
+Configure the GAWizard
+Plant Simulation Help 10-883
+Unpublished work. © 2026 Siemens
+
+After Plant Simulation is finished with the optimization run, it shows a dialog with the time the
+optimization run took. The wizard transfers the input values for the best solution it found into the
+simulation model. You can now analyze how the optimized model behaves.
+To start additional optimization runs, click Reset and Start on the tab Run or click the icon of the
+GAWizard with the right mouse button and select Reset or Start and Stop on the context menu.
+Note
+The number of required simulation runs for an optimization can become quite large value.
+For a stochastic simulation the individuals should be evaluated by several simulation runs. You can
+enter the number of simulation runs for evaluating an individual on the tab Define > Observations per
+individual. The number of individuals to be evaluated results from the Number of generations and
+from the Size of generation. You can enter both values on the tab Define as well.
+In the first generation Plant Simulation evaluates the number of generations which you entered as the
+Size of generation. In each of the following generations it has to evaluate twice as many individuals.
+When, for example, you use 3 observations for evaluating an individual and create 10 generations with a
+frequently used Size of generation of 30, Plant Simulation has to execute 1710 simulation runs (3 * (30
++ 2 * 30 * 9)).
+The number of simulation runs, which the GAWizard executes, results from this formula:
+Number of simulation runs = observations per individual * (generation size + 2 * generation size *
+(number of generations - 1))
+The individuals created at a generation change of the Genetic Algorithm might already have been
+created and evaluated in a previous generation. If the number of individuals to be generated is not
+greater than 50,000 the GAWizard recognizes these individuals and applies the fitness values. Such
+individuals have the same ID in the table Statistics of Fitness Values on the tab Evaluate. The attribute
+lastGeneration4DuplicatesCheck of the GAWizard describes the last generation up to which the already
+evaluated individuals will be checked. If you use the default value -1, the GAWizard runs this check for all
+generations.
+Analyze the Results of the Optimization
+On the tab Run you can observe the optimization process. It shows the currently best fitness value at any
+time. Click Show Evolution on the tab Evaluate to open a diagram displaying the best, the average and
+the worst fitness values of each generation.
+You can, for example, detect, if additional optimization runs with the active settings produce better results
+or not.
+Analyze the Results of the Optimization
+10-884 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Click Show in the group HTML Report on the tab Evaluate to show the results and the course of the
+optimization in a Report. When a very great number of individuals have been created, we recommend to
+clear the check box Show detailed HTML report.
+You can, for example, detect, if the genetic algorithm is searching for the best results on the level of almost
+identical fitness values or if the fitness values of the offspring is still fluctuating quite a bit. For a stochastic
+simulation the chart shows Min-Max intervals of the fitness values of an individual an. When the fitness
+values fluctuate greatly, we recommend to check if an optimization of your model makes sense or not.
+To analyze the statistics table of the fitness values, click the respective buttons. Column 7 of the statistics
+table shows if individuals were created multiple times but evaluated once only.
+Click Show next to Data of the report on the tab Evaluate to show the results and the history of the
+optimization. When Plant Simulation created a large number of individuals, we recommend to not select
+the check box Show detailed report.
+Note
+You can use the attribute DecimalSeparator of data type string to set the values "." (period) or ","
+(comma) as the decimal separator. The results tables then use this decimal separator, compare Text File
+Format > Decimal Separator.
+For the Advanced User
+Here we demonstrate techniques for the advanced user.
+To start several optimizations one after the other with a BATCH file, compare Specifying Start Options,
+Plant Simulation may not open any modal dialogs, which require user actions.
+For the Advanced User
+Plant Simulation Help 10-885
+Unpublished work. © 2026 Siemens

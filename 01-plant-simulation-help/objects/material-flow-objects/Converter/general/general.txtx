@@ -1,0 +1,606 @@
+Image
+Description
+Use the Converter to model materials handling equipment. If the MU moves onto the Converter it either
+passes straight through in the conveying direction or it is, for example, lifted onto a laterally moving
+transport level by a lifting mechanism and then conveyed laterally to the left or laterally to the right.
+If the part enters on side 1 or 3, straight means that the part keeps its conveying direction and exits on the
+opposite side. The insertion direction for this lateral movement is from side 3 to side 1 when the insertion
+direction of the Converter is from left to right, i.e., up to down.
+You can query the side on which the part enters the Converter with the method getObjectOfSide
+[SimTalk].
+The Converter can only be connected to a single object per side. The numbers designate the side of the
+Converter at which the MU exits. The figures below illustrate the sides depending on the direction in which
+you inserted the Converter into your simulation model.
+Converter [object]
+11-2240 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insertion direction left to right, part enters on
+side 2 Looks like this in 3D
+3, laterally to the left.
+The MU moves with its front in the direction of
+motion of the material flow. After the Converter
+has lifted the MU, it moves with its left-hand side in
+the direction of motion.
+As top to bottom is assumed for the insertion
+direction of lateral movement, the Converter then
+is moving backward and the left side of the MU
+is the rear as long as the MU is booked on the
+Converter.
+ 
+1, laterally to the right.
+The MU moves with its front in the direction of
+motion of the material flow. After the Converter
+has lifted the MU, it moves with its right-hand side
+in the direction of motion.
+ 
+0, along the insertion direction.
+The MU moves with its front in the direction
+of motion of the material flow and retains that
+orientation while being conveyed straight through
+along the insertion direction.
+Converter [object]
+Plant Simulation Help 11-2241
+Unpublished work. © 2026 Siemens
+
+As long as MUs are only conveyed in one direction, the Converter can accommodate any number of MUs. If
+the MU is to change its conveying direction, the Converter can only lift and transport a single MU. MUs can
+arrive from all sides and be conveyed to all sides.
+You can determine the side to which the Converter conveys the MU in the Strategy Method. The
+destination objects can be switched to the respective conveying direction at the same time. You can also
+select the conveying Strategy according to which the Converter conveys the MUs. The preferred direction
+is the direction in which you inserted the Converter. It then conveys the MUs without any time delay in this
+direction. If a MU leaves the preferred direction, it has to move onto the Converter, is then lifted, while the
+Moving Time elapses, and can then exit on either side.
+After it conveyed a MU to the side, the Converter has to be lowered back into its default position, before it
+can convey the next part. You can specify the lifting time and the lowering time of the Converter, i.e., the
+Moving Time.
+When you connect the Converter with its predecessor or successor, you can determine with the mouse at
+which side of the Converter the Connector docks. To do so, click the left side, the bottom side, the top, or
+the right side of the Converter. You can also set the side with the method connect of the Connector.
+Left Bottom Top Right
+The Converter is a length-oriented object. You can specify enter the Relative Converting Point For Length
+and/or the Relative Converting Point For Width.
+Converter [object]
+11-2242 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+If the MU is converted at the converting point, meaning that the MU is located on the converting point
+of the Converter, the Converter has to provide enough space to accommodate the MU:
+• The distance of the Booking Point Length from the rear of the MU can be at most as great as the
+distance of the distance of the converting point for the length from the left side of the Converter.
+• The distance of the Booking Point Length from the front of the MU can be at most as great as the
+distance of the converting point for the length from the right side of the Converter.
+• The distance of the Booking Point Width from the left side of the MU can be at most as great as the
+distance of the converting point for the width from side 3 of the Converter.
+• The distance of the Booking Point Width from the right side of the MU can be at most as great as the
+distance of the converting point for the width from side 1 of the Converter.
+You can select different configurations for the Converter on the tab Appearance.
+Converter [object]
+Plant Simulation Help 11-2243
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the Converter, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Converter, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Converter to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Converter on the Home ribbon tab.
+Converter [object]
+11-2244 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Convey Parts Laterally with the Converter
+Video on YouTube
+https://youtu.be/hOvdrDnvXXo?si=TgnQivMCDc9eD3nU&t=13
+Dialog Box of the Converter
+Dialog Box of the Converter
+Double-click the icon of the Converter to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes [Converter]
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+You can change the length of the graphic and the anchor points of the Converter by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+Dialog Box of the Converter
+Plant Simulation Help 11-2245
+Unpublished work. © 2026 Siemens
+
+Length [text box] - Converter
+Type the Length of the Converter into the text box.
+Remarks
+After you inserted it, Plant Simulation shows its length here. If the MU is conveyed straight through
+along the direction of insertion, its length and the length of the MUs determine how many MUs it can
+accommodate.
+Note
+If the Converter is to convey MUs perpendicular, it has to provide enough room for the Length and the
+Width of the MU to completely fit on the Converter, when the booking point is located on the converting
+point in the center of the Converter.
+You can change the length of the graphic and the anchor points of the Converter by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+Length [SimTalk] - Converter
+Length [text box] - Converter
+11-2246 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [text box] - Converter
+Type the Width of the Converter into the text box.
+Remarks
+Plant Simulation inserts the Converter with the standard width of 1 meter.
+Note
+If the Converter is to convey MUs perpendicular, it has to provide enough room for the Length and the
+Width of the MU to completely fit on the Converter, when the booking point is located on the converting
+point in the center of the Converter.
+SimTalk
+Width [SimTalk] - Converter
+Width [text box] - Converter
+Plant Simulation Help 11-2247
+Unpublished work. © 2026 Siemens
+
+Speed [text box] - Converter
+Type the Speed into the text box with which the Converter conveys the MUs.
+Remarks
+Type in -1 for an infinite speed.
+SimTalk
+Pauses [Transporter]
+Speed [text box] - Converter
+11-2248 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - Converter
+Type the Capacity into the text box, i.e., the number of MUs, which the Converter can hold at any one
+time.
+Remarks
+The default value -1 stands for an infinite capacity.
+If the Converter conveys MUs along the insertion direction, you can, for example, use the Capacity to
+allow the Converter to only convey this number of MUs at the same time.
+This only limits the possible number of MUs. If the Converter conveys MUs it still conveys a single MU at a
+time though.
+SimTalk
+Capacity [SimTalk] - Converter
+Capacity [text box] - Converter
+Plant Simulation Help 11-2249
+Unpublished work. © 2026 Siemens
+
+Relative Converting Point For Length
+Type the relative position of the converting point along the length of the Converter into the text box.
+Remarks
+The converting point is the point at which the Converter changes the conveying direction of the MUs it
+conveys.
+You can type in a value between 0.0 and 1.0, denoting a position between 0 % and 100 %.
+Note
+The Converter does not show the location of the converting point on its graphic in the Frame.
+SimTalk
+RelConvertingPointL [SimTalk]
+Relative Converting Point For Length
+11-2250 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Relative Converting Point For Width
+Type the relative position of the converting point along the width of the Converter into the text box.
+Remarks
+The converting point is the point at which the Converter changes the conveying direction of the MUs it
+conveys.
+You can type in a value between 0.0 and 1.0, denoting a position between 0 % and 100 %.
+Note
+The Converter does not show the location of the converting point on its graphic in the Frame.
+SimTalk
+RelConvertingPointW [SimTalk]
+Relative Converting Point For Width
+Plant Simulation Help 11-2251
+Unpublished work. © 2026 Siemens
+
+Automatic Stop [check box] - Converter
+To set the Current Speed of the Converter to 0 when it does not transport a part, select this check box.
+Remarks
+Automatically stopping the Converter might, for example, be the case if it is empty or if it is blocked
+because a MU cannot leave it.
+If the Speed of the Converter is 0, the Energy State changes to Operational.
+SimTalk
+AutomaticStop [SimTalk] - AngularConverter
+Automatic Stop [check box] - Converter
+11-2252 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Go to Default Position [check box] - Converter
+To make the Converter return to its default position after the MU has left the Converter, select this check
+box.
+Remarks
+The Converter does not return to its default position if a MU is waiting that wants to enter laterally.
+SimTalk
+GoToDefaultPosition [SimTalk] - Converter
+Go to Default Position [check box] - Converter
+Plant Simulation Help 11-2253
+Unpublished work. © 2026 Siemens
+
+Strategy [drop-down list] - Converter
+Select the Strategy according to which the Converter conveys the MUs to the next material flow object.
+Remarks
+You can select one of these settings:
+• Default Exit
+Makes all MUs exit through the Default Exit which you select to the successor attached to that exit.
+• Straight
+Conveys the MU straight through to the next station.
+If several equally fast routes exist, the route, which leads straight through the Converter will be
+preferred, as the parts do not have to be singularized for this. If several Converters are located within
+the fastest route, Plant Simulation selects the route of the equally fast routes where the part must be
+converted the least. A useful side effect is that Plant Simulation finds the clearly shortest route more
+often, meaning that the entire route to the destination is known immediately.
+• MU Attribute
+Conveys the MUs according to a built-in or a user-defined attribute of the MU. Click Open List and enter
+the name of the Attribute of the MU, the Value of the attribute, and select on which Side it is to exit.
+Type in the number of the Default Exit. Repeat this for each attribute you specify.
+The numbers designate the side of the Converter at which the MU exits. The figures below illustrate the
+sides depending on the direction in which you inserted the Converter into your simulation model.
+• MU Name
+Conveys the MU according to its Name. Click Open List and type in the name of the MU and select on
+Which Side it is to exit.
+Enter the number of the Default Exit.
+Strategy [drop-down list] - Converter
+11-2254 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Method
+Conveys the MUs according to the attribute ExitForMU you enter into the Strategy Method. Here you
+determine the side of the Converter at which the MU will exit the Converter. Select the method or enter
+the name of the method into the text box Strategy Method.
+• Feed in
+Enables MUs from a branch line to only enter the main line if no MU is located on the main line within
+the Free Space which you enter. The Free Space is the distance between two successive MUs on the
+main line.
+Note
+The first-come-first-served principle applies for all strategies, except for Feed In, meaning a MU, which
+has a matching entrance and a matching target, still cannot enter the object after the Moving Time
+has passed if another MU is already waiting, even if a Moving Time is required for this part as
+well. The main conveyor only has precedence for the strategy Feed In. Waiting MUs from a branch
+conveyor still have to wait unless the Moving Time has already started.
+• Method at Converting Point
+Determines the target with the attribute ExitForMU at the converting point, not already before the MU
+enters the Converter. This strategy is only available for a Capacity of 1.
+Strategy [drop-down list] - Converter
+Plant Simulation Help 11-2255
+Unpublished work. © 2026 Siemens
+
+The MU always stops at the converting point. Then, Plant Simulation calls the method for determining
+the target. In the method you can, for example, use ?.ExitForMU := 1.
+Select the method or type the name of the method into the text box Strategy Method.
+Note
+As the Strategy Method is used for determining the side of the exit, the Strategy Method will not be
+called if the MU has a route and Automatic Routing is activated.
+SimTalk
+Strategy [SimTalk] - Converter
+Strategy Method [Converter]
+ExitForMU [SimTalk]
+See also
+Convey Parts Laterally with the Converter
+Convey Parts According to a Strategy Control
+Strategy [drop-down list] - Converter
+11-2256 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Strategy Method [Converter]
+Modifies the built-in behavior of the object. The object calls the Strategy Method as soon as the MU wants
+to exit the Converter.
+Remarks
+The Strategy Method sets the side of the Converter at which the MU will exit the Converter. Set the side
+with the attribute ExitForMU.
+Plant Simulation executes the Strategy Method when the MU has reached the converting point for the
+setting Strategy > Method at Converting Point.
+Note
+As the Strategy Method is used for determining the side of the exit, the Strategy Method will not be
+called when the MU has a route and automatic routing is activated.
+The numbers designate the side of the Converter at which the MU exits. The figures below illustrate the
+sides depending on the direction in which you inserted the Converter into your simulation model.
+Note
+Do not use an Entrance Control or an Exit Control for determining the target of the part. This point in
+time at which they are called is too late, as the target has to be determined earlier in time.
+Strategy Method [Converter]
+Plant Simulation Help 11-2257
+Unpublished work. © 2026 Siemens
+
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+Strategy Method [Converter]
+11-2258 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The default strategy method as a user-defined attribute looks like this:
+param entranceNo: integer
+?.ExitForMU := 0 /* number of exit */
+SimTalk
+StrategyCtrl [SimTalk] - Converter
+See also
+Select Object [for controls]
+Convey Parts According to a Strategy Control
+Strategy Method [Converter]
+Plant Simulation Help 11-2259
+Unpublished work. © 2026 Siemens
+
+Default Exit [drop-down list]
+Select the Default Exit at which the MU exits the Converter for the Strategies > Default Exit, MU
+Attribute, and MU Name.
+Remarks
+You can select one of these settings:
+• 1, which stands for laterally to the right in the insertion direction
+• 2, which stands for against the insertion direction
+• 3, which stands for laterally to the left in the insertion direction
+• 0, which stands for along the insertion direction
+The numbers designate the side of the Converter at which the MU exits. The figures below illustrate the
+sides depending on the direction in which you inserted the Converter into your simulation model.
+SimTalk
+DefaultExit [SimTalk]
+See also
+Strategy [drop-down list] - Converter
+Default Exit [drop-down list]
+11-2260 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open List [button] - Converter
+To open the exit list for the MUs, click this button.
+Remarks
+For the Strategy > MU Attribute and MU Name you can open the exit list and type in the information
+pertaining to the respective strategy.
+For the Strategy > MU Attribute you can type in the name of the Attribute of the MU, its Value and select
+on Which Side it exits. Repeat this for each attribute you specify.
+The numbers designate the side of the Converter at which the MU exits. The figures below illustrate the
+sides depending on the direction in which you inserted the Converter into your simulation model.
+For the Strategy > MU Name you can type in the Name of the attribute of the MU and select on Which
+Side it exits. Repeat this for each attribute you specify.
+SimTalk
+Move Down [source code]
+FailDuration [SimTalk]
+Open List [button] - Converter
+Plant Simulation Help 11-2261
+Unpublished work. © 2026 Siemens
+
+See also
+Data Held in Tabular Form in Attributes [material flow objects]
+Convey Parts Laterally According to Their Name
+Open List [button] - Converter
+11-2262 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Attribute Type [drop-down list] - Converter
+For the Strategy > MU Attribute you can select the data type of the attribute that determines the material
+flow object to which the Converter moves the part.
+SimTalk
+AttributeType [SimTalk] - Converter
+See also
+Strategy [drop-down list] - Converter
+Data Types [SimTalk]
+Tab Times
+Tab Times [Converter]
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+The Converter provides the Moving Time in addition.
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+Attribute Type [drop-down list] - Converter
+Plant Simulation Help 11-2263
+Unpublished work. © 2026 Siemens
+
+See also
+Recovery Time [general description]
+Recovery Time Starts
+Cycle Time [general description]
+Moving Time [drop-down list] - Converter
+Tab Times [Converter]
+11-2264 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Moving Time [drop-down list] - Converter
+The Moving Time is the time it takes the Converter to lift the MU onto a different conveying level and to
+then lower itself and move back to the default position.
+Remarks
+The Moving Time always elapses when the Converter has to change the direction of the MU and when a
+MU enters from a side, i.e., not along the preferred insertion direction.
+Select a distribution for the Moving Time from the drop-down list, and type the values, which that
+distribution requires, into the text box.
+Plant Simulation shows these values along the upper border of the tab. You can also type in a constant
+time (Const).
+If you select the Formula distribution, you can type in a numeric expression or the name of a Method. You
+can use the anonymous identifier @ to access the part for which the Moving Time applies.
+SimTalk
+MovingTime [SimTalk] - Converter
+MovingTime.Type [SimTalk] - distribution parameter
+putAttributeNamesIntoTable [SimTalk] - distributions
+Moving Time [drop-down list] - Converter
+Plant Simulation Help 11-2265
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2266 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+Plant Simulation Help 11-2267
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Select Object [for controls]
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls
+11-2268 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [Converter]
+Statistics is described under the Tab Statistics.
+In addition, the Converter collects these statistical values:
+Item English Description Read-only attribute Item German
+Moving Empty Shows the portion of
+the statistics collection
+period during which the
+Converter was raising or
+lowering itself without
+conveying a MU.
+StatMovingEmptyPorti
+on [SimTalk]
+Umsetzen leer
+Moving Loaded Shows the portion of
+the statistics collection
+period during which the
+Converter was raising
+or lowering itself while
+conveying a MU.
+StatMovingLoadedPort
+ion [SimTalk]
+Umsetzen belegt
+To view Moving Time in the Statistics Report, select View > Show Statistics Report in the dialog of the
+object. You can also click the right mouse button in the Frame and select Show Statistics Report or you
+can press F6.
+Tab Statistics [Converter]
+Plant Simulation Help 11-2269
+Unpublished work. © 2026 Siemens
+
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics [Converter]
+11-2270 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+Plant Simulation Help 11-2271
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the Converter transports parts costs accrue which result from the sum of the total investment costs
+and the total operating costs.
+Note
+The total investment costs only accrue during the Depreciation Period.
+The costs are allocated to the part, proportional to the length of the part to the active length of the
+Converter, as accrued costs. Thus, a longer part is allocated higher costs as it occupies a greater part of
+the Converter.
+If the Converter is empty, the costs remain with the Converter as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+11-2272 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-2273
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2274 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Backward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+View Menu
+Plant Simulation Help 11-2275
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2276 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+Plant Simulation Help 11-2277
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Converter
+_Methods of the Converter
+The Converter provides:
+• The methods listed in the table of contents to the left.
+• The _Methods of Curved Objects.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Help Menu
+11-2278 Plant Simulation Help
+Unpublished work. © 2026 Siemens

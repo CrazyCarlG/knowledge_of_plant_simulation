@@ -1,0 +1,234 @@
+ObjectWidth [SimTalk] - Button
+Sets the Width of the Button designated by <Path> with which it is shown in the Frame.
+Remarks
+If you enter a long label, you have to adjust the width so that the label fits on the button without the text
+being cut off.
+Type
+Attribute
+Syntax
+<Path>.ObjectWidth:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyButton.ObjectWidth := 4 // meters
+SimTalk
+Width [text box] - Button
+ObjectHeight [SimTalk] - Button
+DropDownList
+DropDownList [object]
+Use the object DropDownList for showing a drop-down list in the Frame. When you select one of the items,
+it executes the action which you programmed in the control.
+Image
+ObjectWidth [SimTalk] - Button
+11-5198 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+The DropDownList provides the user with several options, one of which he can select. You can define the
+items, which the DropDownList shows, either in its dialog or with the attribute Items.
+Whenever the user of your DropDownList selects another item, the drop-down list executes the action
+which you programmed in the Control.
+The DropDownList looks like this by default:
+Appearance
+without caption
+Appearance
+with caption
+Note
+Plant Simulation only accepts the click the DropDownList if it occupies at least 10 pixels in each direction
+in the model window. If you zoom out very far, the picture of the DropDownList might become too
+small, preventing Plant Simulation to recognize it reliably.
+To open its dialog box, click the drop-down list with the right mouse button and select Open on the
+context menu.
+To select the drop-down list in the Frame window, you can also drag a marquee over its icon.
+You can also click a DropDownList and select an item in it in a sub-Frame and trigger the respective action.
+DropDownList [object]
+Plant Simulation Help 11-5199
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the DropDownList, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the DropDownList, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DropDownList to your simulation model, click 
+  Manage Class Library > Basic
+Objects > UserInterface > DropDownList on the Home ribbon tab.
+See also
+Select an Option from a Drop-down List
+Configure the Check Box and the Drop-down List
+Dialog Box of the DropDownList
+Dialog Box of the DropDownList
+Click the DropDownList, which you inserted into a Frame, with the right mouse button and select Open on
+the context menu to open its dialog box.
+Dialog Box of the DropDownList
+11-5200 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-5201
+Unpublished work. © 2026 Siemens
+
+Width [text box] - DropDownList
+Type in the Height in meters with which the DropDownList is shown in the Frame.
+Remarks
+If you type in long names for the Items, you have to adjust the width so that the names of the items in the
+drop-down list are not cut off.
+To change the width, you can also hold down Ctrl+Shift and drag the left or right side of the icon. Plant
+Simulation shows the width in meters.
+SimTalk
+ObjectWidth [SimTalk] - DropDownList
+Width [text box] - DropDownList
+11-5202 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Height [text box] - DropDownList
+Type in the Height in meters with which the DropDownList is shown in the Frame.
+Remarks
+If you type in a Height of more than 30 pixels, Plant Simulation uses a larger font to display the Label of
+the drop-down list.
+To change the height, you can also hold down Ctrl+Shift and drag the top or the bottom of the icon.
+SimTalk
+ObjectHeight [SimTalk] - DropDownList
+Height [text box] - DropDownList
+Plant Simulation Help 11-5203
+Unpublished work. © 2026 Siemens
+
+Value [text box] - DropDownList
+Type in which item in the DropDownList will be selected when you open it. The value is identified by its
+index number.
+Remarks
+This is one of the items which you typed into the list of Items.
+Note
+If you localize the items to another language, you will usually use the Value instead of the attribute
+Item. The value is a number which is language-independent, while the Item is a string which differs from
+language to language.
+SimTalk
+Value [SimTalk] - DropDownList
+Value [text box] - DropDownList
+11-5204 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Items [button] - DropDownList
+To open the list, into which you type the Items which the DropDownList displays when you click it, click
+this button.
+Remarks
+If you want to use the index number to access an item in the list, use the attribute Value.
+If you want to use the name to access an item in the list, use the attribute Item.
+SimTalk
+Items [SimTalk] - DropDownList
+Item [SimTalk] - DropDownList
+See also
+Configure the Feeder Line with Sensor and Sensor Control
+Items [button] - DropDownList
+Plant Simulation Help 11-5205
+Unpublished work. © 2026 Siemens
+
+Control [DropDownList]
+Modifies the built-in behavior of the object. The object calls the Control when you select an item from the
+DropDownList in the Frame.
+Remarks
+The anonymous identifiers ? and @ in the Control are set to the DropDownList when the method is called.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Control [DropDownList]
+11-5206 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+A control might, for example, look like this:
+switch ?.Value
+  case 1
+    print "Item 1 selected"
+  case 2 
+    print "Item 2 selected"
+end
+SimTalk
+Control [SimTalk] - DropDownList
+See also
+Select Object [for controls]
+Configure the Check Box and the Drop-down List
+Item [SimTalk] - DropDownList
+Value [SimTalk] - DropDownList
+Control [DropDownList]
+Plant Simulation Help 11-5207
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-5208 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-5209
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+11-5210 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Controls
+Edit Observers
+See also
+Tools Menu [general description]
+Tools Menu
+Plant Simulation Help 11-5211
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the DropDownList
+Methods of the DropDownList
+The DropDownList provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+11-5212 Plant Simulation Help
+Unpublished work. © 2026 Siemens

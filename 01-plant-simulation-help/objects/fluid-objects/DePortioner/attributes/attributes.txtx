@@ -1,0 +1,245 @@
+CurrentAmount [SimTalk] - DePortioner
+Returns the Current Amount of the fluid in the DePortioner designated by <Path> at the moment.
+Type
+Read-only attribute
+Syntax
+<Path>.CurrentAmount → real
+Return Value
+The return value has the data type real.
+The current amount is measured in liters.
+Example
+print MyDePortioner.CurrentAmount
+See also
+Current Amount [DePortioner]
+Attributes of the DePortioner
+_Attributes of the DePortioner
+The DePortioner provides:
+• The attributes listed in the table of contents to the left.
+• The _Attributes of the Fluid Objects.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+CurrentAmount [SimTalk] - DePortioner
+11-2938 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDePortioner.AmountPerMU := 10
+• To get the value of an attribute, you might, for example, type:
+print MyDePortioner.AmountPerMU
+posit := MyStation.Cont.XPos
+_Attributes of the DePortioner
+Plant Simulation Help 11-2939
+Unpublished work. © 2026 Siemens
+
+AmountPerMU [SimTalk] - DePortioner
+Sets the total amount in liters of the material, which the DePortioner designated by <Path> creates.
+Remarks
+AmountPerMU applies when you select Fixed under Fluid Depends On/FluidDependsOn.
+Type
+Attribute
+Syntax
+<Path>.AmountPerMU:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyDePortioner.AmountPerMU := 20
+SimTalk
+FluidDependsOn [SimTalk]
+See also
+Amount per MU [DePortioner]
+Fluid Depends On
+AmountPerMU [SimTalk] - DePortioner
+11-2940 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+AttrNameAmount [SimTalk]
+Sets the name of the user-defined Amount Attribute of the MU, which defines the amount of the material
+which the DePortioner designated by <Path> creates.
+Remarks
+AttrNameAmount applies if you select MU Attribute as the definition method of the setting
+FluidDependsOn.
+Type
+Attribute
+Syntax
+<Path>.AttrNameAmount:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDePortioner.AttrNameAmount := "Amount"
+SimTalk
+FluidDependsOn [SimTalk]
+See also
+Amount Attribute
+Fluid Depends On
+AttrNameAmount [SimTalk]
+Plant Simulation Help 11-2941
+Unpublished work. © 2026 Siemens
+
+AttrNameMaterial [SimTalk]
+Sets the name of the user-defined Material Attribute of the MU, which defines the material which the
+DePortioner designated by <Path> creates.
+Remarks
+AttrNameMaterial applies when you select MU Attribute under FluidDependsOn.
+Type
+Attribute
+Syntax
+<Path>.AttrNameMaterial:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDePortioner.AttrNameMaterial := "Material"
+See also
+FluidDependsOn [SimTalk]
+See also
+Material Attribute
+Fluid Depends On
+AttrNameMaterial [SimTalk]
+11-2942 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FluidDependsOn [SimTalk]
+Sets how the DePortioner designated by <Path> creates the material and the amount of the fluid.
+Remarks
+The name of each material that is to be used has to be defined in the MaterialsTable.
+Type
+Attribute
+Syntax
+<Path>.FluidDependsOn:string
+Assignment Value
+You can assign a value of data type string.
+You can specify:
+• "Fixed": Set the material and the amount per MU under Material/Material and Amount per MU/
+AmountPerMU.
+• "MU Name": Set the material and the amount per MU under Mapping table/MappingTable.
+• "MU Attribute": Set the material and the amount per MU under Material attribute/
+AttrNameMaterial and Amount attribute/AttrNameAmount. These are user-defined attributes of the
+MU which you have to create.
+Example
+MyDePortioner.FluidDependsOn := "Fixed"
+See also
+Fluid Depends On
+MaterialsTable
+FluidDependsOn [SimTalk]
+Plant Simulation Help 11-2943
+Unpublished work. © 2026 Siemens
+
+MappingTable [SimTalk]
+Sets the name of the data table that contains the MU Name of the arriving MU, the Material, and the
+Amount of the fluid, which the DePortioner designated by <Path> creates.
+Remarks
+MappingTable applies when you select MU Name under FluidDependsOn.
+Type
+Attribute
+Syntax
+<Path>.MappingTable:path
+Assignment Value
+You can assign a value of data type path.
+Example
+MyDePortioner.MappingTable := MyMappingTable
+SimTalk
+FluidDependsOn [SimTalk]
+See also
+Mapping Table
+Fluid Depends On
+MappingTable [SimTalk]
+11-2944 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Material [SimTalk] - DePortioner
+Sets the name of the material which the DePortioner designated by <Path> creates.
+Remarks
+Material applies if you select Fixed under FluidDependsOn.
+Type
+Attribute
+Syntax
+<Path>.Material:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDePortioner.Material := "StandardMaterial"
+SimTalk
+FluidDependsOn [SimTalk]
+See also
+Material [DePortioner]
+Fluid Depends On
+Material [SimTalk] - DePortioner
+Plant Simulation Help 11-2945
+Unpublished work. © 2026 Siemens
+
+MaterialsTable [SimTalk] - DePortioner
+Sets the MaterialsTable which contains the data of the different materials which the DePortioner
+designated by <Path> can create.
+Type
+Attribute
+Syntax
+<Path>.MaterialsTable:path
+Assignment Value
+You can assign a value of data type path.
+Example
+MyDePortioner.MaterialsTable := MyMaterialsTable
+See also
+Materials Table [DePortioner]
+MaterialsTable [SimTalk] - DePortioner
+11-2946 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+OutflowRate [SimTalk] - DePortioner
+Sets the outflow rate with which the fluid flows out of the DePortioner designated by <Path>.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+The material then flows off through objects of type Pipe 
+  to the next object in the flow of materials.
+Note
+The current Outflow Rate depends on the number of attached Pipes. Let's say you attached two Pipes,
+then the specified Outflow Rate flows through each one of these Pipes in case the Outflow Rate of the
+connected Pipes permits this.
+If you just want to let the specified amount flow out of the object, attach a single Pipe and split that up
+into several Pipes later on.
+Type
+Attribute
+Syntax
+<Path>.OutflowRate:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyDePortioner.OutflowRate := 1
+See also
+Outflow Rate [DePortioner]
+OutflowRate [SimTalk] - DePortioner
+Plant Simulation Help 11-2947
+Unpublished work. © 2026 Siemens
+
+RecoveryTime [SimTalk] - DePortioner
+Sets the duration of the Recovery Time of the DePortioner designated by <Path>.
+Remarks
+The Recovery Time is the time which is required to flush and clean the DePortioner and prepare it for the
+next process.
+This is the time during which no material will be accepted after the MU exited the object.
+Type
+Attribute
+Syntax
+<Path>.RecoveryTime:time
+Assignment Value
+You can assign a value of data type time.
+Specify 0 to allow materials to enter continually.
+Example
+MyDePortioner.RecoveryTime := 1:00:00
+See also
+RecoveryTime [SimTalk] - Mixer
+PatchMatrix
+PatchMatrix
+Use the object PatchMatrix to connect an entrance pipe with an exit pipe to control the flow of the fluid
+materials within the plant.
+Image
+RecoveryTime [SimTalk] - DePortioner
+11-2948 Plant Simulation Help
+Unpublished work. © 2026 Siemens

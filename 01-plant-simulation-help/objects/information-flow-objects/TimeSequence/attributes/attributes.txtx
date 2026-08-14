@@ -1,0 +1,243 @@
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyTimeSequence.Full
+Attributes of the TimeSequence
+_Attributes of the TimeSequence
+The TimeSequence provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of Lists and Tables.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the TimeSequence
+Plant Simulation Help 11-4325
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyTimeSequence.ReferenceTime := str_to_time("1:00:00:00.00")
+• To get the value of an attribute, you might, for example, type:
+print MyTimeSequence.Active
+posit := Station.Cont.XPos
+_Attributes of the TimeSequence
+11-4326 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Absolute [SimTalk] - TimeSequence
+Sets the Time Reference of the TimeSequence designated by <Path> to Absolute (true) or Relative
+(false).
+Type
+Attribute
+Syntax
+<Path>.Absolute:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyTimeSequence.Absolute := true
+See also
+Time Reference [TimeSequence]
+Absolute [SimTalk] - TimeSequence
+Plant Simulation Help 11-4327
+Unpublished work. © 2026 Siemens
+
+Active [SimTalk] - TimeSequence
+Activates the object designated by <Path> (true), i.e., makes it record data, or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.Active:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyTimeSequence.Active := true
+See also
+Active [check box] - TimeSequence
+Active [SimTalk] - TimeSequence
+11-4328 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DefaultValue [SimTalk]
+Sets the Default Value of the TimeSequence designated by <Path>.
+Remarks
+The data type of the TimeSequence matches the data type of the column Value on the tab Contents of
+the TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.DefaultValue:any
+Assignment Value
+You can assign a value of data type any.
+Example
+MyTimeSequence.DefaultValue := "Body"
+See also
+Default Value [TimeSequence]
+DefaultValue [SimTalk]
+Plant Simulation Help 11-4329
+Unpublished work. © 2026 Siemens
+
+Path [SimTalk] - TimeSequence
+Sets the Path to the value which the TimeSequence designated by <Path> is to record.
+Remarks
+The value can be specified as a relative or as an absolute path.
+Type
+Attribute
+Syntax
+<Path>.Path:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyTimeSequence.Path := "Station.NumMU"
+MyTimeSequence.Path := "&MyVariable"
+See also
+Value [TimeSequence]
+Path [SimTalk] - TimeSequence
+11-4330 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ReferenceDate [SimTalk] - TimeSequence
+Sets the offset value of the time sequence inputs for the setting Time Reference > Absolute of the
+TimeSequence designated by <Path>.
+Remarks
+Plant Simulation adds it to each time value in the TimeSequence table. By changing the reference time,
+you can shift the values in time without re-entering the data.
+Type
+Attribute
+Syntax
+<Path>.ReferenceDate:dateTime
+Assignment Value
+You can assign a value of data type dateTime.
+Example
+ts1.ReferenceDate := sysdate
+See also
+Start Date [Trigger]
+ReferenceDate [SimTalk] - TimeSequence
+Plant Simulation Help 11-4331
+Unpublished work. © 2026 Siemens
+
+ReferenceTime [SimTalk] - TimeSequence
+Sets the Start Time of the TimeSequence designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.ReferenceTime:time
+Assignment Value
+You can assign a value of data type time.
+Example
+ts1.ReferenceTime := str_to_time("1:00:00:00.00")
+See also
+Start Time [Trigger]
+ReferenceTime [SimTalk] - TimeSequence
+11-4332 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sample [SimTalk]
+Makes the TimeSequence designated by <Path> record data periodically (true) or watch data, i.e., records
+them only when its value changes (false).
+Type
+Attribute
+Syntax
+<Path>.Sample:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+ts.Sample := true
+See also
+Mode [drop-down list] - TimeSequence
+Sample [SimTalk]
+Plant Simulation Help 11-4333
+Unpublished work. © 2026 Siemens
+
+ShowColumnIndex [SimTalk] - TimeSequence
+Shows the column index of the TimeSequence designated by <Path> (true) or hides it (false).
+Type
+Attribute
+Syntax
+<Path>.ShowColumnIndex:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+timeSequence2.ShowColumnIndex := false
+See also
+Activate Column Index
+ShowColumnIndex [SimTalk] - TimeSequence
+11-4334 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ShowRowIndex [SimTalk] - TimeSequence
+Shows the row index of the TimeSequence designated by <Path> (true) or hides it (false).
+Type
+Attribute
+Syntax
+<Path>.ShowRowIndex:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+timeSequence2.ShowRowIndex := true
+See also
+Activate Row Index
+ShowRowIndex [SimTalk] - TimeSequence
+Plant Simulation Help 11-4335
+Unpublished work. © 2026 Siemens
+
+SmpPeriod [SimTalk] - TimeSequence
+Sets how often the TimeSequence designated by <Path> takes samples, when Sample mode is active.
+Remarks
+SmpPeriod applies when the attribute Sample is set to true.
+Type
+Attribute
+Syntax
+<Path>.SmpPeriod:time
+Assignment Value
+You can assign a value of data type time.
+Example
+ts.smpPeriod := 60
+See also
+Interval [TimeSequence]
+Sample [SimTalk]
+Trigger
+Trigger [object]
+Use the object Trigger for changing values of attributes and global variables according to a pattern
+you define during a simulation run. It can also activate methods , which then execute the actions you
+programmed.
+Image
+SmpPeriod [SimTalk] - TimeSequence
+11-4336 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+The Trigger maps times to the values of a variable. User-defined attributes take on values designated by
+the Trigger during a simulation run. You can specify the values either in a single TimeSequence object or
+by combining several time sequences of other Triggers. In addition, a Trigger can control how and when a
+Source creates MUs.
+To show a tooltip with information about the Trigger, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Trigger, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Trigger to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > Trigger on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Produce Parts Using a Trigger Object
+Dialog Box of the Trigger
+Dialog Box of the Trigger
+Double-click the icon of the Trigger to open its dialog box.
+Dialog Box of the Trigger
+Plant Simulation Help 11-4337
+Unpublished work. © 2026 Siemens

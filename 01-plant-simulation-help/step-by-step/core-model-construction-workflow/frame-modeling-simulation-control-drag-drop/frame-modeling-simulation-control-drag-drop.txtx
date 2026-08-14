@@ -1,0 +1,1070 @@
+Back to Work with Objects in the Toolbox
+Modeling Hierarchically
+Model Hierarchically [general]
+Modeling hierarchically is the concept of inserting components, which you modeled in a Frame, into other
+Frames. This way you can model, and test, the individual components of your simulation model detached
+from the Frame which holds your complete simulation model.
+You can combine any number of components in the Frame in which you build your overall model. In
+our example we modeled a component in the Frame named MyComponent1 and inserted it into Frame
+MyPlantAnytown, which holds our complete simulation model.
+Modeling Hierarchically
+Plant Simulation Help 10-99
+Unpublished work. © 2026 Siemens
+
+To open the window of the Frame from which the current Frame has derived, click 
+ . In our example,
+clicking Open Origin opens the Frame MyComponent1 in the folder ApplicationObjects > Components
+in the Class Library.
+You can thus model the components, such as large machines or entire departments, to match their
+counterpart in your real-life plant as closely as possible. You can also insert these components several
+times. You can use these components in exactly the same way as you use any of the other user-defined or
+built-in objects. You can create icons for them and insert them into your model just as you would any of
+the material flow objects. In addition it enables you to clearly structure your simulation model.
+Model Hierarchically [general]
+10-100 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Another advantage of modeling hierarchically is the fact that you can distribute developing the simulation
+model among several colleagues, even among several sites. You can then integrate the components into
+the complete model at any point in time.
+Compare Working with the Frame
+Compare Show the Contents of a Frame in the Class Library
+Compare Model Transitions Between Frames
+Compare Show Reports in a Hierarchically Structured Model
+Back to Creating a Simulation Model
+Test a Component You Modeled
+Modeling hierarchically enables you to test the components detached from your complete simulation
+model, thus ensuring that they work as intended, before integrating them. For this you can create a testing
+environment with the desired level of detail. Insert the component into the test Frame, insert a Source and
+a Drain, connect all objects and start the simulation.
+Test a Component You Modeled
+Plant Simulation Help 10-101
+Unpublished work. © 2026 Siemens
+
+Back to Model Hierarchically [general]
+Working with the Frame
+Working with the Frame
+As a rule you will create your simulation models in the Frame 
+  that we placed in the folder Models in the
+Class Library. Naturally, you can also insert additional Frames into this folder and model there.
+To rename this Frame, so that it matches the name of the plant you are modeling, do one of the following:
+• Right-click it in the Class Library and select Rename.
+• Select it in the Class Library and press F2.
+• In the Frame window itself, click Rename on the Home ribbon tab or press F4.
+To build your simulation model, you will insert any of the built-in objects or any objects you yourself
+design, and connect these objects, which represent your stations, with the Connector.
+To run the simulation you will insert an EventController 
+  that starts, stops and resets the simulation
+run. You can use each and every simulation model as an application object to create additional simulation
+models.
+By placing Frames within Frames you can build hierarchically structured models. This way you can build
+and structure simulation models that exactly match the real world systems you want to simulate. It also
+Working with the Frame
+10-102 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+enables you to break down complex tasks into manageable chunks and distribute a laborious task to
+several co-workers.
+Back to Creating a Simulation Model
+Select View Options in the Frame
+You can select general view options as well as options that only apply to the Frame in which you are
+working.
+You can select general options for modeling under File > Preferences/Model Settings in Plant Simulation
+window. You can also select options for each Frame individually, which only apply to that Frame.
+Click the buttons 
+  on the View ribbon tab of the Frame.
+To do this Click
+Hide or show the names of objects in the Frame.
+Hide or show Connectors in the Frame.
+Hide or show Comment objects in the Frame.
+Hide or show the grid in the Frame.
+Set additional view options for the Frame.
+Initially any Frame you insert into your model uses the settings you selected under File > Preferences/
+Model Settings in the Plant Simulation window. Select any of the commands to activate or deactivate
+Select View Options in the Frame
+Plant Simulation Help 10-103
+Unpublished work. © 2026 Siemens
+
+them for the selected Frame. To restore the built-in settings, and deactivate any of your changes, select
+Inherit Settings.
+Compare Select Settings in Plant Simulation
+Back to Working with the Frame
+Model with Objects from the Class Library
+Model with Objects from the Class Library
+To create a simulation model, you will insert instances of the class objects from the Class Library folders
+into your model. This, as a rule, will be the Frame that is located in the folder Models in the Class Library.
+You can modify and expand the structure of the Class Library to meet the requirements of your simulation
+project. You might, for example, add additional folders to save your simulation models, the test runs and
+the different components of your model to.
+Note
+You can rename any object in the Class Library. Be aware though that your simulation model may not
+run correctly any more when you rename an object that you entered as entrance or exit control into
+another object or MUs Plant Simulation entered in a Source object under Attributes > MU Selection >
+MU. In these cases the path statements will be wrong after renaming objects.
+You can:
+• Insert an Object from the Class Library
+• Insert an Object from the Toolbox
+Back to Working with the Frame
+Insert an Object from the Class Library
+In the structure, navigate to the folder and then to the object you would like to insert. The objects are
+grouped according to their functions and to the frequency you use them.
+To insert an instance of the class object into the Frame:
+• Click the object of your choice with the left mouse button to select it. The insert cursor looks like this 
+ .
+• While holding the mouse button down, drag the object to the target position in the Frame window and
+drop it.
+Model with Objects from the Class Library
+10-104 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Model with Objects from the Class Library
+Insert an Object from the Toolbox
+You can insert objects from the Toolbox that contains the objects grouped on tabs/toolbars. You might, for
+example, insert one of the built-in material flow objects from the toolbar Material Flow.
+• Click the toolbar, i.e., the tab, which contains the object you would like to insert.
+• Move the mouse to the icon of the object.
+• Click the object with the left mouse button to select it.
+• Move the mouse to the target position in the Frame window and click the mouse button once.
+• To insert several instances of the same object class, hold down the Shift or the Ctrl key while you click
+the mouse button in the Frame window. This way you do not have to return to the Toolbox each time
+after inserting an object.
+• To go to the class of an object, press the Ctrl key and click the object in the Toolbox. Plant Simulation
+highlights the class object in the tree window in the Class Library. Double-click that object in the tree
+window to edit class properties or hold down the Ctrl+Alt keys and click the object in the Toolbox. This
+does not work, when the object is already selected.
+Back to Model with Objects from the Class Library
+Insert Objects into the Frame
+You can insert the objects, which symbolize the machines and stations in your plant, into the Frame that
+symbolizes the installation or plant you are modeling.
+Proceed as follows:
+• Start Plant Simulation and open a new model: Click Create New Model on the Start Page or select File
+> New.
+This opens the Class Library with the built-in objects Plant Simulation provides, the Toolbox and an
+empty Frame—in the folder Models—for creating your simulation model.
+• To insert an object into the Frame, do one of the following:
+Insert an Object from the Toolbox
+Plant Simulation Help 10-105
+Unpublished work. © 2026 Siemens
+
+◦ Click the icon of the object you would like to insert in the toolbox, move the mouse pointer, which
+then turns into crosshairs (+), to the location in the Frame into which you would like to insert it and
+click the left mouse button once.
+◦ Use drag-and-drop to insert objects from the class library into the Frame.
+• To insert several instances of an object one after the other, click the object in the Toolbox. Hold down
+Ctrl or Shift, click the position in the Frame at which you would like to insert the first instance and
+click the left mouse button. Keep holding down Ctrl or Shift and repeat this until you have inserted the
+desired number of instances and then release the key.
+• Insert the objects, so that your model matches the screenshot.
+◦ Click the folder or the tab Material Flow and insert a Source 
+ , three Stations 
+ , and a Drain 
+ .
+◦ Click the folder or the tab User Interface and insert a Chart 
+ .
+• To move an object in the Frame, do one of the following:
+◦ Click the object once with the left mouse button, hold the button down, move the icon to the desired
+location, and release the mouse button.
+◦ To move the selected object one pixel at a time in the direction of the key, press the respective arrow
+key.
+◦ To move the selected object one grid unit at a time, hold down Shift, and press the respective arrow
+key.
+Insert Objects into the Frame
+10-106 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To align all objects to grid points in the Frame window, select all objects by dragging a marquee over
+them and click Align to Grid on the Icons ribbon tab of the Frame.
+• To delete an object, press the Delete key on the keyboard or click it with the right mouse button and
+select Delete.
+Compare Insert an Object from the Class Library
+Compare Insert an Object from the Toolbox
+Compare Work with Objects in the Frame Window
+Back to Working with the Frame
+Connect Objects with the Connector
+The objects you insert into your simulation model represent stations in a production process. Each material
+flow object in your model has entrance points which receive parts, and exit points from where the parts
+move on to the succeeding objects in the sequence of stations. The Connector establishes the material
+flow connections using these points.
+In real installations the relation between the different stations is obvious by the way in which the machines
+are arranged on the shop floor. Plant Simulation, on the other hand, handles this somewhat differently.
+To clarify to which other object parts are to be moved when leaving an object, you have to establish
+connections between these objects.
+• To connect objects automatically, place them next to each other when inserting them.
+This works when Connect Objects Automatically [model settings] is turned on. It works best, when
+you Use Planning View.
+To check if the objects really are connected, select one of them and move it on the grid. Click Undo
+afterward to move it back to the original position.
+• To connect the stations that represent the flow of materials:
+Click the Connector 
+  in the Toolbox to activate connect mode. The mouse pointer turns into
+crosshairs (+). When you connect objects in the Frame, Plant Simulation attaches the connecting line to
+the front end of the cursor 
+ , allowing you to actually see the connection before setting it.
+To connect object A and object B, first click object A and then object B.
+Connect Objects with the Connector
+Plant Simulation Help 10-107
+Unpublished work. © 2026 Siemens
+
+Note
+Plant Simulation only shows the connection, when you select Show Connections on the View ribbon
+tab.
+Drag the Connector from the Class Library or the Toolbox onto an object inserted into a Frame that you
+would like to connect. Plant Simulation the automatically places the starting point of the Connector to
+this object.
+• To connect several objects one after the other without having to return to the Toolbox each time you
+established a connection, hold down Ctrl, while you establish the connection.
+• To automatically connect the objects while you insert them, place the objects right next to each other,
+when you insert them. You will then have to manually move the objects to their final position.
+Note
+This only works, when File > Preferences/Model Settings > User Interface > Connect Objects
+Automatically is active. In addition the position of the exit of the one and the entrance of the other
+object are to be no more than 3 pixels apart.
+• To tell Plant Simulation where and how to place the Connector in the Frame, hold down Shift, Ctrl, or
+Alt while you establish the connection:
+◦ Connector, no key: Plant Simulation aligns the connection to the grid, i.e., to the grid points next to
+the location where you click the mouse button.
+◦ Connector+Ctrl: Plant Simulation stays in connect mode, so you can connect several objects one after
+the other without having to return to the Toolbox each time you established a connection.
+◦ Connector+Shift: Plant Simulation inserts the connection at a right angle, regardless of where you
+click.
+◦ Connector+Alt: Plant Simulation sets anchor points of the connection at the location where you click.
+This is similar to the freehand drawing feature.
+• To create a non-straight connection, set one or more anchor points: First, click object A, proceed to
+point 1 and click once, then proceed to point 2, click once, and finally move to object B and click the
+mouse button once to establish the connection.
+• To create a right-angled connection, hold down Shift and click the left mouse button to set the anchor
+point.
+Connect Objects with the Connector
+10-108 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To move an anchor point, click it, hold the mouse button down, and drag the handle 
+  to the desired
+location. Plant Simulation also moves the Connector.
+• To check if all connections between the objects really have been established, click Unconnected
+Objects on the View ribbon tab. Plant Simulation selects all objects with unconnected entrance and exit
+points.
+• To make the connecting line thicker, enter a higher number into the text box Weight.
+To make the connecting line thinner, enter a lower number into the text box Weight .
+• To select another color than the default black, in the dialog Colors, click the field next to Color.
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation show this color next to More Colors
+and uses it as the active color.
+• To show the source and the target of the Connector in the Frame is a Tooltip, drag the mouse over the
+Connector.
+• To exchange the successor of a Connector, select the end point of the Connector and drag it to another
+object.
+To exchange the predecessor of a Connector, select the starting point of the Connector and drag it to
+another object
+• To place an object, which you insert from the Class Library into a Frame, in between two already
+connected objects, drag that object onto that spot of the Connector and drop it there. In this process
+Plant Simulation exchanges the successor of the original Connector.
+This also works when you drag a Frame, which contains exactly one suitable entrance Interface and
+exactly one suitable exit Interface, onto the Connector.
+• To retain the Connector between objects when you delete an object, hold down Ctrl and then press Del
+while keeping Ctrl pressed. Click Yes in the dialog that opens.
+Connect Objects with the Connector
+Plant Simulation Help 10-109
+Unpublished work. © 2026 Siemens
+
+• To automatically connect predecessor and successor when deleting an object located between
+other connected objects, hold down Ctrl while you delete the object with the context menu command
+Delete.
+When you work with the Delete key, select the object(s) you want to delete, and press Delete. Follow
+the instructions in the dialog that opens.
+Note
+This does not work when an object has more than one predecessor and successor. If the object has a
+successor, Plant Simulation exchanges the successor of all preceding Connectors. If the object has a
+predecessor, Plant Simulation exchanges the predecessor of all succeeding Connectors.
+Connect Objects with the Connector
+10-110 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To change the Width and the Color of the Connector, double-click its icon and enter and select the
+settings you need.
+• To reorder the sequence of the succeeding objects, i.e., the sequence of the Connectors, click the
+object with the right mouse button and select Reorder Successors. Move the selected successor with
+the Up or Down buttons.
+Compare Auto-connect Length-oriented Objects
+Compare Undo [3D] and Redo [3D]
+Back to Working with the Frame
+Add a Background Graphic to the Frame
+You can add a background graphic to the background of the Frame.
+To add a graphic to the background of a Frame:
+Add a Background Graphic to the Frame
+Plant Simulation Help 10-111
+Unpublished work. © 2026 Siemens
+
+• Drag a .gif, .bmp, .ppm, .ppm raw, .dgn, .dxf, or a .dwg file from the Windows Explorer or the Internet
+Browser over the background of the Frame and drop it there.
+• Drag a layout drawing over the background of the Frame and drop it there.
+You can use this layout drawing as the actual background of the Frame and insert the Plant Simulation
+objects on top of it. This is feasible when your simulation model is not too complex.
+Note
+If you are modeling a complex plant, this might not be practicable, as it might lead to a very cluttered
+layout.
+Be aware that the .dxf, .dgn or .dwg files are vector-based, whereas Plant Simulation uses pixel-based
+graphics. This means that you have to think about how to transfer one size to the other.
+If the CAD-drawing contains units and its dimension is not greater than 32000 by 32000 pixels, Plant
+Simulation automatically uses a Corrective Scaling of 1.
+Add a Background Graphic to the Frame
+10-112 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If the CAD-drawing contains units and its dimension is greater than 32000 by 32000 pixels, Plant
+Simulation scales the drawing so that it fits into the Frame window.
+The Console window shows the origin of the dwg drawing and the dimension of the drawing.
+Compare Add a JT Layout File to Your Simulation Model
+Compare Import a 3D Graphic
+Compare Add a Point Cloud
+Back to Working with the Frame
+Add a Background Graphic to the Frame
+Plant Simulation Help 10-113
+Unpublished work. © 2026 Siemens
+
+Create Your Own Ribbon Tab/Context Menu in the Frame
+You can create your own ribbon tab/context menu in the Frame.
+To create a user-defined ribbon tab or a user-defined context menu with your own, frequently used, ribbon
+commands or context menu commands respectively:
+• Click Configure User-defined Ribbon Tab or Configure User-defined Context Menu on the Frame
+ribbon tab of the Frame for which you want to create the user-defined ribbon tab or user-defined
+context menu.
+If a user-defined ribbon tab exists, the button on the Frame ribbon tab is highlighted.
+Note
+To create a user-defined ribbon tab in a Frame, which you inserted into another Frame, deactivate the
+command Inherit, so that it does not show a check mark to the left.
+• Type in the Title of the user-defined ribbon tab with which Plant Simulation shows the user-defined
+ribbon tab. We typed in My Ribbon Tab.
+• To show the user-defined ribbon tab for the Frame, for which you defined it, select Active.
+• Type in the name of the command that Plant Simulation shows on the user-defined ribbon tab in the
+Frame. Type an & (ampersand) in front of a letter to make this letter the access key. You can select this
+Create Your Own Ribbon Tab/Context Menu in the Frame
+10-114 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ribbon command by holding down Alt, by pressing the predefined key combination U and T, and by the
+pressing that letter. The built-in Plant Simulation access keys take precedence over any access keys you
+define!
+You can also type in a formula as a ribbon command or a context menu command. A formula is
+designated by a leading question mark. When you type in ?Method1 for example, the method named
+Method1 will be called. The return value of this method has to be of data type string. This way you can
+switch between different texts, for example between Activate and Deactivate and you can translate the
+ribbon or context menu commands into different languages. If the methods return an empty string "",
+Plant Simulation hides the respective ribbon or context menu command.
+Note
+You can use any formulas, even for example a method call with parameters, such as ?Method1(42)
+or a table access, such as ?DataTable[1,3].
+• Type in the Methods, which the ribbon/context menu commands execute into the text boxes below
+Method to execute.
+If the method expects a parameter, Plant Simulation automatically passes it. To this parameter, which
+has to be of data type list, the selected objects, which are located within the same Frame is the Frame
+whose ribbon tab or context menu is opened, are passed.
+When Methods are called from the user-defined ribbon tab, the anonymous identifier ? (question mark)
+points to the Frame in which you selected the command. This way you can access objects within the
+respective Frame.
+Note
+The commands on the user-defined context menu only apply to the selected object(s) within the
+Frame for which you defined the context menu.
+The Class Library does not show the user-defined context menu.
+Create Your Own Ribbon Tab/Context Menu in the Frame
+Plant Simulation Help 10-115
+Unpublished work. © 2026 Siemens
+
+User-defined ribbon tab of a Frame User-defined context menu of a Frame
+• To create the user-defined ribbon tab or the user-defined context menu, click OK. Plant Simulation
+shows the ribbon tab to the right of the pre-defined ribbon tabs.
+• To open a user-defined dialog from the user-defined ribbon tab:
+◦ Type in the name of the command, which opens the user-defined dialog, into the text box below Text
+to display.
+◦ Click 
+  to enter the path to and the name of the Method 
+ , which tells Plant Simulation to open the
+dialog, into the text box below Method to execute.
+Create Your Own Ribbon Tab/Context Menu in the Frame
+10-116 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Create a Method with the name you typed in above and type in
+name_of_your_user_defined_dialog.open.
+Back to Working with the Frame
+Work with Objects in the Frame Window
+You can manipulate the objects, simulation objects as well as vector graphics you drew and inserted into
+the Frame.
+• To open the object or the Frame window, double-click the object or a Frame in the model Frame,
+MyPlantAnytown in our sample model.
+• To insert an object in the Frame, select the object in the Class Library or the Toolbox, drag it over the
+Frame window and drop it there.
+• To show or hide the grid in the Frame window, click 
+ . Showing the grid makes it easier to insert
+an object at exactly the position you need it to be at.
+• To select an object, click it with the left mouse button. You can then move it in the Frame by dragging
+the mouse.
+• To nudge the selected object one pixel at a time in a direction, press the respective arrow keys on the
+keyboard. To move the selected object one grid unit at a time, press Shift+ the respective arrow key.
+• To deselect a selected object, click another object or click anywhere in the Frame.
+Work with Objects in the Frame Window
+Plant Simulation Help 10-117
+Unpublished work. © 2026 Siemens
+
+• To select more than one object in a Frame at a time, hold down Shift, and click the objects you want to
+mark or drag a marquee over the objects: Hold the left mouse button down, and drag the mouse over
+the objects, making sure the marquee encloses all of them, and then release the mouse button. You can
+also combine both methods.
+To select all objects in the Frame window, press Ctrl+A.
+• To search for any object in the Frame window, click Incremental Find Object on the Frame ribbon tab
+and start typing its name. Plant Simulation then finds and selects the object.
+• To connect objects, use the Connector. The Connector displays handles 
+  after you select it. Click a
+handle to change its shape, i.e., to make the Connector longer or shorter or to move the anchor point up
+or down.
+• To show or hide connections between objects which you established with the Connector, click 
+  on
+the View ribbon tab.
+• To show objects that are not connected to another object, click 
+  on the Frame ribbon tab.
+• To zoom the contents of the Frame in, roll the mouse wheel forward.
+• To zoom the contents of the Frame out, roll the mouse wheel backward.
+• To show or hide the names of the objects you inserted into the Frame, click 
+ .
+Work with Objects in the Frame Window
+10-118 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To prevent another user from modifying the structure of the model, click 
+ .
+• To edit the icons of the Frame, and to add animation structures to it, click 
+  on the Home ribbon tab.
+• To model transitions between Frames use the Interface. When you connect Frames, which have several
+Interfaces, with objects, Plant Simulation opens the dialog Select Interface. Select the Interface the
+Connector attaches to and click OK.
+Note
+If a sub-Frame only contains a single object, you can also connect the sub-Frame without having to
+use Interfaces.
+• To open the Frame you double-click and to close the Frame it is contained in, press Shift and double-
+click a Frame located within a Frame.
+• To move down in the hierarchy of Frames, closing the active Frame, and opening the next Frame one
+level down in the structure, select Down one Level on the context menu.
+• To open the window of the Frame from which the current Frame has derived, click Open Origin 
+  on
+the Home ribbon tab.
+• To close the active Frame and open its location, click Open Location 
+• To assign the different states a Frame can be in, use the attributes StateBlocked, StateEntryShut,
+StateResourceMissing, StateSetup, StateWorking, Stopped, and Unplanned. Plant Simulation shows
+the state of the object as a colored ring on a pole by default.
+Color Means that the Frame is
+red Failed
+pink Stopped
+blue Paused
+light blue Unplanned
+green Working
+yellow Blocked
+brown Setting-Up
+cyan recovering or has a closed entrance
+orange Waiting for a resource (Exporter)
+• To open help for the selected object, press F1.
+Back to Working with the Frame
+Work with Objects in the Frame Window
+Plant Simulation Help 10-119
+Unpublished work. © 2026 Siemens
+
+Show Tooltips of Objects in the Frame
+To show a tooltip with information about an object, drag the mouse over it and hover.
+All objects show the name of the object in bold face and its origin. Depending on the state and the type of
+the object they show additional information.
+• Tooltip of the EventController
+The EventController shows the current simulation time and the End Time that you entered.
+• Tooltip of Point-oriented Objects
+Source Station Station Showing Next event
+Show Tooltips of Objects in the Frame
+10-120 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Buffer Showing Label PickAndPlace Showing Deposit Station
+• Tooltip of Length-oriented Objects
+Conveyor Showing
+Predecessor and Successor
+Track Showing Connected
+Tracks
+TwoLaneTrack Showing
+Sensors
+• Tooltip of Interface and Connector
+Show Tooltips of Objects in the Frame
+Plant Simulation Help 10-121
+Unpublished work. © 2026 Siemens
+
+Interface Showing Connected Objects Connector Showing Connections
+• Tooltip of the Transporter
+Transporter on Track Tractor of Tugger Train with Route
+Show Tooltips of Objects in the Frame
+10-122 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Transporter Showing Length of Route Transporter Showing Route
+• Tooltip Showing the Stacking Order of Mobile Objects
+Part on Pallet on
+Transporter Part on Transporter Part on Station Part Carried by Worker
+• Tooltip of the Fluid Objects
+PatchMatrix Showing
+Connected Pipes
+Pipe Showing
+Connected Objects
+Tank Showing Next
+Event
+DePortioner Showing
+State
+Show Tooltips of Objects in the Frame
+Plant Simulation Help 10-123
+Unpublished work. © 2026 Siemens
+
+• Tooltip of the Worker and the Worker on Workplace
+Part Carried by Worker with
+Route
+Part Carried by Worker
+Destination
+Workplace Assigned to Station
+Workplace Reserved for
+Worker (filled arrow)
+Workplace Reserved for
+Worker on his Way (hollow
+arrow)
+• Tooltip of a SubFrame
+• Tooltip of the object Dialog
+• User-defined Tooltip of a Method
+Show Tooltips of Objects in the Frame
+10-124 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Method with Tooltip as User-
+defined Attribute
+Method with Tooltip of Source
+Code Comment Suspended Method
+• Tooltip of a User-defined Attribute in a Frame
+User-defined Attribute as Tooltip in SubFrame
+User-defined Attribute as Tooltip in Model
+Frame
+• Tooltip of the TransferStation
+Compare View Information About the Objects
+Compare User-defined Attributes [general description]
+Compare Create a Tooltip as a User-defined Attribute
+Back to Working with the Frame
+Show Tooltips of Objects in the Frame
+Plant Simulation Help 10-125
+Unpublished work. © 2026 Siemens
+
+Connect Objects with the Connector
+The objects you insert into your simulation model represent stations in a production process. Each material
+flow object in your model has entrance points which receive parts, and exit points from where the parts
+move on to the succeeding objects in the sequence of stations. The Connector establishes the material
+flow connections using these points.
+In real installations the relation between the different stations is obvious by the way in which the machines
+are arranged on the shop floor. Plant Simulation, on the other hand, handles this somewhat differently.
+To clarify to which other object parts are to be moved when leaving an object, you have to establish
+connections between these objects.
+• To connect objects automatically, place them next to each other when inserting them.
+This works when Connect Objects Automatically [model settings] is turned on. It works best, when
+you Use Planning View.
+To check if the objects really are connected, select one of them and move it on the grid. Click Undo
+afterward to move it back to the original position.
+• To connect the stations that represent the flow of materials:
+Click the Connector 
+  in the Toolbox to activate connect mode. The mouse pointer turns into
+crosshairs (+). When you connect objects in the Frame, Plant Simulation attaches the connecting line to
+the front end of the cursor 
+ , allowing you to actually see the connection before setting it.
+To connect object A and object B, first click object A and then object B.
+Note
+Plant Simulation only shows the connection, when you select Show Connections on the View ribbon
+tab.
+Drag the Connector from the Class Library or the Toolbox onto an object inserted into a Frame that you
+would like to connect. Plant Simulation the automatically places the starting point of the Connector to
+this object.
+• To connect several objects one after the other without having to return to the Toolbox each time you
+established a connection, hold down Ctrl, while you establish the connection.
+• To automatically connect the objects while you insert them, place the objects right next to each other,
+when you insert them. You will then have to manually move the objects to their final position.
+Connect Objects with the Connector
+10-126 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+This only works, when File > Preferences/Model Settings > User Interface > Connect Objects
+Automatically is active. In addition the position of the exit of the one and the entrance of the other
+object are to be no more than 3 pixels apart.
+• To tell Plant Simulation where and how to place the Connector in the Frame, hold down Shift, Ctrl, or
+Alt while you establish the connection:
+◦ Connector, no key: Plant Simulation aligns the connection to the grid, i.e., to the grid points next to
+the location where you click the mouse button.
+◦ Connector+Ctrl: Plant Simulation stays in connect mode, so you can connect several objects one after
+the other without having to return to the Toolbox each time you established a connection.
+◦ Connector+Shift: Plant Simulation inserts the connection at a right angle, regardless of where you
+click.
+◦ Connector+Alt: Plant Simulation sets anchor points of the connection at the location where you click.
+This is similar to the freehand drawing feature.
+• To create a non-straight connection, set one or more anchor points: First, click object A, proceed to
+point 1 and click once, then proceed to point 2, click once, and finally move to object B and click the
+mouse button once to establish the connection.
+• To create a right-angled connection, hold down Shift and click the left mouse button to set the anchor
+point.
+• To move an anchor point, click it, hold the mouse button down, and drag the handle 
+  to the desired
+location. Plant Simulation also moves the Connector.
+• To check if all connections between the objects really have been established, click Unconnected
+Objects on the View ribbon tab. Plant Simulation selects all objects with unconnected entrance and exit
+points.
+• To make the connecting line thicker, enter a higher number into the text box Weight.
+To make the connecting line thinner, enter a lower number into the text box Weight .
+• To select another color than the default black, in the dialog Colors, click the field next to Color.
+Connect Objects with the Connector
+Plant Simulation Help 10-127
+Unpublished work. © 2026 Siemens
+
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation show this color next to More Colors
+and uses it as the active color.
+• To show the source and the target of the Connector in the Frame is a Tooltip, drag the mouse over the
+Connector.
+• To exchange the successor of a Connector, select the end point of the Connector and drag it to another
+object.
+To exchange the predecessor of a Connector, select the starting point of the Connector and drag it to
+another object
+• To place an object, which you insert from the Class Library into a Frame, in between two already
+connected objects, drag that object onto that spot of the Connector and drop it there. In this process
+Plant Simulation exchanges the successor of the original Connector.
+This also works when you drag a Frame, which contains exactly one suitable entrance Interface and
+exactly one suitable exit Interface, onto the Connector.
+• To retain the Connector between objects when you delete an object, hold down Ctrl and then press Del
+while keeping Ctrl pressed. Click Yes in the dialog that opens.
+Connect Objects with the Connector
+10-128 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To automatically connect predecessor and successor when deleting an object located between
+other connected objects, hold down Ctrl while you delete the object with the context menu command
+Delete.
+When you work with the Delete key, select the object(s) you want to delete, and press Delete. Follow
+the instructions in the dialog that opens.
+Note
+This does not work when an object has more than one predecessor and successor. If the object has a
+successor, Plant Simulation exchanges the successor of all preceding Connectors. If the object has a
+predecessor, Plant Simulation exchanges the predecessor of all succeeding Connectors.
+Connect Objects with the Connector
+Plant Simulation Help 10-129
+Unpublished work. © 2026 Siemens
+
+• To change the Width and the Color of the Connector, double-click its icon and enter and select the
+settings you need.
+• To reorder the sequence of the succeeding objects, i.e., the sequence of the Connectors, click the
+object with the right mouse button and select Reorder Successors. Move the selected successor with
+the Up or Down buttons.
+Compare Auto-connect Length-oriented Objects
+Compare Undo [3D] and Redo [3D]
+Back to Working with the Frame
+Model Transitions Between Frames
+One of the main advantages of Plant Simulation is that you can model hierarchically, i.e., you can model
+components of your overall plant in a Frame, make sure that these components work by themselves and
+then insert them into your overall simulation model.
+Model Transitions Between Frames
+10-130 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In this case, you will have to connect the component (Frame) to the material flow objects or Frames that
+precede and succeed it in the sequence of stations with the object Interface 
+ . The transitions are the
+places where MUs move from one Frame to another or from a material flow object to a Frame and vice
+versa. Plant Simulation shows if the Interface you inserted into a Frame is connected to another object
+with a Connector or if it is not connected. Plant Simulation also recognizes if an Interface is an entrance or
+an exit.
+If the sub-Frame only contains a single material flow object, you do not have to use Interfaces but can
+connect the sub-Frame directly with its predecessor and its successor.
+Model Transitions Between Frames
+Plant Simulation Help 10-131
+Unpublished work. © 2026 Siemens
+
+The Tooltip shows the externally connected objects. Plant Simulation does not insert a Connector from the
+predecessor and to the successor of the object in the sub-Frame.
+Our model looks like this in 3D by default as Graphics > Show Content is activated by default:
+Model Transitions Between Frames
+10-132 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To only show the sub-Frame, clear Show Content for the Frame in the model NoInterfaces. The model
+then looks like this:
+Model Transitions Between Frames
+Plant Simulation Help 10-133
+Unpublished work. © 2026 Siemens
+
+You can insert the Interface into your simulation model from the folder MaterialFlow in the Class Library
+or from the toolbar Material Flow in the Toolbox.
+To model transitions, click the folder or the toolbar Material Flow and insert as many objects of type
+Interface 
+  anywhere in the Frame.
+• Select the side of the icon of the Frame at which the Interface is to be located: on the Top, on the Right,
+on the Bottom, or on the Left of the Frame.
+• Type in the maximum number of external connections the Interface may have. Depending on the type,
+any number of Interfaces may have more than one predecessor or successor.
+The predecessor is the object that is connected to the selected object with a Connector and that is
+located in front of it in the sequence of stations in the simulation model.
+The successor is the object that is connected to the selected object with a Connector and that is located
+after it in the sequence of stations in the simulation model.
+Model Transitions Between Frames
+10-134 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Type the position of the Interface on the side of the Frame it is inserted into in percent into the text box
+Position in %. You can specify a value between 0 and 100 percent. Plant Simulation uses the value you
+specify, when you activate File > Preferences > General > Connect Objects Automatically. Connecting
+objects automatically only works when the exit of FrameA and the entrance of FrameB are not more
+than three pixels apart.
+• An Interface object you insert into a Frame and connect with a Connector show its Type in the dialog:
+either Entrance or Exit.
+• If need be, you can also select an Exit Strategy on the tab Exit.
+Compare Model Hierarchically [general]
+Compare Transfer Parts from Station to Station
+Back to Working with the Frame
+Controlling the Simulation with the EventController
+Control the Simulation with the EventController
+The EventController coordinates and synchronizes the different events taking place during a simulation
+run. When a part enters a processing station, for example a Station, Plant Simulation computes the
+time it takes to process it and enters that event and that time into the List of Scheduled Events of the
+EventController.
+You can insert the EventController 
+  into your simulation model from the folder MaterialFlow in the
+Class Library, from the tab Material Flow in the Toolbox. Instead, you can also click 
+  on
+the Home ribbon tab.
+Controlling the Simulation with the EventController
+Plant Simulation Help 10-135
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation show the current simulation time of the simulation run in the box next to Time. Click
+Time to change the display of the time between the:
+◦ Relative time: Plant Simulation resets the relative time to zero, when it starts the simulation run. This
+is the default.
+◦ Current time plus simulation time: Plant Simulation adds the simulation time to the time and date
+at which it started the simulation run.
+Let us assume today is March 13, 12 o’clock noon and the simulation is to run for two days:
+◦ For the setting relative time shows 2:00:00:0000, i.e., two days.
+◦ For the setting current time plus simulation time Plant Simulation shows We, 2023/03/15
+12:00:00.0000, i.e., March 15, 12 o’clock noon, after the simulation run is finished.
+• To initialize your simulation model, click Start/Stop Simulation 
+ .
+Plant Simulation executes all Methods named Init. Methods being executed when you click Start/Stop
+Simulation will be processed first.
+Plant Simulation initializes the simulation model before it executes the next scheduled event.
+Note
+Plant Simulation automatically executes init methods then you start the simulation for the first time
+or when you stopped the simulation and clicked Reset Simulation and you did not click Start/Stop
+Simulation before you started the simulation.
+• To reset your simulation model, do one of the following:
+Control the Simulation with the EventController
+10-136 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Click Reset Simulation 
+  in the EventController.
+◦ Click 
+  on the Home ribbon tab.
+Plant Simulation calls all methods named Reset in your simulation model. It deletes all unprocessed
+events, resets the simulation time to 0, resets the statistics, and clears any pause and any failure of
+paused or failed machines.
+When you click Reset Simulation while the simulation is running, Plant Simulation will first finish
+processing the active event and then reset the simulation model.
+• To start the simulation, do one of the following:
+◦ Click Start/Stop Simulation 
+  in the EventController.
+◦ Click 
+  on the Home ribbon tab.
+◦ Double-click the icon of the EventController while holding down Shift.
+If this is the first simulation run or you clicked Reset Simulation before, Plant Simulation executes all
+methods named Init located in your simulation model.
+Note
+To start the simulation without animating objects and MUs, click Start Fast Forward Simulation 
+on the Home ribbon tab.
+• To stop the simulation after the active simulation event has been processed, do one of the following:
+◦ Click Start/Stop Simulation
+  in the EventController again.
+◦ Click 
+  on the Home ribbon tab.
+◦ Double-click the icon of the EventController while holding down Shift.
+• To start the simulation run with the animation of MUs and States 
+  and with full speed, click Start
+Full Speed Simulation 
+ .
+• To start the simulation run without the animation of MUs and States 
+  and with maximum speed,
+click Start Fast Forward Simulation 
+ . This makes the simulation run as fast as possible.
+• To process the next simulation event in line, to stop the simulation afterward, and to thus proceed
+through your model step-by-step, click Single Step Simulation 
+ .
+• To open the Dialog Box of the Event Debugger, click List 
+ .
+The List of scheduled events shows all currently scheduled events in ascending order, allowing you to
+find out, which events are scheduled at which point in time.
+Control the Simulation with the EventController
+Plant Simulation Help 10-137
+Unpublished work. © 2026 Siemens
+
+◦ The column Breakpoint shows an S, for a breakpoint you inserted, by double-clicking a cell in the
+row.
+◦ The column Type shows the type of event, for example Out, Pause, PauseEnd, etc.
+◦ The column Time shows the point in time the event is going to be executed.
+◦ The column Receiver shows the receiving object, i.e., the object that receives the breakpoint.
+◦ The column Sender shows the sending object, i.e., the object that sends the breakpoint.
+• To increase the speed of the simulation, drag the slider to the left or press the left arrow key. To
+decrease the speed of the simulation, drag it to the right or press the right arrow key.
+Decreasing the speed enables you to better follow the movements of MUs, as Plant Simulation show
+their icons for a longer time on the same station.
+• To pause the simulation until the time span between two events has elapsed in real-time, enter the
+Scaling Factor for real-time mode.
+The scaling factor sets the time that elapses between two events in real-time.
+Note
+Normally Plant Simulation does not take the time span in between events into account, as it is a
+discrete event simulation system.
+The duration of an event in real-time is the simulation time divided by the scaling factor you entered.
+The resulting duration is an integer.
+You can:
+• Select Settings for the Simulation
+• Work with the Event Debugger
+Back to Creating a Simulation Model
+Select Settings for the Simulation
+When your modeling needs require it, you can select settings for controlling the simulation run on the tab
+Settings of the EventController.
+• Plant Simulation show the current simulation time of the simulation run in the box next to Time.
+Click Time to change the display of the time between the:
+◦ Relative time: Plant Simulation resets the relative time to zero, when it starts the simulation run. This
+is the default.
+◦ Current time plus simulation time: Plant Simulation adds the simulation time to the time and date
+at which it started the simulation run.
+Let us assume today is the second of January, 12 o’clock noon and the simulation is to run for two days:
+Select Settings for the Simulation
+10-138 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ For the setting relative time Plant Simulation shows 2:00:00:0000, i.e., two days.
+◦ For the setting current time plus simulation time Plant Simulation shows Mi, 2023/01/04
+12:00:00.00 , i.e., January 04, 12 o’clock noon, after the simulation run is finished.
+• Enter the Date and the time on which the absolute time during the simulation is based.
+• Enter the Time when the simulation run will be finished. Enter a relative time, i.e., the period of
+time the simulation runs. Plant Simulation compares this period with the simulation time and stops
+the simulation run when both are identical. Let us assume it is January 04, 12 o'clock noon and the
+simulation is to run for two days. Enter 2:00:00:00 into the text box End. If you do not want to write
+this out in full, you can also just type 2::: and click Apply to have Plant Simulation translate this to the
+full format 2:00:00:00.
+• Enter the Time the EventController resets the statistics. Plant Simulation starts collecting statistical data
+for all material flow objects anew from this time on.
+Select Settings for the Simulation
+Plant Simulation Help 10-139
+Unpublished work. © 2026 Siemens
+
+Back to Control the Simulation with the EventController
+Working with the Event Debugger
+Work with the Event Debugger
+The Event Debugger is a tool that lets you accurately control the execution of simulation events, when
+you click Single Step Simulation. This way you can follow how Plant Simulation processes the individual
+events during the simulation run and detect errors in your simulation model.
+As opposed to clicking Start/Stop Simulation on the tab Controls of the EventController you can, for
+example, enter a condition when the EventDebugger is to Stop the simulation. Then, you can follow the
+execution of the events in the Event Debugger.
+The following examples demonstrate a number of typical usages for the Event Debugger.
+To open the Event Debugger, to define breakpoints and to step through the scheduled events:
+• Open the EventController.
+• Click the List button 
+  on the tab Controls. The event list contains the types of scheduled events,
+which the objects in your simulation model entered and which the EventController has to process. It is
+sorted ascending by time, tells the type of event, the scheduled processing time, and lists recipient and
+sender of the event.
+Double-click a cell in the row where you would like to insert a single breakpoint. Then, the Event
+Debugger stops the simulation run immediately before the EventController processes that event.
+Double-click the row again to delete the breakpoint.
+• Select the check box Breakpoints Active.
+• Click Breakpoints to open the list of the breakpoints you defined.
+Working with the Event Debugger
+10-140 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click Insert in the dialog Breakpoint to add an additional breakpoint.
+• If you would like Plant Simulation to create a trace file that tracks all events, enter a name into the text
+box Trace File and select the check box Trace File.
+If you only want to create a trace file for a certain event, enter a file name into the text box Trace File in
+the dialog Breakpoint.
+• You can also use an event from the list in the EventController to define breakpoints. Select the event in
+the list and click Stop at Selected Event. This adds this event to the list of defined event breakpoints.
+You can also edit the selected event.
+• To process a single event and stop the simulation again, click Single Step Simulation 
+ .
+• To proceed with the simulation until the EventController reaches the next breakpoint, click Start/Stop
+Simulation.
+Back to Work with the Event Debugger
+EventDebugger, Example 1
+In this example we watch all exit (Out) events for the Part with the ID 1, meaning that we track the course
+the Part takes through the plant.
+EventDebugger, Example 1
+Plant Simulation Help 10-141
+Unpublished work. © 2026 Siemens
+
+If you would like to create a breakpoint for each Part, delete the ID of the MU.
+Back to Work with the Event Debugger
+EventDebugger, Example 2
+In this example all MUs leaving Station1 define a breakpoint.
+This time we do not enter a Receiver, as we want the EventController to insert a breakpoint for each
+leaving part. The Sender is Station1.
+Back to Work with the Event Debugger
+EventDebugger, Example 2
+10-142 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EventDebugger, Example 3
+In this example only MUs of a certain class located on Station1 insert a breakpoint during a certain time
+span.
+Plant Simulation inserts a breakpoint when a part of the class .MUs.Part located on Station1 creates an
+Out event between 1 hour and 3 hours.
+At times you only want to insert breakpoints when certain conditions are met. Enter these conditions into
+the text box next to Condition. A condition may be a certain value or certain states of the simulation
+model or properties, i.e., attributes, of mobile parts. You can also enter methods, returning a boolean
+value as a result, which will then be evaluated.
+Back to Work with the Event Debugger
+EventDebugger Example 4
+In this example we use a property of the part as a condition for a breakpoint.
+Plant Simulation inserts a breakpoint, when a part of the class .MUs.Part, which is less than 100 meters
+long, causes an Out event on Station1. The unit depends on the settings you selected under File > Model
+Settings/Preferences > Units > Length.
+EventDebugger, Example 3
+Plant Simulation Help 10-143
+Unpublished work. © 2026 Siemens
+
+Back to Work with the Event Debugger
+EventDebugger, Example 5
+In this example we track the course the Part with the ID 9 takes through a simulation model and write the
+stations to a trace file.
+With the settings shown in the dialog above, Plant Simulation inserts a breakpoint for each Out event
+of the Part with the ID 9 and writes this event to the file c:\Exercises\trace3.txt. This only
+works if you selected the check box Trace File in the dialog Event Debugger. If you clear the check
+box Breakpoints Active, Plant Simulation writes the trace file without stopping your simulation using a
+breakpoint.
+In the examples above we only used Out events. You can, of course, also use any of the available types of
+events, compare the List of Events.
+Back to Work with the Event Debugger
+EventDebugger, Example 5
+10-144 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delete Parts with the Mouse or when Resetting the Model
+You can delete parts with the mouse or when resetting the simulation model.
+To delete one, several or all MUs, do one of the following:
+• Select a single MU you would like to delete and press Delete.
+• To delete all MUs in all objects in the active Frame and its sub-Frames, click 
+  Delete MUs on the
+Home ribbon tab.
+• To delete all mobile objects (MUs), when you reset the simulation model by clicking the Reset
+Simulation button or by calling the method reset, you can enter deleteMovables into a Method,
+which you name reset and which you insert into your simulation model.
+Note
+If you simulation model still contains parts, meaning that Plant Simulation does not start counting
+parts with 1, for example .MUs.Part:1, for a new simulation run, check if the model contains additional
+Frames with inserted EventControllers. Reset the EventControllers there as well.
+Back to Creating a Simulation Model
+Working with Drag-and-Drop
+Work with Drag-and-Drop
+Drag-and-drop has a number of applications in Plant Simulation.
+You can:
+• Drag an Object Onto Another Object and Drop It There
+• Use a Drag-and-Drop Control for Several Objects
+Compare Object Paths in SimTalk
+Compare Drag-and-Drop in the Icon Editor
+Compare Drag-and-Drop While Modeling
+Compare Drag-and-Drop in the Method Editor
+Delete Parts with the Mouse or when Resetting the Model
+Plant Simulation Help 10-145
+Unpublished work. © 2026 Siemens
+
+Compare Drag-and-Drop in Lists and Tables
+Compare Work with Data in the DataTable
+Compare Drag-and-Drop in the Chart
+Compare Configuring the TransferStation
+Back to Creating a Simulation Model
+Drag an Object Onto Another Object and Drop It There
+Drag an object onto another object and drop it there.
+Drag-and-drop has a number of applications in Plant Simulation. You can use it to:
+• Insert an object from the Class Library into the Frame that contains your simulation model.
+• Insert an object, such as a Broker, a ShiftCalendar, a control method, a table, etc. into the text boxes the
+dialogs of the objects provide. When you use drag-and-drop, Plant Simulation enters the relative path
+to the object. It starts in the Frame in which the object using the relative path is located.
+To insert the absolute path of the object, hold down the Shift and Ctrl keys.
+Drag an Object Onto Another Object and Drop It There
+10-146 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+To use an object reference instead of the absolute path, type an asterisk in front of the path. For the
+example above you would type *.Models.FinePositioningAGV.Broker.
+Note
+If you do not want to use the absolute path, but the relative path, click 
+  Select Object.
+• Duplicate i.e., to copy the selected object or model and create a new class: Hold down the Ctrl key, drag
+the object to another location in the Class Library, and release Ctrl.
+Go to Use a Drag-and-Drop Control for Several Objects
+Back to Work with Drag-and-Drop
+Use a Drag-and-Drop Control for Several Objects
+Plant Simulation supports multiple drag-and-drop, allowing you to select a number of objects, drag them
+onto the destination object and drop them there.
+You can do this for:
+• Each object which has a Drag-and-drop control which accepts the selected objects as a parameter of
+data type array.
+• The AttributeExplorer
+• The Method. Here the selected objects to be passed have to be contained in an array.
+• The Chart
+• The HtmlReport
+Use a Drag-and-Drop Control for Several Objects
+Plant Simulation Help 10-147
+Unpublished work. © 2026 Siemens
+
+• The object Cycle. It accepts a maximum of two objects, one for the first station and one for the last
+station.
+• The ShiftCalendar
+• The LockoutZone
+You can also drag several objects to the structure in the Class Library to create class objects from the
+copied objects.
+Below we demonstrate how to use multiple drag-and-drop with a drag-and-drop control.
+We want to execute the drag-and-drop control, which we entered for the Frame named MyFrame, when
+we drag our production line onto the Frame and drop it there.
+Proceed as follows to create a simple simulation model:
+• Insert the material flow objects you want to work with and connect them. We inserted a Source, a
+Station, a Conveyor, and a Drain. We used them with their default settings.
+• Insert a Frame for which to define the drag-and-drop control. We renamed our Frame to MyFrame.
+The finished simulation model looks like this:
+• Define the drag-and-drop control for the Frame. Open the Frame and click Edit Controls on the Home
+ribbon tab.
+• Right-click in the text box next to drag-and-drop and select Create Control.
+Use a Drag-and-Drop Control for Several Objects
+10-148 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Change the source code of the control so that it matches the instructions below:
+param draggedObjects: object[] // one-dimensional array with n objects 
+                               // the size of which can change
+var obj: object
+debug
+// @,?: drop target
+for var i := 1 to draggedObjects.dim loop
+   obj := draggedObjects[i]
+   // enter your source code here
+   print i, ": ", draggedObjects[i] // prints the dragged objects to the 
+Console
+next 
+• Select the production line, drag it over the Frame, and drop it there.
+The Console then shows the dragged objects that were dropped.
+Use a Drag-and-Drop Control for Several Objects
+Plant Simulation Help 10-149
+Unpublished work. © 2026 Siemens
+
+• To actually see the array containing the dropped objects, we added debug to the source code.
+This opens the Method debugger when you drag the objects over the Frame and drop them there.
+The row with the name draggedObjects on the tab Variables then shows the array containing these
+objects.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Use a Drag-and-Drop Control for Several Objects
+10-150 Plant Simulation Help
+Unpublished work. © 2026 Siemens

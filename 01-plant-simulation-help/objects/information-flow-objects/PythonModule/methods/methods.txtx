@@ -1,0 +1,325 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the PythonModule
+_Methods of the PythonModule
+The PythonModule provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-3745
+Unpublished work. © 2026 Siemens
+
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+call [SimTalk]
+Executes the specified Python code of the PythonModule designated by <Path> from SimTalk.
+Type
+Method
+Syntax
+<Path>.call([functionName:string, ...]) -> any
+Parameter
+The parameter functionName of data type string designates the function code that is going to be
+executed.
+Return Value
+The return value has the data type any.
+call [SimTalk]
+11-3746 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+Suppose your Python code looks like this.
+def multiply(a, b):
+    return a*b
+Our SimTalk code, which we call in a Method, looks like this:
+print MyPythonModule.call("multiply", 3, 4)
+The result looks like this when we run the Method.
+See also
+callKw [SimTalk]
+callKw [SimTalk]
+Executes the specified Python code of the PythonModule designated by <Path> from SimTalk.
+Type
+Method
+callKw [SimTalk]
+Plant Simulation Help 11-3747
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>.callKw([functionName:string, ..., KeyValuePairs:any[] ]) -> any
+Parameters
+You can specify the following parameters:
+• The parameter functionName of data type string designates the function code that is going to be
+executed.
+• The parameter KeyValuePairs of data type any designates keyword arguments. Specify them in an array
+consisting of pairs of the respective keyword and the value.
+Return Value
+The return value has the data type any.
+Example
+Suppose your Python code looks like this.
+def multiply(a, b):
+    return a*b
+Our SimTalk code, which we call in a Method, looks like this:
+print MyPythonModule.call("multiply", 3, 4)
+print MyPythonModule.callKw("multiply", ["a", 3, "b", 4])
+The result looks like this when we import the PythonModule.
+callKw [SimTalk]
+11-3748 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+call [SimTalk]
+callKw [SimTalk]
+Plant Simulation Help 11-3749
+Unpublished work. © 2026 Siemens
+
+callMethod [SimTalk]
+Calls a method of the PythonModule designated by <Path>.
+Type
+Method
+Syntax
+<Path>.callMethod(VariableName:string, MethodName:string[, 
+Argument:any, ...]) -> any
+Parameters
+You can specify the following parameters:
+• The parameter VariableName of data type string designates the name of the Python variable.
+• The parameter MethodName of data type string designates the name of the SimTalk method.
+• The optional parameters Argument of data type any designate additional arguments that you can
+specify.
+Return Value
+The return value has the data type any.
+Example
+Suppose your Python code in the PythonModule looks like this.
+class ValuePair:
+def __init__(self, Val1, Val2):
+    self.Val1 = Val1
+    self.Val2 = Val2
+def getSumString(self, prefix, suffix):
+    return prefix + str(self.Val1 + self.Val2) + suffix
+vp = ValuePair(12, 23)
+Our SimTalk code, which we call in a Method, looks like this:
+print PyClassMethod.callMethod("vp", "getSumString", "Sum=", "m") 
+-- returns the string "Sum=35m" in the Console
+callMethod [SimTalk]
+11-3750 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+callMethodKw [SimTalk]
+callMethod [SimTalk]
+Plant Simulation Help 11-3751
+Unpublished work. © 2026 Siemens
+
+callMethodKw [SimTalk]
+Calls a method of the PythonModule designated by <Path>.
+Type
+Method
+Syntax
+<Path>.callMethodKw(VariableName:string, MethodName:string[, 
+Positionargument:any, ...] [, Keywordargument:any[] ]) -> any
+Parameters
+You can specify the following parameters:
+• The parameter VariableName of data type string designates the name of the Python variable.
+• The parameter MethodName of data type string designates the name of the SimTalk method.
+• The optional parameters Positionargument of data type any designate additional position arguments
+that you can specify.
+• The optional parameters Keywordargument of data type any designate additional keyword arguments
+that you can specify.
+Return Value
+The return value has the data type any.
+Example
+Suppose your Python code in the PythonModule looks like this.
+class ValuePair:
+def __init__(self, Val1, Val2):
+    self.Val1 = Val1
+    self.Val2 = Val2
+def getSumString(self, prefix, suffix):
+    return prefix + str(self.Val1 + self.Val2) + suffix
+vp = ValuePair(12, 23)
+callMethodKw [SimTalk]
+11-3752 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Our SimTalk code, which we call in a Method, looks like this:
+print PyClassMethod.callMethodKw("vp", "getSumString", ["prefix", "Sum=", 
+"suffix", "m"])
+print PyClassMethod.callMethodKw("vp", "getSumString", "Sum=", ["suffix", 
+"m"]) 
+-- returns the string "Sum=35m" in the Console
+See also
+callMethodKw [SimTalk]
+callMethodKw [SimTalk]
+Plant Simulation Help 11-3753
+Unpublished work. © 2026 Siemens
+
+get [SimTalk]
+Returns the value of the Python variable of the PythonModule designated by <Path>.
+Remarks
+The method get only converts those Python data types, which can be converted to the SimTalk data types
+string, real, integer, boolean, time, date, and dateTme. The method returns all other Python data types as
+the SimTalk data type any, allowing you to address the specified PythonModule.
+You can access the PythonModule object as follows:
+<Path>.get(VariableName:string) -> any
+// Returns the value of the variable with the name VariableName.
+<Path>.set(VariableName:string, Value:<any>) -> any
+// Sets the value of the variable with the name VariableName to Value.
+<Path>.callMethod(MethodName:string[, Parameter:any, ...]) -> any
+// Calls the method MethodName of the Python object with the specified 
+paramters.
+<Path>.call([Parameter:any, ...]) -> any
+// Calls the Python object with the specified paramters.
+Type
+Method
+Syntax
+<Path>.get(VariablenName:string) -> any
+Parameter
+The parameter VariableName of data type string designates the name of the Python variable.
+Return Value
+The return value has the data type any.
+get [SimTalk]
+11-3754 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+Suppose our Python code in the PythonModule looks like this:
+class ValuePair:
+def __init__(self, Val1, Val2):
+      self.Val1 = Val1
+      self.Val2 = Val2
+def getSumString(self, prefix, suffix):
+      return prefix + str(self.Val1 + self.Val2) + suffix
+        
+vp = ValuePair(12, 23)
+def calcArea(x, y):
+    return x*y
+valList = [1,2,3]
+valDict = {None: ['Row1', 'Row2'], 'Col1': [None, 12], 'Col2': ['C21', 
+'C22']}
+Our SimTalk code, which we call in a Method, looks like this:
+var po = PythonModule.get("vp")
+print po.get("Val1") // -> 12
+print po.get("Val2") // -> 23
+print po.callMethod("getSumString", "Sum=", "m") // returns "Sum=35m"
+var calcArea = PythonModule.get("calcArea")
+print calcArea.call(3, 4)
+var valList = PythonModule.get("valList")
+print valList.call(__len__) // -> 3 Returns the number of elements in the 
+Python list object
+print valList[1]            // -> 2 Returns the second element of the 
+Python list object (Python lists start with index 0)
+var valDict = PythonModule.get("valDict")
+print valDict["Col1"]       // returns [None, 12]
+valDict["Col1"] = [11,12]   // Assign a new value to the Python dictionary 
+object
+print valDict["Col1"]       // returns [11, 12]
+SimTalk
+set [SimTalk]
+import [SimTalk] - Python
+Imports the module of the PythonModule designated by <Path> into the Python interpreter.
+import [SimTalk] - Python
+Plant Simulation Help 11-3755
+Unpublished work. © 2026 Siemens
+
+Type
+Method
+Syntax
+<Path>.import → void
+Return Value
+The return value is void.
+Example
+import keyword
+ 
+# printing all keywords at once using "kwlist()"
+print("The list of keywords is : ")
+print(keyword.kwlist)
+See also
+Import [button] - PythonModule
+import [SimTalk] - Python
+11-3756 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+importPythonModule [SimTalk]
+Accesses methods and attributes of another Plant Simulation PythonModule in the PythonModule
+designated by <Path>.
+Type
+Method
+Syntax
+<PlantSimulation-Path>.importPythonModule(Plant Simulation PythonModule) -> 
+Python module object
+Parameter
+The parameter Plant Simulation PythonModule designates the name of the Plant Simulation
+PythonModule.
+Return Value
+The return value is the Python module object.
+Example
+// Let's assume that we have a PythonModule object in the same frame as the 
+current running PythonModule
+// with the name 'MathModule' and this module has the function multiply 
+defined.
+import PlantSimulation as ps
+// This imports the module and assigns it to the variable 'mm'
+mm = ps.importPythonModule(current.MathModule)
+// Now we can call the function 'multiply' like this:
+print(mm.multiply(3,4))
+importPythonModule [SimTalk]
+Plant Simulation Help 11-3757
+Unpublished work. © 2026 Siemens
+
+set [SimTalk]
+Sets the value of the Python variable of the PythonModule designated by <Path>.
+Type
+Method
+Syntax
+<Path>.set(VariableName:string, Value:any)
+Parameters
+You can specify the following parameters:
+• The parameter VariableName of data type string designates the name of the Python variable.
+• The parameter Value of data type any designates the value of the Python variable.
+Example
+PythonModule.set("BatchSize", 40)
+See also
+get [SimTalk]
+Read-Only Attributes of the PythonModule
+Read-Only Attributes of the PythonModule
+The PythonModule provides the _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+set [SimTalk]
+11-3758 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyPythonModule.UUID
+Read-Only Attributes of the PythonModule
+Plant Simulation Help 11-3759
+Unpublished work. © 2026 Siemens

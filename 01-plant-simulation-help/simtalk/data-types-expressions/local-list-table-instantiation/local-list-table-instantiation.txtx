@@ -1,0 +1,94 @@
+Weight [SimTalk] - data type
+A local variable of data type weight has a maximum range of values between -8.9*10307 ≤ weight ≤
+8.9*10307 which is displayed like this -8.9e307 ≤ real ≤ 8.9e307.
+Remarks
+When assigning it to a variable or an attribute, Plant Simulation interprets the value as kilograms (kg).
+When outputting it, Plant Simulation converts the value to the unit you selected under File > Model
+Settings/Preferences > Units > Mass.
+The data types time, length, weight, speed, and acceleration are not compatible! You can, for example,
+only assign a value of data type length, real, or integer to a variable of data type length.
+See also
+isWeight [SimTalk]
+Instantiating Local Lists and Tables
+Instantiating Local Lists and Tables
+A local variable of data type list, queue, stack, or table and lists within lists and tables within tables does
+not contain the data itself, but a reference to the respective data structure.
+When the variables are entered into a Method, they are void, i.e., they do not contain a reference to a data
+structure yet. You have to create the variable, before you can access the data.
+Lists and tables provide the methods create and createNestedList for instantiating them.
+Weight [SimTalk] - data type
+12-202 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+create [SimTalk] - local list
+Creates an empty data structure without contents in the local variable designated by <Local-variable>.
+Remarks
+create applies to local variables of data type list, queue, stack, and table.
+Type
+Method
+Syntax
+<Local-variable>.create([NumberOfRows:integer])
+Parameter
+The optional parameter NumberOfRows of data type integer designates the number of rows in the list or
+table.
+Example
+var orderlist: table[string,real]
+orderlist.create
+orderlist[1,1] := "cans"
+orderlist[2,1] := 3000.0
+orderlist.forget    // destroys the table
+orderlist.create(4) // recreates the table with 4 rows
+See also
+Data Types in Local Variables
+create [SimTalk] - local list
+Plant Simulation Help 12-203
+Unpublished work. © 2026 Siemens
+
+createNestedList [SimTalk] - local variable
+Creates a new sublist or subtable in the local variable designated by <local-list> or by <local-table>.
+Remarks
+The local variable has to be of data type list, queue, stack, or table. The data type of the column of this
+list or table has to be of data type list, stack, queue, or table as well.
+Type
+Method
+Syntax
+<Local-list>.createNestedList(Column:integer, Row:integer[, Name:string]) 
+→ list
+<Local-table>.createNestedList(Column:integer, Row:integer[, Name:string]) 
+→ list
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type integer designates the column of the cell.
+• The parameter Row of data type integer designates the row of the cell.
+• The optional parameter Name of data type string designates the name of the sublist or subtable to be
+created.
+Note
+This method also applies to sublists and subtables!
+Return Value
+The return value has the data type list.
+Is the nested list (DataList, DataQueue, DataStack, or DataTable) that was created.
+Examples
+var t: table[table]
+t.create                // creates a table
+createNestedList [SimTalk] - local variable
+12-204 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+t.createNestedList(1,1) // creates a subtable
+t[1,1][2,3] := "Hello world" // writes Hello world into the nested table
+The code inserts a subtable into cell 1 of the our table. It then inserts Hello world into the cell at the
+position 2,3.
+var subtable: table
+MyDataTable.createNestedList(2,3) // creates a subtable
+subtable := MyDataTable[2,3]
+subtable.createNestedList(1,1)    // creates a subtable within a subtable
+subtable[1,1][4,4] := "Hello world"
+See also
+setCommonFormat [SimTalk]
+Activating and Deactivating Common Format
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - DataTable
+createNestedList [SimTalk] - local variable
+Plant Simulation Help 12-205
+Unpublished work. © 2026 Siemens

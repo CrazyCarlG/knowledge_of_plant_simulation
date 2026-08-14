@@ -1,0 +1,97 @@
+GetLastStation [SimTalk]
+Returns the last station of the balanced line which the Cycle designated by <Path> synchronizes.
+Type
+Read-only attribute
+Syntax
+<Path>.GetLastStation -> object
+Return Value
+The return value has the data type object.
+Example
+print MyCycleObject.GetLastStation
+See also
+Last Station
+Attributes of the Object Cycle
+_Attributes of the Object Cycle
+The object Cycle provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+GetLastStation [SimTalk]
+Plant Simulation Help 11-2643
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyCycleObjekt.Active := true
+• To get the value of an attribute, you might, for example, type:
+print MyCycleObject.EmptyCycleAllowed
+posit := MyStation.Cont.XPos
+_Attributes of the Object Cycle
+11-2644 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [SimTalk] - Cycle
+Activates line balancing with the Cycle designated by <Path> (true) or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.Active:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyCycleObject.Active := true
+See also
+Active [check box] - Cycle
+Active [SimTalk] - Cycle
+Plant Simulation Help 11-2645
+Unpublished work. © 2026 Siemens
+
+EmptyCycleAllowed [SimTalk]
+Sets if parts within the Cycle designated by <Path> can be moved on, although no part is ready to move on
+from the predecessor of the synchronized stations (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.EmptyCycleAllowed:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyCycleObject.EmptyCycleAllowed := true
+See also
+Empty Cycle Allowed [check box]
+EmptyCycleAllowed [SimTalk]
+11-2646 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EntranceOnlyOnCycle [SimTalk]
+Sets if parts are allowed to enter the Cycle designated by <Path> only when the cycle moves all MUs by one
+station on (true).
+Remarks
+Specify false to allow parts to enter the Cycle at any time.
+Type
+Attribute
+Syntax
+<Path>.EmptyCycleAllowed:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyCycleObject.EmptyCycleAllowed := true
+See also
+Part Can Only Enter on Cycle [check box]
+Fluid Objects
+Fluid Objects
+Plant Simulation provides the fluid objects to simulate free-flowing materials, be they in liquid, gaseous,
+or pourable form. The fluid objects are especially suited for the food and beverages processing industries
+and for the pharmaceutical industries.
+EntranceOnlyOnCycle [SimTalk]
+Plant Simulation Help 11-2647
+Unpublished work. © 2026 Siemens

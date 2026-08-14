@@ -1,0 +1,221 @@
+Sort Descending [context menu, lists]
+To sort the highest number (9 to 0), the latest date or the end of the alphabet (Z to A) first in the sorted
+list, select this command.
+Image on the Toolbar of the Context Menu
+Remarks
+Sorting is case-sensitive.
+Plant Simulation only sorts the selected rows of the selected columns.
+SimTalk
+sort [SimTalk] - lists
+inOrder [SimTalk]
+Accessing a Range of Cells with a Method
+Accessing a Range of Cells with a Method
+You can not only access individual entries in a single cell of the lists, but you can also process a contiguous
+range of cells.
+Remarks
+A number of methods, such as min, max, only apply to a range. If you access a range of cells, you have to
+use a special syntax.
+We differentiate between
+• Cell Ranges in Lists with One Column
+• Cell Ranges in Tables with Several Columns
+Ranges in Lists with One Column
+Cell Ranges in Lists with One Column
+Access a cell range in a list with one column by typing in the left curly brace {, the number of the first cell
+in the range, the right curly brace }, two periods .., the left curly brace {, the number of the last cell in
+the range, and the closing curly brace }.
+Sort Descending [context menu, lists]
+11-3934 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The syntax diagram describes the structure of a range for lists with one column, for example for the
+objects DataStack, DataQueue , and DataList.
+See also
+Specify the Identifier of a Cell [one column]
+Specifying a Range of Cells [one column]
+Address a User-defined Index [one column]
+Cell Ranges in Lists with One Column
+Plant Simulation Help 11-3935
+Unpublished work. © 2026 Siemens
+
+Specify the Identifier of a Cell [one column]
+The left curly brace { designates the start of the range, followed by the number of the index of the cell,
+followed by a right curly brace }.
+The direct statement consists of the identifier of a cell. This identifier may be a number greater than 0, a
+user-defined index or an asterisk *, which stands for all cells.
+Example
+{1} // first cell
+{*} // all cells
+Specify the Identifier of a Cell [one column]
+11-3936 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Specifying a Range of Cells [one column]
+The from-to statement consists of the identifiers of two cells within braces, separated by two periods.
+If you do not know the identifier of the last cell, type in {*}, which designates the last cell if preceded by
+two periods.
+Type in to access
+{1,3} the cell in column 1, row 3
+{1,*} all rows in column 1
+{*,3} all columns in row 3
+{*,*} the entire list
+Example
+{2}..{4} // cells 2 to 4
+{3}..{*} // from cell 3 to the last cell in the range
+Specifying a Range of Cells [one column]
+Plant Simulation Help 11-3937
+Unpublished work. © 2026 Siemens
+
+Address a User-defined Index [one column]
+For a user-defined index of data type integer you have to add the number sign/hash # in front of the
+identifier, as the system index, the numbers of rows and columns Plant Simulation assigns, also has the
+data type integer.
+Without the number sign, Plant Simulation would not be able to distinguish whether to use the system
+index or the user-defined index.
+Example
+[2]  // system index
+[#2] // user-defined index
+Cell Ranges in Tables with Several Columns
+Cell Ranges in Tables with Several Columns
+Plant Simulation can process contiguous ranges of cells of tables spanning several columns. A number of
+methods do not work without specifying a range.
+The syntax diagram below depicts a two-dimensional range.
+See also
+Specify the Identifier of a Cell [several columns]
+Specifying a Range of Cells [several columns]
+Address a User-defined Index [several columns]
+Address a User-defined Index [one column]
+11-3938 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Specify the Identifier of a Cell [several columns]
+To access a cell, type in the identifier of the column and the identifier of the row, separated by a comma.
+The identifier for the column and row may be a number greater than 0, a user-defined index, or an asterisk
+*, which stands for the entire table.
+The left curly bracket { designates the start of the range, followed by the identifier of the column, a
+comma, the identifier of the row, and a right curly bracket }.
+Type in to access
+{1,3} the cell in column 1, row 3
+{1,*} all rows in column 1
+{*,3} all columns in row 3
+{*,*} the entire table
+Example
+{1,3}                  // the cell in column 1, row 3
+{"vehicle","door"}     // the cell with the column index vehicle and the 
+row index door
+{2,*}                  // all cells in column 2
+Specify the Identifier of a Cell [several columns]
+Plant Simulation Help 11-3939
+Unpublished work. © 2026 Siemens
+
+Specifying a Range of Cells [several columns]
+To access a range of cells, use the from-to statement. It consists of two cells located in two columns,
+separated by two periods.
+Remarks
+The first identifier designates the top left cell identified by the number of the column and the number of
+the row, the second the bottom right cell identified by the number of the column and the number of the
+row. If the second identifier is {*,*}, Plant Simulation processes the table up to the highest valid column
+index and row index.
+Type in to access
+{1,2}..{3,5} the cells starting with column 1, row 2 to column 3, row 5
+{1,*}..{4,*} all rows in columns 1 to 4
+{2,3}..{*,3} all columns in row 3 starting with column 2
+{2,3}..{*,*} all columns starting with column 2, row 3 to the highest valid
+cell
+{*,*}..{3,5} all columns up to column 3 and all rows until row 5
+{4,*} all rows in column 4 including the column index if Column
+index belongs to contents is active
+{"ColumnB", 0}..{"ColumnB",*} the column index of columnB and all rows in columnB
+{1,2}..{3,5}                        // cells starting with column 1, row 2 
+to column 3, row 5
+{"front","door"}..{"rear","door"}   // all cells from column index front to 
+rear and row index door
+{2,3}..{*,*}                        // all columns starting with column 2, 
+row 3 to the highest valid cell
+Note
+Specifying the range of cells has different effects on SimTalk instructions, depending if Column Index
+Belongs to Contents is activated or not.
+Column Index Belongs to Contents
+Our DataTable named DataTableColumnIndexContents looks like this:
+Specifying a Range of Cells [several columns]
+11-3940 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+This instruction deletes the entire contents of ColumnB, including the column index:
+DataTableColumnIndexContents.delete({"ColumnB", *})
+Column Index Does Not Belong to Contents
+Our DataTable named DataTableColumnIndexNotContents looks like this:
+Specifying a Range of Cells [several columns]
+Plant Simulation Help 11-3941
+Unpublished work. © 2026 Siemens
+
+This instruction deletes the contents of ColumnB, excluding the column index:
+DataTableColumnIndexNotContents.delete({"ColumnB", *})
+To delete the entire contents of ColumnB, including the column index, enter this instruction:
+DataTableColumnIndexNotContents.delete({"ColumnB", 0}..{"ColumnB", *})
+Specifying a Range of Cells [several columns]
+11-3942 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+calculateList [SimTalk] meanValue [SimTalk]
+copyRangeTo [SimTalk] meanValueAttr [SimTalk]
+delete [SimTalk] - lists] min [SimTalk] - lists [SimTalk]
+determineRange [SimTalk] - DataTable minAttr [SimTalk]
+find [SimTalk] - lists] setAlignmentCells [SimTalk]
+findAttr [SimTalk] setEditorRightsCells [SimTalk]
+findCeil [SimTalk] setFormula [SimTalk]
+findFloor [SimTalk] standardDeviation [SimTalk]
+initialize [SimTalk] standardDeviationAttr [SimTalk]
+max [SimTalk] - lists sum [SimTalk] - lists
+maxAttr [SimTalk] sumAttr [SimTalk]
+Specifying a Range of Cells [several columns]
+Plant Simulation Help 11-3943
+Unpublished work. © 2026 Siemens
+
+Address a User-defined Index [several columns]
+To address a user-defined index of data type integer, you have to add the number sign/hash # in front of
+the identifier.
+Remarks
+The system index, the numbers of rows and columns Plant Simulation assigns, also has the data type
+integer. Without the number sign, Plant Simulation would not be able to distinguish whether to use the
+system index or the user-defined index.
+Note
+To denote range statements you have to type in the curly braces { }.
+Example
+{2,5}   // system index
+{#2,#7} // user-defined index
+If the range consists of two index specifications, Plant Simulation interprets the specified cells according
+the behavior when selecting the range with the mouse, as opposing corner points of a rectangular range.
+See also
+Activate Column Index
+Activate Row Index
+Create a User-defined Column and Row Index
+Address a User-defined Index [several columns]
+11-3944 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Drag-and-Drop in Lists and Tables
+Drag-and-drop in lists and tables performs a number of actions.
+The expression Accelerator designates the key on the keyboard.
+To do this Drag from To Accelerator
+Move the selected text table window table window —
+Copy the selected text table window table window Ctrl
+Insert the selected text any table window any
+Copy the selected text table window any Ctrl
+Cut the selected text table window any —
+Creating Lists within Lists and Tables
+Creating Lists within Lists and Tables
+Create Lists within Lists and Tables in the Step-by-Step help describes how to:
+• Create a sublist in a cell of the list objects DataList, DataStack, DataQueue or DataTable.
+• Insert a list object from a Frame or the Class Library into a cell of the list objects.
+See also
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - DataTable
+Creating a List within a DataQueue or DataStack
+Creating a List within a DataList
+Creating a List within a DataTable
+Accessing the Name of a Sublist with a Method
+Drag-and-Drop in Lists and Tables
+Plant Simulation Help 11-3945
+Unpublished work. © 2026 Siemens

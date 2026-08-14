@@ -1,0 +1,286 @@
+StatAverageDwellTime [SimTalk] - DismantleStation
+Returns the average time which the main parts stayed on the DismantleStation designated by <Path>.
+Remarks
+Plant Simulation only counts times during which the DismantleStation was not paused and not
+unplanned.
+Type
+Read-only attribute
+Syntax
+<Path>.StatAverageDwellTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyDismantleStation.StatAverageDwellTime
+See also
+Tab Statistics [DismantleStation]
+Attributes of the DismantleStation
+_Attributes of the DismantleStation
+The DismantleStation provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatAverageDwellTime [SimTalk] - DismantleStation
+11-1856 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDismantleStation.NewMU := ".MUs.basicMU"
+• To get the value of an attribute, you might, for example, type:
+print MyDismantleStation.Pause
+posit := MyStation.Cont.XPos
+_Attributes of the DismantleStation
+Plant Simulation Help 11-1857
+Unpublished work. © 2026 Siemens
+
+DismantleMode [SimTalk]
+Sets how the DismantleStation designated by <Path> handles the MUs.
+Remarks
+The Dismantle Mode provides these settings:
+• Detach MUs: The DismantleStation detaches the mounting parts from the main MU and moves them
+on to the successor which you typed into the Dismantle Table. If you only want to unload those
+mounting parts from the main MU, which type into the Dismantle Table, select Sequence > MUs
+exiting independent of other MUs or Main MU after other MUs and the Dismantle Mode > Detach
+MUs. Always type a valid MU class into the column MU and a positive number into the column Number.
+• Create MUs: The DismantleStation creates mounting parts.
+Type
+Read-only attribute
+DismantleMode [SimTalk]
+11-1858 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>.DismantleMode:string
+Assignment Value
+You can assign a value of data type string.
+Specify "Create MUs" to create MUs.
+Specify "Detach MUs" to detach them from the main MU.
+Example
+MyDismantleStation.DismantleMode := "Detach MUs"
+See also
+Dismantle Table [button] - DismantleStation
+Sequence [drop-down list] - DismantleStation
+Dismantle Mode [drop-down list] - DismantleStation
+DismantleMode [SimTalk]
+Plant Simulation Help 11-1859
+Unpublished work. © 2026 Siemens
+
+DismantleTable [SimTalk]
+Sets the name of the Dismantle Table of the DismantleStation designated by <Path>.
+Remarks
+The Dismantle Table contains the names of the MUs, which leave the DismantleStation and its successors.
+• Enter the path to the class of the MUs into the column MU, such as .MUs.Part, .MUs.Container
+or .MUs.Transporter. Alternatively you can leave the entry empty to designate any MU class.
+• Enter the number of MUs that are dismantled into the column Number. If you do not enter a number,
+the DismantleStation uses the default value 1.
+• Enter the number of the successor into the column Successor. If you do not enter a value, the
+DismantleStation moves the mounting parts to the successor with the number 1 for the setting
+Dismantle mode > Detach MUs.
+For the setting Dismantle Mode > Create MUs it moves the MUs to the successor to which the main
+MU moves.
+Note
+If you enter a MU Target the Worker carries all parts to this target.
+If you do not enter a MU Target, the Dismantle Table or the setting Main MU to successor with
+number determine it.
+Depending on what you select from the drop-down list Dismantle Table: Create MUs or Detach MUs, the
+DismantleStation creates the corresponding MUs or searches the table for the successor to which it moves
+it. In the latter case the Dismantle Table may contain more information than is required for moving the
+MUs.
+If you only want to unload those mounting parts from the main part which you type into the Dismantle
+Table, select Sequence > MUs exiting independent of other MUs or Main MU after other MUs and the
+Dismantle mode > Detach MUs. Always enter a valid MU class into the column MU and a positive number
+into the column Number.
+DismantleTable [SimTalk]
+11-1860 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To automatically move all parts according to their MU class to a successor:
+• Type in any MU class into the column MU of the Dismantle Table.
+• Type in the value -1 into the column Number to designate all remaining parts of this class.
+• Type in the number of the desired successor into the column Successor.
+• Repeat this for additional MU classes.
+To automatically move all parts to a successor:
+• Leave the column MU in the Dismantle Table empty to designate any MU class.
+• Type in the value -1 into the column Number to designate all remaining parts of this class.
+• Type in the number of the desired successor into the column Successor.
+DismantleTable [SimTalk]
+Plant Simulation Help 11-1861
+Unpublished work. © 2026 Siemens
+
+Note
+If the dismantle table is inherited, inheritance is not automatically deactivated when you write to cells
+of the dismantle table. For this reason you will change the inherited table during an assignment. To
+deactivate inheritance, assign the dismantle table to itself.
+DismantleStation.DismantleTable := DismantleStation.DismantleTable  
+//  deactivates inheritance
+Type
+Read-only attribute
+Syntax
+<Path>.DismantleTable:table
+Assignment Value
+You can assign a value of data type table.
+Examples
+var DismList:table[object,integer,integer]
+DismList.create
+DismList.writeRow(1,1, .MUs.MyPart,1,1)
+DismList.writeRow(1,2, .MUs.MyPart,2,1)
+MyDismantleStation.DismantleTable := DismList
+// You can use the following example in an entrance control 
+// where 'EntranceCtrlBeforeActions' is set to true.
+?.DismantleList := ?.DismantleList // Deactivates inheritance. 
+// (For performance reasons, we recommend to do this in the dialog of the 
+object.)
+?.DismantleList[2, 1] := @.AmountOfParts
+SimTalk
+DismantleMode [SimTalk]
+See also
+Dismantle Mode [drop-down list] - DismantleStation
+Dismantle Table [button] - DismantleStation
+DismantleTable [SimTalk]
+11-1862 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sequence [SimTalk] - DismantleStation
+MU Target
+Main MU to Successor with Number [text box] - DismantleStation
+DismantleTable [SimTalk]
+Plant Simulation Help 11-1863
+Unpublished work. © 2026 Siemens
+
+ExitingMUMode [SimTalk]
+Sets if the main MU exits the DismantleStation designated by <Path> or if a new MU will be created which
+then exits the object.
+Type
+Read-only attribute
+Syntax
+<Path>.ExitingMUMode:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Main MU" or "New MU".
+• Main MU: The DismantleStation moves the main MU on to the succeeding object.
+• New MU: The DismantleStation deletes the main MU, creates a new MU, and moves it on to the
+successor. The DismantleStation then shows the text box MU.
+Type the path to the class of the new MU into the text box, or click the button 
+  and select the new MU
+in the dialog Select Object.
+Example
+MyDismantleStation.ExitingMUMode := "New MU"
+See also
+Exiting MU [drop-down list] - DismantleStation
+ExitingMUMode [SimTalk]
+11-1864 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+MainMU [SimTalk] - DismantleStation
+Sets the number of the successor to which the DismantleStation designated by <Path> moves the main
+MU.
+Remarks
+If you enter a Worker carries all parts to this target. If you do not enter a MU Target, the Dismantle Table
+or the setting Main MU to successor with number determine it.
+Type
+Attribute
+Syntax
+<Path>.MainMU:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDismantleStation.MainMU := 2
+See also
+Main MU to Successor with Number [text box] - DismantleStation
+MU Target
+Dismantle Table [button] - DismantleStation
+MainMU [SimTalk] - DismantleStation
+Plant Simulation Help 11-1865
+Unpublished work. © 2026 Siemens
+
+NewMU [SimTalk] - DismantleStation
+Sets the path of the MU, which the DismantleStation designated by <Path> creates.
+Remarks
+NewMU applies when the DismantleStation designated by <Path> deletes the main MU and creates a new
+MU instead.
+Type
+Attribute
+Syntax
+<Path>.NewMU:path
+Assignment Value
+You can assign a path.
+Example
+MyDismantleStation.NewMU := .MUs.basicMU
+See also
+Exiting MU [drop-down list] - DismantleStation
+NewMU [SimTalk] - DismantleStation
+11-1866 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sequence [SimTalk] - DismantleStation
+Sets how the DismantleStation designated by <Path> distributes the MUs to the successors to which it is
+connected.
+Remarks
+You can specify:
+• "MUs to all successors":
+If you select Create MUs from the drop-down list Dismantle Mode, the DismantleStation creates a new
+part for each successor and moves that part there.
+The DismantleStation moves the main MU to the successor, whose number you entered into the text
+box Main MU to Successor with Number.
+If you select Detach MUs from the drop-down list Dismantle Mode, the DismantleStation moves the
+MUs to each successor in turn, except for the successor that receives the main MU.
+The DismantleStation moves the main MU to the successor, whose number you entered into the text
+box Main MU to Successor with Number.
+If the DismantleStation has four successors for example, and if moves the main MU on to successor
+number 2, it will pass the new MU on to successors number 1, 3, and 4. It moves the Main MU to the
+successor with the number 2.
+For these settings you have to fill out the Dismantle Table:
+• "MUs exiting independent of other MUs":
+Here the DismantleStation attempts to move the main MU and after that each MU on to the successor
+you defined, as soon as possible.
+• "Main MU after other MUs":
+Here the DismantleStation first moves the mounting parts on to the successor, and then the main MU.
+If you only want to unload those mounting parts from the main part which you type into the Dismantle
+Table, select MUs exiting independent of other MUs or Main MU after other MUs and the Dismantle
+mode > Detach MUs. Always enter a valid MU class into the column MU and a positive number into the
+column Number.
+Type
+Attribute
+Syntax
+<Path>.Sequence:string
+Sequence [SimTalk] - DismantleStation
+Plant Simulation Help 11-1867
+Unpublished work. © 2026 Siemens
+
+Assignment Value
+You can assign a value of data type string.
+You can specify "MUs to all successors", "MUs exiting independent of other MUs", or
+"Main MU after other MUs".
+Example
+MyDismantleStation.Sequence := "Main MU after other MUs"
+See also
+Sequence [drop-down list] - DismantleStation
+DismantleMode [SimTalk]
+DismantleTable [SimTalk]
+PickAndPlace Robot
+PickAndPlace Robot
+Use the object PickAndPlace robot for picking up a part at one station, rotating it, and placing it onto
+another station.
+Image
+Description
+The PickAndPlace robot can pick up and deliver one or more parts. To deliver several parts, type in the
+Capacity. The PickAndPlace robot transports the part on to its successors within the flow of materials like
+this:
+• The part arrives at the exit of the predecessor. It notifies the PickAndPlace robot that it wants to be
+picked up.
+• The PickAndPlace robot then determines if it picks the part up or not.
+◦ Without a Pull Control, the robot will be notified that a part wants to be picked up, and it accepts it.
+◦ If you entered a Pull Control, the robot executes it, and when the part is selected, it will be picked up.
+• The PickAndPlace robot rotates to the respective predecessor and picks the part up.
+PickAndPlace Robot
+11-1868 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,1411 @@
+The Frame Window
+The Frame Window
+The Frame Window provides access to the most important functions you need for creating you simulation
+model.
+Remarks
+The Frame window provides the Frame Ribbon Tab, and the System Menu.
+The Context Menu of the Frame Itself provides commands pertaining to the Frame. To edit the 3D
+properties of the Frame in the 3D model, press the spacebar. Change the settings in the dialog Edit 3D
+Properties.
+The Context Menu of the Selected Object in the Frame provides commands pertaining to that object.
+You can edit the simulation properties of the object there. To edit the 3D properties of the selected
+object in the 3D model, press the spacebar. Change the settings in the dialog Edit 3D Properties.
+See also
+Work with Objects in the Frame Window
+Add a Background Graphic to the Frame
+Drag-and-Drop While Modeling
+setXYWH [SimTalk], getXYWH [SimTalk]
+RootFrame [SimTalk]
+setPosition [SimTalk]
+The Frame Window
+11-1416 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Drag-and-Drop While Modeling
+Drag-and-drop in the Frame while modeling performs a number of actions.
+Remarks
+You can use drag-and-drop while modeling in the Frame. The row Class Library — Class Library —object—
+Ctrl in the second row of the table means: Dragging an object from the Class Library from one location to
+another location in the Class Library while holding Ctrl down copies the object to that location.
+To do this Drag from To Type
+Acc
+eler
+ator
+Move the object Class Library Class
+Library
+object Shif
+t
+Copy the object Class Library Class
+Library
+object Ctrl
+Derive the object Class Library Class
+Library
+object Ctrl
++Shi
+ft
+Instantiate the object Class Library Frame object —
+Move the object (makes a class out of the
+instance)
+Frame Class
+Library
+object —
+Copy the object Frame Class
+Library
+object Ctrl
+Load a graphics file (.GIF, .BMP, .PPM, .PPM
+RAW, .DXF, or .DWG) as the background graphic
+of the Frame
+Windows
+Explorer
+Frame file —
+Insert the selected object repeatedly Class Library Frame object Shif
+t
+Execute a Method, which expects a single
+parameter of data type object with this object
+as parameter
+Object from
+Frame
+Method single parameter
+of data type
+object
+—
+System Menu of the Frame
+System Menu of the Frame
+The system menu shows commands with which you can manipulate or close the Frame window.
+Drag-and-Drop While Modeling
+Plant Simulation Help 11-1417
+Unpublished work. © 2026 Siemens
+
+Note
+Plant Simulation displays the system menu in the language of Windows that is installed on your
+computer.
+System Menu of the Frame
+11-1418 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Use Left Area
+Uses the left part of the usable area of the MDI window in which Plant Simulation shows the object
+windows.
+In the figure below this is the entire colored area to the right of the Frame named Model.
+See also
+Object Windows
+Use Left Area
+Plant Simulation Help 11-1419
+Unpublished work. © 2026 Siemens
+
+Use Right Area
+Uses the right part of the usable area of the MDI window in which Plant Simulation shows the object
+windows.
+See also
+Object Windows
+Use Right Area
+11-1420 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Restore
+Restores the Plant Simulation window to normal size.
+Restore
+Plant Simulation Help 11-1421
+Unpublished work. © 2026 Siemens
+
+Move [window position]
+Changes the window position of the Frame window in the Plant Simulation window.
+Move [window position]
+11-1422 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Size [window position]
+Changes the size of the Frame window in the Plant Simulation window.
+Size [window position]
+Plant Simulation Help 11-1423
+Unpublished work. © 2026 Siemens
+
+Minimize
+Reduces the size of the Frame window to an icon in the task bar of the Plant Simulation window.
+Minimize
+11-1424 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Maximize
+Enlarges the size of the Frame window to fill the entire Plant Simulation window.
+When the Frame window is maximized, Plant Simulation adds the button combination Minimize,
+Maximize, Close 
+  that is otherwise located in the title bar of the window, to the Ribbon
+Bar.
+Maximize
+Plant Simulation Help 11-1425
+Unpublished work. © 2026 Siemens
+
+Close [Frame window]
+Closes the Frame window.
+Frame Ribbon Tab
+Frame Ribbon Tab
+The Frame ribbon tab provides commands to access the functions of the Frame.
+Description
+Command Looks like this Method or Attribute
+Find Object [button]
+ —
+Incremental Find Object
+ —
+Show Unconnected Objects
+ —
+Select Shift Calendar
+ ShiftCalendarObject [SimTalk] -
+Frame
+Configure User-defined Ribbon
+Tab
+Inherit User-defined Ribbon Tab
+Various
+Close [Frame window]
+11-1426 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Command Looks like this Method or Attribute
+Configure User-defined Context
+Menu
+Inherit User-defined Context
+Menu
+Various
+Replacement Mode
+Merge
+Exchange
+Inherit Replacement Mode
+replace [SimTalk]
+ReplacementMode [SimTalk]
+Lock Structure [Frame ribbon]
+ LockStructure [SimTalk]
+Note
+The other tabs on the Ribbon Bar provide additional commands pertaining to the Frame.
+Frame Ribbon Tab
+Plant Simulation Help 11-1427
+Unpublished work. © 2026 Siemens
+
+Find Object [button]
+Opens the dialog Find Object.
+Remarks
+To search for any object in the Frame window, you can also click in the Frame window and start typing its
+name. Plant Simulation then finds and selects the object.
+See also
+Find Object [context menu]
+Finding Objects and Text in Your Simulation Model
+Find Object [button]
+11-1428 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Incremental Find Object
+Clicking the button and starting to type the name of the object you want to find finds and highlights that
+object in the opened Frame window.
+Remarks
+Microsoft describes Incremental Find Object as "a type of search that looks for a string in an automatic
+and progressive way. As the user types a string, possible matches are found, thus enabling the user to stop
+typing the complete string as soon as the right match is found."
+Plant Simulation shows the characters you type in the status bar 
+ . You can type all
+characters which are allowed for object names. As we do not distinguish upper- or lower-casing in object
+names, you can start typing with lower-case letters.
+As soon as Plant Simulation finds an object that matches these characters, it selects that object and zooms
+to it in the 3D scene. If you want to return to the last active scene before the search, press Backspace.
+If Incremental Find Object did not find and select the object you wanted to find, it returns to the scene as
+it was before you started searching.
+You can use these keys to control the functionality of Incremental Find Object:
+• Press Backspace to delete the last character you typed. Then, type in the correct character.
+• Press Tab to find the next matching object of the characters you typed. If no additional object is found,
+Plant Simulation selects the first object you wanted to find again and shows it. It also plays a signal tone.
+When cycling through the object that match the search, Plant Simulation shows the names of the
+objects in the status bar instead of the search pattern.
+• Press Esc to terminate Incremental Find Object. Plant Simulation retains the current selection of the
+object it found.
+• Press Return to terminate Incremental Find Object and execute the default operation of Return for the
+object, for example open the simulation properties dialog.
+Note
+To find the name of an object in an open folder in the Class Library, press Ctrl+I and start typing.
+Incremental Find Object
+Plant Simulation Help 11-1429
+Unpublished work. © 2026 Siemens
+
+Show Unconnected Objects
+Highlights those objects in the open Frame window that have unconnected entrance and exit points, i.e.,
+which are not connected to any other object with a Connector.
+A Frame counts as unconnected if one of its Interfaces is not connected to the outside.
+Show Unconnected Objects
+11-1430 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select Shift Calendar
+Sets the ShiftCalendar which contains the data of the shifts in your installation and controls during which
+shifts the Frame works.
+Remarks
+The command opens the dialog Select ShiftCalendar.
+Click this 
+  and select the ShiftCalendar in the dialog Select Object or enter the name of the
+ShiftCalendar.
+Note
+The ShiftCalendar can change the states paused and unplanned of the Frame.
+SimTalk
+ShiftCalendarObject
+Unplanned [SimTalk]
+See also
+Unplanned Control
+Configure User-defined Ribbon Tab
+Configure User-defined Ribbon Tab
+Creates a user-defined ribbon tab in the selected Frame with commands, which you frequently use.
+Select Shift Calendar
+Plant Simulation Help 11-1431
+Unpublished work. © 2026 Siemens
+
+Remarks
+Plant Simulation adds the user-defined ribbon tab to the predefined ribbon tabs of the Frame for which
+you defined it. In the example below we defined a user-defined ribbon tab with the name My Ribbon Tab.
+Plant Simulation shows it on the tab User.
+When a user-defined ribbon tab exists, the button on the Frame ribbon tab is highlighted.
+Configure User-defined Ribbon Tab
+11-1432 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Add an Icon to a Ribbon Command
+• Create a Ribbon Group
+• Dynamically Add a Ribbon Command
+• Add a Command Separator
+• Create an Access Key
+Note
+To create a ribbon tab in a Frame, which you inserted into another Frame, deactivate the command
+Inherit first. Otherwise, this Frame inherits its user-defined ribbon tab from its origin.
+See also
+Create Your Own Ribbon Tab/Context Menu in the Frame
+Configure User-defined Ribbon Tab
+Plant Simulation Help 11-1433
+Unpublished work. © 2026 Siemens
+
+Title [user-defined ribbon tab]
+Type in the Title of the user-defined ribbon tab which Plant Simulation uses to show the ribbon tab to the
+right of the predefined ribbon tabs of the Frame.
+Remarks
+We typed in My Ribbon Tab in our example.
+SimTalk
+UserMenuTitle [SimTalk]
+Title [user-defined ribbon tab]
+11-1434 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [check box] - user-defined ribbon tab
+To show and activate the user-defined ribbon tab, which you defined, to the right of the predefined ribbon
+tabs of the Frame, select this check box. To deactivate and hide it, clear it.
+Remarks
+Note
+If the user-defined ribbon tab calls a Method, Plant Simulation assigns the anonymous identifier ?
+(question mark) to the respective Frame.
+SimTalk
+ShowUserMenu [SimTalk]
+New [ribbon command]
+New [ribbon command]
+To add a New ribbon command to the ribbon tab you are configuring, click this button.
+Remarks
+Plant Simulation then adds a row to the table in the dialog.
+Proceed as follows:
+• Type in the Name of the ribbon command that the Frame window is to show.
+You can also click in the cell and select an item from the drop-down list and enter text.
+Active [check box] - user-defined ribbon tab
+Plant Simulation Help 11-1435
+Unpublished work. © 2026 Siemens
+
+• Type in the Method that the ribbon command is to execute in the Frame window.
+Text to Display
+Text to Display [user-defined ribbon tab]
+Type in the name of the command that Plant Simulation shows on the user-defined ribbon tab in the
+Frame into the cells below Text to Display.
+Remarks
+Then select or type in the name of the Method to Execute when you click the command into the cell to
+the right.
+You can select the following in front a ribbon command or a group label:
+Text to Display
+11-1436 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select ?Formula to designate a formula that computes the text to be used as the label of a group or as
+the ribbon command.
+• Select - Separator (hyphen) to insert a group separator.
+If the group separator has an attached command, the group shows its button in the right bottom corner.
+• Select the # sign and no text after it to designate the end of the previous group and to start a new
+unnamed group.
+• Select #Group Name to start a new ribbon group with the name you enter.
+Type in the name of or select a method that the ribbon command executes to add the ribbon launch
+button to the group in the Frame window. The button typically opens a dialog box or another element
+that is related to the group. We clicked 
+  and then Create Control.
+Type in two or more hyphens -- or two or more number signs ## to show them as they are.
+• Select #GroupNameFormula to start a new ribbon group using a formula.
+If one of the ribbon commands or group labels is dynamic as the result of computing a formula, the
+user-defined ribbon category gets updated each time it comes into the view. Thus, the user-defined ribbon
+tab will only be updated, if another tab was active before and the current tab was then activated.
+Plant Simulation exchanges icons if dynamic ribbon commands or group labels change and selects an icon
+using one of the icon names matching rules described under Add an Icon to a Ribbon Command.
+You can:
+• Create a Ribbon Group
+• Add an Icon to a Ribbon Command
+• Dynamically Add a Ribbon Command
+• Dynamically Add a Ribbon Command
+• Create an Access Key
+SimTalk
+UserMenu [SimTalk]
+Text to Display [user-defined ribbon tab]
+Plant Simulation Help 11-1437
+Unpublished work. © 2026 Siemens
+
+Create a Ribbon Group
+Type in or select the number sign # in front of the first command to start a ribbon group on the ribbon
+tab.
+Remarks
+Ribbon groups group a number of related commands and are separated by long vertical lines between
+them.
+In our example we typed in #Commands, #Dialogs, and #Online Help as ribbon groups.
+Any text following the # is used as the name of this ribbon group. If you type in #Dialogs as Text to
+Display, the ribbon tab will show Dialogs preceded by a vertical line serving as a group separator.
+If you just enter # and no text afterward, Plant Simulation considers this as the end of the previous group
+and starts a new group without a ribbon label.
+Create a Ribbon Group
+11-1438 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The command can also consist of a formula, i.e., it can be dynamic. If a formula creates the Text to
+Display, Plant Simulation checks the text for line breaks. If line breaks exist, Plant Simulation splits the text
+and uses it as the:
+• Name of the ribbon command
+• Caption of the tooltip of the ribbon command
+• Description of the ribbon command in the tooltip, provided you entered a description
+Compare this example:
+"Statistics Report\nShow the statistics report.\nGenerates the statistics 
+report of the selected object and shows it."
+Type in the Methods, which the commands call and execute, into the cells below Method to execute.
+Back to Text to Display [user-defined ribbon tab]
+Create a Ribbon Group
+Plant Simulation Help 11-1439
+Unpublished work. © 2026 Siemens
+
+Add an Icon to a Ribbon Command
+Add an icon to a ribbon command to the user-defined ribbon tab.
+Remarks
+To add an icon to a ribbon command, proceed as follows:
+• Create a new object icon. Specify 16 by 16 pixels and/or 32 by 32 pixels as the size.
+Name the icon to match the label of the ribbon command, for example My Command 1.
+• Use these naming conventions for the icons:
+◦ Use My Command 1_16 or My Command 1_32 for example to indicate the size of the icon.
+If you do not specify the size, Plant Simulation will find the icon, but will not document its desired
+usage in its name.
+◦ Use ribbon, which is independent of the ribbon command label, and append the number of the
+command in the ribbon, for example ribbon1.
+◦ Plant Simulation resolves the icon name in this sequence:
+1. Ribbon command label with appended size
+2. Ribbon command label without appended size
+3. Icon names which are independent of the label
+• Plant Simulation will choose the size of the displayed icon based on available space:
+1. If space is tight on the ribbon, it uses the 16 by 16 pixel icon.
+2. If the ribbon has more space available, it uses the 32 x 32 pixel icon.
+In our example we created three icons in our Frame named MyPlantAnytown. We typed in the same name
+as the text to display to which we want to add the icon: MyCommand1_16, My Command 2_16, and My
+Command 3_16. The suffix _16 designates them as icons with a size of 16 by 16 pixels.
+Note
+If you use a formula for the label, Plant Simulation uses the result of this formula to search for the icon.
+Add an Icon to a Ribbon Command
+11-1440 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To prevent any problems with formula results as icon names, you can name ribbon command icons in
+a standardized way using the default name ribbon and appended the number of the command in the
+icon, for example ribbon1.
+If you do not type a Method to Execute into the text box next to Text to Display, Plant Simulation
+dims the icon. In our example we removed the Method to Method to the right of the command
+MyCommand1:
+Back to Text to Display [user-defined ribbon tab]
+Add an Icon to a Ribbon Command
+Plant Simulation Help 11-1441
+Unpublished work. © 2026 Siemens
+
+Dynamically Add a Ribbon Command
+Select ?Formula and then type over Formula in the cell with the name of your formula to use this formula
+as a ribbon command.
+Remarks
+When you type in ?Method1 for example, the method named Method1 will be called. The return value of
+this method has to be of data type string. This way you can toggle between different captions, for example
+between Activate and Deactivate and you can translate the commands into different languages. If the
+methods return an empty string "", Plant Simulation hides the respective command.
+You can use any formula, even a method call with parameters, such as ?Method1(42) or a table access,
+such as ?MyDataTable[1,3].
+Back to Text to Display [user-defined ribbon tab]
+Dynamically Add a Ribbon Command
+11-1442 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Add a Command Separator
+Type in or select - Separator followed by the category name as the Text to Display to insert a vertical
+separator between groups of ribbon commands.
+Back to Text to Display [user-defined ribbon tab]
+Add a Command Separator
+Plant Simulation Help 11-1443
+Unpublished work. © 2026 Siemens
+
+Create an Access Key
+Type the ampersand character & in front of a letter of a command on the ribbon tab to make this letter
+the access key (mnemonic key) on the user-defined ribbon tab.
+Remarks
+Plant Simulation activates this command, when you press the Alt key and that letter.
+If you do not type in the ampersand, Plant Simulation assigns an automatically numbered access key.
+The built-in access keys take precedence over any access keys you define! This means that your access key
+does not work if it is already defined on one of the pre-defined ribbon tabs.
+In our example we made the S in the command My Simple Dialog the access key. Holding down Alt,
+pressing the predefined keys U and T, and pressing the S key opens our simple dialog.
+Note
+You can only create access keys for menu items on a menu, not for dialog items in the dialog itself.
+Back to Text to Display [user-defined ribbon tab]
+Create an Access Key
+11-1444 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Method to Execute [user-defined ribbon tab]
+Type in the name of the Method, which the Text to Display calls and executes, into the respective cell.
+Remarks
+When Methods are called by the user-defined ribbon tab, the anonymous identifier ? (question mark)
+points to the Frame in which the selection was executed. Use this to selectively access objects in the
+respective Frame.
+Parameter
+If the method to execute expects a parameter, Plant Simulation automatically passes it. The objects, which
+you selected in the Frame, are passed to this parameter, which has to be of data type list or an array of
+data type object.
+Example
+?.MyStation.proctime := str_to_time(prompt)
+SimTalk
+UserMenu [SimTalk]
+See also
+Text to Display [user-defined ribbon tab]
+Method to Execute [user-defined ribbon tab]
+Plant Simulation Help 11-1445
+Unpublished work. © 2026 Siemens
+
+Delete [ribbon command]
+To delete a command from the user-defined ribbon tab, select the respective row in the dialog and click
+this button.
+Delete [ribbon command]
+11-1446 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Inherit User-defined Ribbon Tab
+Turns inheritance for a ribbon tab which you create in a Frame, which you inserted into another Frame on
+or off.
+Remarks
+Proceed as follows:
+• Turn inheritance on 
+ , to make any Frame which you derive from the active Frame inherit
+the ribbon tab of its origin.
+• Turn it off, to define a ribbon tab that only applies to the active Frame, but will not be inherited.
+Context Menu User-defined Ribbon Tab/Context Menu
+Context Menu of the User-defined Ribbon Tab
+The context menu of the user-defined ribbon tab and the user-defined context menu provides the
+commands listed in the table of contents to the left.
+Inherit User-defined Ribbon Tab
+Plant Simulation Help 11-1447
+Unpublished work. © 2026 Siemens
+
+Insert Row [user-defined ribbon tab]
+Inserts an empty row above the selected row in the table.
+Remarks
+Hold down Shift and click Insert Row to insert an empty row below the selected row in the table.
+Insert Row [user-defined ribbon tab]
+11-1448 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delete Row [user-defined ribbon tab]
+Deletes the selected row from the table in the dialog.
+Delete Row [user-defined ribbon tab]
+Plant Simulation Help 11-1449
+Unpublished work. © 2026 Siemens
+
+Cut Row [user-defined ribbon tab]
+Cuts the selected row from the table, converts the cut data to text, and places it on the clipboard.
+Remarks
+Plant Simulation separates the two columns of the cut row with a tab stop. In the example below it looks
+like this: 
+Cut Row [user-defined ribbon tab]
+11-1450 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Copy Row [user-defined ribbon tab]
+Copies the selected row in the table, converts the copied data to text, and places it on the clipboard
+Remarks
+Plant Simulation separates the two columns of the copied row with a tab stop. In the example below it
+looks like this: 
+Copy Row [user-defined ribbon tab]
+Plant Simulation Help 11-1451
+Unpublished work. © 2026 Siemens
+
+Paste Row [user-defined ribbon tab]
+Pastes the data of the row from the clipboard to the table in the dialog. While doing this Plant Simulation
+looks for line breaks and tabulators, separates the text accordingly, and pastes the text into the table.
+Remarks
+To control where Plant Simulation pastes the row:
+• Click in the row where you want to paste the row from the clipboard and select Paste Row to replace
+the current row and overwrite its contents. You can also paste the row from the clipboard at the end of
+the table without overwriting any content.
+• Hold down Ctrl and select Paste Row to paste the row from the clipboard above the current row in the
+table. This does not overwrite existing data.
+• Hold down Ctrl and Shift and select Paste Row to paste the row from the clipboard below the current
+row in the table. This does not overwrite existing data.
+Paste Row [user-defined ribbon tab]
+11-1452 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Keyboard Shortcuts for User-defined Ribbon Tab/Context Menu
+The user-defined ribbon tab and the user-defined context menu provide these keyboard shortcuts:
+To do this Press
+Copy the current row to the clipboard Ctrl+C or Ctrl+Ins
+Cut the current row to the clipboard Ctrl+X or Shift+Del
+Paste the contents of the clipboard, provided the format fits
+(tab-separated columns, line-break separated rows)
+Ctrl+V or Shift+Ins
+Insert the new row above the current row Ins/ Ctrl+ + or Ctrl+Num+
+Insert the new row below the current row Ctrl+Shift+ + or Ctrl+Shift+Num+
+Delete the selected row Del
+Edit the selected row F2
+Open the Method Editor for the Method in the current row Shift+F2
+Open the drop-down list for selecting items in the column Text
+to display
+Open the context menu for selecting commands in the column
+Method to execute
+F4
+Create a user-defined method/control Shift+F4
+Attributes of the User-defined Ribbon Tab
+Attributes of the User-defined Ribbon Tab
+The user-defined ribbon tab provides the attributes listed in the table of contents to the left.
+Keyboard Shortcuts for User-defined Ribbon Tab/Context Menu
+Plant Simulation Help 11-1453
+Unpublished work. © 2026 Siemens
+
+ShowUserMenu [SimTalk]
+Shows (true) or hides (false) the user-defined ribbon tab.
+Type
+Attribute
+Syntax
+<Path_to_Frame>.ShowUserMenu:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyFrame.ShowUserMenu := false
+See also
+Active [check box] - user-defined ribbon tab
+ShowUserMenu [SimTalk]
+11-1454 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+UserMenu [SimTalk]
+Sets the user-defined menu of the Frame designated by <Path>.
+Remarks
+The attribute UserMenu passes a table of data type table with two columns.
+String1 designates the command.
+String2 designates the name of the Method, which the command executes.
+Note
+The attribute UserMenu only accesses the items of the user-defined ribbon tab, not its title.
+Type the title of the user-defined ribbon tab into the text box Comment of the DataTable.
+Type
+Attribute
+Syntax
+<Path_to_Frame>.UserMenu:table
+Assignment Value
+You can assign a value of data type table.
+Example
+var tab: table[string, string]
+tab.create
+tab.writeRow(1, tab.YDim+1, "My Command 1", "self.control1")
+tab.writeRow(1, tab.YDim+1, "My Command 2", "self.control2")
+current.UserMenu := tab
+current.UserMenuTitle := "My Ribbon Tab"
+current.ShowUserMenu := true
+UserMenu [SimTalk]
+Plant Simulation Help 11-1455
+Unpublished work. © 2026 Siemens
+
+UserMenuTitle [SimTalk]
+Sets the title of the user-defined ribbon tab of the Frame designate by <Path> and shows it, if you set the
+attribute Active to true.
+Syntax
+<Path_to_Frame>.UserMenuTitle:string
+Assignment Value
+You can assign a value of data type string.
+Example
+frame2.UserMenuTitle := "My Ribbon Tab"
+SimTalk
+Title [user-defined ribbon tab]
+Active [check box] - user-defined ribbon tab
+ShowUserMenu [SimTalk]
+See also
+Configure User-defined Ribbon Tab
+Configure User-defined Context Menu
+Configure User-defined Context Menu
+Creates a user-defined context menu in the selected Frame with menu commands you often use.
+UserMenuTitle [SimTalk]
+11-1456 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remarks
+The dialog, which the function opens is modal. The simulation only continues when the user reacted to
+the requested interaction by clicking the respective button in the dialog.
+Type in a hyphen (-) as the name of the command to insert a menu separator between groups of
+commands.
+Note
+The commands on the user-defined context menu only apply to the selected object(s) within the Frame
+for which you defined the context menu.
+The Class Library does not show the user-defined context menu.
+Let us demonstrate this with an example: We created a context menu in the Frame named
+MyComponent1. When we insert MyComponent1 into our model MyPlantAnytown and click the icon
+of the inserted MyComponent1 with the right mouse button, Plant Simulation shows the context menu
+we created.
+Configure User-defined Context Menu
+Plant Simulation Help 11-1457
+Unpublished work. © 2026 Siemens
+
+Note
+To create a user-defined context menu in a Frame, which you inserted into another Frame, deactivate
+the command Inherit first. Otherwise, this Frame inherits its user-defined context menu from its origin.
+See also
+Create Your Own Ribbon Tab/Context Menu in the Frame
+Configure User-defined Context Menu
+11-1458 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [check box] - user-defined context menu
+To activate the user-defined context menu, select Active. Clear the check box, to deactivate it. The context
+menu opens, when you click the right mouse button on the icon of the inserted Frame.
+Remarks
+Note
+The user-defined context menu is only available for the Frame for which you defined it, after you
+inserted this Frame in another Frame.
+If Methods are called by the context menu, the anonymous identifier ? (question mark) is preallocated
+with the associated Frame.
+SimTalk
+ShowUserPopupMenu [SimTalk]
+New [Context Menu Command]
+New [Context Menu Command]
+To add a new context menu command to a Frame in your simulation model, click this button.
+Remarks
+Plant Simulation then adds a row to the table in the dialog.
+Active [check box] - user-defined context menu
+Plant Simulation Help 11-1459
+Unpublished work. © 2026 Siemens
+
+Proceed as follows:
+• Type in the name of the context menu command that the Frame window is to show.
+• Type in the method that the context menu command is to execute in the Frame window.
+New [Context Menu Command]
+11-1460 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Text to Display [user-defined context menu]
+Type in the text of the command that Plant Simulation shows on the context menu you are defining into
+the text boxes below Text to Display.
+Remarks
+You can also type in a formula as a command. A formula is designated by a leading question mark. When
+you type in ?Method1 for example, the method named Method1 will be called. The return value of
+this method has to be of data type string. This way you can switch between different texts, for example
+between Activate and Deactivate and you can translate the commands into different languages. If the
+methods return an empty string "", Plant Simulation hides the respective command.
+Note
+You can use any formulas, even for example a method call with parameters, such as ?Method1(42) or
+a table access, such as ?MyDataTable[1,3].
+Type in the names of the Methods which the commands call and execute into the text boxes below
+Method to Execute.
+SimTalk
+UserPopupMenu [SimTalk]
+See also
+Method to Execute [user-defined context menu]
+Text to Display [user-defined context menu]
+Plant Simulation Help 11-1461
+Unpublished work. © 2026 Siemens
+
+Method to Execute [user-defined context menu]
+Type in the name of the Method, which the Text to Display calls and executes, in the respective text box
+below Method to Execute.
+Parameters
+You can assign the following parameters:
+• If the method to execute expects a parameter, Plant Simulation automatically passes it. The selected
+objects, which are located within the same Frame as the Frame whose context menu you open, are
+passed to this parameter, which has to be of data type list.
+• The optional parameter of data type integer sets the number of the context menu command on the
+context menu. This way you can use a single callback method for several context menu commands.
+See also
+Text to Display [user-defined context menu]
+UserPopupMenu [SimTalk]
+Method to Execute [user-defined context menu]
+11-1462 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delete [Context Menu Command]
+To delete a context menu command from the user-defined context menu, select the respective row in the
+dialog and click this button.
+Attributes of the User-defined Context Menu
+Attributes of the User-defined Context Menu
+The user-defined context menu provides the attributes listed in the table of contents to the left.
+Delete [Context Menu Command]
+Plant Simulation Help 11-1463
+Unpublished work. © 2026 Siemens
+
+ShowUserPopupMenu [SimTalk]
+Shows (true) or hides (false) the context menu which you defined in the Frame designated by<Path>.
+Type
+Attribute
+Syntax
+<Path_to_Frame>.ShowUserPopupMenu:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+Frame3.ShowUserPopupMenu := true
+ShowUserPopupMenu [SimTalk]
+11-1464 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+UserPopupMenu [SimTalk]
+Sets the user-defined context menu of the Frame designated by <Path>.
+Remarks
+The attribute UserPopupMenu passes a table of data type table with two columns.
+String1 designates the menu command.
+String2 designates the name of the Method, which the command executes.
+Type
+Attribute
+Syntax
+<Path_to_Frame>.UserPopupMenu:table
+Assignment Value
+You can assign a value of data type table.
+Example
+var tab: table[string,string]
+tab.create
+tab.writeRow(1,1,"Open Component","openComponent")
+current.UserPopupMenu := tab
+See also
+Configure User-defined Context Menu
+UserPopupMenu [SimTalk]
+Plant Simulation Help 11-1465
+Unpublished work. © 2026 Siemens
+
+Inherit User-defined Context Menu
+Turns inheritance of the user-defined context menu, which you create in a Frame, and which you
+inserted into another Frame on or off.
+Remarks
+Proceed as follows:
+• Turn it on 
+ , to make any Frame which you derive from the active Frame inherit the user-
+defined context menu of its origin.
+• Turn it off, to define a user-defined context menu that only applies to the active Frame, but will not be
+inherited.
+Replacement Mode
+Replacement Mode
+Sets how Plant Simulation handles objects when you merge Frames.
+Remarks
+The replacement mode controls how Plant Simulation treats an .psobj file which you load into the active
+model, when the Class Library of this model already contains another version of these user-defined classes.
+While doing so Plant Simulation compares the names of the existing Frame and of the Frame to be loaded,
+and then either merges or exchanges the Frames, depending on the setting you selected.
+The replacement mode of the replacing Frame determines if the Frames are merged or replaced. The
+replacement mode of the replaced Frame does not have any consequences.
+Inherit User-defined Context Menu
+11-1466 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Merge
+Exchange
+Inherit Replacement Mode
+SimTalk
+ReplacementMode [SimTalk]
+replace [SimTalk]
+Replacement Mode
+Plant Simulation Help 11-1467
+Unpublished work. © 2026 Siemens
+
+Merge
+Preserves changed settings in instances of the replaced Frame and imports them into the replacing object.
+Plant Simulation then deletes the replaced object in the Class Library. Is the default setting for merging
+Frames.
+Remarks
+This option only works for Frames that are identical. Compare Example 1.
+SimTalk
+replace [SimTalk]
+getNodeName [SimTalk]
+loadObjectAs [SimTalk]
+Save Object As
+writeObject [SimTalk]
+See also
+Load Object
+Save Object As
+Merge
+11-1468 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exchange
+Transforms all instances of the replaced object into instances of the replacing object. Plant Simulation
+discards user-defined modifications in instances of the replaced object and deletes the replaced object from
+the Class Library.
+Remarks
+Before you Exchange Frames in Replacement Mode we recommend to save the previous version of the
+Frame as all changes you made will be lost and there is no way to retrieve them!
+Merge Classes, Example and Exchange Classes, Example illustrate replacement mode.
+SimTalk
+replace [SimTalk]
+getNodeName [SimTalk]
+loadObjectAs [SimTalk]
+writeObject [SimTalk]
+See also
+Load Object
+Save Object As
+Exchange
+Plant Simulation Help 11-1469
+Unpublished work. © 2026 Siemens
+
+Merge Classes, Example
+In simulation model1 we modeled the object userobjectA as FrameA. We also use the model FrameA in the
+models FrameX and FrameY. In addition we changed the instances of FrameA in FrameX and FrameY.
+Remarks
+We then save FrameX and FrameY with the context menu command Save Object As as object files (.psobj)
+to be able to reuse them in other simulation models. Plant Simulation also saves all objects you inserted
+into frames, especially FrameA.
+Then, we load FrameX (FrameX.psobj) and FrameY (FrameY.psobj) with the context menu command Load
+> Load Object into simulation model2.
+When loading FrameX (FrameX.psobj) and all object contained within, including FrameA, will be loaded
+into the Class Library of simulation model2. Plant Simulation replaces some of the newly loaded objects
+with objects already present in simulation model2. As FrameX did not exist in the Class Library, it is going
+to be imported as is.
+When loading FrameY (FrameY.psobj) Plant Simulation loads all objects contained within. As FrameA
+already exists in the Class Library, Plant Simulation replaces it with the setting you selected under
+Replacement Mode in FrameA in the Class Library:
+• Merge
+All changes we made in FrameA in FrameY will be preserved.
+• Exchange
+All changes we made in FrameA in FrameY will be lost. FrameA in FrameY will be replaced with FrameA
+that already exists in the Class Library.
+In this case Merge is the mode that meets our requirements.
+Merge Classes, Example
+11-1470 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exchange Classes, Example
+In simulation model1 we modeled the user-defined object FrameA. We use FrameA several times in
+FrameX.
+Remarks
+We then save FrameX with the context menu command Save Object As as object file (.psobj) to be able to
+reuse it in other simulation models. All objects inserted into frames, especially FrameA, are saved as well.
+Then, we import FrameX into simulation model2 that contains a more up-to-date version of FrameA,
+FrameANew, which we would like to continue using. To replace instances of FrameA in FrameX with
+instances of FrameANew in FrameX, we select Exchange as Replacement Mode in FrameANew. This
+discards all changes in instances of FrameA in FrameX; this means we are going to continue working with
+FrameANew as we intended.
+Merge is not possible in this case, as FrameA differs from FrameANew.
+Exchange Classes, Example
+Plant Simulation Help 11-1471
+Unpublished work. © 2026 Siemens
+
+Inherit Replacement Mode
+Turns inheritance of the replacement mode of a Frame which you inserted into another Frame on or off.
+Remarks
+Proceed as follows:
+• Turn it on 
+ , to make any Frame which you derive from the active Frame inherit the
+replacement mode of its origin.
+• Turn it off, to define a replacement mode that only applies to the active Frame, but will not be inherited.
+Inherit Replacement Mode
+11-1472 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Lock Structure [Frame ribbon]
+Locks the structure of the Frame. Lock Structure is deactivated by default for new models, allowing you to
+immediately start modeling.
+Remarks
+When you activate Lock Structure 
+ , Plant Simulation prevents unintentional changes, i.e., inserting,
+deleting, and changing of objects as well as changing the position of objects. You can then neither change
+the position of any of the objects nor their name.
+Lock Structure is activated in instantiated Frames by default. This helps to prevent unintentional changes
+to the structure of an instance, although this change should apply to all instances and should thus be
+made in the class.
+SimTalk
+LockStructure [SimTalk]
+Lock Structure [Frame ribbon]
+Plant Simulation Help 11-1473
+Unpublished work. © 2026 Siemens
+
+Context Menu of the Frame Itself
+The context menu of the Frame itself provides these commands. To open it, click into the background of
+the Frame with the right mouse button.
+Remarks
+Some of the commands are located on the mini toolbar, while others are commands on the context menu
+itself.
+You can also close the context menu and leave the mini toolbar open
+ by clicking the border of the mini toolbar with the left mouse
+button.
+To do this click or select
+Reset the simulation in the Frame
+  Reset Simulation [Home ribbon]
+Start or stop the simulation in the Frame
+  Start/Stop Simulation [Home ribbon]
+Start the simulation without animation in the
+Frame
+  Start Fast Forward Simulation [Home ribbon]
+Context Menu of the Frame Itself
+11-1474 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To do this click or select
+Show the objects which Frame contains
+  Show Structure
+[Home ribbon]
+Show the objects which inherit from the Frame
+  Show
+Inheritance [Home ribbon]
+Show the attributes and methods of the Frame
+  Show Attributes
+and Methods [Home ribbon]
+Context Menu of the Selected Object in the Frame
+Context Menu of the Selected Object in the Frame
+The context menu of an object, which you insert into a Frame, provides some a number of commands,
+when you click it with the right mouse button.
+Remarks
+Some of the commands listed in the table of contents to the left are located on the mini toolbar, while
+others are commands on the context menu itself.
+You can also close the context menu and leave the mini toolbar open 
+  by
+clicking the border of the mini toolbar with the left mouse button.
+The mini toolbar 
+  above the context menu proper always provides these
+commands:
+To do this click
+Open the origin of the selected object
+  Open Origin [Home ribbon]
+Open the class of the selected object
+  Open Class [Home ribbon]
+Cut the selected object from the Frame
+  Cut [Home ribbon]
+Copy the selected object in the Frame
+  Copy [Home ribbon]
+Delete the selected object from the Frame
+  Delete [Home ribbon]
+Some objects provide additional commands on the mini toolbar to the left or the right of the default
+buttons.
+Context Menu of the Selected Object in the Frame
+Plant Simulation Help 11-1475
+Unpublished work. © 2026 Siemens
+
+You can also close the context menu and leave the mini toolbar open 
+  by
+clicking the border of the mini toolbar with the left mouse button.
+Note
+Not all objects provide all of the context menu commands listed above.
+Context Menu of the Selected Object in the Frame
+11-1476 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Activate [in Frame]
+To activate the selected object, select this command.
+Remarks
+The object then selects the check box Active [check box] - ShiftCalendar 
+ .
+For the ShiftCalendar it looks like this:
+You can deactivate the selected object with the command Deactivate.
+Activate [in Frame]
+Plant Simulation Help 11-1477
+Unpublished work. © 2026 Siemens
+
+Calculate Angles
+To make the Turntable and the PickAndPlace robot compute the angles at which you connected them with
+their predecessors and with their successors in the Frame, select this command.
+Remarks
+The Turntable then enters the entry angles into the Entry Angle Table and the exit angles into the Exit
+Angle Table.
+The PickAndPlace robot then enters the angles into the Angles Table.
+See also
+Pick Up Parts and Place Them with the Robot
+calculateAngles [SimTalk] - PickAndPlace
+calculateAngles [SimTalk] - Turntable
+Calculate Angles
+11-1478 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Controls [in Frame]
+To open one of the controls, which you entered on the Tab Controls, by clicking Edit Controls on the
+Home ribbon tab, select the name of the control on the submenu.
+Remarks
+The command also shows the controls you entered by selecting Tools >Edit Controls in the dialog of an
+object.
+The context menu only shows the menu item Controls if you actually did enter one or several controls.
+See also
+Tab Controls [general description]
+Edit Controls [material flow objects]
+Controls [in Frame]
+Plant Simulation Help 11-1479
+Unpublished work. © 2026 Siemens
+
+Create Sensor [in Frame]
+To create a new sensor on the length-oriented object, click at the rough position at which you would like to
+insert the sensor with the right mouse button and select this command. Enter the precise position and the
+remaining data defining to the sensor into the dialog that opens.
+Remarks
+To open the sensor at a later point in time, click it with the right mouse button and select Open Sensor.
+To delete the sensor at a later point in time, click it with the right mouse button and select Delete Sensor
+[in Frame]. To delete the sensor in 3D, press Del on your keyboard.
+Instead, you can also click Sensors [general description] 
+  in the dialog of the object.
+Create Sensor [in Frame]
+11-1480 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delete Sensor [in Frame]
+To delete a sensor from a length-oriented object, select the sensor with the right mouse button and select
+this command. To delete the sensor in 3D, press Del on your keyboard.
+Delete Sensor [in Frame]
+Plant Simulation Help 11-1481
+Unpublished work. © 2026 Siemens
+
+Deactivate
+To deactivate the selected object, select this command. This command clears the check box Active of the
+objects.
+Remarks
+For the ShiftCalendar it looks like this:
+You can activate the selected object with the command Activate.
+Deactivate
+11-1482 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit Dialog [in Frame]
+To edit the Dialog you created, select this command.
+Instead, you can also click Edit Dialog [described] 
+  in the dialog editor.
+Edit Dialog [in Frame]
+Plant Simulation Help 11-1483
+Unpublished work. © 2026 Siemens
+
+Edit Icons [in Frame]
+To open the Icon Editor, select this command. You can then edit, delete, or add new icons to the selected
+object or model.
+Edit Icons [in Frame]
+11-1484 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit User-defined Attributes [in Frame]
+To open the dialog User-defined Attributes, select this command. You can then edit, delete, or add new
+user-defined attributes to the selected object or to the Frame.
+See also
+User-defined Attributes [general description]
+Edit User-defined Attributes [in Frame]
+Plant Simulation Help 11-1485
+Unpublished work. © 2026 Siemens
+
+Event Debugger [in Frame]
+To open the dialog box of the EventDebugger, select this command.
+See also
+Dialog Box of the Event Debugger
+Event Debugger [in Frame]
+11-1486 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open [in Frame]
+To open the dialog box of the selected object, select this command.
+Instead, you can also double-click the icon of the object in the Frame window.
+Open [in Frame]
+Plant Simulation Help 11-1487
+Unpublished work. © 2026 Siemens
+
+Open Class [in Frame]
+To open the class of the selected object in the Class Library, select this command.
+When you select the command Open Class 
+  for an instance of an object, Plant Simulation moves up in
+the inheritance structure until it reaches an object in the Class Library. It then opens this object.
+Open Class [in Frame]
+11-1488 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Comment Window
+To open a window that only shows the text which you typed into the Comment, without formatting and
+editing options, select this command.
+See also
+Text [text box] - Comment
+Comment [object]
+Open Comment Window
+Plant Simulation Help 11-1489
+Unpublished work. © 2026 Siemens
+
+Open Debugger
+To open the Method Debugger at the suspended line of code, select this command.
+Remarks
+If the Method is suspended, Plant Simulation opens the Watch Window instead and highlights all lines of
+code for this Method there.
+Compare the ribbon tab Debugger > Suspended Methods.
+Open Debugger
+11-1490 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open External Connections List
+To open the list, which shows the paths of the external connections in the Frame in which you inserted the
+Interface object, select this command.
+Remarks
+The column Connector shows the Connector at the exit of the Frame. The column Object shows the name
+of the succeeding object.
+Instead, you can also select View > External Connections in the dialog of the Interface.
+Open External Connections List
+Plant Simulation Help 11-1491
+Unpublished work. © 2026 Siemens
+
+Open Origin [in Frame]
+To open the class from which the selected object was derived, select this command.
+Remarks
+Instead, you can also click 
+  on the Home Ribbon Tab.
+SimTalk
+Origin [SimTalk] - general description
+Open Origin [in Frame]
+11-1492 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Sensor
+To open the dialog of the selected sensor of the length-oriented object, select this command.
+Instead, you can also click Sensors [general description] 
+  in the dialog of the object.
+Open Sensor
+Plant Simulation Help 11-1493
+Unpublished work. © 2026 Siemens
+
+Open Values Table
+To open the TimeSequence object that contains the current sequence of Values of the Trigger, select this
+command.
+See also
+Values [Trigger]
+Open Values Table
+11-1494 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Without Control
+To open the dialog of the object without calling the Open Control, select this command. This does not
+apply if the Open Control is an encrypted user-defined attribute of data type method.
+Remarks
+To prevent the Open Control from being executed, you can also hold down Alt while double-clicking the
+icon of the object.
+See also
+Open Control
+Open Without Control
+Plant Simulation Help 11-1495
+Unpublished work. © 2026 Siemens
+
+Rename [in Frame]
+To enter a new name for the selected object, select this command.
+Instead, you can also select Home > Rename [Home ribbon] in the Frame window or press F2.
+Rename [in Frame]
+11-1496 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Reorder Successors
+To reorder the sequence of the successors of the selected object, select this command. This way you can
+change the order of the Connectors without having to delete these and reconnect the objects.
+Remarks
+The sequence of the successors affects how the parts are transported through your simulation model.
+Plant Simulation establishes the sequence of the Connector when you connect the objects which you
+inserted into a Frame.
+To move the selected object up in the sequence of the successors, click Up.
+To move the selected object down in the sequence of the successors, click Down.
+To delete the Connector from the selected object to its successor, click Delete or press the Delete key. This
+is helpful if you cannot see the Connectors because the objects are placed so close that they touch each
+other.
+Reorder Successors
+Plant Simulation Help 11-1497
+Unpublished work. © 2026 Siemens
+
+Note
+The command does not affect instances of the selected object.
+Reorder Successors
+11-1498 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Reset Simulation [in Frame]
+To reset your simulation model, click the button on the mini toolbar.
+Instead, you can also click Reset Simulation [EventController] in the dialog of the EventController or 
+on the Home Ribbon Tab.
+Reset Simulation [in Frame]
+Plant Simulation Help 11-1499
+Unpublished work. © 2026 Siemens
+
+Run [Method in Frame]
+To run the source code of the Method, select this command.
+Instead, you can also select Run [button] - Method on the Run menu of the Method or press F5.
+Run [Method in Frame]
+11-1500 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show [in Frame]
+To show the display window of the AttributeExplorer, the HtmlReport, or the Chart, select this command.
+Instead, you can also click Show Explorer 
+ , Show Report 
+ , or Show
+Chart 
+ .
+See also
+AttributeExplorer [object]
+HtmlReport [object]
+Chart [object]
+Show [in Frame]
+Plant Simulation Help 11-1501
+Unpublished work. © 2026 Siemens
+
+Show Assigned Objects [in Frame]
+To select the objects which are assigned to the LockoutZone or to the ShiftCalendar as resources in the
+Frame, select this command.
+Instead, you can also select View > Show Assigned Objects [LockoutZone] in the dialog of the
+LockoutZone or the ShiftCalendar.
+Show Assigned Objects [in Frame]
+11-1502 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Attributes and Methods [in Frame]
+To show the attributes and methods of the instance of the object class, which you inserted into the Frame,
+select this command.
+Instead, you can also press the F8 key or click Show Attributes and Methods [Home ribbon] on the
+Home Ribbon Tab.
+Show Attributes and Methods [in Frame]
+Plant Simulation Help 11-1503
+Unpublished work. © 2026 Siemens
+
+Show Dialog [in Frame]
+To show the Dialog with the dialog items you created, select this command.
+Instead, you can also click Show Dialog [Dialog] 
+  in the dialog editor.
+Show Dialog [in Frame]
+11-1504 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Exported Services
+To open the list that shows all services which the Exporter exports at this time, select this command.
+Instead, you can also select View > Exported Services [Exporter] in the dialog of the Exporter.
+Show Exported Services
+Plant Simulation Help 11-1505
+Unpublished work. © 2026 Siemens
+
+Show External Connected Objects
+To select the objects in the Frame in which they are inserted and which are connected to the Interface.
+object, select this command. If the Frame is closed, Plant Simulation also opens the Frame.
+Instead, you can also select View > External Connections in the dialog of the Interface
+Show External Connected Objects
+11-1506 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Sessions Log
+To show the sessions log of the MQTT interface, select this command.
+Instead, you can also click the Tab Session Log in the dialog of the MQTT interface.
+Show Sessions Log
+Plant Simulation Help 11-1507
+Unpublished work. © 2026 Siemens
+
+Show Statistics Report [in Frame]
+To show statistics of the selected object in the Statistics Report, select this command or press F6.
+Remarks
+To show statistics of several objects, select them (Shift+click or drag a marquee over them) and press F6.
+To add one or several objects to an open report, select it/them and press F6.
+The report adds statistics of the objects, which you selected to the drop-down list. To jump to any of the
+topics, which interest you, select that topic from the drop-down list:
+Show Statistics Report [in Frame]
+11-1508 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Then the report just shows the page with this topic in the display window. To just print this topic, click
+Print this page. To show all topics shown in the Report window, click Show all. To print the entire report,
+click Print.
+To save the report as an HTML file (*.htm or *.html) or as a text file (*.txt) click Save. Enter a name for the
+file and select the folder into which you want to save it.
+To update the report with the current values, click Refresh.
+To print the report, click Print.
+Instead, you can also select View > Statistics Report in the dialog of the objects.
+See also
+Statistics Report [described]
+showStatisticsReport [SimTalk]
+Viewing the Statistics Report
+Show Statistics Report [in Frame]
+Plant Simulation Help 11-1509
+Unpublished work. © 2026 Siemens
+
+Show Structure [in Frame]
+To show the internal structure of the selected object, on which parts can be located, select this command.
+The dialog Structure then shows the parts/objects which are located on the material flow object or are
+loaded onto the Container or the Transporter.
+Show Structure [in Frame]
+11-1510 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start/Stop Simulation [in Frame]
+To start the simulation run, click the button on the mini toolbar. To stop the simulation after the active
+simulation event has been processed, select this command again.
+Instead, you can also click Start/Stop Simulation [EventController] in the dialog of the EventController or
+ on the Home Ribbon Tab.
+Start/Stop Simulation [in Frame]
+Plant Simulation Help 11-1511
+Unpublished work. © 2026 Siemens
+
+Start Fast Forward Simulation [in Frame]
+To start the simulation run without the animation of MUs and States, click the button on the mini toolbar.
+Instead, you can also click 
+  on the Home Ribbon Tab.
+See also
+MUs and States [Home ribbon] 
+Start Fast Forward Simulation [in Frame]
+11-1512 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Statistics Wizard [in Frame]
+To open the Statistics Wizard of the Chart, select this command.
+See also
+Chart [object]
+Statistics Wizard [in Frame]
+Plant Simulation Help 11-1513
+Unpublished work. © 2026 Siemens
+
+Type Info [in Frame]
+To open a table that shows all methods and attributes of the active ActiveX control, select this command.
+Instead, you can also select View > Type Info [ActiveX] in the dialog of the ActiveX control.
+Type Info [in Frame]
+11-1514 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Update [in Frame]
+To update the displayed Sankey flows of the Sankey Diagram with the current values, select this
+command.
+SimTalk
+SankeyDiagram [object]
+update [SimTalk] - SankeyDiagram
+Update [in Frame]
+Plant Simulation Help 11-1515
+Unpublished work. © 2026 Siemens
+
+States of the Frame
+During the simulation runs Plant Simulation shows the state of the Frame as one or more colored
+rectangles in the State Graphic of the Frame.
+Remarks
+Description
+Color of the State
+Graphic Attribute
+The Frame is Failed red Failed [SimTalk] -
+Frame
+The Frame is Stopped pink Stopped [SimTalk] -
+Frame
+The Frame is Paused blue Pause [SimTalk] -
+Frame
+The Frame is Unplanned light blue Unplanned [SimTalk] -
+Frame
+The Frame is Working green StateWorking [SimTalk]
+The Frame is Blocked yellow StateBlocked [SimTalk]
+The Frame is Setting-Up brown StateSetup [SimTalk]
+The Entrance of the Frame is closed cyan StateEntryShut
+[SimTalk]
+The Frame is Waiting for services
+and/or mounting parts
+orange StateResourceMissing
+[SimTalk]
+SimTalk
+_Attributes of the Frame
+See also
+States > State Graphic [defined]
+States of the Material Flow Objects
+States of the Transporter
+States of the Energy Features
+States of the Exporter
+States of the Frame
+11-1516 Plant Simulation Help
+Unpublished work. © 2026 Siemens

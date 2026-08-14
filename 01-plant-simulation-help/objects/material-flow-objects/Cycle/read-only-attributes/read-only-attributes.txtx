@@ -1,0 +1,64 @@
+Read-Only Attributes of the Cycle
+Read-Only Attributes of the Cycle
+The Cycle provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print Cycle.GetFirstStation
+Read-Only Attributes of the Cycle
+Plant Simulation Help 11-2641
+Unpublished work. © 2026 Siemens
+
+GetFirstStation [SimTalk]
+Returns the first station of the balanced line which the Cycle designated by <Path> synchronizes.
+Type
+Read-only attribute
+Syntax
+<Path>.GetFirstStation -> object
+Return Value
+The return value has the data type object.
+Example
+print MyCycleObject.GetFirstStation
+See also
+First Station
+GetFirstStation [SimTalk]
+11-2642 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GetLastStation [SimTalk]
+Returns the last station of the balanced line which the Cycle designated by <Path> synchronizes.
+Type
+Read-only attribute
+Syntax
+<Path>.GetLastStation -> object
+Return Value
+The return value has the data type object.
+Example
+print MyCycleObject.GetLastStation
+See also
+Last Station
+Attributes of the Object Cycle
+_Attributes of the Object Cycle
+The object Cycle provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+GetLastStation [SimTalk]
+Plant Simulation Help 11-2643
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,58 @@
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print &Method.Encrypted
+Read-Only Attributes of the Method
+11-3716 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Encrypted [SimTalk]
+Returns if the Method or the user-defined attribute of data type method designated by the reference
+operator <&> is encrypted (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<&>Method.Encrypted → boolean
+Return Value
+The return value has the data type boolean.
+Example
+print &MyMethod.Encrypted
+Encrypted [SimTalk]
+Plant Simulation Help 11-3717
+Unpublished work. © 2026 Siemens
+
+NumInExecution [SimTalk]
+Returns how often the Method designated by the reference operator <&> is being executed at the
+moment.
+Type
+Read-only attribute
+Syntax
+<&>Method.NumInExecution → integer
+Return Value
+The return value has the data type integer.
+Example
+print &MyMethod.NumInExecution
+Attributes of the Method
+_Attributes of the Method
+The object Method provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+Note
+You can only access the attributes of the object Method, which refer to the object itself, via the reference
+operator &. Without the & operator the attribute will be applied to the contents of the Method.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+NumInExecution [SimTalk]
+11-3718 Plant Simulation Help
+Unpublished work. © 2026 Siemens

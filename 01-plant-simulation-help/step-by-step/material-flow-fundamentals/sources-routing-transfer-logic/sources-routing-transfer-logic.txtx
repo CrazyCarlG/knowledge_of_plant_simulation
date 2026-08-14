@@ -1,0 +1,1418 @@
+Go to Use a Drag-and-Drop Control for Several Objects
+Back to Work with Drag-and-Drop
+Modeling the Flow of Materials, Basics
+Model the Flow of Materials, Basics
+You can use a number of modeling techniques when creating your simulation models.
+Below we introduce you to the basics of modeling the flow of materials in your simulation model. We'll
+show:
+• How to create or introduce parts 
+  into your model with the object Source 
+ .
+• How to select and enter for how long a station 
+  processes the parts that move onto it.
+• How to set a station 
+  up to process another type of part.
+• How to transfer the parts from processing station 
+  to processing station 
+ .
+• How to model failures and failure times of the processing stations.
+• How to remove the processed parts from your model with the object Drain 
+ .
+Modeling the Flow of Materials, Basics
+Plant Simulation Help 10-151
+Unpublished work. © 2026 Siemens
+
+Go to Active and Passive Objects
+Go to Produce Parts with the Source
+Go to Produce and Process Parts with a Work Plan
+Go to Remove Parts from the Installation with the Drain
+Go to Transfer Parts from Station to Station
+Go to Set a Station Up
+Go to Define Processing Times
+Go to Model Failures
+Go to Buffer Parts within the Production Line
+Go to Place Parts into Stock and Remove Parts from It
+Go to Use the Store as Supermarket
+Go to Stack Parts in the Store
+Go to Loading a Container Layer by Layer
+Go to Work with Workpiece Carriers
+Go to Balance a Production Line
+Go to Model the Flow of Materials, Advanced
+Back to Modeling the Material Flow
+Active and Passive Objects
+Mobile and stationary material flow objects are the basic items you use when you create a simulation
+model.
+• The mobile material flow objects Part, Container and Transporter represent the physical or logical
+parts moving through the model, i.e., your installation. These mobile objects (MUs) require active and
+passive material flow objects to process and transport them.
+• The Source creates mobile objects at the beginning of the flow of materials through your plant. The
+Drain removes the MUs from the plant after the material flow objects processed them.
+Active and Passive Objects
+10-152 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The FluidSource creates fluids at the beginning of the flow of materials through your plant. The
+FluidDrain removes the fluids from the plant after the fluid objects processed them.
+• The active material flow objects Drain, Station, ParallelStation, AssemblyStation, DismantleStation,
+Conveyor, Sorter, PlaceBuffer, and Buffer receive MUs, and process them for a certain time. They then
+attempt to actively transfer the MUs to the next object along material flow connections, symbolized
+by the Connector, using the push-block principle. They represent work stations in a factory, such as a
+lathe or a drilling station, etc. They only differ in the number of MUs they can process at the same time,
+a single one or several, and in the way they process them, in series or in parallel. Basically, the Conveyor
+resembles a conveyor system transporting MUs at a given speed over a given distance.
+• The active fluid objects FluidDrain, Tank, Mixer, Portioner, and DePortioner receive fluids, and process
+them for a certain time. They then attempt to actively transfer the fluids to the next object along
+material flow connections, symbolized by the Connector, using the push-block principle.
+• The passive material flow objects Store, Track, and TwoLaneTrack do not automatically transfer MUs. A
+MU remains in the Store until it is removed, for example by using a Method. You can only use the Track
+and the TwoLaneTrack in a meaningful way in conjunction with the Transporter, which drives along the
+Track/TwoLaneTrack with the speed you set. Model diverging strategies and converging strategies with
+the FlowControl.
+• The passive fluid objects Pipe and PatchMatrix transport the fluids to their respective successor in the
+flow of materials.
+We also distinguish between active and passive MUs:
+• Active MUs are objects that can move by themselves, such as the Transporter, which can be self-
+propelled, and the Worker, who represents a human.
+• Passive MUs, such as the Part and the Container, are objects that are transported from material flow
+object to material flow object, which process them. The Part represents any workpiece that is produced
+and processed. The Container represents any type of receptacle, such as a storage bin or a pallet.
+In addition, we differentiate between:
+• Point-oriented objects in which the MUs are located on a fixed processing place. For the Source,
+the Drain, the Station, the ParallelStation, the AssemblyStation, the DismantleStation, the Sorter, the
+PlaceBuffer, the Buffer, the FluidSource, the FluidDrain, the Tank, the Mixer, the ContinuousMixer, the
+Portioner, the DePortioner, and the PatchMatrix, their own real length and their dimension as well as
+the length and the dimension of the MUs, which transfer onto them, are irrelevant for the simulation.
+• Length-oriented objects whose own real length and dimension as well as the length and the
+dimension of the MUs, which transfer onto them, are used during the simulation. Length-oriented
+objects are the Conveyor, the Track, the TwoLaneTrack, the FootPath, the Pipe,the Container, and the
+Transporter.
+As opposed to the regular length-oriented objects, the Turntable consists of a single straight segment,
+not of a sequence of straight and curved segments. The Turnplate consists of a straight segment that
+sets the diameter of the Turnplate. The AngularConverter consists of two straight segments, not of a
+sequence of straight and curved segments. The Converter consists of a single straight segment.
+The length-oriented objects are called extrusion objects in 3D.
+Active and Passive Objects
+Plant Simulation Help 10-153
+Unpublished work. © 2026 Siemens
+
+Compare Work with Length-oriented Objects
+Back to Model the Flow of Materials, Basics
+Producing Parts with the Source
+Produce Parts with the Source
+To create the MUs, which the material flow objects in your simulation model handle, we use the object
+Source. It might, for example, represent the receiving department of your installation that introduces parts
+produced at another location into the plant. Or it can be a machine, which produces the parts that the
+other stations process.
+To remove these parts from the factory to model, for example, the shipping department, we use the object
+Drain 
+ .
+You can insert the Source 
+  into your simulation model from the folder MaterialFlow in the Class Library
+or from the toolbar Material Flow in the Toolbox.
+You can:
+• Select How the Source Proceeds, When it Cannot Produce MUs
+• Produce Parts According to a Delivery Table
+• Produce Parts During an Interval Which You Define
+• Produce the Number of Parts You Need
+• Produce Parts Using a Trigger Object
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Compare Check How Many Parts Were Introduced into the Plant
+Compare Remove Parts from the Installation with the Drain
+Producing Parts with the Source
+10-154 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Model the Flow of Materials, Basics
+Select How the Source Proceeds, When it Cannot Produce MUs
+Select how the Source proceeds when it cannot create the MUs at the Time of Creation that you entered
+because it cannot move the parts on to its successor. This is the case when it fails, when it is paused, or
+when it is blocked.
+• Select the Operating Mode > Blocking 
+ , so that the Source remembers the time at which
+it was supposed to produce the next MU but could not. It then produces the following MU at the next
+possible point in time, i.e., if the MU, which blocked it, has moved on.
+• Clear Blocking, so that the Source creates another MU exclusively at the time of creation you entered.
+Note
+When the Source is temporarily not operational because it is Failed, Paused, or Blocked, the times
+of creation may shift, if you select Blocking. Then, the settings for the times of creation cannot be
+realized.
+Back to Produce Parts with the Source
+Produce Parts According to a Delivery Table
+For the installation you are modeling you will, most likely, use a Delivery Table that contains the parts that
+a machine produces, parts provided by other departments within the same plant, or parts delivered from
+other plants.
+Most of the time the delivery table you receive from another department will be a Microsoft Excel file
+containing, among others, the name of the part, its amount, its arrival time, etc. You will then open this
+Excel (*.xls) file in a Plant Simulation table 
+  and save it there.
+Select How the Source Proceeds, When it Cannot Produce MUs
+Plant Simulation Help 10-155
+Unpublished work. © 2026 Siemens
+
+To produce MUs according to the time, the type, and the number of parts you typed into a Delivery Table:
+• Select Time of Creation > Delivery Table.
+• Click 
+  and select the delivery table you would like to use in the dialog Select Object. Or
+Drag your delivery table over the text box Table and drop it there.
+• Click OK.
+Next to information about the name and number of the produced parts, the Delivery Table may also
+contain values of their attributes. The Delivery Table has five columns.
+Note
+Instead of the data type time for the Delivery Time you can also use the data types date, dateTime, or
+real. When you use date or dateTime, the start time of the simulation has to be before the time you type
+in.
+Each row of the Delivery Table defines a single order for producing MUs:
+• Type the time at which the Source produces the MUs into the column Delivery Time.
+• Type the class of the MU into the column MU. You can also use drag-and-drop of the MU class to
+accomplish this.
+• Type the number of MUs to be produced into the column Number.
+Note
+When you type 0 as Number into a row, Plant Simulation does take the specified interval for the next
+creating cycle into account. This means that Plant Simulation does not skip this row, but does not
+produce a part during this cycle.
+Produce Parts According to a Delivery Table
+10-156 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Type a name for the MUs to be produced into the column Name.
+Note
+You have to type in the Delivery Time and the MU.
+If you do not type in a Number, Plant Simulation produces a single MU.
+If you do not type in a Name, the MUs, which the Source produces, use the name of their class.
+• In addition, you can, but you do not have to type the name of a subtable into the column Attributes.
+Type the attributes whose value the Source sets and the user-defined attributes that it creates, when it
+produces the MUs, into that subtable.
+To open the subtable, do one of the following:
+◦ Double-click the cell containing the subtable, properties in the column Attributes in the example
+above.
+◦ Click into the cell and press F2.
+◦ Right-click into the cell and select Open Object.
+Type the name of a built-in attribute into the cells below column 1 of the attribute table. Type the value
+you want to assign to this attribute into one of the cells to the right with the respective data type. Or
+Type the name of a user-defined attribute into the cells below column 1 of the table. If an attribute
+with that name does not exist yet, Plant Simulation creates it. Type the value you want to assign to this
+attribute into the cell to the right, which has the corresponding data type.
+Produce Parts According to a Delivery Table
+Plant Simulation Help 10-157
+Unpublished work. © 2026 Siemens
+
+Note
+Plant Simulation assigns the data type of the column containing the value of the attribute to the data
+type of the attribute itself. Plant Simulation assigns the value you type into the cell to the generated
+attribute.
+Back to Produce Parts with the Source
+Producing Parts During an Interval Which You Define
+Produce Parts During an Interval Which You Define
+For the plant you are modeling you can produce parts during an interval which you define.
+To produce MUs during the interval you define:
+• Select Time of Creation > Interval Adjustable.
+• In our example, we chose to have the Source create one Constant type of MU, namely a Part, every
+minute and 20 seconds.
+• Click OK.
+Producing Parts During an Interval Which You Define
+10-158 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The Source:
+• Produces the first MU at the time you enter for Start.
+• Produces the next MU after the time you enter for Interval has elapsed.
+• Stops producing MUs at the point in time you enter for Stop. Enter 0 into the text box Stop if you do not
+want to apply a time limit.
+When you select Time of Creation > Interval Adjustable or Time of Creation > Number Adjustable you
+can also select how the Source produces which types of MUs.
+You can:
+• Produce a Single Part Type Only
+• Produce Parts in a Fixed Sequence Over and Over Again
+• Produce Parts in a Fixed Sequence One Time Only
+• Produce Parts With a Random Frequency Entered into a Data Table
+• Produce Parts With a Percentage Entered into a Data Table
+Compare Specify Times in Object Dialogs
+Back to Produce Parts with the Source
+Produce a Single Part Type Only
+For the plant you are modeling you can produce a single part type only.
+To make the Source produce one type of MU only:
+• Select MU Selection > Constant.
+• Click 
+ . In the dialog Select Object navigate to the folder where the MUs are located. Select the name
+of a MU class and click OK.
+Produce a Single Part Type Only
+Plant Simulation Help 10-159
+Unpublished work. © 2026 Siemens
+
+Back to Produce Parts During an Interval Which You Define
+Produce Parts in a Fixed Sequence Over and Over Again
+For the plant you are modeling you can produce parts in a fixed sequence over and over again.
+To make the Source produce MUs in a fixed sequence over and over again:
+• Select MU Selection > Sequence Cyclical.
+• Insert a table into a Frame or into a folder in the Class Library.
+• To designate the MU class to be produced, do one of the following:
+◦ Click 
+ . In the dialog Select Object navigate to the folder where the data table is located into which
+you want to enter the MUs. Select the name of the Table and click OK.
+◦ Drag the table over the text box Table and drop it there.
+◦ Enter the name of and the path to the table into the text box next to Table.
+Produce Parts in a Fixed Sequence Over and Over Again
+10-160 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter the names of the MU classes to be produced into the cells below MU of the table.
+• You can, but you do not have to enter a Name and Attributes into columns 3 and 4 of the table.
+• Enter the number of MUs to be produced into the cells below Number.
+Note
+When you do not enter a Name, the MUs that the Source produces use the name of their class.
+• To make the Source produce the number of MUs you specified in a row of the sequence table all at
+once in a single batch before moving the entire batch on, select Generate as Batch. Once the Source
+has processed the entire sequence, it starts processing the information in the table again starting at the
+beginning of the sequence.
+Produce Parts in a Fixed Sequence Over and Over Again
+Plant Simulation Help 10-161
+Unpublished work. © 2026 Siemens
+
+To make the Source produce the MUs is a sequence of individual MUs, clear the check box. When the
+Source produces the MUs is a batch, it attempts to produce the entire set of Parts at the given start time
+and to move them on to the next object.
+Back to Produce Parts During an Interval Which You Define
+Produce Parts in a Fixed Sequence One Time Only
+For the plant you are modeling you can produce parts in a fixed sequence one time only.
+To make the Source produce MUs in a fixed sequence one time only:
+• Select MU Selection > Sequence Cyclical.
+Note
+The setting Sequence is not available, when you set Time of Generation to Number Adjustable.
+• Insert a table into a Frame or into a folder in the Class Library.
+• To designate the type of MU to be produced, do one of the following:
+◦ Click 
+ . In the dialog Select Object navigate to the folder where the data table is located into which
+you enter the MUs. Select the name of the Table and click OK.
+Produce Parts in a Fixed Sequence One Time Only
+10-162 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Drag the table over the text box Table and drop it there.
+◦ Enter the name of and the path to the table into the text box next to Table.
+• Enter the names of the MU classes to be produced into the cells below MU into the table.
+• Enter the number of MUs to be produced into the cells below Number.
+• You can, but you do not have to enter a Name and Attributes into columns 3 and 4 of the table.
+Note
+When you do not enter a Name, the MUs that the Source produces use the name of their class.
+• To make the Source produce the number of MUs you specified in a row of the sequence table all at once
+in a single batch before moving the entire batch on, select Generate as batch.
+To make the Source produce the MUs as a sequence of individual MUs, clear the check box. When the
+Source produces the MUs as a batch, it attempts to produce the entire set of parts at the given start time
+and to move them on to the next object all at once in the batch.
+Back to Produce Parts During an Interval Which You Define
+Produce Parts With a Random Frequency Entered into a Data Table
+For the plant you are modeling you can produce parts with a random frequency entered into a data table.
+To make the Source produce MUs with a frequency, which you type into a table:
+• Select MU Selection > Random.
+Produce Parts With a Random Frequency Entered into a Data Table
+Plant Simulation Help 10-163
+Unpublished work. © 2026 Siemens
+
+• Insert a table into a Frame or into a folder in the Class Library.
+• To designate the type of MU to be produced, do one of the following:
+◦ Click 
+ . In the dialog Select Object navigate to the folder where the data table is located into which
+you enter the MUs. Select the name of the Table and click OK.
+◦ Drag the table over the text box Table and drop it there.
+◦ Enter the name of and the path to the table into the text box next to Table.
+• Enter the names of the MU classes to be produced into the cells below MU into the table.
+• Enter the frequency number for each class of MU to be produced into the cells below Frequency.
+When the Source produces the MUs, Plant Simulation selects and processes a random generation order
+according to the frequency you entered here.
+Produce Parts With a Random Frequency Entered into a Data Table
+10-164 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter the number of MUs to be produced into the column Number.
+• You can, but you do not have to enter a Name or an Attributes table.
+Note
+If you do not enter a Name, the MUs that the Source produces use the name of their class.
+To check which part types were produced at which point in time, you can activate the check box Creation
+table on the tab Statistics and then open the table.
+Back to Produce Parts During an Interval Which You Define
+Produce Parts With a Percentage Entered into a Data Table
+For the plant you are modeling you can produce parts with a percentage entered into a DataTable.
+To make the Source produce MUs with a frequency, which you type into a table:
+• Select MU Selection > Percentage.
+• Insert a table into a Frame or into a folder in the Class Library.
+• To designate the type of MU to be produced, do one of the following:
+Produce Parts With a Percentage Entered into a Data Table
+Plant Simulation Help 10-165
+Unpublished work. © 2026 Siemens
+
+◦ Click 
+ . In the dialog Select Object navigate to the folder where the data table is located into which
+you enter the MUs. Select the name of the Table and click OK.
+◦ Drag the table over the text box Table and drop it there.
+◦ Enter the name of and the path to the table into the text box next to Table.
+• Enter the names of the MU classes to be produced into the cells below MU into the table.
+• Enter the percentage portion for each class of MU to be produced into the cells below Portion.
+• Enter the number of parts to be produced into the cells below Number.
+• You can, but you do not have to enter a Name or an Attributes table.
+Note
+If you do not enter a Name, the MUs that the Source produces use the name of their class.
+Compare Specify Times in Object Dialogs
+Back to Produce Parts with the Source
+Video on YouTube
+https://youtu.be/BvHLQCIjGIA?si=b7Ua-Nl7_uxT39m4&t=158
+Produce the Number of Parts You Need
+For the plant you are modeling you can produce the number of parts you need.
+To produce a certain number of MUs during the interval you define:
+• Select Time of Creation > Number Adjustable.
+Video on YouTube
+10-166 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter the Amount, i.e., the number of MUs to be created.
+• Select the Creation Times, which determine the points in time at which the Source creates the MUs.
+Select a distribution from the drop-down list Creation Times and enter the values that the distribution
+requires into the text box.
+The Source produces the number of MUs at the different times which the random number generator
+generated at the beginning of the simulation. The determined times are contained within the bounds if
+you enter a lower bound and an upper bound.
+If you select a Constant time, the Source creates the number of MUs all at one point in time.
+Note
+If you set the Creation Times via SimTalk, use the attribute Interval.
+Note
+For the setting Number Adjustable you cannot select the MU Selection > Sequence.
+• Click OK.
+If you select Time of Creation > Interval Adjustable or Time of Creation > Number Adjustable you can
+also select how the Source produces which types of MUs.
+Produce the Number of Parts You Need
+Plant Simulation Help 10-167
+Unpublished work. © 2026 Siemens
+
+Compare Specify Times in Object Dialogs
+Back to Produce Parts with the Source
+Produce Parts Using a Trigger Object
+For the plant you are modeling you can produce parts using a Trigger.
+You might, for example, use a Source that is controlled by a Trigger:
+• To set a time of creation, such as with a delivery table, and
+• To periodically repeat using the values in this table, for example when you select Sequence Cyclical
+from the drop-down list MU Selection.
+Proceed as follows:
+• Select Time of Creation > Trigger in the dialog of the Source.
+Before you can enter the Trigger, click the check box Inheritance, so that it looks like this 
+ .
+• Click Trigger, drag the Trigger 
+  that controls the Source from the Frame over the list that opens and
+drop it there.
+• In the dialog of the Trigger enter the Active Interval, i.e., the interval during which the Trigger will be
+active.
+Enter the Period Length, i.e., the duration of the Trigger’s cycle.
+Produce Parts Using a Trigger Object
+10-168 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the tab Values and select the Trigger Type > Input.
+• Click the button Values and enter into the TimeSequence object that opens:
+The Point in Time at which the Source creates MUs into the cells on the left-hand side.
+The current sequence of Values into the cells on the right-hand side. An order is a string with this
+format: amount,mu_Type,distributionType[,distribution parameters].
+Note
+The string defining this sequence of values may not contain any blank spaces.
+You have to enter the amount of MUs to be produced, the type to be produced, and at least a constant
+value. If you enter just Const, the Source produces the MUs at the point in time, which you typed into
+the cell to the left. If you would like it to produce the MUs with an offset to the time you entered there,
+enter the number of seconds after which it produces them after Const.
+Produce Parts Using a Trigger Object
+Plant Simulation Help 10-169
+Unpublished work. © 2026 Siemens
+
+If you enter a distribution, its values set the time offset to the time you entered into the corresponding
+left cell. The offset you enter has to be a positive number!
+• Click the tab Actions and click Objects. The Trigger shows the Source in the table.
+Compare Check How Many Parts Were Introduced into the Plant
+Back to Produce Parts with the Source
+Producing and Processing Parts with a Work Plan
+Produce and Process Parts with a Work Plan
+A work plan or operations plan determines how a product is produced. It lists the various production steps
+in the sequence in which they are executed.
+Producing and Processing Parts with a Work Plan
+10-170 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+We neither specify the cost center, to which each of the individual production steps is charged in Plant
+Simulation, nor the allowed time for each step. This you can do in Process Designer.
+For simplicity’s sake each operation can only be executed by a single station in our example. Our work
+plan thus is described by a sequence of stations. The Source named Receiving holds position 0 in the work
+plan, the station Milling position 1, the stations Drilling_A or Drilling_B position 2 and the station Packing
+position 3.
+To facilitate quick and easy modeling:
+• We create the work plan in a DataTable 
+  and insert it into the Frame, in which we create our
+simulation model. We enter the set-up times of the stations and the processing times of the different
+parts into sub-tables of the work plan.
+• We produce two different types of parts with a Source 
+  using a sequence table. The parts need two
+user-defined attributes. One sets the name of the part. The other sets the position of the part in the
+work plan.
+• We program a Method 
+ , i.e., an Exit Control, which enables the processing station to find the next
+station in the sequence of operations after each processing step and moves the part on to this station.
+We insert this Method, which all stations access, into the Frame.
+Produce and Process Parts with a Work Plan
+Plant Simulation Help 10-171
+Unpublished work. © 2026 Siemens
+
+Back to Model the Flow of Materials, Basics
+Creating the Processing Stations
+Create the Processing Stations
+To be able to assign the operations and the stations in the work plan later on, we start out with creating
+the stations which execute the operations.
+• To create the class of the processing station, right-click the object Station in the folder MaterialFlow
+and select Derive on the context menu.
+• To move the derived Station to the folder in which we are going to create the model, hold down Shift
+and drag it so that folder. Rename it to MyStation. By default Plant Simulation places derived objects
+into the folder UserObjects.
+• Insert it from there into the model three times. Rename the stations so that they match the names of
+the operations. In our example we named them Milling, Drilling_A, Drilling_B and Packing.
+As the processing stations share a number of features, we set these in their class, MyStation in our
+example. The class object passes these properties on to its instances.
+We will:
+Creating the Processing Stations
+10-172 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Define Times in the Class of the Processing Stations
+• Define Set-up Behavior in the Class of the Processing Stations
+• Specify the Name of the Exit Control in the Class of the Processing Stations
+Back to Produce and Process Parts with a Work Plan
+Define Times in the Class of the Processing Stations
+We define the Processing Time and the Set-up Time in a Formula in the class of our processing stations.
+• We want the stations to get the Processing Time of all parts from the work plan MyWorkPlan. This
+DataTable 
+  is located in the Frame in which we build the model, i.e., the root Frame. The station then
+opens the subtable Operations for the respective part and gets the times in the column Processing
+Time of the respective station within this subtable.
+For the Processing Time we use a Method which we call from the formula. The Method is called
+ProcessingTimeInFormula.
+The source code looks like this:
+-> time
+var PartType := @.EntityType
+var Station  := ?
+var WorkPlan := root.myWorkPlan["Operations", PartType]
+result       := WorkPlan["Processing time",Station]
+Define Times in the Class of the Processing Stations
+Plant Simulation Help 10-173
+Unpublished work. © 2026 Siemens
+
+• We want the stations to get the Set-up Time of all parts from the work plan MyWorkPlan. This
+DataTable 
+  is located in the Frame in which we build the model, i.e., the root Frame. The station
+then opens the subtable Operations for the respective part and gets the times in the column Set-up
+Time of the respective station within this subtable. Self identifies the station contained in the row on
+the subtable.
+The description above translates to this formula, which we directly type into the text box:
+root.MyWorkPlan["Operations",@.EntityType]["Setup time",Self]
+Back to Create the Processing Stations
+Define Set-up Behavior in the Class of the Processing Stations
+We
+To automatically set the stations up depending on the name of a user-defined attribute of the MU:
+• Select the check box Automatic.
+Define Set-up Behavior in the Class of the Processing Stations
+10-174 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select User-defined Attribute from the drop-down list Set-up depends on. Enter the name of the
+user-defined attribute which we defined in the Sequence table with which the Source produces parts,
+compare Produce the Parts with a Source Using a Sequence Table. We typed in EntityType.
+Back to Create the Processing Stations
+Specify the Name of the Exit Control in the Class of the Processing Stations
+As the station has to find the next station in the sequence of operations after each processing step and
+move the part on to this station, we enter the name of an Exit Control.
+Program the Exit Control shows how to accomplish this.
+Back to Create the Processing Stations
+Specify the Name of the Exit Control in the Class of the Processing Stations
+Plant Simulation Help 10-175
+Unpublished work. © 2026 Siemens
+
+Create the Work Plan
+In the last step, we create the work plan.
+To create the work plan:
+• Insert a DataTable 
+  into the Frame. Activate the column index and the row index.
+• Assign the data type Table to the column which contains the subtable into which we enter information
+about the operations.
+• Format this column so that all subtables have the same format, compare Create Lists within Lists and
+Tables. To do so, click the right mouse button on the column header Operations and select Format.
+Scroll all the way to the right to the tab Contents in the dialog List Format. Activate the column index
+and the row index of the subtables in the Format menu.
+Create the Work Plan
+10-176 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Assign the data type Object to the column of the column index. Assign the data type Time to the next
+two columns.
+• After we assigned the correct format to the subtables, we can then enter the contents:
+◦ Once we enter an identifier, Plant Simulation creates the subtable in this cell. We typed in
+Operations for MyPart A and Operations for MyPart B.
+◦ To open the subtable for the respective work plan, double-click the respective cell below
+Operations.
+◦ Enter the names of the operations/stations, their set-up times and the processing times of the parts.
+Create the Work Plan
+Plant Simulation Help 10-177
+Unpublished work. © 2026 Siemens
+
+Operations MyPart A Operations MyPart B
+Back to Produce and Process Parts with a Work Plan
+Produce the Parts with a Source Using a Sequence Table
+We produce the parts with a source using a sequence table.
+To produce the parts in the sequence, which we specify in a sequence table:
+• Insert a Source 
+  into the Frame. Select MU Selection > Sequence Cyclical.
+Produce the Parts with a Source Using a Sequence Table
+10-178 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Insert a DataTable 
+  into the Frame. Drag this table over the text box Table. Plant Simulation
+automatically assigns the columns on the table the correct data types and the correct column headers.
+• Open the table and enter the type of part you want to produce, how many of them, their name and the
+name of the subtable containing the attributes of the part.
+In our example the Source is to produce 1 part of the MU class Part each with the name MyPartA and
+MyPartB.
+• To create a subtable for the user-defined attributes of the parts, enter an identifier into the cells below
+Attributes. To open this subtable, double-click the cell. Here we enter the names and the values
+of two user-defined attributes: One sets the name of the part, the PartType is either MyPartA or
+MyPartB. The other sets the position of the part in the work plan (PositionInWorkPlan). In our
+case the sequence of operations always starts at position 0, which is the Source. The counter, which
+we programmed in the Exit Control, then steps through the stations: Milling is position 1, Drilling_A or
+Drilling_B are position 2 and Packing is position 3.
+User-defined Attributes for MyPart A User-defined Attributes for MyPart B
+During the simulation run Plant Simulation enters these user-defined attributes into the created Parts.
+The Part with the number 48229, for example, is of type MyPart A and is located on station 2, DrillingA,
+according to the position, which we defined in the work plan as operation.
+Produce the Parts with a Source Using a Sequence Table
+Plant Simulation Help 10-179
+Unpublished work. © 2026 Siemens
+
+• Finally, enter the name of the Exit Control, which finds the processing station and moves the part onto
+it.
+Back to Produce and Process Parts with a Work Plan
+Program the Exit Control
+We want all stations and the Source to access the source code for finding the next station in the sequence
+of operations after each processing step and for moving the part on to this station. We do this by
+programming an Exit Control.
+If just the stations were going to use this control, we could have programmed it in a user-defined attribute
+of data type method of the class of the station.
+The source code of the Exit Control looks like this:
+// This is the exit control for all stations and for the source.
+// This control can be called several times until the move command is 
+successful.
+var WorkPlan := root.MyWorkPlan["Operations",@.EntityType]
+if @.PositionInWorkPlan = WorkPlan.ydim
+Program the Exit Control
+10-180 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+   @.Move(root.Shipping) // end of production
+else
+   var NextStation := WorkPlan["Operation", @.PositionInWorkPlan + 1]
+   if @.Move(NextStation)
+      @.PositionInWorkPlan := @.PositionInWorkPlan + 1
+   end
+end
+Back to Produce and Process Parts with a Work Plan
+Remove Parts from the Installation with the Drain
+To remove the parts and workpieces from the plant after they have been processed, for example to model
+the shipping department, we use the object Drain.
+Remove Parts from the Installation with the Drain
+Plant Simulation Help 10-181
+Unpublished work. © 2026 Siemens
+
+The Drain 
+  has a single processing place. It removes the MU from the installation after setting-up for it
+and after processing it. The built-in properties of the Drain are the same as those of the Station 
+ . The
+Drain removes the MU from the installation after it processed it, instead of moving it on to a succeeding
+object in the flow of materials, and it collects statistics about the MU.
+You can insert the Drain 
+  into your simulation model from the folder MaterialFlow in the Class Library
+or from the toolbar Material Flow in the Toolbox.
+Remember that we create these parts with the object Source 
+ .
+Compare Specify Times in Object Dialogs
+Compare Check How Many Parts Left the Plant
+Compare Produce Parts with the Source
+Back to Model the Flow of Materials, Basics
+Transferring Parts from Station to Station
+Transfer Parts from Station to Station
+You can transfer parts from station to station in a number of ways.
+When transferring parts from station to station in your simulation model, you can either:
+• Use the Standard Transfer Behavior, which employs the push-block principle.
+• Select an Exit Strategy, which distributes the parts to the succeeding stations according to the criteria
+you set.
+• Distribute Parts Among its Successors with the FlowControl.
+• Move the part, when an attribute of the processing station changes by using an observer.
+• Select an Exit Strategy in the Interface when parts are moving across Frames.
+• Load, Unload, and Reload Parts with the TransferStation.
+Transferring Parts from Station to Station
+10-182 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Compare How Plant Simulation Moves Parts On
+Back to Model the Flow of Materials, Basics
+How Plant Simulation Moves Parts On
+Plant Simulation moves the parts to be processed through the plant depending on the type of material
+flow object.
+Plant Simulation moves MUs on as follows:
+• Moving from point-oriented to point-oriented object
+When moving from a point-oriented object to another point-oriented object, the MU moves on
+completely and instantaneously from booking point to booking point.
+• Moving from point-oriented object to length-oriented object
+When moving from a point-oriented object, such as a Source or a Station, to a Conveyor, the front of the
+MU moves to the start of the Conveyor. When Station and Conveyor are not placed directly side by side,
+the MU seems to hang in thin air, compare Position of the MU.
+If the objects are placed directly side by side you will not notice that as the MU still seems to be located
+on the predecessor.
+• Moving from length-oriented object to length-oriented object
+When moving from Conveyor to Conveyor, the MU moves continually on, i.e., only its front moves on
+to the successor, while the remainder follows with the Speed you specified. When the transport speeds
+differ, Plant Simulation uses the speed of the Conveyor, on which the Booking Point Length of the MU
+is located. In the example below our MU is located on three Conveyors as it is very long.
+How Plant Simulation Moves Parts On
+Plant Simulation Help 10-183
+Unpublished work. © 2026 Siemens
+
+• Moving from length-oriented object to point-oriented object
+When moving onto a point-oriented object, such as a Station, the MU always moves completely and
+instantaneously, i.e., it is then located on that object as a whole, not only its front section.
+Back to Model the Flow of Materials, Basics
+Use the Standard Transfer Behavior
+By default Plant Simulation uses the push-block principle then transferring parts from station to station,
+either along the connections you established with the Connector or by programming a Method.
+An object that has processed the part, which is ready to be transferred, actively attempts to move that part
+on to its successor (push). If the successor cannot receive the part at the moment, the block principle will
+be activated, guaranteeing that the object ready to move the part is re-activated as soon the successor is
+ready to receive the part.
+The push-block principle ensures that parts are transferred using the built-in functionality of the objects
+and that the stream of events is not interrupted by failures or pauses.
+The standard transfer strategy is cyclic, non-blocking, meaning that the current object moves the MU to
+the first non-blocked succeeding object in the flow of materials. Once the object reaches the end of the
+list of successors, it continues the search at the beginning of the list and terminates the search when it
+reaches the successor from the previous search.
+Use the Standard Transfer Behavior
+10-184 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Suppose Milling is the first station in the sequence of stations in your simulation model, Drilling_A is the
+second station, Part:1 is the first mobile object that entered the flow of materials, Part:2 is the second
+mobile object.
+Suppose Part:1 is located on Drilling_A, and Part:2 is located on Milling and wants to move to Drilling_A.
+Once Part:2 is completely processed by Milling, Part:2 notifies Drilling_A that it intends to move to it.
+• When Drilling_A can receive Part:2, it notifies Part:2, and Part:2 moves from Milling to Drilling_A.
+• When Drilling_A cannot receive Part:2 because it is busy, its entrance is locked, etc., Part:2 enters itself
+into the forward blocking list of Drilling_A and of all other stations it intends to move to.
+• When Part:1 exits Drilling_A, Drilling_A schedules an Out event for all entries, i.e., MUs, in the Forward
+Blocking List, including Part:2. Afterwards Drilling_A deletes all entries from its Forward Blocking List.
+• Provided Drilling_A can receive Part:2, Part:2 deletes all references to itself from all blocking lists of all
+stations it entered itself into, and then moves to Drilling_A.
+Use the Standard Transfer Behavior
+Plant Simulation Help 10-185
+Unpublished work. © 2026 Siemens
+
+The material flow objects Station 
+ , ParallelStation 
+ , AssemblyStation 
+ , DismantleStation 
+ ,
+Conveyor 
+ , Sorter 
+ , PlaceBuffer 
+  and Buffer 
+  handle the MUs that transfer onto them:
+Procedure
+1. For these times, which you define:
+• The Processing Time is the time, which the MU remains on the object to be processed. It is the
+interval between setting-up for the present type of MU and the point in time when the material
+flow object moves it on to its successor.
+• The Set-up Time is the time it takes to set-up the object for processing a different type of MU. An
+identical name designates that MUs are of the same type and that the object does not have to set
+up for this MU.
+• The Recovery Time is the time which is required to set a station into a defined state before it
+can start processing the next part. The recovery time is, for example, useful to model materials
+handling equipment, such as a robot, which requires a certain time to insert work pieces into or
+remove them from processing stations. You can also use it to model times during which a hot part
+cools off.
+• The Cycle Time is the time that passes between the points in time where parts can enter the
+object. The cycle time is, for example, useful to model chain conveyors with a fixed chain interval
+that only transport materials when a free hook is available.
+Note
+You do not have to define all of the times listed above for the object.
+2. For failures which you define and activate.
+Use the Standard Transfer Behavior
+10-186 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The material flow objects then transfer the MUs to the next object along the material flow
+connections using the Exit Strategy you select.
+Compare Define Processing Times
+Compare Model Failures
+Compare Select the Set-Up Time
+Back to Transfer Parts from Station to Station
+Selecting an Exit Strategy
+Select an Exit Strategy
+If you do not want to transfer the MUs using the standard transfer behavior, select an Exit Strategy.
+To do so, click the Tab Exit and select another Strategy. As a rule you will use an Exit Strategy, which
+distributes the flow of materials, when the sequence of operations does not uniquely designate the next
+object that processes the MU. Your objective will be to make a choice that is close to optimal in some
+respect, say cost or time, but not in others.
+Selecting an Exit Strategy
+Plant Simulation Help 10-187
+Unpublished work. © 2026 Siemens
+
+Note
+For length-oriented objects Plant Simulation only considers the Exit Strategy when the part is moving
+forward.
+Note
+Click Apply, to apply your new settings, and to display additional dialog items, which the selected exit
+strategy requires.
+• To move the part cyclically to the next successor in line, select Cyclic.
+• To cyclically move the part to the successor according to the sequence of successors, which you typed
+into the list, select Cyclic Sequence.
+You can also set the number of the succeeding object with the attribute ExitStrategySequence.
+• To move the part to the successor that has been Waiting the longest for a MU, select Least Recent
+Demand.
+Select an Exit Strategy
+10-188 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To move the part to the successor in a linear fashion, according to the sequence of successors, which
+you typed into the list, select Linear Sequence.
+You can also set the number of the succeeding object with the attribute ExitStrategySequence.
+• To move the part to the successor that contains the greatest number of MUs, select Maximum
+Contents.
+• To move the part to the successor that received the most MUs, select Maximum Number In.
+• To move the part to the successor with the longest processing time, select Maximum Processing Time.
+• To move the part to the successor with the highest relative occupancy, select Maximum Relative
+Occupation
+• To move the part to the successor with the longest set-up time, select Maximum Set-up Time.
+• To move the part to the successor that contains the smallest number of MUs, select Minimum
+Contents.
+• To move the part to the successor that received the smallest number of MUs, select Minimum Number
+In.
+• To move the part to the successor with the shortest processing time, select Minimum Processing Time.
+• To move the part to the successor with the lowest relative occupancy, select Minimum Relative
+Occupation
+• To move the part to the successor with the shortest set-up time, select Minimum Set-up Time.
+• To move the part to the successor that has been Waiting the least amount of time for a MU, select Most
+Recent Demand.
+• To move the part to the successor according to an attribute of the MU, select MU Attribute.
+You can also set the names of the user-defined or the built-in attributes, their values, and the numbers
+of the successors with the attribute ExitStrategyMUAttributeList.
+• To move the part to the successors according to a percentage distribution, select Percentage.
+You can also set the with the attribute ExitStrategyPercentageValues.
+• To move the part to the successors in a random fashion, select Random.
+You can also set the with the attribute ExitStrategyPercentageValues.
+• To always move the part to successor with the number 1, select Start at Successor 1.
+Back to Transfer Parts from Station to Station
+Cyclic [exit strategy, example]
+To move the part cyclically to the next successor in line, select the Exit Strategy > Cyclic from the
+drop-down list.
+Cyclic [exit strategy, example]
+Plant Simulation Help 10-189
+Unpublished work. © 2026 Siemens
+
+• Select Blocking 
+  to move the MU to the object, which in sequence of successors immediately
+follows on the object on to which a MU has last transferred.
+• Clear Blocking 
+  to move the MU to the next object in the sequence of successors, which can
+receive a part.
+Once the object reaches the end of the sequence of successors, it continues the search at the beginning of
+the sequence and terminates the search when it reaches the successor from the previous search.
+See also Cyclic [described]
+Back to Select an Exit Strategy
+Cyclic Sequence [example]
+To cyclically move the part to the material flow object’s successor according to the sequence of successors
+repeatedly, select the Exit Strategy > Cyclic Sequence from the drop-down list.
+Cyclic Sequence [example]
+10-190 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+Click Apply, to apply your settings, and to display the button Open List.
+Click Open List and type in the number of the succeeding object into the respective cell of the list. When
+you type in 2 into the cell in row 1, the object first moves the MU to the successor with the number 2.
+Cyclic Sequence [example]
+Plant Simulation Help 10-191
+Unpublished work. © 2026 Siemens
+
+The successor to which the object moves the MU is the next one in line that can receive it in the sequence,
+which you typed into the list. When the object arrives at the last entry in the list (last object in the
+sequence), it returns to the first entry and processes the list again.
+The same successor object may be contained several times, one after the other, in the list. Then the object
+attempts to move the part to this same successor as often as it is contained in the list.
+• Select Blocking 
+  to only move the MU, when the designated successor is ready to receive it.
+• Clear Blocking 
+  to attempt to move the part to the respective successor, beginning with the
+active entry of the list.
+When the object arrives at the last entry in the list, i.e., the last object in the sequence, it returns to the first
+entry and processes the list again.
+See also Cyclic Sequence [described]
+Back to Select an Exit Strategy
+Least Recent Demand [example]
+To move the part to the successor that has been Waiting the longest for a MU, select the Exit Strategy >
+Least Recent Command from the drop-down list.
+This means that the successor receives the next MU onto which no part moved for the longest time.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+Least Recent Demand [example]
+10-192 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also Waiting [state, material flow objects] Least Recent Demand [described]
+Back to Select an Exit Strategy
+Linear Sequence [example]
+To move the part to the material flow object’s successor in a linear fashion, one time only, according to the
+sequence of successors, select the Exit Strategy > Linear Sequence from the drop-down list.
+Note
+Click Apply, to apply your settings, and to display the button Open List .
+Click Open List and type in the number of the succeeding object into the corresponding cell of the list.
+When you type in 3 into the cell in row 1, the object first moves the MU to the successor with the number
+3.
+Linear Sequence [example]
+Plant Simulation Help 10-193
+Unpublished work. © 2026 Siemens
+
+The successor to which the object moves the MU is the first one in line that can receive it in the sequence,
+which you typed into the list.
+• Select Blocking 
+  to only move the MU to the first successor in the list of successors.
+• Clear Blocking 
+  to move the MU to the first available successor in the list of successors.
+See also Linear Sequence [described]
+Back to Select an Exit Strategy
+Maximum Contents
+To move the part to the successor that contains the highest number of MUs, select the Exit Strategy >
+Maximum Contents from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Max. Contents
+Maximum Contents
+10-194 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Select an Exit Strategy
+Maximum Number In
+To move the part to the successor that received the most MUs, select the Exit Strategy > Max. Num. In
+from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Max. Num. In
+Back to Select an Exit Strategy
+Maximum Processing Time
+To move the part to the successor with the longest processing time, select the Exit Strategy > Max. Proc.
+Time from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Max. Proc. Time
+Back to Select an Exit Strategy
+Maximum Number In
+Plant Simulation Help 10-195
+Unpublished work. © 2026 Siemens
+
+Maximum Relative Occupation
+To move the part to the successor with the highest relative occupancy, select the Exit Strategy > Max. Rel.
+Occu. from the drop-down list.
+To move the part to the successor with the highest relative occupancy, select Max. Rel. Occu. from the
+drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Max. Rel. Occu.
+Back to Select an Exit Strategy
+Maximum Set-up Time
+To move the part to the successor with the longest set-up time, select the Exit Strategy > Max. Set-up
+Time from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Max. Set-up Time
+Back to Select an Exit Strategy
+Maximum Relative Occupation
+10-196 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Minimum Contents
+To move the part to the successor that contains the least number of MUs, select the Exit Strategy > Min.
+Contents from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Min. Contents
+Back to Select an Exit Strategy
+Minimum Number In
+To move the part to the successor that received the least number of MUs, select the Exit Strategy > Min.
+Num. In from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Min. Num. In
+Back to Select an Exit Strategy
+Minimum Processing Time
+To move the part to the successor with the shortest processing time, select the Exit Strategy > Min. Proc.
+Time from the drop-down list.
+Minimum Contents
+Plant Simulation Help 10-197
+Unpublished work. © 2026 Siemens
+
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Min. Proc. Time
+Back to Select an Exit Strategy
+Minimum Relative Occupation
+To move the part to the successor with the lowest relative occupancy, select the Exit Strategy > Min. Rel.
+Occu. from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Min. Rel. Occu.
+Back to Select an Exit Strategy
+Minimum Set-up Time
+To move the part to the successor with the shortest set-up time, select the Exit Strategy > Min. Set-up
+Time from the drop-down list.
+Note
+This only works correctly, when resource statistics of the successor or of the predecessor is active.
+Minimum Relative Occupation
+10-198 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Min. Set-up Time
+Back to Select an Exit Strategy
+Most Recent Demand [example]
+To move the part to the successor Waiting the least amount of time for a MU, select Exit Strategy > Most
+Recent Demand from the drop-down list.
+This means that the successor, onto which a MUs was moved last, receives the next MU.
+• Select Blocking 
+  to move the MU to the next successor.
+• Clear Blocking 
+  to move the MU to the next successor, which can receive the MU.
+See also Waiting [state, material flow objects] Most Recent Demand [described]
+Back to Select an Exit Strategy
+MU Attribute [example]
+To move the part on to a successor according to the value of an attribute of the MU, select Exit Strategy >
+MU Attribute from the drop-down list.
+Note
+Click Apply to display the dialog items of this strategy.
+• Select Blocking to always move the part to the designated successor. If that successor is not ready to
+receive it, the part will be blocked.
+• Clear Blocking to move the part on when any of its successors can receive it. In this case enter the
+desired numbers of the successors into the attribute list for each attribute value.
+Most Recent Demand [example]
+Plant Simulation Help 10-199
+Unpublished work. © 2026 Siemens
+
+Click Open List to open a table, into which you can enter the names of the user-defined or the built-in
+attributes, their values, and the numbers of the successors. The object searches the table from top to
+bottom until it finds an attribute with the value you entered. It then moves the MU on to that successor.
+Note
+Create the user-defined attributes for the MUs on the Tab User-defined.
+• Default Successor
+Enter the number of the Default Successor. This is the successor to which the object moves the MU,
+when this MU does not have an attribute with the Value you entered into the DataTable.
+To show a message, when a part is to be moved which does not meet any of the conditions in the
+DataTable, enter 0.
+• Attribute Type
+MU Attribute [example]
+10-200 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select the data type of the attribute from this drop-down list, compare Data Types.
+See also MU Attribute [described]
+Back to Select an Exit Strategy
+Video on YouTube
+https://youtu.be/PQhEriOzVzU?si=rB6pUl7icKnIr0Yj&t=472
+Percentage [exit strategy, example]
+To move the part to the successors according to a percentage distribution, select Exit Strategy >
+Percentage from the drop-down list.
+Note
+Click Apply, to apply your settings, and to display the button Open List.
+Click Open List and type the percentages in the list that opens. The n-th row on the table defines the n-th
+successor’s portion: When you type 20 in row 1, for example, the object moves 20 percent of the MUs it
+received to the successor with the number 1, etc.
+The object always moves the MU to the successor with the greatest difference between the rated value and
+the current value.
+Video on YouTube
+Plant Simulation Help 10-201
+Unpublished work. © 2026 Siemens
+
+• Select Blocking 
+  to move the MU to the successor with the highest deviation from the
+nominal percentage.
+• Clear Blocking 
+  to move the MU to the successor, which can receive the MU with the highest
+deviation from the nominal percentage.
+Note
+The actual percentages reached may differ from the nominal ones due to a low number of total transfers
+and to the Blocking-state of successors.
+Any previous transfers of MUs affect the Percentage strategy, as they alter the deviation from the
+nominal transfer frequencies.
+Plant Simulation sums up the values you typed into the list of nominal percentages to obtain the value
+that matches 100 percent. The distribution pattern only depends on the relative size of the values, not
+on their magnitude. This way you can, for example, either type in [1;2] or [0.3333…; 0.6666…], the
+result will be the same.
+If the distribution pattern is periodic, then it is so right from the beginning. This means that the
+distribution pattern at the start of a simulation run does not differ from the distribution pattern at a
+later point in time. These examples demonstrate, how nicely the values are balanced:
+Percentage [exit strategy, example]
+10-202 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• If you assign the values 1 and 2 to the exits 1 and 2 respectively, Plant Simulation generates this
+sequence of exits:
+2 1 2 2 1 2 2 1 2 2 1 2 2 1 2
+• If you assign 2 and 3 to the exits 1 and 2, Plant Simulation generates this sequence of exits:
+2 1 2 1 2 2 1 2 1 2 2 1 2 1 2
+• If you assign the values 1, 2, 4 and 8 to the exits 1, 2, 3, and 4, Plant Simulation generates this
+sequence of exits:
+4 3 4 2 4 3 4 1 4 3 4 2 4 3 4 4 3 4 2 4 3 4 1 4 3 4 2 4 3 4
+See also Percentage [described]
+Back to Select an Exit Strategy
+Random [exit strategy, example]
+To move the part to the successors in a random fashion, select the Exit Strategy > Random from the
+drop-down list.
+Click Open List and type the percentages in the list that opens. The n-th row on the table defines the n-th
+successor’s portion: When you type 20 into row 1, for example, the object moves 20 percent of the MUs it
+received to the successor with the number 1, etc.
+Random [exit strategy, example]
+Plant Simulation Help 10-203
+Unpublished work. © 2026 Siemens
+
+• Select Blocking 
+  to determine the successor using the built-in random-number generator.
+• Clear Blocking 
+  to determine the successor using the built-in random-number generator
+until it either computes a successor, which can receive the MU or the object has iterated through all
+successors.
+A previous call to the random number generator does affect the Random strategy. The order in which the
+successors are iterated through is not predictable.
+See alsoRandom [described]
+Back to Select an Exit Strategy
+Start at Successor 1 [example]
+To always move the part to the material flow object’s successor with the number 1, select the Exit
+Strategy > Start At Successor 1 from the drop-down list.
+Start at Successor 1 [example]
+10-204 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Blocking
+  to move the MU to the first successor in the list of successors.
+• Clear Blocking 
+  to move the MU to the first successor in the sequence of successors, which
+can receive the MU.
+A previous search for a successor does not affect the strategy Start at successor 1.
+See also Start at Successor 1 [described]
+Back to Select an Exit Strategy
+Distributing Parts with the FlowControl
+Distribute Parts Among its Successors with the FlowControl
+To model common strategies for splitting-up and for bringing together the flow of materials in your plant,
+you can use the FlowControl 
+ . The FlowControl does not store and does not process the MU, it only
+distributes them among the objects that succeed it in the sequence of stations in the simulation model.
+The number of predecessors and successors of the FlowControl usually is not limited.
+You can insert the FlowControl into your simulation model from the folder Material Flow in the Class
+Library or from the toolbar Material Flow in the Toolbox.
+In our example below we show how the FlowControl moves the parts on to its successors according to an
+attribute of the part. If a part has more than one attribute, it suffices if one of the attributes meets the
+Distributing Parts with the FlowControl
+Plant Simulation Help 10-205
+Unpublished work. © 2026 Siemens
+
+criteria, which you defined in the attribute list. If a part has several attributes though, and none of these
+attributes meet the criteria in the list, you can determine what happens to the part by typing in different
+values for the default successor of the FlowControl:
+• When you type in the number of a successor, the FlowControl moves the part so that successor. When
+you accept the default setting 1, it moves the part on to the successor object with the number 1.
+• When you type in 0, the FlowControl does not move the part on. It remains in front of the FlowControl,
+thus blocking the following parts.
+• When you type in -1, Plant Simulation shows an error message.
+The finished simulation model looks like this:
+To create the sample model, you will:
+• Configure the Source that Produces the Parts [FlowControl]
+• Configure the FlowControl Which Distributes the Parts
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Distribute Parts Among its Successors with the FlowControl
+10-206 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Transfer Parts from Station to Station
+Configure the Source that Produces the Parts [FlowControl]
+Insert and configure the Source which produces the parts.
+• Select when and how many parts of a certain type are to be produced.
+We selected a Delivery Table in our example, as shown in the screenshot below.
+Configure the Source that Produces the Parts [FlowControl]
+Plant Simulation Help 10-207
+Unpublished work. © 2026 Siemens
+
+• We then selected the name of the Delivery Table, which we inserted before, namely MyDeliveryTable.
+Selecting it automatically applied the correct format.
+• Next, we entered the required information, compare the screenshot below. The Source which we named
+PartsIn in our sample model, produces six different parts with the names we entered into the column
+Name.
+To enter the attributes according to which the FlowControl distributes the parts among its successors,
+type in any name of your choice into the column Attributes to create a subtable with this name, and
+then double-click the name.
+Configure the Source that Produces the Parts [FlowControl]
+10-208 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ For the part with the Name Red, we typed in MyAttr, double-clicked the cell, and entered Color is
+the Name of the Attribute and Red as the color of the part.
+◦ For the part with the Name BlackSquare, we typed in MyAttr, double-clicked the cell, and entered
+Color is the Name of the Attribute and Black as the color of the part. We also entered a second
+attribute, namely Shape, and typed in Square as its shape.
+◦ For the part with the Name BlackOctagonal, we typed in MyAttr, double-clicked the cell, and
+entered Color is the Name of the Attribute and Black as the color of the part. We also entered a
+second attribute, namely Shape, and typed in Octagonal as its shape.
+Configure the Source that Produces the Parts [FlowControl]
+Plant Simulation Help 10-209
+Unpublished work. © 2026 Siemens
+
+When the Source produces the parts, it creates the attributes, which we entered above, as user-defined
+attributes of data type string for the respective part.
+Then, insert the other objects, so that they match the screenshot below.
+Back to Distribute Parts Among its Successors with the FlowControl
+Configure the Source that Produces the Parts [FlowControl]
+10-210 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Configure the FlowControl Which Distributes the Parts
+Insert and configure the FlowControl which distributes the parts among its successors in the flow of
+materials:
+• As we want the FlowControl to distribute the parts according to the user-defined attributes, which we
+defined above, select the setting MU Attribute from the drop-down list Strategy.
+• Then, click Open List to open the table, into which you have to type in the names of the attributes,
+their values, and the numbers of the successors. The FlowControl searches the table from top to
+bottom until it finds an attribute with the value you typed in. The FlowControl then moves the part on to
+that successor.
+• The number of the default successor decides to which successor the FlowControl sends the part whose
+attributes do not meet the criteria in the list. In our example neither the attribute Color for the
+attribute Shape of the part BlackOctagonal meets the criteria.
+• Run the simulation and watch what happens:
+Configure the FlowControl Which Distributes the Parts
+Plant Simulation Help 10-211
+Unpublished work. © 2026 Siemens
+
+◦ When you use the default setting 1, the FlowControl moves the part on to the successor object with
+the number 1.
+◦ When you type in 0, the FlowControl does not move the part on. It remains in front of the
+FlowControl, thus blocking the following parts.
+◦ When you type in -1, or any other negative number, Plant Simulation show an error message. You
+can then react accordingly by determining what should happen to the part.
+Configure the FlowControl Which Distributes the Parts
+10-212 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Distribute Parts Among its Successors with the FlowControl
+Loading, Unloading, and Reloading Parts
+Load, Unload, and Reload Parts with the TransferStation
+To define your own way of transferring parts from station to station, you can use the TransferStation. You
+can insert the TransferStation 
+  into your simulation model from the folder Tools in the Class Library or
+from the toolbar Tools in the Toolbox.
+Note
+The TransferStation is, by default, not shown when you create a new model. The PickAndPlace robot
+can emulate most of the functions of the TransferStation.
+In our example below we load a block of four parts onto a pallet, which is transported to another section
+within the plant on a conveyor line. At the location in the plant, which is marked by a sensor, we unload
+parts in blocks of two from the pallets and reload them onto a transport vehicle. Finally, we unload parts in
+blocks of one from the transport vehicle onto a processing station and then remove them from the plant.
+Loading, Unloading, and Reloading Parts
+Plant Simulation Help 10-213
+Unpublished work. © 2026 Siemens
+
+Back to Transfer Parts from Station to Station
+Load Parts with the Transfer Station
+One of your most basic tasks when creating a simulation model will be to load parts onto a means of
+transport, a Container 
+  or a Transporter 
+  and to unload them from a means of transport.
+When loading parts, the TransferStation gets these parts from the parts station and loads them onto a
+means of transport, which has to be located at the target station. The loading process starts as soon as
+part and means of transport are ready.
+To model a loading process, proceed like this:
+Load Parts with the Transfer Station
+10-214 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Insert the conveyor named Conveyor 
+ , which transports the parts.
+• Insert a Source 
+ , which creates the parts. In our sample model we named it SourceParts.
+• Insert a ParallelStation 
+ , which processes the parts before they are loaded onto pallets.
+• Insert a Source 
+ , which creates the pallets onto which the TransferStation loads the parts. In our
+sample model we named it SourcePallets.
+Load Parts with the Transfer Station
+Plant Simulation Help 10-215
+Unpublished work. © 2026 Siemens
+
+• Insert a TransferStation 
+ , which loads the processed parts onto the Container 
+ , i.e., the means of
+transport, which moves on the conveyor. In our sample model we named it LoadingStation. Then,
+we have to tell this station what we want it to do:
+◦ We want to load parts, so we select Load as the Station type.
+◦ Then, we have to tell it where the parts to be loaded come from. For this we click the 
+  button and
+select the ParallelStation in the dialog Select Object.
+◦ Next, we have to tell it where the means of transport, our Container, is located. For this we click the
+ button and select the Conveyor in the dialog Select Object.
+◦ Finally, we have to designate the position on the Conveyor, where the LoadingStation loads the parts
+onto the pallets. For this we type 0 meters as the position of the sensor into the text box on the tab
+Attributes. The LoadingStation automatically inserts this sensor into the object Conveyor.
+To show a tooltip with information about the sensor, drag the mouse over the red line designating it
+on the object.
+Note
+To successfully transfer the MU onto the target station, you have to make sure that the target
+station provides enough space to accommodate the incoming MU.
+Load Parts with the Transfer Station
+10-216 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To set how we want the parts to be loaded, we click the tab Advanced Attributes.
+We want to load all blocks of parts in blocks of 4.
+Load Parts with the Transfer Station
+Plant Simulation Help 10-217
+Unpublished work. © 2026 Siemens
+
+Compare Create a Sensor [material flow objects]
+Back to Load, Unload, and Reload Parts with the TransferStation
+Reload Parts with the Transfer Station
+When reloading parts, the TransferStation takes these parts from a means of transport (Container or
+Transporter), which is located at the parts station, and places them onto a Container 
+  or a Transporter
+, which is located at the target station. The parts station is the station, which provides the parts to be
+transported. The target station is the station onto which the parts will be placed. The reloading process
+starts as soon as both means of transport are ready.
+To model a reloading process, proceed like this:
+• Insert a Source 
+ , which creates the Transporters. In our sample model we named it
+SourceTransporters.
+• Insert the Track 
+ , on which the Transporter 
+  transports there loaded parts.
+• Insert a TransferStation 
+ , which reloads the transported parts from the Container 
+  into the
+Transporter 
+ . In our sample model we named it ReloadingStation. Then, we tell this station
+what we want it to do.
+Reload Parts with the Transfer Station
+10-218 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ We want to reload parts, so we select Reload as the Station type.
+◦ Then, we have to tell it where the parts to be reloaded come from. For this we drag the Line/
+Conveyor from the Frame ever the text box in the dialog of the ReloadingStation and drop it there.
+◦ Next, we have to tell it where the means of transport, our Transporter, is located. For this we drag
+the Track from the Frame ever the text box in the dialog of the ReloadingStation and drop it there.
+◦ Finally, we have to designate the exact spot on the Line/Conveyor, where the ReloadingStation
+removes the parts from the pallets. For this we enter 22 meters as the position of the sensor, which
+the ReloadingStation automatically enters into the object Line/Conveyor.
+Note
+To successfully transfer the MU into the target station, you have to make sure that the target station
+provides enough space to accommodate the incoming MU.
+• As we want to reload the parts from the pallet onto a Transporter, we have to designate the exact spot
+on the Track, where the ReloadingStation loads the parts onto the Transporter. For this we enter 15
+meters as the position of the sensor, which the ReloadingStation automatically enters into the object
+Track.
+• To set how we want the parts to be reloaded, we click the tab Advanced Attributes. We want to load
+parts in blocks of 2.
+Reload Parts with the Transfer Station
+Plant Simulation Help 10-219
+Unpublished work. © 2026 Siemens
+
+Compare Create Sensors
+Back to Load, Unload, and Reload Parts with the TransferStation
+Unload Parts with the Transfer Station
+When unloading parts, the TransferStation unloads these parts from a Container 
+  or a Transporter 
+ ,
+which is located at the parts station, and places them onto the target station. The unloading process starts
+as soon as a means of transport is ready at the parts station.
+To model an unloading process, proceed like this:
+• Insert a Station 
+ , on to which the UnloadingStation unloads the parts from the Transporters.
+• Insert a Drain 
+ , which removes the parts from the plant.
+• Insert a TransferStation 
+ , which unloads the parts from the Transporter 
+  and places them on to the
+processing station namedStation. In our sample model we named it UnloadingStation. Now we tell
+this station what we want it to do.
+◦ We want to unload parts, so we select Unload as the Station type.
+Unload Parts with the Transfer Station
+10-220 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Then, we have to tell it where the parts to be unloaded come from. For this we drag the Track from
+the Frame ever the text box in the dialog of the UnloadingStation and drop it there.
+◦ Next, we have to tell it where the means of transport, our Transporter, is located. For this we drag
+the Station from the Frame ever the text box in the dialog of the UnloadingStation and drop it there.
+◦ To designate the exact spot on the Track 
+ , where the UnloadingStation unloads the parts from the
+Transporters 
+  in to the processing station Station, we enter 43 meters as the sensor position. The
+UnloadingStation automatically enters this sensor into the object Track.
+• To set how we want the parts to be unloaded, we click the tab Advanced Attributes. We want to unload
+all blocks of parts in blocks of 1.
+• Insert a Method, enter deleteMovables is the source code, and name the Method reset.
+• Insert an EventController into the Frame, and run the simulation.
+You can then change a number of settings, such as the dimensions of the Transporters and the
+Containers, the block size, the number of blocks, etc. and watch how these changes affect the
+simulation model.
+Compare Create a Sensor [material flow objects]
+Back to Load, Unload, and Reload Parts with the TransferStation
+Unload Parts with the Transfer Station
+Plant Simulation Help 10-221
+Unpublished work. © 2026 Siemens

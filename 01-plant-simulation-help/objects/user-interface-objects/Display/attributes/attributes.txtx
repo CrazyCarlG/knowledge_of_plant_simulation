@@ -1,0 +1,318 @@
+GetStandardDeviation [SimTalk]
+Returns the standard deviation of the values that the Display designated by <Path> recorded.
+Type
+Read-only attribute
+Syntax
+<Path>.GetStandardDeviation → real
+Return Value
+The return value has the data type real.
+Example
+print MyDisplay.GetStandardDeviation
+Attributes of the Display
+_Attributes of the Display
+The Display provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+GetStandardDeviation [SimTalk]
+Plant Simulation Help 11-4625
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+Display1.Sampler := false
+Display1.Path := "MyConveyor.NumMU"
+Display2.Sampler := true
+Display2.SmpInterval := 300
+Display2.Path := "root.MyConveyor.utilization"
+• To get the value of an attribute, you might, for example, type:
+print Display1.Path
+posit := Station.Cont.XPos
+_Attributes of the Display
+11-4626 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [SimTalk] - Display
+Activates the object designated by <Path> (true) or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.Active:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDisplay.active := true
+See also
+Active [check box] - Display
+Active [SimTalk] - Display
+Plant Simulation Help 11-4627
+Unpublished work. © 2026 Siemens
+
+Color [SimTalk] - Display
+Sets the Color for displaying the values which the object Display designated by <Path> visualizes in the
+Frame.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.Color:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDisplay.Color := makeRGBValue(255,0,0)
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Color [Display]
+Color [SimTalk] - Display
+11-4628 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Comment [SimTalk] - Display
+Sets the Comment that the Display designated by <Path> shows underneath its icon in the Frame.
+Type
+Attribute
+Syntax
+<Path>.Comment:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDisplay.Comment := "My comment"
+See also
+Comment [text box] - Display
+Comment [SimTalk] - Display
+Plant Simulation Help 11-4629
+Unpublished work. © 2026 Siemens
+
+DecimalPlaces [SimTalk] - Display
+Sets the number of Decimal Places which the Display designated by <Path> shows.
+Remarks
+The Display can show up to 15 decimal places. For the default setting -1 shows all existing places. Type in a
+positive value to show this number of places.
+Note
+This setting only applies to the Type > Text.
+Type
+Attribute
+Syntax
+<Path>.DecimalPlaces:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDisplay.DecimalPlaces := 10
+See also
+Decimal Places [text box] - Display
+Type [drop-down list] - Display
+DecimalPlaces [SimTalk] - Display
+11-4630 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DisplayType [SimTalk]
+Sets if the Display designated by <Path> shows the input value as Text, as a Bar, or as a Pie Segment.
+Remarks
+Bar and Pie representation map values in a specified range to bars of varying height or pies with a varying
+degree of completion.
+You can set the range with the attributes MinVal and MaxVal.
+Type
+Attribute
+Syntax
+<Path>.DisplayType:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Text", "Bar", or "Pie".
+Example
+MyDisplay.DisplayMode := "Text"
+SimTalk
+MinVal [SimTalk]
+MaxVal [SimTalk]
+See also
+Type [drop-down list] - Display
+DisplayType [SimTalk]
+Plant Simulation Help 11-4631
+Unpublished work. © 2026 Siemens
+
+Font [SimTalk] - Display
+Sets the Font Size of the text and of the Comment, which the Display designated by <Path> displays in
+Text mode in the Frame.
+Type
+Attribute
+Syntax
+<Path>.Font:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Small, 2 for Medium, 3 for Large, 4 for Extra Large.
+Example
+MyDisplay.Font := 2
+See also
+Font Size [drop-down list] - Display
+Comment [text box] - Display
+Font [SimTalk] - Display
+11-4632 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+MaxVal [SimTalk]
+Sets the Upper Bound of the displayed range in Bar and Pie modes of the Display designated by <Path>.
+Remarks
+The Display shows values beyond or equal to MaxVal as a full bar/pie.
+Type
+Attribute
+Syntax
+<Path>.MaxVal:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyDisplay.MinVal := 10.0
+MyDisplay.MaxVal := 35.713
+See also
+Type [drop-down list] - Display
+MaxVal [SimTalk]
+Plant Simulation Help 11-4633
+Unpublished work. © 2026 Siemens
+
+MinVal [SimTalk]
+Sets the Lower Bound of the displayed range in Bar and Pie modes.
+Remarks
+The Display designated by <Path> shows values below or equal to MinVal as an empty bar/pie.
+Type
+Attribute
+Syntax
+<Path>.MinVal:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyDisplay.MinVal := 5.35
+See also
+Type [drop-down list] - Display
+MinVal [SimTalk]
+11-4634 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Path [SimTalk] - Display
+Sets the Path to the value which the Display designated by <Path> shows.
+Type
+Attribute
+Syntax
+<Path>.Path:string
+Assignment Value
+You can assign a value of data type string.
+Example
+Display1.Sampler := false
+Display1.Path := "MyConveyor.NumMU"
+Display2.Sampler := true
+Display2.SmpInterval := 300
+Display2.Path := "root.MyConveyor.utilization"
+See also
+Path [text box] - Display
+Path [SimTalk] - Display
+Plant Simulation Help 11-4635
+Unpublished work. © 2026 Siemens
+
+Sampler [SimTalk]
+Activates Sample mode of the Display designated by <Path> (true) or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.Sampler:boolean
+Assignment Value
+You can assign a value of data type boolean.
+• true designates Sample mode. It updates the display periodically, independent of changes of the input
+value.
+• false designates Watch mode. It updates its display whenever the input value changes.
+Example
+if MeinDisplay.Sampler = false
+   MyDisplay.Sampler := true // activates sample mode   
+   MyDisplay.SmpInterval := 360 // 10 minutes 
+end
+See also
+Mode [drop-down list] - Display
+Sampler [SimTalk]
+11-4636 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SmpPeriod [SimTalk] - Display
+Sets the intervals after which the Display designated by <Path> updates the display. Its value must be
+greater than zero.
+Remarks
+SmpPeriod applies to Sample mode.
+Type
+Attribute
+Syntax
+<Path>.SmpPeriod:time
+Assignment Value
+You can assign a value of data type time.
+Example
+MyDisplay.SmpPeriod := str_to_time("3:00.0")
+MyDisplay.SmpPeriod := 2 * MyDisplay.SmpPeriod
+// double interval, half the sampling rate
+See also
+Interval [text box] - Display
+SmpPeriod [SimTalk] - Display
+Plant Simulation Help 11-4637
+Unpublished work. © 2026 Siemens
+
+Transparent [SimTalk] - Display
+Makes the background of the object designated by <Path> Transparent in the Frame (true) or not
+transparent (false).
+Type
+Attribute
+Syntax
+<Path>.Transparent:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify true to show the space around the text in the color of the background image of the Frame.
+Specify false to show the space around the text in white.
+Example
+MyDisplay.Transparent := false
+Transparent [SimTalk] - Display
+11-4638 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value [SimTalk] - Display
+Sets or gets the Value, which the Display designated by <Path> shows.
+Type
+Only use the attribute Value for Watch Mode.
+In Sample Mode Plant Simulation only updates the value if MUs and States 
+  is activated and the
+Frame, in which the Display is inserted, is open.
+When you get the value and the Display is in Sample Mode, Plant Simulation updates the value
+beforehand.
+Type
+Attribute
+Syntax
+<Path>.Value:real
+Assignment Value
+You can assign a value of data type real.
+Return Value
+The return value has the data type of the observed value.
+Example
+MyDisplay.Value := 5
+print MyDisplay.Value
+See also
+Mode [drop-down list] - Display
+Value [Display]
+MUs and States [Home ribbon]
+Value [SimTalk] - Display
+Plant Simulation Help 11-4639
+Unpublished work. © 2026 Siemens
+
+Chart
+Chart [object]
+Use the object Chart for presenting current data and results of the simulation run.
+Image
+Description
+Define data to be plotted:
+• By using a Table containing the data, such as simulation results.
+• By defining Input Channels that record values of attributes of interest of the objects.
+A Chart, which you insert into a Frame, provides the Statistics Wizard. Select the command Statistics
+Wizard on the context menu of the Frame to open it.
+Chart
+11-4640 Plant Simulation Help
+Unpublished work. © 2026 Siemens

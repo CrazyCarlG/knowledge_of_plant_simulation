@@ -1,0 +1,377 @@
+See also
+New Syntax [command]
+SimTalk 2.0 and SimTalk 1.0 Compared
+A Quick Tour Through SimTalk 2.0
+General Access to SimTalk
+PythonModule
+PythonModule
+Use the object PythonModule for utilizing Python code in a Plant Simulation model with full access to the
+Plant Simulation object model from within the Python code.
+Image
+Requirements
+Using Python requires an installation of CPython on your computer.
+We recommend using the official Python distribution from https://www.python.org/. You can also use a
+Python version that you installed via Anaconda.
+If you are using multiple Python environments, specify the path to the Python DLL with the SimTalk
+function setPythonDLLPath:
+setPythonDLLPath(dllpath:string)
+You might, for example, type:
+setPythonDLLPath("C:\Program Files\Python312\python312.dll")
+Note
+Plant Simulation supports Python versions 3.12, 3.13, and 3.14.
+PythonModule
+11-3724 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Limitations When Using Python Libraries
+When you use certain libraries, like Pandas or NumPy, you should always exit Plant Simulation instead
+of only closing your simulation model and opening a new model. When you close the model, the Python
+interpreter is uninitialized. If you then open a new model and try to use Pandas or NumPy again, this might
+cause a crash because these libraries do not support reinitialization of the Python interpreter.
+Python libraries like MatPlotLib can open a window from within the Python code where a new Windows
+message pump is started. You must close such a window before you can interact with Plant Simulation
+again, otherwise Plant Simulation might crash.
+To show a tooltip with information about the PythonModule, hover with the mouse over it.
+Adding the PythonModule to Your Model
+To add the PythonModule to the Class Library, click 
+  Manage Class Library > Basic Objects >
+Information Flow > PythonModule on the Home ribbon tab.
+PythonModule
+Plant Simulation Help 11-3725
+Unpublished work. © 2026 Siemens
+
+After you add the PythonModule to the Class Library, you can insert a PythonModule object into your
+model Frame, open its dialog, type in your Python code, and execute it.
+Once you add the PythonModule to your simulation model, it shows the global Python variables on the Tab
+Content.
+PythonModule
+11-3726 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Context Menu of the PythonModule
+To show the context menu of the PythonModule, right-click in the Tab Content. Click Import before
+selecting a context menu command.
+• Show White Space shows blank spaces between the words.
+• Show Global Variables opens a dialog which shows the global Variables used in this PythonModule.
+PythonModule
+Plant Simulation Help 11-3727
+Unpublished work. © 2026 Siemens
+
+See also
+What You Can Do With the PythonModule
+View the Sample Models
+setPythonDLLPath [SimTalk]
+Video on YouTube
+https://youtu.be/2QJeW5r1AF4?si=S8Ee2D-4zyOevXZG
+What You Can Do With the PythonModule
+Python is a high-level programming language. It provides a vast amount of libraries and use cases for your
+use. There is not much that you cannot do with Python.
+Remarks
+You might, for example, use the PythonModule to extract simulation results, do extensive data processing
+using any of the available Python libraries, and display the values in different ways by creating
+presentations containing various types of charts. You don't even have to know the programming language
+Python as such, as ChatGPT is really well-trained for Python.
+What You Can Do With the PythonModule
+11-3728 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To import the module into the Python interpreter, click Import in the top right corner of the PythonModule
+dialog.
+You can also press F5 while the input cursor is located on the Tab Content:
+Note
+Plant Simulation automatically applies the source code, when you click Import or press F5.
+The PythonModule provides the built-in attribute PythonCode of data type string to get and set the Python
+source code from a SimTalk Method.
+To run the Python code from SimTalk, we provide the methods call and callKw. The respective SimTalk
+syntax looks like this:
+<Path>.call([functionName:string, ...]) -> any
+<Path>.callKw([functionName:string, ..., KeyValuePairs:any[] ]) -> any
+To execute a function, which you defined in the PythonModule, specify the name of the function as the
+first argument and then the arguments which you want to pass to Python.
+Let’s assume that you have the following Python code in your PythonModule:
+def multiply(a, b):
+return a*b
+What You Can Do With the PythonModule
+Plant Simulation Help 11-3729
+Unpublished work. © 2026 Siemens
+
+Click Apply in the dialog and then execute the function from SimTalk in a Method with print.
+Note
+Make sure that Prohibit Access to the Computer in the Model Settings is cleared.
+As the error messages that Python shows are in English, Plant Simulation shows them in English as well.
+We do not localize Python error messages to other languages.
+print MyPythonModule.call("multiply", 3, 4)
+The result looks like this when we run the Method.
+What You Can Do With the PythonModule
+11-3730 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To call Python functions in SimTalk with keyword arguments, use the method callKw:
+print MyPythonModule.callKw("multiply", ["a", 3, "b", 4])
+You have to pass keyword arguments using an array with pairs consisting of the keyword and the value.
+The result looks like this when we run the Method.
+With the Python code, which you type into the PythonModule, you can:
+• Access the Model Frame from the Python Code
+• Access Attributes and Methods from the Python Code
+• Access DataTables from the Python Code
+• Access Variables from the Python Code
+• Call Global SimTalk Functions from the Python Code
+• Execute External Python Code
+You can also Display a PythonModule in the HtmlReport.
+Note
+Python code is not intended to replace SimTalk code. As SimTalk code also accesses compiled built-in
+functions, it generally is executed quite a bit faster than Python code.
+As many university graduates are exposed to Python, writing Python code during their studies, the
+Python Module makes programming in Plant Simulation easier.
+The presentation during the Plant Simulation User Meeting 2024 in München gives a good overview of
+the Python Module. You can view and download it here Demo .spp model to use Python code in Plant
+Simulation 2404 (siemens.com)
+Video on YouTube
+https://youtu.be/2QJeW5r1AF4?si=S8Ee2D-4zyOevXZG
+What You Can Do With the PythonModule
+Plant Simulation Help 11-3731
+Unpublished work. © 2026 Siemens
+
+Dialog Box of the PythonModule
+Dialog Box of the PythonModule
+Double-click the icon of the PythonModule to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Import [button] - PythonModule
+To import the code you wrote in the PythonModule into the Python interpreter and execute it, click this
+button.
+Remarks
+To reload the module and delete all global variables, hold down Shift while clicking Import.
+To copy an import statement for the module to the clipboard, hold down Shift and Ctrl while clicking the
+button.
+SimTalk
+import [SimTalk] - Python
+Dialog Box of the PythonModule
+11-3732 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Content
+Tab Content
+After you added the PythonModule to your simulation model, it shows the global Python variables on the
+Tab Content.
+Type in the Python code that you want to execute in Plant Simulation on the Tab Content.
+Tab Content
+Plant Simulation Help 11-3733
+Unpublished work. © 2026 Siemens
+
+With the Python code, which you type into the PythonModule, you can:
+• Access the Model Frame from the Python Code
+• Access Attributes and Methods from the Python Code
+• Access DataTables from the Python Code
+• Access Variables from the Python Code
+• Call Global SimTalk Functions from the Python Code
+• Call a Function Written in a Another PythonModule
+• Execute External Python Code
+Click Import to import the Python code, which you type in on the Tab Content, into the Python interpreter.
+Note
+Plant Simulation saves the Python code in a folder model in a separate .py file.
+The Python variable named __file__ contains the path to the .py file. If the simulation model is not a
+folder model, the variable __file__ is not defined.
+Tab Content
+11-3734 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Import [button] - PythonModule
+Access the Model Frame from the Python Code
+To access Plant Simulation objects of your simulation model, use the global Python variables named basis,
+root, current, and self in your Python code.
+The PythonModule shows them when you insert it into your simulation model.
+basis
+basis references the root of your Class Library.
+As opposed to SimTalk, a path to an object in Python cannot start with a period (.).
+Therefore, you need to start an absolute path in Python code with the Python variable basis, for example:
+print(basis.Models.Model.Station)
+Access the Model Frame from the Python Code
+Plant Simulation Help 11-3735
+Unpublished work. © 2026 Siemens
+
+root
+root designates the root of your Frame hierarchy, i.e. the Frame in which the EventController is located.
+To access an object in the root Frame of your PythonModule, start the path with the Python variable root,
+for example:
+print(root.EventController)
+Note
+As opposed to SimTalk, you do have to specify the path to an object in Python.
+current
+current designates the Frame into which you inserted your PythonModule.
+To access an object in the Frame into which you inserted your PythonModule, start the path with the
+Python variable current, for example:
+print(current.Station)
+self
+The global Python variable named self designates the PythonModule itself.
+Access Attributes and Methods from the Python Code
+To access attributes and methods of Plant Simulation objects from the Python code, you use the same
+syntax as you do in SimTalk.
+Accessing Attributes of a Plant Simulation Object
+To access an attribute of a Plant Simulation object, use the same syntax as you do in SimTalk.
+The following code accesses the attribute ProcTime of a station:
+print(current.Station.ProcTime)
+current.Station.ProcTime = 50
+The result looks like this when we Import the PythonModule.
+Access Attributes and Methods from the Python Code
+11-3736 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Accessing Methods of a Plant Simulation Object
+To call a method of a Plant Simulation object, use the same syntax as you do in SimTalk.
+If the Method accepts arguments – even if all arguments are optional – you must always use parentheses
+to call the method, for example:
+current.MyStation.deleteObject
+print(current.Station.succ())
+print(current.Station.succ(1))
+The result looks like this when we Import the PythonModule.
+Access Attributes and Methods from the Python Code
+Plant Simulation Help 11-3737
+Unpublished work. © 2026 Siemens
+
+Executing SimTalk Methods from Python
+To execute a SimTalk method from your Python code, you have to use the method execute of the Method
+object:
+current.MyMethod.execute()
+If the Method accepts arguments, you pass them to the execute method:
+current.MyMethod.execute(“Test”, 123)
+If the Method returns a value, you will receive it in Python as the return value of the execute method call:
+print(current.MyMethod.execute(“Test”, 123))
+See also
+execute [SimTalk] - Method
+Access DataTables from the Python Code
+To access cells in a DataTable, use the Python index access.
+To access the cell in column 2 and row 3 you can, for example, type the following.
+Example
+print(root.DataTable[2,3])
+The code above returns a list with the values of the rows. Meaning that if one of the indices is a slice, Plant
+Simulation always returns a list containing the values of the rows.
+print(current.DataTable[1:, 2])
+This code returns the values of the cell [1,1] of the DataTable:
+print(current.DataTable[1:2, 1:2])
+The code returns a list with a list containing the value of the cell [1,1]. This way the code can rely on that a
+list with lists is returned whenever you specify a range for the column and the row.
+Access DataTables from the Python Code
+11-3738 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To get the entire content of the DataTable, you can type:
+print(root.DataTable[None]) # gets the entire content of the DataTable
+If the DataTable has a unique column index, you will get a Python dictionary with the column index as the
+key.
+Otherwise, you will get a Python list which contains Python lists which contain the row values.
+You can also use Python slices to only get partial data from the DataTable.
+Note
+The hash symbol # in the Python code denotes a comment that goes to the end of the line.
+See also
+DataTable [object]
+Video on YouTube
+https://youtu.be/2QJeW5r1AF4?si=VGFCW5owYPVu37RO&t=633
+Access Variables from the Python Code
+To access the value of a Variable, use the attribute Value of the Variable.
+Access Variables from the Python Code
+Plant Simulation Help 11-3739
+Unpublished work. © 2026 Siemens
+
+Example
+print(root.Variable.Value)
+root.Variable.Value = 42
+The result looks like this when we Import the PythonModule.
+See also
+Variable [object]
+Value [SimTalk] - Variable
+Call Global SimTalk Functions from the Python Code
+To call a global SimTalk function from the Python code, you first have to import the PlantSimulation
+module.
+For this module you can then call the predefined functions which Plant Simulation provides.
+Call Global SimTalk Functions from the Python Code
+11-3740 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+import PlantSimulation as ps
+x = ps.existsObject(".Models.Model.EventController")
+print(x)
+The result looks like this when we Import the PythonModule.
+See also
+Predefined Functions
+Call Global SimTalk Functions from the Python Code
+Plant Simulation Help 11-3741
+Unpublished work. © 2026 Siemens
+
+Call a Function Written in a Another PythonModule
+To call and execute a function written in one PythonModule from a different PythonModule, you need to
+get the name of the PythonModule you want to import.
+In our example we want to import python code we wrote in PythonModule1 into our PythonModule.
+To do so, call the function print(__name__) in PythonModule1. This prints the name of the module to the
+Console.
+Then copy the string from the Console and paste in after the keyword import into the PythonModule
+where you want to execute it.
+Call a Function Written in a Another PythonModule
+11-3742 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Click Import. This prints the result of the multiplication to the Plant Simulation Console.
+Video on YouTube
+https://youtu.be/2QJeW5r1AF4?si=YbB687Kp5Vu2iM7H&t=407
+Execute External Python Code
+To execute Python code, which you wrote and stored in an external file, use the SimTalk function
+executePythonFile.
+Example
+print executePythonFile("D:\test.py", "TestArg")
+You can access the objects in your Plant Simulation model in the same way as you would when executing
+the Python code using a PythonModule.
+See also
+executePythonFile [SimTalk]
+Video on YouTube
+https://youtu.be/Rj5eYZu8pl4?si=j8ngdeR3Ykgp2JjR&t=625
+Execute External Python Code
+Plant Simulation Help 11-3743
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+The Dialog provides the Callback method as a user-defined attribute.
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+Tools Menu
+The commands are described under the Tools Menu.
+Tab User-defined
+11-3744 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the PythonModule
+_Methods of the PythonModule
+The PythonModule provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-3745
+Unpublished work. © 2026 Siemens

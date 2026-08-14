@@ -1,0 +1,70 @@
+findPart [SimTalk] - ParallelStation
+Finds the part with the specified name on the ParallelStation designated by <Path> and returns it.
+Type
+Method
+Syntax
+<Path>.findPart(PartType:string) → object
+Parameter
+The parameter PartType of data type string designates the part type.
+Return Value
+The return value has the data type object.
+Example
+var o: object := MyParallelStation.findPart("Container") 
+// assigns for example .MUs.Container:1
+findPart [SimTalk] - ParallelStation
+11-1746 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+pe, [X,Y] [SimTalk] - ParallelStation
+Sets the designated processing place on the production element (PE) of the ParallelStation designated by
+<Path>.
+Remarks
+Instead of pe([X,Y]) you can also use [X,Y].
+To access the MU that is located on that place, append .Cont.
+Type
+Method
+Syntax
+<Path>.pe([X:integer,Y:integer]) → any
+<Path>[X:integer,Y:integer] → any
+Parameters
+You can specify the following parameters:
+• The optional parameter X of data type integer designates the X-Dimension of the processing place.
+• The optional parameter Y of data type integer designates the Y-Dimension.
+If you do not specify the parameters, Plant Simulation returns the first free PE or the PE on the place (1,1)
+if no free PE is available.
+Return Value
+The return value has the data type any.
+Example
+@.move(ParallelStation[2,3])
+@.move(ParallelStation.pe(2,3))
+print ParallelStation[2,3].Cont.name
+See also
+X-Dimension [ParallelStation]
+pe, [X,Y] [SimTalk] - ParallelStation
+Plant Simulation Help 11-1747
+Unpublished work. © 2026 Siemens
+
+Y-Dimension [ParallelStation]
+Read-Only Attributes of the ParallelStation
+Read-Only Attributes of the ParallelStation
+The ParallelStation provides:
+• The read-only attribute Capacity [SimTalk] - ParallelStation.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print ParallelStation.Capacity
+Read-Only Attributes of the ParallelStation
+11-1748 Plant Simulation Help
+Unpublished work. © 2026 Siemens

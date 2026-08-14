@@ -1,0 +1,1108 @@
+Active [check box] - TimeSequence
+To record the progression of the values of the TimeSequence, select this check box. To not record any
+values, clear the check box.
+Remarks
+Instead, you can also right-click the TimeSequence object in the Frame and select Activate on the context
+menu. To deactivate it, select Deactivate on the context menu.
+SimTalk
+Active [SimTalk] - TimeSequence
+Methods of the TimeSequence
+Methods for Columns of the TimeSequence
+The TimeSequence provides:
+• _Methods for Columns
+• _Methods for Rows
+• _Methods for Accessing the TimeSequence
+• The shared Methods of Lists and Tables.
+• The shared Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Active [check box] - TimeSequence
+Plant Simulation Help 11-4275
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• ◦ The expression <Path> designates the path of the object to which the method applies.
+◦ The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+If a parameter has a default value, the signature shows the default value after the parameter
+If the method has a return value, the signature shows its data type after the arrow ->.
+• We use these abbreviations for the signature:
+Argument of data type Data type Range of values
+integer integer integer greater than zero
+any all data types depending on the data type
+listrange — a range
+Methods for Columns of the TimeSequence
+11-4276 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Argument of data type Data type Range of values
+direction string "up", "down", " "
+attributes string name of an attribute
+Methods for Columns
+_Methods for Columns
+The TimeSequence provides the methods listed in the table of contents to the left for the column format.
+You can also select these settings under Format > Column. In methods, the first parameter always
+designates the column, either the column index, the column range or the column number.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+Methods for Columns
+Plant Simulation Help 11-4277
+Unpublished work. © 2026 Siemens
+
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+_Methods for Columns
+11-4278 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getAlignmentColumn [SimTalk] - TimeSequence
+Returns the Alignment of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getAlignmentColumn(Column:any) → string
+Parameter
+The parameter Column of data type any designates the column whose alignment you want to get.
+Return Value
+The return value has the data type string.
+Example
+str := timeSequence1.getAlignmentColumn(1)
+SimTalk
+isAlignmentColumn [SimTalk] - TimeSequence
+setAlignmentColumn [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+getAlignmentColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4279
+Unpublished work. © 2026 Siemens
+
+getBackgroundColorColumn [SimTalk] - TimeSequence
+Returns the Background Color of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getBackgroundColorColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose background color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+print timeSequence1.getBackgroundColorColumn(4)
+SimTalk
+setBackgroundColorColumn [SimTalk] - TimeSequence
+See also
+Background Color [cells]
+getBackgroundColorColumn [SimTalk] - TimeSequence
+11-4280 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getColumnWidth [SimTalk] - TimeSequence
+Returns the width of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getColumnWidth(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column.
+Return Value
+The return value has the data type integer.
+Example
+print timeSequence1.getColumnWidth(1)
+SimTalk
+setColumnWidth [SimTalk] - TimeSequence
+See also
+Column Width [text box]
+getColumnWidth [SimTalk] - TimeSequence
+Plant Simulation Help 11-4281
+Unpublished work. © 2026 Siemens
+
+getEditorRightsColumn [SimTalk] - TimeSequence
+Returns the editor rights of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getEditorRightsColumn(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column whose editor rights you want to get.
+Return Value
+The return value has the data type boolean.
+true for read-only access.
+false for read and write access.
+Example
+print timeSequence1.getEditorRightsColumn(1)
+SimTalk
+setEditorRightsColumn [SimTalk] - TimeSequence
+See also
+Editor [check box]
+Information Flow [check box]
+getEditorRightsColumn [SimTalk] - TimeSequence
+11-4282 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFontColorColumn [SimTalk] - TimeSequence
+Returns the Font Color of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontColorColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose font color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+print timeSequence1.getFontColorColumn(3)
+SimTalk
+setFontColorColumn [SimTalk] - TimeSequence
+See also
+Font Color [cells]
+getFontColorColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4283
+Unpublished work. © 2026 Siemens
+
+getFontSizeColumn [SimTalk] - TimeSequence
+Returns the Font Size of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontSizeColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose font size you want to get.
+Return Value
+The return value has the data type integer.
+1 stands for Small, 2 for Medium, 3 for Large, and 4 for Extra Large.
+Example
+print timeSequence1.getFontSizeColumn(2)
+SimTalk
+setFontsizeColumn [SimTalk] - TimeSequence
+See also
+Font Size [drop-down list] - cells, columns
+getFontSizeColumn [SimTalk] - TimeSequence
+11-4284 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFormatString [SimTalk] - TimeSequence
+Returns the format string of the column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFormatString(Column:any) → string
+Parameter
+The parameter Column of data type any designates the column whose format string you want to get.
+Return Value
+The return value has the data type string.
+Example
+timeSequence1.getFormatString("paint")
+print timeSequence1.getFormatString(1)
+SimTalk
+setFormatString [SimTalk] - TimeSequence
+See also
+Format String [text box]
+getFormatString [SimTalk] - TimeSequence
+Plant Simulation Help 11-4285
+Unpublished work. © 2026 Siemens
+
+getVisibility [SimTalk] - TimeSequence
+Returns if a column of the TimeSequence designated by <Path> is visible (true) or hidden (false).
+Type
+Method
+Syntax
+<Path>.getVisibility(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column whose visibility you want to get.
+Return Value
+The return value has the data type boolean.
+Example
+print timeSequence1.getVisibility(4)
+SimTalk
+setVisibility [SimTalk] - TimeSequence
+See also
+Work with Data in the DataTable.
+getVisibility [SimTalk] - TimeSequence
+11-4286 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+isAlignmentColumn [SimTalk] - TimeSequence
+Returns if the alignment of the specified column of the TimeSequence designated by <Path> matches the
+designated value (true) or not (false).
+Type
+Method
+Syntax
+<Path>.isAlignmentColumn(Column:any, Alignment:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column.
+• The parameter Alignment of data type string designates the value of the alignment you want to check.
+You can specify "Right", "Left", or "Center".
+Return Value
+The return value has the data type boolean.
+Example
+print timeSequence1.isAlignmentColumn("column4","right")
+SimTalk
+getAlignmentColumn [SimTalk] - TimeSequence
+isAlignmentColumn [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+isAlignmentColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4287
+Unpublished work. © 2026 Siemens
+
+setAlignmentColumn [SimTalk] - TimeSequence
+Sets the Alignment of the specified column(s) of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setAlignmentColumn(Column:any[, Column:any,...,], Aligmnent:string)
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column whose alignment you want to set.
+• The optional parameters Column of data type any designate additional columns whose alignment you
+want to set.
+• The parameter Alignment of data type string designates the alignment you want to assign.
+You can specify "Left", "Right", or "Centered".
+Example
+timeSequence1.setAlignmentColumn(5,"center")
+timeSequence1.setAlignmentColumn("Value","right")
+SimTalk
+getAlignmentColumn [SimTalk] - TimeSequence
+isAlignmentColumn [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+setAlignmentColumn [SimTalk] - TimeSequence
+11-4288 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setBackgroundColorColumn [SimTalk] - TimeSequence
+Sets the background color of the specified column(s) of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setBackgroundColorColumn(Column:any [,Column:any,...], 
+BackgroundColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column whose background color you want to
+set.
+• The optional parameters Column of data type any designate additional columns whose background
+color you want to set.
+• The parameter BackgroundColor of data type integer designates the color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+timeSequence1.setBackgroundColorColumn(1,1) 
+// sets the background color of column 1 to black
+timeSequence1.setBackgroundColorColumn(1,2,2) 
+// sets the background color of columns 1 and 2 to red
+SimTalk
+getBackgroundColorColumn [SimTalk] - DataTable
+makeRGBValue [SimTalk]
+See also
+Background Color [cells]
+setBackgroundColorColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4289
+Unpublished work. © 2026 Siemens
+
+setColumnWidth [SimTalk] - TimeSequence
+Sets the width of the specified column of the TimeSequence designated by <Path> to the designated value.
+Type
+Method
+Syntax
+<Path>.setColumnWidth(Column:any, ..., ColumnWidth:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns whose width you would like to set.
+• The parameter ColumnWidth of data type integer designates the width in character widths of a non-
+proportional font.
+Example
+timeSequence1.setColumnWidth("column2",10)
+SimTalk
+getColumnWidth [SimTalk] - TimeSequence
+See also
+Column Width [text box]
+setColumnWidth [SimTalk] - TimeSequence
+11-4290 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setEditorRightsColumn [SimTalk] - TimeSequence
+Sets the editing permissions of the specified column(s) of the TimeSequence designated by <Path> to the
+specified value.
+Type
+Method
+Syntax
+<Path>.setEditorRightsColumn(Column:any, ..., ReadOnly:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns whose editor permissions you want to
+set.
+• The parameter ReadOnly of data type boolean designates read-only access (true) or read and write
+access (false).
+Example
+timeSequence1.setEditorRightsColumn(1,true)
+SimTalk
+getEditorRightsColumn [SimTalk] - TimeSequence
+See also
+Editor [check box]
+Information Flow [check box]
+setEditorRightsColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4291
+Unpublished work. © 2026 Siemens
+
+setFontColorColumn [SimTalk] - TimeSequence
+Sets the Font Color of specified column(s) of the TimeSequence designated by <Path> to the specified
+value.
+Type
+Method
+Syntax
+<Path>.setFontColorColumn(Column:any, ..., FontColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the column(s) whose font color you want to set.
+• The parameter FontColor of data type integer designates the font color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+timeSequence1.setFontColorColumn(3,7)
+SimTalk
+getFontColorColumn [SimTalk] - TimeSequence
+makeRGBValue [SimTalk]
+See also
+Font Color [cells]
+setFontColorColumn [SimTalk] - TimeSequence
+11-4292 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setFontsizeColumn [SimTalk] - TimeSequence
+Sets the Font Size of the specified column(s) of the TimeSequence designated by <Path> to the specified
+value.
+Type
+Method
+Syntax
+<Path>.setFontsizeColumn(Column:any, ..., FontSize:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns whose font color you want to set.
+• The parameter FontSize of data type integer designates the font size. You can enter 1 for Small, 2 for
+Medium, 3 for Large or 4 for Extra Large.
+Example
+timeSequence1.setFontsizeColumn("Value",2)
+SimTalk
+getFontSizeColumn [SimTalk] - TimeSequence
+See also
+Font Size [drop-down list] - cells, columns
+setFontsizeColumn [SimTalk] - TimeSequence
+Plant Simulation Help 11-4293
+Unpublished work. © 2026 Siemens
+
+setFormatString [SimTalk] - TimeSequence
+Sets, depending on the data type, the Format String of the specified column of the TimeSequence
+designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setFormatString(Column:any, ..., FormatString:string)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns.
+• The parameter FormatString of data type string designates the format string.
+Example
+timeSequence1.setFormatString(1,"8")
+SimTalk
+getFormatString [SimTalk] - TimeSequence
+See also
+Format String [text box]
+setFormatString [SimTalk] - TimeSequence
+11-4294 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setVisibility [SimTalk] - TimeSequence
+Shows or hides the specified column(s) of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setVisibility(Column:any, ..., Visible:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns.
+• The parameter Visibility of data type boolean sets if the columns will be shown (true) or not (false).
+Example
+timeSequence1.setVisibility(2,true)
+SimTalk
+getVisibility [SimTalk] - TimeSequence
+Methods for Rows of the TimeSequence
+_Methods for Rows
+The TimeSequence provides the methods listed in the table of contents to the left for the row format.
+You can also select these settings under Format > Row of the TimeSequence.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+setVisibility [SimTalk] - TimeSequence
+Plant Simulation Help 11-4295
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+_Methods for Rows
+11-4296 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getAlignmentRow [SimTalk] - TimeSequence
+Returns the Alignment of the specified row of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getAlignmentRow(Row:any) → string
+Parameter
+The parameter Row of data type any designates the row whose alignment you want to get.
+Return Value
+The return value has the data type string.
+Example
+print timeSequence1.getAlignmentRow("BurnIn")
+SimTalk
+isAlignmentRow [SimTalk] - TimeSequence
+setAlignmentRow [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+getAlignmentRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4297
+Unpublished work. © 2026 Siemens
+
+getBackgroundColorRow [SimTalk] - TimeSequence
+Returns the background color of the specified row of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getBackgroundColorRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose background color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+print timeSequence1.getBackgroundColorRow(14)
+SimTalk
+setBackgroundColorRow [SimTalk] - TimeSequence
+See also
+Background Color [cells]
+getBackgroundColorRow [SimTalk] - TimeSequence
+11-4298 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getEditorRightsRow [SimTalk] - TimeSequence
+Returns the editor rights of the specified row of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getEditorRightsRow(Row:any) → boolean
+Parameter
+The parameter Row of data type any designates the row whose background color you want to get.
+Return Value
+The return value has the data type boolean.
+true for read-only access.
+false for read and write-access.
+Example
+print timeSequence1.getEditorRightsRow(1)
+SimTalk
+setEditorRightsRow [SimTalk] - TimeSequence
+See also
+Editor [check box]
+Information Flow [check box]
+getEditorRightsRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4299
+Unpublished work. © 2026 Siemens
+
+getFontColorRow [SimTalk] - TimeSequence
+Returns the Font Color of the specified row of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontColorRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose font color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+timeSequence1.getFontColorRow(34)
+SimTalk
+setFontColorRow [SimTalk] - TimeSequence
+See also
+Font Color [cells]
+getFontColorRow [SimTalk] - TimeSequence
+11-4300 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFontSizeRow [SimTalk] - TimeSequence
+Returns the Font Size of the specified column of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontSizeRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose font size you want to get.
+Return Value
+The return value has the data type integer.
+1 stands for Small, 2 for Medium, 3 for Large, and 4 for Extra Large.
+Example
+print timeSequence1.getFontSizeRow(34)
+SimTalk
+setFontSizeRow [SimTalk] - TimeSequence
+See also
+Font Size [drop-down list] - cells, columns
+getFontSizeRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4301
+Unpublished work. © 2026 Siemens
+
+isAlignmentRow [SimTalk] - TimeSequence
+Returns if the Alignment of the specified row of the TimeSequence designated by <Path> matches the
+designated value (true) or not (false).
+Syntax
+<Path>.isAlignmentRow(Row:any, Alignment:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row.
+• The parameter Alignment of data type string designates the value of the alignment you want to check.
+You can specify "Right", "Left", or "Center".
+Return Value
+The return value has the data type boolean.
+Example
+print timeSequence1.isAlignmentRow(7,"center")
+SimTalk
+getAlignmentRow [SimTalk] - TimeSequence
+setAlignmentRow [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+isAlignmentRow [SimTalk] - TimeSequence
+11-4302 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setAlignmentRow [SimTalk] - TimeSequence
+Sets the Alignment of the specified row(s) of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setAlignmentRow(Row:any[, Row:any,...], Aligmnent:string)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row whose alignment you want to set.
+• The optional parameters Row of data type any designate additional rows whose alignment you want to
+set.
+• The parameter Alignment of data type string designates the alignment you want to set.
+You can specify "Left", "Right", or "Centered".
+Example
+timeSequence1.setAlignmentRow(2,"right")
+SimTalk
+isAlignmentRow [SimTalk] - TimeSequence
+getAlignmentRow [SimTalk] - TimeSequence
+See also
+Alignment [cells and columns]
+setAlignmentRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4303
+Unpublished work. © 2026 Siemens
+
+setBackgroundColorRow [SimTalk] - TimeSequence
+Sets the background color of the specified row(s) of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setBackgroundColorRow(Row:any[, Row:any,...], 
+BackgroundColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row whose background color you want to set.
+• The optional parameters Row of data type any designate additional rows whose background color you
+want to set.
+• The parameter BackgroundColor of data type integer designates the background color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow, or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Examples
+var rgb: integer
+// sets the background color of row 3
+MyTimeSequence.setBackgroundColorRow(3,makeRGBValue(0,200,0))
+// sets the background color of rows 4 and 8
+MyTimeSequence.setBackgroundColorRow(4,8,makeRGBValue(60,100,0))
+print MyTimeSequence.getBackgroundColorRow(3)
+// sets the background color of row 1 to black
+MyTimeSequence.setBackgroundColorRow(1,1) 
+// sets the background color of rows 1 and 2 to red
+MyTimeSequence.setBackgroundColorRow(1,2,2) 
+SimTalk
+getBackgroundColorRow [SimTalk] - DataTable
+setBackgroundColorRow [SimTalk] - TimeSequence
+11-4304 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+makeRGBValue [SimTalk]
+See also
+Background Color [cells]
+setBackgroundColorRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4305
+Unpublished work. © 2026 Siemens
+
+setEditorRightsRow [SimTalk] - TimeSequence
+Sets the editing permissions of the designated row(s) of the TimeSequence designated by <Path> to the
+designated value.
+Type
+Method
+Syntax
+<Path>.setEditorRightsRow(Row:any[, Row:any, ...], ReadOnly:boolean)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designate the row(s).
+• The parameter ReadOnly of data type boolean designates read-only access (true) or read and write
+access (false).
+Example
+timeSequence1.setEditorRightsRow(1,true)
+SimTalk
+getEditorRightsRow [SimTalk] - TimeSequence
+See also
+Editor [check box]
+Information Flow [check box]
+setEditorRightsRow [SimTalk] - TimeSequence
+11-4306 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setFontColorRow [SimTalk] - TimeSequence
+Sets the Font Color of the designated row(s) of the TimeSequence designated by <Path> to the designated
+value.
+Type
+Method
+Syntax
+<Path>.setFontColorRow(Row:any[, Row:any, ...], FontColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Row of data type any designate the cells whose font color you want to set.
+• The parameter FontColor of data type integer designates the color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow, or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+timeSequence1.setFontColorRow(34,5)
+SimTalk
+getFontColorRow [SimTalk] - TimeSequence
+makeRGBValue [SimTalk]
+See also
+Font Color [cells]
+setFontColorRow [SimTalk] - TimeSequence
+Plant Simulation Help 11-4307
+Unpublished work. © 2026 Siemens
+
+setFontSizeRow [SimTalk] - TimeSequence
+Sets the Font Size of the designated row(s) of the TimeSequence designated by <Path> to the designated
+value.
+Type
+Method
+Syntax
+<Path>.setFontSizeRow(Row:any[, Row:any, ...], FontSize:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Row of data type any designate the rows whose font color you want to set.
+• The parameter FontSize of data type integer designates the font size.
+You can specify 1 for Small, 2 for Medium, 3 for Large, or 4 for Extra Large.
+Example
+timeSequence1.setFontSizeRow(2,2)
+SimTalk
+getFontSizeRow [SimTalk] - TimeSequence
+See also
+Font Size [drop-down list] - cells, columns
+Methods for Accessing the TimeSequence
+_Methods for Accessing the TimeSequence
+The TimeSequence provides the methods listed in the table of contents to the left for accessing it.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+setFontSizeRow [SimTalk] - TimeSequence
+11-4308 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+_Methods for Accessing the TimeSequence
+Plant Simulation Help 11-4309
+Unpublished work. © 2026 Siemens
+
+[ , ] [SimTalk] - read cell contents, TimeSequence
+The TimeSequence designated by <Path> enables you to randomly access the contents of the cells by
+employing the column and row indexes.
+Remarks
+The index statement begins and ends with a bracket. Within the bracket you first enter the column and
+then the row of the cell to be accessed. The data type of the return value is the same as the data type of
+the table cell. Plant Simulation just reads the contents of the cell but does not remove it!
+Type
+Method
+Syntax
+<Path>[Column:integer, Row:integer] → contents of the cell
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type integer designates the column.
+• The parameter Row of data type integer designates the row.
+Return Value
+The return value is the contents of the cell.
+Is VOID if the cell is empty.
+Example
+print timeSequence[1,2]
+print timeSequence["Value",2]
+[ , ] [SimTalk] - read cell contents, TimeSequence
+11-4310 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[ , ] [SimTalk] - write cell contents, TimeSequence
+Writes data to the specified cell of the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>[Column:integer, Row:integer]
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type integer designates the column.
+• The parameter Row of data type integer designates the row.
+First you access the cell by its index and then you assign a value.
+The index statement starts and ends with a bracket. In the bracket you first enter the column and then the
+row of the cell to be accessed. The data type of the new value has to be the same as the data type of the
+table cell.
+Example
+timeSequence[2,3] := 12.34
+[ , ] [SimTalk] - write cell contents, TimeSequence
+Plant Simulation Help 11-4311
+Unpublished work. © 2026 Siemens
+
+add [SimTalk]
+Either adds a numerical value to all entries of the value column of the TimeSequence designated by <Path>
+or combines the time and value columns of two TimeSequence objects.
+Type
+Method
+Syntax
+<Path>.add(ValueToBeAdded:any)
+Parameter
+If the parameter ValueToBeAdded of data type any which is to be added is a numerical value, Plant
+Simulation adds it to each entry of the value column. The time column remains unchanged.
+If the parameter ValueToBeAdded is another TimeSequence, Plant Simulation adds time value pairs in
+sections. The values in the time columns determine the extent of the individual sections. If for a certain
+time value there are multiple entries in one time sequence, and only one entry in the other time sequence,
+the single entry will be added to all other entries. If both time sequences have the same number of
+multiple entries with a particular time value, the entries will be combined in pairs and added afterwards.
+If the number of entries with the same time value differs, the last entry will be duplicated, before the
+addition is performed, until the number of entries with the same time matches.
+Example
+MyTimeSequence.add(5)
+shiftA.add(shiftB)
+add [SimTalk]
+11-4312 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+and [SimTalk] - operator
+You can use boolean operations, such as and and or, in a TimeSequence of data type boolean.
+Remarks
+The boolean operation may be executed with a single boolean parameter or another TimeSequence
+object. In the latter case, the sequence of values in the time column will be the union of the time columns
+of both time sequences involved in the operation.
+Type
+Method/operator
+Syntax
+<Path>.and(Operand:any)
+Parameter
+The parameter Operand of data type any designates the operand which will be applied.
+Example
+failureA.and(failureB)
+workerA.or(workerB)
+MyTimeSequence.or(true)
+MyTimeSequence.and(false)
+See also
+or [SimTalk] - operator
+and [SimTalk] - operator
+Plant Simulation Help 11-4313
+Unpublished work. © 2026 Siemens
+
+deleteInterval [SimTalk]
+Deletes all values located within the designated time interval from the TimeSequence designated by
+<Path>.
+Type
+Method
+Syntax
+<Path>.deleteInterval([BeginningOfInterval:time, EndOfInterval:time])
+Parameters
+You can specify the following parameters:
+• The optional parameter BeginningOfInterval of data type time designates the beginning of the time
+interval.
+• The optional parameter EndOfInterval of data type time designates the end of the time interval.
+The TimeSequence also deletes entries matching one of the boundaries.
+Example
+resultList.deleteInterval(0,3600)
+deleteInterval [SimTalk]
+11-4314 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+divide [SimTalk]
+Divides all items of the value column of the TimeSequence designated by <Path> by a numerical value.
+Remarks
+In addition, a time sequence may be divided by another time sequence. Then, the time column of the
+result is the combination of the time column of both time sequences. The value column of the result
+contains the quotient of the values of both time sequences at the respective times.
+Note
+All divisors must be non-zero.
+Type
+Method
+Syntax
+<Path>.divide(Divisor:any)
+Parameter
+The parameter Divisor of data type any designates the divisor which will be applied.
+Example
+MyTimeSequence.divide(5)
+numEntities.divide(current.NumMU)
+divide [SimTalk]
+Plant Simulation Help 11-4315
+Unpublished work. © 2026 Siemens
+
+include [SimTalk]
+Takes all entries of the TimeSequence designated by the parameter of data type object and inserts them in
+the TimeSequence designated by <Path>.
+Remarks
+Inserting all entries may result in a single time sequence containing multiple entries with the same time
+value. If this happens, the order of the entries with identical time values, with respect to each other, is
+undefined.
+The data types of the affected time sequences must be identical or compatible.
+Type
+Method
+Syntax
+<Path>.include(TimeSequence:object)
+Parameter
+The parameter TimeSequence of data type object designates the TimeSequence whose values will be
+included.
+Example
+timeSequence1.include(timeSequence2)
+include [SimTalk]
+11-4316 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+insert [SimTalk] - TimeSequence
+Inserts a time/value pair into the TimeSequence designated by <Path>.
+Type
+Method
+Syntax
+<Path>.insert(GivenTime:any, Value:any)
+Parameters
+You can specify the following parameters:
+• The parameter GivenTime of data type any designates the time.
+For the time reference Absolute, this parameter is expected to be of data type dateTime. Otherwise, the
+data type time is required.
+• The parameter Value of data type any designates the value.
+The type of the value for this parameter, must match or be compatible with the data type of the
+TimeSequence.
+Example
+MyTimeSequence.insert(eventcontroller.simtime,3)
+MyTimeSequence.insert(sysdate,3)
+insert [SimTalk] - TimeSequence
+Plant Simulation Help 11-4317
+Unpublished work. © 2026 Siemens
+
+multiply [SimTalk]
+Multiplies all items of the value column of the TimeSequence designated by <Path> with a numerical
+value. In addition, a time sequence may be multiplied with another time sequence.
+Remarks
+The time column of the result is the union of the time column of both time sequences. The value column
+of the result contains the product of the values of both time sequences at the respective times.
+Type
+Method
+Syntax
+<Path>.multiply(Factor:any)
+Parameter
+The parameter Factor of data type any designates the multiplication factor.
+Example
+MyTimeSequence.multiply(5)
+dimx.multiply(dimy)
+multiply [SimTalk]
+11-4318 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+not [SimTalk] - TimeSequence
+Applies a boolean NOT operation to all values in the value column of the TimeSequence designated by
+<Path>.
+Type
+Method
+Syntax
+<Path>.not
+Example
+MyTimeSequence.not // reverses all inputs
+not [SimTalk] - TimeSequence
+Plant Simulation Help 11-4319
+Unpublished work. © 2026 Siemens
+
+or [SimTalk] - operator
+You can use boolean operations, such as and and or, in a TimeSequence of data type boolean.
+Remarks
+The boolean operation may be executed with a single boolean parameter or another TimeSequence
+object. In the latter case, the sequence of values in the time column will be the union of the time columns
+of both time sequences involved in the operation.
+Type
+Method
+Syntax
+<Path>.or(Operand:any)
+Parameter
+The parameter Operand of data type any designates the operand which will be applied.
+Example
+failureA.and(failureB)
+workerA.or(workerB)
+MyTimeSequence.or(true)
+MyTimeSequence.and(false)
+SimTalk
+and [SimTalk] - operator
+or [SimTalk] - operator
+11-4320 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+repeat [SimTalk] - TimeSequence
+Deletes all entries of the TimeSequence designated by <Path> and replaces them with copies of a sub-
+range of the data of another TimeSequence.
+Type
+Method
+Syntax
+<Path>.repeat(TimeSequence:object, Subrange:time, NumberOfCopies:real)
+Parameters
+You can specify the following parameters:
+• The parameter TimeSequence of data type object designates the TimeSequence whose subrange will be
+pasted.
+• The parameter Subrange of data type time designates the sub-range. It starts with the time zero and
+ends at the time designated by this parameter.
+• The parameter NumberOfCopies of data type real designates the number of copies of the data which are
+to be inserted.
+You might, for example, use this to create a week’s schedule from a day’s schedule by repeating it five
+times.
+Example
+LengthOfDay := str_to_time("1:00:00:00.00")
+weekPlan.repeat(dayPlan,lengthOfDay,5)
+repeat [SimTalk] - TimeSequence
+Plant Simulation Help 11-4321
+Unpublished work. © 2026 Siemens
+
+repeatTo [SimTalk]
+Removes all entries of the TimeSequence designated by <Path> and replaces them with copies of a
+sub-range of the data of the designated TimeSequence.
+Type
+Method
+Syntax
+<Path>.repeatTo(TimeSequence:object, Subrange:time, RangeToBeFilled:time)
+Parameters
+You can specify the following parameters:
+• The parameter TimeSequence of data type object designates the TimeSequence whose data will replace
+the existing data.
+• The parameter Subrange of data type time designates the sub-range. It starts with the time zero and
+ends at the time designated by this parameter.
+• The parameter RangeToBeFilled of data type time designates the range of the TimeSequence designated
+by <Path> that is to be filled with copies of the sub-range.
+Consequently, the range of the TimeSequence designated by <Path> must be greater than the sub-
+range of the TimeSequence designated by the parameter of data type object. Otherwise, it would
+remain empty.
+Examples
+weekPeriod := str_to_time("5:00:00:00.00")
+dayPeriod := str_to_time("1:00:00:00.00")
+weekPlan.repeatTo(dayPlan,weekPeriod,dayPeriod)
+MyTimeSequence.or(true) // all values := true
+MyTimeSequence.and(false) // all values := false
+repeatTo [SimTalk]
+11-4322 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+subtract [SimTalk]
+Type
+Method
+Syntax
+<Path>.subtract(ValueToBeSubtracted:integer)
+<Path>.subtract(ValueToBeSubtracted:real)
+<Path>.subtract(ValueToBeSubtracted:object)
+Parameters
+You can specify the following parameters:
+• If the parameter to subtract is a numerical value designated by the parameter ValueToBeSubtracted of
+data type integer or real, Plant Simulation subtracts it from each entry of the value column. The time
+column remains unchanged.
+• If the parameter to subtract is another TimeSequence designated by the parameter
+ValueToBeSubtracted of data type object, Plant Simulation subtracts time value pairs in sections. The
+values in the time columns set the extent of the individual sections. If for a certain time value there are
+multiple entries in one time sequence, and only one entry in the other time sequence, the single entry
+will be subtracted from all other entries.
+If both TimeSequences contain the same number of multiple entries with a particular time value, Plant
+Simulation combines the entries in pairs and subtracts them afterwards. If the number of entries with
+the same time value differs, Plant Simulation duplicates the last entry, before it subtracts it, until the
+number of entries with the same time matches.
+Example
+MyTimeSequence.subtract(5)
+stock.subtract(missingEntities)
+subtract [SimTalk]
+Plant Simulation Help 11-4323
+Unpublished work. © 2026 Siemens
+
+value [SimTalk] - TimeSequence
+Returns the value the TimeSequence designated by <Path> taken at a given time.
+Remarks
+If there are multiple entries with the same time, Plant Simulation returns the entry with the highest
+number.
+Type
+Method
+Syntax
+<Path>.value(GivenTime:time) -> any
+Parameter
+The parameter GivenTime of data type time designates the column.
+Return Value
+The return value has the data type any.
+Example
+print ts1.value(1.5)+ts2.value(1.5)
+Read-Only Attributes of the TimeSequence
+Read-Only Attributes of the TimeSequence
+The TimeSequence provides:
+• The _Read-Only Attributes of Lists and Tables.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+value [SimTalk] - TimeSequence
+11-4324 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyTimeSequence.Full
+Attributes of the TimeSequence
+_Attributes of the TimeSequence
+The TimeSequence provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of Lists and Tables.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the TimeSequence
+Plant Simulation Help 11-4325
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,462 @@
+Image
+Description
+You might, for example, use the TwoLaneTrack and the Transporterto model an AGV (automated guided
+vehicle) system. The distance, which the Transporter 
+ has to travel on the TwoLaneTrack is defined by
+the Length of Lane A and the Length of Lane B of the TwoLaneTrack, the Transporter’s MU Length, and
+its Speed. They determine the time, which the Transporter remains on the TwoLaneTrack. As opposed
+to the point-oriented material flow objects, Plant Simulation uses the actual length, which you type in,
+during your simulation run. A Transporter may not pass another one moving in front of it. The Transporters
+thus retain their order of moving onto and of leaving the TwoLaneTrack. Each lane of the TwoLaneTrack
+may have its own length to realistically model the length of the lanes, when the TwoLaneTrack turns the
+corner. In that case the outside lane is longer than the inside lane.
+If several Transporters travel along a lane of the TwoLaneTrack at a different speed, the faster one collides
+with the slower one. Plant Simulation then activates the Collision Control of the faster Transporter and
+automatically reduces its speed to the speed of the slower Transporter.
+The Transporter can drive forward and Backwards on the TwoLaneTrack, i.e., it drives onto the
+TwoLaneTrack at its exit and exits it at its entrance. Driving forward and backward are not properties
+of the TwoLaneTrack, but of the Transporters, which drive on it.
+The maximum capacity of the TwoLaneTrack is defined by its length and the lengths of the individual
+Transporters moving on it, i.e., a TwoLaneTrack that is three yards long accepts three Transporters of one
+yard each at the most. With the Capacity you can further restrict the number of Transporters located on
+the TwoLaneTrack.
+You can insert the TwoLaneTrack:
+• As a curved object, which is the default setting.
+• By inserting any sequence of curved segments and straight segments, you can realistically model curved
+conveyor systems on which the Transporters move.
+You can select different configurations for the TwoLaneTrack on the tab Appearance.
+TwoLaneTrack
+11-2472 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The TwoLaneTrack supports bidirectional traffic. You can thus select if Right-hand Traffic or Left-hand
+Traffic applies.
+Right-hand traffic Left-hand traffic
+To show a tooltip with information about the TwoLaneTrack, hover with the mouse over it.
+TwoLaneTrack
+Plant Simulation Help 11-2473
+Unpublished work. © 2026 Siemens
+
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+The manipulator at the start and at the end of the length-oriented object is cut off. When you attach an
+object of the same type to the other object, the two combined halves result in a complete manipulator
+again. When you move the mouse over a manipulator, Plant Simulation shows a Tooltip.
+Add the Object to the Simulation Model
+To add the object TwoLaneTrack to your simulation model, click 
+  Library > Basic Objects >
+MaterialFlow > TwoLaneTrack on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+TwoLaneTrack
+11-2474 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Model a Transport System with Passive Objects
+Work with Length-oriented Objects
+Routing [TwoLaneTrack]
+TwoLaneTrack
+Plant Simulation Help 11-2475
+Unpublished work. © 2026 Siemens
+
+Routing [TwoLaneTrack]
+To facilitate a branching TwoLaneTrack, use any of these controls to move a Transporter on to the
+succeeding object.
+Remarks
+Plant Simulation uses:
+• The Exit Control of the TwoLaneTrack.
+• Automatic Routing of the Transporter.
+• The Driving Control of the Transporter.
+• The built-in properties of the TwoLaneTrack described below.
+The Exit Control has the highest priority. If you did not define an Exit Control for the TwoLaneTrack and
+if you typed in a destination list for the Transporter, Automatic Routing moves the Transporter on to the
+proper successor, using the destination list of the successors.
+You can also assign a Destination to the Transporter. The TwoLaneTrack has a Forward destination list and
+Backward destination list for each of its lanes, into which you type all destinations that the Transporter can
+reach, when it moves on the respective lane of the TwoLaneTrack. If you assigned a destination list to a
+lane of the Transporter that is ready to be moved on, the TwoLaneTrack searches the Forward destination
+list and the Backward destination list of all successors for the Destination you typed in, and, as soon as it
+finds it, moves the Transporter on to that successor. If the TwoLaneTrack does not find the destination, it
+moves the Transporter to the next successor in turn. Plant Simulation terminates the search after it finds
+the first instance of the Destination. Automatic routing is inactive if you did not type in a Destination for
+the Transporter or if you typed in an Exit Control for the TwoLaneTrack.
+If you did not type in an Exit Control nor any Destination Lists for the successors, the TwoLaneTrack
+uses the Driving Control of the Transporter to move it. If you do not type in any controls at all, the
+TwoLaneTrack moves the Transporters to each of the successors, to which it is connected, in turn.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Routing [TwoLaneTrack]
+11-2476 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Model a Transport System with Passive Objects
+Dialog Box of the TwoLaneTrack
+Dialog Box of the TwoLaneTrack
+Double-click the icon of the TwoLaneTrack to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the TwoLaneTrack
+Plant Simulation Help 11-2477
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Tab Controls A/B
+Entrance Locked [lane A]
+Exit Locked [lane A]
+Entrance Locked [lane B]
+Exit locked [lane B]
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Lane A
+Lane A
+Lane A provides a number of settings.
+Length, Entrance Locked, and Exit Locked.
+See also
+asAny [SimTalk]
+IsLaneA [SimTalk]
+Tab Attributes
+11-2478 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Length [text box] - lane A
+Type the Length of Lane A of the TwoLaneTrack into the text box.
+Remarks
+After you inserted it, Plant Simulation shows its length here. The length of the lanes of the TwoLaneTrack
+and the sum of the lengths of all Transporters located on it determine how many Transporters it can
+accommodate at any one time.
+Each lane of the TwoLaneTrack may have its own length to realistically model the length of the lanes,
+when the TwoLaneTrack turns a corner. In that case the outside lane is longer than the inside lane.
+You can change the length of the graphic and the anchor points of the TwoLaneTrack by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+A.Length [SimTalk] - lane A or B
+A.OccupiedLength [SimTalk] - lane A or B
+Length [text box] - lane A
+Plant Simulation Help 11-2479
+Unpublished work. © 2026 Siemens
+
+Entrance Locked [lane A]
+To prevent that Transporters enter lane A of the TwoLaneTrack, select this check box.
+Remarks
+The TwoLaneTrack will finish transporting the Transporters that are already located on it.
+It does not accept any additional Transporters and enters those into the Blocking List of Lane A.
+• If the Transporter wants to enter the TwoLaneTrack at its entrance, it is entered into the Forward
+Blocking List of Lane A.
+• If the Transporter is moving backward and wants to enter a length-oriented object at its exit, it is
+entered into the Exit Blocking List of Lane A.
+Transporting starts again once you clear the check box. The first Transporter in the Forward Blocking List
+of Lane A is going to be moved on first.
+SimTalk
+A.EntranceLocked [SimTalk] - lane A or B
+See also
+Forward Blocking List
+Exit Blocking List
+Entrance Locked [lane A]
+11-2480 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exit Locked [lane A]
+To prevent that Transporters exit Lane A of the TwoLaneTrack, select this check box.
+Remarks
+The TwoLaneTrack does not transport the Transporters to the successor in the material flow, but enters
+them into the Exit Blocking List of Lane A of the TwoLaneTrack.
+Once the exit is unlocked again, the TwoLaneTrack moves the first Transporter in the Exit Blocking List of
+Lane A on to its successor.
+Note
+The Transporter does not trigger the Exit Control if you selected the check box Exit Locked.
+SimTalk
+A.ExitLocked [SimTalk] - lane A or B
+Lane B
+Lane B
+Lane A provides a number of settings.
+Length, Entrance Locked, and Exit Locked.
+See also
+asAny [SimTalk]
+Exit Locked [lane A]
+Plant Simulation Help 11-2481
+Unpublished work. © 2026 Siemens
+
+IsLaneB [SimTalk]
+Lane B
+11-2482 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Length [text box] - lane B
+Type the Length of Lane B of the TwoLaneTrack into the text box.
+Remarks
+After you inserted it, Plant Simulation shows its length here. The length of the lanes of the TwoLaneTrack
+and the sum of the lengths of all Transporters located on it determine how many Transporters it can
+accommodate at any one time.
+Each lane of the TwoLaneTrack may have its own length to realistically model the length of the lanes,
+when the TwoLaneTrack turns a corner. In that case the outside lane is longer than the inside lane.
+You can change the length of the graphic and the anchor points of the TwoLaneTrack by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+B.Length [SimTalk] - lane A or B
+B.OccupiedLength [SimTalk] - lane A or B
+Length [text box] - lane B
+Plant Simulation Help 11-2483
+Unpublished work. © 2026 Siemens
+
+Entrance Locked [lane B]
+To prevent that Transporters enter Lane B of the TwoLaneTrack, select this check box.
+Remarks
+The TwoLaneTrack will finish transporting the Transporters already located on it.
+It does not accept any additional Transporters and enters those into the Blocking List of Lane B.
+• If the Transporter wants to enter the TwoLaneTrack at its entrance, it is entered into the Forward
+Blocking List of lane B.
+• If the Transporter is moving backward and want to enter a length-oriented object at its exit, it is entered
+into the Exit Blocking List of Lane B.
+Transporting starts again once you clear the check box. The first Transporter in the Forward Blocking List
+of Lane B is going to be moved on first.
+SimTalk
+B.EntranceLocked [SimTalk] - lane A or B
+See also
+Forward Blocking List
+Exit Blocking List
+Entrance Locked [lane B]
+11-2484 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exit locked [lane B]
+To prevent that Transporters exit Lane B of the TwoLaneTrack, select this check box.
+Remarks
+The TwoLaneTrack does not transport the Transporters to the successor in the material flow, but enters
+them into the Exit Blocking List of Lane B of the TwoLaneTrack.
+Once the exit is unlocked again, the TwoLaneTrack moves the first Transporter in the Exit Blocking List of
+Lane B on to its successor.
+Note
+The Transporter does not trigger the Exit Control if you selected the check box Exit locked.
+SimTalk
+B.ExitLocked [SimTalk] - lane A or B
+See also
+Exit Blocking List
+Exit locked [lane B]
+Plant Simulation Help 11-2485
+Unpublished work. © 2026 Siemens
+
+Width [text box] - TwoLaneTrack
+Type the Width of both lanes of the TwoLaneTrack into the text box.
+SimTalk
+Width [SimTalk] - TwoLaneTrack
+Width [text box] - TwoLaneTrack
+11-2486 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Track Pitch [text box]
+Type in the Track Pitch between Lane A and Lane B.
+Remarks
+The Track Pitch is the distance between the center lines of the two lanes of the two-lane track.
+Compare this example:
+Track pitch 1 Track pitch 0.6
+SimTalk
+TrackPitch [SimTalk]
+Track Pitch [text box]
+Plant Simulation Help 11-2487
+Unpublished work. © 2026 Siemens
+
+Right-hand Traffic/Left-hand Traffic
+Select the side of the TwoLaneTrack on which traffic moves: Right-hand Traffic or Left-hand Traffic.
+Right-hand traffic Left-hand traffic
+SimTalk
+Traffic [SimTalk] - TwoLaneTrack
+Right-hand Traffic/Left-hand Traffic
+11-2488 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - TwoLaneTrack
+Type the Capacity of the TwoLaneTrack into the text box.
+Remarks
+The Capacity is the maximum number of Transporters that may be located on both lanes of the
+TwoLaneTrack as a whole or in part at any one time.
+The default value -1 stands for an infinite capacity.
+SimTalk
+Capacity [SimTalk] - TwoLaneTrack
+Capacity [text box] - TwoLaneTrack
+Plant Simulation Help 11-2489
+Unpublished work. © 2026 Siemens
+
+Destination List A [text box]
+Click the ellipsis button and select a List object in the dialog Select Object.
+Remarks
+Type in all destination objects into this List object, which the TwoLaneTrack can reach, when the
+Transporter drives forward on Lane A. The forward destination list of Lane A concurrently is the backward
+destination list of Lane B.
+Plant Simulation evaluates the destination lists when a Transporter is to be moved on to a successor.
+Plant Simulation searches for the destination of the Transporter in the destination lists of all succeeding
+TwoLaneTracks, which are directly connected with Connectors. If a succeeding TwoLaneTrack is connected
+via an Interface, this Interface should only have a single successor because Plant Simulation only searches
+for a destination list in the first successor of the Interface
+SimTalk
+DestListA [SimTalk] - TwoLaneTrack
+See also
+Select Object [for controls]
+Destination List A [text box]
+11-2490 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Destination List B [text box]
+Click the ellipsis button and select a List object in the dialog Select Object.
+Remarks
+Type in all destination objects into this List object, which the TwoLaneTrack can reach, when the
+Transporter drives forward on Lane B. The forward destination list of Lane B concurrently is the backward
+destination list of Lane A.
+Plant Simulation evaluates the destination lists when a Transporter is to be moved on to a successor.
+Plant Simulation searches for the destination of the Transporter in the destination lists of all succeeding
+TwoLaneTracks, which are directly connected with Connectors. If a succeeding TwoLaneTrack is connected
+via an Interface, this Interface should only have a single successor because Plant Simulation only searches
+in the for a destination list in first successor of the Interface.
+SimTalk
+DestListB [SimTalk] - TwoLaneTrack
+See also
+Select Object [for controls]
+Destination List B [text box]
+Plant Simulation Help 11-2491
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2492 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls A/B
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls A/B
+Plant Simulation Help 11-2493
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+You can create an Entrance Control, an Exit Control, a Backward Entrance Control, a Backward Exit
+Control, and a Pull Control for Lane A and/or for Lane B of the TwoLaneTrack.
+In addition, you can:
+• Select the Shift Calendar.
+• Create and insert Sensors on each lane separately or on both lanes. The TwoLaneTrack provides settings
+to accommodate the two lanes. The button Sensors shows how many sensors you inserted for this lane.
+Clicking the button shows the Sensor List, which displays all sensors you defined for the two lanes.
+See also
+Define Controls for Length-Oriented Objects
+Select Object [for controls]
+Entrance Control [general description]
+Exit Control [general description]
+Backward Entrance Control
+Backward Exit Control
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls A/B
+11-2494 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics
+Plant Simulation Help 11-2495
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-2496 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-2497
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu of the TwoLaneTrack provides commands to access the functions for each of its two lanes.
+Refresh [on View menu] Backward Blocking List (bwBlockList [SimTalk] -
+lane A or B)
+Show Statistics Report [on View menu] Exit Blocking List (exitBlockList [SimTalk] - lane A
+or B)
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] (contentsList
+[SimTalk] - lane A or B)
+Associated Shift Calendar
+Forward Blocking List (fwBlockList [SimTalk] -
+lane A or B)
+View Menu
+11-2498 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-2499
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+11-2500 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the TwoLaneTrack
+_Methods of the TwoLaneTrack
+The TwoLaneTrack provides:
+• The methods listed in the table of contents to the left.
+• The _Methods of Curved Objects.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+Note
+A number of methods, which the TwoLaneTrack shares with the other material flow objects, apply to a
+lane, instead of to the entire object.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Help Menu
+Plant Simulation Help 11-2501
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,61 @@
+SimTalk
+openRead [SimTalk]
+See also
+Import Method [XML Interface]
+openRead [SimTalk]
+User Interface Objects
+Display and User Interface Objects
+Plant Simulation provides display objects to show the results of the simulation runs and user interface
+objects prompting input from the user of the simulation model.
+User Interface Objects
+11-4552 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Use the object Button 
+  for showing a button in the Frame. When you click the button, it executes the
+action which you programmed in a control.
+Display and User Interface Objects
+Plant Simulation Help 11-4553
+Unpublished work. © 2026 Siemens
+
+• Use the object Chart 
+  for presenting current data and results of the simulation run.
+• Use the object Checkbox 
+  for toggling between the states on and off, for toggling operating modes,
+etc.
+• Use the object Comment 
+  for showing explanatory notes which you added to your simulation model.
+• Use the object CostAnalyzer 
+  for analyzing costs that the individual machines and the Worker cause.
+• Use the object Dialog 
+  for designing a dialog box for an object which is similar to the built-in dialog
+boxes.
+• Use the object Display 
+  for presenting current data and results of the simulation run.
+• Use the object DropDownList 
+  for showing a drop-down list in the Frame. When you select one of the
+items, it executes the action which you programmed in the control.
+• Use the object GanttChart 
+  for showing the chronological sequence of activities as bars on the time
+axis.
+• Use the object HtmlReport 
+  for presenting current data and results of the simulation run in a report
+that you can share with co-workers and customers.
+• Use the object SankeyDiagram 
+  for visualizing the Sankey flows of parts as well as Sankey flows of
+Workers, who walk freely within the area or walk on FootPaths.
+Comment
+Comment [object]
+Use the object Comment for showing explanatory notes which you added to your simulation model.
+Image
+Description
+A comment helps you and your colleagues to better understand the intentions behind your model and
+how it is supposed to work.
+You can access it like you do any other object, be aware though that the Comment usually is not involved
+in the simulation itself. Select Options > Show Comments on the View ribbon tab of the Frame or click
+ to display all Comment objects, which you inserted into that Frame. Plant Simulation displays the text
+in the Frame window which you entered under Display > Text.
+Comment
+11-4554 Plant Simulation Help
+Unpublished work. © 2026 Siemens

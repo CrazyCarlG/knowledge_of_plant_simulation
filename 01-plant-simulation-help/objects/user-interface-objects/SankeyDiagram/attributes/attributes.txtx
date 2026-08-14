@@ -1,0 +1,134 @@
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MySankeyDiagram.UUID
+Attributes of the SankeyDiagram
+_Attributes of the SankeyDiagram
+The SankeyDiagram provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+Attributes of the SankeyDiagram
+Plant Simulation Help 11-4877
+Unpublished work. © 2026 Siemens
+
+• To set the value of an attribute, you might, for example, type:
+MySankeyDiagram.IsShown := true
+• To get the value of an attribute, you might, for example, type:
+print MySankeyDiagram.IsShown
+posit := Station.Cont.XPos
+_Attributes of the SankeyDiagram
+11-4878 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+CollectData [SimTalk] - SankeyDiagram
+Sets if the SankeyDiagram designated by <Path> collects data (true ) or does not collect data (false).
+Type
+Attribute
+Syntax
+<Path>.CollectData:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MySankeyDiagram.CollectData := true
+See also
+Collect Data [check box] - SankeyDiagram
+CollectData [SimTalk] - SankeyDiagram
+Plant Simulation Help 11-4879
+Unpublished work. © 2026 Siemens
+
+Color [SimTalk] - SankeyDiagram
+Sets the color which Plant Simulation uses for displaying the Sankey flows of the parts and Workers of the
+SankeyDiagram designated by <Path> in the Frame.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.Color:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MySankeyDiagram.Color := makeRGBValue(255,0,0)
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Color [SankeyDiagram]
+Color [SimTalk] - SankeyDiagram
+11-4880 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsShown [SimTalk] - SankeyDiagram
+Activates (true) or deactivates (false) the display of the SankeyDiagram designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.IsShown:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MySankeyDiagram.IsShown := false
+See also
+Show Diagram
+IsShown [SimTalk] - SankeyDiagram
+Plant Simulation Help 11-4881
+Unpublished work. © 2026 Siemens
+
+MaximumWidth [SimTalk]
+Sets the maximum width with which Plant Simulation visualizes the Sankey flows of the parts and Workers
+of the SankeyDiagram designated by <Path> in the Frame.
+Type
+Attribute
+Syntax
+<Path>.MaximumWidth:length
+Assignment Value
+You can assign a value of data type length.
+Example
+MySankeyDiagram.MaximumWidth := 1.0 –- meters
+See also
+Maximum Width [SankeyDiagram]
+MaximumWidth [SimTalk]
+11-4882 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Objects [SimTalk] - SankeyDiagram
+Sets the objects, i.e., the Parts or Workers whose Sankey flows which the SankeyDiagram designated by
+<Path> visualizes in the Frame.
+Type
+Attribute
+Syntax
+<Path>.Objects:array
+Assignment Value
+You can assign a value of data type array.
+Example
+MySankeyDiagram.Objects := [.Resources.Worker]         // all Workers of 
+this class
+MySankeyDiagram.Objects := [.Resources.WorkerPool]     // all WorkerPool 
+classes
+MySankeyDiagram.Objects := [.Models.Model.WorkerPool]  // all Workers of 
+the WorkerPool in the Frame named Frame
+MySankeyDiagram.Objects := [.Resources.Worker:1]       // the Worker with 
+the number 1
+See also
+Objects, tab
+CostAnalyzer
+CostAnalyzer
+Use the object CostAnalyzer for analyzing costs that the individual machines and the Worker cause. The
+CostAnalyzer computes the costs that accrue for the material flow objects while processing the parts in the
+facility.
+Image
+Objects [SimTalk] - SankeyDiagram
+Plant Simulation Help 11-4883
+Unpublished work. © 2026 Siemens

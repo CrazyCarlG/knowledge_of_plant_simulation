@@ -1,0 +1,67 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Marker
+Methods of the Marker
+The Marker provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+Plant Simulation Help 11-3479
+Unpublished work. © 2026 Siemens
+
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+Methods of the Marker
+11-3480 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getRouteLength [SimTalk] - Marker
+Returns the route length of the Marker designated by <Path> to the specified destination.
+Type
+Method
+Syntax
+<Path>.getRouteLength(ToMarker:path[, byref ObjectsAlongRoute:object[], 
+RouteWeightingAttribute:string]) → length
+Parameters
+You can specify the following parameters:
+• The parameter ToMarker of data type path designates the destination object.
+• The optional parameter ObjectsAlongRoute designates an array of data type object into which the
+Marker enters the objects along the route to the destination.
+• The optional parameter RouteWeightingAttribute of data type string designates the name of the Route
+Weighting Attribute for automatic routing. If the parameter is not passed, Plant Simulation does not
+weight the lengths of the routes.
+Return Value
+The return value has the data type length.
+If the destination is not reachable, Plant Simulation returns the value -1.
+Example
+print Marker1.getRouteLength(Marker2)
+Read-Only Attributes of the Marker
+Read-Only Attributes of the Marker
+The Marker provides the _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+getRouteLength [SimTalk] - Marker
+Plant Simulation Help 11-3481
+Unpublished work. © 2026 Siemens

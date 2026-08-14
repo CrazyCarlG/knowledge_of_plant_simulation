@@ -1,0 +1,121 @@
+IsOpen [SimTalk] - FileInterface
+Returns if the file of the FileInterface designated by <Path> into which data is to be written is open (true)
+or not open (false).
+Type
+Read-only attribute
+Syntax
+<Path>.IsOpen → boolean
+Return Value
+The return value has the data type boolean.
+Example
+printMyFileInterface.IsOpen
+Attributes of the FileInterface
+_Attributes of the FileInterface
+The FileInterface provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+IsOpen [SimTalk] - FileInterface
+11-4500 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyFileInterface.FileName := "C:\users\johnE\myData.txt"
+• To get the value of an attribute, you might, for example, type:
+print MyFileInterface.FileName
+posit := Station.Cont.XPos
+_Attributes of the FileInterface
+Plant Simulation Help 11-4501
+Unpublished work. © 2026 Siemens
+
+Encoding [SimTalk]
+Sets the encoding with which Plant Simulation saves the file of the FileInterface designated by <Path>
+which it writes.
+Remarks
+When Plant Simulation reads a file, the attribute contains the encoding of the file. If Plant Simulation
+cannot recognize an encoding, it returns ANSI.
+Type
+Attribute
+Syntax
+<Path>.Encoding:string
+Assignment Value
+You can assign a value of data type string.
+You can specify:
+• "ANSI" is an 8-bit character set that enables you to represent up to 256 characters (0 through 255).
+The ANSI character set is a superset of the 7-bit ASCII character set.
+• "UTF-8" is another encoding of the Unicode character set. Each character is represented by one to
+three bytes.
+• "UTF-16" is another encoding of the Unicode character set.
+• "Unicode" is a 16-bit character set that includes almost all of the written languages of the world. Plant
+Simulation saves Unicode in UTF-16 encoding. Each character is represented by two bytes.
+Example
+MyFileInterface.Encoding := "Unicode"
+See also
+Encoding [drop-down list]
+Encoding [SimTalk]
+11-4502 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FileName [SimTalk] - FileInterface
+Sets the name of the file of the FileInterface designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.FileName:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyFileInterface.FileName := "C:\users\johnE\myData.txt"
+See also
+Filename [FileInterface]
+XMLInterface
+XMLInterface
+Use the object XMLInterface for reading and extracting data stored in XML files. You can then process the
+data in Plant Simulation in a number of ways.
+Image
+Description
+Basically an XML document contains data in ASCII format, i.e., text that is structured in a certain way.
+You can, for example, use the XMLInterface to read data which you exported from Process Simulate or an
+XML database.
+FileName [SimTalk] - FileInterface
+Plant Simulation Help 11-4503
+Unpublished work. © 2026 Siemens
+
+You can:
+• Read and Write Data Sequentially
+• Read and Access Data Randomly
+• Access and Traverse Data Randomly
+You can then use the data, which the XMLInterface read, and which you manipulated with a Method,
+to run a simulation in Plant Simulation. You might afterward use the methods write and writeElement
+to write the simulation results back to an XML file and continue working with these simulation results in
+Process Designer or another program.
+Note
+Working with the XMLInterface requires that you are familiar with XPath (XML Path Language) source
+code.
+To show a tooltip with information about the XMLInterface, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the XMLInterface, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object XMLInterface to your simulation model, click 
+  Manage Class Library > Basic Objects
+> InformationFlow > XMLInterface on the Home ribbon tab.
+See also
+Import Data in XML Format
+Dialog Box of the XML Interface
+Dialog Box of the XMLInterface
+Double-click the icon of the XMLInterface to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Dialog Box of the XML Interface
+11-4504 Plant Simulation Help
+Unpublished work. © 2026 Siemens

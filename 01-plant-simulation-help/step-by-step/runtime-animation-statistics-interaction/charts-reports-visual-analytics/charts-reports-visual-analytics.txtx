@@ -1,0 +1,2373 @@
+If the transparency color is not part of the color palette proper, double-click any field in the Color Palette
+that contains a color you do not need, and enter 0, 128, 128 into the dialog Colors > Custom and click
+OK.
+• Make sure that Icon > Activate Transparency is active.
+• Click Apply Changes 
+  to make the area transparent.
+Not transparent Transparent
+• To use the changed icon as the current icon of the object, make sure that 
+  is selected.
+Back to Work with Object Icons
+Viewing and Visualizing Statistics
+View and Visualize Statistics
+By default, all material flow objects collect statistics values from the beginning to the end of the simulation
+runs.
+If you don’t want them to do so, deactivate statistics collection by clearing the check box Resource
+Statistics 
+  on the tab Statistics or Product Statistics 
+  on the tab
+Product Statistics.
+In addition, the material flow objects provide Energy Statistics values.
+The EventController controls when statistics collection starts and when it will be reset, i.e., started anew.
+• Click the tab Settings. Click in the text box Statistics and enter the time at which the EventController
+resets statistics and deletes all statistics values it collected up so that time, compare Statistics
+Collection Period. Plant Simulation starts collecting statistical data for all material flow objects anew
+from this time on. This way you can discard data collected during warm-up phases, which might distort
+the validity of the simulation results.
+Viewing and Visualizing Statistics
+Plant Simulation Help 10-1169
+Unpublished work. © 2026 Siemens
+
+• When you reset your simulation model, by clicking Reset Simulation 
+ , Plant Simulation deletes
+statistics data of all objects and resets the statistics values to 0. During a simulation run you can
+achieve the same effect with the method initStat. This way you can restart the collection of statistical
+information after a warm-up period of a machine, for example.
+Covering Plant Simulation statistics in detail would go beyond the scope of the Plant Simulation Step-by-
+Step Help. It is described under the topic Statistics of the Material Flow Objects in the Plant Simulation
+Reference Help.
+Compare Statistics of the Mobile Objects
+Back to Animate the Simulation Model
+Viewing Statistics in the Dialogs of the Objects
+View Statistics in the Dialogs of the Objects
+In its most basic form you can view the statistics, which the objects collected during a simulation run, in
+their dialogs, either on the tab Statistics or by opening the statistics report of the objects
+Proceed as follows:
+• The material flow objects proper show the most important statistical data they collect on the tab
+Statistics.
+By default, the resource type used most often is pre-selected:
+◦ Production: For the Station, ParallelStation, the AssemblyStation, and for the DismantleStation.
+Viewing Statistics in the Dialogs of the Objects
+10-1170 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Transport: For the PlaceBuffer, Buffer, Sorter, Track, TwoLaneTrack, Conveyor, Transporter, and for
+the Container.
+◦ Storage: For the Store.
+The resource type you select here affects statistics of mobile objects.
+Note
+The percentages for Working, Setting-Up, Waiting, Blocked, Powering up/down, Failed,
+Stopped, Paused, and Unplanned should add up to 100 percent.
+Note
+Plant Simulation does not dynamically update the values during a simulation run when the dialog
+box is open. To accomplish this, select Refresh in the View menu of the object or press F5.
+Item Description
+Working Shows the portion of the statistics collection period during which the
+object was Working.
+Setting-up Shows the portion of the statistics collection period during which the
+object was Setting-Up.
+Waiting Shows the portion of the statistics collection period during which the
+object was Waiting.
+View Statistics in the Dialogs of the Objects
+Plant Simulation Help 10-1171
+Unpublished work. © 2026 Siemens
+
+Item Description
+Blocked Shows the portion of the statistics collection period during which the
+object was Blocked.
+Powering up/down Shows the portion of the statistics collection period during which the
+object was Powering up/down.
+Failed Shows the portion of the statistics collection period during which the
+object was Failed.
+Stopped Shows the portion of the statistics collection period during which the
+object was Stopped by a LockoutZone.
+Paused Shows the portion of the statistics collection period during which the
+object was Paused.
+Unplanned Shows the portion of the statistics collection period during which the
+object was Unplanned, i.e., is not scheduled to work.
+Relative Occupation Shows the capacity-based portion of the time during which the object was
+occupied, not paused and not failed to the time the object was not paused
+and not failed as a real number.
+Relatively Empty Shows the portion of the statistics collection period during which the
+object was Empty in relation to the time during which the object was
+available.
+Contents Shows the number of MUs, which are located on the object, as an integer
+number. The rules described under Entries below apply.
+Minimum Contents Shows the minimum number of MUs that was located on the object, as an
+integer number. The rules described under Entries below apply.
+Maximum Contents Shows the maximum number of MUs that was located on the object, as an
+integer number. The rules described under Entries below apply.
+Entries Shows the number of MUs that entered the object as an integer number.
+When a MU enters the object, it only counts the MU itself, not its contents:
+When a Container holding several MUs enters the object, the number
+of entries increases by 1, not by the number of MUs the Container
+transports!
+Exits Shows the number of MUs that exited the object as an integer number.
+When a MU exits the object, it only counts the MU itself, not its contents:
+When a Container holding several MUs leaves the object, the number of
+exits increases by 1, not by the number of MUs the Container transports!
+Average Dwell Time Shows the average time of all parts which stayed on the station. Plant
+Simulation only counts times during which the object was not paused and
+not unplanned.
+View Statistics in the Dialogs of the Objects
+10-1172 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To view the statistics values, which the object collected, click Show Statistics Report on the Home
+ribbon tab. You can query most of these values with the Methods that are listed next to the name of
+the value in the description of the statistics table.
+To view Energy Statistics values, click 
+ . Plant Simulation show these values in a
+dialog of its own:
+Item Description
+Total Consumption Shows the sum of the total energy consumption.
+Working Shows the portion of the total energy consumption during which
+the object was working.
+Setting-up Shows the portion of the total energy consumption during which
+the object was setting-up.
+Operational Shows the portion of the total energy consumption during which
+the object was operational.
+Failed Shows the portion of the total energy consumption during which
+the object was failed.
+Standby Shows the portion of the total energy consumption during which
+the object was on standby.
+Off Shows the portion of the total energy consumption during which
+the object was off.
+Note
+The energy states of the material flow objects differ from the resource states with the same name.
+The values for the resource states refer to the statistics collection period, while the values for the
+energy states refer to the total energy consumption.
+To view Energy Statistics — Energy Statistics in the Statistics Report, click the object in the Frame,
+and press F6.
+View Statistics in the Dialogs of the Objects
+Plant Simulation Help 10-1173
+Unpublished work. © 2026 Siemens
+
+• The mobile objects (MUs) show the most important statistical data they collect on the tab Product
+Statistics.
+You can:
+• Check How Many Parts Were Introduced into the Plant
+• Check How Many Parts Left the Plant
+• Check Statistics of the Individual Stations
+• Check the Contents List of the Stations
+• Check Product Statistics of Parts
+• Check Statistics of Exporter and Worker
+• Viewing the Statistics Report
+Compare Show Statistics in a Chart
+Compare Show Statistics and Other Values in a Report
+Compare Show Values During the Simulation with the Display
+Back to Accessing Statistics with SimTalk
+Check How Many Parts Were Introduced into the Plant
+You can check how many parts were introduced into the plant.
+Next to the values described under View Statistics in the Dialogs of the Objects, you can make the
+Source record which MUs it actually created at which point in time.
+Check How Many Parts Were Introduced into the Plant
+10-1174 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To write all events for which the Source produced MUs during a simulation run to a table, select
+Creation table on the tab Statistics.
+Note
+The Source records these events in addition to the resource statistics it collects in any case.
+• To open the creation table, click Open.
+Each row on the table shows an event for which the Source produced a MU:
+◦ The column Name shows the name of the produced MU class.
+◦ The column Path shows the path of the MU class, the name of the MU and its number.
+◦ The column Time of Generation shows the time at which the Source produced the individual MU.
+Check How Many Parts Were Introduced into the Plant
+Plant Simulation Help 10-1175
+Unpublished work. © 2026 Siemens
+
+Compare Produce Parts with the Source
+Back to View Statistics in the Dialogs of the Objects
+Check How Many Parts Left the Plant
+You can check how many parts left the plant.
+Next to the values described under View Statistics in the Dialogs of the Objects, you can make the Drain
+record statistics for MUs with the same name, i.e., product statistics, which move through the simulation
+model.
+The numbers for the average exit interval and for the throughput are of special interest for production
+planning and production control specialists.
+Check How Many Parts Left the Plant
+10-1176 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To collect statistics data depending on the type of MU, select Type Dependent Statistics. Plant Simulation
+will show this statistical data after the simulation run on the tab:
+Item Description
+Working Shows the percentage of the sum of the times during which the MUs were located
+on a working object, in relation to the statistics collection periods of all MUs. In
+general, this is the life time of the MUs.
+Setting-up Shows the percentage of the times that the objects were setting-Up for the MUs, in
+relation to the statistics collection periods of all MUs. In general, this is the life time
+of the MUs.
+Waiting Shows the percentage of the times during which the objects were waiting for the
+MUs, in relation to the statistics collection periods of all MUs. In general, this is the
+life time of the MUs.
+Stopped Shows the percentage of the sum of the times during which the MUs were located
+on an stopped object, in relation to the statistics collection periods of all MUs. In
+general, this is the life time of the MUs.
+Failed Shows the percentage of the sum of the times that the MUs were located on a
+failed object, in relation to the statistics collection periods of all MUs. In general,
+this is the life time of the MUs.
+Paused Shows the percentage of the sum of the times that the MUs were located on a
+paused object, in relation to the statistics collection periods of all MUs. In general,
+this is the life time of the MUs.
+Check How Many Parts Left the Plant
+Plant Simulation Help 10-1177
+Unpublished work. © 2026 Siemens
+
+Item Description
+Average Lifespan Shows the average life-span of MUs, which were created and removed from the
+plant during the statistics collection period. Only those MUs are counted whose
+product statistics was active.
+Average Exit
+Interval
+Shows the average time interval between exits of the MUs, which the Drain
+removed from the plant. It results from adding up the times of all intervals, and
+then dividing them by the number of intervals. Statistics only starts counting from
+the time the first MU arrived!
+Total Throughput Shows the number of MUs, which the Drain removed from the plant, starting at the
+time, at which you activated Type dependent statistics.
+Throughput per
+Hour
+Shows the number of MUs, which the Drain removed from the plant in an hour on
+average, covering all observed times during which MUs arrived.
+Throughput per
+Day
+Shows the number of MUs, which the Drain removed from the plant in a day on
+average, covering all observed times during which MUs arrived.
+To view the statistics, which the Drain collected, click Show Statistics Report on the Home ribbon tab.
+You can query most of these values with the Methods that are listed next to the name of the value in the
+description of the statistics table.
+Back to View Statistics in the Dialogs of the Objects
+Check Statistics of the Individual Stations
+You can check statistics of the individual stations.
+All material flow object show the values described under View Statistics in the Dialogs of the Objects on
+the tab Statistics.
+The AssemblyStation and the DismantleStation show additional statistical values.
+The AssemblyStation records the percentage of the time it was:
+• Waiting for parts, i.e., for mounting parts in relation of the statistics collection period.
+• Waiting for resources. This is the portion of the time during which the AssemblyStation was waiting
+before the main MU entered into it, or from the time set-up is finished, until assembly starts in relation
+of the statistics collection period.
+Click the button to open the table Waiting Times, which shows the sum of the waiting times of the MUs
+for each predecessor.
+Check Statistics of the Individual Stations
+10-1178 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to View Statistics in the Dialogs of the Objects
+Check the Contents List of the Stations
+Check the Contents List of the Stations
+You can check and work with the Contents List of the individual material flow objects in a number of
+ways.
+You can:
+• Open the Contents List in the Dialog of the Material Flow Objects
+• Write the Content List into a Table for Further Processing
+• Print the Contents List to the Console as an Array
+We demonstrate how to work with the contents list with the objects from the sample model below.
+Check the Contents List of the Stations
+Plant Simulation Help 10-1179
+Unpublished work. © 2026 Siemens
+
+You can also use these techniques for working with the Forward Blocking List, the Exit Blocking List, and
+the Backward Blocking List of the individual material flow objects.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Check the Contents List of the Stations
+10-1180 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also Contents [material flow objects]
+Back to View Statistics in the Dialogs of the Objects
+Open the Contents List in the Dialog of the Material Flow Objects
+You can open the contents list in the dialog of the material flow objects.
+To open the Contents List of the individual material flow objects in your simulation model during or after
+the simulation run, open the dialog of the respective object and select View > Contents.
+Open the Contents List in the Dialog of the Material Flow Objects
+Plant Simulation Help 10-1181
+Unpublished work. © 2026 Siemens
+
+• The point-oriented objects with a capacity of 1 part show the path in the list, i.e., the name and the
+identifying number of the current part.
+• The point-oriented objects with a capacity of more than 1 part show the path in the list, i.e., the names
+and the identifying numbers of the parts that are located on it. The capacity or the number of parts
+located on the object determines how many parts it shows.
+• The ParallelStation shows the path, i.e., the name and the identifying number of the current parts in the
+list. The position of the part in the table matches the position of the part in its x-y coordinate system.
+The data type of the columns is object.
+Open the Contents List in the Dialog of the Material Flow Objects
+10-1182 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The length-oriented objects (Conveyor, Track, TwoLaneTrack, and Transporter) show the path in the
+contents table, i.e., the name and the identifying number of the parts, that are located on the object. In
+addition it shows the position of the MUs in the object.
+The column Object shows the path to the part. The column From shows the start position of the MU.
+The column To shows the end position in the length unit you selected under File > Model Settings/
+Preferences > Units > Length. The number of rows matches the number of MU parts located on the
+object.
+In our example, the Conveyor is 15 meters long, while each part is 2.5 meters long.
+The Conveyor can thus accommodate 5 parts in their entirety, which the contents list shows.
+Back to Check the Contents List of the Stations
+Open the Contents List in the Dialog of the Material Flow Objects
+Plant Simulation Help 10-1183
+Unpublished work. © 2026 Siemens
+
+Write the Content List into a Table for Further Processing
+As the internal Contents List of the objects, which the menu command View > Contents opens, will
+be deleted when you reset your simulation model, you have to save it, if you need this data later on for
+further processing.
+As the default return value of the Contents List, among others of the method contentsList, is an array,
+we are going write this array into a table with the method copyToTable.
+To accomplish this, we entered the following source code into an endSim method:
+// Copies the contents lists into the table MyContentsList
+// as an array with the method copyToTable
+var x,y : real; var row : integer
+MyContentsList.delete
+var a : any := Buffer.contentsList
+MyContentsList[1,1] := "Buffer"
+a.copyToTable(MyContentsList,2,1)
+row := MyContentsList.yDim + 2 // inserts an empty line
+MyContentsList[1,row] := "Conveyor"
+print a // prints the contents list as an array to the console
+print "Number of items: ",a.yDim
+var b := Conveyor.contentsList // local variable is of data type any
+print b
+print "Number of items: ",b.yDim
+b.copyToTable(MyContentsList, 2,row)
+MyContentsList.openDialog
+Write the Content List into a Table for Further Processing
+10-1184 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+// Writes the contentsList into a table
+// as previous versions of Plant Simulation did
+Buffer.contentsList(ContentsListBuffer)
+Conveyor.contentsList(ContentsListConveyor)
+Then, we manually formatted the table MyContentsList by selecting the correct data types for the columns
+and by entering the column index items as shown below.
+After running the simulation, the endSim method writes the contents lists to the table:
+To delete the contents of the contents list, you can enter the following source code into a reset method.
+MyContentsList.delete
+In addition, it writes the contents lists as an array each for the objects Buffer and Conveyor to the Console.
+Write the Content List into a Table for Further Processing
+Plant Simulation Help 10-1185
+Unpublished work. © 2026 Siemens
+
+Finally, the endSim method writes the contents lists of the Buffer and the Conveyor into the tables
+ContentsListBuffer and ContentsListConveyor, which we inserted into the Frame.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Write the Content List into a Table for Further Processing
+10-1186 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Check the Contents List of the Stations
+Print the Contents List to the Console as an Array
+You can print the contents list to the Console as an array with a Method.
+To print the Contents List of the objects Buffer and Conveyor from our example to the Console as an array
+each, type the following source code into a Method and run the method.
+print Buffer.contentsList
+print Conveyor.contentsList
+The result looks like this:
+Back to Check the Contents List of the Stations
+Print the Contents List to the Console as an Array
+Plant Simulation Help 10-1187
+Unpublished work. © 2026 Siemens
+
+Check Product Statistics of Parts
+All MUs, represented by the Part, Container, and Transporter, show the percentages of the times the part
+spent waiting or working on a resource of type Production, Transport or Storage on the tab Product
+Statistics.
+To view all product-related statistics data, which the MU collected, click Home > Show Statistics Report.
+You can query most of these values with the read-only attributes that are listed next to the name of the
+value in the description of the statistics report.
+Check Product Statistics of Parts
+10-1188 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+As the Container and the Transporter can load and transport other parts, they also provide resource
+statistics, compare View Statistics in the Dialogs of the Objects.
+Back to View Statistics in the Dialogs of the Objects
+Check Product Statistics of Parts
+Plant Simulation Help 10-1189
+Unpublished work. © 2026 Siemens
+
+Check Statistics of Exporter and Worker
+For the Exporter and the Worker the tab Statistics shows the values for the Services and the Exporter.
+For each of these blocks on the Tab Statistics, adding up the individual values yields 100 percent. You can
+query most of these values with the read-only attributes that are listed next to the name of the value in
+the description of the Statistics Report.
+When you select the check box Fail Services on the tab Attributes, the Exporter collects the failure times
+of the Services and of the Exporter. When you deactivate it, the Exporter only collects the failure times of
+the Exporter.
+Check Statistics of Exporter and Worker
+10-1190 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The Exporter only collects failed times that take place during the processing and the set-up time, i.e., times
+that are located outside of the paused time and of the unplanned time.
+Waiting times only accumulate during the times, when the Exporter is available, i.e., when these times are
+located outside of the paused, the unplanned, and of the failed times.
+Item Description
+Services Setting-up Shows the portion of the set-up time for services of the statistics collection
+period of the Exporter, weighted with the capacity.
+Services Processing Shows the portion of the working time of the services of the statistics
+collection period of the Exporter, weighted with the capacity.
+Services Repairing Shows the portion of the statistics collection period, which the services spent
+for repairs, weighted with the capacity.
+Services Waiting Shows the portion of the statistics collection period, which the services spent
+waiting for an importer plus the time the services spent waiting for a MU at the
+importer, weighted with the capacity.
+Services Failed Shows the portion of the statistics collection period during which the services
+were failed.
+Exporter Operational Shows the portion of the statistics collection period during which the Exporter
+was working, weighted with the capacity.
+Exporter Paused Shows the portion of the statistics collection period during which the Exporter
+was paused.
+Exporter Unplanned Shows the portion of the statistics collection period during which the Exporter
+was unplanned.
+Exporter Failed Shows the portion of the statistics collection period during which the Exporter
+was failed.
+Free Capacity Shows the capacity that is available at the moment.
+Mediated Capacity Shows the capacity that is brokered at the moment.
+Free Capacity (sum) Shows the sum of the released capacity that the Exporter placed with any
+importer.
+Mediated Capacity
+(sum)
+Shows the sum of the brokered capacity.
+Minimum Free
+Capacity
+Shows the minimum capacity that is available. When the Exporter did not
+collect any valid value yet, the tab shows -1.
+Maximum free
+capacity
+Shows the maximum capacity that is available. When the Exporter did not
+collect any valid value yet, the tab shows -1.
+Check Statistics of Exporter and Worker
+Plant Simulation Help 10-1191
+Unpublished work. © 2026 Siemens
+
+Item Description
+Minimum Mediated
+Capacity
+Shows the minimum brokered capacity. When the Exporter did not collect any
+valid value yet, the tab shows -1.
+Maximum Mediated
+Capacity
+Shows the maximum brokered capacity. When the Exporter did not collect any
+valid value yet, the tab shows -1.
+Back to View Statistics in the Dialogs of the Objects
+Viewing the Statistics Report
+The most comfortable way of viewing statistics values of one or of several objects is to open the Statistics
+Report.
+Below we demonstrate how to use it.
+• Let us assume that we want to show the statistics of several objects in a single report. To do so, we
+select them (Shift+click, or drag a marquee over them) and press F6. Compare this example:
+• This opens the Statistics Report, which looks like this:
+Viewing the Statistics Report
+10-1192 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The report adds the statistics of the objects, which you selected, to the drop-down list in the top left
+corner of the display window. In our example these are the statistics values of the Stationary resources
+Source, Station, Station1, Conveyor, ParallelStation, and Drain as well as the Importer Statistics. To
+jump to any of the topics, which interest you, select that topic from the drop-down list:
+◦ One of the main topic shows the resource statistics of the material flow objects split up by the
+states these objects were in, i.e., the working, the waiting, the set-up, the blocked, the powering
+up/down, the failed, the stopped, the paused, and the unplanned time. These times add up to 100
+percent. The set-up time and the empty time, which follow, may be part of the working, the waiting,
+or of the blocked time.
+The subtopics further down in the report show details about the working, the waiting, the blocked,
+the failed, the stopped, the paused, the unplanned, the set-up, and the empty time in the order in
+which they appear here.
+The bar on the right hand side shows the respective portions of the times.
+A bar with this color
+Means that the object
+is Looks like this English
+Looks like this
+German
+green Working
+brown Setting-Up
+Viewing the Statistics Report
+Plant Simulation Help 10-1193
+Unpublished work. © 2026 Siemens
+
+A bar with this color
+Means that the object
+is Looks like this English
+Looks like this
+German
+gray Waiting
+yellow Blocked
+purple Powering up/down
+red Failed
+pink Stopped
+blue Paused
+light blue Unplanned
+◦ This is followed by material flow values of general interest.
+◦ The subtopics show details of the working, the waiting, the blocked, the failed, the paused, the
+unplanned, the set-up, and the empty time in the order in which they appear in the first table. For
+details compare the Statistics Report.
+• To add one or several objects in your model, which collect statistics to an open report, select it/them in
+the Frame and press F6. In our example we added the Drain.
+Viewing the Statistics Report
+10-1194 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You will notice that the report added the object Drain to the list of stationary resources as well as to the
+drop-down list of available topics.
+◦ To jump to the statistics of this Drain, select Drain Statistics from the drop-down list. For details
+compare the Statistics Report.
+Viewing the Statistics Report
+Plant Simulation Help 10-1195
+Unpublished work. © 2026 Siemens
+
+◦ You can add any of the objects, which collect statistics, to the report. It then adds these objects to the
+drop-down list.
+• To show a Tooltip with the name of the respective read-only attribute for this statistics value, drag the
+mouse over the column header.
+• To save the report as an HTML file (*.htm or *.html) or as a text file (*.txt) click Save. Enter a name for
+the file and select the folder into which you want to save it.
+• To update the report with the current values, click Refresh.
+• To print the report, click Print.
+Compare View Statistics in the Dialogs of the Objects
+Compare Show Statistics in a Chart
+Compare Show Statistics and Other Values in a Report
+Compare Show Values During the Simulation with the Display
+Compare Accessing Statistics with SimTalk
+Back to View and Visualize Statistics
+Viewing the Statistics Report
+10-1196 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Showing Statistics in a Chart
+Show Statistics in a Chart
+To present the results of your simulation runs to colleagues and management, you will use the Chart.
+You can insert the Chart 
+  into your simulation model from the folder UserInterface in the Class Library
+or from the toolbar User Interface in the Toolbox.
+The Chart graphically displays the data sets that Plant Simulation recorded during a simulation run.
+You can select to show:
+• Data from a table, into which you saved the simulation results, for example.
+• Data from input channels you define, that dynamically record the values of attributes of objects that
+your are interested in.
+To show statistics values of an object in the Chart, which you inserted into a Frame, you can use
+drag-and-drop:
+To Drag a To a
+Show the statistics of a material flow object material flow object,
+Portioner, DePortioner
+Chart
+Show the frequency distribution of the
+number of MUs
+PlaceBuffer, Buffer, Store Chart
+Show the contents of a table DataTable, TimeSequence,
+MaterialsTable
+Chart
+Show the value of the Variable you inserted
+into a Frame
+Variable Chart
+• To apply the settings you selected in the dialog and to show the records, click Apply. When you resize
+the display window, Plant Simulation also resizes the shown graph.
+• To show the data the Chart collected in the display window, click Show Chart.
+• To open the dialog of the Chart, double-click anywhere in the display window.
+• To make a Chart of type Histogram or Plotter collect data during the simulation run, select Collect data
+in the dialog. To deactivate data collection, clear the check box.
+Showing Statistics in a Chart
+Plant Simulation Help 10-1197
+Unpublished work. © 2026 Siemens
+
+• To delete all values that the Chart collected, select Tools > Reset Values.
+The Chart lets you select settings in a number of ways. You can:
+• Select Settings in the Statistics Wizard
+• Select Where the Data Comes From
+• Select How the Chart Shows the Data
+• Add Labels and a Legend
+• Add Annotations
+When you select another Category, the Chart automatically shows the icon of this category in the Frame
+window.
+Chart Histogram Plotter
+Compare Viewing the Statistics Report
+Compare View Statistics in the Dialogs of the Objects
+Compare Show Statistics and Other Values in a Report
+Compare Show Values During the Simulation with the Display
+Compare Accessing Statistics with SimTalk
+Back to View and Visualize Statistics
+Select Settings in the Statistics Wizard
+A Chart, which you insert into a Frame, provides the Statistics Wizard.
+Right-click the Chart and select Statistics Wizard on the context menu.
+Select Settings in the Statistics Wizard
+10-1198 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select the class(es) of object(s) for which you would like to show statistical data in the Chart under the
+group box Class. The Chart only adds material flow objects to the display for which you selected the
+check box Resource Statistics on the Tab Statistics.
+• Select the type(s) of resource(s) for which you would like to show statistics of the selected object(s) in
+the Chart from the drop-down list box Resource type: Production, Transport or Storage. Select the
+Resource Type on the tab Statistics of an object collecting statistical data. Use the check boxes in the
+Statistics Wizard to restrict which objects Plant Simulation shows.
+Select Settings in the Statistics Wizard
+Plant Simulation Help 10-1199
+Unpublished work. © 2026 Siemens
+
+• If you would like Plant Simulation to also show statistical data of objects within Frames that you
+inserted into the Frame in which the Chart is located, select the check box Include Subframes.
+• Select the criterion which Plant Simulation uses when sorting statistical data from the drop-down list
+Sort Criterion: Either the Name of the object, or one of the states it is in: Working, Setting-Up,
+Waiting, Blocked, Powering up/down, Failed, Stopped, or Paused.
+To sort the stations by their Name in alphabetical order from A to Z, select Sort Criterion > Name. To
+sort the stations in the order that meets your needs, drag the stations onto the Chart in the order it is to
+show them. To change the order at a later point in time, edit the table of the Input Channels by cutting
+the respective columns of the objects and pasting them in the desired order.
+• Finally, click OK to open the display window of the Chart with the settings you selected in the dialog.
+Back to Show Statistics in a Chart
+Select Where the Data Comes From
+Before you start your simulation run, you can tell the Chart what to use as the source of the data it displays
+and in which mode it collects data.
+Proceed as follows:
+• Select the Data Source, i.e., whether the Chart takes the data you want to display from a set of input
+channels or from a table.
+◦ To show values of channels you define in a data table, select Input Channels from the drop-down list.
+Select Where the Data Comes From
+10-1200 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To open a table into which you can type the input channels, click Data Table. These channels are, as
+a rule, the paths to attributes, read-only attributes, or methods of objects, whose values you want to
+display. You can also type in complex expressions, such as the sum of two attributes, etc.
+Type in any text you want to add as the legend to the Chart into the row index.
+For the Statistics type > Resource we pre-configured the following entries in the Statistics Wizard:
+Select Where the Data Comes From
+Plant Simulation Help 10-1201
+Unpublished work. © 2026 Siemens
+
+◦ To show the contents of a table as a diagram, select Data Table. This might, for example, be a table
+into which you saved the results of a simulation run.
+Type in the name and the path of the data table containing the data, or click the button 
+  and select
+the table in the dialog Select Object.
+Type in the Range of the table cells you want to show.
+◊ To show all cells in all columns and rows, type in {*,*}..{*,*}.
+◊ To show the first four cells of column one, type in {1,1}..{1,4}.
+◊ To show all cells in column one, type in {1,1}..{1,*}.
+Select Where the Data Comes From
+10-1202 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can also type in negative numbers:
+◊ To show the one but last column of the table, type in {-2,*}..{-2,*}.
+◊ To show the one but last and the last column, type in {-2,*}..{*,*}.
+• Select which mode the Chart uses to update the data it shows.
+◦ Sample mode updates the Chart periodically and takes the next sample after the time span which
+you type into the text box Interval.
+◦ Watch mode updates the Chart, whenever the value of a watchable read-only attribute, for example
+NumMU, NumMUParts, StatMaxNumMU, StatNumIn, StatNumOut, etc. or of a watchable attribute
+changes, for example Pause, Speed, Unplanned, etc.
+The column Watchable in the window Show Attributes and Methods of the individual objects
+shows all attributes, read-only attribute, and methods that Plant Simulation can watch.
+◦ Plot mode updates the Chart, whenever a simulation event takes place.
+Back to Show Statistics in a Chart
+Selecting How the Chart Shows the Data
+Select How the Chart Shows the Data
+After you have selected where the Chart takes the data from that it displays, you will select the settings for
+displaying this data.
+You can:
+• Show a number of values or several sets of a number of values, see Show Values in a Chart.
+• Show a number of values or several sets of a number of values in a three-dimensional Chart, see Show
+Values in a 3D Chart.
+• Show the frequency distribution for one or several input channels, see Show Values in a Histogram.
+Selecting How the Chart Shows the Data
+Plant Simulation Help 10-1203
+Unpublished work. © 2026 Siemens
+
+• Show the frequency distribution for one or several input channels in a three-dimensional Chart, see
+Show Values in a 3D Histogram.
+• Show the progression of one or more values over time, see Show Values as the Chart Plots Them.
+Note
+When you select another Category, the Chart automatically shows the icon of this category in the
+Frame into which you inserted it.
+• Show a number of x-y pairs of values or several sets of x-y pairs of values, see Show Values as an XY
+Graph.
+Back to Show Statistics in a Chart
+Show Values in a Chart
+To show a number of values or several sets of a number of values as a chart, click the tab Display and
+select Chart from the drop-down list Category.
+To make the Chart collect data during the simulation run, select Collect Data in the dialog. To deactivate
+data collection, clear the check box.
+Back to Select How the Chart Shows the Data
+Show Values in a Chart
+10-1204 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Values in a 3D Chart
+You can show a number of values or several sets of a number of values as a 3D chart. To do so, click the
+tab Display and select 3D Chart from the drop-down list Category.
+To make the Chart collect data during the simulation run, select Collect Data in the dialog. To deactivate
+data collection, clear the check box.
+You can, for example hang the 3D Chart onto the wall of your factory, thus vastly improving visibility and
+showing the operators the utilization of the machines at a glance.
+Show Values in a 3D Chart
+Plant Simulation Help 10-1205
+Unpublished work. © 2026 Siemens
+
+Back to Select How the Chart Shows the Data
+Show Values in a Histogram
+You can show the frequency distribution for one or several input channels as a histogram. To do so,
+click the tab Display and select Histogram from the drop-down list Category. A histogram graphically
+summarizes the distribution of a data set.
+To make the Chart collect data during the simulation run, select Collect Data in the dialog. To deactivate
+data collection, clear the check box.
+Show Values in a Histogram
+10-1206 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Select How the Chart Shows the Data
+Show Values in a 3D Histogram
+To show the frequency distribution for one or several input channels as a 3D histogram, click the tab
+Display and select 3D Histogram from the drop-down list Category. A histogram graphically summarizes
+the distribution of a data set.
+To make the Chart collect data during the simulation run, select Collect Data in the dialog. To deactivate
+data collection, clear the check box.
+See also 3D Histogram
+Back to Select How the Chart Shows the Data
+Show Values in a 3D Histogram
+Plant Simulation Help 10-1207
+Unpublished work. © 2026 Siemens
+
+Show Values as the Chart Plots Them
+You can show the progression of one or more values over time. To do so, click the tab Display and select
+Plotter from the drop-down list Category.
+To make the Chart collect data during the simulation run, select Collect Data in the dialog. To deactivate
+data collection, clear the check box.
+Back to Select How the Chart Shows the Data
+Show Values as the Chart Plots Them
+10-1208 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Values as an XY Graph
+You can show a number of x-y pairs of values or several sets of x-y pairs of values. To do so, click the tab
+Display and select XY Graph from the drop-down list Category.
+Note
+You can only show values as an XY graph, when you select Data > Data Source > Data Table.
+Our table containing the data that we want to show, looks like this:
+Show Values as an XY Graph
+Plant Simulation Help 10-1209
+Unpublished work. © 2026 Siemens
+
+• When we select Data in Column, the XY graph looks as shown below. The XY graph shows the content
+of the row index as the Legend.
+We selected the Range from 0 to 5.5, which is shown on the y axis, on the tab Axes.
+Show Values as an XY Graph
+10-1210 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+On the tab Labels we selected to show the Legend below the chart.
+We set the Color, the Line Weight, and the Marker Type of the Line With Markers on the tab Color.
+• If we select Data in Row, we have to transpose the respective data in the table.
+Back to Select How the Chart Shows the Data
+Show Values as an XY Graph
+Plant Simulation Help 10-1211
+Unpublished work. © 2026 Siemens
+
+Select the Chart Type
+Select the type of Chart for displaying the recorded data. A record consists of the entries of a row or a
+column, depending on the setting you selected under Display > Data.
+Depending on the Category you selected (Chart, Histogram, or Plotter), the Chart provides some or all of
+the following chart types:
+Category Description
+Columns Shows each record as a column. When displaying several records, the Chart
+places the columns next to each other. Use this to compare values across
+categories.
+Stacked Columns Shows each record as a column. When displaying several records, the Chart
+places the columns of the individual records on top of each other. It stacks
+positive values upward, negative values downward.
+100% Stacked
+Columns
+Shows each record as a column, stacked one on top of the other, showing the
+respective percentage of the entire set of 100 percent.
+Bars Shows each record as bars positioned horizontally on top of each other. When
+displaying several records, the Chart places the bars of the individual records
+next to each other. Use this to compare values across categories.
+Stacked Bars Shows each record as a set of bars stacked horizontally next to each other.
+Positive values are stacked to the right, negative values are stacked to the left.
+Select the Chart Type
+10-1212 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Category Description
+100% Stacked Bars Shows each record as a set of bars, one stacked horizontally next to each other,
+showing its respective percentage of the entire set of 100 percent.
+Area Shows each record as areas. When displaying several records, the Chart stacks
+the areas from the individual records one behind the other. Use this to show
+the trend of the contribution of each value over time or categories.
+Stacked Area Shows each record as areas. When displaying several records, the Chart stacks
+the areas from the individual records one on top of the other.
+100% Stacked Area Shows each record as a set of areas, one stacked on top of the other, showing
+the respective percentage of the entire set of 100 percent. Displays the trend of
+the percentage each value contributes over time or categories.
+Line Shows each record as a line.
+Line with Markers Shows each record as a line with markers.
+Spline Shows each record as a curve.
+Spline with Markers Shows each record as a curve with markers.
+Markers Shows each record as a set of different markers.
+Points and Best Fit
+Conveyor
+Shows each record as a set of data points, and fits the best straight line to
+them. The line is calculated from least-squares-approximations of the data set.
+Points and Best Fit
+Curve
+Shows each record as a set of data points, and fits the best curved line to them.
+The curve is calculated from least-squares-approximations of the data set.
+Pie Shows each record as a slice of a pie, depicting its percentage of the whole.
+Enter a negative prefix, so that the Chart offsets this slice from the rest of
+the pie. Use the scrollbar to scroll from record to record. Use this to show the
+contribution of each value to a total.
+XY Points Shows x-y pairs as data points. The first record contains the x-coordinates. The
+Chart interprets all additional records as the associated y-coordinates. Use this
+to compare pairs of values.
+Line Shows x-y pairs as data points and connects them with a line. The first record
+contains the x-coordinates. The Chart interprets all additional records as the
+associated y-coordinates.
+Sticks Shows a vertical bar for each x-y pair, starting from the zero line. The first
+record contains the x-coordinates. The Chart interprets all additional records as
+the associated y-coordinates.
+Area Shows the connected points belonging to the x-y pairs and fills the areas thus
+created. The first record contains the x-coordinates. The Chart interprets all
+additional records as the associated y-coordinates.
+3D Columns Shows each record as columns stacked in three-dimensional space. To turn the
+chart left or right you can enter an angle of Rotation or you can also drag the
+Select the Chart Type
+Plant Simulation Help 10-1213
+Unpublished work. © 2026 Siemens
+
+Category Description
+horizontal slider in the display window. To turn the chart up or down, you can
+enter the Height or you can drag the vertical slider.
+3D Wire Frame Shows each record as wire-frames stacked in three-dimensional space. To turn
+the chart left or right you can enter an angle of Rotation or you can also drag
+the horizontal slider in the display window. To turn the chart up or down, you
+can enter and the Height or you can drag the vertical slider.
+3D Surface Shows each record as solid areas stacked in three-dimensional space. To turn
+the chart left or right you can enter an angle of Rotation or you can also drag
+the horizontal slider in the display window. To turn the chart up or down, you
+can enter the Height or you can drag the vertical slider.
+Back to Select How the Chart Shows the Data
+Select Additional Display Options
+You can select additional display options for the Chart.
+• Select how the Chart show the records i.e., the entries of a row or of a column.
+◦ Graph show the records as a graph only in the display window.
+◦ Table show the records as a table, i.e., as text only in the display window. Select a font and a relative
+font size on the tab Font.
+◦ Graph and Table show the records as a graph and as a table in the display window.
+• Select how the Chart show the data. This way you can present different views of the same record.
+Select Additional Display Options
+10-1214 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• If you want to, you can also select a 3D Effect for some of the Chart Types:
+◦ None adds no 3D effect to the Chart Type you selected.
+◦ Shadow adds a black shadow to the chart type you selected.
+◦ 3D adds three-dimensional depth to the chart type you selected.
+◦ Gradient Bars adds an effect between a gradient and a 3D look to the chart type you selected.
+◦ Contoured for the chart types 3D Columns and 3D Surface.
+You can also type in the Rotation angle and the Height of the columns/surface. To turn the chart
+left or right, drag the horizontal slider in the display window. To turn it up or down, drag the vertical
+slider.
+Select Additional Display Options
+Plant Simulation Help 10-1215
+Unpublished work. © 2026 Siemens
+
+Note
+Some chart types do not provide 3D effects.
+• To change the background color of the Chart proper in the display window, click the tab Color. Double-
+click the cell labeled Background and select another color. Click Apply to change the color.
+• To change the color around the Chart proper in display window, click the tab Color. Double-click the
+color field next to Desk and select another color. Click Apply to change the color.
+• To display the Chart in the Frame, instead of the icon of the object, select Display in Frame on the tab
+Display.
+We advise to increase the size of the icon of the Chart in the Frame: Hold down Shift + Ctrl, grab one of
+the four corners of the icon with the mouse and drag the icon to a convenient size.
+• To interrupt the line the Chart draws for values that are not defined, select Gap When Null on the tab
+Display. To continue drawing the line, clear the check box.
+• To print the Chart, select Tools > Print.
+• To copy the contents of the display window to the Clipboard is a bitmap, select Tools > Copy to
+Clipboard. You can then paste it into another application with Ctrl+V or Home > Paste.
+• To show Grid Lines in the x-axis in the display window, select X-axis on the tab Axes. Type in the
+maximum number of grid lines on the x-axis. This feature is especially handy, when the Chart displays
+Select Additional Display Options
+10-1216 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+numerous points within a limited space, and you want to regulate how many grid lines the display
+window shows.
+To hide them, clear the check box.
+Compare these screenshots:
+10 grid lines on the x-axis 20 grid lines on the x-axis
+• To show grid lines on the y-axis in the display window, select Y-axis 
+ . To hide the
+grid lines, clear the check box.
+• To set the range the Chart is to display scaled on the y-axis, type the first value of into the left text box.
+The default setting 0 … 0 means that Plant Simulation scales automatically.
+Type the last value of the range the Chart is to display scaled on the y-axis into the right text box.
+Note
+When you type in neither Title for Subtitle, the Chart might, under certain circumstances, cut off the
+upper part of the y Range. To prevent this, you can type a blank space into the text box Subtitle.
+Select Additional Display Options
+Plant Simulation Help 10-1217
+Unpublished work. © 2026 Siemens
+
+Compare these screenshots:
+Scaling on the y-axis, 10 units Scaling on the y-axis, 20 units
+Back to Select How the Chart Shows the Data
+Add Labels and a Legend
+You can add a title and a subtitle to your chart, and format them, add text to the x-axis and to the y-axis,
+and add a legend that tells what the values mean.
+• Enter any text that Plant Simulation shows as the title of the Chart in the display window into the text
+box Title. In our example we entered Utilization of the Stations.
+Select a font, if you want to Bold face or Italicize the text and a relative font size on the tab Font.
+Add Labels and a Legend
+10-1218 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select a color for all text in the display window on the tab Color. Double-click the color field next to Font
+and select another color. Click Apply to change the color.
+• Enter any text that Plant Simulation shows as the subtitle of the Chart in the display window into the
+text box Subtitle. In our example we entered Engine Plant Anytown.
+• Enter any text that Plant Simulation shows in the display window on the x-axis. In our example we
+entered Station.
+Select a font, if you want to Bold face or Italicize the text and a relative font size on the tab Font.
+Note
+This font applies to all labels, except for the Title, the Subtitle and data displayed in Table format in
+the display window
+• Enter any text that Plant Simulation shows in the display window on the y-axis. In our example we
+entered Percent of 100.
+• Select if and on which side of the display window Plant Simulation shows the legend for the values the
+Chart displays.
+As you remember, you enter the text you want to show as the legend into the row index of the table
+when you select Data Source > Input Channels > Table File.
+Add Labels and a Legend
+Plant Simulation Help 10-1219
+Unpublished work. © 2026 Siemens
+
+Back to Show Statistics in a Chart
+Add Annotations
+You can also additional lines and/or text to the display window to the Chart
+Click Annotations and fill in the table that opens.
+• Enter any text that Plant Simulation shows as the title of the Chart in the display window into the text
+box Title. In our example we entered Utilization of the Stations.
+Select a font, if you want to Bold face or Italicize the text and a relative font size on the tab Font.
+Select a color for all text in the display window on the tab Color. Double-click the color field next to Font
+and select another color. Click Apply to change the color.
+Add Annotations
+10-1220 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter any text that Plant Simulation shows as the subtitle of the Chart in the display window into the
+text box Subtitle. In our example we entered Engine Plant Anytown.
+• Enter any text that Plant Simulation shows in the display window on the x-axis. In our example we
+entered Station.
+Select a font, if you want to Bold face or Italicize the text and a relative font size on the tab Font.
+Note
+This font applies to all labels, except for the Title, the Subtitle and data displayed in Table format in
+the display window
+• Enter any text that Plant Simulation shows in the display window on the y-axis. In our example we
+entered Percent of 100.
+• Select if and on which side of the display window Plant Simulation shows the legend for the values the
+Chart displays.
+As you remember, you enter the text you want to show as the legend into the row index of the table
+when you select Data Source > Input Channels > Table File.
+• Select the Type of the annotation:
+Select 0: Vertical Line for displaying a vertical line.
+Select 1: Horizonal Line for a displaying a horizontal line.
+Add Annotations
+Plant Simulation Help 10-1221
+Unpublished work. © 2026 Siemens
+
+Select 2: X-axis Label for labeling the x-axis.
+Select 3: Y-axis Label for labeling the y-axis.
+Select 4: Text for any text.
+• Value: Enter the value where the Chart displays the line in the display window. For a horizontal line or
+for an annotation of the Y axis or for this is the Y value. For a vertical line or for an annotation of the X
+axis this is X value.
+Y values are specified in the Y scale of the Chart.
+X values are specified in the X scale of the Chart. For a bar chart the value 3.5 means that the X value is
+placed between the third and the fourth bar.
+• From: Enter the starting point of the line here. If you do not enter a value, the Chart extends an existing
+line. This way you can not only create horizontal and vertical lines but also diagonal lines.
+For a horizontal line or for text this is an X value. For a vertical line this is a Y value.
+• To: Enter the end point of the line here. If you do not enter a value in the cells From and To, the Chart
+draws the line from the left to right, or from the top to the bottom of the display window.
+For a horizontal line this is a X value. For a vertical line this is a Y value.
+• Color: Enter the number of the color of the line here. This is the number of one of the lines you defined
+on the tab Color.
+• Style: Enter the style of the line here, such as dotted, dashed, etc.
+For lines of Type 0 or 1, you can enter the line style. For text of Type 4, you can enter the marker style.
+Value Line style Marker style
+0 a thin solid line text only without a marker
+1 a dashed line a plus sign
+2 a dotted line a cross
+3 a dash-dot line a circle
+4 a dash-dot-dot line a filled circle
+5 a medium thin solid line a square
+6 a thick solid line a filled square
+7 a grid tick a diamond
+8 a grid line a filled diamond
+9 none upward triangle
+10 a medium thick solid line solid upward triangle
+11 an extra thick solid line downward triangle
+12 none solid downward triangle
+Add Annotations
+10-1222 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value Line style Marker style
+13 none small plus
+14 none small cross
+15 none small circle
+16 none small solid circle
+17 none small square
+18 none small solid square
+19 none small diamond
+20 none small solid diamond
+21 none small upward triangle
+22 none small solid upward triangle
+23 none small downward triangle
+24 none small solid downward triangle
+25 none large plus
+26 none large cross
+27 none large circle
+28 none large solid circle
+29 none large square
+30 none large solid square
+31 none large diamond
+32 none large solid diamond
+33 none large upward triangle
+34 none large solid upward triangle
+35 none large downward triangle
+36 none large solid downward triangle
+92 none arrow north
+93 none arrow north east
+94 none arrow east
+95 none arrow south east
+96 none arrow south
+Add Annotations
+Plant Simulation Help 10-1223
+Unpublished work. © 2026 Siemens
+
+Value Line style Marker style
+97 none arrow south west
+98 none arrow west
+99 none arrow north west
+• Text: Enter any text that describes the line.
+Prefix Position
+|l left inside edge of the graph
+|L left outside edge of the graph
+|r right inside edge of the graph
+|R right outside edge of the graph
+|c centered inside of the graph
+Back to Show Statistics in a Chart
+Show Statistics and Other Values in a Report
+If you want to present all of the results of a simulation run, which Plant Simulation outputs to tables and
+diagrams, on an HTML page on screen, you will use the object HtmlReport. You can also print, and save,
+this HTML page for sharing it with your colleagues or for displaying it on a website.
+You can insert the HtmlReport 
+  into your simulation model from the folder UserInterface in the Class
+Library or from the toolbar User Interface in the Toolbox.
+Show Statistics and Other Values in a Report
+10-1224 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Creating a report is really quick and comfortable:
+• Type in the name of the object in brackets on the tab Content and highlight the name. Click 
+  on the
+toolbar 
+  and enter the required settings into the dialog
+Object Parameters. The dialog offers different settings for the different objects.
+Show Statistics and Other Values in a Report
+Plant Simulation Help 10-1225
+Unpublished work. © 2026 Siemens
+
+To open the dialog Object Parameters for an object, which you added to the tab Content with
+drag-and-drop, click the mouse between the name of the object and the closing bracket, and click 
+ .
+Then, select the settings you need in the dialog Select Object.
+• Enter the content, which the HtmlReport shows, as text on the Tab Content of the object. As you will
+see, the syntax is easy to understand allowing you to quickly type in the required instructions.
+To open the dialog Object Parameters for an object, which you added to the tab Content with
+drag-and-drop, click the mouse between the name of the object and the closing bracket, and click 
+ .
+Then, select the settings you need in the dialog Select Object.
+In our example below, we’ll introduce the most important items which you can add to your report.
+Show Statistics and Other Values in a Report
+10-1226 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To address an object, we entered its name within brackets, [MyStation] in our example.
+• To show the icon named logo of the object HtmlReport and to zoom the icon when zooming the report
+window, we entered an exclamation mark followed by the name of the icon enclosed in brackets
+followed by an asterisk. The asterisk denotes the icon will be zoomed in/out as well.
+[!self, logo, *]
+To show the picture of your company, for example its logo, add it as an icon to the object HtmlReport
+and name it logo. In our example below, we used the Siemens logo.
+• To show a heading of level 1, we entered a number sign # followed by the title of the heading:
+# General Information
+• To show body text, we entered:
+Below we provide:
+• To show a numbered list, we entered 1. followed by the text we want to display.
+1. An **overview** of the model
+1. Various **statistics tables**
+1. A **resource chart**
+To bold text, we enclosed it with two asterisks **.
+• To show a heading of level 2, we entered two number signs ## followed by the title of the heading:
+## Model Overview
+• To show body text, followed by a bulleted list, we entered the body text, followed by a * denoting the
+bullet, and the text we want to display.
+Below we provide this information about the simulation model:
+* Model file: [=modelFile]
+* Simulation root: [EventController.Location]
+* Simulation time: [EventController.SimTime]
+* End time: [EventController.EndTime]
+Show Statistics and Other Values in a Report
+Plant Simulation Help 10-1227
+Unpublished work. © 2026 Siemens
+
+• To show a formula, we entered the equal sign = followed by the name of the function enclosed in
+brackets:
+* Model file: [=modelFile]
+• To show the value of the attribute SimTime of the EventController, we entered the name of the object
+followed by the name of the attribute enclosed in brackets:
+* Simulation time: [EventController.SimTime]
+• To show a heading of level 2, followed by a screenshot of the Frame containing our model, we entered:
+## Simulation Model
+The simulation model looks like this:
+><**[current, "Test Simulation"]** 
+The expression Test Simulation is the caption that is shown below the screenshot.
+The greater than sign followed by a less-than sign >< centers the screenshot.
+• To show the values of objects of type DataTable from our model:
+◦ We clicked 
+  on the toolbar 
+◦ We selected the DataTable/List whose values you would like to show. We then clicked OK.
+◦ We entered the caption which the HtmlReport shows below the DataTable.
+◦ We entered the identifiers of the columns of the DataTable which the HtmlReport shows on the HTML
+page.
+◦ Instead, we can also directly type in the respective instructions, compare the example below:
+# Statistics Tables
+These **statistics values** are of general interest. Feel free to add 
+more.
+## Drain Statistics
+Drain statistics shows the contents of the *summary report* table.
+[.MaterialFlow.Drain*] 
+## Deliveries
+Show Statistics and Other Values in a Report
+10-1228 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delivieries shows the contents of the table object *DeliveryList.*
+[DeliveryList] 
+• To show the contents of objects of type Chart from our model as screenshots:
+◦ We clicked 
+  on the toolbar 
+◦ We selected the Chart which you would like to show. We then clicked OK.
+◦ We entered the Caption which the HtmlReport shows below the Chart.
+◦ We entered the Image Width with which the HtmlReport shows the picture of the object. You can
+also enter an asterisk (*) for either the Width or the Height to ensure that the image will not be
+distorted.
+◦ We entered the Image Height with which the HtmlReport shows the picture of the object. You can
+also enter an asterisk (*) for either the Width or the Height to ensure that the image will not be
+distorted. .
+We clicked OK to apply our settings.
+Instead, we can also directly type in the respective instructions, compare the example below:
+# Resource Chart
+The *resource chart* for the *Stations* look like this. Feel free to 
+add more.
+## Stations
+The utilization of the processing  *Stations* is as follows:
+><[StationChart, 150, 100] 
+The numbers 150 and 100 designate the Width and the Height of the screenshot.
+The greater than sign followed by a less-than sign >< centers the screenshot.
+• To show a solid horizontal line between the contents of the Report proper and the footer, we entered:
+---
+• To show a footer containing indented text, designated by the greater sign >, the current date and a
+signature, we entered the following HTML tag:
+> Cedar Rapids, [=day(sysdate)].[=month(sysdate)].[=year(sysdate)+1900] 
+Best regards, 
+Show Statistics and Other Values in a Report
+Plant Simulation Help 10-1229
+Unpublished work. © 2026 Siemens
+
+<span style="font-family: Segoe Script; font-size:16pt">H. Thompson</
+span> 
+Our finished report with the settings above looks like this:
+Show Statistics and Other Values in a Report
+10-1230 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Statistics and Other Values in a Report
+Plant Simulation Help 10-1231
+Unpublished work. © 2026 Siemens
+
+Show Statistics and Other Values in a Report
+10-1232 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare Viewing the Statistics Report
+Compare Show Reports in a Hierarchically Structured Model
+Compare View Statistics in the Dialogs of the Objects
+Compare Show Statistics in a Chart
+Compare Show Values During the Simulation with the Display
+Go to Accessing Statistics with SimTalk
+Back to View and Visualize Statistics
+Showing Reports in a Hierarchically Structured Model
+Show Reports in a Hierarchically Structured Model
+In this example we show how to clearly arrange and model a complex production facility and generate
+reports with objects of type HtmlReport. We also demonstrate inheritance of our user objects which we
+created in the folder UserObjects.
+We insert an HtmlReport into each of our sub-Frames and rename it to ReportObject. The expression
+ReportObject is a special name that the programmers built in so that Plant Simulation then uses this object
+when we reference the Frame in the HtmlReport in brackets.
+To do so, we entered these instructions into the overall HtmlReport of the car assembly model, i.e.,
+into .Models.MyCarAssembly.HtmlReport:
+# Production Areas
+The car assembly encompasses three production areas: 
+* CarBody
+* PaintShop
+* FinalAssembly
+[CarBody, #]        // Show the HtmlReport of the Frame ‘CarBody’ instead 
+of the Frame itself
+[PaintShop, #]      // Show the HtmlReport of the Frame ‘PaintShop’ instead 
+of the Frame itself
+[FinalAssembly, #]  // Show the HtmlReport of the Frame ‘FinalAssembly’ 
+instead of the Frame itself
+The overall report of our car assembly gathers all objects named ReportObject during the simulation and
+then shows them.
+To add the HtmlReport to your simulation model, click Manage Class Library > Basic Objects >
+UserInterface > HtmlReport on the Home ribbon tab.
+Showing Reports in a Hierarchically Structured Model
+Plant Simulation Help 10-1233
+Unpublished work. © 2026 Siemens
+
+We will demonstrate how to:
+• Create the Classes of the Cells and the Lines
+• Model the Installation and Configure the Components
+• Run the Simulation and Show the Report
+• Study the HtmlReport
+If you do not want to re-create the model yourself, you can also open and study the sample model
+UserInterface > HtmlReport > Hierarchical Reports. Click Start Page on the Window ribbon tab. Then,
+click Getting Started > Example Models > Small Examples.
+Compare Show Statistics and Other Values in a Report
+Back to View and Visualize Statistics
+Compare HtmlReport > Tab Content
+Creating the Classes of the Cells and the Lines
+Create the Classes of the Cells and the Lines
+As we do not want to change the default settings of the built-in objects, we duplicate the built-in Frames
+and objects in the Class Library and then work with these duplicated classes in the folder UserObjects.
+Proceed as follows:
+Creating the Classes of the Cells and the Lines
+10-1234 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• First, we create the classes of our cells and lines. To do so, click the folder UserObjects with the right
+mouse button and select New > Glass Box Frame. This creates a Frame that shows its content toward
+the outside.
+Repeat this twice and rename our Frames that represent our cells and lines. We renamed our Frames to
+CarBodyCell, PaintShop, and AssemblyLine.
+• Then, we duplicate the object Comment in the folder UserInterface. Plant Simulation automatically
+places the duplicated object into the folder UserObjects. We renamed our Comment to ToDo.
+We need this independent class of the Comment so that Plant Simulation gathers the instances with
+the name ToDo during the simulation run and displays them. The report in our plant as a whole shows
+a HTML page/a topic with the tasks that are still to be done. When you click an individual task, Plant
+Simulation opens the respective object of type Comment. Then, click in the dialog on Navigate > Open
+Location to open the location/Frame, in which this Comment is inserted.
+• In addition we add the objects to the toolbar UserObjects in the Toolbox. Class Library and Toolbox
+then look like this:
+Create the Classes of the Cells and the Lines
+Plant Simulation Help 10-1235
+Unpublished work. © 2026 Siemens
+
+Then we will:
+• Model the Car Body Cell
+• Model the Paint Line
+• Model the Assembly Line
+To display the data of the instances of the UserObjects consistently and in a structured way, we inserted
+an object of type HtmlReport each into the classes of our Frames and then renamed it to ReportObject.
+Then Plant Simulation shows this object instead of the Frame on the HTML page in our overall report of
+the car assembly.
+To do so, we entered these instructions into the overall HtmlReport of the car assembly model, i.e.,
+in .Models.MyCarAssembly.HtmlReport:
+# Production Areas
+The car assembly encompasses three production areas: 
+* CarBody
+* PaintShop
+* FinalAssembly
+[CarBody, #]        // Show the HtmlReport of the Frame ‘CarBody’ instead 
+of the Frame itself
+[PaintShop, #]      // Show the HtmlReport of the Frame ‘PaintShop’ instead 
+of the Frame itself
+[FinalAssembly, #]  // Show the HtmlReport of the Frame ‘FinalAssembly’ 
+instead of the Frame itself
+Back to Show Reports in a Hierarchically Structured Model
+Create the Classes of the Cells and the Lines
+10-1236 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Modeling the Car Body Cell
+Model the Car Body Cell
+Our CarBodyCell consists of the material flow objects Interface/Entrance, two AssemblyStations between
+which a Buffer each is located, and an Interface /Exit. The three Sources named CarBody, Trunk, and
+Roof provide the AssemblyStations with parts.
+We also inserted an HtmlReport which we renamed to ReportObject and a Chart as a Histogram which
+we renamed to BufferOccupancy.
+As we want to show the object names in our window, we select the respective object, press the spacebar,
+and change to the tab Captions in the dialog. There we activate the check box Name/Label Activated. We
+repeated this for all objects.
+Modeling the Car Body Cell
+Plant Simulation Help 10-1237
+Unpublished work. © 2026 Siemens
+
+In our CarBodyCell we will:
+• Configure the Assembly Stations That Assemble the Parts
+• Configure the Sources That Provide the Assembly Stations With Parts
+• Configure the Buffers between the Assembly Stations
+• Configure the Chart as Histogram
+• Configure the ReportObject of the Car Body Cell
+Back to Show Reports in a Hierarchically Structured Model
+Configure the Assembly Stations That Assemble the Parts
+You can configure the AssemblyStations which assemble the delivered parts.
+• Select a normally distributed processing time. We typed in these parameters: 10:00, 2:00, 0,
+20:00.
+Configure the Assembly Stations That Assemble the Parts
+10-1238 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Create a failure with these default values:
+• Activate the energy settings on the tab Energy.
+We did not change any other settings.
+To configure AssemblyStation1:
+• Select a normally distributed processing time. We typed in these parameters: 15:00, 3:00, 0,
+20:00.
+• Create a failure with these values:
+Configure the Assembly Stations That Assemble the Parts
+Plant Simulation Help 10-1239
+Unpublished work. © 2026 Siemens
+
+• Activate the energy settings on the tab Energy.
+We did not change any other settings.
+To configure AssemblyStation2:
+• Select a normally distributed processing time. We typed in these parameters: 4:00, 2:00, 0,
+6:00.
+• Create a failure with these values:
+Configure the Assembly Stations That Assemble the Parts
+10-1240 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Activate the energy settings on the tab Energy.
+We did not change any other settings.
+Back to Model the Car Body Cell
+Configure the Sources That Provide the Assembly Stations With Parts
+You can configure the three Sources that provide the three AssemblyStations with parts.
+Proceed as follows:
+• For the Source named CarBody we entered a constant Interval of 10:00 minutes between the
+creation events.
+Configure the Sources That Provide the Assembly Stations With Parts
+Plant Simulation Help 10-1241
+Unpublished work. © 2026 Siemens
+
+• We use the Sources named Trunk and Roof with the default settings.
+Back to Model the Car Body Cell
+Configure the Buffers between the Assembly Stations
+Next, configure the two Buffers, named Buffer and Buffer1, which we inserted between the
+AssemblyStations.
+Proceed as follows:
+• Enter their Capacity. We typed in 4 each.
+Configure the Buffers between the Assembly Stations
+10-1242 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• We did not change any other settings.
+Back to Model the Car Body Cell
+Configure the Chart as Histogram
+Double-click the icon of the Chart, configure our Chart named BufferOccupancy as a histogram.
+Proceed as follows:
+• Change to the tab Display and select the Category > Histogram.
+• Drag the two Buffers, named Buffer and Buffer1, one after the other to the icon of the Chart and drop
+them there. This sets the Data Source > Input Channels and enters the Buffers into the table of the
+input channels.
+Configure the Chart as Histogram
+Plant Simulation Help 10-1243
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+Back to Model the Car Body Cell
+Configure the ReportObject of the Car Body Cell
+When configuring the ReportObject of the CarBodyCell we have to decide which data we want to show.
+We entered these instructions into the Method. The comments after the instructions explain what the code
+executes.
+# [current.name]               // name of the Frame as heading on the first 
+level
+The above car body cell looks like this: // descriptive text
+## Layout                      // second level heading
+><[current, *]                 // centered screenshot, adjusted to maximum 
+window width
+## Buffer Occupancy            // second level heading
+The occupancy of the individual Buffers looks like this: // descriptive text
+><[BufferOccupancy, 150, 100]  // centered screenshot of the buffer 
+occupancy, 
+                               // size of the screenshots is 150 mm times 
+100 mm
+[Buffer]                       // show statistics values of the object 
+‘Buffer’ as a table
+[Buffer1]                      // show statistics values of the object 
+‘Buffer1’ as a table
+## Statistics                  // second level heading
+Statistics of the AssemblyStations and the Buffers looks like this: // 
+descriptive text
+[AssemblyStation, "Assembly statistics"]    // show statistics values of 
+the object ‘AssemblyStation’ as
+Configure the ReportObject of the Car Body Cell
+10-1244 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+                                            // a table, "Assembly 
+statistics" is the caption of the table
+[AssemblyStation1]             // show statistics values of the object 
+‘AssemblyStation1’ as a table
+[AssemblyStation2]             // show statistics values of the object 
+‘AssemblyStation2’ as a table
+[Buffer, "Buffer statistics ", %MatFlowProperties]    // show statistics 
+values of the object
+                               // ‘Buffer’ as a table
+                               // "Buffer statistics" is the caption of the 
+table
+                               // % MatFlowProperties shows the material 
+flow properties
+[Buffer1]                      // show statistics values of the object 
+‘Buffer1’ as a table
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+HtmlReports named ReportObject from all sub-Frames and shows them in the overall report of the car
+assembly model.
+Back to Model the Car Body Cell
+Modeling the Paint Line
+Model the Paint Line
+Our PaintLine consists of an Interface/Entrance, three Conveyors named Preparing, Painting, and
+Drying, and of an Interface/Exit.
+We also inserted an HtmlReport and renamed it to ReportObject.
+To configure the Conveyor named Preparing:
+Modeling the Paint Line
+Plant Simulation Help 10-1245
+Unpublished work. © 2026 Siemens
+
+• Insert it with a Length of 6 meters.
+• Create a failure with these default values:
+We did not change any other settings.
+To configure the Conveyor named Painting:
+• Insert it with a Length of 8 meters.
+• Create a failure with these values:
+We did not change any other settings.
+To configure the Conveyor named Drying:
+• Insert it with a Length of 6 meters.
+• Create a failure with these default values:
+Model the Paint Line
+10-1246 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+To define the HtmlReport named ReportObject of the PaintLine, we typed in these instructions:
+# [current.name]
+The above paint line of the car assembly looks like this: 
+## Layout
+><[current, *]
+## Statistics
+Statistics of our paint lines look like this: 
+><[Painting, "Flow statistics", %MatFlowProperties] 
+[Preparing] 
+[Drying]
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+HtmlReports named ReportObject from all subframes and shows them in the overall report of the car
+assembly model.
+Back to Show Reports in a Hierarchically Structured Model
+Modeling the Assembly Line
+Model the Assembly Line
+Our AssemblyLine consists of an Interface/Entrance, four Conveyors, three Stations named Step1, Step2,
+and Step3, and of an Interface/Exit.
+We attached a Workplace each to each of the Stations. We also inserted an HtmlReport which we renamed
+to ReportObject and our Comment named ToDo.
+Modeling the Assembly Line
+Plant Simulation Help 10-1247
+Unpublished work. © 2026 Siemens
+
+We will demonstrate how to:
+• Configure the Conveyors of the Assembly Line
+• Configure the Processing Stations and the Workplaces
+• Configure the ReportObject of the Assembly Line
+• Configure the ToDos of the Assembly Line
+Back to Show Reports in a Hierarchically Structured Model
+Configure the Conveyors of the Assembly Line
+Configure the four Conveyors between the processing stations.
+Proceed as follows:
+• Insert the first three Conveyors with a length of 5 meters each.
+• For the fourth Conveyor, named Conveyor3, we typed in a length of 4 meters.
+• Create a failure each for the Conveyors with these default settings:
+Configure the Conveyors of the Assembly Line
+10-1248 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+Back to Model the Assembly Line
+Configure the Processing Stations and the Workplaces
+Configure the three processing Stations named Step1, Step2, and Step3.
+Proceed as follows:
+• Create a failure each with these default values:
+• Change to the tab Importer and activate the processing importer.
+Type ~.Broker into the text box Broker. This points to the location of the Broker which controls the
+Importers. In our case this is the Frame, in which we are going to model the FinalAssembly in our overall
+model.
+Configure the Processing Stations and the Workplaces
+Plant Simulation Help 10-1249
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+• Insert three Workplaces and attach one each to one of the Stations. We use them with their default
+settings.
+Compare Model the Assembly Line
+Back to Configure the Final Assembly
+Configure the ReportObject of the Assembly Line
+Configure the HtmlReport named ReportObject of the AssemblyLine in a Method.
+We typed in these instructions. The comments describe what the source code does.
+# [current.name]               // name of the Frame as first level heading
+The above assembly line of the car assembly looks like this:    // 
+descriptive text
+## Layout                      // second level heading
+><[current, *]    // centered screenshot, adjusted to maximum width of the 
+window
+## Statistics     // second level heading
+Statistics of the stations Step1, Step2, and Step3              // 
+descriptive text
+[Step1, "Station statistics"]  // show statistics values of the object 
+‘Step1’ as a table
+                               // "Station statistics" is the caption of 
+the table
+[Step2]                        // show statistics values of the object 
+‘Step2’ as a table
+[Step3]                        // show statistics values of the object 
+‘Step3’ as a table
+Configure the ReportObject of the Assembly Line
+10-1250 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Model the Assembly Line
+Configure the ToDos of the Assembly Line
+Configure the Comment of the AssemblyLine named ToDo.
+We typed in these instructions on the tab Comment:
+Get the target speed of this AssemblyLine.
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+Comments named ToDo from all sub-Frames and shows them in the overall report of the car assembly
+model.
+To do so, we entered these instructions into the overall HtmlReport of the car assembly model, i.e.,
+in .Models.MyCarAssembly.HtmlReport:
+# ToDo
+These tasks still have to be completed: 
+[.UserObjects.ToDo*]
+Back to Model the Assembly Line
+Modeling and Configuring the Installation
+Model the Installation and Configure the Components
+Now that we created the classes of our CarBodyCell, of the PaintShop, and of the AssemblyLine, we can
+build our simulation model.
+We create our car body assembly model in the Frame named Model intended for that in the folder Models
+in the Class Library. If you want to, you can also rename the Frame Model. We entered MyCarAssembly.
+Our car assembly consist of these objects:
+Configure the ToDos of the Assembly Line
+Plant Simulation Help 10-1251
+Unpublished work. © 2026 Siemens
+
+• A Source, representing the receiving department, and the PartsTable, defining the parts to be produced.
+• An HtmlReport showing the collected data of the individual components of the car assembly.
+• Three Frames representing the CarBody, the PaintShop, and the FinalAssembly departments of the
+assembly plant.
+Insert a Frame from the tab MaterialFlow into the Frame MyCarAssembly.
+By default Plant Simulation inserts a Glass-Box-Frame 
+  that shows its content toward the
+outside in the Frame MyCarAssembly. We want to show our Frames as a Black-Box-Frames though,
+which do not show their content in the Frame MyCarAssembly. For this reason we have to convert the
+Glass-Box-Frame to a Black-Box-Frame:
+◦ Click the Frame with the left mouse button and press the spacebar. Change to the tab Graphics.
+◦ Clear the check box Show Content.
+◦ Select the check box Visible for the graphic group named default.
+◦ Do this for each of the three Frames.
+◦ Rename our three Frames. We changed the names to CarBody, PaintShop, and FinalAssembly.
+The inserted Black-Box-Frame now looks like this.
+Model the Installation and Configure the Components
+10-1252 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In the next step we will:
+• Configure the Receiving Department
+• Configure the Body Assembly
+• Configure the Paint Shop
+• Configure the Final Assembly
+• Configure the HtmlReport
+Back to Show Reports in a Hierarchically Structured Model
+Configure the Receiving Department
+We model and configure the receiving department with a Source.
+Proceed as follows:
+• Insert a Source from the tab MaterialFlow. Rename it to Receiving.
+• Select the Mu Selection > Sequence Cyclical.
+• As the setting Sequence Cyclical requires a table, insert an object of type DataTable. We renamed it to
+PartsTable and entered the PartsTable into the text box Table.
+Plant Simulation automatically formats the PartsTable. We entered the data shown below.
+Configure the Receiving Department
+Plant Simulation Help 10-1253
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+Back to Model the Installation and Configure the Components
+Configure the Body Assembly
+We model the CarBody section of our car assembly plant in a Frame, which we insert from the tab
+MaterialFlow into the Frame MyCarAssembly.
+• Convert the Glass-Box-Frame to a Black-Box-Frame as described under Model the Installation and
+Configure the Components.
+• Click the Frame CarBody with the right mouse button and select Open in New Window.
+• Delete the default graphic.
+• Insert an Interface.
+• Insert our CarBodyCell twice, one above the other.
+• Insert a second Interface.
+• Connect the Interfaces along the material flow with Connectors with the CarBodyCells. Plant Simulation
+then renames the Interfaces to Entrance and Exit.
+• Insert an HtmlReport.
+◦ Rename it to ReportObject.
+◦ To configure the ReportObject, type in these instructions:
+# [current.name] 
+The car body section of our car assembly looks like this: 
+## Layout
+><[current, *]
+## CarBodyCells
+Configure the Body Assembly
+10-1254 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The car body section encompasses several CarBodyCells: 
+[CarBodyCell.Origin*, ##]  // shows the heading two levels lower
+[EnergyAnalyzer, #]        // shows the heading one level lower
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+HtmlReports named ReportObject from all sub-Frames and shows them in the overall report of the car
+assembly model.
+◦ Insert our Comment named ToDo from the tab UserObjects.
+Type in this comment on the tab Comment:
+Question: Would adding a third CarBodyCell increase the throughput? 
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+Comments named ToDo from all sub-Frames and shows them in the overall report of the car assembly
+model.
+◦ Insert the object EnergyAnalyzer from the tab Tools.
+Configure the EnergyAnalyzer for the CarBodyCell:
+◊ Click the Frame CarBodyCell with the right mouse button and select Open in New Window.
+◊ This opens the window with the path .Models.MyCarAssembly.CarBody.CarBodyCell. Hold down
+Ctrl and select the objects AssemblyStation, AssemblyStation1, and AssemblyStation2. Drag these
+objects to the object EnergyAnalyzer in the path .Models.MyCarAssembly.CarBody and drop
+them there.
+◊ Repeat this for CarBodyCell1.
+The dialog of the EnergyAnalyzer then looks like this:
+We did not change any other settings.
+Configure the Body Assembly
+Plant Simulation Help 10-1255
+Unpublished work. © 2026 Siemens
+
+Our ReportObject then shows the energy consumption values of the AssemblyStations after the
+simulation.
+Our finished car body section with the two CarBodyCells looks like this:
+Go to Study the HtmlReport > Display the Energy Analysis
+Back to Model the Installation and Configure the Components
+Configure the Paint Shop
+We model the PaintShop section of our car assembly plant in a Frame, which we insert from the tab
+MaterialFlow into the Frame MyCarAssembly.
+Proceed as follows:
+Configure the Paint Shop
+10-1256 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Convert the Glass-Box-Frame to a Black-Box-Frame as described under Model the Installation and
+Configure the Components.
+• Click the Frame PaintShop with the right mouse button and select Open in New Window.
+• Delete the default graphic.
+• Insert an Interface.
+• Insert our PaintShop twice, one above the other.
+• Insert a second Interface.
+• Connect the Interfaces along the material flow with Connectors with the paint lines. Plant Simulation
+then renames the Interfaces to Entrance and Exit.
+• Insert an HtmlReport.
+◦ Rename it to ReportObject.
+◦ To configure the ReportObject, type in these instructions:
+# [current.name] 
+The PaintShop section of the car assembly looks like this: 
+## Layout
+><[current, *]
+## PaintLines
+The PaintShop encompasses several PaintLines. 
+[PaintLine.Origin*, ##]
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+HtmlReports named ReportObject from all sub-Frames and shows them in the overall report of the car
+assembly model.
+Our finished PaintShop section with the two PaintLines looks like this:
+Configure the Paint Shop
+Plant Simulation Help 10-1257
+Unpublished work. © 2026 Siemens
+
+Back to Model the Installation and Configure the Components
+Configure the Final Assembly
+We model the FinalAssembly section of our car assembly plant in a Frame, which we insert from the tab
+MaterialFlow into the Frame MyCarAssembly.
+Proceed as follows:
+• Convert the Glass-Box-Frame to a Black-Box-Frame as described under Model the Installation and
+Configure the Components.
+• Click the Frame FinalAssembly with the right mouse button and select Open in New Window.
+• Delete the default graphic.
+• Insert an Interface.
+• Insert our AssemblyLine three times, one above the other.
+• Insert a second Interface.
+• Connect the Interfaces along the material flow with Connectors with the assembly lines. Plant
+Simulation then renames the Interfaces to Entrance and Exit.
+• Insert the object WorkerPool from the tab Resources. Configure the WorkerPool:
+◦ Click the Inheritance 
+  check box for the Creation Table so that it looks like this 
+ . Then type 4 into
+the cell below Amount to create four Workers.
+Configure the Final Assembly
+10-1258 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Select the Travel Mode [drop-down list] > Beam to Workplace.
+We did not change any other settings.
+• Insert the Broker from the tab Resources. We use the Broker with its default settings.
+• Insert the object WorkerChart from the tab Tools.
+Type WorkerPool into the text box below Create charts of this WorkerPool.
+• Insert an HtmlReport.
+◦ Rename it to ReportObject.
+◦ To configure the ReportObject, type in these instructions:
+# [current.name] 
+The final assembly section of the car assembly looks like this: 
+## Layout
+><[current, *]
+## Broker Statistics
+The Broker collected these statistics values: 
+[Broker] 
+## Worker Chart
+Configure the Final Assembly
+Plant Simulation Help 10-1259
+Unpublished work. © 2026 Siemens
+
+The worker chart shows statistics of all Workers that are staying in 
+the WorkerPool. 
+[WorkerChart] 
+## Assembly Lines
+The final assembly section encompasses several assembly lines. 
+[AssemblyLine.Origin*, ##]
+When we run the simulation after we finished modeling, Plant Simulation gathers the individual
+HtmlReports named ReportObject from all sub-Frames and shows them in the overall report of the car
+assembly model.
+Note
+We created the model in a previous version of Plant Simulation which provided the now deprecated
+WorkerChart. We can still use it in the model of the current version though as it is part of that
+model.
+• Insert our Comment named ToDo.
+Type in this comment on the tab Comment:
+Check the availability of AssemblyLine2.
+Our finished FinalAssembly with the three assembly lines and the other objects looks like this:
+Configure the Final Assembly
+10-1260 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Connect the individual sections in the Frame MyCarAssembly with Connectors. Our finished car assembly
+looks like this:
+Back to Model the Installation and Configure the Components
+Configure the Final Assembly
+Plant Simulation Help 10-1261
+Unpublished work. © 2026 Siemens
+
+Configure the HtmlReport
+Configure the HtmlReport of the car assembly plant as a whole.
+We typed in these instructions. We took the General Information topic for the most part from the built-in
+HtmlReport.
+><[!self, Header, *]
+# General Information
+## Overview
+* Model file: [=modelFile] 
+* Simulation root: [self.location] 
+* Simulation time: [EventController.simtime] 
+* End time: [EventController.EndTime] 
+* Generated on: [=sysdate] 
+* Contact: <a href="mailto:John.Doe@siemens.com?subject=Simulation 
+report">John.Doe@siemens.com</a>
+## Model
+The car assembly model looks like this: 
+><[current, *]
+## Receiving
+The receiving section delivers these parts: 
+><[PartsTable, 1..3] 
+--
+# Statistics
+Drain statistics data suffices for our purposes. 
+## Drain Statistics
+Drain statistics shows detailed information about the parts that the 
+shipping section removed from the plant. 
+[.MaterialFlow.Drain*]
+--
+# Production Areas
+The car assembly encompasses three production areas: 
+* CarBody
+* PaintShop
+* FinalAssembly
+[CarBody, #]
+[PaintShop, #]
+[FinalAssembly, #]
+--
+# ToDo
+These tasks still have to be completed: 
+[.UserObjects.ToDo*]
+Cedar Rapids, [=day(sysdate)].[=month(sysdate)].[=year(sysdate)+1900] 
+<span style="font-family: Segoe Script; font-size:32pt">>H. Thompson</a>
+When we run the simulation after we finished modeling, Plant Simulation collects the individual
+HtmlReports named ReportObject from all sub-Frames and shows them in the overall report of the car
+assembly model.
+Back to Model the Installation and Configure the Components
+Configure the HtmlReport
+10-1262 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Running the Simulation and Showing the Report
+Run the Simulation and Show the Report
+After we finished modeling, we can run the simulation and show its results in the report.
+In this step we will:
+• Run the Simulation
+• Show the HtmlReport
+Compare Study the HtmlReport
+Compare Configure the HtmlReport
+Back to Show Reports in a Hierarchically Structured Model
+Run the Simulation
+After we finished creating our simulation model, we can run the simulation.
+Proceed as follows:
+• Double-click the EventController in the model MyCarAssembly, change to the tab Settings and type in
+the time after which the simulation will be terminated.
+We entered one day, i.e., 1:00:00:00.
+• Change to the tab Controls and click 
+  to run the simulation.
+Running the Simulation and Showing the Report
+Plant Simulation Help 10-1263
+Unpublished work. © 2026 Siemens
+
+Back to Run the Simulation and Show the Report
+Show the HtmlReport
+After the simulation has been terminated, we can click the HtmlReport with the right mouse button and
+click Show to display it.
+During the simulation Plant Simulation collects the individual HtmlReports named ReportObject from all
+sub-Frames and adds these to the overall report of the car assembly model.
+The same applies to the individual Comments named ToDo.
+If we want to immediately show the HtmlReport after the simulation is over, we can set this in an endSim
+method:
+• Open the HtmlReport in the model MyCarAssembly and change to the tab User-defined.
+• Click New and create a user-defined attribute of Data Type > Method.
+• Type in endSim as name.
+• Click Open and type in this source code:
+self.~.show
+Note
+When the 3D model contains a large number of objects that the HtmlReport displays, it can take some
+time before Plant Simulation shows it as it has to render the scene first before taking the screenshots for
+the HtmlReport.
+Back to Run the Simulation and Show the Report
+Show the HtmlReport
+10-1264 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Studying the HtmlReport
+Study the HtmlReport
+When you open the HtmlReport, you will notice that the table of contents shows four heading levels by
+default.
+If you want to show fewer heading levels, you can set that with the attribute TOCLevels.
+Studying the HtmlReport
+Plant Simulation Help 10-1265
+Unpublished work. © 2026 Siemens
+
+4 Heading Levels 3 Heading Levels 2 Heading Levels
+We took the topics General Information and Statistics for the most part from the built-in HtmlReport.
+In addition we want to:
+• Display the Production Areas
+• Display the Energy Analysis
+• Display the ToDos and Change to the Respective Frame
+Compare Model the Car Body Cell > Configure the ReportObject
+Study the HtmlReport
+10-1266 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare Configure the Body Assembly > Configure the ReportObject
+Compare Model the Paint Line > Configure the ReportObject
+Compare Configure the Paint Shop > Configure the ReportObject
+Compare Model the Assembly Line > Configure the ReportObject
+Compare Configure the Final Assembly > Configure the ReportObject
+Compare Configure the HtmlReport
+Back to Show Reports in a Hierarchically Structured Model
+Display the Production Areas
+Define how to display the three production areas—CarBody, PaintShop, and FinalAssembly—as second
+level headings below the first level heading Production Areas in our HtmlReport in the Frame
+MyCarAssembly.
+To do so, we typed in the instructions below. The instructions in the HtmlReport in the Frame
+MyCarAssembly define how the overall report of the three production areas will be displayed.
+# Production Areas
+The car assembly encompasses three production areas: 
+* CarBody
+* PaintShop
+* FinalAssembly
+[CarBody, #]        // Show the HtmlReport of the Frame ‘CarBody’ instead 
+of the Frame itself
+[PaintShop, #]      // Show the HtmlReport of the Frame ‘PaintShop’ instead 
+of the Frame itself
+[FinalAssembly, #]  // Show the HtmlReport of the Frame ‘FinalAssembly’ 
+instead of the Frame itself
+In our ReportObject in the Frame CarBody, for example, we show the headings one level higher, compare
+these instructions:
+# [current.name] 
+The car body section of our car assembly looks like this: 
+## Layout
+><[current, *]
+## CarBodyCells
+The car body section encompasses several CarBodyCells: 
+[CarBodyCell.Origin*, ##]  
+[EnergyAnalyzer, #]
+Display the Production Areas
+Plant Simulation Help 10-1267
+Unpublished work. © 2026 Siemens
+
+The instructions in the ReportObject in the Frame CarBody set which information the overall report
+displays for the CarBody section. The same applies to the Frames PaintShop and FinalAssembly.
+Heading Levels in the HtmlReport Heading Levels in the ReportObject
+Compare Configure the HtmlReport
+Back to Study the HtmlReport
+Display the Production Areas
+10-1268 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display the Energy Analysis
+The instruction [CarBody, #] in the following code section of the HtmlReport shows the content of the
+Frame .Models.MyCarAssembly.CarBody.
+# Production Areas
+The car assembly encompasses three production areas: 
+* CarBody
+* PaintShop
+* FinalAssembly
+[CarBody, #]      // Show the HtmlReport of the Frame ‘CarBody’ instead of 
+the Frame itself
+We set in the ReportObject in the Frame .Models.MyCarAssembly.CarBody what exactly the HtmlReport
+for the CarBody section shows:
+# [current.name] 
+The car body section of our car assembly looks like this: 
+## Layout
+><[current, *]
+## CarBodyCells
+The car body section encompasses several CarBodyCells: 
+[CarBodyCell.Origin*, ##]    // Show the heading two levels lower
+[EnergyAnalyzer, #]          // Show the heading one level lower
+Our HtmlReport in the Frame MyCarAssembly shows the energy consumption of all AssemblyStations,
+which the tool EnergyAnalyzer recorded:
+• The Chart Usage profiles.
+• The Chart Consumption over time.
+• The Table Detailed consumption.
+Compare Configure the Body Assembly
+Compare Configure the HtmlReport
+Display the Energy Analysis
+Plant Simulation Help 10-1269
+Unpublished work. © 2026 Siemens
+
+Back to Study the HtmlReport
+Display the ToDos and Change to the Respective Frame
+We use the object Comment to quickly change to the Frame in which it is inserted, i.e., its location by
+selecting Navigate > Open Location in its dialog.
+The following instructions in the HtmlReport collect all objects of type Comment named ToDo in all
+sub-Frames.
+# ToDo
+These tasks still have to be completed. 
+[.UserObjects.ToDo*]
+They then show them in the overall report under ToDo.
+Display the ToDos and Change to the Respective Frame
+10-1270 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The text that we entered into the individual Comments named ToDo is a link each to the respective
+Comment in the Frame in which it is inserted. The link shows the path in a Tooltip when you drag the
+mouse over it and let it hover.
+Click the link to open this Comment object.
+Then select Navigate > Open Location in its dialog to open the Frame in which the Comment is located.
+Compare Configure the HtmlReport
+Back to Study the HtmlReport
+Showing Values During the Simulation Run with the Display
+Show Values During the Simulation with the Display
+If you want to show a value of an attribute, of a method, or of a Variable at all times throughout the entire
+simulation run, we will use the Display. The Display is, for example, ideally suited to dynamically show the
+fill level of a Buffer.
+You can insert it into your simulation model from the folder UserInterface in the Class Library or from the
+toolbar User Interface in the Toolbox.
+• If you deactivate the Display 
+ , it shows its icon 
+  in the Frame, into which you insert it.
+• If you activate it by selecting 
+ , the Display shows a value in the Frame window, such as
+.
+Showing Values During the Simulation Run with the Display
+Plant Simulation Help 10-1271
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Which Data the Display Shows
+• Select How the Display Shows the Data
+Compare Viewing the Statistics Report
+Compare View Statistics in the Dialogs of the Objects
+Compare Show Statistics in a Chart
+Compare Show Statistics and Other Values in a Report
+Back to View and Visualize Statistics
+Select Which Data the Display Shows
+Before you start your simulation run, you have to tell the Display which value it displays and in which
+mode it collects the data.
+• Click 
+  to type in the path to and the name of the object whose data you want
+to view. Then, type the value of a global variable (Variable), of an attribute or of a
+Select Which Data the Display Shows
+10-1272 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+method of an object into the text box after the path. You might, for example, type in
+buffer.numMU, .Models.Model.ParallelStation.statNumOut, store.XDim, etc.
+The Display supports the data types boolean, integer, real, string, object, time, money, length, weight,
+speed, date, and datetime. If the path you type in is invalid, the background of the text box changes to
+red.
+• If you want to, you can also type in a brief description (Comment) of the displayed value. You might, for
+example, type in a description of the attribute that the Display displays, such as Fill Level Buffer.
+The Display show this text below the value in the Frame window.
+Note
+When you select to display the value as Text, we recommend to type in one or two spaces after the
+last word, so that the value does not appear too close to the comment.
+• Select which mode the Display uses to update the displayed data.
+◦ Sample mode updates the Display periodically and takes the next sample after the time span you
+type into the text box Interval.
+◦ Watch mode updates the Display, whenever the value of a watchable read-only attribute changes,
+for example NumMU, NumMUParts, StatMaxNumMU, StatNumIn, StatNumOut, etc. or of a watchable
+attribute, for example Pause, Speed, Unplanned, etc.
+The column Watchable in the window Show Attributes and Methods of the individual objects
+shows all methods, read-only attribute, and attributes which Plant Simulation can watch.
+Back to Show Values During the Simulation with the Display
+Select How the Display Shows the Data
+Before you start your simulation run, you have to tell the Display how to show the value it collects. In
+Sample mode it updates the value periodically, in Watch mode, whenever the displayed value changes.
+Proceed as follows:
+Select How the Display Shows the Data
+Plant Simulation Help 10-1273
+Unpublished work. © 2026 Siemens
+
+• Select how you want the Display to show the value: As Text, as a Bar, or as a slice of a Pie. The Display
+can only show numerical values as a bar and as a slice of a pie. These are easy to comprehend, but not
+very well suited if accuracy is important.
+Text Bar Pie
+◦ When you select Bar or Pie, the Display shows the value in relation to the Minimum and the
+Maximum value of the range you enter. An empty bar/pie indicates values less than or equal to the
+lower bound of the range. A full bar/pie represents values greater than or equal to the upper bound of
+the range. You can also change the height and the width of the bar/pie graphic by dragging its outline
+with the left mouse button while holding both the Shift and the Ctrl keys down.
+The Display show the actual minimal and maximal values as dashed lines in the Frame window,
+which is not as accurate as you might need it to be. To view the current values, click the tab Data and
+look at the boxes Minimum and Maximum.
+To reset the values on the tab to 0, click Reset Values.
+◦ When you select Text, the Display shows the value as a number or as text in the Frame window.
+Then, you can select a Font size for displaying the value itself and for displaying the Comment you
+entered. Enter a blank after the text you enter so that the Comment value is not shown attached to
+the text.
+• To make the background of the Display you inserted into a Frame transparent, select Transparent.
+Then, the Display shows the space around the text in the color of the background image or it shows the
+grid points of the Frame. If you clear Transparent, Plant Simulation shows the space around the text
+white.
+Select How the Display Shows the Data
+10-1274 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Not transparent Transparent
+• To select a color for the text the Display displays and for the outline of its display graphic, click in the
+field next to Color and select a color in the dialog Colors.
+Compare Check the Fill Level of the Buffer
+Back to Show Values During the Simulation Run with the Display
+Accessing Statistics with SimTalk
+You can access most of the statistics values with methods, read-only attributes, and attributes.
+Compare the following:
+• For the material flow objects the names of the read-only attributes are listed next to the name of the
+value in the description of the Statistics Report.
+• For the Drain the names of the read-only attributes are listed next to the name of the value in the
+description of the Statistics Report.
+• For the Exporter and the Worker the names of the read-only attributes are listed next to the name of the
+value in the description of the Statistics Report.
+• In addition, you might want to check the topics Read-Only Attributes for Accessing Statistics and
+Attributes for Statistics.
+• For the MUs the names of the read-only attributes are listed next to the name of the value in the
+description of the Product Statistics of the MUs in the Statistics Report.
+• For the object Transporter the names of the read-only attributes are listed next to the name of the value
+in the description of the Driving Statistics of the Transporter.
+• In addition, you might want to check the topics Methods for Accessing Statistics of the MUs and
+_Attributes of All MUs.
+Compare View Statistics in the Dialogs of the Objects
+Compare Show Statistics in a Chart
+Compare Show Statistics and Other Values in a Report
+Compare Show Values During the Simulation with the Display
+Back to View and Visualize Statistics
+Accessing Statistics with SimTalk
+Plant Simulation Help 10-1275
+Unpublished work. © 2026 Siemens
+
+Showing Part Flows in a SankeyDiagram
+Show Part Flows in a SankeyDiagram
+The SankeyDiagram visualizes how parts or Workers move from object to object in your simulation model.
+You can insert the SankeyDiagram into your simulation model from the folder User Interface in the Class
+Library or from the tab User Interface in the Toolbox.
+In our model the Source produces parts. The station Roughing processes these parts for the defined
+time. Then the Worker carries the processed parts to the station FineMachining which adds additional
+processing steps. The Drain removes the parts from the factory.
+The SankeyDiagram visualizes the flow of the parts and the Workers after the end of the simulation run.
+Our finished simulation model looks like this:
+Showing Part Flows in a SankeyDiagram
+10-1276 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+If you also want to show the names and the labels of the material flow objects in 3D, click the class
+of the object with the right mouse button and select Edit 3D Properties. Then select Name/Label
+Activated on the tab Captions.
+We will demonstrate how to:
+• Configure the Objects that Produce and Process Parts
+• Configure the Carrying Operation with Broker, WorkerPool, and Worker
+• Configure the SankeyDiagrams
+Back to View and Visualize Statistics
+Configure the Objects that Produce and Process Parts
+You can model and configure the material flow in you simulation model.
+Proceed as follows:
+• A Source which produces the parts. We use the Source with its default settings.
+• A station which roughly machines the parts. For this we used the Station with its default settings.
+As we want a Worker to carry the processed parts from the Station labeled Roughing to the Station
+labeled FineMachining, we defined these settings for the transport importer:
+Configure the Objects that Produce and Process Parts
+Plant Simulation Help 10-1277
+Unpublished work. © 2026 Siemens
+
+• A second station labeled FineMachining, which does the fine machining of the parts. For this we used
+the Station with its default settings as well.
+• A Drain which removes the parts from the factory.
+Back to Show Part Flows in a SankeyDiagram
+Configure the Carrying Operation with Broker, WorkerPool, and Worker
+Insert the resource objects into our simulation model to allow the Worker to carry parts from the station
+Roughing to the station Fine Machining.
+Proceed as follows:
+• A Broker which assigns the required services to the Worker. We use the Broker with its default settings.
+• A WorkerPool which sends the Workers off to their jobs. Here we selected the Travel Mode > Walk
+along footpaths and we activated Get Job Orders at Home Only.
+Configure the Carrying Operation with Broker, WorkerPool, and Worker
+10-1278 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• A Workplace each which we attached to the stations Roughing and Fine Machining. We cleared the
+check box Worker Stays Here After Completing the Job.
+• A FootPath each between the Workplaces and the WorkerPool and between the Workplaces.
+Make sure that the Workplaces are connected with Connectors with the FootPaths and the WorkerPool.
+Back to Show Part Flows in a SankeyDiagram
+Configure the Carrying Operation with Broker, WorkerPool, and Worker
+Plant Simulation Help 10-1279
+Unpublished work. © 2026 Siemens
+
+Configure the SankeyDiagrams
+We use a SankeyDiagram each to visualize the Sankey flows of the Worker and the parts.
+We selected these configurations for that:
+• For the Worker SankeyDiagram we used the default display attributes.
+As we want to show the Sankey flows of the Worker, we turn the check box for inheritance on the tab
+Objects off and drag the Worker from the folder Resources in the Class Library to this tab.
+We then clicked OK in the dialog to apply the new settings.
+• For the Parts SankeyDiagram we only changed the color of the Sankey flows.
+We then clicked OK in the dialog to apply the new settings.
+• Run the simulation over a considerable period of time.
+• Click the SankeyDiagram labeled Worker with the right mouse button and select Show. The result looks
+like this:
+Configure the SankeyDiagrams
+10-1280 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the SankeyDiagram labeled Parts with the right mouse button and select Show to also show the
+Sankey flows of the parts. The result looks like this:
+• To hide the Sankey flows of a SankeyDiagram again, click it with the right mouse button, and select
+Hide. Instead you can also click the button in the dialog of the respective SankeyDiagram.
+To demonstrate how the SankeyDiagram shows the Sankey flows of the Worker, who walks freely within
+the area, we duplicated our model. Then we changed these settings in the WorkerPool:
+• We cleared Get Job Orders at Home Only.
+• We selected the Travel Mode > Move freely within area.
+Configure the SankeyDiagrams
+Plant Simulation Help 10-1281
+Unpublished work. © 2026 Siemens
+
+• The SankeyDiagram shows the Sankey flows of the Worker, who walks freely within the area, like this:
+If we insert a barred area, around which the Worker has to walk, the SankeyDiagram looks like this:
+Configure the SankeyDiagrams
+10-1282 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Show Part Flows in a SankeyDiagram
+Showing AGV Sankey Flows
+Show AGV Flows in a SankeyDiagram
+The SankeyDiagram visualizes how AGVs drive from Marker to Marker in your simulation model.
+You can insert the SankeyDiagram into your simulation model from the folder UserInterface in the Class
+Library or from the tab User Interface in the Toolbox.
+In our model two AGV drive two different, partly overlapping routes along a number of Markers.
+The SankeyDiagram visualizes the flow of the AGVs after the end of the simulation run.
+Our finished simulation model looks like this:
+Showing AGV Sankey Flows
+Plant Simulation Help 10-1283
+Unpublished work. © 2026 Siemens
+
+We will demonstrate how to:
+• Configure AGVPool and Routes of the AGVs
+• Configure the init Method and the SankeyDiagram
+Back to View and Visualize Statistics
+Show AGV Flows in a SankeyDiagram
+10-1284 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Configure AGVPool and Routes of the AGVs
+Insert the AGVPool from which the two AGVs drive along the Markers to their respective destination.
+Proceed as follows:
+• Duplicate the AGVPool, the Marker, and the Transporter. Rename the Transporter to AGV in the folder
+UserObjects.
+• Insert the AGVPool, where the AGVs reside, into the model. Configure the AGVPool. We selected these
+settings.
+• Insert the Markers along which the two AGVs drive. We chose these positions.
+Configure AGVPool and Routes of the AGVs
+Plant Simulation Help 10-1285
+Unpublished work. © 2026 Siemens
+
+Back to Show AGV Flows in a SankeyDiagram
+Configure AGVPool and Routes of the AGVs
+10-1286 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Configure the init Method and the SankeyDiagram
+Program the init method, which sets the routes on which the AGVs drive along the Markers to their
+respective destination.
+Insert a Method into the model and name it init.
+We typed in this source code:
+var agv1: object := AGVPool.getIdleAGV
+agv1.setRoute([M03, M04, M05, M06, M07, M10])
+wait 10
+var agv2: object := AGVPool.getIdleAGV
+agv2.setRoute([M01, M04, M05, M06, M07, M08])
+Insert a SankeyDiagram into the model. We selected these display settings on the tab Attributes.
+Drag the AGVPool over the SankeyDiagram to show the Sankey flows of the AGVs originating in the
+AGVPool.
+Configure the init Method and the SankeyDiagram
+Plant Simulation Help 10-1287
+Unpublished work. © 2026 Siemens
+
+Run the simulation and click Show Diagram to show the Sankey flows of the AGVs.
+The model then shows the routes, which the AGVs took as blue bars. The thicker bar shows the part of the
+route that both AGVs shared.
+Back to Show AGV Flows in a SankeyDiagram
+Showing Parts on Resources in a GanttChart
+Show Parts on Resources in a GanttChart
+The GanttChart shows how parts move from resource to resource during the simulation.
+In this context resources are the material flow objects, not the resource objects.
+You can insert the GanttChart into your simulation model from the folder UserInterface in the Class
+Library or from the toolbar User Interface in the Toolbox.
+In our model the Source produces different parts with different processing times according to a delivery
+table. The ParallelStation processes these parts then for the specified times and moves them on to the
+Station and the Drain. The GanttChart shows the progression of the parts during the simulation.
+The finished simulation model looks like this:
+Showing Parts on Resources in a GanttChart
+10-1288 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+We will demonstrate how to:
+• Configure the Source that Produces the Parts
+• Configure the ParallelStation that Processes the Parts
+• Configure the GanttChart
+• Show the GanttChart
+Back to View and Visualize Statistics
+Configure the Source that Produces the Parts
+Our Source produces different parts according to a Delivery Table. To accomplish this, we entered the
+settings below on the tab Attributes.
+Configure the Source that Produces the Parts
+Plant Simulation Help 10-1289
+Unpublished work. © 2026 Siemens
+
+Our Delivery Table looks like this:
+Back to Show Parts on Resources in a GanttChart
+Configure the ParallelStation that Processes the Parts
+Our ParallelStation processes the different parts for the times you specify.
+We selected these settings:
+• We entered an X-Dimension of 2 and a Y-Dimension of 1.
+Configure the ParallelStation that Processes the Parts
+10-1290 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Make sure that the check box Start Processing When Full is cleared or your model might not run.
+• We set the Processing Times of the individual parts in the list MyProcessingTimes on the tab Times.
+• To create a realistic simulation model, we also use failures. We selected these settings on the tab
+Failures.
+Configure the ParallelStation that Processes the Parts
+Plant Simulation Help 10-1291
+Unpublished work. © 2026 Siemens
+
+Back to Show Parts on Resources in a GanttChart
+Configure the GanttChart
+Configure the GanttChart to show how the parts move from material flow object to material flow object in
+the simulation model
+Proceed as follows:
+• As we want the GanttChart to collect data during the simulation, we activated Collect Data.
+• We would like to watch the part named Part. This is already pre-configured, so we do not have to do
+anything.
+To add another part to the tab Parts, select it in the Class Library, drag it to the first cell on the tab, and
+drop it there.
+Instead, you can also select the part in the Class Library, drag it on the icon of the GanttChart, and drop
+it there. This automatically deactivates inheritance and adds the part to an empty row on the tab Parts.
+Configure the GanttChart
+10-1292 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• We would like to watch all Resources. To add them to the tab Resources, we selected them in the
+Frame, dragged it to the first cell on the tab, and dropped them there.
+Instead, you can also select one or several resources in the Frame, drag it/them on the icon of the
+GanttChart, and drop it/them there. This automatically deactivates inheritance and adds the resources to
+an empty row each on the tab Resources.
+As we want to watch all resources in the simulation model, we could also have left the tab Resources
+empty.
+Back to Show Parts on Resources in a GanttChart
+Show the GanttChart
+Click Start/Stop Simulation to run the simulation and let it run for a little while. Then, click Show Chart in
+the open dialog of the GanttChart.
+Instead, you can also right-click the GanttChart in the Frame and select Show on the context menu.
+You can select the display settings on the tab Attributes.
+Show the GanttChart
+Plant Simulation Help 10-1293
+Unpublished work. © 2026 Siemens
+
+The GanttChart provides two views:
+• Resource view shows the resources which are occupied by the parts. The GanttChart shows the
+resources along the vertical axis and the elapsing time along the horizontal axis.
+Note
+The GanttChart shows the resources in the order in which they processed parts for the first time.
+The resource, which processed a part first, is shown in the first line in the chart. The resource, which
+processed a part after that, is shown in the line below, etc.
+You cannot change the order of the resources.
+Show the GanttChart
+10-1294 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+With the default settings the GanttChart shows a part on all resources with the same color.
+• Part view shows the parts which occupy the resources. The GanttChart shows the parts along the
+vertical axis and the elapsing time along the horizontal axis.
+Note
+The GanttChart shows the parts in the order in which they were processed by a resource for the first
+time. The part, which was processed by a resource first, is shown in the first line in the chart. The part,
+which was processed by a resource after that, is shown in the line below, etc.
+You cannot change the order of the parts.
+With the default settings the GanttChart shows a resource for all parts with the same color.
+You can select the respective view mode on the drop-down list or on the context menu.
+Show the GanttChart
+Plant Simulation Help 10-1295
+Unpublished work. © 2026 Siemens

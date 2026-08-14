@@ -1,0 +1,224 @@
+Back to Model a Battery-powered Transporter, Extended
+Preparing Data for the Simulation with DataFit
+Prepare Data for the Simulation with DataFit
+One of the purposes of your simulation study will be to optimize the availability of resources, such as
+machines, laborers, vehicles, etc. for an existing or a planned production plant. This means that you have
+to reduce the number of failures and down-times of machines. When a machine fails, it has to be repaired,
+which leads to delays in the production and costs money.
+Oftentimes the Mean Time Between Failures (MTBF) and the Mean Time To Repair (MTTR) are
+stochastically distributed. Because of the qualitative properties of a system with failures, we know the
+type of distribution for the MTBF and for the MTTR. What we do not know are the parameters of the
+distribution.
+Production planning specialists do observe the availability of resources, the MTTR and the MTBF.
+The availability is the MTBF divided by the MTBF plus the MTTR times 100 percent, i.e.,
+. So when we know two of the three values—AV (availability), MTTR and MTBF—
+we can compute the third one. The DataFit Wizard computes the parameters of the distributions for the
+MTTR and MTBF to arrive at the availability you want to achieve.
+Note
+We modeled the DataFit objects in Frames and with the object Dialog. For this reason they do not use
+the Siemens PLM standard design, but the Windows design.
+Compare Statistics Tools
+Preparing Data for the Simulation with DataFit
+Plant Simulation Help 10-855
+Unpublished work. © 2026 Siemens
+
+Go to Step 1: Define the Task and the Objectives
+Go to Step 2: Collect and Prepare Data
+Go to Step 3: Decide Which Distribution to Use
+Step 1: Define the Task and the Objectives
+You will start out with defining the task and the objective of the simulation study, being careful to not
+predefine any one solution you might expect or want to be true.
+Some of the questions you want answers for are:
+• What throughput and what output can we expect?
+• What is the optimal number of resources (machines, workers, tools)?
+• Where in the plant are buffers necessary? What is the optimal buffer size?
+• What is the optimal number of work piece carriers?
+• Which control strategies are best suited for the task?
+• How do some or all of the above factors interact and produce different results?
+Then, you will have to decide the scope of the simulation.
+• Do you only need to simulate the production plant?
+• Or do you also have to simulate other areas, such as receiving the parts delivered by the suppliers,
+warehousing, shipping, etc.?
+Go to Step 2: Collect and Prepare Data
+Go to Step 3: Decide Which Distribution to Use
+Step 2: Collect and Prepare Data
+Collecting and preparing the data to use in the simulation study is one of your most important tasks.
+This takes up about 35 percent of the project time! Creating the model takes up 25 percent, validating and
+correcting 15 percent, running experiments 10 percent, analyzing and evaluating 15 percent of the project
+time.
+You will use:
+Static data, such as:
+Step 1: Define the Task and the Objectives
+10-856 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Data extracted from the production program, which you collected by watching the machines in the
+plant or which you received from the experts on the shop floor.
+• Data extracted from the structure of the plant.
+• Data from a shift model.
+Stochastic data, such as:
+• The failure behavior.
+• The processing and set-up times.
+• The amount of rejects.
+For simulating the material flow of interlinked production and assembly facilities you need:
+Procedure
+1. Data covering the entire production system (model data):
+• The production program, such as the produced products, the lot sizes, etc.
+• The layout of the plant, its structure, controls, and the points where parts are introduced into or
+discharged from the system.
+• Reworking, such as reworking times, the station that produces rejects, and the frequency of rejects.
+2. Data covering the staff working in the plant (object data):
+• The number of workers, and their qualifications.
+• The shifts worked.
+• The distances covered and the required times.
+3. Data covering machines, transport systems and work stations (object data):
+• Failures, including MTBF, MTTR, reference time, distribution, and variance.
+• Cycle times, capacities and cycle variance.
+• Set-up times.
+• Supply with materials.
+Back to Step 1: Define the Task and the Objectives
+Go to Step 3: Decide Which Distribution to Use
+Step 3: Decide Which Distribution to Use
+Step 3: Decide Which Distribution to Use
+Once you have collected the data you need for the simulation study, you have make a number of decisions.
+Step 3: Decide Which Distribution to Use
+Plant Simulation Help 10-857
+Unpublished work. © 2026 Siemens
+
+• Which distributions to select for the Processing Time, the Set-up Time, the Recovery Time, the Cycle
+Time, and the Failure Times for the Plant Simulation objects.
+• Which parameters to enter for the selected distribution.
+For this, we provide Statistics Wizards.
+You can:
+• Practice Distribution-Fitting with DataFit.
+• Use Distributions with Bounds.
+Compare Model Random Processes
+Back to Step 1: Define the Task and the Objectives
+Back to Step 2: Collect and Prepare Data
+Distribution-Fitting with DataFit
+Use the object DataFit for distributions without bounds.
+Proceed as follows:
+• Enter a sample of observations of a random number and a Level of significance.
+• Then, the Wizard finds the parameters of the selected distribution.
+The Wizard estimates the parameters of the selected distribution(s) and then performs a goodness-of-fit
+test with the filtered data on the tab Fit.
+Note
+The Level of significance is the probability with which a distribution with estimated parameters will
+be rejected by the goodness-of-fit test, although it is suitable for the sample.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Compare Statistics Tools
+Back to Step 3: Decide Which Distribution to Use
+Input Data in DataFit
+In this step we input data into DataFit.
+Distribution-Fitting with DataFit
+10-858 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+DataFit only computes the distribution parameters for a sample with more than 10 values.
+You can only proceed to the next tab, after you have selected the required settings and typed the data
+for them in on the active tab. DataFit then activates buttons and/or text boxes on the next tab.
+Most buttons are toggle buttons that turn a feature on or off.
+Import data to be fitted on the tab Input
+• Import the data you received—sample data observed on the shop floor, or the results of a previous
+simulation run—into a column of a Plant Simulation table file. Then, drag this table over the object
+DataFit in the Frame that contains your simulation model and drop it there.
+• Select a column that contains the data you want to use in the dialog that opens and click Load.
+Or
+• Click Read to import data from the file whose name you type into the text box Data file.
+• When you import data from other programs, for example from Excel, you have to select the same
+Decimal separator in Plant Simulation is you used in the other application. You might also paste the
+sample data into the table via the Windows-Clipboard. For this you have to click Open to open the input
+table.
+• Select which type of data you want to investigate:
+◦ Discrete numbers, i.e., any integer number greater than or equal to 0, this is 0, 1, 2, 3, etc.
+Input Data in DataFit
+Plant Simulation Help 10-859
+Unpublished work. © 2026 Siemens
+
+◦ Continuous numbers, which include negative numbers, and floating point numbers, for example -10,
+1.4, 5, ...
+When you have typed in all required data or selected the required settings, you can proceed to the tab
+Filter.
+Back to Distribution-Fitting with DataFit
+Filter Data in DataFit
+In this step we filter data in DataFit.
+Filter the data on the tab Filter.
+Filtering serves three purposes:
+Procedure
+1. It cuts off data that is atypical.
+2. It eliminates outliers, i.e., it removes these values from the sample.
+3. It transforms data to a certain range, i.e., it translates or zooms data.
+To filter data:
+• You can, but do not have to enter a value for the Lower bound and a value for the Upper bound.
+• Click Start to start filtering the data.
+• This activates the buttons Show descriptive statistics and Open filtered data.
+◦ Clicking Show opens a table with descriptive statistics of the characteristics of the sample data.
+Filter Data in DataFit
+10-860 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Clicking Open filtered data opens a table with the sorted data to be used for data fitting, i.e., after
+eliminating unwanted values.
+Once you have entered the required data or selected the required settings, you can proceed to the tab Fit.
+Back to Distribution-Fitting with DataFit
+Fit Data in DataFit
+In this step we fit data in DataFit.
+DataFit estimates the parameters of the selected distribution(s) and then performs a goodness-of-fit test
+with the filtered data on the tab FIT.
+• Click Select and select one, several or all distributions in the dialog that opens.
+• Enter a Level of significance for the values. You can enter a number between 0 and 1. In most cases
+you will enter a number between 0 and 0.2.
+• Click Fit to estimate the parameters for the selected distribution or distributions using the sample.
+• If you are investigating a large sample, you will have to use the Chi-Square Test is the Goodness-of-Fit
+Test. For this you have to enter the Number of classes. The Goodness-of-Fit Test describes how good
+the distribution with its parameters fits the given sample.
+• Click Show to display a histogram of the sample in a chart.
+Once you have entered the required data or selected the required settings, you can proceed to the tab
+Evaluation.
+Back to Distribution-Fitting with DataFit
+Fit Data in DataFit
+Plant Simulation Help 10-861
+Unpublished work. © 2026 Siemens
+
+Evaluate Data in DataFit
+In this step we evaluate data in DataFit.
+Perform an analysis of the filtered data on the tab Evaluation.
+Select how DataFit sorts the fitting tests:
+• The Chi-Square test suits all purposes. It splits up the sampled data into classes. The sample has to have
+more than 40 values.
+• The Kolmogorov-Smirnov and the Anderson-Darling test are only suited for continuous distributions
+with 10 to 2000 values.
+Open the results table that shows which parameters of which distribution to enter in Plant Simulation.
+• The columns Result Chi, Result KS, Result AD tell, if the distributions are applicable to the sampled
+values or not. This is the case, when the respective value statistic is less than the respective value.
+Naturally, the evaluation takes the Level of significance into account.
+• The columns labeled Parameter 1, Parameter 2, and Parameter 3 show the exact numbers and the
+names of the rounded parameters as you enter them into the dialogs of the Plant Simulation objects.
+• To show a Report of the parameters and the goodness-of-fit test, click Show.
+• To reduce the size of the model, which might have been bloated by the Report, click Delete.
+• When none of the selected distributions adequately represent the properties of the sample, you can use
+an empirical distribution to model the data of the sample in Plant Simulation. Click Open to open the
+Frequency table.
+Back to Distribution-Fitting with DataFit
+Evaluate Data in DataFit
+10-862 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Use Distributions with Bounds
+The distributions you use in your simulation have realizations that may be arbitrarily large or small,
+respectively. For this reason, you will use distributions with upper and lower bounds, to cut off values you
+do not want to consider.
+Be aware that using a distribution with bounds will change the mean value and the standard deviation.
+When you use the normal distribution for modeling a random time, the lower bound automatically will be
+0.
+When you type in the parameters µ = 2.0, and σ = 1 for the normal distribution, a real mean value of the
+distribution with the lower bound 0 and the upper bound 3 will be 1.77.
+Use the object TruncDistribution 
+  for distributions with bounds.
+• Select a distribution and both bounds.
+Use Distributions with Bounds
+Plant Simulation Help 10-863
+Unpublished work. © 2026 Siemens

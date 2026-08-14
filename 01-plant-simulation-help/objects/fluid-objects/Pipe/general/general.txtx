@@ -1,0 +1,267 @@
+SetupTime [SimTalk] - fluid objects
+Sets the duration of the Set-up Time of the fluid object designated by <Path>.
+Remarks
+A fluid object has to set up whenever the name of the next material differs from the name of its preceding
+material.
+The set-up time is the time it takes to set the object up for processing a different type of material. An
+identical name designates that materials are of the same type.
+Type
+Attribute
+Syntax
+<Path>.SetupTime:time
+Assignment Value
+You can assign a value of data type time.
+Example
+MyMixer.SetupTime := 120 // 2 minutes
+See also
+Set-up Time [general description]
+Times and Distributions
+Pipe
+Pipe
+Use the object Pipe to transport free-flowing materials between the other fluid objects in the plant.
+SetupTime [SimTalk] - fluid objects
+11-2678 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Image
+Description
+Insert Pipes to transport free-flowing materials between the objects FluidSource 
+ , Tank 
+ , Mixer 
+ ,
+Portioner 
+ , DePortioner 
+ , and FluidDrain 
+ .
+While material flows through the Pipe, it shows the color of that material as its color. This is the color
+which you selected for the material in the MaterialsTable. You have to establish connections between
+Pipes and fluid objects with the Connector 
+ . To make materials flow between the fluid objects, you have
+to use Pipes.
+You can insert the Pipe into a Frame:
+• As a curved object, which is the default setting.
+• By inserting any sequence of curved segments and straight segments, you can realistically model curved
+conveyor systems through which the fluids flow.
+You can select different configurations for the Pipe on the tab Appearance.
+To show a tooltip with information about the Pipe, hover with the mouse over it.
+Pipe
+Plant Simulation Help 11-2679
+Unpublished work. © 2026 Siemens
+
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+The manipulator at the start and at the end of the length-oriented object is cut off. When you attach an
+object of the same type to the other object, the two combined halves result in a complete manipulator
+again. When you move the mouse over a manipulator, Plant Simulation shows a Tooltip.
+The height of the manipulators of the Pipe goes by the width of the Pipe.
+Add the Object to the Simulation Model
+To add the object Pipe to your simulation model, click 
+  Manage Class Library > Basic Objects > Fluids
+> Pipe on the Home ribbon tab.
+Pipe
+11-2680 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Dialog Box of the Pipe
+Dialog Box of the Pipe
+Double-click the icon of the Pipe to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the Pipe
+Plant Simulation Help 11-2681
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes [Pipe]
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+To change the length of the graphic and the anchor points of the Pipe, click Show Manipulators 
+  on
+the Edit ribbon tab or press M on the keyboard.
+Tab Attributes
+11-2682 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Outflow Rate [Pipe]
+Type the Outflow Rate into the text box with which the material flows out of the Pipe to the next object
+in the flow of materials. The default value -1 denotes that the Pipe uses the same outflow rate as its
+predecessor.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+This applies to a Pipe that is located directly after a FluidSource, a DePortioner, a Tank, or a Mixer.
+Note
+This applies to a Pipe that is located directly after a FluidSource, a DePortioner, a Tank, or a Mixer.
+Note
+If you enter another value than the default value, Plant Simulation uses the entered Outflow Rate even
+if it is higher than the Outflow Rate of the predecessor.
+The Outflow Rate enables you to create the effect that not all of the succeeding Pipes connected to a
+FluidSource, a Tank, a DePortioner, or a Mixer, have to have the same Outflow Rate.
+If the predecessor of the Pipe is another Pipe, Plant Simulation ignores the value. For this reason the text
+box is unavailable.
+This does not apply if the Pipe has a single successor and if the predecessor Pipe has a single successor as
+well. Thus, if several Pipes are arranged one behind the other, Plant Simulation uses the lowest specified
+value for all Pipes.
+SimTalk
+OutflowRate [SimTalk] - Pipe
+Outflow Rate [Pipe]
+Plant Simulation Help 11-2683
+Unpublished work. © 2026 Siemens
+
+Pipe Opened [check box]
+To open the entrance of the Pipe so that materials can flow through it, select this check box. To close the
+Pipe, clear the check box.
+Remarks
+With an opened Pipe you can model a valve or a gate valve to open and to close the Pipe.
+If you clear Pipe Opened, it shows the state Pipe Closed in cyan.
+State vertical State horizontal
+SimTalk
+PipeOpened [SimTalk]
+Exit Strategy
+Exit Strategy - Pipe
+Select the Exit Strategy according to which the Pipe distributes the flow rate of the materials to the
+succeeding fluid objects.
+You can select one of these settings:
+• Evenly distributed
+• Percentage [Pipe]
+Note
+To show the items belonging to the new strategy, click Apply after you selected another strategy.
+Pipe Opened [check box]
+11-2684 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Evenly distributed
+To distribute the flow rate of the Pipe evenly among the succeeding fluid objects, select this setting.
+SimTalk
+ExitStrategy [SimTalk] - Pipe
+Evenly distributed
+Plant Simulation Help 11-2685
+Unpublished work. © 2026 Siemens
+
+Percentage [Pipe]
+To distribute the flow rate of the Pipe according to a proportional distribution among the succeeding
+fluid objects, select this setting.
+Remarks
+To show the button Open List, click Apply.
+Open List
+Click Open List and type in the percentages for the individual succeeding objects. In the example below
+successor 1 receives 20% of the material, successor 2 receives 30%, etc.
+Type 0 into the cell of the respective successor to prevent that successor from receiving any material.
+If a successor cannot receive any material, because a succeeding Tank is full for example, the Pipe
+distributes the portion of that successor of the flow rate according to the percentages to the remaining
+successors.
+The sum of the percentages does not have to add up to 100%. Instead, the actual sum of the percentages
+of all successors, which can receive material, corresponds to a value of 100%. The percentages [40, 60],
+[0.4, 0.6], and [2, 3] are equivalent for example.
+SimTalk
+ExitStrategyPercentageValues [SimTalk] - Pipe
+See also
+Exit Strategy - Pipe
+Percentage [Pipe]
+11-2686 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Current Material [Pipe]
+Shows the name of the material that currently flows through the Pipe.
+Remarks
+Note
+The name is not case-sensitive, just like the names of attributes and methods of the objects are not
+case-sensitive.
+To save memory and improve access speed, all places which are using such a case-insensitive string
+are pointing to the same string in main memory. The visible and unexpected result is that the first
+occurrence of the string defines how the string is written in terms of upper- and lower-casing.
+In SimTalk you can compare strings in an case-insensitive manner with the ~= operator, compare
+Relational Operators.
+The Pipe shows the current material with the color which you assigned to the material.
+SimTalk
+CurrentMaterial [SimTalk] - Pipe
+Current Material [Pipe]
+Plant Simulation Help 11-2687
+Unpublished work. © 2026 Siemens
+
+Current Flow Rate [text box]
+Shows the Current Flow Rate of the materials flowing through the Pipe. This is the amount of liters per
+second.
+SimTalk
+CurrentFlowrate [SimTalk]
+Current Flow Rate [text box]
+11-2688 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Set-up Time [general description]
+SetupTime [SimTalk] - fluid objects
+Select the Set-Up Time
+Tab Times
+Plant Simulation Help 11-2689
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+The Pipe provides the statistics values described under the Tab Statistics.
+Tab Statistics
+11-2690 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined Attributes
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined Attributes
+Plant Simulation Help 11-2691
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2692 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+Plant Simulation Help 11-2693
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2694 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Pipe
+Methods of the Pipe
+The Pipe provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+Plant Simulation Help 11-2695
+Unpublished work. © 2026 Siemens

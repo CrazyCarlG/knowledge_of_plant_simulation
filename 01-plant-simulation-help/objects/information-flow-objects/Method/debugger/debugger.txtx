@@ -1,0 +1,727 @@
+The Method Debugger
+Method Debugger
+Debug the source code which you wrote in the Method Editor in the Method Debugger while the Method is
+being executed.
+Remarks
+To open the Method Debugger you can either:
+• Press F11 in the Method Editor window.
+• Select the command Debug Method on the Tools Ribbon Tab in the Method Editor window.
+Note
+If Plant Simulation is running in the foreground and is stuck in an endless loop, hold down Ctrl+Alt+left
+Shift for several seconds to open the Debugger while a Method is being executed.
+If Plant Simulation is not running in the foreground, hold down Ctrl+Alt+right Shift for several seconds
+to open the Debugger while a Method is being executed.
+Note
+Plant Simulation opens the Debugger automatically when it encounters an error while executing the
+source code or when it hits a breakpoint.
+The Method Debugger
+11-3670 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The Debugger window shows source code with the parameters and local variables of the Method. You can
+set breakpoints at critical points and then check each step of the Method execution to see if the source
+code does what you programmed it to do:
+Remarks
+Plant Simulation Help 11-3671
+Unpublished work. © 2026 Siemens
+
+• Press F9 and select the context menu command or click the right mouse button while holding Shift
+down to insert a Class Breakpoint, designated by a filled red circle 
+  to the left of the line.
+• Press Shift+F9 and select the context menu command or click the right mouse button while holding
+Shift+Ctrl down to insert an Instance Breakpoint, designated by a red star 
+  to the left of the line. It
+only applies to this instance.
+Once execution of the Methods reaches this Method, Plant Simulation opens the Method Debugger.
+It shows the values of attributes and local variables as a Tooltip when you drag the mouse over the
+instruction.
+Double-click a word to select it. Triple-click in a line to select the entire line. Quadruple-click to select the
+entire source code.
+The Method highlights lines with faulty source code in red in the Method Debugger. It shows a message
+telling you what’s wrong in the status bar of the Method Debugger window.
+To restart executing the source code that follows after break point or an error, hold down Ctrl and
+double-click that line.
+If the Method Debugger was opened because of a runtime error and if you then close the Method
+Debugger, Plant Simulation terminates all call chains without asking and stops the simulation.
+If you only want to terminate the incorrect call chain and continue the simulation, press F5 instead of
+closing the Method Debugger.
+If you do not want to terminate the incorrect call chain, you can continue executing the incorrect Method
+in a certain line of code by calling the context menu command Set Next Statement, or by placing the
+input cursor into this line and by pressing Ctrl+F10, or by holding down Ctrl and double-clicking this line.
+Then press F5 to continue executing the Method in this line.
+The lower part of the Debugger window shows the Watch Window with the Tab Variables, the Tab
+Anonymous Identifiers, the Tab Call Stack, the Tab Call Chains, the Tab Suspended, and the Tab
+Expressions.
+This is especially handy if you want to show the contents of two tabs of the Watch Window at the same
+time. Then, you can click 
+  and open a second watch window and click another tab there. You can
+change its height by dragging the splitter.
+Remarks
+11-3672 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Toolbar of the Method Debugger
+Menu Bar of the Method Debugger
+Context Menu of the Method Debugger
+_Functions for Debugging the Model
+Video on YouTube
+https://youtu.be/pbOQD0p4hO4?si=P0Frai1pltBZLxAD&t=614
+Watch Window
+Watch Window [described]
+The Watch window shows information about the variables and anonymous identifiers used in your source
+code.
+Open the Watch Window
+• Click 
+  on the Toolbar of the Method Debugger
+.
+• Press the F12 key.
+• Select the menu command Debug > Watch Window. By default, the Watch Window is part of the
+Debugger window.
+See also
+@ [at sign, Method Debugger]
+? (Question mark)
+See also
+Plant Simulation Help 11-3673
+Unpublished work. © 2026 Siemens
+
+Tab Variables [Watch window]
+The tab Variables shows the names of all local variables and their values in their source code.
+Remarks
+If you double-click a variable, Plant Simulation opens the dialog Variable in which you can change the
+value of the variable. Click OK to apply the new value and to close the dialog. Click Cancel to discard your
+changes and to close the dialog.
+The context menu shows the exact value with 17 floating point digits for local variables of data type
+real, length, weight, speed, and acceleration. For values with a physical unit (length, weight, speed,
+and acceleration) the value is shown in the respective SI unit, as Plant Simulation always keeps values
+internally in SI units. If you selected another unit, Plant Simulation only converts the value for display
+purposes when showing it. This has the advantage that Plant Simulation always computes with the same
+numbers, independent of the selected unit, and that then the same rounding inaccuracies occur. Plant
+Simulation thus always computes the same simulation results independent of the selected units.
+See also
+Local Variables
+Tab Anonymous Indentifiers
+Tab Anonymous Identifiers [Watch window]
+The tab Anonymous Identifiers shows the anonymous identifiers @, ?, current, self, root, and
+rootfolder.
+Remarks
+For user-defined attributes of data type Method Plant Simulation shows self.~ in addition.
+For formulas and tables Plant Simulation shows xSelf and ySelf.
+Tab Variables [Watch window]
+11-3674 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The cells next to the anonymous identifiers @ and ? allow you to test the Method without running a
+simulation. You only need to type something into these cells if you used @ and ? in your method.
+If you type a path for @ or ? in the Method Debugger and type this anonymous identifier into a Method,
+Plant Simulation will internally replace this anonymous identifier with the specified path.
+The Watch Window shows changed values in red in the cells under Value.
+See also
+Anonymous Identifiers [described]
+Object Paths in SimTalk
+@ [at sign, Method Debugger]
+? [question mark, Method Debugger]
+current [SimTalk] - anonymous identifier
+self [SimTalk] - anonymous identifier
+root [SimTalk] - anonymous identifier
+rootfolder [SimTalk] - anonymous identifier
+Video on YouTube
+https://youtu.be/pbOQD0p4hO4?si=dZeZUnfEYpNkq8uQ&t=552
+See also
+Plant Simulation Help 11-3675
+Unpublished work. © 2026 Siemens
+
+@ [at sign, Method Debugger]
+The cell @ in the column Name shows the identifier of the active MU, i.e., the MU that triggers the call of
+the current Method in a control. You cannot change the contents of the cell!
+Remarks
+Press F2 to open the dialog box of the MU. If a user-defined method contains the identifier @ and if you
+would like to test the Method without running the simulation, you have to specify a suitable object in the
+object Method. The Debugger uses the contents of the cell @ of the Method.
+The Watch Window shows changed values in red in the cells under Value.
+See also
+Anonymous Identifiers > @ [SimTalk] - anonymous identifier
+@ [at sign, Method Debugger]
+11-3676 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+? [question mark, Method Debugger]
+The cell ? in the column Name shows the name of the object that calls the Method.
+Remarks
+If that is another Method, the cell contains the name of that Method. Otherwise, it contains the name of
+the object in which a MU triggered a control call. You cannot change the contents of the cell!
+Press F2 to open the dialog box of the calling object. If a user-defined Method contains the identifier ? and
+you would like to test the Method without running the simulation, you have to specify a suitable object in
+the object Method. The Debugger uses the contents of the cell ? of the Method.
+The Watch Window shows changed values in red in the cells under Value.
+See also
+Anonymous Identifiers [described] > ? [SimTalk] - anonymous identifier
+Tab Call Stack [Watch window]
+Shows the sequence in which the Methods are called, i.e., the call chain. The first Method to be activated
+is always located at the bottom of the list, while the top line shows the Method being executed at the
+moment.
+? [question mark, Method Debugger]
+Plant Simulation Help 11-3677
+Unpublished work. © 2026 Siemens
+
+Remarks
+Double-click a cell on the tab Call Stack to open the respective Method, together with its current settings
+of local variables and parameters, in the Debugger. Double-click the topmost cell to return to the Method
+being executed at the moment.
+The column Method shows the name of the Method.
+The column Parameters shows the parameters of the Method.
+Note
+The column always shows the current value of the parameters, i.e., if the value was changed in the
+meantime, the new value is shown, not the value that was originally passed to the Method.
+SimTalk
+getCallStack [SimTalk]
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=A_B8xFC_7MKVPVu1&t=552
+Tab Call Chains [Watch window]
+Shows Methods which are ready to be executed immediately.
+Remarks
+Do not confuse these with the active Method being executed at the moment.
+11-3678 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active Methods are methods that were called and are now waiting to be executed while other Methods,
+such as other controls triggered by events, are still being executed.
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=A_B8xFC_7MKVPVu1&t=552
+Tab Suspended [Watch window]
+Shows Methods that were suspended by a waituntil-statement or by a stopuntil-statement.
+Remarks
+The Tab Suspended also shows Methods, which have been suspended by a wait-instruction or by a sleep
+[SimTalk]-instruction.
+The caller of the Method is displayed in parentheses, preceded by the absolute Path. Double-click an entry
+to change to that Method. The third column shows the statement which suspended the Method.
+If you add a comment after a waituntil-statement, a stopuntil-statement, a wait-statement, or a sleep-
+statement to the source code of your Method and if this comment starts with three hyphens --- or with
+three forward slashes ///, Plant Simulation does not show the entire statement on the Tab Suspended of
+the Watch Window and of the Method Debugger, but only the comment.
+Video on YouTube
+Plant Simulation Help 11-3679
+Unpublished work. © 2026 Siemens
+
+The method deleteSuspendedMethods deletes all suspensions of all methods.
+Plant Simulation shows as tooltip in the Frame window.
+The tooltip shows the caller of the method, in our case the ExitContr, and the suspended instruction, in
+our case waituntil SP.empty prio @.ID wait 5:00 ? = PP, which is suspended three times.
+SimTalk
+deleteSuspendedMethods [SimTalk]
+SimTalk
+11-3680 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Maximum Number of Suspended Methods [preferences]
+waituntil [SimTalk] and stopuntil [SimTalk]
+Suspending Methods
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=EdR1UR3xDQhZTeZq&t=993
+Tab Expressions [Watch window]
+Type in any kind of expression which the Debugger is going to evaluate on the tab Expressions.
+Remarks
+Double-click a row in the list, type in an expression, for example self.xPos+1, and click OK, so that Plant
+Simulation applies this entry.
+You will notice that the Debugger shows self.xPos+1 in the column Expression and current value in the
+column Value. If you select Show Expression for all Methods, Plant Simulation shows this expression in
+the dialog of all Methods.
+You can edit the contents of the tab Expressions on the tab itself. To open a variable or an expression
+whose value has the data type object, click in the cell and press F2. If the tab Expressions shows a local
+variable or an attribute, you can edit its value in the cells in the column Value.
+Note
+The tab Expressions is not available if the Method is executed as a formula.
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=A_B8xFC_7MKVPVu1&t=552
+See also
+Plant Simulation Help 11-3681
+Unpublished work. © 2026 Siemens
+
+Toolbar of the Method Debugger
+The toolbar of the Method Debugger provides buttons with commands helping you to debug your
+methods.
+To do this Click Menu command, SimTalk
+Open the location of the Method, i.e., the Frame in which the
+Method is located.
+Open Location, Location
+[SimTalk] - material flow
+objects
+Open the origin of the Method from which the active Method was
+derived.
+Open Origin, Origin
+Return the Debugger to the currently executed Method.
+ —
+Open the Watch Window.
+ Watch Window
+Execute one line of the debugged Method at a time. Any methods
+being called in that line of the source code will not be loaded.
+Step Over
+Execute one line of the debugged Method at a time. If that line of
+the source code happens to call other Methods, these are loaded
+as well.
+Step Into
+Step out of the current Method and move on to beginning of the
+next statement in the calling Method.
+Step Out
+Continue executing the active Method.
+ Continue
+Stop the simulation, i.e., stop the execution of all active Methods.
+ Terminate Simulation
+Insert a breakpoint into the class or remove it from it.
+ Class Breakpoint
+Insert a breakpoint into the instance or remove it from it.
+ Instance Breakpoint
+Delete all breakpoints in the Method.
+ Remove All Breakpoints ,
+clearAllBreakpoints
+[SimTalk]
+Temporarily activate or deactivate the animation of the moving
+objects and object states. Plant Simulation restores the original
+setting as soon as you close the Debugger window.
+MU and State Animation
+Toolbar of the Method Debugger
+11-3682 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Menu Bar of the Method Debugger
+Menu Bar of the Method Debugger
+The menu bar provides the File Menu, the Edit Menu, the Navigate Menu, the Debug Menu, the View
+Menu, the Tools Menu, and the Help Menu.
+File Menu [Method Debugger]
+The File menu provides commands to access its functions.
+Export to File [source code]
+Print [source code]
+Apply Changes [source code]
+They are described under the Edit Ribbon Tab [Method].
+Edit Menu [Method Debugger]
+The commands are described under the Edit Ribbon Tab.
+Navigate Menu
+Navigate Menu
+The Navigate Menu provides commands to access its functions.
+Open Location [described]
+Open Origin [described]
+Open Class [described]
+Go to Class [described]
+Open Frame [Method Debugger]
+Open Frame [Method Debugger]
+Opens the Frame into which you inserted the Method if that Frame window is closed. If the Frame window
+is open, Open Frame brings it to the foreground.
+Menu Bar of the Method Debugger
+Plant Simulation Help 11-3683
+Unpublished work. © 2026 Siemens
+
+Debug Menu
+Debug Menu
+The Debug menu provides the commands listed in the table of contents to the left.
+You can select most of these settings for all Methods on the Debugger Ribbon Tab in the program
+window.
+Stop On
+Opens a submenu on which you can select at which event the Method Debugger stops when executing a
+Method.
+Stop on Controls
+The command Stop on Controls stops the simulation when the EventController encounters a Method—an
+Entrance Control or Exit Control which you typed into an object—that is started from an object and
+before executing the calling Method. Plant Simulation only executes calls by control methods during a
+simulation run.
+Instead, you can also click Stop on Controls 
+  on the Debugger Ribbon Tab of the Method.
+Stop on Formulas
+The command Stop on Formulas stops the simulation and opens the Method Debugger whenever a
+formula is evaluated.
+Instead, you can also click Stop on Formulas 
+  on the Debugger Ribbon Tab of the Method.
+Debug Menu
+11-3684 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Stop on Error Handler
+The command Stop on Error Handler stops the simulation and opens the Method Debugger whenever an
+error handling method is executed.
+Instead, you can also click Stop on Error Handlers 
+  on the Debugger Ribbon Tab of the Method.
+Stop on Wakeup
+The command Stop on Wakeup stops the simulation and opens the Method Debugger whenever the
+execution of a suspended method is being continued.
+Plant Simulation stops the simulation when waking up all suspended Methods that were suspended with
+waituntil, stopuntil, wait, or sleep(true, false).
+Instead, you can also click Stop on Wakeup 
+  on the Debugger Ribbon Tab of the Method.
+On Step Into [submenu]
+Opens a submenu on which you select into which parts of the source code the Method Debugger steps
+when debugging a Method.
+Step into Controls
+The command Step into Controls steps into other call chains to debug the executed Method. Such a
+call chain can either be a control or a woken up suspended Method, the instruction @.move could, for
+example, activate an Entrance Control.
+Step into Formulas
+The command Step into Formulas steps into other formulas to debug the executed Method. The
+instruction print table[1,1] could, for example, compute a formula which is located in this cell.
+Stop on Error Handler
+Plant Simulation Help 11-3685
+Unpublished work. © 2026 Siemens
+
+Step into Encrypted Methods
+The command Step into Encrypted Methods sets if the command Step Into (F11) stops in encrypted
+Methods or not.
+• By default Step into Encrypted Methods is deactivated, meaning that the command Step Into does not
+stop in encrypted Methods.
+• If you activate Step into Encrypted Methods, Step Into also stops in encrypted Methods.
+The Method-Debugger then shows the message The source code is encrypted instead of the source
+code as such.
+Step into Encrypted Methods
+11-3686 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Ignore
+Opens a submenu on which you can select which types of events the Method Debugger ignores when
+executing a Method.
+Ignore Breakpoints
+The command Ignore Breakpoints ignores the user-defined breakpoints you set with the commands
+Toggle Class Breakpoint and Toggle Instance Breakpoint.
+Instead, you can also click Ignore Breakpoints 
+  on the Debugger Ribbon Tab of the Method.
+SimTalk
+ignoreBreakpoints
+Ignore Error Handlers
+The command Ignore Error Handlers does not execute error handling methods if a runtime error in a
+Method occurs while it is being executed.
+Instead, Plant Simulation opens the Method Debugger at the position in the source code at which the
+runtime error occurred.
+Instead, you can also click Ignore Error Handlers 
+  on the Debugger Ribbon Tab of the
+Method.
+SimTalk
+ignoreBreakpoints [SimTalk]
+Ignore
+Plant Simulation Help 11-3687
+Unpublished work. © 2026 Siemens
+
+Ignore Errors
+The command Ignore Errors stops the simulation after an error occurred in the current Method. Plant
+Simulation opens the Method Debugger with the Method containing the error and highlights the line
+containing the error in red.
+Note
+The simulation might continue if additional events are contained in the Event List in the
+EventController. This way you can continue working, although your model contains methods with faulty
+source code.
+If an error occurs, Plant Simulation shows an error message in the status bar. It contains a description of
+the error, the Method, the line number of the error, and the active call chain
+Instead, you can also click Ignore Errors 
+  on the Debugger Ribbon Tab of the Method.
+SimTalk
+setErrorStop [SimTalk]
+Ignore Errors in Formulas
+The command Ignore Errors in Formulas prevents opening the Method Debugger when a runtime error
+occurs in a formula.
+Instead, you can also click Ignore Errors in Formulas 
+  on the Debugger Ribbon Tab of the
+Method.
+Step Over
+Executes the source code of the Method one line at a time. Method execution stops before the next line of
+source code.
+Remarks
+Other Methods that are being called in that line of the source code are not loaded into the Method
+Debugger.
+Step Over
+11-3688 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Or click 
+  on the Toolbar of the Method Debugger
+.
+The Method Debugger shows the elapsed time when you execute one or several instructions in a Method
+with the commands Step Over, Step Into, Step Out, or Run to Cursor and if executing the instructions
+takes 10 milliseconds or longer.
+Video on YouTube
+https://youtu.be/pbOQD0p4hO4?si=P0Frai1pltBZLxAD&t=614
+Step Into
+Executes one line of the source code of the debugged Method at a time.
+Remarks
+If the line happens to call other methods, Plant Simulation loads this Method into the Method Debugger as
+well. Method execution stops before the next line in the called Method.
+The command Step Into does not jump into encrypted Methods. If the next instruction is the call of
+an encrypted Method, the command Step Into behaves like the command Step Over, meaning that it
+executes the source code of the Method line by line.
+Video on YouTube
+Plant Simulation Help 11-3689
+Unpublished work. © 2026 Siemens
+
+Or you can click 
+  on the Toolbar of the Method Debugger
+.
+Note
+Step Into and Step Over do not differ if the next line of the source code to be executed does not contain
+a method call.
+The Method Debugger shows the elapsed time when you execute one or several instructions in a Method
+with the commands Step Over, Step Into, Step Out, or Run to Cursor and if executing the instructions
+takes 10 milliseconds or longer.
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=T8hXaB_8xak8P6Rv&t=453
+Step Out
+Finishes executing the current Method and steps out of it. It then stops at the next statement of the calling
+Method.
+Remarks
+Or click 
+  on the Toolbar of the Method Debugger
+.
+Video on YouTube
+11-3690 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The Method Debugger shows the elapsed time when you execute one or several instructions in a Method
+with the commands Step Over, Step Into, Step Out, or Run to Cursor and if executing the instructions
+takes 10 milliseconds or longer.
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=T8hXaB_8xak8P6Rv&t=453
+Continue [method execution]
+Continues executing the active Method.
+Or you can click 
+  on the Toolbar of the Method Debugger
+.
+Run to Cursor
+Continues executing the Method until it reaches the statement at which the cursor is located.
+Remarks
+The Method Debugger shows the elapsed time if you execute one or several instructions in a Method with
+the commands Step Over, Step Into, Step Out, or Run to Cursor and if executing the instructions takes
+10 milliseconds or longer.
+Video on YouTube
+Plant Simulation Help 11-3691
+Unpublished work. © 2026 Siemens
+
+Set Next Statement
+Sets the next statement that is going to be executed.
+Remarks
+Click Yes in the dialog that opens to continue executing the current Method in the line in which the cursor
+is located.
+Click No if you do not want this and to return to the current position of the cursor.
+Let us illustrate this with an example: Suppose a Method is caught in an endless loop. To get out of this,
+hold down the Shift+Ctrl+Alt keys to stop method execution, and set the cursor outside of the loop.
+Then, press Ctrl+F10 to get out of the loop and press F5 to continue executing the Method.
+Note
+The feature Set Next Statement provides the same function as Ctrl+double-clicking the left mouse
+button.
+Return From Current Call Chain
+Terminates the entire call chain which was invoked to start the current Method. The simulation run will
+continue afterward.
+Set Next Statement
+11-3692 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Terminate Simulation
+Terminates all call chains, i.e., the current and all other call chains pointing to waiting methods, and stops
+the simulation.
+Or click 
+  on the Toolbar of the Method Debugger
+.
+Restart Simulation
+Starts the simulation again after you stopped it.
+Remarks
+Restart Simulation does the same as clicking Reset Simulation and then clicking Start/Stop Simulation
+in the EventController does, i.e., it terminates the active simulation run and resets and starts the
+simulation again.
+Class Breakpoint
+Inserts a breakpoint into the class of the source code or removes it from it.
+Remarks
+The command is described under Toggle Class Breakpoint.
+To insert a class breakpoint, you can also click 
+  on the Toolbar of the Method Debugger
+.
+Terminate Simulation
+Plant Simulation Help 11-3693
+Unpublished work. © 2026 Siemens
+
+Instance Breakpoint
+Adds an instance breakpoint to this instance of the source code or deletes it.
+Instance Breakpoint Command
+The command is described under Toggle Instance Breakpoint.
+To insert an instance breakpoint, you can also click 
+  on the Toolbar of the Method Debugger
+.
+Breakpoint Active [Debug menu]
+Activates or deactivates the selected breakpoint.
+See also
+Tools ribbon tab > Manage Breakpoints
+Breakpoint Active [Debug menu]
+Breakpoint Active [context menu]
+Breakpoint Settings [context menu]
+Working in the Method Window
+Breakpoint Settings
+Breakpoint Settings [Debug menu]
+Opens the dialog Breakpoint Settings in which you can set a Start Time and a Condition for the
+breakpoint.
+Instance Breakpoint
+11-3694 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active
+To activate the breakpoint, select the check box.
+To deactivate the breakpoint, clear it. Plant Simulation then does not stop at this breakpoint anymore.
+Start Time
+Type in the Start Time at which the breakpoint is going to be activated. Plant Simulation only stops if the
+EventController has reached or exceeded that point in time.
+Condition
+Type in the Condition which Plant Simulation evaluates each time when the breakpoint is reached. Plant
+Simulation only stops if the condition is fulfilled.
+See also
+The Dialog Box Breakpoint
+> Breakpoint Active [Debug menu]
+Tools ribbon tab > Manage Breakpoints
+Breakpoint Active [context menu]
+Breakpoint Settings [context menu]
+Working in the Method Window
+Next Breakpoint [Debug menu]
+Goes to the next breakpoint, be it a class breakpoint or an instance breakpoint.
+See also
+Next Breakpoint [Tools ribbon]
+Previous Breakpoint [Debug menu]
+Goes to the previous breakpoint be it a class breakpoint or an instance breakpoint.
+Active
+Plant Simulation Help 11-3695
+Unpublished work. © 2026 Siemens
+
+See also
+Previous Breakpoint [Tools ribbon]
+Delete Class Breakpoints
+Deletes all breakpoints that you inserted with the command Toggle Class Breakpoint of the Method and
+its class.
+See also
+Toggle Class Breakpoint
+Delete Instance Breakpoints
+Deletes all breakpoints that you inserted with the command Toggle Instance Breakpoint of the Method in
+the Debugger window.
+See also
+Toggle Instance Breakpoint
+Delete All Breakpoints [Debug menu]
+Deletes all class breakpoints and all instance breakpoints you have set.
+Remarks
+To delete all breakpoints, you can also click 
+  on the Toolbar of the Method Debugger
+.
+See also
+clearAllBreakpoints [SimTalk]
+Delete Breakpoints in All Methods
+Deletes all breakpoints in all Methods.
+Remarks
+To delete all breakpoints in all methods, you can also select Delete All Breakpoints [Debugger ribbon] on
+the Toolbar of the Method Debugger.
+See also
+11-3696 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+clearAllBreakpoints [SimTalk]
+Watch Window [Debug menu]
+Opens the Watch Window, which shows information about the executed source code.
+See also
+Watch Window [described]
+View Menu
+View Menu [Method]
+The View Menu provides various commands.
+Show Line Numbers [Tools ribbon]
+Syntax-controlled Indentation [Tools ribbon]
+MUs and States [Method Debugger]
+MUs and States [Method Debugger]
+Temporarily activates or deactivates MU Animation and Icon Animation together.
+Remarks
+Plant Simulation restores the original state as soon as you close the Debugger window.
+Instead, you can also click 
+  on the Toolbar of the Method Debugger.
+See also
+MUs and States [Home ribbon]
+Toolbar of the Method Debugger
+Tools Menu
+Tools Menu
+The Tools Menu provides commands to access its functions.
+SimTalk
+Plant Simulation Help 11-3697
+Unpublished work. © 2026 Siemens
+
+Edit Controls [material flow objects] Rename [Method]
+Edit Observers [general description] Decrypt Method
+User-defined Attributes [Method Debugger]
+User-defined Attributes [Method Debugger]
+Opens a dialog in which you can add new user-defined attributes to the Method or in which you can edit
+and delete existing user-defined attributes.
+Click New to open the dialog User-defined Attributes [general description].
+Rename [Method]
+Opens the dialog Rename. Type in another name and another label for the Method.
+Help Menu [Method Debugger]
+The Help Menu provides commands to access its functions.
+Help on Debugger
+The command Help on Debugger opens the help topic pertaining to the Method Debugger.
+Help on Word
+The command Help on Word or F1 open help topic for the word over which the input cursor is located.
+This way you can quickly and easily get help for an instruction, for a built-in attribute or for a built-in
+method.
+Context Menu of the Method Debugger
+Context Menu of the Method Debugger
+The context menu of the Method Debugger provides these menu commands:
+Breakpoint Active Open Object
+Breakpoint Settings Show Object
+Toggle Class Breakpoint Cut
+Toggle Instance Breakpoint Copy
+User-defined Attributes [Method Debugger]
+11-3698 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Run to Cursor Paste
+Set Next Statement Delete
+See also
+Context Menu of the Method
+Breakpoint Active [context menu]
+To activate or deactivate the selected breakpoint, select Breakpoint Active.
+See also
+Debugger ribbon tab > Manage Breakpoints
+Breakpoint Active [Debug menu]
+Breakpoint Settings [Debug menu]
+Breakpoint Settings [context menu]
+To open the dialog Breakpoint in which you can set a Start time and a Condition for the breakpoint,
+select Breakpoint Settings.
+See also
+The Dialog Box Breakpoint
+Debugger ribbon tab > Manage Breakpoints
+Breakpoint Active [Debug menu]
+Breakpoint Settings [Debug menu]
+Open Object [Method Debugger]
+To open the object above whose instruction you moved the mouse in the source code, select Open
+Object.
+See also
+Plant Simulation Help 11-3699
+Unpublished work. © 2026 Siemens
+
+Show Object [Method Debugger]
+To open the Frame in which the object is inserted and select the object in this Frame, right-click it and
+select Show Object.
+Remarks
+If the selected object references another object, for example with a Variable, the command shows the
+referenced object, not the referencing object!
+The context menu of the Variable in the Method Debugger also provides the command Show Object.
+Cut [in Method Debugger]
+To cut the selected text and place it on the clipboard, select Cut.
+Show Object [Method Debugger]
+11-3700 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Copy [in Method Debugger]
+To copy the selected text to the clipboard, select Copy.
+Paste [in Method Debugger]
+To paste the contents of the clipboard at the cursor position, select Paste.
+Delete [in Method Debugger]
+To delete the selected text, select Delete.
+Methods of the Method
+_Methods of the Method
+Accessing a Method automatically executes its source code. If you want to access built-in methods,
+read-only attributes, or attributes, you have to use the reference operator &.
+The object Method provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+Note
+You can only access the methods of the object Method, which refer to the object itself, via the reference
+operator &. Without the & operator the method will be applied to the contents of the Method.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Copy [in Method Debugger]
+Plant Simulation Help 11-3701
+Unpublished work. © 2026 Siemens

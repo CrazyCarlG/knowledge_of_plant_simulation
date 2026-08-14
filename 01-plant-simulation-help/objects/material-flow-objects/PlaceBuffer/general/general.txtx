@@ -1,0 +1,351 @@
+   print place.MU(i)
+next
+// Returns the topmost MU of the stack:
+Store[1,1].Cont
+// Returns the second MU from the top on the place 1,2:
+Store[1,2].MU(2)
+SimTalk
+XDim [SimTalk] - Store
+YDim [SimTalk] - Store
+getStackHeight [SimTalk] - Store
+See also
+Z-Dimension [Store]
+Stack Parts in the Store
+Unload Stacked Parts
+mu [SimTalk] - PE, Store
+PlaceBuffer
+PlaceBuffer
+Use the object PlaceBuffer to process parts on a number of buffer places, which are arranged in a row, one
+behind the other. It is not part of the built-in objects that the Toolbox provides by default.
+Image
+Description
+The MUs, which the PlaceBuffer processes, have to advance from place to place and can only leave the
+PlaceBuffer after they passed the last place. This way, you can call and access each and every place
+individually.
+PlaceBuffer
+11-2042 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+We do not show the PlaceBuffer in new models by default. You have to add it yourself to your model.
+• If Sequentially Indexing is cleared, you can only set the Processing Time for the PlaceBuffer as a
+whole, not for the individual places. The Processing Time is equally distributed across all places. For a
+Processing Time of one minute and a Capacity of three places each place has a processing time of 20
+seconds.
+A part can move directly to an idle place in the PlaceBuffer if Sequentially Indexing is cleared. After the
+part has passed this and all succeeding places, it can exit the PlaceBuffer. If you create a part on an idle
+place, it does not have to pass this place, but may move on to the next place or to the next object.
+• If Sequentially Indexing is checked, the Processing Time for moving the part on to the next place is
+used up. For a capacity of four the threefold processing time passes at least before the part can leave
+the PlaceBuffer, as three move processes have to take place. The time can be extended through waiting
+times.
+The PlaceBuffer moves the part cyclically on to its successors. In case the first part cannot leave the
+PlaceBuffer, you can set how it moves on:
+• To make the MUs accumulate on the PlaceBuffer, select the check box Accumulating. This enables the
+MUs to move front to end to each other, when the exit of the PlaceBuffer is Blocked.
+• To make the MUs retain their distance to each other, i.e., make all succeeding MUs stop moving when
+the preceding MU cannot exit the PlaceBuffer, clear Accumulating.
+The default graphic of the PlaceBuffer is a table with a size of 2 by 1 by 1 meter on whose surface up to
+four parts are moved on in the X-Direction. When scaling the PlaceBuffer, typically only in the X-Direction,
+the pre-defined animation area is scaled as well so that you only have to adjust the Capacity.
+We offer two graphics for the PlaceBuffer:
+• The graphic Table2x1x1modular.jt in the folder jt-graphics which you can import into any object.
+• The alternative graphic PlacebufferModular.s3d in the folder s3d-graphics\BuffersAndSorters, allowing
+you to adapt the size of the table to your needs by changing the individually transformable graphics
+parts without changing the thickness of the elements of the table.
+You can also set the Animation Area on which the PlaceBuffer animates the parts.
+Note the following:
+1. If the Animation Area is active, the PlaceBuffer uses it. In this case the index of the MU is the index of
+the area in the X-Direction. The capacity in the Y-Direction is always 1.
+2. If a MU animation path named Default with more than one anchor points exists, the index of the
+MU is converted into a relative position. The MUs are then equally distributed on this line.
+PlaceBuffer
+Plant Simulation Help 11-2043
+Unpublished work. © 2026 Siemens
+
+3. In all other cases the PlaceBuffer uses the first path for the first MU, the second path for the second
+MU, etc. If no suitable path exists, but a path named Default exists, that consists of a single point
+only, the PlaceBuffer uses that path.
+If you want to model a buffer with a large capacity that has to be fast, we recommend to use the object
+Buffer 
+ .
+To show a tooltip with information about the PlaceBuffer, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the PlaceBuffer, click Show Manipulators
+[button] 
+  on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object PlaceBuffer to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > PlaceBuffer on the Home ribbon tab.
+Dialog Box of the PlaceBuffer
+Dialog Box of the PlaceBuffer
+Double-click the icon of the PlaceBuffer to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the PlaceBuffer
+11-2044 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-2045
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - PlaceBuffer
+Type the Capacity into the text box, i.e., the number of places of the PlaceBuffer.
+Remarks
+Type in -1 for an unlimited number of places if Sequentially Indexing is active. You can access the
+individual places of the PlaceBuffer by their index. You can only reduce the Capacity, if enough places are
+empty.
+You can only change the Capacity if no parts are located in the PlaceBuffer, i.e., if it is empty.
+SimTalk
+Capacity [SimTalk] - PlaceBuffer
+See also
+Sequentially Indexing [check box]
+Capacity [text box] - PlaceBuffer
+11-2046 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sequentially Indexing [check box]
+To only start the Processing Time on a place of the PlaceBuffer when the succeeding place is free, select
+this check box.
+Remarks
+Note
+In Sequentially Indexing mode, the Processing Time does not represent the time for which a part is
+processed on a place, but the time used for moving the part from its current place to the succeeding
+place. Suppose that we have a capacity of four, then the Processing Time passes three times before the
+part can leave the PlaceBuffer, because three move processes have to take place.
+The total time can get longer because of waiting times. For this reason no time is used on the last place
+and the part can exit the PlaceBuffer immediately once it reaches the last place, provided the successor
+can accept the part.
+If Sequentially Indexing is cleared, the default behavior of the PlaceBuffer applies.
+You can only set the Processing Time for the PlaceBuffer as a whole, not for the individual places.
+The Processing Time is equally distributed across all places and divided by the number of places. For a
+Processing Time of one minute and a capacity of three places each place has a processing time of 20
+seconds.
+SimTalk
+SequentiallyIndexing [SimTalk]
+See also
+Processing Time [PlaceBuffer]
+Capacity [text box] - PlaceBuffer
+Sequentially Indexing [check box]
+Plant Simulation Help 11-2047
+Unpublished work. © 2026 Siemens
+
+Accumulating [check box] - PlaceBuffer
+To make the MUs accumulate on the PlaceBuffer, select this check box.
+Remarks
+Accumulating behavior enables the MUs to move front to end to each other, if the exit of the PlaceBuffer
+is Blocked.
+To make the MUs retain their distance to each other, i.e., to make all succeeding MUs stop moving when
+the preceding part cannot exit the PlaceBuffer, clear Accumulating. If the preceding part cannot exit and if
+Accumulating is cleared, no additional MU can enter the PlaceBuffer.
+SimTalk
+Accumulating [SimTalk] - PlaceBuffer
+Tab Times
+Tab Times [PlaceBuffer]
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+Note
+You can only type in a constant Processing Time for the parts in the PlaceBuffer, no statistical
+distributions, no dependencies from the part type or no formulas.
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+Accumulating [check box] - PlaceBuffer
+11-2048 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Processing Time [PlaceBuffer]
+Recovery Time [general description]
+Recovery Time Starts
+Cycle Time [general description]
+Tab Times [PlaceBuffer]
+Plant Simulation Help 11-2049
+Unpublished work. © 2026 Siemens
+
+Processing Time [PlaceBuffer]
+Type in the Processing Time of MUs in the PlaceBuffer.
+Remarks
+You can only specify a constant Processing Time for the parts in the PlaceBuffer. You can neither select a
+probability distribution, nor a dependency on the MU type, nor a formula.
+For the PlaceBuffer the Processing Time is more of a Dwelling Time than a Processing Time as the parts
+are not really being processed, but buffered and then moved on.
+If Sequentially Indexing is cleared, you can only set the Processing Time for the PlaceBuffer as a whole,
+not for the individual places. The Processing Time is equally distributed across all places. For a Processing
+Time of one minute and a Capacity of three places each place has a processing time of 20 seconds.
+If Sequentially Indexing is selected, the Processing Time for moving the part on to the next place is used
+up. For a Capacity of four the threefold Processing Time passes at least before the part can leave the
+PlaceBuffer, as three move processes have to take place. The time can be extended through waiting times.
+SimTalk
+ProcTime [SimTalk] - material flow objects
+Processing Time [PlaceBuffer]
+11-2050 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Recovery Time/Cycle Time [PlaceBuffer]
+The Recovery Time and the Cycle Time are described under the Tab Times.
+SimTalk
+RecoveryTime [SimTalk] - material flow objects
+CycleTime [SimTalk]
+Recovery Time/Cycle Time [PlaceBuffer]
+Plant Simulation Help 11-2051
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2052 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+Plant Simulation Help 11-2053
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls
+11-2054 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit
+Plant Simulation Help 11-2055
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics
+11-2056 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+Plant Simulation Help 11-2057
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the PlaceBuffer buffers parts costs accrue which result from the sum of the investment costs and the
+operating costs.
+Note
+The investment costs only accrue during the Depreciation Period.
+The costs are allocated to the part, proportional to the capacity, as accrued costs.
+If the PlaceBuffer is empty, the costs remain with the PlaceBuffer as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+11-2058 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-2059
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2060 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Forward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+View Menu
+Plant Simulation Help 11-2061
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2062 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+Plant Simulation Help 11-2063
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the PlaceBuffer
+Methods of the PlaceBuffer
+The PlaceBuffer provides:
+• The method pe, [X Y].
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-2064 Plant Simulation Help
+Unpublished work. © 2026 Siemens

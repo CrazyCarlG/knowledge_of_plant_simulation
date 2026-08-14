@@ -1,0 +1,787 @@
+Accessing the Appearance of the Objects
+__Accessing the Appearance of Objects and MUs
+SimTalk provides the attributes and methods listed in the table of contents to the left for the object
+material of objects and MUs in 3D.
+Objects do not provide an object material:
+• If they have object-specific appearance settings, such as the length-oriented objects and the Store.
+• If they are used for connecting other objects, such as the Connector, the Interface, and the Marker.
+• If they are used for displaying text or values, or for selecting a setting, such as Comment, Variable,
+Display, Button, DropDownList, Checkbox, Chart, Tank and Mixer.
+Plant Simulation applies the attributes to all graphics of the specified object for which no material of its
+own is defined, for example
+• The T-Shirt of the Worker.
+• The body of the Transporter.
+• The entire graphic of the Container and the Part.
+• The blue graphics of the point-oriented objects, such as the Station, the Buffer, etc.
+• The light gray plate under the icon of logical objects, such as the information flow objects Method,
+DataTable, etc, and of the user interface objects SankeyDiagram, CostAnalyzer, etc.
+See also
+Edit 3D Properties [dialog] > Appearance of Objects and MUs
+Appearance of the Length-oriented Objects
+Appearance of the Store
+Accessing the Appearance of the Objects
+12-730 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialActive [SimTalk]
+Sets if the object designated by <Path> has an object-wide material (true) or not (false).
+Remarks
+Also sets if the MU designated by <MU-Path> has an object-wide material (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialActive:boolean
+<MU-Path>._3D.MaterialActive:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation._3D.MaterialActive := true
+MyPortioner._3D.MaterialActive := false
+.MUs.Part._3D.MaterialActive := true
+See also
+Edit 3D Properties [dialog] > Appearance of
+Objects and MUs > Material Active [check box]
+- MUs
+_3D.MaterialEmissiveColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialDiffuseColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialActive [SimTalk]
+Plant Simulation Help 12-731
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialAmbientColor [SimTalk]
+Sets the ambient color of the graphic of the object designated by <Path>.
+Remarks
+Also sets the ambient color of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialAmbientColor:integer
+<MU-Path>._3D.MaterialAmbientColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStation._3D.MaterialAmbientColor := makeRGBValue(0,0,255)
+MyPortioner._3D.MaterialAmbientColor := makeRGBValue(255,0,0)
+.MUs.Part._3D.MaterialAmbientColor := makeRGBValue(0,0,255)
+See also
+Edit 3D Properties [dialog] >Appearance of
+Objects and MUs > Ambient Color [MUs]
+_3D.MaterialEmissiveColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialDiffuseColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialAmbientColor [SimTalk]
+12-732 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialDiffuseColor [SimTalk]
+Sets the diffuse color of the graphic of the object designated by <Path>.
+Remarks
+Also sets the diffuse color of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialDiffuseColor:integer
+<MU-Path>._3D.MaterialDiffuseColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStation._3D.MaterialDiffuseColor := makeRGBValue(0,0,255)
+MyPortioner._3D.MaterialDiffuseColor := makeRGBValue(255,0,0)
+.MUs.Part._3D.MaterialDiffuseColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of
+Objects and MUs > Diffuse Color [MUs]
+_3D.MaterialEmissiveColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialDiffuseColor [SimTalk]
+Plant Simulation Help 12-733
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialEmissiveColor [SimTalk]
+Sets the emissive color of the graphic of the object designated by <Path>.
+Remarks
+Also sets the emissive color of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialEmissiveColor:integer
+<MU-Path>._3D.MaterialEmissiveColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStation._3D.MaterialEmissiveColor := makeRGBValue(0,0,255)
+MyPortioner._3D.MaterialEmissiveColor := makeRGBValue(255,0,0)
+.MUs.Part._3D.MaterialEmissiveColor := makeRGBValue(0,255,0)
+See also
+Edit 3D Properties [dialog] >Appearance of
+Objects and MUs > Emissive Color [MUs]
+_3D.MaterialDiffuseColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialEmissiveColor [SimTalk]
+12-734 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialShininess [SimTalk]
+Sets the shininess of the graphic of the object designated by <Path>.
+Remarks
+Also sets the shininess of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialShininess:real
+<MU-Path>._3D.MaterialShininess:real
+Assignment Value
+You can assign a value of data type real between 0 and 1.
+Example
+MyStation._3D.MaterialShininess := 0.7
+MyPortioner._3D.MaterialShininess := 0.8
+.MUs.Part._3D.MaterialShininess := 0.9
+See also
+Edit 3D Properties [dialog] > Appearance of
+Objects and MUs > Shininess [MUs]
+_3D.MaterialDiffuseColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialEmissiveColor [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialShininess [SimTalk]
+Plant Simulation Help 12-735
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialSpecularColor [SimTalk]
+Sets the specular color of the graphic of the object designated by <Path>.
+Remarks
+Also sets the specular color of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialSpecularColor:integer
+<MU-Path>._3D.MaterialSpecularColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStation._3D.MaterialSpecularColor := makeRGBValue(0,255,0)
+MyPortioner._3D.MaterialSpecularColor := makeRGBValue(0,0,255)
+.MUs.Part._3D.MaterialSpecularColor := makeRGBValue(0,255,0)
+See also
+Edit 3D Properties [dialog] > Appearance of
+Objects and MUs > Specular Color [MUs]
+_3D.MaterialDiffuseColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialEmissiveColor [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialTransparency [SimTalk]
+_3D.MaterialSpecularColor [SimTalk]
+12-736 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.MaterialTransparency [SimTalk]
+Sets the transparency of the graphic of the object designated by <Path>.
+Remarks
+Also sets the transparency of the graphic of the MU designated by <MU-Path>.
+Note
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.MaterialTransparency:real
+<MU-Path>._3D.MaterialTransparency:real
+Assignment Value
+You can assign a value of data type real between 0 and 1.
+Example
+MyStation._3D.MaterialTransparency := 0.75
+MyPortioner._3D.MaterialTransparency := 0.75
+.MUs.Part._3D.MaterialTransparency := 0.85
+See also
+Edit 3D Properties [dialog] > Appearance of
+Objects and MUs > Transparency [MUs]
+_3D.MaterialDiffuseColor [SimTalk]
+makeRGBValue [SimTalk] _3D.MaterialEmissiveColor [SimTalk]
+_3D.MaterialActive [SimTalk] _3D.MaterialShininess [SimTalk]
+_3D.MaterialAmbientColor [SimTalk] _3D.MaterialSpecularColor [SimTalk]
+_3D.MaterialTransparency [SimTalk]
+Plant Simulation Help 12-737
+Unpublished work. © 2026 Siemens
+
+_3D.ShowSafetyZones [SimTalk]
+Shows the defined safety zones of the Transporter designated by <Path> (true) or hides them (false).
+Type
+Attribute
+Syntax
+<Path>._3D.ShowSafetyZones:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+Station._3D.ShowSafetyZones := true
+See also
+Edit 3D Properties [dialog] > Appearance of Objects and MUs > Show Safety Zones
+Length Zone 1
+ΔWidth Zone 1
+Length Zone 2
+ΔWidth Zone 2
+Accessing the Appearance of the Store
+__Accessing the Appearance of the Store
+SimTalk provides the attributes listed in the table of contents to the left for setting the appearance of the
+Store in 3D.
+See also
+Edit 3D Properties [dialog] > Appearance of the Store
+_3D.ShowSafetyZones [SimTalk]
+12-738 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.Dimensions [SimTalk] - Store
+Sets the dimensions of the storage area of the Store designated by <Path>.
+Remarks
+For the dynamic types these dimensions designate the slot dimensions.
+For the non-dynamic types these dimensions designate the overall dimensions of the Store.
+Type
+Attribute
+Syntax
+<Path>._3D.Dimensions:length[3]
+Assignment Value
+You can assign an array of data type length with three values.
+They designate the X-dimension/width, the Y-dimension/depth, and the Z-dimension/height of the
+storage area.
+Example
+MyStore._3D.Dimensions := [2, 2, 0.01]
+See also
+Edit 3D Properties [dialog] > Store > X [text box] - Store, Y [text box] - Store, Z [text box] - Store
+_3D.Dimensions [SimTalk] - simulation object
+X [SimTalk] - array
+Y [SimTalk] - array
+Z [SimTalk] - array
+_3D.Dimensions [SimTalk] - Store
+Plant Simulation Help 12-739
+Unpublished work. © 2026 Siemens
+
+_3D.FloorThickness [SimTalk]
+Sets the Thickness of the base plate below the floor space of the Store designated by <Path> for the Store
+Type > Floorspace (dynamic).
+Remarks
+Also sets the Thickness of the individual shelves of the Store designated by <Path> for the Store Type >
+Rack with round/square posts (dynamic).
+Type
+Attribute
+Syntax
+<Path>._3D.FloorThickness:any
+Assignment Value
+You can assign a value of data type any.
+Specify void to use the default thickness.
+Example
+MyStore._3D.FloorThickness := 0.24
+See also
+_3D.StoreType [SimTalk]
+Edit 3D Properties [dialog] > Appearance of the Store > Floor Thickness
+Edit 3D Properties [dialog] > Appearance of the Store > Board Thickness
+_3D.FloorThickness [SimTalk]
+12-740 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.Gap [SimTalk]
+Sets the Gap, i.e., the distance between the individual rack bays for the dynamic store types of the Store
+designated by <Path>.
+Remarks
+Note
+The attribute only applies to the dynamic store types.
+For a dynamic rack, Plant Simulation implicitly uses a gap of 3 cm.
+For a dynamic floor space, Plant Simulation uses an effective gap of 0 cm which also includes the
+borderline.
+Type
+Attribute
+Syntax
+<Path>._3D.Gap:any
+Assignment Value
+You can assign a value of data type any.
+You can only assign a value greater than or equal to 0.
+Specify void to use no gap.
+Examples
+.Models.MyStore._3D.Gap := void -- no gap
+Store3._3D.StoreType := "Rack with round posts (dynamic)"
+Store3._3D.Gap := 0.1
+Store3._3D.FloorThickness := 0.15
+Store3._3D.GroundClearance := 0.3
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Gap [rack]
+_3D.Gap [SimTalk]
+Plant Simulation Help 12-741
+Unpublished work. © 2026 Siemens
+
+Edit 3D Properties [dialog] > Appearance of the Store > Type [drop-down list] - Store
+_3D.Gap [SimTalk]
+12-742 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.GroundClearance [SimTalk]
+Sets the distance between the lower edge of the lowest shelf and the floor on which the rack of the Store
+designated by <Path> stands for the Store Type > Rack with round/square posts (dynamic).
+Type
+Attribute
+Syntax
+<Path>._3D.GroundClearance:any
+Assignment Value
+You can assign a value of data type any.
+Specify void to use the default ground clearance.
+Specify 0 to make the lowest shelf rest flat on the floor.
+Example
+Store3._3D.StoreType := "Rack with round posts (dynamic)"
+Store3._3D.Gap := 0.1
+Store3._3D.FloorThickness := 0.15
+Store3._3D.GroundClearance := 0.3
+See also
+_3D.StoreType [SimTalk]
+Edit 3D Properties [dialog] > Appearance of the Store > Board Thickness
+_3D.GroundClearance [SimTalk]
+Plant Simulation Help 12-743
+Unpublished work. © 2026 Siemens
+
+_3D.OriginX [SimTalk]
+Sets the origin of the automatically created graphic and of the MU animation of the Store designated by
+<Path> in the X-Direction.
+Remarks
+Origin X Origin Y Capacity 3 times 3 Capacity 4 times 3
+Center Bottom
+Center Top
+Center
+default setting
+Center
+default setting
+Left Bottom
+_3D.OriginX [SimTalk]
+12-744 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Origin X Origin Y Capacity 3 times 3 Capacity 4 times 3
+Left Top
+Left Center
+Right Bottom
+Right Top
+Right Center
+Type
+Attribute
+_3D.OriginX [SimTalk]
+Plant Simulation Help 12-745
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>._3D.OriginX:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Left", "Center", or "Right".
+Example
+Store3._3D.OriginX := "Left"
+See also
+_3D.OriginY [SimTalk]
+Edit 3D Properties [dialog] > Appearance of the Store > Origin [graphic]
+_3D.OriginX [SimTalk]
+12-746 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.OriginY [SimTalk]
+Sets the origin of the automatically created graphic and of the MU animation of the Store designated by
+<Path> in the Y-Direction.
+Remarks
+Origin X Origin Y Capacity 3 times 3 Capacity 4 times 3
+Center Bottom
+Center Top
+Center
+default setting
+Center
+default setting
+Left Bottom
+_3D.OriginY [SimTalk]
+Plant Simulation Help 12-747
+Unpublished work. © 2026 Siemens
+
+Origin X Origin Y Capacity 3 times 3 Capacity 4 times 3
+Left Top
+Left Center
+Right Bottom
+Right Top
+Right Center
+Type
+Attribute
+_3D.OriginY [SimTalk]
+12-748 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>._3D.OriginY:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Top", "Center", or "Bottom".
+Example
+Store3._3D.OriginY := "Top"
+See also
+_3D.OriginX [SimTalk]
+Edit 3D Properties [dialog] > Appearance of the Store > Origin [graphic]
+_3D.OriginY [SimTalk]
+Plant Simulation Help 12-749
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialActive [SimTalk]
+Activates (true) or deactivates (false) the material of the posts of the automatic graphics of the Store
+designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialActive:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStore._3D.PostMaterialActive := true
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.PostMaterialActive [SimTalk]
+12-750 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialAmbientColor [SimTalk]
+Sets the ambient color of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Note
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialAmbientColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.PostMaterialAmbientColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.PostMaterialDiffuseColor [SimTalk]
+_3D.PostMaterialEmissiveColor [SimTalk]
+_3D.PostMaterialShininess [SimTalk]
+_3D.PostMaterialSpecularColor [SimTalk]
+_3D.PostMaterialTransparency [SimTalk]
+_3D.PostMaterialAmbientColor [SimTalk]
+Plant Simulation Help 12-751
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialDiffuseColor [SimTalk]
+Sets the diffuse color of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Note
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialDiffuseColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.PostMaterialDiffuseColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.PostMaterialAmbientColor [SimTalk]
+_3D.PostMaterialEmissiveColor [SimTalk]
+_3D.PostMaterialShininess [SimTalk]
+_3D.PostMaterialSpecularColor [SimTalk]
+_3D.PostMaterialTransparency [SimTalk]
+_3D.PostMaterialDiffuseColor [SimTalk]
+12-752 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialEmissiveColor [SimTalk]
+Sets the emissive color of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Note
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialEmissiveColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.PostMaterialEmissiveColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.PostMaterialAmbientColor [SimTalk]
+_3D.PostMaterialDiffuseColor [SimTalk]
+_3D.PostMaterialShininess [SimTalk]
+_3D.PostMaterialSpecularColor [SimTalk]
+_3D.PostMaterialTransparency [SimTalk]
+_3D.PostMaterialEmissiveColor [SimTalk]
+Plant Simulation Help 12-753
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialShininess [SimTalk]
+Sets the shininess of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialShininess:real
+Assignment Value
+You can assign a value of data type real between 0 and 1.
+Example
+MyStore._3D.PostMaterialShininess := 0.9
+See also
+Edit 3D Properties [dialog] > Appearance of the
+Store > Material [tab]
+_3D.PostMaterialEmissiveColor [SimTalk]
+_3D.PostMaterialAmbientColor [SimTalk] _3D.PostMaterialSpecularColor [SimTalk]
+_3D.PostMaterialDiffuseColor [SimTalk] _3D.PostMaterialTransparency [SimTalk]
+_3D.PostMaterialShininess [SimTalk]
+12-754 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialSpecularColor [SimTalk]
+Sets the specular color of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Note
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialSpecularColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.PostMaterialSpecularColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.PostMaterialAmbientColor [SimTalk]
+_3D.PostMaterialDiffuseColor [SimTalk]
+_3D.PostMaterialEmissiveColor [SimTalk]
+_3D.PostMaterialShininess [SimTalk]
+_3D.PostMaterialTransparency [SimTalk]
+_3D.PostMaterialSpecularColor [SimTalk]
+Plant Simulation Help 12-755
+Unpublished work. © 2026 Siemens
+
+_3D.PostMaterialTransparency [SimTalk]
+Sets the transparency of the automatic graphics of the posts of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Note
+You can only access the attribute if the material is active.
+Type
+Attribute
+Syntax
+<Path>._3D.PostMaterialTransparency:real
+Assignment Value
+You can assign a value of data type real between 0 and 1.
+Example
+MyStore._3D.PostMaterialTransparency := 0.9
+See also
+Edit 3D Properties [dialog] > Appearance of the
+Store > Material [tab]
+_3D.PostMaterialEmissiveColor [SimTalk]
+_3D.PostMaterialAmbientColor [SimTalk] _3D.PostMaterialShininess [SimTalk]
+_3D.PostMaterialDiffuseColor [SimTalk] _3D.PostMaterialSpecularColor [SimTalk]
+_3D.PostMaterialTransparency [SimTalk]
+12-756 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialActive [SimTalk]
+Activates (true) or deactivates (false) the material of the storage area of the automatic graphics of the
+Store designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialActive:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStore._3D.StorageAreaMaterialActive := true
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.StorageAreaMaterialActive [SimTalk]
+Plant Simulation Help 12-757
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialAmbientColor [SimTalk]
+Sets the ambient color of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialAmbientColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.StorageAreaMaterialAmbientColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk]
+_3D.StorageAreaMaterialEmissiveColor [SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+_3D.StorageAreaMaterialSpecularColor [SimTalk]
+_3D.StorageAreaMaterialTransparency [SimTalk]
+_3D.StorageAreaMaterialAmbientColor [SimTalk]
+12-758 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialDiffuseColor [SimTalk]
+Sets the diffuse color of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialDiffuseColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.StorageAreaMaterialDiffuseColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.StorageAreaMaterialAmbientColor [SimTalk]
+_3D.StorageAreaMaterialEmissiveColor [SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+_3D.StorageAreaMaterialSpecularColor [SimTalk]
+_3D.StorageAreaMaterialTransparency [SimTalk]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk]
+Plant Simulation Help 12-759
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialEmissiveColor [SimTalk]
+Sets the emissive color of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialEmissiveColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.StorageAreaMaterialEmissiveColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.StorageAreaMaterialAmbientColor [SimTalk]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+_3D.StorageAreaMaterialSpecularColor [SimTalk]
+_3D.StorageAreaMaterialTransparency [SimTalk]
+_3D.StorageAreaMaterialEmissiveColor [SimTalk]
+12-760 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialShininess [SimTalk]
+Sets the shininess of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialShininess:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyStore._3D.StorageAreaMaterialShininess := 0.9
+See also
+Edit 3D Properties [dialog] > Appearance of the
+Store > Material [tab]
+_3D.StorageAreaMaterialEmissiveColor
+[SimTalk]
+_3D.StorageAreaMaterialAmbientColor
+[SimTalk]
+_3D.StorageAreaMaterialSpecularColor
+[SimTalk]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk] _3D.StorageAreaMaterialTransparency [SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+Plant Simulation Help 12-761
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialSpecularColor [SimTalk]
+Sets the specular color of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialSpecularColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You will usually set the color with the method makeRGBValue [SimTalk].
+Example
+MyStore._3D.StorageAreaMaterialSpecularColor := makeRGBValue(255,0,0)
+See also
+Edit 3D Properties [dialog] > Appearance of the Store > Material [tab]
+_3D.StorageAreaMaterialAmbientColor [SimTalk]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk]
+_3D.StorageAreaMaterialEmissiveColor [SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+_3D.StorageAreaMaterialTransparency [SimTalk]
+_3D.StorageAreaMaterialSpecularColor [SimTalk]
+12-762 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.StorageAreaMaterialTransparency [SimTalk]
+Sets the transparency of the automatic graphics of the storage area of the Store designated by <Path>.
+Remarks
+When assigning a value to the attribute, we automatically set the material to active
+(MaterialActive := true).
+Type
+Attribute
+Syntax
+<Path>._3D.StorageAreaMaterialTransparency:real
+Assignment Value
+You can assign a value of data type real between 0 and 1.
+Example
+MyStore._3D.StorageAreaMaterialTransparency := 0.9
+See also
+Edit 3D Properties [dialog] > Appearance of the
+Store > Material [tab]
+_3D.StorageAreaMaterialEmissiveColor
+[SimTalk]
+_3D.StorageAreaMaterialAmbientColor
+[SimTalk]
+_3D.StorageAreaMaterialShininess [SimTalk]
+_3D.StorageAreaMaterialDiffuseColor [SimTalk] _3D.StorageAreaMaterialSpecularColor
+[SimTalk]
+_3D.StorageAreaMaterialTransparency [SimTalk]
+Plant Simulation Help 12-763
+Unpublished work. © 2026 Siemens

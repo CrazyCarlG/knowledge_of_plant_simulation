@@ -1,0 +1,774 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the XML Interface
+_Methods of the XML Interface
+The XML Interface provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-4516 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+_Methods of the XML Interface
+Plant Simulation Help 11-4517
+Unpublished work. © 2026 Siemens
+
+addAttribute [SimTalk]
+Adds a new attribute to the XML file of the XMLInterface designated by <Path>.
+Type
+Method
+Syntax
+<Path>.addAttribute(Name:string, Value:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Name of data type string designates the name of the attribute.
+• The parameter Value of data type string designates the value of the attribute.
+It applies when you sequentially access data.
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.addAttribute("xmlns", "myBooks")
+MyXMLInterface.addAttribute("xmlns:aa", "specAth")
+addAttribute [SimTalk]
+11-4518 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+close [SimTalk] - XML Interface
+Closes the XML file of the XMLInterface designated by <Path>.
+Type
+Method
+Syntax
+<Path>.close → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.filename := "C:\users\johnE\myfile.xml"
+MyXMLInterface.openRead
+MyXMLInterface.close
+SimTalk
+openRead [SimTalk]
+close [SimTalk] - XML Interface
+Plant Simulation Help 11-4519
+Unpublished work. © 2026 Siemens
+
+closeChildren [SimTalk]
+Closes the active level of the respective children and returns to the next higher level in the structure of the
+XMLInterface designated by <Path>.
+Remarks
+closeChildren applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.closeChildren → boolean
+Return Value
+The return value has the data type boolean.
+Example
+// This method selects the children of a node and prints name and value of
+// each child. It will be started recursively for the selected child.
+// Selects the children of the current node
+MyXMLInterface.selectChildren
+// this is the loop traversing the children
+while MyXMLInterface.getNextNode = true 
+   // prints the name and the value of each child
+   print MyXMLInterface.getNodeName+ ": " + MyXMLInterface.getNodeValue
+   // checks for children of this child
+   VisitChildren
+end
+// returns to the parent node
+MyXMLInterface.closeChildren
+closeChildren [SimTalk]
+11-4520 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+deleteNodes [SimTalk]
+Deletes all nodes that you selected with an XPath instruction in the XMLInterface designated by <Path>.
+Remarks
+deleteNodes applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.deleteNodes(Instruction:string) → boolean
+Parameter
+The parameter Instruction of data type string designates the nodes that you selected with an XPath
+instruction.
+Return Value
+The return value has the data type boolean.
+Example
+// delete all nodes specified by XPath instructions
+MyXMLInterface.filename := "D:\MSXML 4.0\books.xml"
+// load the XML document to be randomly accessed into RAM
+MyXMLInterface.openDocument
+// delete all 'book' nodes of genre 'Fantasy'
+MyXMLInterface.deleteNodes("book[genre = 'Fantasy']")
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+// write the document to a file
+MyXMLInterface.write
+// remove the document from RAM
+MyXMLInterface.close
+SimTalk
+insertNodes [SimTalk]
+deleteNodes [SimTalk]
+Plant Simulation Help 11-4521
+Unpublished work. © 2026 Siemens
+
+endElement [SimTalk]
+Terminates an item of the XMLInterface designated by <Path> that you started with the method
+startElement.
+Remarks
+endElement applies when you sequentially access data.
+Type
+Method
+Syntax
+<Path>.endElement → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.endElement
+SimTalk
+startElement [SimTalk]
+endElement [SimTalk]
+11-4522 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getAttributeName [SimTalk]
+Returns the name of the attribute of the XMLInterface designated by <Path> at the designated position.
+Remarks
+getAttributeName applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.getAttributeName(Position:integer) → string
+Parameter
+The parameter Position of data type integer designates the position of the attribute.
+Return Value
+The return value has the data type string.
+Example
+MyXMLInterface.getAttributeName(i)+":" + MyXMLInterface.getAttributeValue(i)
+getAttributeName [SimTalk]
+Plant Simulation Help 11-4523
+Unpublished work. © 2026 Siemens
+
+getAttributeValue [SimTalk]
+Returns the value of the designated attribute of the XMLInterface designated by <Path>.
+Remarks
+getAttributeValue applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.getAttributeValue(Parameter:any) → string
+Parameter
+The parameter Parameter of data type any designates the attribute.
+Return Value
+The return value has the data type string.
+Example
+MyXMLInterface.getAttributeName(i)+":" + MyXMLInterface.getAttributeValue(i)
+getAttributeValue [SimTalk]
+11-4524 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getContainer [SimTalk]
+Returns a pre-formatted table that provides the container for accepting the data, which the XMLInterface
+designated by <Path> is to write.
+Remarks
+This applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.getContainer(Depth:integer) → table
+Parameter
+The parameter Depth of data type integer sets the depth of the data to be written.
+Return Value
+The return value has the data type table.
+Example
+// insert new data into a XML document
+var tbl:table
+MyXMLInterface.filename := "D:\MSXML 4.0\books.xml"
+// load the XML document
+MyXMLInterface.openDocument
+// get an Empty table to write the data to
+// depth = 1 means that we want to write nodes with children
+tbl := MyXMLInterface.getContainer(1)
+// set the parent node for the new data
+MyXMLInterface.setContext("/catalog")
+// first the node to append to the 'catalog' nodes
+tbl[1,1] := "book"
+// then the attributes of the 'book' node
+tbl.createNestedList(4,1)
+// explicit namespace
+tbl[4,1][1,1] := "xmlns:aa"
+tbl[4,1][2,1] := "specAth"
+// additional attributes
+tbl[4,1][1,2] := "id"
+tbl[4,1][2,2] := "bk113"
+// child nodes
+getContainer [SimTalk]
+Plant Simulation Help 11-4525
+Unpublished work. © 2026 Siemens
+
+tbl.createNestedList(5,1)
+tbl[5,1][1,1] := "aa:author"
+tbl[5,1][2,1] := "specAth"
+tbl[5,1][3,1] := "XYZ"
+tbl[5,1][1,2] := "title"
+tbl[5,1][3,2] := "UNKNOWN"
+tbl[5,1][1,3] := "genre"
+tbl[5,1][3,3] := "also"
+tbl[5,1][1,4] := "price"
+tbl[5,1][3,4] := "12,45"
+tbl[5,1][1,5] := "publish_date"
+tbl[5,1][3,5] := "12.1.02"
+tbl[5,1][1,6] := "description"
+tbl[5,1][3,6] := "xx0011"
+MyXMLInterface.insertNodes(tbl)
+// saves the changed document
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+MyXMLInterface.write
+// closes the document 
+MyXMLInterface.close
+getContainer [SimTalk]
+11-4526 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getNextNode [SimTalk]
+Returns the next node after the one you selected with the method selectChildren located on the active
+level of the structure of the XMLInterface designated by <Path>.
+Remarks
+getNextNode applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.getNextNode → boolean
+Return Value
+The return value has the data type boolean.
+Example
+// select the children of a node and prints name and value of
+// each child. It will be started recursively for the selected child.
+// select the children of the current node
+MyXMLInterface.selectChildren
+// this is the loop traversing the children
+while MyXMLInterface.getNextNode = true 
+   // print the name and the value of each child
+   print MyXMLInterface.getNodeName+ ": " + MyXMLInterface.getNodeValue
+   // check for children of this child
+   VisitChildren
+end
+// return to the parent node
+MyXMLInterface.closeChildren
+SimTalk
+selectChildren [SimTalk]
+getNextNode [SimTalk]
+Plant Simulation Help 11-4527
+Unpublished work. © 2026 Siemens
+
+getNodeName [SimTalk]
+Returns the name of the node located on the active level of the structure of the XMLInterface designated
+by <Path>.
+Remarks
+getNodeName applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.getNodeName → string
+Return Value
+The return value has the data type string.
+Example
+print MyXMLInterface.getNodeName+ ": " + MyXMLInterface.getNodeValue
+getNodeName [SimTalk]
+11-4528 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getNodes [SimTalk]
+Returns all nodes of the XPath instruction of the XMLInterface designated by <Path>.
+Remarks
+getNodes applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.getNodes(Instruction:string, NumberOfLevels:integer) → table
+Parameters
+You can specify the following parameters:
+• The parameter Instruction of data type string designates the name of the XPath instruction.
+• The parameter NumberOfLevels of data type integer designates the levels of the structure to which this
+applies.
+Return Value
+The return value has the data type table.
+Example
+MyXMLInterface.getNodes("book[title='MidnightRain']",1)
+getNodes [SimTalk]
+Plant Simulation Help 11-4529
+Unpublished work. © 2026 Siemens
+
+getNodeValue [SimTalk]
+Returns the value of the node located on the active level of the structure of the XMLInterface designated
+by <Path>.
+Remarks
+getNodeValue applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.getNodeValue → string
+Return Value
+The return value has the data type string.
+Example
+print MyXMLInterface.getNodeName+ ": " + MyXMLInterface.getNodeValue
+getNodeValue [SimTalk]
+11-4530 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+insertNodes [SimTalk]
+Inserts the nodes contained in a table into the XMLInterface designated by <Path>.
+Remarks
+insertNodes applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.insertNodes(NodesTable:list) → boolean
+Parameter
+The parameter NodesTable of data type list designates the name of the table.
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.insertNodes(tbl)
+SimTalk
+deleteNodes [SimTalk]
+insertNodes [SimTalk]
+Plant Simulation Help 11-4531
+Unpublished work. © 2026 Siemens
+
+newDocument [SimTalk]
+Creates a new, empty XML document in RAM into which you insert data for the XMLInterface designated
+by <Path>.
+Remarks
+newDocument applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.newDocument(Name:string) → boolean
+Parameter
+The parameter Name of data type string designates the name of the new XML document.
+Return Value
+The return value has the data type boolean.
+Example
+// create a new document using the method newDocument
+var tbl:table
+MyXMLInterface.newDocument("catalog")
+tbl := MyXMLInterface.getContainer(1)
+MyXMLInterface.setContext("/catalog")
+// parent node
+tbl[1,1] := "book"
+// default namespace
+tbl[2,1] := "MyBooks"
+// attributes
+tbl.createNestedList(4,1)
+// explicit namespace
+tbl[4,1][1,1] := "xmlns:aa"
+tbl[4,1][2,1] := "specAth"
+// additional attributes
+tbl[4,1][1,2] := "id"
+tbl[4,1][2,2] := "bk113"
+// child nodes
+tbl.createNestedList(5,1)
+tbl[5,1][1,1] := "aa:author"
+tbl[5,1][2,1] := "specAth"
+newDocument [SimTalk]
+11-4532 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+tbl[5,1][3,1] := "XYZ"
+tbl[5,1][1,2] := "title"
+tbl[5,1][3,2] := "UNKNOWN"
+tbl[5,1][1,3] := "genre"
+tbl[5,1][3,3] := "also"
+tbl[5,1][1,4] := "price"
+tbl[5,1][3,4] := "12,45"
+tbl[5,1][1,5] := "publish_date"
+tbl[5,1][3,5] := "12.1.02"
+tbl[5,1][1,6] := "description"
+tbl[5,1][3,6] := "xx0011"
+MyXMLInterface.insertNodes(tbl)
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+MyXMLInterface.write
+newDocument [SimTalk]
+Plant Simulation Help 11-4533
+Unpublished work. © 2026 Siemens
+
+openDocument [SimTalk]
+Opens an XML file of the XMLInterface designated by <Path>, reads the data contained within, and places
+it into RAM.
+Remarks
+openDocument applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.openDocument → boolean
+Return Value
+The return value has the data type boolean.
+Example
+// random access using XPath instructions
+var tbl: table
+MyXMLInterface.filename := "D:\MSXML 4.0\books.xml"
+// load the XML document to be randomly accessed into RAM
+MyXMLInterface.openDocument
+// select nodes using an XPath instruction. Selection starts with
+// the context node you entered into the MyXMLInterface.
+// The second parameter defines the selection depth for each node
+// 0 means no children. The result is passed to a table.
+tbl := MyXMLInterface.getNodes("book[title='Midnight Rain']", 1)
+MyXMLInterface.close
+SimTalk
+close [SimTalk] - XML Interface
+openDocument [SimTalk]
+11-4534 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+openRead [SimTalk]
+Opens the XML file, which you want to read sequentially of the XMLInterface designated by <Path>.
+Remarks
+openRead applies when you randomly access data.
+The import method is called by the method openRead for all objects, which are contained in the XML file.
+Type
+Method
+Syntax
+<Path>.openRead → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.filename := "C:\users\johnE\myfile.xml"
+MyXMLInterface.openRead
+MyXMLInterface.close
+SimTalk
+openWrite [SimTalk]
+See also
+Import Method [XML Interface]
+openRead [SimTalk]
+Plant Simulation Help 11-4535
+Unpublished work. © 2026 Siemens
+
+openWrite [SimTalk]
+Opens the XML file, whose content you want to sequentially write to the XMLInterface designated by
+<Path>.
+Remarks
+openWrite applies when you randomly access data.
+Note
+openWrite encodes the xml file in UTF-8 format. This enables the xml files to be treated as ASCII files
+provided only characters from the ASCII character set are used.
+Type
+Method
+Syntax
+<Path>.openWrite → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.filename := "D:\MSXML 4.0\writeSequ.xml"
+// opens the XML document for sequential writing
+MyXMLInterface.openWrite
+MyXMLInterface.startElement("catalog")
+MyXMLInterface.startElement("book")
+SimTalk
+openRead [SimTalk]
+openWrite [SimTalk]
+11-4536 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+remove [SimTalk] - XML Interface
+Deletes the XML file of the XMLInterface designated by <Path>.
+Type
+Method
+Syntax
+<Path>.remove → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.remove
+See also
+Delete File [XML Interface]
+remove [SimTalk] - XML Interface
+Plant Simulation Help 11-4537
+Unpublished work. © 2026 Siemens
+
+selectChildren [SimTalk]
+Selects all children of the active node of the XMLInterface designated by <Path>.
+Remarks
+selectChildren applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.selectChildren → boolean
+Return Value
+The return value has the data type boolean.
+Example
+// select the children of a node and print name and value of
+// each child. It will be started recursively for the selected child.
+// Select the children of the current node
+MyXMLInterface.selectChildren
+// this is the loop traversing the children
+while MyXMLInterface.getNextNode = true 
+// print the name and the value of each child
+   print MyXMLInterface.getNodeName+ ": " + MyXMLInterface.getNodeValue
+   // check for children of this node
+   VisitChildren
+end
+// returns to the parent node
+MyXMLInterface.closeChildren
+selectChildren [SimTalk]
+11-4538 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+selectNodes [SimTalk]
+Selects the designated nodes of the XPath instruction of the XMLInterface designated by <Path>.
+Remarks
+selectNodes applies when you randomly traverse data.
+Type
+Method
+Syntax
+<Path>.selectNodes(Instruction:string) → boolean
+Parameter
+The parameter Instruction of data type string designates the nodes of the XPath instruction.
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.selectNodes("book[genre = 'Computer']")
+selectNodes [SimTalk]
+Plant Simulation Help 11-4539
+Unpublished work. © 2026 Siemens
+
+setContext [SimTalk]
+Sets the context of the XMLInterface designated by <Path>.
+Remarks
+By setting the context you can restrict the data to be read. As a rule you will enter a context, if you do not
+need to work with all of the data contained in the XML file.
+If you do not specify a context, the XMLInterface imports the entire file, which may contain a large amount
+of data, some of which you do not need. This might take some time to import and use up a large amount
+of your computer’s RAM.
+setContext applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.setContext(Node:string) → boolean
+Parameter
+The parameter Node of data type string designates the node of the structure of the XML document at
+which the XMLInterface starts reading data.
+Return Value
+The return value has the data type boolean.
+Example
+// create a new document by calling the methods openDocument and setContext
+var tbl:table
+// load no file
+MyXMLInterface.filename := ""
+MyXMLInterface.openDocument
+// set the context to the root node
+MyXMLInterface.setContext("/")
+// set the document item
+tbl := MyXMLInterface.getContainer(0)
+tbl[1,1] := "catalog"
+MyXMLInterface.insertNodes(tbl)
+// set the context to the document item
+MyXMLInterface.setContext("/catalog")
+setContext [SimTalk]
+11-4540 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+// returns a container for a subtree
+tbl := MyXMLInterface.getContainer(1)
+// parent node
+tbl[1,1] := "book"
+// default namespace
+tbl[2,1] := "MyBooks"
+// attributes
+tbl.createNestedList(4,1)
+// explicit namespace
+tbl[4,1][1,1] := "xmlns:aa"
+tbl[4,1][2,1] := "specAth"
+// additional attributes
+tbl[4,1][1,2] := "id"
+tbl[4,1][2,2] := "bk113"
+// child nodes
+tbl.createNestedList(5,1)
+tbl[5,1][1,1] := "aa:author"
+tbl[5,1][2,1] := "specAth"
+tbl[5,1][3,1] := "XYZ"
+tbl[5,1][1,2] := "title"
+tbl[5,1][3,2] := "UNKNOWN"
+tbl[5,1][1,3] := "genre"
+tbl[5,1][3,3] := "also"
+tbl[5,1][1,4] := "price"
+tbl[5,1][3,4] := "12,45"
+tbl[5,1][1,5] := "publish_date"
+tbl[5,1][3,5] := "12.1.02"
+tbl[5,1][1,6] := "description"
+tbl[5,1][3,6] := "xx0011"
+MyXMLInterface.insertNodes(tbl) 
+// set the filename to save the file with
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+// write the document
+MyXMLInterface.write
+setContext [SimTalk]
+Plant Simulation Help 11-4541
+Unpublished work. © 2026 Siemens
+
+startElement [SimTalk]
+Designates the start of the designated item of the XMLInterface designated by <Path>.
+Remarks
+startElement applies when you randomly access data.
+Type
+Method
+Syntax
+<Path>.startElement(Element:string) → boolean
+Parameter
+The parameter Element of data type string designates the item.
+Return Value
+The return value has the data type boolean.
+Example
+MyXMLInterface.startElement("catalog")
+   MyXMLInterface.startElement("book")
+startElement [SimTalk]
+11-4542 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+updateNodes [SimTalk]
+Updates the nodes you selected with the method getNodes of the XMLInterface designated by <Path>, and
+writes them into a table.
+Type
+Method
+Syntax
+<Path>.updateNodes(NodesTable:list) → boolean
+Parameter
+The parameter NodesTable of data type table designates the name of the table.
+You can then manipulate the contents of the resulting table, and finally update the selected nodes. It
+applies when you randomly access data.
+Return Value
+The return value has the data type boolean.
+Example
+// update the selected nodes of the document
+var tbl: table
+MyXMLInterface.filename := "D:\MSXML 4.0\books.xml"
+MyXMLInterface.openDocument
+// select the nodes to be changed
+tbl := MyXMLInterface.getNodes("/catalog/book[title='Midnight Rain']", 1)
+// update the value
+tbl[5,1][3,3] := "TEST"
+// write the changed data
+MyXMLInterface.updateNodes(tbl)
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+MyXMLInterface.write
+MyXMLInterface.close
+See also
+getNodes [SimTalk]
+updateNodes [SimTalk]
+Plant Simulation Help 11-4543
+Unpublished work. © 2026 Siemens
+
+write [SimTalk] - XML Interface
+Writes the XML data of the XMLInterface designated by <Path> from your computer's RAM into a file on
+your hard drive.
+Type
+Method
+Syntax
+<Path>.write → boolean
+Return Value
+The return value has the data type boolean.
+Example
+// delete all nodes specified by XPath
+MyXMLInterface.filename := "D:\MSXML 4.0\books.xml"
+// load the XML document to be randomly accessed into memory
+MyXMLInterface.openDocument
+// delete all 'book' nodes of genre 'Fantasy'
+MyXMLInterface.deleteNodes("book[genre = 'Fantasy']")
+MyXMLInterface.filename := "D:\MSXML 4.0\tmp.xml"
+// write the document to a file
+MyXMLInterface.write
+// remove the document from memory
+MyXMLInterface.close
+write [SimTalk] - XML Interface
+11-4544 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeElement [SimTalk]
+Writes the item of the XMLInterface designated by <Path> and closes it at the same time.
+Remarks
+writeElement applies when you sequentially access data.
+Type
+Method
+Syntax
+<Path>.writeElement(Name:string, Value:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Name of data type string designates the name of the item.
+• The parameter Value of data type string designates the value of the item.
+Return Value
+The return value has the data type boolean.
+Example
+// demonstrate how to sequentially write an XML file
+MyXMLInterface.filename := "D:\MSXML 4.0\writeSequ.xml"
+// open the XML document for sequential writing
+MyXMLInterface.openWrite
+MyXMLInterface.startElement("catalog")
+     MyXMLInterface.startElement("book")
+     // add attributes to the 'book' item'
+     MyXMLInterface.addAttribute("id", "bk01")
+     MyXMLInterface.addAttribute("xmlns", "myBooks")
+     MyXMLInterface.addAttribute("xmlns:aa", "specAth")
+// these are the children of the 'book' item
+     MyXMLInterface.writeElement("aa:author", "Gambardella, Matthew")
+           // add an attribute to the 'author' item
+       MyXMLInterface.addAttribute("age", "16")
+       MyXMLInterface.writeElement("title", "XML Developer's Guide")
+       MyXMLInterface.writeElement("genre", "Computer")
+           MyXMLInterface.writeElement("price", "44.95")
+           MyXMLInterface.writeElement("publish_date", "2000-10-01")
+writeElement [SimTalk]
+Plant Simulation Help 11-4545
+Unpublished work. © 2026 Siemens
+
+           MyXMLInterface.writeElement("description", "An in-depth ...")
+      // terminate the item 'book'
+      MyXMLInterface.endElement
+// terminate the item named 'catalog'
+MyXMLInterface.endElement
+MyXMLInterface.close
+Read-Only Attributes of the XMLInterface
+Read-Only Attributes of the XMLInterface
+The XMLInterface provides:
+• The read-only attribute GetNumberAttributes [SimTalk].
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyXMLInterface.GetNumberAttributes
+Read-Only Attributes of the XMLInterface
+11-4546 Plant Simulation Help
+Unpublished work. © 2026 Siemens

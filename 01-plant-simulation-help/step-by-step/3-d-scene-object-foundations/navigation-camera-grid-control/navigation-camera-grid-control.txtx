@@ -1,0 +1,634 @@
+• The recipient can double-click the file you sent and start the simulation to view what you wanted to
+show.
+As the Pack-and-Go model uses the Plant Simulation Viewer License only a limited set of functions is
+available.
+Visualizing the Material Flow
+Visualizing the Material Flow
+Introduces you to the most important tasks you will face when you create and visualize your simulation
+model.
+Plant Simulation differentiates between these object types.
+• Simulation Object
+• Animatable Object
+• Graphic Group [defined]
+• State Graphic [defined]
+• Graphic [defined]
+The dialog Show Graphic Structure [context menu] show these object types in a tree structure.
+A 3D window shows the objects with these colors:
+• Plant Simulation shows a selected simulation object in green in the 3D window.
+When you open a simulation object, the 3D window shows a green border on the inside.
+Visualizing the Material Flow
+10-888 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation shows a selected animatable object in purple in the 3D window.
+When you open an animatable object, the 3D window shows a purple border on the inside.
+Visualizing the Material Flow
+Plant Simulation Help 10-889
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation shows a selected graphic in yellow green in the 3D window.
+Some of the videos on the Start Page provide an introduction to 3D or introduce certain modeling tasks in
+3D.
+Compare 3D Properties Visualizing the Simulation
+Compare SimTalk Access to 3D Functions
+Compare Modeling the Material Flow
+Compare Animate the Simulation Model and View the Results
+Visualizing the Material Flow
+10-890 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare Getting to Know Plant Simulation
+Creating a Simulation Model
+You create your simulation model in several steps.
+• To create a new Plant Simulation model, click Create New Model on the Start Page or select File >
+New.
+• To show the built-in simulation objects and their graphics, you can, for example, click the folder
+MaterialFlow in the Class Library with the right mouse button and select Open in 3D. This way you
+can also show the contents of the other folders.
+To show the name of an object, drag the mouse over it.
+To rotate the scene, hold down the left and the right mouse buttons and drag the mouse or hold down
+Ctrl and the right mouse button and drag the mouse. The rotate mouse pointer looks like this 
+ .
+To pan the scene, hold down the right mouse button and drag the mouse. The pan mouse pointer looks
+like this 
+ .
+To move the camera forward and backward, roll the mouse wheel.
+To zoom the scene in or out, roll the mouse wheel or hold down Shift and the right mouse button and
+drag the mouse.
+Note
+If you have a three-button mouse, click the middle mouse button where the description calls for
+clicking the mouse wheel.
+Note
+If manipulating the scene with the mouse does not work, check the Mouse Properties for the Wheel
+in the Mouse Control Panel under Start > Control Panel.
+• To open a new window, change to the Class Library. Then, click the corresponding folder with the right
+mouse button and select Open in 3D.
+• To insert an object into the window:
+◦ Make sure that Show Grid 
+  on the View ribbon tab is active, compare Show and Hide the Grid.
+We recommend to show the grid before you insert an object into the scene window. This way you can
+place the object at the exact position, where you want it to be.
+If you insert an object without displaying the grid, you have little control over where Plant Simulation
+actually places the object. By default, it uses the same coordinates that the source object had, an
+effect you might not want.
+◦ Select the object you want to insert in the Toolbox. Drag the mouse pointer to the position of your
+choice and click the left mouse button to insert it there.
+Creating a Simulation Model
+Plant Simulation Help 10-891
+Unpublished work. © 2026 Siemens
+
+As long as an object is selected in the Toolbox, Plant Simulation shows a preview of the object in the
+window to make it easier for you to position it.
+To cancel inserting objects, click the right mouse button.
+◦ Insert a Source, a Conveyor, a Station and a Drain.
+• Connect the inserted simulation objects:
+◦ Make sure that Show Connections 
+  on the View ribbon tab is activated as 3D does not show the
+Connectors by default.
+◦ Click the Connector 
+  in the Toolbox on the tab MaterialFlow.
+◦ Click the source object, where the connection will start, once with the left mouse button. Plant
+Simulation attaches a line symbolizing the Connector to the mouse pointer.
+◦ Drag the mouse to the destination object at which the connection will end, and click once with the
+left mouse button to establish the connection.
+3D shows the Connector it inserted as a line between the connected internal interfaces of the source
+and destination objects. The pointed cone shows the direction of the Connector.
+◦ To terminate connect mode before you click the destination object, click the right mouse button or
+press Esc.
+To connect several objects one after the other, without interrupting the connecting process, hold
+down Ctrl.
+◊ Attach the outgoing connection to the first object.
+◊ Drag the mouse to the succeeding object.
+◊ Click the left mouse button to attach the incoming Connector to the successor.
+Creating a Simulation Model
+10-892 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◊ Connect the Source, the Conveyor, the Station and the Drain you inserted above.
+◦ Start the simulation:
+◊ Control the simulation by clicking the buttons on the Home ribbon tab or
+◊ Double-click the icon of the EventController 
+  and click its buttons.
+◊ Watch how the produced parts move across the simulation objects.
+Compare Work with Objects
+Compare Work with the Grid
+Compare Control Your View
+Compare Work with the Scene
+Back to Visualizing the Material Flow
+Creating a Simulation Model
+Plant Simulation Help 10-893
+Unpublished work. © 2026 Siemens
+
+Modeling Hierarchically [in 3D]
+Using hierarchical modeling techniques you can add any level of detail to the areas and machines you
+insert into your simulation model. Hierarchical modeling means that you create a machine, a production
+area, etc. in a Frame using the built-in object classes and/or classes you yourself designed.
+You can then insert this Frame, Machine for example, into another Frame in which you modeled a
+production area, and then insert the production area into the Frame that contains your entire factory.
+Compare Model Hierarchically [general]
+Compare Show Reports in a Hierarchically Structured Model
+Back to Visualizing the Material Flow
+Working with the Scene
+Work with the Scene
+Plant Simulation provides a number of ways for working with the active scene, as opposed to working with
+the objects you insert into that scene.
+You can:
+• Manipulate the Scene with the Mouse
+• Align the View to the Main Directions
+• Save a View with the Model and Return to It
+• Fly on a Defined Path Through the Scene
+• Show information about the open scene by pressing the F key on the keyboard. To hide the information,
+press the F key again. The scene window shows:
+• The Frames per Second (FPS).
+• The summed up Number of Nodes of the scene window.
+• The summed up Number of Polygons of the scene window.
+• The summed up Memory usage of the scene window.
+• The OpenGL Version used.
+• Information about the Display Driver of your computer.
+Modeling Hierarchically [in 3D]
+10-894 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare Graphic Complexity
+Compare Work with Objects
+Compare Control Your View
+Compare Work with the Grid
+Back to Visualizing the Material Flow
+Manipulate the Scene with the Mouse
+You can manipulate the scene itself and the objects within that scene with the mouse. You can move
+within the scene and change your view of the scene.
+Instead of using a normal mouse, you can also navigate in the scene with a Space Navigator mouse.
+Note
+If you have a three-button mouse, click the middle mouse button where the description calls for clicking
+the mouse wheel.
+If manipulating the scene with the mouse does not work, check the Mouse Properties for the Wheel in
+the Mouse Control Panel under Start > Control Panel.
+• To rotate the scene, hold down the left and the right mouse buttons and drag the mouse, or hold down
+Ctrl and the right mouse button and drag the mouse.
+Manipulate the Scene with the Mouse
+Plant Simulation Help 10-895
+Unpublished work. © 2026 Siemens
+
+Mouse pointer,
+rotate around center of the scene
+Mouse pointer,
+rotate around object
+When you start rotating a view with the mouse and remain at the position for at least 400ms and if
+an object or a graphic is located under the mouse pointer, Plant Simulation rotates around the position
+under the mouse pointer on the object or the graphic.
+In all other cases Plant Simulation rotates around the projection of the center of the window on the
+insertion plane, or around a matching orthogonal of this plane if the view is rotated by 90°. Here it does
+not matter where the mouse pointer is positioned.
+Rotate around center of the scene Rotate around object
+• To pan the scene, hold down the right mouse button and drag the mouse. The pan mouse pointer looks
+like this 
+ . If you have a three-button mouse, you can also hold down the middle mouse key and drag
+the mouse.
+• To move the camera forward and backward, roll the mouse wheel, or hold down Shift and the right
+mouse button and drag the mouse.
+To move the scene with a tenth of the speed, hold down Ctrl and roll the mouse wheel.
+To move the scene with ten times the speed, hold down Shift and roll the mouse wheel.
+In Planning View you can navigate like this:
+• To move the scene on the plane, hold down the right mouse button and drag the mouse.
+• To zoom the scene, roll the mouse wheel, or hold down Shift and the right mouse button and drag the
+mouse.
+To zoom the scene with a tenth of the speed, hold down Ctrl and roll the mouse wheel.
+Manipulate the Scene with the Mouse
+10-896 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To zoom the scene with ten times the speed, hold down Shift and roll the mouse wheel.
+Compare Mouse Wheel Behavior
+Compare Move an Object With the Mouse
+Back to Work with the Scene
+Align the View to the Main Directions
+You can select from which predefined direction you look at the scene using the commands on the View
+ribbon tab.
+From the Right, from the Left, from the Back, from the Front, from the Top, or from the Bottom.
+• To view the entire scene from the top looking down, click 
+  on the View ribbon tab.
+• To view the entire scene from the front, click 
+ .
+Align the View to the Main Directions
+Plant Simulation Help 10-897
+Unpublished work. © 2026 Siemens
+
+• To view the entire scene from the left side, click 
+ .
+• To view the entire scene from the bottom, click 
+ . This shows the entire scene from the bottom
+looking upward, i. e., along the negative z-axis.
+If Show Grid is activated, Plant Simulation shows the grid below the object that you want to see from
+below.
+If Show Base Plate is activated, Plant Simulation shows the base plate below the object that you want
+to see from below. The base plate then hides the object as such.
+If you selected anything in the scene, the command adjusts the scene so that the selection is visible
+instead of the entire scene.
+• To fit the entire scene into the scene window and to show all objects in the scene if you moved part of
+the scene out of view, click View All 
+ .
+Back to Work with the Scene
+Align the View to the Main Directions
+10-898 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Save a View with the Model and Return to It
+You can save a view of the simulation model with the mode and return to it later on.
+To save the current position and orientation of the camera with the model file, click Camera Marks 
+on the View ribbon tab in 3D.
+• Enter a Name for the current camera setting into the dialog Mark Current Camera Settings.
+• 3D shows the path of the scene in the field Scene Path.
+• Click OK to set the name. This saves this setting together with the active root object of the scene in
+the model file. Then, you can easily return to this saved view after you changed the scene or after you
+reopened the model.
+To return to a view you saved later on, or to navigate to the different predefined folders:
+• Click the down arrow on the Camera Marks 
+  button. Select the camera mark, i.e., the view for
+which you defined it, on the list.
+Or
+Save a View with the Model and Return to It
+Plant Simulation Help 10-899
+Unpublished work. © 2026 Siemens
+
+◦ Select the command Camera Marks.
+◦ Select one of the saved scenes in the list and click Activate.
+To rename or delete a camera mark, select it in the list, and click Rename or Delete.
+To move the selected camera mark up in the list, click 
+ .
+To move the selected camera mark down in the list, click 
+ .
+Compare these examples:
+• The total view of our model looks like this:
+Save a View with the Model and Return to It
+10-900 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The cafeteria of our model looks like this:
+Back to Work with the Scene
+Set the Background Color of the Scene
+You can set the Background Color of the selected Frame or the selected folder in the Class Library in the
+3D window.
+Proceed as follows:
+Set the Background Color of the Scene
+Plant Simulation Help 10-901
+Unpublished work. © 2026 Siemens
+
+• Click Edit 3D Properties on the Home ribbon tab or click into the Frame window with the right mouse
+button and select Edit 3D Properties. Then, click the Tab Background.
+Note
+You can also open the dialog Edit 3D Properties for the selected object by clicking the spacebar.
+• Select Assign a Background Color of Its Own. Once you select the check box, 3D activates the other
+settings on the tab.
+• Select the Base Color. This is the base color of the background which you can change with the corner
+brightness settings.
+You can select one of the predefined colors or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation show this color next to More Colors
+and uses it as the active color.
+• Select settings for the Corner Brightness of the four corners of the Frame window. The top left
+slider sets the settings of the top left corner of the Frame window, etc. Drag the sliders to make the
+respective corner darker or brighter. This way you can define a color gradient, i.e., the brightness of the
+background color.
+Note
+If you do not define a background color, Plant Simulation uses the background color of the parent object
+of the selected object.
+Back to Work with the Scene
+Set the Background Color of the Scene
+10-902 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Flying on a Defined Path Through the Scene
+Fly on a Defined Path Through the Scene
+You can attach a camera to an object and view the scene through the lens of an object. This camera then
+moves along with the object through the scene during a simulation run. By turning or tilting the camera,
+you can control the direction and the angle at which you look at the scene.
+3D visualizes the camera with a tool object as the icon of the camera. At present 3D provides three
+different cameras:
+• The main camera through which you view the scene in normal view.
+• The object camera, which you attach to a specific object and which moves with this object through the
+model. You might, for example, attach a camera to a part or a Worker to follow it or him on their way
+through the factory.
+• The animation camera, which moves along an animation path you defined.
+Proceed as follows to define a tracking shot through the scene:
+• Click an object with the left mouse button to select it.
+• Click 
+  Animate Camera on the View ribbon tab to open the dialog Fly on Path. If you did not select
+an object before, the dialog refers to the current root object of the scene.
+• Select one of the camera paths you defined to move your view point along this path.
+You can also define your own camera paths or edit any existing path in the dialog Edit 3D Properties >
+Tab Camera Animation of the Frame to meet you specific modeling needs. Compare How the Camera is
+Animated in the Frame.
+You can:
+• Attach a Camera to an Object
+• Detach the Camera from an Object
+• Animate the Object Camera
+Compare Ballhaus Kreisel
+Flying on a Defined Path Through the Scene
+Plant Simulation Help 10-903
+Unpublished work. © 2026 Siemens
+
+Compare Work with Animation Paths
+Compare Tab Camera Animation > How the Camera is Animated in the Frame
+Back to Work with the Scene
+Attach a Camera to an Object
+You can attach a camera to an object, to view the scene through the lens of this camera.
+Proceed as follows:
+• Select a single object.
+• Click 
+  Attach Camera on the View ribbon tab of the 3D window.
+• Plant Simulation attaches the camera at a defined position:
+Plant Simulation uses the center of the top of the bounding box of the selected object as the position
+where it inserts the camera. Plant Simulation adds an offset of 0,0,0.1 to these makeshift points, so that
+your eyes will be located above the top plane.
+By default the object camera looks along the positive x-axis using the positive z-axis as Up direction.
+You might, for example, attach a camera to one of the boxes in our sample model Factory51 and track
+its way through the factory.
+Attach a Camera to an Object
+10-904 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+As soon as the object, with a camera attached to it, moves through the scene, the camera moves along
+with it automatically. Once the camera is attached, you see the scene through the lens of this object
+camera.
+Attach a Camera to an Object
+Plant Simulation Help 10-905
+Unpublished work. © 2026 Siemens
+
+Or you can attach a camera to one of the Workers and track his way between the work stations.
+Attach a Camera to an Object
+10-906 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You then see what the Worker sees while he walks and what he sees while he stands on the Workplaces
+and works at the machines.
+Compare How the Camera is Animated in the Frame
+Compare Move an Object Precisely
+Compare Work with Animation Paths
+Back to Fly on a Defined Path Through the Scene
+Detach the Camera from an Object
+If you do not need the camera, which you attached to an object, any longer, you can detach it from the
+object.
+To detach the camera, click 
+  Detach Camera on the View ribbon tab of the 3D window. Plant
+Simulation then returns to normal view.
+Plant Simulation also detaches an object camera:
+• When you delete the object to which the camera is attached.
+• When you change the scene.
+Back to Fly on a Defined Path Through the Scene
+Detach the Camera from an Object
+Plant Simulation Help 10-907
+Unpublished work. © 2026 Siemens
+
+Animate the Object Camera
+You can animate the camera on a camera animation path of the selected Frame, thus creating the
+impression of flying through the scene.
+Note
+You have to define a camera animation path on the Tab Camera Animation of the respective Frame.
+To move the animation camera:
+• Change to the View ribbon tab and click Animate.
+• Select the name of the animation path for the selected object in the dialog Fly on Path or for the root
+object of the scene from the list Path Name [MU animation].
+• Select Backwards if you want the camera to move backward toward the starting point of the animation
+path. Plant Simulation automatically enters a negative velocity into the text box when you select the
+check box.
+• To start the animation, click Play 
+ .
+Animate the Object Camera
+10-908 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+3D now shows the scene through the lens of the animation camera, which moves on the path you
+designated with a lens offset of (0, 0, 0.1).
+• To pause the animation of the camera, independent of the simulation, click Pause 
+ .
+• To stop the animation of the camera, independent of the simulation, click Stop 
+ .
+At the end of the animation 3D sets the main camera to the last point where the animation camera was
+located and deletes the animation camera.
+To test the camera animation path you defined, click the tab Test in the dialog Edit Path, select an
+Animated graphic, and start the test animation.
+Compare Work with Animation Paths
+Back to Fly on a Defined Path Through the Scene
+Controlling Your View in the Scene
+Control Your View
+The 3D window provides several ways of setting how you look at the scene, i.e., of controlling the camera
+that represents the eyes of the viewer looking at the scene.
+You can:
+• Set the Main Directions
+• Set View Points
+• Attach a Camera to an Object/Frame and Detach it
+• Animate the Camera
+Back to Visualizing the Material Flow
+Set the Main Directions
+Independent of the active camera setting, you can adjust the view to any main direction of the view or of
+an object at any time.
+When you selected an object, the 3D window zooms out this object and adapts the direction of the camera
+to the selected main direction of the coordinate system of the object.
+Compare Align the View to the Main Directions
+Controlling Your View in the Scene
+Plant Simulation Help 10-909
+Unpublished work. © 2026 Siemens
+
+Back to Control Your View
+Set View Points
+You can save any view of the scene, i.e., the position and orientation of the main camera within the scene,
+at any time, and return to this view later on.
+You can also save the active camera setting, together with the active root object of the scene, with a
+meaningful name as one of the Camera Marks 
+ .
+As opposed to the view points that 3D saves automatically, you can save any number of Camera Marks,
+which it saves in the model file. You can then rename and delete them at will.
+Back to Control Your View
+Attach a Camera to an Object/Frame and Detach it
+You can attach a camera to any object, so that you can view the scene through the lens of this object, and
+detach a camera from it again, when you do not need it any more. When the object moves through the
+scene, for example because you started the simulation, the camera will move along with the object you
+attached it to.
+In addition, Plant Simulation:
+• Visualizes the camera you attached, i.e., inserts an animatable object that represents the camera.
+• Enables you to change between object view and normal view.
+• Enables you to manually transform the camera you attached: By changing the view while in object view,
+or by manipulating the object, while in normal view.
+• Enables you to set the speed and the direction of the animation.
+Set View Points
+10-910 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enables you to pause, continue, and stop the camera animation independent of other animations and
+simulations.
+Compare Attach a Camera to an Object
+Compare Detach the Camera from an Object
+Back to Control Your View
+Animate the Camera
+You can make the camera move on any animation path of the selected object or of the root object of the
+scene. Here, you fly on this path and view the scene from it.
+In addition, Plant Simulation:
+• Visualizes the animated camera, i.e., inserts an animatable object that represents the camera.
+• Enables you to change between animation view and normal view during the animation.
+• Enables you to manually transform the animated camera: By changing the view while in animation view,
+or by manipulating the object, while in normal view.
+• Enables you to define the speed of the animation and the direction of the animation.
+• Enables you to pause, continue and stop the camera animation, independent of other animations and
+simulations.
+Compare Animate the Object Camera
+Compare Fly on a Defined Path Through the Scene
+Back to Control Your View
+Working with the Grid
+Work with the Grid
+Plant Simulation uses the grid as the surface onto which it inserts objects.
+Animate the Camera
+Plant Simulation Help 10-911
+Unpublished work. © 2026 Siemens
+
+Be aware that showing or hiding the grid affects how objects behave:
+• When you show the grid, manipulating objects always refers to the grid plane.
+• When you hide the grid, manipulating objects refers to your view plane, i.e., the plane perpendicular to
+the direction in which you look at the scene.
+To change and define grid settings for the current simulation model and to open the dialog Edit Grid and
+Base Plate Settings, click Settings 
+  on the View ribbon tab.
+To change the grid settings for new models, select File > Preferences > 3D [preferences].
+The grid in the 3D window looks like this. The origin of the grid is located in the top left corner of the
+window offset by one grid unit to the right and down each.
+Plant Simulation re-creates the grid after each change you make in the model when it redraws the scene.
+So, when you insert and move an object toward the borders of the grid, it automatically extends in that
+direction. The grid always expands or shrinks to show all objects in the scene.
+As the grid is intended to be a modeling help when creating the model, you will usually hide it when
+presenting your model. To do so, press the Ins key on the keyboard.
+Plant Simulation adjusts the dimensions and the borders of the grid to the position of the objects shown in
+the scene.
+Work with the Grid
+10-912 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The origin of the grid, i. e., the lines that are red by default, always are part of the grid.
+The grid size always is a multiple of the smallest visible grid distance.
+You can:
+• Show and Hide the Grid
+• Set Grid Properties
+• Edit Grid Lines
+• Position the Grid on Different Planes
+• Move the Grid in the Window
+After you inserted objects into your simulation model, you can align them to the grid 
+ , make
+them snap to the grid 
+ , make them snap to other objects 
+ , or arrange them on the grid.
+To be able to do so, make sure that Show Grid 
+  is on.
+Back to Visualizing the Material Flow
+Show and Hide the Grid
+You can show or hide the grid in the 3D window containing your simulation models.
+Show and Hide the Grid
+Plant Simulation Help 10-913
+Unpublished work. © 2026 Siemens
+
+To show or hide the grid, do one of the following:
+• Click Show Grid 
+  on the View Ribbon Tab.
+• Press the Ins key on your keyboard.
+Compare Insert Objects into the Scene
+Compare Simultaneously Paste Multiple Copies
+Back to Work with the Grid
+Set Grid Properties
+You can set the properties of the grid in the simulation model to meet your modeling needs.
+To do so, click Edit Grid and Base Plate Settings 
+  on the View ribbon tab.
+• To assign a material to the base plate below the grid lines in the Frame, click the color box. Then select
+individual components of the material in the dialog Material on the Tab Material.
+Note
+To show or hide the Base Plate, click Show Base Plate 
+  on the View ribbon tab.
+• To assign a color to the coordinate axes, consisting of the x-axis and the y-axis, click the arrow in of the
+drop-down list Axes Color and select a color.
+• To define the settings of the grid lines, edit them in the table on the tab.
+Set Grid Properties
+10-914 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Work with the Grid
+Edit Grid Lines
+You can edit existing grid lines or add new grid lines.
+You do this in the group box Grid Lines.
+• To add another grid line, click Add.
+Enter the distance between two grid lines, which you want to add; we entered 2 meters.
+Select a color for the grid line, we selected a bright blue.
+Edit Grid Lines
+Plant Simulation Help 10-915
+Unpublished work. © 2026 Siemens
+
+• To show this grid line in the grid in the scene, select Visible.
+• Then, select if objects you insert snap to this grid line. Making objects snap to grid points enables you
+to precisely place objects with the mouse.
+• To edit an existing grid line, select it in the list and edit the distance between the grid lines, their color,
+what objects, which you insert, snap to, and if this grid line is visible or not.
+Back to Work with the Grid
+Position the Grid on Different Planes
+You can display the grid on the different planes in three-dimensional space.
+As you remember Plant Simulation uses a left-handed coordinate system.
+The x-axis runs from left-to-right, the z-axis runs from bottom-to-top, and the y-axis runs from front-to-
+back.
+• To place the grid on the planes defined by the axes, click Transform 
+  on the View ribbon tab
+and select the respective radio button in the dialog Grid Position and Orientation.
+Position the Grid on Different Planes
+10-916 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+Plant Simulation does not save the settings you select in this dialog. They only apply as long as the
+dialog is open.
+To position the grid on the plane defined by the x-
+axis and the y-axis, select Orientation > XY Plane.
+To position the grid on the plane defined by the x-
+axis and the z-axis, select Orientation > XZ Plane.
+To position the grid on the plane defined by the y-
+axis and the z-axis, select Orientation > YZ Plane.
+Back to Work with the Grid
+Move the Grid in the Window
+You can move the origin of the grid in the window of your simulation model.
+Move the Grid in the Window
+Plant Simulation Help 10-917
+Unpublished work. © 2026 Siemens
+
+To do so, click Transform 
+  on the View ribbon tab and roll the mouse wheel in the text boxes and
+click the buttons below Position in the dialog Grid Position and Orientation.
+Note
+3D does not save the settings you select in this dialog. They only apply as long as the dialog is open.
+Note
+When moving the origin of the grid, Plant Simulation uses the length unit you selected under Model
+Settings > Units > Length.
+• To move the position of the Origin of the grid on the x-axis by
+0.01 length units to the right, click in the text box, hold down Ctrl, and roll the mouse wheel forward.
+0.1 length units to the right, click in the text box and roll the mouse wheel forward.
+1 length unit to the right, click in the text box, hold down Shift, and roll the mouse wheel forward.
+0.01 length units to the left, click in the text box, hold down Ctrl, and roll the mouse wheel backward.
+0.1 length units to the left, click in the text box and roll the mouse wheel backward.
+1 length unit to the left, click in the text box, hold down Shift, and roll the mouse wheel backward.
+• To move the position of the Origin of the grid on the y-axis by
+0.01 length units to the back, click in the text box, hold down Ctrl, and roll the mouse wheel forward.
+0.1 length units to the back, click in the text box and roll the mouse wheel forward.
+1 length unit to the back, click in the text box, hold down Shift, and roll the mouse wheel forward.
+0.01 length units to the front, click in the text box, hold down Ctrl, and roll the mouse wheel backward.
+0.1 length units to the front, click in the text box and roll the mouse wheel backward.
+Move the Grid in the Window
+10-918 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+1 length unit to the front, click in the text box, hold down Shift, and roll the mouse wheel backward.
+• To move the position of the Origin of the grid on the z-axis by
+0.01 length units up, click in the text box, hold down Ctrl, and roll the mouse wheel forward.
+0.1 length units to the up, click in the text box and roll the mouse wheel forward.
+1 length unit to the up, click in the text box, hold down Shift, and roll the mouse wheel forward.
+0.01 length units to the down, click in the text box, hold down Ctrl, and roll the mouse wheel
+backward.
+0.1 length units to the down, click in the text box and roll the mouse wheel backward.
+1 length unit to the down, click in the text box, hold down Shift, and roll the mouse wheel backward.
+• To reset the values for the x-axis, the y-axis and the z-axis to their predefined default values of 0, 0, 0,
+click Scene Origin.
+• To set the values for the x-axis, the y-axis and the z-axis to the values of the position of a single object
+you selected, click Object Origin.
+Back to Work with the Grid
+Move the Grid in the Window
+Plant Simulation Help 10-919
+Unpublished work. © 2026 Siemens

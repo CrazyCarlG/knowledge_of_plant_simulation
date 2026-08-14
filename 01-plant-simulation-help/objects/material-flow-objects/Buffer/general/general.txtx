@@ -1,0 +1,274 @@
+Image
+Description
+Insert a Buffer between two components of your plant:
+• To temporarily hold parts, if one of the components following it in the sequence of stations fails,
+preventing the preceding machines to stop producing parts.
+• To move parts on, if the preceding components stop working, preventing the production process from
+grinding to a halt.
+Dimensioning a Buffer with a large enough capacity for covering all failures leads to a complete decoupling
+of the respective components of your plant. The Buffer not only tides over failure times but also serves
+as a compensating station for fluctuating transport and operating times, which lead to queues forming in
+front of a machine or a component. But even then it cannot always prevent the material flow from being
+interrupted or grinding to a halt.
+As the Buffer does not have individual places, it does not have to divide the processing time, i.e., the time
+during which the part remains in it, into small individual steps. Instead, you can select the sequence in
+which the parts exit the Buffer.
+Select the Buffer Type [drop-down list]
+• Queue to make the parts exit the Buffer in the same order in which they entered it (First In First Out).
+• Stack to make the part, which entered last, leave the Buffer first (Last In First Out).
+Note
+Each MU remains for at least the time in the Buffer, which you entered as the Dwell Time [Buffer]. For
+the Buffer Type > Stack a MU can only exit the Buffer, when all parts, which entered the Buffer after the
+current part, have already exited the Buffer, i.e., when the MU is located at the very top of the stack.
+To show a tooltip with information about the Buffer, hover with the mouse over it.
+Buffer [object]
+11-2072 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To change the length of the graphic and the anchor points of the Buffer, click Show Manipulators 
+  on
+the Edit ribbon tab or press M on the keyboard.
+The Buffer is ideally suited for modeling a buffer with a great Capacity requiring high performance. If you
+need more advanced functions, you can use the PlaceBuffer 
+ .
+We offer alternative graphics for the Buffer. Click Exchange Graphics in the window of the Buffer and
+select an alternative graphic.
+Plant Simulation shows the MUs in the Buffer stacked.
+Add the Object to the Simulation Model
+To add the object Buffer to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Buffer on the Home ribbon tab.
+See also
+Buffer Parts within the Production Line
+Use a Buffer between Processing Stations
+Properties of the DataQueue
+Properties of the DataStack
+Buffer [object]
+Plant Simulation Help 11-2073
+Unpublished work. © 2026 Siemens
+
+Video on YouTube
+https://youtu.be/PgT4wkT2Xj8?si=Udlvoq8KcAI9GxQw&t=18
+Dialog Box of the Buffer
+Dialog Box of the Buffer
+Double-click the icon of the Buffer to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Video on YouTube
+https://youtu.be/PgT4wkT2Xj8?si=d4Sx9mjGHp_Pl0wB&t=98
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Dialog Box of the Buffer
+11-2074 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - Buffer
+Type the Capacity into the text box, i.e., the number of MUs, which the Buffer can hold at any one time.
+Remarks
+Type in -1 for an infinite capacity.
+As the capacity is not implemented in a matrix, you cannot access any individual place! You can only
+reduce the Capacity, if the new capacity you enter is greater than or equal to the actual number of MUs
+which are located in the Buffer.
+SimTalk
+Capacity [SimTalk] - Buffer
+Capacity [text box] - Buffer
+Plant Simulation Help 11-2075
+Unpublished work. © 2026 Siemens
+
+Buffer Type [drop-down list]
+Select the Buffer Type, i.e., the exit behavior of the MUs from the Buffer.
+Remarks
+You can select one of these settings:
+• Queue: The parts exit the Buffer in the same order in which they entered it (First In First Out).
+• Stack: The part, which entered last, leaves the Buffer first (Last In First Out).
+SimTalk
+BufferType [SimTalk]
+Tab Times
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Dwell Time [Buffer]
+Recovery Time [general description]
+Recovery Time Starts
+Cycle Time [general description]
+Buffer Type [drop-down list]
+11-2076 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Dwell Time [Buffer]
+Type in the Dwell Time for which the MUs remain in the Buffer.
+Remarks
+For the Buffer you can only specify a constant Dwell Time. Statistics counts the Dwell Time as waiting
+time and not as processing time.
+The Dwell Time thus is not prolonged by failures or pauses.
+Note
+Each MU remains for at least the time in the Buffer, which you entered as the Dwell Time. For the Buffer
+Type > Stack a MU can only exit the Buffer, if all parts which entered the Buffer after the current part,
+have already exited the Buffer, i.e., when the MU is located at the very top of the stack.
+SimTalk
+ProcTime [SimTalk] - material flow objects
+putAttributeNamesIntoTable [SimTalk] - objects
+Dwell Time [Buffer]
+Plant Simulation Help 11-2077
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2078 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+Plant Simulation Help 11-2079
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Select Object [for controls]
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls
+11-2080 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit
+Plant Simulation Help 11-2081
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [Buffer]
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+Check the Fill Level of the Buffers in the Plant
+Resource Statistics [check box]
+Resource Type
+Tab Statistics [Buffer]
+11-2082 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+Plant Simulation Help 11-2083
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the Buffer buffers parts costs accrue which result from the sum of the investment costs and the
+operating costs.
+Note
+The investment costs only accrue during the Depreciation Period.
+The costs are allocated to the part, proportional to the capacity, as accrued costs.
+If the Buffer is empty, the costs remain with the Buffer as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+11-2084 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-2085
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2086 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Forward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+View Menu
+Plant Simulation Help 11-2087
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2088 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+Plant Simulation Help 11-2089
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Buffer
+Methods of the Buffer
+The Buffer provides:
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-2090 Plant Simulation Help
+Unpublished work. © 2026 Siemens

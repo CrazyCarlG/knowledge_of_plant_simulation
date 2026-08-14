@@ -1,0 +1,463 @@
+Accessing State Graphics
+__Accessing State Graphics
+SimTalk provides the attributes listed in the table of contents to the left for state graphics of the material
+flow and of the fluid objects.
+See also
+Edit 3D Properties [dialog] > States
+Accessing State Graphics
+Plant Simulation Help 12-1269
+Unpublished work. © 2026 Siemens
+
+_3D.StatesForColoring [SimTalk]
+Sets which states are considered for state coloring of the object designated by <Path>.
+Remarks
+Assigning the attribute deactivates graphic inheritance.
+Type
+Attribute
+Syntax
+<Path>._3D.StatesForColoring:string[]
+Assignment Value
+You can assign an array of data type string.
+State of the object Color
+Unplanned light blue
+Paused blue
+Failed red
+Stopped pink
+Powering up/down purple
+Off dark gray
+Standby light gray
+Working green
+Blocked yellow
+Setting-Up brown
+Entrance closed cyan
+Waiting orange
+In execution (Method) dark green
+Suspended (Method) purple
+Encrypted (Method) gray
+_3D.StatesForColoring [SimTalk]
+12-1270 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+State of the object Color
+Syntax error (Method) light red
+Program inherited (Method) turquoise
+Note
+You can only assign the states that apply to the respective object.
+Example
+MyParallelStation._3D.StatesForColoring := ["Failed", "Stopped", 
+"Unplanned", "Paused", "Working", "Blocked", "Setting-up"]
+See also
+States > Orientation [state graphic]
+_3D.StatesForColoring [SimTalk]
+Plant Simulation Help 12-1271
+Unpublished work. © 2026 Siemens
+
+_3D.StatesOrientation [SimTalk]
+Sets the orientation and the color of the state graphics of the object designated by <Path>.
+Remarks
+When you set the attribute, Plant Simulation deletes existing state graphics or re-creates them with the
+orientation you set. Plant Simulation also resets the transformation (position and scaling) of the state
+graphic.
+Assigning the attribute deactivates graphic inheritance.
+Type
+Attribute
+Syntax
+<Path>._3D.StatesOrientation:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "(Off)", "Horizontal", "Vertical", or "Color".
+Example
+MyStation._3D.StatesOrientation := "Horizontal"
+See also
+States > Orientation [state graphic]
+_3D.StatesOrientation [SimTalk]
+12-1272 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.StatesPosition [SimTalk]
+Sets the reference point of the state graphic of the object designated by <Path>.
+Remarks
+Assigning the position moves all state graphics according to these values.
+Assigning the attribute deactivates graphic inheritance.
+Type
+Attribute
+Syntax
+<Path>._3D.StatesPosition:length[]
+Assignment Value
+You can assign an array of data type length.
+Example
+MyStation._3D.StatesPosition := [-1, 1, 1]
+See also
+States > Position [state graphic]
+_3D.Position [SimTalk]
+Position [SimTalk] - graphic
+_3D.StatesPosition [SimTalk]
+Plant Simulation Help 12-1273
+Unpublished work. © 2026 Siemens
+
+_3D.StatesScale [SimTalk]
+Sets the scaling of the state graphic of the object designated by <Path>.
+Remarks
+Scaling changes the size and the position of all state graphics.
+Assigning the attribute deactivates graphic inheritance.
+Type
+Attribute
+Syntax
+<Path>._3D.StatesScale:real/real[3]
+Assignment Value
+You can assign:
+• A value of data type real to use uniform scaling.
+• An array of data type real with three values to use different scaling factors for the three axes.
+Return Value
+The return value is always an array with three values.
+Example
+MyStation._3D.StatesScale := 1          // uniform scaling
+MyStation._3D.StatesScale := [1, 4, 9]  // different scaling factors for 
+the x-axis, y-axis and z-axis
+var a := MyStation._3D.StatesScale      // 'a' designates an array
+See also
+States > Scale [state graphic]
+_3D.Scale [SimTalk]
+Scale [SimTalk] - graphic
+_3D.StatesScale [SimTalk]
+12-1274 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+X [SimTalk] - array
+Y [SimTalk] - array
+Z [SimTalk] - array
+_3D.StatesScale [SimTalk]
+Plant Simulation Help 12-1275
+Unpublished work. © 2026 Siemens
+
+_3D.StatesScaleWithObject [SimTalk]
+Scales the state graphic as well, when you scale the object designated by <Path> (true) or does not scale
+the state graphic (false).
+Remarks
+To not scale the state graphic as well, when you scale the object itself, specify false. Plant Simulation still
+scales the position of the state graphic though.
+Assigning the attribute deactivates graphic inheritance.
+Type
+Attribute
+Syntax
+<Path>._3D.StatesScaleWithObject:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation._3D.StatesScaleWithObject := true
+See also
+States > Scale With Object [check box]
+Accessing Point Clouds
+__Accessing Point Clouds
+SimTalk provides the attributes listed in the table of contents to the left for point clouds of the Frame.
+See also
+Edit 3D Properties [dialog] > Point Cloud
+_3D.StatesScaleWithObject [SimTalk]
+12-1276 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.PointCloudPath [SimTalk]
+Sets the file path to the point cloud you want to use in the Frame designated by <Path>.
+Remarks
+A relative path refers to the folder in which your simulation model is located.
+Type
+Attribute
+Syntax
+<Path>._3D.PointCloudPath:string
+Assignment Value
+You can assign a value of data type string.
+Example
+.Models.MyFrame._3D.PointCloudPath := "C:\Program Files\Siemens\Plant 
+Simulation 2606\3D\Siemens_Stand_Layers rotate 180degree.pod"
+See also
+Edit 3D Properties [dialog] > Point Cloud > File Path
+_3D.PointCloudPath [SimTalk]
+Plant Simulation Help 12-1277
+Unpublished work. © 2026 Siemens
+
+_3D.PointCloudPosition [SimTalk]
+Sets the position of the point cloud in the Frame designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>._3D.PointCloudPosition:array
+Assignment Value
+You can assign a value of data type array.
+The values designate the X-position, the Y-position, and the Z-position of the point cloud in the simulation
+model.
+Example
+.Models.MyFrame._3D.PointCloudPosition := [2, 3, 0]
+var a := .Models.MyFrame._3D.PointCloudPosition
+See also
+Edit 3D Properties [dialog] > Point Cloud > Position [point cloud]
+_3D.PointCloudPosition [SimTalk]
+12-1278 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+_3D.PointCloudRotation [SimTalk]
+Sets the rotation, i.e., the rotation angle and the rotation axis of the point cloud in the Frame designated
+by <Path>.
+Remarks
+Plant Simulation interprets the rotation angle as a rotation around the negative z-axis.
+Type
+Attribute
+Syntax
+<Path>._3D.PointCloudRotation:any
+Assignment Value
+You can specify:
+• A number which defines the rotation around the negative z-axis at the position at which you inserted
+the object.
+• An array with four values. The first value designates the angle, the remaining three values designate the
+components of the rotation axis.
+Return Value
+When querying the attribute, 3D returns an array with four items.
+Example
+.Models.MyFrame._3D.PointCloudRotation := 30             // rotation by 30 
+degrees
+.Models.MyFrame._3D.PointCloudRotation := [45, 0, 1, 0]  // rotates by 45 
+degrees 
+                                                         // around the y 
+axis
+See also
+Edit 3D Properties [dialog] > Point Cloud > Rotation [point cloud]
+_3D.PointCloudRotation [SimTalk]
+Plant Simulation Help 12-1279
+Unpublished work. © 2026 Siemens
+
+Accessing Video Recording Settings
+_Accessing Video Recording Settings
+SimTalk provides the functions listed in the table of contents to the left for accessing and recording a
+video.
+Accessing Video Recording Settings
+12-1280 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+F3DfinishVideo [SimTalk]
+Finishes the currently running video recording.
+Remarks
+If you started the video recording with the dialog Start Simulation Recording or the function
+F3DrecordSimulationVideo [SimTalk], finishing the video recording will stop the simulation.
+Type
+Function
+Syntax
+F3DfinishVideo
+Example
+F3DfinishVideo
+See also
+Video Ribbon Tab > Finish Recording
+stop [SimTalk] - EventController
+F3DfinishVideo [SimTalk]
+Plant Simulation Help 12-1281
+Unpublished work. © 2026 Siemens
+
+F3DisRecordingAVideo [SimTalk]
+Returns if a video is recorded at the moment or not.
+Type
+Function
+Syntax
+F3DisRecordingAVideo -> boolean
+Example
+-- If a video is currently being recorded we set the camera to different 
+positions
+if F3DisRecordingAVideo
+  -- First we want to show the model from a position we generated
+  -- with the ribbon command 3D > View > Marks > Generate SimTalk Code...
+  F3DconfigureView([1.043, -26.821, 13.465], 58.500, -17.565, .Models.Model)
+  wait 15
+  -- Now we play the camera path Ani1
+  wait _3D.CameraAnimations.Ani1.play
+  wait 5
+  -- We set the camera to another position and direction
+  F3DconfigureView([1.043, -26.821, 13.465], 58.500, -17.565, .Models.Model)
+  wait 10
+  -- Now we pause the video to skip parts of the simulation
+  F3DpauseVideo(true)
+  wait 15
+  -- Now we continue recording
+  F3DpauseVideo(false)
+  wait 10
+  waituntil Source.Cont != void
+  var MU = Source.Cont
+  -- We now attach the camera to a part on the source
+  F3DAttachCamera(MU)
+  waituntil MU.Location = Conveyor2
+  -- Detach the camera
+  F3DAttachCamera(void)
+  -- We set the camera to another position and direction
+  F3DconfigureView([1.043, -26.821, 13.465], 58.500, -17.565, .Models.Model)
+  wait 10
+  -- Finish the video recording
+  F3DfinishVideo
+end
+F3DisRecordingAVideo [SimTalk]
+12-1282 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+F3DpauseVideo [SimTalk]
+Pauses the currently running video recording or continues playing it.
+Type
+Function
+Syntax
+F3DpauseVideo([StartPause:boolean:=true])
+Parameter
+The optional parameter StartPause of data type boolean sets if the recording will be paused (true or
+parameter not specified) or continued (false).
+Default Value of the Parameter
+The default value is true.
+Example
+F3DpauseVideo
+See also
+Video Ribbon Tab > Pause/Resume Recording
+F3DpauseVideo [SimTalk]
+Plant Simulation Help 12-1283
+Unpublished work. © 2026 Siemens
+
+F3DrecordSimulationVideo [SimTalk]
+Starts the simulation or resumes it and records a video of it.
+Remarks
+3D records the video with the current settings of the dialog Record Simulation Video.
+Deactivate the safety setting File > Model Settings > General > Prohibit Access to the Computer to
+permit the function F3DrecordSimulationVideo to copy data from another folder and write it to the model
+folder or its sub-folders. The function cannot copy files from the model folder or its sub-folders.
+Type
+Function
+Syntax
+F3DrecordSimulationVideo(FilePath:string, ObjectOfInterest:object/3D 
+object, RealTimeScale:real[, FrameRate:integer:=25, 
+Description:string/void:="", RecordApplication:boolean:=false, 
+StartTime:time/void:=void, EndTime:time/void:=void, CameraPath:string:="", 
+LoopInfinitely:boolean:=false, StartPathWithRecording:boolean:=false, 
+EndRecordingWithPath:boolean:=false])
+F3DrecordSimulationVideo [SimTalk]
+12-1284 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Parameters
+You can specify the following parameters:
+• The parameter FilePath of data type string designates the path to the video file that is going to be
+recorded.
+• The parameter ObjectOfInterest of data type object or 3D object designates the object from whose view
+the simulation is recorded. The object either has to be the root Frame of a simulation or be inserted into
+the root Frame. An object which does not have an EventController, for example a class, is not allowed.
+• The parameter RealTimeScale of data type real designates the real timescale with which the video will
+be played later on.
+• The optional parameter FrameRate of data type integer designates the frame rate for recording the
+video file. The default setting is 25 frames per second.
+Default Value of the Parameter
+The default value is 25.
+• The optional parameter Description of data type string designates the descriptions that is shown on the
+first frame of the video.
+◦ Specify void to show no description on the first frame.
+◦ Specify an empty string "" to use the default description, i.e., the file name of the model. The default
+setting is "".
+Default Value of the Parameter
+The default value is an empty string "".
+• The optional parameter RecordApplication of data type boolean sets if the entire application window
+will be recorded (true) or only the window of the ObjectOfInterest (false).
+◦ Specify false to record a window of an ObjectOfInterest, provided such a window is open.
+◦ If no such window is open, Plant Simulation opens a suitable window.
+Default Value of the Parameter
+The default value is false.
+• The optional parameter StartTime of data type time or void sets when recording starts.
+◦ Specify void or nothing to start recording when the simulation is started or continued.
+◦ If you specify a time, recording starts at this point in time.
+◦ If the point in time is located in the past, relative to the current simulation time, the simulation is
+going to be reset beforehand.
+Default Value of the Parameter
+The default value is void.
+• The optional parameter EndTime of data type time or void sets when recording terminates.
+F3DrecordSimulationVideo [SimTalk]
+Plant Simulation Help 12-1285
+Unpublished work. © 2026 Siemens
+
+◦ Specify void or nothing to never terminate recording by itself.
+◦ If you specify a time, recording and simulation run up to this point in time of the simulation and then
+terminates. In addition, an End Time which you typed into the EventController will be deactivated for
+the duration of the recording.
+Default Value of the Parameter
+The default value is void.
+• The optional parameter CameraPath of data type string designates the camera path that will be played
+during the simulation and the recording of the video. If you specify an empty string "" or nothing no
+camera path is going to be played automatically.
+Note
+This parameter only applies to the Frame.
+Default Value of the Parameter
+The default value is an empty string "".
+• The optional parameter LoopInfinitely of data type boolean sets if camera path is looped infinitely.
+◦ Specify true to play the path again from the start after reaching its end.
+◦ Specify false or nothing to make the view remain at it location when the end of the path is reached.
+Note
+This parameter only applies to the Frame.
+Default Value of the Parameter
+The default value is false.
+• The optional parameter StartPathWithRecording of data type boolean sets if the camera path will be
+played when recording starts (true) or when the simulation starts/continues (false or nothing).
+Note
+This parameter only applies to the Frame.
+Default Value of the Parameter
+The default value is false.
+• The optional parameter EndRecordingWithPath of data type boolean sets if simulation and video
+recording are also terminated when reaching the end of the camera path (true) or if simulation and
+video recording are to be continued after the end of the path has been reached (false nothing).
+Note
+This parameter only applies to the Frame.
+F3DrecordSimulationVideo [SimTalk]
+12-1286 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Default Value of the Parameter
+The default value is false.
+Example
+F3DrecordSimulationVideo("C:\Users\ha\Desktop\PlantSimulationVideo.avi", 6, 
+25, "")
+See also
+Prohibit Access to the Computer [model settings]
+Start Simulation Recording
+Video Ribbon Tab > Start Simulation Recording
+F3DrecordSimulationVideo [SimTalk]
+Plant Simulation Help 12-1287
+Unpublished work. © 2026 Siemens
+
+F3DrecordVideo [SimTalk]
+Records a video of Plant Simulation or of the active window.
+Remarks
+3D records the video with the current settings of the dialog Record Video.
+If you deactivate the safety setting File > Model Settings > General > Prohibit Access to the Computer,
+the function F3DrecordVideo can copy data from another folder and write it to the model folder or its
+sub-folders. The function cannot copy files from the model folder or its sub-folders.
+Type
+Function
+Syntax
+F3DrecordVideo(FilePath:string[, FrameRate:integer:=25, 
+Description:string:="", RecordApplication:boolean:=false])
+Parameters
+You can specify the following parameters:
+• The parameter FilePath of data type string designates the path to the video file that is going to be
+recorded. By default, the file is saved here C:\Users\YourLoginName\Desktop\.
+• The optional parameter FrameRate of data type integer designates the frame rate for recording the
+video file. The default setting is 25 frames per second.
+Default Value of the Parameter
+The default value is 25.
+F3DrecordVideo [SimTalk]
+12-1288 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The optional parameter Description of data type string designates the descriptions that is shown on the
+first frame of the video.
+◦ Specify void to show no description on the first frame.
+◦ Specify an empty string"" to use the default description, i.e., the file name of the model.
+Default Value of the Parameter
+The default value is an empty string "".
+• The optional parameter RecordApplication of data type boolean sets if the entire application window
+will be recorded (true) or only the 3D window of the ObjectOfInterest (false).
+Default Value of the Parameter
+The default value is false.
+Example
+F3DrecordVideo("C:\Users\ha\Desktop\PlantSimulationVideo.avi", 
+25, .Models.MyChocolatePlant)
+See also
+Prohibit Access to the Computer [model settings]
+Video Ribbon Tab > Start Simple Recording
+F3DrecordVideo [SimTalk]
+Plant Simulation Help 12-1289
+Unpublished work. © 2026 Siemens

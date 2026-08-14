@@ -1,0 +1,69 @@
+Methods of Lists and Tables
+Methods of Lists and Tables
+The lists and tables share a number of methods. The different kinds—DataStack, DataQueue, DataList,
+DataTable, and TimeSequence—in addition provide object-specific methods.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.readFile(FileName:string[, NoDebugger:boolean:=false, 
+CodePage:string:="ANSI"]) → boolean
+• ◦ The expression <Path> designates the path of the object to which the method applies.
+Methods of Lists and Tables
+11-3958 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+If a parameter has a default value, the signature shows the default value after the parameter
+If the method has a return value, the signature shows its data type after the arrow ->.
+• We use these abbreviations for the signature:
+Argument of data type Data type Range of values
+integer integer integer greater than zero
+any all data types depending on the data type
+listrange — a range
+direction string "up", "down", " "
+attributes string name of an attribute
+See also
+_Methods for Accessing Lists and Tables
+_Methods for the Order of Cells within Lists and Tables
+_Methods for the Format of Lists and Tables
+_Methods for Querying Statistics Values of Lists and Tables
+_Methods for Importing and Exporting Data in Text Format
+Instantiating Local Lists and Tables
+_Methods for Indirectly Accessing Lists and Tables
+Methods of the DataTable
+_Methods of the DataList
+Methods of Lists and Tables
+Plant Simulation Help 11-3959
+Unpublished work. © 2026 Siemens
+
+_Methods of DataQueue and DataStack
+Methods for Accessing Lists and Tables
+_Methods for Accessing Lists and Tables
+Lists and tables provide the methods listed in the table of contents to the left for accessing them.
+Read and write access depend on the object class and are described in the sub-chapters.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Accessing Lists and Tables
+11-3960 Plant Simulation Help
+Unpublished work. © 2026 Siemens

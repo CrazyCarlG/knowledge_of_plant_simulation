@@ -1,0 +1,489 @@
+StatMovingLoadedTime [SimTalk]
+Returns the total time during which the Converter designated by <Path> was raising or lowering itself and
+was conveying a MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMovingLoadedTime → time
+Return Value
+The return value has the data type time.
+Example
+print Converter.StatMovingLoadedTime
+See also
+Moving Time [statistics report]
+Attributes of the Converter
+_Attributes of the Converter
+The Converter provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatMovingLoadedTime [SimTalk]
+Plant Simulation Help 11-2295
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+Converter.Length := 11
+• To get the value of an attribute, you might, for example, type:
+print Converter.Length
+posit := MyStation.Cont.XPos
+_Attributes of the Converter
+11-2296 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+AttributeType [SimTalk] - Converter
+Sets the Attribute Type of the Strategy > MU Attribute of the Converter designated by <Path>.
+Remarks
+AttributeType sets the data type of the attribute that defines the material flow object to which the
+Converter moves the part.
+Type
+Attribute
+Syntax
+<Path>.AttributeType:string
+Assignment Value
+You can assign a value of data type string.
+Example
+Converter.AttributeType := "String"
+See also
+Attribute Type [drop-down list] - Converter
+AttributeType [SimTalk] - Converter
+Plant Simulation Help 11-2297
+Unpublished work. © 2026 Siemens
+
+Strategy [drop-down list] - Converter
+AttributeType [SimTalk] - Converter
+11-2298 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+AutomaticStop [SimTalk] - Converter
+Automatically stops the Converter designated by<Path>. This means that it sets its current speed to 0 if it
+does not transport a MU.
+Remarks
+This might, for example, be the case if it is empty or if it is blocked because a MU cannot leave it.
+If the speed of the Converter is 0, the Energy State changes to operational.
+Type
+Attribute
+Syntax
+<Path>.AutomaticStop:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+Converter.AutomaticStop := true
+See also
+Automatic Stop [check box] - Converter
+Operational [energy]
+AutomaticStop [SimTalk] - Converter
+Plant Simulation Help 11-2299
+Unpublished work. © 2026 Siemens
+
+Capacity [SimTalk] - Converter
+Sets the Capacity, i.e., the number of MUs, which the Converter designated by <Path> can hold.
+Remarks
+The default value of -1 stands for an infinite capacity.
+If the Converter conveys parts along the insertion direction, you can, for example, use the Capacity to
+allow the Converter to only convey this number of MUs at the same time.
+This only limits the possible number of MUs. If the Converter conveys parts it still conveys a single MU at a
+time though.
+Type
+Attribute
+Syntax
+<Path>.Capacity:integer
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type integer.
+Example
+Converter.Capacity := 8
+See also
+Capacity [text box] - Converter
+Capacity [SimTalk] - Converter
+11-2300 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DefaultExit [SimTalk]
+Sets the Default Exit of the Converter designated by <Path>.
+Remarks
+The Default Exit applies to the Strategies > Default Exit, MU Attribute, and MU Name.
+The figures below illustrate the sides depending on the direction in which you inserted the Converter into
+your simulation model. The numbers designate the side of the Converter at which the MU exits.
+Type
+Attribute
+Syntax
+<Path>.DefaultExit:integer
+Assignment Value
+You can assign a value of data type integer.
+• 1 stands for laterally to the right in the insertion direction
+• 2 stands for against the insertion direction
+• 3 stands for laterally to the left in the insertion direction
+• 0 stands for along the insertion direction
+DefaultExit [SimTalk]
+Plant Simulation Help 11-2301
+Unpublished work. © 2026 Siemens
+
+Example
+MyConverter.DefaultExit := 2
+See also
+Default Exit [drop-down list]
+Strategy [drop-down list] - Converter
+DefaultExit [SimTalk]
+11-2302 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitForMU [SimTalk]
+Sets the side at which the next entering MU or the MU positioned at the converting point wants to exit the
+Converter designated by <Path>.
+Remarks
+You can only set the attribute ExitForMU in the Strategy method/StrategyCtrl.
+Note
+The MU cannot exit the Converter at the side at which it entered.
+The figures below illustrate the sides depending on the direction in which you inserted the Converter into
+your simulation model. The numbers designate the side of the Converter at which the MU exits.
+Type
+Attribute
+Syntax
+<Path>.ExitForMU:integer
+Assignment Value
+You can assign a value of data type integer.
+Examples
+param entranceNo: integer
+if @.name = "C" 
+   ?.ExitForMU := 0 /* number of the exit of the converter*/
+elseif @.name = "A" 
+   if entranceNo = 2 
+       ?.ExitForMU := 3
+ExitForMU [SimTalk]
+Plant Simulation Help 11-2303
+Unpublished work. © 2026 Siemens
+
+   else
+       ?.ExitForMU := 0
+   end
+else
+   if entranceNo = 2 
+       ?.ExitForMU := 1
+   else
+       ?.ExitForMU := 0
+   end
+end
+?.ExitForMU := 1
+SimTalk
+StrategyCtrl [SimTalk] - Converter
+See also
+Strategy Method [Converter]
+ExitForMU [SimTalk]
+11-2304 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GoToDefaultPosition [SimTalk] - Converter
+Rotates the Converter designated by <Path> back to its default position after the MU has left the Converter
+(true) or not (false).
+Remarks
+The Converter does not return to its default position if a MU is waiting that wants to enter laterally.
+Type
+Attribute
+Syntax
+<Path>.GoToDefaultPosition:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyConverter.GoToDefaultPosition := true
+See also
+Go to Default Position [check box] - Converter
+GoToDefaultPosition [SimTalk] - Converter
+Plant Simulation Help 11-2305
+Unpublished work. © 2026 Siemens
+
+Length [SimTalk] - Converter
+Sets the length of the Converter designated by <Path>.
+Remarks
+If the Converter is to convey parts perpendicular, it has to provide enough room for the length and the
+width of the MU to completely fit on the Converter, if the booking point is located on the converting point
+in the center of the Converter.
+Type
+Attribute
+Syntax
+<Path>.Length:length
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type length.
+Note
+In SimTalk 2.0 you can specify the length units m, mm, km, cm, yd, ft, and in.
+Type in the unit directly after the values, without a separating blank space, for example 10m or 10.2m.
+You can specify the unit for floating point values and for integer values.
+Example
+MyConverter.Length := 2m
+See also
+Length [text box] - Converter
+Length [SimTalk] - Converter
+11-2306 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+MovingTime [SimTalk] - Converter
+Sets the Moving Time which the Converter designated by <Path> needs to lift the MU onto a different
+conveying level and to then lower itself and move back to the default position.
+Remarks
+If you use the formula distribution, you can enter a numeric expression or the name of a Method. You can
+use the anonymous identifier @ to access the MU for which the moving time applies.
+Type
+Attribute
+Syntax
+<Path>.MovingTime:time
+Assignment Value
+You can assign a value of data type time.
+Example
+MyConverter.MovingTime := 2
+See also
+Moving Time [drop-down list] - Converter
+Formula [distribution]
+MovingTime [SimTalk] - Converter
+Plant Simulation Help 11-2307
+Unpublished work. © 2026 Siemens
+
+RelConvertingPointL [SimTalk]
+Sets the relative position of the converting point along the length of the Converter designated by <Path>.
+Remarks
+The converting point is the point at which the Converter changes the conveying direction of the MUs it
+conveys.
+Type
+Attribute
+Syntax
+<Path>.RelConvertingPointL:real
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type real.
+Specify a value between 0.0 and 1.0, denoting a position between 0 % and 100 %.
+Example
+MyConverter.RelConvertingPointL := 0.2
+See also
+Relative Converting Point For Length
+RelConvertingPointL [SimTalk]
+11-2308 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+RelConvertingPointW [SimTalk]
+Sets the relative position of the converting point along the width of the Converter designated by <Path>.
+Remarks
+The converting point is the point at which the Converter changes the conveying direction of the MUs it
+conveys.
+Type
+Attribute
+Syntax
+<Path>.RelConvertingPointW:real
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type real.
+Specify a value between 0.0 and 1.0, denoting a position between 0 % and 100 %.
+Example
+MyConverter.RelConvertingPointW := 0.8
+See also
+Relative Converting Point For Width
+RelConvertingPointW [SimTalk]
+Plant Simulation Help 11-2309
+Unpublished work. © 2026 Siemens
+
+Speed [SimTalk] - Converter
+Sets the Speed with which the Converter designated by <Path> conveys the MUs.
+Syntax
+<Path>.Speed:speed
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type speed.
+Specify -1 for an infinite speed.
+Note
+In SimTalk 2.0 you can specify the speed units mps, fps, kmh, and mph.
+Type in the unit directly after the number, without a separating blank space, for example 100kmh or
+100.5kmh.
+var len := 1.0ft
+var s : speed := 10.5m / 1:30
+var x : length := 3m
+Example
+MyConverter.Speed := 2
+See also
+Speed [text box] - Converter
+Speed [SimTalk] - Converter
+11-2310 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Strategy [SimTalk] - Converter
+Sets the Strategy of the Converter designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.Strategy:string
+Assignment Value
+You can assign a value of data type string.
+You can specify:
+• "Default Exit" to make all MUs exit through the Default Exit which you select to the successor
+attached to that exit.
+• "Straight" to convey the MU straight through to the next station.
+• "Feed in" to allow MUs from a branch line to only enter the main line when no part is located on
+the main line within the Free Space which you enter. The Free Space is the distance between two
+successive MUs on the main line.
+• "MU Attribute" to move the MU on according to a built-in or a user-defined attribute of the MU. You
+can set the attributes with the method setAttributeList. You can set the default exit with the attribute
+DefaultExit.
+Strategy [SimTalk] - Converter
+Plant Simulation Help 11-2311
+Unpublished work. © 2026 Siemens
+
+• "MU Name" to move the MU on according to its name. You can set the default exit with the attribute
+DefaultExit. You can set the attributes with the method setAttributeList.
+The numbers designate the side of the Converter at which the MU exits. The figures below illustrate the
+sides depending on the direction in which you inserted the Converter into your simulation model.
+• "Method" to convey the MU according to the attribute ExitForMU you enter into the Strategy Method
+in which you determine the side of the Converter at which the MU will exit the Converter. You can set
+the control with the attribute StrategyCtrl.
+• "Method at Converting Point" to only determine the target at the converting point with the
+attribute ExitForMU, not already before the MU enters the Converter. This strategy is only available for a
+Capacity of 1.
+The MU always stops at the converting point. Then, Plant Simulation calls the method for determining
+the target. In the method you can, for example use ?.ExitForMU := 1. You can set the control with
+the attribute StrategyCtrl.
+Note
+As the Strategy Method is used for determining the side of the exit, the Strategy Method will not be
+called when the MU has a route and Automatic Routing is activated.
+Example
+MyConverter.Strategy := "Straight"
+Strategy [SimTalk] - Converter
+11-2312 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+StrategyCtrl [SimTalk] - Converter
+ExitForMU [SimTalk]
+setAttributeList [SimTalk] - Converter
+DefaultExit [SimTalk]
+StrategyCtrl [SimTalk] - Converter
+See also
+Strategy [drop-down list] - Converter
+Strategy Method [Converter]
+Default Exit [drop-down list]
+Capacity [text box] - Converter
+Automatic Routing [Part, Container]
+Strategy [SimTalk] - Converter
+Plant Simulation Help 11-2313
+Unpublished work. © 2026 Siemens
+
+StrategyCtrl [SimTalk] - Converter
+Designates a Method object of the object designated by <Path>.
+Remarks
+Type in the source code that determines the side of the Converter designated by <Path> at which the MU
+will exit the Converter.
+The figures below illustrate the sides depending on the direction in which you inserted the Converter into
+your simulation model. The numbers designate the side of the Converter at which the part exits.
+Plant Simulation calls the Strategy Method as soon as the MU wants to enter the Converter for the setting
+Strategy > Method.
+Plant Simulation calls the Strategy Method when the MU has reached the converting point for the setting
+Strategy > Method at Converting Point.
+You have to set the side with the attribute ExitForMU.
+As the Strategy Method is used for determining the side of the exit, the Strategy Method will not be
+called when the MU has a route and Automatic Routing is activated.
+The default strategy method looks like this:
+param entranceNo: integer
+?.ExitForMU := 0 /* number of exit */
+Type
+Attribute
+Syntax
+<Path>.StrategyCtrl:method
+StrategyCtrl [SimTalk] - Converter
+11-2314 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Assignment Value
+You can assign a value of data type method.
+Examples
+param entranceNo: integer
+if @.name = "C" 
+    ?.ExitForMU := 0 /* number of the exit of the converter*/
+elseif @.name = "A" 
+    if entranceNo = 2 
+        ?.ExitForMU := 3
+    else
+        ?.ExitForMU := 0
+    end
+else
+    if entranceNo = 2 
+        ?.ExitForMU := 1
+    else
+        ?.ExitForMU := 0
+    end
+end
+MyConverter.StrategyCtrl := &myStrategyCtrl
+SimTalk
+ExitForMU [SimTalk]
+See also
+Strategy Method [Converter]
+Automatic Routing [Part, Container]
+StrategyCtrl [SimTalk] - Converter
+Plant Simulation Help 11-2315
+Unpublished work. © 2026 Siemens
+
+Width [SimTalk] - Converter
+Sets the Width of the Converter designated by <Path>.
+Remarks
+If the Converter is to convey MUs perpendicular, it has to provide enough room for the Length and the
+Width of the MU to completely fit on the Converter, if the booking point is located on the converting point
+in the center of the Converter.
+Type
+Attribute
+Syntax
+<Path>.Width:length
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type length.
+Note
+In SimTalk 2.0 you can specify the length units m, mm, km, cm, yd, ft, and in.
+Type in the unit directly after the values, without a separating blank space, for example 10m or 10.2m.
+You can specify the unit for floating point values and for integer values.
+Example
+MyConverter.Width := 2
+See also
+Width [text box] - Converter
+Width [SimTalk] - Converter
+11-2316 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Turntable
+Turntable [object]
+Use the object Turntable for modeling a rotating platform, which moves the part onto one of several
+connected material flow objects and/or turns it around.
+Image
+Description
+The Turntable has a capacity of one, i.e. only one part can be located on it at any one time. The length of
+the MU must not be longer than the Length of the Turntable itself.
+The Turntable moves the part on to its successors within the flow of materials like this:
+• The MU arrives at the exit of the predecessor. It notifies the turntable that it wants to be rotated.
+• The turntable then determines if it accepts the MU for rotating it or not.
+◦ Without a Pull Control, the turntable will be notified that a MU wants to be rotated, and it accepts it.
+◦ If you entered a Pull Control, the turntable executes it, and when the MU is selected, it will be
+rotated.
+• The turntable rotates to the respective predecessor, and the MU moves onto the turntable and drives
+onto it.
+• Once one of the conditions below is met, the turntable looks for the target station and starts rotating
+toward it:
+◦ If the MU has completely entered the turntable.
+◦ If the MU has reached the rotation point on the table.
+◦ If the part is located in the center of the turntable, i.e., when both ends of the part have the same
+distance from the ends of the turntable.
+◦ If you want the turntable to not rotate automatically, but only if the MU has reached a user-defined
+sensor, select User-defined with Sensor. In the Sensor Control, you have to tell the turntable to call
+the method setDestination.
+• For determining the target station, the turntable either uses its default exit strategies or the Target
+Control. Within this Method you set the target station with the method setDestination.
+Turntable
+Plant Simulation Help 11-2317
+Unpublished work. © 2026 Siemens

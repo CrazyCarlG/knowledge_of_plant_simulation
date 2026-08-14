@@ -1,0 +1,64 @@
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDataStack.Full
+Attributes of DataQueue and DataStack
+Attributes of DataQueue and DataStack
+The DataStack and the DataQueue provide:
+• The Attributes of Lists and Tables.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of DataQueue and DataStack
+Plant Simulation Help 11-4243
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataStack.MaxDim := -1
+MyDataQueue.Alignment := "left"
+• To get the value of an attribute, you might, for example, type:
+print myDataStack.MaxDim
+posit := Station.Cont.XPos
+DataQueue
+DataQueue
+Use the object DataQueue for accessing data according to the using the LIFO method (Last In First Out).
+Image
+Description
+The objects DataQueue and DataStack are lists with one column. They share all methods and attributes,
+but differ in their built-in properties.
+DataQueue
+11-4244 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation accesses the content of the DataQueue using the FIFO method (First In First Out).
+Plant Simulation saves entries you add in the order you insert them in and removes the item waiting in
+the queue the longest first.
+• Plant Simulation accesses the content of the DataStack using the LIFO method (Last In First Out). Plant
+Simulation inserts new entries at the top of the DataStack and removes the contents of the cell you
+added last first.
+To show a tooltip with information about the DataQueue, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the DataQueue, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DataQueue to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > DataQueue on the Home ribbon tab.
+See also
+Properties of the DataQueue
+DataQueue
+Plant Simulation Help 11-4245
+Unpublished work. © 2026 Siemens

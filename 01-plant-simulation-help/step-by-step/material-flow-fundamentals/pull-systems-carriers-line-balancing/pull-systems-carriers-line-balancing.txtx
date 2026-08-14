@@ -1,0 +1,431 @@
+Back to Configure the Stations
+Back to Program the Method that Places Parts into Stock
+Back to Program the Method that Removes Parts from Stock
+Back to Program the Method that Manages the Inventory Table
+Back to Display a Value During the Simulation with a Variable
+Back to Place Parts into Stock and Remove Parts from It
+Using the Store as Supermarket
+Use the Store as Supermarket
+The Store can also work as supermarket and thus represent a pulling material flow.
+Here we show how the Store 
+  orders two different part types from a Source. Only when the stock of
+these parts falls below a certain value, the Source starts producing these parts. To facilitate this, you have
+to activate Supermarket in the Store and MU Selection > Order Controlled in the Source.
+The Store then sends these parts on to an AssemblyStation, which loads them onto the respective pallets
+and moves them on.
+We will demonstrate how to:
+• Model the Pulling Material Flow
+• Configure the Store as Supermarket and the Source as Order-Controlled
+• Show the Amount of Waiting Parts and the Amount of Orders
+The finished simulation model looks like this:
+Using the Store as Supermarket
+10-270 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Use the Store as Supermarket
+Plant Simulation Help 10-271
+Unpublished work. © 2026 Siemens
+
+Compare Place Parts into Stock and Remove Parts from It
+Compare Stack Parts in the Store
+Back to Model the Flow of Materials, Basics
+Go to Show the Amount of Waiting Parts and the Amount of Orders
+Video on YouTube
+https://youtu.be/ISYfZMdQp3w?si=oRZapujKzN7zp5-_&t=381
+Model the Pulling Material Flow
+When the Store works as supermarket, we model the pulling material flow.
+To model the pulling material flow:
+• Insert the material flow objects so that they match the figure below.
+Video on YouTube
+10-272 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Duplicate the Part and the Container twice each. We renamed our Parts to PartRed and PartBlue and
+our Containers to PalletRed and PalletBlue and colored them accordingly. We did not change any
+of the other settings.
+• Shorten the Processing Time of the Station from 10 to 2 (0:02) seconds.
+• Configure the AssemblyStation as shown in the figure below. You only have to enter the names of the
+parts, not their path.
+Model the Pulling Material Flow
+Plant Simulation Help 10-273
+Unpublished work. © 2026 Siemens
+
+Shorten the Processing Time of the AssemblyStation from 10 to 5 (0:05) seconds.
+• Enter the respective pallets into Source1 and Source2.
+Back to Use the Store as Supermarket
+Model the Pulling Material Flow
+10-274 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Configure the Store as Supermarket and the Source as Order-Controlled
+Configure the Store as Supermarket and the Source as Order-Controlled in the simulation model.
+To configure the Store as Supermarket and the Source as Order Controlled:
+Open the dialog of the Store:
+• Select the check box Supermarket.
+• Click Configuration and fill in the configuration table. Our Store has a Minimum stock of 2 parts for
+our PartRed and PartBlue, a Maximum stock of 6 parts, and an Initial stock of 3 parts. The Supplier of
+the parts is the Source named SourceParts. During the simulation the column Current shows how many
+parts are located in the Store.
+• Open the dialog of the Source and select MU selection > Order Controlled.
+Configure the Store as Supermarket and the Source as Order-Controlled
+Plant Simulation Help 10-275
+Unpublished work. © 2026 Siemens
+
+Run the simulation and watch what happens.
+Note
+If the simulation does not start, check the setting Main part from predecessor no of the
+AssemblyStation and change it if necessary.
+Back to Use the Store as Supermarket
+Configure the Store as Supermarket and the Source as Order-Controlled
+10-276 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show the Amount of Waiting Parts and the Amount of Orders
+Show the amount of waiting parts and the amount of orders.
+You can watch that the Store initially contains 3 parts each, which are loaded onto the pallets. Once the
+Minimum stock is reached, the Store reorders parts from the Source, which only then starts producing
+them. These parts are then fed into the material flow.
+The command View > Show Orders of the Source shows the orders which are pending with this Source.
+The table contains the Part Type of the ordered MUs, its Amount, and the Target of the part. The Target is
+the object that orders the parts.
+The command View > Show Orders of the Store shows the orders which are pending with this Store.
+When you drag the Store configured as a Supermarket onto a Chart, it shows the occupancy for all parts
+that are defined in the Configuration table by default.
+Show the Amount of Waiting Parts and the Amount of Orders
+Plant Simulation Help 10-277
+Unpublished work. © 2026 Siemens
+
+Back to Use the Store as Supermarket
+Stack Parts in the Store
+When you model your plant, you can also stack parts in the Store.
+To do so, just enter the Z-Dimension of the Store.
+In our example the Source produces parts and moves them on onto a Conveyor. The Robot then unloads
+the parts from the Conveyor and places them in the Store.
+The finished simulation model looks like this:
+Stack Parts in the Store
+10-278 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• For the Source and the Conveyor we used the default settings.
+• For the Robot we entered a Loading Time and an Unloading Time of 1 second (0:01) each and a
+Default Angle of 180 degrees.
+• Our Store can store 4 parts in each dimension.
+Stack Parts in the Store
+Plant Simulation Help 10-279
+Unpublished work. © 2026 Siemens
+
+When we run the simulation, we can watch how the Robot places the parts into stock and stacks them.
+The screenshots also shows that the parts move onto the Conveyor continually with the front first.
+Compare Unload Stacked Parts
+Compare Define the Animation Area of a Simulation Object
+Back to Model the Flow of Materials, Basics
+Stack Parts in the Store
+10-280 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Loading a Container Layer by Layer
+By default, Plant Simulation stacks the parts on each loading place of the Container to its maximum
+Z-Dimension and then starts a new layer on a new place.
+You can also load the parts layer by layer by activating Fill Whole Layer 
+ .
+In our sample model a Source produces parts and another Source produces pallets. The top robot loads
+the parts onto the pallet at the first sensor of the Conveyor. The bottom robot unloads the parts from the
+pallet and places them onto the lower Conveyor. The Conveyors move the pallets and the parts on to their
+respective Drains.
+With the default setting Fill Whole Layer 
+  deactivated Plant Simulation stacks the parts on
+the Container, before starting a new layer. This looks like this.
+Loading a Container Layer by Layer
+Plant Simulation Help 10-281
+Unpublished work. © 2026 Siemens
+
+To load the Container layer by layer, activate Fill Whole Layer 
+ . Once a layer is loaded all
+the way, Plant Simulation starts a new layer. This looks like this.
+Back to Model the Flow of Materials, Basics
+Working with Workpiece Carriers
+Work with Workpiece Carriers
+You can use the Container as a workpiece carrier.
+To do so, select the check box in its dialog. Then Plant Simulation does not consider the Workpiece
+Carrier itself, but the workpiece loaded onto it, i.e., the MU. This affects, among others, the Processing
+Time and the Set-up Time of the part.
+Working with Workpiece Carriers
+10-282 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+We demonstrate the workpiece carrier in connection with an AssemblyStation for which the main part is
+attached to a workpiece carrier.
+In our example two Sources produce a Container each which we will use as workpiece carriers. In the
+Entrance Control of the Sources we produce an additional Container each, our main part, which is
+attached to our first Container, the workpiece carrier.
+Two Conveyors transport the main parts attached to the workpiece carriers to a Station, which is set up
+according to the SetUpTable, and which processes the parts according to the ProcessingTable.
+The Containers are then delivered across an additional Conveyor to the AssemblyStations. The
+AssemblyStation is fed with two different add-on parts by two attached Sources. The AssemblyStation
+attaches the add-on parts to the main parts on the workpiece carrier. The AssemblyStation then moves
+the fully assembled part on to the Drain.
+We will demonstrate how to:
+• Configure Workpiece Carriers, Main Parts, and Add-On Parts
+• Configure the Sources for Workpiece Carriers and Main Parts
+• Configure the Processing Station, the Set-Up and Processing Table
+• Configure the Sources for the Add-On Parts
+• Configure the AssemblyStation Which Assembles the Parts
+• Run the Simulation and View the Results
+The finished simulation model looks like this:
+Work with Workpiece Carriers
+Plant Simulation Help 10-283
+Unpublished work. © 2026 Siemens
+
+Back to Model the Flow of Materials, Basics
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+For our workpiece carrier and for our main parts we use the Container.
+Proceed as follows:
+• Open the folder MUs in the Class Library.
+• Click the object Container with the right mouse button and select Duplicate.
+• Rename the duplicated Container in the folder UserObjects to WorkpieceCarrier.
+• Duplicate the Container twice and rename the copies to MainPartA and MainPartB.
+• Duplicate the Part twice and rename the copies to AddOnPart and AddOnPartB.
+Configure the WorkpieceCarrier.
+• We selected these settings for the simulation object:
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+10-284 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Configure the animation object of the WorkpieceCarrier.
+◦ Click the WorkpieceCarrier with the right mouse button and select Open in 3D.
+◦ Click the right mouse button in the background of the 3D window and select Exchange Graphics. We
+selected this stacking box:
+◦ Plant Simulation then shows this message. As we do not want to use the suggested dimensions of
+the stacking box, we click No.
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+Plant Simulation Help 10-285
+Unpublished work. © 2026 Siemens
+
+The 3D Properties for the MU Animation of the WorkpieceCarrier look like this:
+Configure the MainParts:
+• As we want to attach the MainParts to our WorkpieceCarriers, we have to make them a little smaller
+than the blue stacking box. We copied the default graphic of the Part and pasted it into the main parts.
+The settings for the simulation objects of MainPartA and MainPartB now look like this:
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+10-286 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• For the animation objectsof MainPartA and MainPartB we selected these settings for the
+Transformation and the Appearance. For MainPartB we just use another color.
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+Plant Simulation Help 10-287
+Unpublished work. © 2026 Siemens
+
+For the MU Animation we use an animation area with these settings.
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+10-288 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To make sure that the add-on parts are shown on the top side of the animation area instead of on its
+floor, we click Show. The setting Center > Z > 1 ensures this.
+Configure Workpiece Carriers, Main Parts, and Add-On Parts
+Plant Simulation Help 10-289
+Unpublished work. © 2026 Siemens
+
+Configure the add-on parts:
+• For our AddOnParts that we want to attach to the MainParts we delete the default graphic and create a
+simple cylinder.
+• We selected these settings for the simulation object and for the graphic of AddOnPartA and
+AddOnPartB. For AddOnPartB we just use another color.
+Our add-on part A looks like this:
+We did not change any other settings.
+Back to Work with Workpiece Carriers
+Configure the Sources for Workpiece Carriers and Main Parts
+You can configure the Sources for creating workpiece carriers and main parts.
+In this modeling step we configure the Sources which produce the WorkpieceCarriers:
+• Our SourceCarrierA produces the WorkpieceCarriers for the MainPartA with these settings.
+Configure the Sources for Workpiece Carriers and Main Parts
+10-290 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• In addition, we created an Entrance Control which creates a MainPartA on each WorkpieceCarrier. We
+typed in this instruction:
+.UserObject.MainPartA.create(@)
+Configure the Sources for Workpiece Carriers and Main Parts
+Plant Simulation Help 10-291
+Unpublished work. © 2026 Siemens
+
+• For the SourceCarrierB we use the same settings. We do, however, create a MainPartB in the Entrance
+Control with this instruction:
+.UserObject.MainPartB.create(@)
+Back to Work with Workpiece Carriers
+Configure the Processing Station, the Set-Up and Processing Table
+In this modeling step we configure our ProcessingStation which processes the MainParts on the
+WorkpieceCarriers.
+• We set the Set-up Time for the MainParts on the Station in a DataTable of type List(Type).
+◦ Insert a DataTable and rename it to SetUpTable.
+◦ Select Set-up Time > List(Type), drag the SetUpTable to the text box next to it and drop it there.
+• We also set the Processing Time of the MainParts on the ProcessingStation in a DataTable of type
+List(Type).
+◦ Insert a DataTable and rename it to ProcessingTable.
+◦ Select Processing Time > List(Type), drag the ProcessingTable to the text box next to it and drop it
+there.
+• Plant Simulation formats the DataTables automatically with two columns, one for the MU Type of
+the part to be set-up for/processed, and one for the Processing Time/Set-up Time. We entered these
+Processing and Set-up Times for our MainParts:
+Configure the Processing Station, the Set-Up and Processing Table
+10-292 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Work with Workpiece Carriers
+Configure the Sources for the Add-On Parts
+In this modeling step we configure the Sources which feed the AddOnParts to the AssemblyStation, which
+then attaches these to the MainParts.
+We selected our AddOnPartA and our AddOnPartB as the MU to be created.
+Configure the Sources for the Add-On Parts
+Plant Simulation Help 10-293
+Unpublished work. © 2026 Siemens
+
+We did not change any other settings.
+Back to Work with Workpiece Carriers
+Configure the AssemblyStation Which Assembles the Parts
+In our last modeling step we configure the AssemblyStation which attaches the AddOnParts to the
+MainParts.
+To do so, we selected the settings below and entered into the AssemblyTable that we want to attach the
+respective AddOnPart to the associated MainPart.
+We did not change any other settings.
+We finally insert a Drain and connect the individual material flow objects with Conveyors and with
+Connectors. For the Drain we entered a constant processing time of 1 minute.
+Back to Work with Workpiece Carriers
+Run the Simulation and View the Results
+Run the simulation and watch that the Sources first create our WorkpieceCarriers, i.e., the blue stacking
+boxes, and then the respective MainParts, i.e., the violet or orange plates.
+Configure the AssemblyStation Which Assembles the Parts
+10-294 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+After the MainParts were processed on the ProcessingStation, the AssemblyStation attaches the
+AddOnParts to the MainParts which are located on the WorkpieceCarriers.
+Product Statistics of our WorkpieceCarrier for the attached MainPartA or MainPartB looks like this after it
+has left the AssemblyStation:
+Run the Simulation and View the Results
+Plant Simulation Help 10-295
+Unpublished work. © 2026 Siemens
+
+WorkpieceCarrier
+MainPartA Product Statistics WorkpieceCarrier MainPartA
+WorkpieceCarrier
+MainPartB Product Statistics WorkpieceCarrier MainPartB
+Back to Work with Workpiece Carriers
+Balancing a Production Line
+Balance a Production Line
+The object Cycle synchronizes the transfer of parts from station to station within a production line. You can
+use it to only move a part on to the next station within a balanced line, when all stations have finished
+processing their parts and when none of the stations is failed, paused, or unplanned. In addition, the
+successor of the balanced line has to be ready to receive the part.
+Balancing a Production Line
+10-296 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can insert the object Cycle 
+  into your simulation model from the folder MaterialFlow in the Class
+Library or from the toolbar MaterialFlow in the Toolbox.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+We will demonstrate how to:
+• Open the Production Line Model Created in 2D
+• Convert the Production Line Model to a 3D Model
+Back to Model the Flow of Materials, Basics
+Balance a Production Line
+Plant Simulation Help 10-297
+Unpublished work. © 2026 Siemens
+
+Open the Production Line Model Created in 2D
+We open the simulation model in 3D, which we created in a previous version in 2D only mode.
+We entered the name of the first station and of the last station into the text boxes to define the
+balanced line. All stations between the first and the last station, which are connected with Connectors,
+form the balanced line. Each station has to have a predecessor and a successor and can only have a single
+predecessor and a single successor.
+Note
+You can only balance production lines that consist of objects of type Station and AssemblyStation. When
+an AssemblyStation is part of the balanced line, the Cycle only continues balancing, when the assembly
+process has been finished.
+If you did not define any stations for the balanced line yet, you can drag an object of type Station or
+AssemblyStation onto the icon of the object Cycle and drop it there, Plant Simulation enters it as the first
+station of the balanced line.
+We did this with the station called Drill, which is a modified Station.
+Then drag another object onto it and drop it there. Plant Simulation enters it as the last station.
+We did this with the AssemblyStation. We then changed our mind and decided to make the station called
+TestQuality the last station. To do so, we held down Shift, dragged it over the Cycle, and dropped it there.
+Open the Production Line Model Created in 2D
+10-298 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+As each station within the balanced line can only have a single predecessor and a single successor, the
+Source named TableLegsIn, that feeds the table legs to the Assembly station in our example above,
+cannot be part of the balanced line.
+To detect the difference between a balanced line and an unbalanced line, we copied the balanced line and
+pasted it below it. We then started the simulation and checked the tab Type Statistics of the Drain of the
+balanced and of the unbalanced line.
+Balanced line Unbalanced line
+Back to Balance a Production Line
+Convert the Production Line Model to a 3D Model
+Here we show how to convert the model, that we originally created in 2D, to a 3D model.
+Here we show how to convert the model, that we originally created in 2D, to a 3D model. As we
+already converted the table assembly, we can use the adjustments that we made in that model. Compare
+Assemble Parts with the AssemblyStation and Adjust the Graphics of the Assembly. To do so, we
+opened the model My3DAssembly.spp.
+• We save the MUs named TableLeg and TableTop as an object file each with the name TableLeg.psobj
+and TableTop.psobj, compare Save Object As. These files contain the simulation properties and the
+3D graphic settings that we defined.
+Convert the Production Line Model to a 3D Model
+Plant Simulation Help 10-299
+Unpublished work. © 2026 Siemens
+
+• We open the DataTables named TableLegs and TableTops, select Export Object File, and export them
+as an object file each with the names TableLegTable.psobj and TableTopTable.psobj. These
+files contain the attributes that set with which color the table legs and table tops are shown.
+Convert the Production Line Model to a 3D Model
+10-300 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Then we open our 2D model MyBalancedLine.spp that we created in a previous version of Plant
+Simulation.
+• We save it with a new name. We typed in My3DBalancedLine.spp.
+• We select the Visualization > 3D only in the Model Settings.
+Note
+If some objects, for example the DataTable, are not displayed in the 3D model, select this object in the
+Class Library, press F8, and double-click the attribute CreateIn3D so that it shows true.
+• To use the graphics of the current version of Plant Simulation, we hold down Shift, click Basis with the
+right mouse button in the Class Library, and select Revert all Objects to Standard Graphics.
+Plant Simulation then runs the simulation with the default settings of the parts. As this is not what we
+want, we will:
+• Import the simulation settings and the graphics of the table legs and the table tops
+Click the folder Models in the Class Library with the right mouse button and select Save/Load > Load
+Object. Select the file TableLeg.psobj which we exported above. Repeat this for the TableTop.psobj.
+Click OK in the dialog that opens.
+Convert the Production Line Model to a 3D Model
+Plant Simulation Help 10-301
+Unpublished work. © 2026 Siemens
+
+Rename the original classes, for example to TableLegOriginal and to TableTopOriginal, and the
+imported classes to TableLeg and to TableTop. Once everything works as expected, we can delete
+the original classes.
+The Class Library then looks like this.
+When we run the simulation, we see that the table tops and the table legs are produced and assembled
+as expected. The colors of the table tops and the table legs are wrong though, as these are set in the
+production tables.
+• Import the contents of the production tables of the table tops and the table legs
+Open the production tables TableTops, TableLegs, TableTops1, and TableLegs1 in the Frame
+TableAssembly.
+Click Import File and select the respective file TableLegTable.psobj or TableTopTable.psobj, which we
+exported above.
+Convert the Production Line Model to a 3D Model
+10-302 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Now the table tops and the table legs show the correct color. We finally adjust the positions of the
+objects and insert a Comment each showing Balanced Line and Non-Balanced Line.
+Convert the Production Line Model to a 3D Model
+Plant Simulation Help 10-303
+Unpublished work. © 2026 Siemens

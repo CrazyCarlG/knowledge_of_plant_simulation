@@ -1,0 +1,575 @@
+StatRotationLoadedTime [SimTalk] - PickAndPlace
+Returns the total time during which the PickAndPlace robot designated by <Path> was rotating while
+transporting a part.
+Type
+Read-only attribute
+Syntax
+<Path>.StatRotationLoadedTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyPickAndPlace.StatRotationLoadedTime
+See also
+Statistics report, Rotation Time
+Attributes of the PickAndPlace Robot
+_Attributes of the PickAndPlace Robot
+The PickAndPlace robot provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatRotationLoadedTime [SimTalk] - PickAndPlace
+11-1956 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyPickAndPlace.Capacity := 12
+• To get the value of an attribute, you might, for example, type:
+print MyPickAndPlace.TimeFactor
+posit := MyStation.Cont.XPos
+_Attributes of the PickAndPlace Robot
+Plant Simulation Help 11-1957
+Unpublished work. © 2026 Siemens
+
+BlockingAngle [SimTalk]
+Sets the Blocking Angle of the PickAndPlace robot designated by <Path>.
+Remarks
+The Blocking Angle is the angle in degrees which the PickAndPlace robot cannot cross. It prevents the
+robot from taking the shortest way.
+The Blocking Angle only affects the animation, the simulation is controlled by the rotation times which
+you defined in the Times Table.
+Type
+Attribute
+Syntax
+<Path>.BlockingAngle:real
+Assignment Value
+You can assign a value of data type real.
+You can specify an angle between 0 and 360 degrees.
+The default setting -1 means that no blocking angle applies and that the robot thus takes the shortest way.
+Example
+MyPickAndPlace.BlockingAngle := 5
+See also
+Blocking Angle [text box]
+Times Table [PickAndPlace]
+BlockingAngle [SimTalk]
+11-1958 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Capacity [SimTalk] - PickAndPlace
+Sets the Capacity of the PickAndPlace robot designated by <Path>.
+Remarks
+The Capacity is the number of MUs that the PickAndPlace robot can transport at any one time.
+The capacity enables the PickAndPlace robot to transport more than one part at the same time. It might,
+for example, pick up a number of bottles and place same into the appropriate slots of a bottle crate one at
+a time (FIFO).
+If you want to unload the parts according to another rule, for example LIFO, you can program this in an
+Exit Control.
+Type
+Attribute
+Syntax
+<Path>.Capacity:integer
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type integer.
+Specify a value greater than 1.
+Example
+MyPickAndPlace.Capacity := 12
+See also
+Capacity [text box] - PickAndPlace
+Capacity [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1959
+Unpublished work. © 2026 Siemens
+
+DefaultAngle [SimTalk] - PickAndPlace
+Sets the Default Angle of the PickAndPlace robot designated by <Path>.
+Remarks
+The Default Angle is the rotation angle in degrees to which the side of the end point of the PickAndPlace
+robot rotates when you set GoToDefaultPosition to true.
+To rotate the PickAndPlace robot to the side on which the start point is located, add 180° to this angle.
+Note
+The Default Angle is also used as the start position after a Reset, no matter if Go to Default Position is
+activated or not.
+Type
+Attribute
+Syntax
+<Path>.DefaultAngle:real
+Assignment Value
+You can assign a value of data type real.
+Specify a value between 0 ° and 360 °.
+Example
+MyPickAndPlace.DefaultAngle := 5
+SimTalk
+GoToDefaultPosition [SimTalk] - PickAndPlace
+DefaultAngle [SimTalk] - PickAndPlace
+11-1960 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GoToDefaultPosition [SimTalk] - PickAndPlace
+Rotates the PickAndPlace robot designated by <Path> back to its default position when it has deposited the
+part (true) or not (false).
+Remarks
+Note
+When you set the attribute to true, the PickAndPlace robot uses the attribute DefaultAngle, when you
+reset the model.
+The attribute DefaultAngle sets the actual Default Angle.
+Type
+Attribute
+Syntax
+<Path>.GoToDefaultPosition:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyPickAndPlace.GoToDefaultPosition := true
+SimTalk
+DefaultAngle [SimTalk] - PickAndPlace
+See also
+Go to Default Position [check box] - PickAndPlace
+Default Angle [PickAndPlace]
+GoToDefaultPosition [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1961
+Unpublished work. © 2026 Siemens
+
+LoadingTime [SimTalk] - PickAndPlace
+Sets the Loading Time which the PickAndPlace robot designated by <Path> uses for picking up a part at a
+station. If the PickAndPlace robot is full, it rotates to the target station and places the part there.
+Remarks
+The Loading Time is the time it takes the PickAndPlace robot for picking up a part at a station.
+• If the delivering station is a point-oriented object, the part is booked on the PickAndPlace robot while it
+picks it up. The delivering station is locked until the loading time has elapsed.
+• If the delivering station is a length-oriented object, the part remains on the delivering station during the
+loading time and is then moved on to the PickAndPlace robot.
+Note
+Behavior during interruptions of the PickAndPlace robot
+Plant Simulation extends the loading time by interruption times of the PickAndPlace robot. The
+delivering station remains locked during the interruption.
+Note
+Behavior during interruptions of the delivering station.
+Interruptions of the delivering station do not affect loading the part by the PickAndPlace robot. The
+loading operation continues while the interruption lasts.
+Note
+The entrance of the PickAndPlace robot is open while its Loading Time is running. The entrance is
+closed once the part is actually moved on. The PickAndPlace robot opens the entrance again after the
+Unloading Time has passed.
+Type
+Attribute
+Syntax
+<Path>.LoadingTime:time
+Assignment Value
+You can assign a value of data type time.
+LoadingTime [SimTalk] - PickAndPlace
+11-1962 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Examples
+MyPickAndPlaceRobot.LoadingTime := 1:00
+MyPickAndPlaceRobot.LoadingTime.setTypeAndAttr("Normal",30,10)
+See also
+Loading Time [PickAndPlace]
+LoadingTime.Type [SimTalk] - distribution parameter
+IsLoading [SimTalk]
+putAttributeNamesIntoTable [SimTalk] - distributions
+LoadingTime [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1963
+Unpublished work. © 2026 Siemens
+
+MUConveyingDirection [SimTalk]
+Sets the conveying direction of the MU on the PickAndPlace robot designated by <Path>.
+Remarks
+Note
+For the settings Retain, Rotate by 90° to the right, Rotate by 90° to the left, and Rotate by 180° the
+PickAndPlace robot executes a relative rotation depending on the direction from which the MU arrives.
+For the settings Forwards, Lateral right, Backwards, and Lateral left the rotation is an absolute
+rotation independent of the direction from which the MU arrives.
+Conveying
+direction Description Looks like this
+Retain The robot continues conveying
+the part in the same direction in
+which it arrives.
+Rotate 90° to
+the right
+The robot rotates the part 90°
+to the right and places it on the
+successor.
+Rotate 90° to
+the left
+The robot rotates the part 90°
+to the left and places it on the
+successor.
+Rotate 180° The robot rotates the part 180°
+and places it on the successor.
+Forwards The robot rotates the part, so
+that it comes to rest on the
+successor forward and then
+places it on the successor.
+MUConveyingDirection [SimTalk]
+11-1964 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Conveying
+direction Description Looks like this
+Lateral right The robot rotates the part,
+so that it comes to rest on
+the successor laterally to the
+right and then places it on the
+successor.
+Backwards The robot rotates the part, so
+that it comes to rest on the
+successor backward and then
+places it on the successor.
+Lateral left The robot rotates the part,
+so that it comes to rest on
+the successor laterally to the
+left and then places it on the
+successor.
+Type
+Attribute
+Syntax
+<Path>.MUConveyingDirection:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Retain", "Rotate 90° to the right", "Rotate 90° to the left",
+"Rotate 180°", "Forwards", "Lateral right", "Backwards", or "Lateral left".
+Example
+MyPickAndPlace.MUConveyingDirection := "Forwards"
+See also
+MU Conveying Direction [drop-down list]
+MUConveyingDirection [SimTalk]
+Plant Simulation Help 11-1965
+Unpublished work. © 2026 Siemens
+
+OnlyForEmptyBlockingList [SimTalk]
+Only rotates the PickAndPlace robot designated by <Path> back to its default position, when its blocking
+list is empty (true), i.e., when no additional requests are registered for it, or not (false).
+Type
+Attribute
+Syntax
+<Path>.OnlyForEmptyBlockingList:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyPickAndPlace.OnlyForEmptyBlockingList := true
+See also
+Go to Default Position [check box] - PickAndPlace
+OnlyForEmptyBlockingList [SimTalk]
+11-1966 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+PullCtrl [SimTalk] - PickAndPlace
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Pull Control whenever the PickAndPlace robot is ready to pick up a new part or
+when it is ready when a new MU is Waiting at its entrance.
+If you set TargetSelection to "Load part onto MU at sensor" the PickAndPlace robot only counts
+as ready if a Container/Transporter is waiting at the sensor. This also applies if you programmed a Pull
+Control. It will only be called when a Container/Transporter is waiting at the sensor.
+In the Pull Control you can determine which of the parts, which intends to move onto the object, the
+PickAndPlace robot will accept. For this you have to get the forward blocking list of the object with the
+method fwBlockList and unblock a MU in the list with the method unblock.
+Let us assume that red parts are especially important and thus have priority for being processed. Then you
+can always pull red parts first from the predecessors and only then pull parts in other colors.
+Note
+The Pull Control does not determine if a MU is to be moved to this or to another successor. Instead, it
+selects one of the parts which have already been determined to move on to this successor.
+Type
+Attribute
+Syntax
+<Path>.PullCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyPickAndPlace.PullCtrl := &myPullControl
+See also
+Pull Control [PickAndPlace]
+PullCtrl [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1967
+Unpublished work. © 2026 Siemens
+
+TargetCtrl [SimTalk] - PickAndPlace
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation runs the Target Control as soon as the PickAndPlace robot designated by <Path> has
+completely picked up the part. In this control you determine the successor onto which the PickAndPlace
+robot deposits the part.
+As opposed to the Exit Control, the part is not ready to exit the object yet. You have to set the target
+object in the method setDestination.
+Plant Simulation also calls the control when the PickAndPlace robot has deposited the part. In this case
+you have to set the object, at which the robot is going to pick up the next part with the method
+setDestination.
+When the PickAndPlace robot calls the Target Control after depositing the part, the active element (@) is
+void.
+Plant Simulation only calls the Target Control while unloading if you cleared the check box Go to Default
+Position.
+Type
+Attribute
+Syntax
+<Path>.TargetCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Examples
+if ?.empty 
+   return 
+   end
+if @.LastStation = Source 
+TargetCtrl [SimTalk] - PickAndPlace
+11-1968 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+   ?.setDestination(Drain)
+elseif @.LastStation = Source1 
+   ?.setDestination(Station, true)
+else
+   ?.setDestination(Drain1)
+end
+MyPickAndPlace.TargetCtrl := &myTargetControl
+SimTalk
+setDestination [SimTalk] - PickAndPlace
+See also
+Target Control [PickAndPlace]
+Go to Default Position [check box] - PickAndPlace
+TargetCtrl [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1969
+Unpublished work. © 2026 Siemens
+
+TargetObject [SimTalk]
+Designates the length-oriented Target Object at which the PickAndPlace robot designated by <Path>
+places or loads the part.
+Type
+Attribute
+Syntax
+<Path>.TargetObject:path
+Assignment Value
+You can assign a value of data type path.
+Example
+MyPickAndPlace.TargetObject := .Models.MyModel.Conveyor
+See also
+Target Object
+TargetObject [SimTalk]
+11-1970 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+TargetSelection [SimTalk]
+Sets how the PickAndPlace robot designated by <Path> selects the target for the part that is to be moved:
+Type
+Attribute
+Syntax
+<Path>.TargetSelection:string
+Assignment Value
+You can assign a value of data type string.
+You can specify:
+• "Exit strategy or target control": Default behavior of previous versions of the PickAndPlace
+robot. You either set the target with the selected Exit Strategy or you define the target in the Target
+Control.
+• "Load part onto MU at sensor": For this setting you have to manually create a front-triggered
+sensor with light-barrier mode on the length-oriented target object. In addition you have to enter the
+Target Object and the Target sensor ID. Stopping the Container/Transporter, loading and sending the
+Container/Transporter on only works automatically if you did not enter a control. If you use a control,
+you have to program stopping and sending the Container/Transporter on in this control.
+Note
+The PickAndPlace robot only picks the part to be loaded up at the sensor when a Container/
+Transporter is waiting at the sensor.
+This also applies if you programmed a PullCtrl. It will only be called when a Container/Transporter is
+waiting at the sensor.
+• "Place part at sensor": For this setting you have to manually create a rear-triggered sensor with
+light barrier mode on the length-oriented target object. In addition you have to enter the Target Object
+and the Target Sensor ID.
+Example
+MyPickAndPlace.TargetSelection := "Load part onto MU at sensor"
+See also
+Target Object
+TargetSelection [SimTalk]
+Plant Simulation Help 11-1971
+Unpublished work. © 2026 Siemens
+
+Target Control [PickAndPlace]
+Target Object
+Target Sensor ID [text box]
+TargetSelection [SimTalk]
+11-1972 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+TargetSensorID [SimTalk]
+Sets the sensor ID of the target object at which the PickAndPlace robot designated by <Path> places or
+loads the part.
+Remarks
+Plant Simulation does not create the sensor automatically. You have to create it manually or with the
+method createSensor.
+Type
+Attribute
+Syntax
+<Path>.TargetSensorID:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyPickAndPlace.TargetSensorID := 2
+See also
+createSensor [SimTalk] - material flow objects
+Target Sensor ID [text box]
+TargetSensorID [SimTalk]
+Plant Simulation Help 11-1973
+Unpublished work. © 2026 Siemens
+
+TimeFactor [SimTalk]
+Sets the Time Factor with which all times in the Times Table of the PickAndPlace robot designated by
+<Path> are multiplied.
+Remarks
+The Time Factor enables to simulate the robot with different speeds without having to manually change
+the times in the table.
+Type
+Attribute
+Syntax
+<Path>.TimeFactor:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyPickAndPlace.TimeFactor := 5
+See also
+Time Factor [PickAndPlace]
+Times Table [PickAndPlace]
+TimeFactor [SimTalk]
+11-1974 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+UnloadingTime [SimTalk] - PickAndPlace
+Sets the Unloading Time of the PickAndPlace robot designated by <Path> for placing the part it picked up
+at another station onto the target station.
+Remarks
+The Unloading Time is the time it takes the PickAndPlace robot for placing the part, which it picked up at
+another station, onto target station.
+• If the target station is a point-oriented object, the part is booked on the PickAndPlace robot while it
+places it. The target station is locked until the unloading time has elapsed.
+• If the target station is a point-oriented object, the part is moved on to the length-oriented object before
+the unloading time starts.
+Note
+Behavior during interruptions of the PickAndPlace robot.
+Plant Simulation extends the unloading time by interruption times of the PickAndPlace robot. The target
+processing station remains locked during the interruption.
+Note
+Behavior during interruptions of the target station.
+Interruptions of the target station do not affect unloading the part by the PickAndPlace robot. The
+unloading operation continues while the interruption lasts.
+Note
+The entrance of the PickAndPlace robot is open while its Loading Time is running. The entrance is
+closed once the part is actually moved on. The PickAndPlace robot opens the entrance again after the
+Unloading Time has passed.
+Type
+Attribute
+Syntax
+<Path>.UnloadingTime:time
+UnloadingTime [SimTalk] - PickAndPlace
+Plant Simulation Help 11-1975
+Unpublished work. © 2026 Siemens
+
+Assignment Value
+You can assign a value of data type time.
+Examples
+MyPickAndPlaceRobot.UnloadingTime := 1:00
+MyPickAndPlaceRobot.UnloadingTime.setTypeAndAttr("Normal",30,10)
+See also
+Unloading Time [PickAndPlace]
+UnloadingTime.Type [SimTalk] - distribution parameter
+IsLoading [SimTalk]
+putAttributeNamesIntoTable [SimTalk] - distributions
+UnloadingTime [SimTalk] - PickAndPlace
+11-1976 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+UseKinematicsForTimes [SimTalk]
+Sets if the PickAndPlace robot designated by <Path> uses 3D kinematics to determine its timing (true)
+instead of the times defined in the Angles Table and in the Times Table or not (false).
+Remarks
+The PickAndPlace robot can only use the 3D kinematics if Plant Simulation finds supported robot
+kinematics as described under Configuring the Robot.
+Note
+3D kinematics can either be kinematics that are part of a robot graphic, which you import or 3D
+kinematics which are defined in Plant Simulation.
+Plant Simulation supports all kinematics that it also supports for the other objects for
+using the functions _3D.Poses.moveToCoordinate [SimTalk], _3D.Poses.moveToMU [SimTalk], and
+_3D.Poses.moveToMUAnimationPosition [SimTalk], except for linear robots.
+Define the Joint Settings of an Animatable Object on the tab Joint of the animatable objects of the
+PickAndPlace robot.
+Type
+Attribute
+UseKinematicsForTimes [SimTalk]
+Plant Simulation Help 11-1977
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>.UseKinematicsForTimes:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyPickAndPlace.UseKinematicsForTimes := true
+See also
+Use Kinematics for Times
+Configuring the Robot
+_3D.Poses.moveToCoordinate [SimTalk]
+_3D.Poses.moveToMU [SimTalk]
+_3D.Poses.moveToMUAnimationPosition [SimTalk]
+Joint
+Velocity [joint]
+JointVelocity [SimTalk]
+Times Table [PickAndPlace]
+UseKinematicsForTimes [SimTalk]
+11-1978 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+WaitForFreeTarget [SimTalk] -PickAndPlace
+Sets if the PickAndPlace robot designated by <Path> only rotates to a part that wants to exit the
+predecessor, to pick it up if the destination object is ready to accept it (true) or not (false).
+Remarks
+Specify false to make the PickAndPlace robot rotate to the part immediately.
+Plant Simulation only evaluates WaitForFreeTarget for the setting Target Selection > Exit strategy or
+target control.
+Plant Simulation enters the part that cannot be transported into the Exit Blocking List of the target object.
+Note
+If you set the attribute to true, Plant Simulation already evaluates the entered Exit Strategy or the
+Target Control for the part before the PickAndPlace robot rotates to the part to pick it up.
+Plant Simulation enters the thus determined target into the attribute TargetObject.
+Type
+Attribute
+Syntax
+<Path>.WaitForFreeTarget:boolean
+Assignment Value
+You can assign a value of data type boolean.
+WaitForFreeTarget [SimTalk] -PickAndPlace
+Plant Simulation Help 11-1979
+Unpublished work. © 2026 Siemens
+
+Example
+MyPickAndPlace.WaitForFreeTarget := true
+SimTalk
+ReservedFor [SimTalk]
+ReservedPlace [SimTalk] of the MUs
+contentsAndReservedList [SimTalk]
+TargetSelection [SimTalk]
+See also
+Wait for Free Target [PickAndPlace]
+Target Selection [drop-down list]
+Store
+Store [object]
+Use the object Store for storing parts for a certain time. It usually represents a warehouse in your plant.
+Image
+Description
+The MUs remain in the Store until you remove them, for example by using a Method. Type the number
+of storage places into a net of coordinates, i.e., into the text boxes X-Dimension, Y-Dimension, and
+Z-Dimension. The Store receives MUs as long as storage places are available within the storage area. The
+part triggers a sensor, when it enters the Store. The sensor then calls an Entrance Control, i.e., a Method
+object, that determines the storage place onto which the Store places the part. The Entrance Control can
+update the inventory list or execute any other action you define. If you do not define an Entrance Control,
+the Store places the part onto the first unoccupied storage place in the net of coordinates.
+The Store does neither have a Set-up Time nor a Processing Time. If you decrease the size of the
+Store, you will have to delete or move MUs that are located outside of these new coordinates. If, for
+example, a part is located at the position (3,4), the new x-coordinate may not be less than 3, and the
+Store
+11-1980 Plant Simulation Help
+Unpublished work. © 2026 Siemens

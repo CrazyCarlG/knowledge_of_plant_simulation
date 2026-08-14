@@ -1,0 +1,381 @@
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Note
+You can only access the attributes of the object Variable, which refer to the object itself, via the
+reference operator &. Without the operator the attribute will be applied to the contents of the Variable.
+&Variable.Name := "MyVariable"
+_Attributes of the Variable
+Plant Simulation Help 11-3805
+Unpublished work. © 2026 Siemens
+
+Alignment [SimTalk] - Variable
+Sets the Alignment of the Variable designated by the reference operator <&> with its insertion point.
+Type
+Attribute
+Syntax
+<&>Variable.Alignment:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Left", "Name", "Value", or "Right".
+Example
+&MyVariable.Alignment := "Right"
+See also
+Alignment [Variable]
+Alignment [SimTalk] - Variable
+11-3806 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BackgroundColor [SimTalk] - Variable
+Sets the Background Color of the Variable designated by the reference operator <&> in the Frame.
+Type
+Attribute
+Syntax
+<&>Variable.BackgroundColor:integer
+Assignment Value
+You can assign a value of data type integer.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+&MyVariable.BackgroundColor := makeRGBValue(100,100,100)
+&MyVariable.BackgroundColor := 6579300 // is the same as the color above
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Background Color [drop-down list] - Variable
+Color [SimTalk] - Variable
+BackgroundColor [SimTalk] - Variable
+Plant Simulation Help 11-3807
+Unpublished work. © 2026 Siemens
+
+Color [SimTalk] - Variable
+Sets the Font Color with which Plant Simulation displays the Variable designated by the reference
+operator <&> in the Frame.
+Type
+Attribute
+Syntax
+<&>Variable.Color:integer
+Assignment Value
+You can assign a value of data type integer.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+&MyVariable.Color := makeRGBValue(110,0,200)
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Font Color [Variable]
+& [SimTalk] - Variable
+Color [SimTalk] - Variable
+11-3808 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Comment [SimTalk] - Variable
+Sets the comment of the Variable designated by the reference operator <&>.
+Type
+Attribute
+Syntax
+<&>Variable.Comment:string
+Assignment Value
+You can assign a value of data type string.
+Example
+&MyVariable.Comment := "My comment, my comment"
+See also
+Tab Comment [Variable]
+& [SimTalk] - Variable
+Comment [SimTalk] - Variable
+Plant Simulation Help 11-3809
+Unpublished work. © 2026 Siemens
+
+DataType [SimTalk] - Variable
+Sets the Data Type of the Variable designated by the reference operator <&>.
+Type
+Attribute
+Syntax
+<&>Variable.DataType:string
+Assignment Value
+You can assign a value of data type string.
+Example
+&MyVariable.DataType := "string"
+See also
+Data Type [Variable]
+& [SimTalk] - Variable
+DataType [SimTalk] - Variable
+11-3810 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DecimalPlaces [SimTalk] - Variable
+Sets the number of Decimal Places which the Variable designated by the reference operator <&> shows in
+the Frame.
+Remarks
+The Variable can show up to 15 decimal places. The default setting -1 shows all existing places. If you
+enter a positive value, the Variable shows the number of decimal places, which you entered, in the Frame.
+Note
+This setting only applies to the Data Types > real, length, money, weight, time, speed, and
+acceleration.
+The number of decimal places for the data type time affects values differently than for the data type real.
+The value -1 for the data type time means that the default time display format is displayed with four
+decimal places. A positive value means that Plant Simulation shows the number of decimal places that you
+entered at most.
+Type
+Attribute
+Syntax
+<&>Variable.DecimalPlaces:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+&MyVariable.DecimalPlaces := 12
+See also
+Data Type [Variable]
+Decimal Places [text box] - Variable
+& [SimTalk] - Variable
+DecimalPlaces [SimTalk] - Variable
+Plant Simulation Help 11-3811
+Unpublished work. © 2026 Siemens
+
+Font [SimTalk] - Variable
+Sets the Font Size with which Plant Simulation displays the Variable designated by the reference operator
+<&> in the Frame.
+Type
+Attribute
+Syntax
+<&>Variable.Font:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify 1 for Small, 2 for Medium, 3 for Large, or 4 for Extra Large.
+Example
+&MyVariable.Font := 2
+See also
+Font Size [drop-down list] - Variable
+& [SimTalk] - Variable
+Font [SimTalk] - Variable
+11-3812 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+HasInitValue [SimTalk] - Variable
+Sets if the Variable designated by the reference operator <&> has an Initial Value (true) or not (false).
+Type
+Attribute
+Syntax
+<&>Variable.HasInitValue:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+&MyVariable.DataType := "integer"
+&MyVariable.HasInitValue := true
+See also
+Initial Value [Variable]
+& [SimTalk] - Variable
+HasInitValue [SimTalk] - Variable
+Plant Simulation Help 11-3813
+Unpublished work. © 2026 Siemens
+
+InitValue [SimTalk] - Variable
+Resets a value, which the Variable designated by the reference operator <&> recorded during a simulation
+run, to an Initial Value.
+Remarks
+Plant Simulation sets the value during the reset phase and resets it in the init phase of the next simulation
+run.
+Note
+The Data types table, list, stack, queue, and randtime do not provide this feature.
+Type
+Attribute
+Syntax
+<&>Variable.InitValue:any
+Assignment Value
+You can assign a value of data type any.
+Example
+&MyVariable.DataType := "integer"
+&MyVariable.InitValue := 0
+SimTalk
+HasInitValue [SimTalk] - Variable
+See also
+Data Type [Variable]
+Initial Value [Variable]
+& [SimTalk] - Variable
+InitValue [SimTalk] - Variable
+11-3814 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IntegerPlaces [SimTalk] - Variable
+Sets the number of Integer Places which the Variable designated by the reference operator <&> shows in
+the Frame.
+Remarks
+The Variable can show up to 15 integer places. The default setting -1 means that Plant Simulation applies
+no minimum to the number of integer places. Enter a positive value to fill up the space before the decimal
+point with blank spaces until the specified number of places has been reached when the Variable is shown.
+Note
+This setting only applies to the Data types > real, length, weight, time, speed, and acceleration.
+Type
+Attribute
+Syntax
+<&>Variable.IntegerPlaces:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+&MyVariable.IntegerPlaces := 6
+-- The value "123"     will show as "   123"
+-- The value "123456"  will show as "123456"
+-- The value "1234567" will show as "1234567"
+See also
+Data Type [user-defined attribute]
+Integer Places [text box] - Variable, text box
+IntegerPlaces [SimTalk] - Variable
+Plant Simulation Help 11-3815
+Unpublished work. © 2026 Siemens
+
+Name [SimTalk] - Variable
+Sets the Name of the Variable designated by the reference operator <&>.
+Remarks
+You can type in a combination of letters, digits, and underscore (_) characters, for example MyVariable,
+MyVariable1, My_Variable_1.
+The name of an object cannot start with a digit, i.e., you cannot enter 1Variable.
+Type
+Attribute
+Syntax
+<&>Variable.Name:string
+Assignment Value
+You can assign a value of data type string.
+Example
+&Variable.Name := "MyVariable"
+See also
+Name [text box] - Variable
+& [SimTalk] - Variable
+Name [SimTalk] - Variable
+11-3816 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ShowDataType [SimTalk] - Variable
+Shows the Data Type of the Variable designated by the reference operator <&> (true) or hides them
+(false) in the Frame into which you inserted it.
+Type
+Attribute
+Syntax
+<&>Variable.ShowDataType:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+&myVariable.ShowDataType := false
+See also
+Show Data Type [Variable]
+& [SimTalk] - Variable
+ShowDataType [SimTalk] - Variable
+Plant Simulation Help 11-3817
+Unpublished work. © 2026 Siemens
+
+ShowUnit [SimTalk] - Variable
+Shows the Units of the values of the Variable designated by the reference operator <&> (true) or hides
+them (false) in the Frame into which you inserted it.
+Type
+Attribute
+Syntax
+<&>Variable.<UserDefinedAttribute>.ShowUnit:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+&MyVariable.ShowUnit := true
+See also
+Show Units [Variable]
+& [SimTalk] - Variable
+ShowUnit [SimTalk] - Variable
+11-3818 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatisticsActive [SimTalk] - Variable
+Collects statistics values of the Variable designated by the reference operator <&> (true) or not (false).
+Remarks
+The Variable only collects statistics for the data types string and integer.
+Type
+Attribute
+Syntax
+<&>Variable.StatisticsActive:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+&MyVariable.StatisticsActive := true
+See also
+Active [check box] - statistics, Variable
+& [SimTalk] - Variable
+DataType [SimTalk] - Variable
+StatisticsActive [SimTalk] - Variable
+Plant Simulation Help 11-3819
+Unpublished work. © 2026 Siemens
+
+Transparent [SimTalk] - Variable
+Makes the background of the Variable designated by the reference operator <&> Transparent in the Frame
+(true) or not transparent (false).
+Remarks
+The setting Transparent also applies in 3D.
+Not transparent Transparent
+Type
+Attribute
+Syntax
+<&>Variable.Transparent:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify true to show the space around the text in the color of the background image of the Frame.
+Specify false to show the space around the text in white.
+Example
+&MyVariable.Transparent := false
+See also
+Transparent [check box] - Variable
+& [SimTalk] - Variable
+Transparent [SimTalk] - Variable
+11-3820 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value [SimTalk] - Variable
+Sets the Value of the Variable designated by the reference operator <&>.
+Type
+Attribute
+Syntax
+<&>Variable.Value:any
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type any.
+Example
+var obj: object 
+obj := &MyVariable
+waituntil obj.Value = 3 prio 1
+regStat 
+See also
+Value [Variable]
+& [SimTalk] - Variable
+Properties of Lists and Tables
+Properties of Lists and Tables
+Lists and tables manage and store information and data.
+Remarks
+The Material Flow Objects, which Plant Simulation provides, usually suffice for quickly creating simple
+simulation models. More complex models require additional information, for example production plans, to
+Value [SimTalk] - Variable
+Plant Simulation Help 11-3821
+Unpublished work. © 2026 Siemens
+
+control the course of events in the model, and create data during the simulation which lists and tables save
+to be evaluated later on.
+Plant Simulation provides lists with one column (DataList, DataStack, DataQueue) and lists with several
+columns (DataTable, TimeSequence):
+The following topics describe general properties of the lists and tables. Plant Simulation provides five
+different lists and tables:
+• The DataList 
+  accesses all cells randomly by their position. You can add new cells at any position. If
+you remove a cell, all cells with a higher number move up one position.
+• The DataQueue 
+  accesses the cell you added first. It adds new cells after the last existing cell.
+• The DataStack 
+  accesses the cell you added last. If you add a cell all existing cells move one position
+down. If you remove a cell, the remaining cells each move up one cell.
+• The DataTable 
+  accesses all cells randomly by their column and row number. New contents will
+overwrite and replace any existing contents of the cell.
+• The TimeSequence 
+  accesses all cells randomly by their column and row number. It adds new entries
+in ascending order according to the time. Entries with a higher position move up by one position if
+you remove a previous entry. The time-value pairs that the TimeSequence records belong together,
+meaning that you can only delete a pair of values not either the time or the value of a pair.
+You can access the properties of the list objects on the List Ribbon Tab.
+Properties of Lists and Tables
+11-3822 Plant Simulation Help
+Unpublished work. © 2026 Siemens

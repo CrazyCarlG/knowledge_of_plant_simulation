@@ -1,0 +1,436 @@
+Workers Sequentially Deliver MUs to Assemble
+DismantleStation
+DismantleStation
+Use the object DismantleStation to model dismantle processes, i.e., for removing mounting parts from a
+main part in your plant.
+Image
+Description
+The DismantleStation removes mounting parts from a main part. To model assembly operations, use the
+AssemblyStation. Normally the Dismantle Table or the setting Main MU to Successor with Number
+determine the successor number to which the DismantleStation moves the part. If you want the Worker to
+carry all parts to a certain target, enter this object as the MU Target on the tab Importer > Transport. In
+this case Plant Simulation overwrites the above settings.
+To show a tooltip with information about the DismantleStation, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the DismantleStation, click Show
+Manipulators 
+  on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DismantleStation to your simulation model, click 
+  Manage Class Library > Basic
+Objects > MaterialFlow > DismantleStation on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+DismantleStation
+11-1820 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+AssemblyStation
+Remove Parts with the Dismantle Station
+Video on YouTube
+https://youtu.be/yEAqrVDBsns?si=rLxurb7Z5n4OVpJX&t=407
+Dialog Box of the DismantleStation
+Dialog Box of the DismantleStation
+Double-click the icon of the DismantleStation to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+Dialog Box of the DismantleStation
+Plant Simulation Help 11-1821
+Unpublished work. © 2026 Siemens
+
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Video on YouTube
+https://youtu.be/yEAqrVDBsns?si=8wllKfPDtLeflvPH&t=466
+Tab Attributes
+Tab Attributes [DismantleStation]
+The tab Attributes provides the settings, which the object offers.
+Set how the DismantleStation removes parts from the main part or creates new parts on the tab
+Attributes.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+11-1822 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sequence [drop-down list] - DismantleStation
+Select how the DismantleStation distributes the dismantled MUs to its successors.
+Remarks
+You can select one of these settings:
+• MUs to all Successors:
+◦ Select Create MUs from the drop-down list Dismantle Mode, to make the DismantleStation create a
+new MU for each successor and moves that MU there.
+The DismantleStation moves the main MU to the successor, whose number you typed into the text
+box Main MU to Successor with Number.
+◦ Select Detach MUs from the drop-down list Dismantle Mode, to make the DismantleStation move
+the MUs to each successor in turn, except for the successor that receives the main MU.
+The DismantleStation moves the main MU to the successor, whose number you typed into the text
+box Main MU to Successor with Number.
+If the DismantleStation has four successors for example, and if it moves the main MU on to successor
+number 2, it will pass the new MU on to successors number 1, 3, and 4. It moves the main MU to the
+successor with the number 2.
+For these settings you have to fill out the Dismantle Table:
+• MUs exiting independent of other MUs: TheDismantleStation attempts to move the main MU, and
+after that each MU on to the successor you defined, as soon as possible.
+• Main MU after other MUs: The DismantleStation first moves the mounting parts on to the successor,
+and then the main MU.
+If you only want to unload those mounting parts from the main part, which you type into the Dismantle
+Table, select MUs exiting independent of other MUs or Main MU after other MUs and the Dismantle
+Sequence [drop-down list] - DismantleStation
+Plant Simulation Help 11-1823
+Unpublished work. © 2026 Siemens
+
+mode > Detach MUs. Always type a valid MU class into the column MU and a positive number into the
+column Number.
+SimTalk
+Sequence [SimTalk] - DismantleStation
+See also
+Main MU to Successor with Number [text box] - DismantleStation
+DismantleMode [SimTalk]
+Dismantle Table [button] - DismantleStation
+DismantleTable [SimTalk]
+Video on YouTube
+https://youtu.be/yEAqrVDBsns?si=GuoEsWAOrzqYT9l1&t=487
+Sequence [drop-down list] - DismantleStation
+11-1824 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Dismantle Table [button] - DismantleStation
+To open the Dismantle Table, click this button.
+Remarks
+The DismantleStation opens a table with three columns.
+• Type the path to the class of the MUs into the column MU, such as .MUs.Part, .MUs.Container
+or .MUs.Transporter. Alternatively you can leave the entry empty to designate any MU class.
+• Type the number of MUs that are dismantled into the column Number. You can also type in -1 to
+dismantle all parts. If you do not enter a number, the DismantleStation uses the default value 1.
+• Type the number of the successor into the column Successor. If you do not type in a value, the
+DismantleStation moves the mounting parts to the successor with the number 1 for the setting
+Dismantle Mode > Detach MUs. For the setting Dismantle Mode > Create MUs it moves the MUs
+to the successor to which the main MU moves.
+Note
+If you type in a MU Target, the Worker carries all MUs to this target. If you do not type in a MU Target,
+the Dismantle Table or the setting Main MU to Successor with Number determine it.
+Depending on what you select from drop-down list Dismantle Mode: Create MUs or Detach MUs, the
+DismantleStation creates the corresponding MUs or searches the table for the successor to which it moves
+it. In the latter case the Dismantle Table may contain more information than is required for moving the
+MUs.
+If you only want to unload those mounting parts from the main MU, which you type into the Dismantle
+Table, select Sequence > MUs exiting independent of other MUs or Main MU after other MUs and the
+Dismantle Mode > Detach MUs. Always type a valid MU class into the column MU and a positive number
+into the column Number.
+Dismantle Table [button] - DismantleStation
+Plant Simulation Help 11-1825
+Unpublished work. © 2026 Siemens
+
+To automatically move all MUs according to their MU class to a successor:
+• Type in any MU class into the column MU of the Dismantle Table.
+• Type in the value -1 into the column Number to designate all remaining parts of this class.
+• Type in the number of the desired successor into the column Successor.
+• Repeat this for additional MU classes.
+To automatically move all MUs to a successor:
+• Leave the column MU in the Dismantle Table empty to designate any MU class.
+• Type in the value -1 into the column Number to designate all remaining parts of this class.
+• Type in the number of the desired successor into the column Successor.
+SimTalk
+DismantleTable [SimTalk]
+Dismantle Table [button] - DismantleStation
+11-1826 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+DismantleMode [SimTalk]
+Dismantle Table [button] - DismantleStation
+Plant Simulation Help 11-1827
+Unpublished work. © 2026 Siemens
+
+Dismantle Mode [drop-down list] - DismantleStation
+Select the Dismantle Mode, i.e., how the DismantleStation handles the mounting parts.
+Remarks
+You can select one of these settings:
+• Detach MUs
+The DismantleStation detaches the mounting parts from the main MU and moves them on to the
+successor which you typed into the Dismantle Table. If you only want to unload those mounting parts
+from the main MU, which type into the Dismantle Table, select Sequence > MUs exiting independent
+of other MUs or Main MU after other MUs and the Dismantle Mode > Detach MUs. Always type a
+valid MU class into the column MU and a positive number into the column Number.
+• Create MUs
+The DismantleStation creates mounting parts.
+Dismantle Mode [drop-down list] - DismantleStation
+11-1828 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+DismantleMode [SimTalk]
+See also
+Dismantle Table [button] - DismantleStation
+DismantleTable [SimTalk]
+Video on YouTube
+https://youtu.be/yEAqrVDBsns?si=IcmgOmhAm8BektlL&t=720
+Dismantle Mode [drop-down list] - DismantleStation
+Plant Simulation Help 11-1829
+Unpublished work. © 2026 Siemens
+
+Main MU to Successor with Number [text box] - DismantleStation
+Type in the number of the successor to which the DismantleStation moves the main MU.
+Remarks
+If you type in a MU Target, the Worker carries all MUs to this target.
+If you do not type in a MU Target, the Dismantle Table or the setting Main MU to Successor with
+Number determine it.
+You cannot use 0 to send the main MU on. If you do type in 0 and click Apply or OK, Plant Simulation
+changes 0 to the default value 1. If you assign 0 to the attribute Main MU, Plant Simulation shows an error
+message.
+SimTalk
+MainMU [SimTalk] - DismantleStation
+Main MU to Successor with Number [text box] - DismantleStation
+11-1830 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exiting MU [drop-down list] - DismantleStation
+Select the Exiting MU, i.e., how the DismantleStation moves the main MU or a new MU on to its
+successor.
+Remarks
+You can select one of these settings:
+• Main MU
+The DismantleStation moves the main MU on to the succeeding object.
+• New MU
+The DismantleStation deletes the main MU, creates a new MU, and moves it on to the successor. The
+DismantleStation then shows the text box MU.
+Type the path to the class of the new MU into the text box, or click the button 
+  and select the new MU
+in the dialog Select Object.
+SimTalk
+MainMU [SimTalk] - DismantleStation
+ExitingMUMode [SimTalk]
+NewMU [SimTalk] - DismantleStation
+Exiting MU [drop-down list] - DismantleStation
+Plant Simulation Help 11-1831
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Define Processing Times
+Select the Set-Up Time
+Processing Time [general description]
+Set-up Time [general description]
+Recovery Time [general description]
+Recovery Time Starts
+Cycle Time [general description]
+Tab Times
+11-1832 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Set-Up
+Define properties for setting the object up as described under the Tab Set-Up.
+Tab Set-Up
+Plant Simulation Help 11-1833
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-1834 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Remarks
+Plant Simulation calls the Exit Control for each leaving part. When you only call the method @.move,
+Plant Simulation moves the part at the same successor that would receive it without Exit Control.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+Tab Controls
+Plant Simulation Help 11-1835
+Unpublished work. © 2026 Siemens
+
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Entrance Control [general description]
+Set-up Control
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Statistics
+Tab Statistics [DismantleStation]
+Statistics is described under the Tab Statistics.
+In addition, the DismantleStation shows the button Blocking Times.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+Tab Statistics
+11-1836 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Resource Statistics [check box]
+Resource Type
+NumLeavingMU [SimTalk]
+StatAverageDwellTime [SimTalk] - DismantleStation
+Tab Statistics [DismantleStation]
+Plant Simulation Help 11-1837
+Unpublished work. © 2026 Siemens
+
+Blocking Times [table]
+To open the table Blocking Times that shows the sum of the blocking times of the MUs per successor, click
+this button.
+SimTalk
+statBlockingTimePerSuccessor [SimTalk]
+statBlockingTimeTable [SimTalk]
+Blocking Times [table]
+11-1838 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Importer
+Define services for processing the parts, for setting the station up for a certain type of part, and for
+repairing the station on the Tab Importer.
+Note
+If you want the Worker to carry all parts to a certain target, enter this object as MU target on the tab
+Importer > Transport. In this case Plant Simulation overwrites the settings Dismantle Table or Main
+MU to Successor with Number to determine the successor number to which the DismantleStation
+moves the part.
+To view Importer Statistics in the Statistics Report, click the object in the Frame, and press F6 (Show
+Statistics Report), or click Show Statistics Report on the Home ribbon tab.
+You can also click the object in the Frame with the right mouse button and select Show Statistics Report
+on the context menu.
+See also
+Processing Importer
+Set-up Importer
+Failure Importer
+Tab Importer
+Plant Simulation Help 11-1839
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+11-1840 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the AssemblyStation adds mounting parts to a main part costs accrue which result from the sum of
+the investment costs and the operating costs.
+Note
+The total investment costs only accrue during the Depreciation Period.
+The costs are allocated to the main part as accrued costs. Costs which accrued for the mounting parts so
+far, are transferred to the main part.
+If the AssemblyStation is empty, the costs remain with the AssemblyStation as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+Plant Simulation Help 11-1841
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-1842 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Services [on View menu]
+Show Statistics Report [on View menu] Unavailable Services [on View menu]
+Show Attributes and Methods [on View menu] Associated Workplaces [on View menu]
+Contents [DismantleStation] Exiting MUs
+Forward Blocking List Associated Lockout Zones
+Exit Blocking List Associated Shift Calendar
+Exporters [on View menu]
+Navigate Menu
+Plant Simulation Help 11-1843
+Unpublished work. © 2026 Siemens
+
+Contents [DismantleStation]
+Opens a list containing all MUs that were dismantled on the DismantleStation.
+SimTalk
+Cont [SimTalk] - material flow objects
+contentsList [SimTalk] - material flow objects
+deleteMovables [SimTalk] - material flow objects
+mu [SimTalk] - material flow objects
+NumMU [SimTalk] - material flow objects
+NumMUParts [SimTalk] - material flow objects
+Contents [DismantleStation]
+11-1844 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exiting MUs
+Opens a table displaying the MUs located at present on the DismantleStation, and which it deletes when it
+moves the main part onto the Successor contained in column 2 of the table.
+See also
+leavingMU [SimTalk]
+leavingMUs [SimTalk]
+NumLeavingMU [SimTalk]
+Exiting MUs
+Plant Simulation Help 11-1845
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-1846 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+Plant Simulation Help 11-1847
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the DismantleStation
+_Methods of the DismantleStation
+The DismantleStation provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-1848 Plant Simulation Help
+Unpublished work. © 2026 Siemens

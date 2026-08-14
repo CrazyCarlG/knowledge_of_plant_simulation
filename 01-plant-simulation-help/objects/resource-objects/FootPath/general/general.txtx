@@ -1,0 +1,187 @@
+See also
+Worker Stays Here After Completing the Job
+Get Job Orders At Home Only
+Home Location
+FootPath
+FootPath [object]
+Use the object FootPath for modeling a path on which the Worker walks from the WorkerPool to the
+Workplace.
+Image
+Description
+The Worker-WorkerPool-Workplace-FootPath-concept refines the Broker-Importer-Exporter-concept. In the
+WorkerPool you can select the Travel Mode with which the Worker gets to his work station:
+• He can walk freely within the area of the simulation model, just like in the real world.
+• He can be teleported to the Workplace you specify.
+• He can walk along the FootPaths in the simulation model.
+As a rule, the Worker functions as an Exporter with a capacity of 1. If you want to model and simulate
+walking distances between the WorkerPool and work stations or between work stations, use the FootPath.
+Plant Simulation animates the Workers on the FootPath if they move to the stations or in between the
+stations.
+You can link several FootPaths with Connectors to create a network of FootPaths. The Worker walks within
+this network from his WorkerPool to the Workplace. Provided the WorkerPool and the Workplace are
+connected to the same network of FootPaths, the Worker walks from the WorkerPool to the Workplace and
+back on the shortest possible route.
+FootPath
+Plant Simulation Help 11-3047
+Unpublished work. © 2026 Siemens
+
+A network of FootPaths consists of all FootPaths that are joined with Connectors, as well as the
+WorkerPools and the Workplaces that are joined with one of these FootPaths with a Connector.
+The time it takes the Worker to walk from his WorkerPool to the Workplace depends on his Speed and
+the combined Lengths of the FootPaths he covers to reach his destination. Plant Simulation recognizes
+on which FootPaths the Worker walks if he exits a FootPath at another end than the one at which he
+entered it. If the Worker does not walk to his destination on a FootPath or if he is beamed directly to his
+destination, he does not consume any time at all.
+The Workers are created in the WorkerPool and they stay there if they do not work and are waiting for a
+work order.
+The Broker brokers the Worker to the individual work stations. As soon as a Worker can provide a service,
+the Broker sends him from his WorkerPool to the work station that ordered him:
+• If you modeled the work station using one of the material flow objects and the Workplace and
+connected the WorkerPool and the Workplace with a FootPath, Plant Simulation animates the Worker
+while he walks on the FootPath and while he works on the Workplace.
+Note
+The Worker only consumes time if he walks on the FootPath.
+• If you inserted a Workplace, and the Worker, who is supposed to work there, cannot reach it via a
+FootPath, Plant Simulation beams the Worker directly to the Workplace and animates him there.
+• If you do not insert a Workplace, if no Workplace exists that supports this service, or if all Workplaces
+that support this service are occupied, Plant Simulation beams the Worker to the work station itself,
+where he will perform his task. Plant Simulation does not animate him there, but continues to animate
+him in the WorkerPool.
+You can insert the FootPath into a Frame:
+• As a curved object, which is the default setting.
+• By inserting any sequence of curved segments and straight segments, you can realistically model curved
+conveyor systems on which the Transporters move.
+You can select different configurations for the FootPath on the tab Appearance.
+FootPath [object]
+11-3048 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the FootPath, hover with the mouse over it.
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+The manipulator at the start and at the end of the length-oriented object is cut off. When you attach an
+object of the same type to the other object, the two combined halves result in a complete manipulator
+again. When you move the mouse over a manipulator, Plant Simulation shows a Tooltip.
+Add the Object to the Simulation Model
+To add the object FootPath to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Resources > FootPath on the Home ribbon tab.
+FootPath [object]
+Plant Simulation Help 11-3049
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Work with Length-oriented Objects
+Model Workers and the Jobs They Do
+Worker-WorkerPool-Workplace-FootPath-concept
+Broker-Importer-Exporter-concept
+Video on YouTube
+https://youtu.be/Rj5eYZu8pl4?si=eMS1tM55tJ4k9_ee&t=420
+https://youtu.be/Rj5eYZu8pl4?si=zfQFRHZgC336hXB7&t=1040
+FootPath [object]
+11-3050 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Dialog Box of the FootPath
+Dialog Box of the FootPath
+Double-click the icon of the FootPath to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The tab Attributes provides these settings:
+Length [text box] - FootPath
+Width [text box] - FootPath
+The shared properties are described under the Tab Attributes.
+Dialog Box of the FootPath
+Plant Simulation Help 11-3051
+Unpublished work. © 2026 Siemens
+
+Length [text box] - FootPath
+Type the Length of the FootPath into the text box. After you inserted the FootPath, Plant Simulation
+shows its length here.
+Remarks
+The FootPath can accommodate any number of Workers, as they themselves do not have a length. A
+Worker enters the FootPath at position 0 and exits it after covering the Length you type in.
+You can change the length of the graphic and the anchor points of the Footpath by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by clicking M on the keyboard.
+SimTalk
+Length [SimTalk] - FootPath
+Length [text box] - FootPath
+11-3052 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [text box] - FootPath
+Type the Width of the FootPath into the text box. After you inserted the FootPath, Plant Simulation shows
+its width here.
+SimTalk
+Width [SimTalk] - FootPath
+Width [text box] - FootPath
+Plant Simulation Help 11-3053
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-3054 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-3055
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+Help Menu [in object dialogs]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+View Menu
+11-3056 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls
+Edit Observers
+Tools Menu
+Plant Simulation Help 11-3057
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Footpath
+Methods of the FootPath
+The FootPath provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+11-3058 Plant Simulation Help
+Unpublished work. © 2026 Siemens

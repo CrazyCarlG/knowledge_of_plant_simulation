@@ -1,0 +1,277 @@
+FluidSource
+FluidSource
+Use the object FluidSource to produce the ingredients of the product, either bulk goods or fluids, which are
+processed in the plant.
+Image
+Description
+Use the FluidDrain 
+  to remove the processed and mixed products from the plant.
+To change the length of the graphic and the anchor points of the FluidSource, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+To show a tooltip with information about the FluidSource, hover with the mouse over it.
+Add the Object to the Simulation Model
+To add the object FluidSource to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Fluids > FluidSource on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+FluidSource
+Plant Simulation Help 11-2707
+Unpublished work. © 2026 Siemens
+
+See also
+Configure the FluidSources Providing the Materials
+Configure the FluidSources Which Produce the Materials
+Produce Fluids in a Fixed Sequence
+Dialog Box of the FluidSource
+Dialog Box of the FluidSource
+Double-click the icon of the FluidSource to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+Dialog Box of the FluidSource
+11-2708 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-2709
+Unpublished work. © 2026 Siemens
+
+Outflow Rate [FluidSource]
+Type the Outflow Rate into the text box with which the material flows out of the Tank. The material then
+flows through the objects of type Pipe to the next object in the flow of materials.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+Note
+The current Outflow Rate depends on the number of attached Pipes. Let's say you attached two Pipes,
+then the specified Outflow Rate flows through each one of these Pipes in case the Outflow Rate of the
+connected Pipes enables this.
+If you just want to let the specified amount flow out of the object, attach a single Pipe and split that up
+into several Pipes later on.
+SimTalk
+OutflowRate [SimTalk] - FluidSource
+See also
+Pipe
+Outflow Rate [FluidSource]
+11-2710 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Material Selection [drop-down list]
+Select how the FluidSource selects the material it produces.
+Remarks
+Note
+Depending on what you select here, the setting Material either defines the Material itself or the path to
+the sequence table.
+You can select one of these settings:
+• Constant
+The FluidSource produces a single type of material only. Type the name of material into the text box
+Material.
+• Sequence Cyclical
+The FluidSource produces the materials in the sequence and with the amount in the order in which you
+type them into the Sequence Table.
+Once the FluidSource has processed the entire sequence, it starts processing the information in the
+table again starting at the beginning of the sequence.
+Type the name of the Sequence Table into the text box Material.
+Or click 
+  and select the name of the table in the dialog Select Object. Plant Simulation automatically
+formats the table.
+• Sequence
+The FluidSource produces the materials in the sequence and with the amount in the order in which you
+type them into the Sequence Table.
+As opposed to Sequence Cyclical, the setting Sequence processes the sequence only once, not
+repeatedly. If the sequence is processed once, the FluidSource does not produce any additional
+materials.
+Material Selection [drop-down list]
+Plant Simulation Help 11-2711
+Unpublished work. © 2026 Siemens
+
+Type the name of the Sequence Table into the text box Material.
+Or click 
+  and select the name of the table in the dialog Select Object. Plant Simulation automatically
+formats the table.
+SimTalk
+MaterialSelection [SimTalk]
+See also
+Produce Fluids in a Fixed Sequence
+Material [text box] - FluidSource
+Material [SimTalk] - FluidSource
+Material Selection [drop-down list]
+11-2712 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Material [text box] - FluidSource
+Type the name of the Material into the text box, which the FluidSource is to produce.
+Remarks
+Depending on the Material Selection, you can select:
+Note
+What you type in as the Material depends on the setting you selected as the Material Selection.
+You can select one of these settings:
+• Constant
+The FluidSource produces a single type of material only. Type the name of material into the text box
+Material.
+• Sequence Cyclical
+The FluidSource produces the materials in the sequence and with the amount in the sequence in which
+you type them into the Sequence Table.
+Once the Source has processed the entire sequence, it starts processing the information in the table
+again starting at the beginning of the sequence.
+Type the name of the Sequence Table into the text box Material.
+Or click 
+  and select the name of the table in the dialog Select Object. Plant Simulation automatically
+formats the table.
+• Sequence:
+The FluidSource produces the materials in the sequence and with the amount in the sequence in which
+you type them into the Sequence Table.
+As opposed to Sequence Cyclical, the setting Sequence processes the sequence only once, not
+repeatedly.
+Material [text box] - FluidSource
+Plant Simulation Help 11-2713
+Unpublished work. © 2026 Siemens
+
+Type the name of the Sequence Table into the text box Material.
+Or click 
+  and select the name of the table in the dialog Select Object. Plant Simulation automatically
+formats the table.
+Sequence Table
+Define the materials, which the FluidSource is to produce in the Sequence Table.
+You can type in:
+• The name of the Material, for example MatA, MatB, MatC, MatD, etc.
+• The Amount in liters of the Material that the FluidSource is to produce.
+Define the names of the material in the MaterialsTable.
+If the product consists of more than ten ingredients, add additional ingredients to the MaterialsTable,
+compare Add Additional Ingredients to the MaterialsTable.
+SimTalk
+Material [SimTalk] - FluidSource
+Material [text box] - FluidSource
+11-2714 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Produce Fluids in a Fixed Sequence
+Material Selection [drop-down list]
+MaterialSelection [SimTalk]
+Material [text box] - FluidSource
+Plant Simulation Help 11-2715
+Unpublished work. © 2026 Siemens
+
+Materials Table [FluidSource]
+The MaterialsTable object contains the data of the different materials which the FluidSource can produce.
+Remarks
+Click the ellipsis button and select the MaterialsTable in the dialog Select Object.
+Or select the MaterialsTable in a Frame, drag it to the text box and drop it there.
+SimTalk
+MaterialsTable [SimTalk] - FluidSource
+See also
+MaterialsTable
+Select Object [for controls]
+Materials Table [FluidSource]
+11-2716 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Shift Calendar [FluidSource]
+Select the ShiftCalendar. It contains the data of the shifts in your installation and controls during which
+shifts the FluidSource works.
+Remarks
+Click the ellipsis button and select the ShiftCalendar in the dialog Select Object.
+Instead of clicking the ellipsis button, you can also select the ShiftCalendar in a Frame, drag it to the text
+box, and drop it there.
+This automatically enters the object into the list of Objects on the tab Resources of the ShiftCalendar.
+SimTalk
+ShiftCalendarObject [SimTalk] - material flow objects
+See also
+ShiftCalendar [object]
+Associated Shift Calendar
+Select Object [for controls]
+Shift Calendar [FluidSource]
+Plant Simulation Help 11-2717
+Unpublished work. © 2026 Siemens
+
+Current Outflow Rate [FluidSource]
+Shows the Current Outflow Rate, i.e., the amount of liters of the material that flows out of the
+FluidSource in a second and that flows through objects of type Pipe to the next object in the flow of
+materials.
+SimTalk
+CurrentOutFlowrate [SimTalk]
+See also
+Pipe
+Current Outflow Rate [FluidSource]
+11-2718 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+Plant Simulation Help 11-2719
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [FluidSource]
+In addition to the values described under the Tab Statistics the tab Statistics of the FluidSource shows this
+object-specific value.
+Item English Description Read-only attribute Item German
+Amount of
+Material
+Shows the amount of material that
+flowed out of the FluidSource.
+StatAmount [SimTalk] Materialmenge
+See also
+Statistics Report [described]
+Tab Statistics [FluidSource]
+11-2720 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined Attributes
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined Attributes
+Plant Simulation Help 11-2721
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2722 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+Plant Simulation Help 11-2723
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2724 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the FluidSource
+Methods of the FluidSource
+The FluidSource provides:
+• The Methods of the Fluid Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-2725
+Unpublished work. © 2026 Siemens

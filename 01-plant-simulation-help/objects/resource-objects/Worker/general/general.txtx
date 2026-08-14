@@ -1,0 +1,1179 @@
+See also
+Travel Mode [drop-down list] > Move freely within area
+Travel Mode [drop-down list] > Walk along footpaths
+Travel Mode [drop-down list] > Beam to workplace
+Worker
+Worker [object]
+Use the object Worker for doing a job on a Workplace at a station.
+Image
+Description
+The Worker-WorkerPool-Workplace-FootPath-concept refines the Broker-Importer-Exporter-concept.
+As opposed to the Exporter, the Worker consumes time when walking to the Workplace at which he does
+his job. The Worker has the same statistics values as the Exporter, and in addition provides a statistics
+value for being En-route to the Job.
+If your Worker does not walk, make sure that the importer on the tab Importer of the station is activated,
+on whose Workplace the Worker is to work.
+In the WorkerPool you can select the Travel Mode with which the Worker gets to his work station:
+• Move freely within area
+The Worker walks freely within the area of the simulation model and walks around obstacles, which you
+defined in 3D.
+Model a Worker Who Walks Freely Within the Model gives a short introduction to the topic.
+• Walk along footpaths
+The Worker walks on the Footpaths, which you inserted between the Stations/Workplaces, to the station
+at which he is going to work.
+Worker
+Plant Simulation Help 11-3139
+Unpublished work. © 2026 Siemens
+
+• Beam to workplace
+The Worker is beamed (teleported) to the Workplace to which he was brokered and at which he is going
+to work instantly, without using up any time at all, provided he cannot get to this Workplace on any
+Footpath. In this case the Worker functions as an Exporter with a capacity of 1.
+You can use Beam to workplace to build a model which does not contain any FootPaths. The Worker
+then always jumps between the WorkerPool and the Workplaces.
+You can also set the Loading Time and the Unloading Time, which the Worker needs for manually
+loading and unloading the station, in the Workplace attached to the station.
+The Workers are created in the WorkerPool and they stay there if they do not work and are waiting for a
+work order. As a rule you type in names of the Workers, which you want to use in your simulation model,
+into the Workers to Create table. You can also drag a single Worker or any number of Workers from the
+Class Library onto the icon of the WorkerPool and drop them there. The WorkerPool appends a row to
+the Workers to Create table for this Worker. If it already contains a line for this Worker, the WorkerPool
+increments the amount by 1.
+You can also create individual Workers, which you do not want to generate via the Workers to Create
+table, with the method create for a single simulation run. This only works in the WorkerPool though. Be
+aware that Plant Simulation deletes this Worker when you reset the model and then only creates the
+Workers from the Workers to Create table at the next Init event that takes place.
+The Broker brokers the Workers to the individual work stations. As soon as a Worker can provide a service,
+the Broker sends him from his WorkerPool to the work station that ordered him. As soon as the WorkerPool
+receives a request for one of its Workers, which it can fulfill, the Broker sends the Worker to the Workplace
+which ordered him:
+• If the Worker walks freely within the area of the simulation model, he walks on the shortest route to
+the Workplace and walks around obstacles you designated.
+The Worker consumes time, when he walks freely within the area to the Workplace.
+• If you modeled the work station using one of the material flow objects and the Workplace and
+connected the WorkerPool and the Workplace with a FootPath, Plant Simulation animates the Worker
+while he moves on the FootPath and while he works on the Workplace.
+The Worker consumes time, when he walks on the FootPath.
+• If you activated Beam to workplace, and you inserted a Workplace, and the Worker, who is supposed to
+work there, cannot reach it via a FootPath, Plant Simulation beams the Worker directly to the Workplace
+and animates him there.
+• If you activated Workers Can Work Remotely and if you did not insert a Workplace, if no Workplace
+exists that supports this service, or if all Workplaces that support this service are occupied, Plant
+Simulation seemingly beams the Worker to the work station itself, where he will perform his task. It
+does not animate him there, but continues to animate him in the WorkerPool.
+Worker [object]
+11-3140 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If a Worker is brokered to an importer for performing set-up, repairing or processing services and if this
+Worker then is assigned a failure, then the importer immediately places a new request with the Broker.
+Consequently, the respective operation can also be finished by another Worker.
+If the Worker pauses or if a failure occurs when he finishes his work at the same time Plant Simulation
+does not delete the DisruptionEnd, Out, and SetupEnd events from the event list and does not request
+the Worker again after the failure or pause. This applies to set up, processing, and repair jobs.
+Note
+A paused Worker always returns to the WorkerPool. A failed Worker stays at the Workplace.
+Note
+A Worker who is automatically brokered does not return to the WorkerPool when he becomes paused or
+unplanned while he stays at the Workplace.
+Note
+A Worker, who is not automatically brokered stays, at the Workplace to which he was sent, no matter if
+you activated Worker Stays Here After Completing the Job/WorkerStaysHere or not in the Workplace.
+Note
+A Worker walks to the closest Workplace if several Workplaces are assigned to the work station.
+We offer alternative graphics for the Worker. Click Exchange Graphics in the 3D window of the Worker and
+select an alternative graphic.
+Worker [object]
+Plant Simulation Help 11-3141
+Unpublished work. © 2026 Siemens
+
+On the Tab MU Animation you can set how the parts are distributed on the Animation Area of the
+Worker.
+The SankeyDiagram 
+  visualizes the paths of the Worker who walk freely within the area.
+To show a tooltip with information about the Worker, hover with the mouse over it.
+Worker on Footpath
+with Route
+Part Carried by Worker
+with Route
+Part Carried by Worker
+Destination
+Workplace Assigned to
+Station
+Workplace Reserved
+for Worker (filled
+Arrow)
+Workplace Reserved
+for Worker on his Way
+(hollow Arrow)
+To show statistics of the Workers managed by the WorkerPool, drag it over a Chart and drop it there. Select
+the settings that you need.
+Worker [object]
+11-3142 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Add the Object to the Simulation Model
+To add the object Worker to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Resources > Worker on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+How the Broker Mediates Jobs to the Worker
+Model Workers and the Jobs They Do
+Model a Worker Who Carries Parts Between Workplaces
+Model Workers with Importer, Broker, and Exporter
+How the Worker Finds the Shortest Route
+How the Worker Decides Where to Work
+Worker [object]
+Plant Simulation Help 11-3143
+Unpublished work. © 2026 Siemens
+
+How the Worker Carries Parts
+How Workers Queue Up in Front of the Workplace
+Show Worker Statistics in a Chart
+Video on YouTube
+https://youtu.be/HiPziA8kxc0?si=QnyvMaEQeVyaDoHo
+How the Worker Travels in the Plant
+How the Worker Finds the Shortest Route
+The Travel Mode determines how the Worker finds the shortest route from the WorkerPool and the
+Workplaces and between the Workplaces.
+Remarks
+You can select to make the Worker:
+• Move freely within area
+• Walk along footpaths
+• Beam to workplace
+See also
+How the Worker Decides Where to Work
+How the Worker Travels in the Plant
+11-3144 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Move freely within area
+Makes the Worker walk freely within the area of the simulation model and walk around the obstacles,
+which you defined.
+Remarks
+Plant Simulation automatically computes the shortest route between the WorkPlaces and between the
+WorkerPool and the WorkPlaces. It uses the layout of the model to compute the shortest route to a
+WorkPlace.
+Note
+We use the 3D layout to compute the route of the Worker. It normally represents the looks of your facility
+close to reality, meaning that the position, the dimensions, and the orientation of the machines and the
+fixtures of the building closely match the real plant.
+To compute the shortest route, Plant Simulation uses information about those areas of the model, which
+the Worker cannot walk on or cross. These areas encompass all kinds of obstacles, for example walls,
+pillars, machines, conveyors, safety fences, etc. Plant Simulation automatically detects these areas. By
+default, we marked the material flow objects, the animatable objects, and the graphics, which belong to
+the Frame, as Barred Areas. Information flow objects and user interface objects by default are not Barred
+Areas. You can set if an object as an obstacle for the Worker under Edit 3D Properties > Tab Graphics >
+Obstacle for the Worker. For graphics, you can do this under Edit 3D Properties > Tab Graphic Settings,
+for example to allow the Worker to cross a Track. MUs do not provide this setting.
+All settings, except for None automatically create a barred area.
+To designate an area in the plant, which the Worker can enter, but should not, for example the pivoting
+area of a crane, you can manually create a Barred Area.
+To allow the Worker to walk around or through obstacles, use a FootPath. Let's say that you want your
+Worker to walk through a door which in part of a wall that you defined as an obstacle. Then you can lay a
+FootPath through the door on which he can walk through it. The FootPath always has to be a little longer
+than the depth of the wall.
+Move freely within area
+Plant Simulation Help 11-3145
+Unpublished work. © 2026 Siemens
+
+For the FootPath not the length, which you type in on the tab Attributes is decisive, but the Length of the
+FootPath in the scene. The distance covered of the Worker is determined by the starting point and the end
+point of the FootPath as well by the anchor points.
+If the FootPath includes an incline, the Worker moves slower on the incline than on a flat surface. Plant
+Simulation achieves this by extending the imagined distance for the incline segments. When computing
+the length of an inclined segment, Plant Simulation triples the height difference.
+Compare this example: A segment of a FootPath has a dimension of 1 m in the x-direction and 1 m in the
+z-direction, thus actually is 1.414 m long. The imagined dimension however is 1 m in the x-direction and 3
+m in z-direction, so that Plant Simulation computes an effective length of 3.162 m.
+The Worker always walks on the route, which has the shortest effective length and which he can thus
+cover in the shortest time. This can cause the Worker to take an actually longer but flatter route to the
+destination instead of a shorter route which contains inclines and gradients.
+For computing the effective route length Plant Simulation triples the height difference. The resulting
+speeds of the Worker are realistic in general. The speed of the Worker decreases to a third, when the
+Worker moves vertically up or down, for example when climbing a ladder. The speed decreases to about
+half, when the Worker negotiates an incline of 38 degrees, for example a when walking on a stairway.
+Note
+The Worker walks slower on an incline than he walks on a flat surface.
+Note
+When the Worker walks freely within the area, he can only get to a different floor in the building by
+walking up or down a ramp on a Footpath or walking up and down Stairs.
+The example model Factory 51 demonstrates how you can use Stairways.
+Move freely within area
+11-3146 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+WorkersTravelMode [SimTalk]
+See also
+Obstacle for the Worker [drop-down list]
+Model a Worker Who Waits in Line
+Model a Worker Who Walks Freely Within the Model
+Set How Many Workers Are Created During Initialization
+How the Worker Decides Where to Work
+Set Home Location and Scope for the Worker
+Choose the Nearest Worker [check box]
+Edit 3D Properties > Graphics [tab] > Worker
+Edit 3D Properties > Graphic Settings
+Barred Area in 3D
+Move freely within area
+Plant Simulation Help 11-3147
+Unpublished work. © 2026 Siemens
+
+Back to
+Travel Mode [drop-down list]
+Move freely within area
+11-3148 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Walk along footpaths
+Makes the Worker walk on the Footpaths, which you inserted between the Stations/Workplaces, to the
+station at which he is going to work.
+Remarks
+To model and to simulate the distances between the WorkerPool and the work stations or between the
+work stations, insert FootPaths. Plant Simulation animates the Workers on the FootPaths when they walk
+toward the work stations or when they walk between the stations.
+You can link several FootPaths with Connectors to create a network of FootPaths. The Worker walks within
+this network from his WorkerPool to the Workplace. Provided the WorkerPool and the Workplace are
+connected to the same network of FootPaths, the Worker walks from the WorkerPool to the Workplace and
+back on the shortest possible route.
+A network of FootPaths consists of all FootPaths that are joined with Connectors, as well as the
+WorkerPools and the Workplaces that are joined with one of these FootPaths with a Connector.
+The time it takes the Worker to walk from his WorkerPool to the Workplace depends on his Speed and
+the combined Lengths of the FootPaths he covers to reach his destination. Plant Simulation recognizes on
+which FootPaths the Worker walks if he exits a FootPath at another end than the one at which he entered
+it. If the Worker does not walk to his destination on a FootPath or if he is beamed to his destination, he
+does not consume any time at all.
+SimTalk
+WorkersTravelMode [SimTalk]
+See also
+Set How Many Workers Are Created During Initialization
+Edit 3D Properties > Tab Graphics > Obstacle for the Worker
+Edit 3D Properties > Tab Graphic Settings
+Barred Area
+Walk along footpaths
+Plant Simulation Help 11-3149
+Unpublished work. © 2026 Siemens
+
+Back to
+Travel Mode [drop-down list]
+Walk along footpaths
+11-3150 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Beam to workplace
+Beams (teleports) the Worker to the Workplace to which he was brokered and at which he is going to work
+instantly, without using up any time at all, provided he cannot get to this Workplace on any Footpath.
+Remarks
+For the setting Beam to workplace the Worker functions as an Exporter with a capacity of 1.
+You can use Beam to workplace to build a model which does not contain any FootPaths. The Worker then
+always jumps between the WorkerPool and the Workplaces.
+SimTalk
+WorkersTravelMode [SimTalk]
+teleportTo [SimTalk]
+teleportToHome [SimTalk]
+teleportToPool [SimTalk]
+See also
+Exporter [object]
+Set How Many Workers Are Created During Initialization
+Model a Worker Who Walks Freely Within the Model
+Edit 3D Properties > Tab Graphics > Obstacle for the Worker
+Edit 3D Properties > Tab Graphic Settings
+Barred Area
+Back to
+Travel Mode [drop-down list]
+Beam to workplace
+Plant Simulation Help 11-3151
+Unpublished work. © 2026 Siemens
+
+How the Worker Decides Where to Work
+At times a Worker in the plant will have to decide if he continues working on a Workplace doing a job for
+which he has the correct skills or if he moves to another Workplace that requires his skills more urgently.
+Remarks
+While brokering, the Broker and the Worker proceed as follows:
+1. The Broker first checks the Priority of the current request in the dialog of the Worker.
+If the job has the highest priority, he stays on the current Workplace and finishes the current job.
+2. The Worker then checks if the material flow object, to which the Workplace is assigned, has a Scope
+with the respective Objects in his dialog.
+How the Worker Decides Where to Work
+11-3152 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If the current material flow object is part of the correct Scope, he stays on the current Workplace and
+finishes his current job there.
+3. The respective Broker also checks if Choose the Nearest Worker is selected.
+4. If the Worker has the highest Priority, a matching or no Scope, and the shortest route to the
+Workplace, the Broker mediates him to the respective Workplace.
+In doing so, Plant Simulation computes a route to the Workplace for all eligible Workers while
+brokering them. The more Workers can be brokered, the more time it takes to compute the route to
+the Workplace. If you configured additional services, this might use up even more time. This can,
+consequently, slow down the simulation.
+See also
+How the Broker Mediates Jobs to the Worker
+Set Home Location and Scope for the Worker
+Tab Scope
+Choose the Nearest Worker [check box]
+How the Worker Decides Where to Work
+Plant Simulation Help 11-3153
+Unpublished work. © 2026 Siemens
+
+How the Worker Carries Parts
+The Worker can carry parts from one station to another station. This only works if you attach a Workplace
+to the work station at which the Worker picks the part up. Also attach a Workplace to the target station at
+which he places the part. You also have to insert a Broker and a WorkerPool.
+Remarks
+Select the Travel Mode in the WorkerPool:
+• For the setting Move freely within area the Worker automatically finds his way to the destination of the
+part.
+• For the setting Walk along Footpaths you have to connect the Workplaces with Footpaths. Also
+connect the WorkerPool and the Workplace at the station at which the Worker picks the part up, with a
+Footpath.
+Activate the transport importer on the tab Importer > sub-tab Transport the dialog of the material flow
+object at which the Worker is to pick the part up. In the example below this is the station named Station1.
+How the Worker Carries Parts
+11-3154 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Then, specify the Broker who brokers the Worker. If the part itself does not have a destination, you
+also have to specify the MU Target to which he carries the part. The MU Target either is the Workplace
+attached to the work station, which processes the part next and to which the Worker carries the part, or
+the work station itself.
+The part then requests a Worker. The parts wait at the station until the Worker arrives and picks them up:
+• If the Worker can only carry a single part, if its capacity is 1 (X-Dimension = 1, Y-Dimension = 1,
+Z-Dimension = 1), he picks the part up and carries it to the destination.
+• If the Worker can carry several parts, he will wait for parts until his capacity is reached. To prevent the
+Worker from waiting too long for additional parts to arrive, type in the Maximum Dwell Time. After it
+has passed, he moves to the target station, the MU Target, and places the part.
+The Worker evaluates the MU Targets and moves to the closest one first. At the target station, he places
+all parts destined for this station. If he carries additional parts, he evaluates the next target and moves
+on to the closest one, until he has placed all parts.
+If your plant works in shifts, the Worker walks back to his WorkerPool at the end of his shift. He then
+deposits the parts which he could not deliver into the Parts Buffer which you assigned to the WorkerPool.
+If you did not assign a parts buffer to the WorkerPool, Plant Simulation shows a warning and stops the
+simulation.
+If you activated the transport importer in the parts buffer, one of the available Workers carries the parts
+in the parts buffer to the destination object after the next shift has started. If you did not activate the
+How the Worker Carries Parts
+Plant Simulation Help 11-3155
+Unpublished work. © 2026 Siemens
+
+transport importer, the parts in the parts buffer are moved on according to the Exit Strategy which you
+selected for the parts buffer.
+See also
+Model a Worker Who Carries Parts Between Workplaces
+Graphic Settings
+Dialog Box of the Worker
+Dialog Box of the Worker
+Double-click the icon of the Worker to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Stopped [check box] - Worker
+Failed [check box] - material flow objects
+Paused/Planned/Unplanned [material flow objects]
+Number [of the MU]
+States of the Worker
+Dialog Box of the Worker
+11-3156 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Stopped [check box] - Worker
+To stop the Worker on his way to or from the destination, select this check box. If the Worker stays in
+the WorkerPool or on a Workplace, you cannot stop him. To make the Worker continue on his way on the
+Footpath or if he is walking freely within the area, clear the check box.
+SimTalk
+Stopped [SimTalk] - Worker
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Stopped [check box] - Worker
+Plant Simulation Help 11-3157
+Unpublished work. © 2026 Siemens
+
+Priority [Worker]
+Type the Priority into the text box with which the Worker carries out a work order. The Priority is a
+criterion for the urgency of a request.
+Remarks
+The Priority is an integer value. The higher its value, the higher the urgency. Plant Simulation provides a
+Worker with Priority 10 before providing a Worker with Priority 1.
+Workers with a higher Priority will be brokered earlier by the Broker for identical services than Workers
+with a lower priority. The Priority only applies to Workers who are registered with the same Broker.
+If several qualified Workers with the same priority exist, who can provide the requested service, Plant
+Simulation first brokers the Workers, who already stay on a suitable Workplace at the station. After that
+Workers are brokered who already are at the station, but stay on the wrong Workplace. Then Workers are
+brokered who are not staying on a Workplace. Finally, those Workers are brokered who stay on a Workplace
+that is assigned to another station.
+SimTalk
+Priority [SimTalk] - Worker
+Priority [Worker]
+11-3158 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Efficiency [text box]
+Type the Efficiency in percent into the text box with which the Worker works. It determines how fast the
+Worker performs the work assigned to him.
+Remarks
+Compare these examples:
+• With an Efficiency of 100 percent the Worker consumes the exact processing time which you specified.
+• With an Efficiency of 200 percent he consumes half of the processing time which you specified.
+• With an Efficiency of 50 percent he consumes twice the processing time which you specified.
+Note
+If more than one Worker performs jobs at the station, the efficiency of the slowest Worker determines
+the processing time of the MU.
+SimTalk
+Efficiency [SimTalk] - Worker
+See also
+Workers to Create
+Efficiency [text box]
+Plant Simulation Help 11-3159
+Unpublished work. © 2026 Siemens
+
+Speed [Worker]
+Type the Speed into the text box. This is the Speed with which the Worker walks on the FootPath or walks
+freely within the area to the designated Workplace at the work station.
+SimTalk
+Speed [SimTalk] - Worker
+CurrentSpeed [SimTalk] - Worker
+Speed [Worker]
+11-3160 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+X-Dimension [Worker]
+Type how many parts the Worker can carry in the X-Dimension into the text box.
+Remarks
+The carrying capacity of the Worker is X-Dimension times Y-Dimension times Z-Dimension. The greatest
+allowed value is one million.
+If you decrease the carrying capacity of the Worker, make sure that no parts are located on the places that
+will be deleted by this action! Either delete these parts or move them to another place on the reduced
+carrying capacity area.
+SimTalk
+XDim [SimTalk] - Worker
+See also
+Y-Dimension [Worker]
+Z-Dimension [Worker]
+X-Dimension [Worker]
+Plant Simulation Help 11-3161
+Unpublished work. © 2026 Siemens
+
+Y-Dimension [Worker]
+Type how many parts the Worker can carry in the Y-Dimension into the text box.
+Remarks
+The carrying capacity of the Worker is X-Dimension times Y-Dimension times Z-Dimension. The greatest
+allowed value is one million.
+If you decrease the carrying capacity of the Worker, make sure that no parts are located on the places that
+will be deleted by this action! Either delete these parts or move them to another place on the reduced
+carrying capacity area.
+SimTalk
+YDim [SimTalk] - Worker
+See also
+X-Dimension [Worker]
+Z-Dimension [Worker]
+Y-Dimension [Worker]
+11-3162 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Z-Dimension [Worker]
+Type how many parts the Worker can carry in the Z-Dimension into the text box.
+Remarks
+The carrying capacity of the Worker is X-Dimension times Y-Dimension times Z-Dimension. The greatest
+allowed value is one million.
+The Z-Dimension enables to stack parts one onto the other.
+If you decrease the carrying capacity of the Worker, make sure that no parts are located on the places that
+will be deleted by this action! Either delete these parts or move them to another place on the reduced
+carrying capacity area.
+SimTalk
+ZDim [SimTalk] - Worker
+See also
+X-Dimension [Worker]
+Y-Dimension [Worker]
+Video on YouTube
+https://youtu.be/HiPziA8kxc0?si=tx1MOqgt0BsmOuxB&t=693
+Z-Dimension [Worker]
+Plant Simulation Help 11-3163
+Unpublished work. © 2026 Siemens
+
+Shift [Worker]
+Type the name of the Shift into the text box during which the Worker works.
+Remarks
+If you do not specify a specific shift on the Tab Shift Times of the ShiftCalendar, the Worker works during
+all shifts defined in this ShiftCalendar.
+SimTalk
+Shift [SimTalk] - Worker
+See also
+Tab Shift Times
+Shift [Worker]
+11-3164 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Services [Worker]
+To open a list, into which you type the names of the services, which the Worker provides, click this button.
+Remarks
+Before you can type in data, click the Inheritance check box so that it looks like this 
+ .
+• The Worker provides these services by default:
+• Type the name of the service into the cell and click Apply. The Worker attempts to provide the services
+in the order in which you type them into the list. You might, for example, enter repair, drilling,
+milling, turning, carrying parts, etc.
+Note
+The name is not case-sensitive, just like the names of attributes and methods of the objects are not
+case-sensitive.
+To save memory and improve access speed, all places which are using such a case-insensitive string
+are pointing to the same string in main memory. The visible and unexpected result is that the first
+occurrence of the string defines how the string is written in terms of upper- and lower-casing.
+In SimTalk you can compare strings in an case-insensitive manner with the ~= operator, compare
+Relational Operators.
+If you type in a Priority and an Efficiency for each individual service, Plant Simulation uses these values.
+By typing in a Priority and an Efficiency, you are better able to control the automatic assignment of the
+services, which the Worker provides for jobs to be done.
+Services [Worker]
+Plant Simulation Help 11-3165
+Unpublished work. © 2026 Siemens
+
+If you do not type in a Priority and an Efficiency for an individual service, Plant Simulation uses the
+values for the Priority and the Efficiency of the Worker.
+Plant Simulation inserts these services into the list of offered services of the Broker: To view them, select
+View > Offered Services.
+You can use the commands on the Context Menu of Embedded Lists to edit the contents of the cells.
+If you want the Worker to provide additional services, you can type in these services into the Workers to
+Create table.
+SimTalk
+getServices [SimTalk] - Worker
+setServices [SimTalk] - Worker
+Services [SimTalk] - Worker
+Services [Worker]
+11-3166 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Exported Services [Worker]
+Offered Services [Broker]
+Context Menu of Embedded Lists
+Video on YouTube
+https://youtu.be/HiPziA8kxc0?si=qYFCTtAc7V4GzXjQ&t=178
+Services [Worker]
+Plant Simulation Help 11-3167
+Unpublished work. © 2026 Siemens
+
+Service [text box]
+Shows the name of the brokered or of the assigned service for the Worker who carries a part. If the Worker
+is brokered to an importer, the text box shows the brokered service.
+Remarks
+If the Worker carries parts to a Destination, he is no longer brokered. While the Worker carries parts, the
+assigned service is shown which corresponds to the brokered service during loading. The service remains
+assigned until the Worker has unloaded all parts.
+While he is loading, the Worker is brokered. For this reason you can query this service during the Loading
+Time with the method getExportedServices.
+See also
+Loading Time [Workplace]
+getExportedServices [SimTalk]
+Service [text box]
+11-3168 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Broker [Worker]
+Select the Broker, who assigns the services to the Worker.
+Remarks
+Click the ellipsis button and select the Broker, who assigns the services to the Worker, in the dialog Select
+Object.
+Or type in the path to and the name of the Broker. You might, for example, type
+in .Models.Model.MyBroker.
+Or select the Broker in a Frame, drag it to the text box and drop it there.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+SimTalk
+BrokerPath [SimTalk] - Worker
+See also
+Broker [object]
+Select Object [for controls]
+Broker [Worker]
+Plant Simulation Help 11-3169
+Unpublished work. © 2026 Siemens
+
+Home Location
+Select the Home Location. This is the Workplace to which the Worker walks when he has finished his
+current job.
+Remarks
+Click the ellipsis button and select the Home Location of the Worker in the dialog Select Object.
+Or type in the path to and the name of the Workplace. You might, for example, type in
+~.Models.Model.Workplace.
+Or select the Home Location in a Frame, drag it to the text box and drop it there.
+Note
+Plant Simulation transfers Workers, for whom you defined a Home Location and a Shift in the Workers
+to Create table of the WorkerPool, to the defined Home Location at the start of the Shift. They then
+start walking to the respective Workplace from there.
+At the end of the shift Plant Simulation transfers all Workers of this shift directly to the WorkerPool, they
+do not walk back to the WorkerPool.
+Note
+Plant Simulation transfers Workers, for whom you defined a Home Location but no Shift, to the defined
+Home Location at the start of the simulation.
+Note
+Plant Simulation always resolves relative paths in relation to the Frame in which the WorkerPool is
+inserted. If Plant Simulation cannot resolve a path in the Scope array during the simulation, it shows an
+error message and asks if you would like to stop the simulation.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+You can also enter the Home Location into the Workers to Create table. Plant Simulation then enters it
+into the text box Home Location.
+Home Location
+11-3170 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+HomeLocation [SimTalk] - Worker
+goTo [SimTalk]
+goToHome [SimTalk]
+goToPool [SimTalk]
+teleportTo [SimTalk]
+teleportToHome [SimTalk]
+teleportToPool [SimTalk]
+See also
+Select Object [for controls]
+Set Home Location and Scope for the Worker
+Video on YouTube
+https://youtu.be/gU1pqu7sWA8?si=dUIUQrzFfJ_XIAv7&t=38
+Home Location
+Plant Simulation Help 11-3171
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Scope
+Tab Scope
+Assign any of the built-in material flow objects, or a Frame, to which the Worker can be brokered to
+perform a job, on the tab Scope.
+Remarks
+To add an object to the scope of the Worker to the tab Scope, drag it from the Frame window over the icon
+of the Worker class and drop it there. You can also select and then drag-and-drop multiple objects at the
+same time!
+Note
+Plant Simulation always resolves relative paths in relation to the Frame in which the WorkerPool is
+inserted. If Plant Simulation cannot resolve a path in the Scope array during the simulation, it shows an
+error message and asks if you would like to stop the simulation.
+To manipulate the contents of the list, use the commands on the Context Menu of Embedded Lists.
+You can also enter the Scope into the Workers to Create table.
+Tab Failures
+11-3172 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Plant Simulation then enters the respective stations into the cells in the Objects table.
+See also
+Objects [Scope]
+How the Worker Decides Where to Work
+Set Home Location and Scope for the Worker
+Choose the Nearest Worker [check box]
+Tab Scope
+Plant Simulation Help 11-3173
+Unpublished work. © 2026 Siemens
+
+Objects [Scope]
+Assign the objects, which form the Scope, i.e., any of the built-in material flow objects, or a Frame, to
+which the Worker can be mediated to do a job.
+Remarks
+Before you can type in data, click the Inheritance check box so that it looks like this 
+ .
+• Type in the path to and the name of the material flow object in a cell. Or
+• Drag the material flow object to the icon of the Worker and drop it there.
+• Select several material flow objects and drag them to the icon of the Worker and drop them there.
+Note
+Plant Simulation always resolves relative paths in relation to the Frame in which the WorkerPool is
+inserted. If Plant Simulation cannot resolve a path in the Scope array during the simulation, it shows an
+error message and asks if you would like to stop the simulation.
+To allow the Worker to be mediated to a Frame, including all of the inserted objects and sub-Frames,
+specify that Frame.
+You can also enter the Scope into the Workers to Create table.
+Objects [Scope]
+11-3174 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Plant Simulation then enters the respective stations into the cells in the Objects table.
+SimTalk
+Scope [SimTalk] - Worker
+setWorkersToCreateTable [SimTalk]
+See also
+How the Worker Decides Where to Work
+Set Home Location and Scope for the Worker
+Choose the Nearest Worker [check box]
+Tab Controls
+Tab Controls [Worker]
+Click the ellipsis button and select a Method in the dialog Select Object. Type in the source code of the
+respective control.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+Tab Controls
+Plant Simulation Help 11-3175
+Unpublished work. © 2026 Siemens
+
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Order Control [Worker]
+Release Control [Worker]
+Tab Controls [Worker]
+11-3176 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Order Control [Worker]
+Modifies the built-in behavior of the object. The Order Control specifies how the Worker handles the order.
+The Worker calls the Order Control whenever he is assigned to an importer.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+Order Control [Worker]
+Plant Simulation Help 11-3177
+Unpublished work. © 2026 Siemens
+
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+The standard order control as a user-defined attribute looks like this:
+Parameters
+The Order Control has two parameters, which define the importer:
+• The parameter Importer of data type object designates the importer.
+• The parameter Type of data type integer designates its type: 0 designates the failure/remove failure-
+importer, 1 the set-up-importer, 2 the processing-importer, and 3 the transport-importer.
+SimTalk
+OrderCtrl [SimTalk] - Worker
+See also
+Select Object [for controls]
+Order Control [Worker]
+11-3178 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Release Control [Worker]
+Modifies the built-in behavior of the object. The object calls the Release Control as soon as an importer
+releases the Exporter/Worker.
+Remarks
+Plant Simulation executes the Release Control as soon as an importer releases the Exporter/Worker. When
+the Release Control is called, the Exporter/Worker has already left its importer. You yourself have to make
+sure that the Exporter/Worker is assigned new importers, for example with the method findNewImporter.
+In this case the Exporter/Worker will not automatically register as being available with its Broker.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Release Control [Worker]
+Plant Simulation Help 11-3179
+Unpublished work. © 2026 Siemens
+
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+The standard release control as a user-defined attribute looks like this:
+Parameters
+The Release Control has two parameters, which define the importer:
+• The parameter Importer of data type object designates the importer proper.
+• The parameter Type of data type integer designates its type:
+0 designates the failure/remove failure-importer, 1 the set-up-importer, 2 the processing-importer, and
+3 the transport-importer.
+Note
+Plant Simulation calls the Release Control, which you typed into the Worker for the transport-
+importer, when the Worker starts to carry parts away. This is then the case if either the Maximum
+Dwell Time [transport importer] has passed or if the Worker cannot pick up any more parts because
+his X-Dimension [Worker], Y-Dimension [Worker], and Z-Dimension [Worker] is used up.
+SimTalk
+ReleaseCtrl [SimTalk] - Worker
+Release Control [Worker]
+11-3180 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Select Object [for controls]
+Tab Statistics
+Tab Statistics [Worker]
+Plant Simulation shows the most important statistical data on the tab Statistics.
+Remarks
+The tab Statistics shows the values for the Services and for the Worker. For each of these blocks, adding
+up the individual values results in 100 percent.
+The Worker collects failed times of the services and of the Worker. The Worker only collects Failed times
+that accrue during the processing time, i.e., times that are located outside of the paused and of the
+unplanned time.
+Waiting times only accumulate during the times if the Worker is available, i.e., if these times are located
+outside of the paused, the unplanned, and of the failed times.
+Item
+English Description Read-only attribute
+Item
+German
+Services
+Setting-up
+Shows the portion of the set-up time of
+the services of the overall statistics time
+of the Worker. The overall statistics time is
+the statistics collection period without the
+unplanned time and the paused time.
+StatServicesSetupPortio
+n [SimTalk] - Worker
+Dienste
+rüstend
+Services
+Processing
+Shows the portion of the working time of
+the services of the overall statistics time
+of the Worker. The overall statistics time is
+StatServicesWorkingPor
+tion [SimTalk] - Worker
+Dienste
+arbeitend
+Tab Statistics
+Plant Simulation Help 11-3181
+Unpublished work. © 2026 Siemens
+
+Item
+English Description Read-only attribute
+Item
+German
+the statistics collection period without the
+unplanned time and the paused time.
+Services
+Repairing
+Shows the portion of the repairing time of
+the services of the overall statistics time
+of the Worker. The overall statistics time is
+the statistics collection period without the
+unplanned time and the paused time.
+StatServicesRepairingPo
+rtion [SimTalk] - Worker
+Dienste
+reparierend
+Services
+Transporti
+ng
+Shows the portion of the transporting time from
+Workplace to Workplace of the services of the
+overall statistics time of the Worker. The overall
+statistics time is the statistics collection period
+without the unplanned time and the paused
+time.
+StatServicesTransportin
+gPortion [SimTalk]
+Dienste
+tragend
+Services
+En-route to
+Job
+Shows the portion of the time of the services
+of the overall statistics of the Worker spent
+for getting to the Workplace or back to the
+WorkerPool to get the next job order. The
+latter only applies if you select Get job orders
+at home only. The overall statistics time is
+the statistics collection period without the
+unplanned time and the paused time.
+StatServicesEnRouteToJ
+obPortion [SimTalk]
+Dienste
+unterwegs
+zu Auftrag
+Services
+Waiting
+Shows the portion of the waiting time
+of the services for an importer plus
+the time the services spent waiting for
+a MU at the importer of the overall
+statistics time of the Worker. The value of
+StatServicesEnRouteIdlePortion is part of the
+value of StatServicesWaitingImpPortion. The
+overall statistics time is the statistics collection
+period without the unplanned time and the
+paused time.
+StatServicesWaitingPort
+ion [SimTalk] - Worker
+StatServicesWaitingImp
+Portion [SimTalk] -
+Worker
+StatServicesWaitingMU
+Portion [SimTalk] -
+Worker
+StatServicesEnRouteIdle
+Portion [SimTalk]
+Dienste
+wartend
+Services
+Failed
+Shows the portion of the failed time of
+the services of the overall statistics time
+of the Worker. The overall statistics time is
+the statistics collection period without the
+unplanned time and the paused time.
+StatServicesFailedPortio
+n [SimTalk] - Worker
+Dienste
+gestört
+Exporter
+Operationa
+l
+Shows the portion of the statistics collection
+period during which the Worker was
+operational.
+StatExporterOperational
+Portion [SimTalk]
+Exporter
+einsatzberei
+t
+Tab Statistics [Worker]
+11-3182 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Item
+English Description Read-only attribute
+Item
+German
+Exporter
+Paused
+Shows the portion of the statistics collection
+period during which the Worker was paused.
+StatExporterPausedPorti
+on
+Exporter
+pausiert
+Exporter
+Unplanned
+Shows the portion of the statistics collection
+period during which the Worker was unplanned.
+StatExporterUnplanned
+Portion [SimTalk]
+Exporter
+ungeplant
+Exporter
+Failed
+Shows the portion of the statistics collection
+period during which the Worker was failed.
+StatExporterFailedPorti
+on [SimTalk]
+Exporter
+gestört
+Worker
+Traveled
+Distance
+Shows the distance which the instance of
+the Worker traveled from the WorkerPool to
+the Workplaces attached to the stations and
+between the stations in meters.
+StatTraveledDistance
+[SimTalk] - Worker
+Werker
+zurückgeleg
+te
+Wegstrecke
+To collect statistics data, select the check box Exporter Statistics.
+To view Exporter and Worker Statistics in the Statistics Report, select View > Show Statistics Report in
+the dialog of the object. You can also click the right mouse button in the Frame and select Show Statistics
+Report or you can press F6.
+You can also click the object in the Frame with the right mouse button and select Show Statistics Report
+on the context menu.
+The individual states look like this:
+Tab Statistics [Worker]
+Plant Simulation Help 11-3183
+Unpublished work. © 2026 Siemens
+
+Note
+The Worker stays at the station, to which he is brokered, while this station is failed, paused, or stopped.
+Statistics does not count this time as waiting.
+See also
+Tab Statistics [WorkerPool]
+Tab Statistics [Worker]
+11-3184 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exporter Statistics [Worker]
+To collect statistics data of the Worker, select this check box. To deactivate statistics collection, clear the
+check box.
+SimTalk
+ExpStatOn [SimTalk]
+Exporter Statistics [Worker]
+Plant Simulation Help 11-3185
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-3186 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu [Worker]
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Importers [Worker]
+Show Statistics Report [on View menu] Exported Services [Worker]
+Show Attributes and Methods [on View menu] Route to Destination [Worker]
+Contents [Worker] Associated Shift Calendar
+Position [Worker]
+See also
+View Menu [general description]
+Navigate Menu
+Plant Simulation Help 11-3187
+Unpublished work. © 2026 Siemens
+
+Contents [Worker]
+Opens a table, which shows all MUs which the Worker carries.
+Remarks
+For a Worker with the capacity 1 the table has one column. It has as many columns as the capacity
+(X-Dimension, the Y-Dimension, and the Z-Dimension) you typed in.
+SimTalk
+Cont [SimTalk] - MUs
+contentsList [SimTalk] - material flow objects
+deleteMovables [SimTalk] - MUs
+mu [SimTalk] - material flow objects
+muPart [SimTalk]
+NumMU [SimTalk] - MUs
+NumMUParts [SimTalk] - MUs
+pe(Y,Y) / [X,Y] [SimTalk] - MUs
+Contents [Worker]
+11-3188 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Position [Worker]
+Opens a table, which shows the object on which the Worker is located at the moment.
+Position [Worker]
+Plant Simulation Help 11-3189
+Unpublished work. © 2026 Siemens
+
+Importers [Worker]
+Opens a table, which shows all importers for which the Worker provides services.
+Remarks
+The table shows the Importers in column 1, and their Type in column 2: The number 0 designates the
+failure-importer, 1 the set-up-importer, 2 the processing-importer, and 3 the transport-importer.
+SimTalk
+findNewImporter [SimTalk]
+getImporters [SimTalk]
+Importers [Worker]
+11-3190 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exported Services [Worker]
+Opens a table, which shows the names of all services which the Worker provides at this time.
+Double-click the name of a service to open a subtable, which shows the name of the Importer, the Type of
+the importer and the Amount of services provided.
+The Type 0 designates the failure-importer, 1 the set-up-importer, 2 the processing-importer, and 3 the
+transport-importer.
+SimTalk
+getExportedServices [SimTalk]
+Services [SimTalk] - Worker
+Exported Services [Worker]
+Plant Simulation Help 11-3191
+Unpublished work. © 2026 Siemens
+
+Route to Destination [Worker]
+Selects all objects along the route to the destination object of the selected instance of the Worker.
+See also
+getRouteLength [SimTalk] - Worker
+getRouteCoordinates [SimTalk]
+getRouteLength [SimTalk] - Workplace
+Route to Destination [Worker]
+11-3192 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls
+Edit Observers
+In addition, the Worker provides the Available control and the Not-available control.
+Tools Menu
+Plant Simulation Help 11-3193
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Help Menu
+11-3194 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+States of the Worker
+During your simulation runs Plant Simulation can show the state of the Worker. Select a setting on the Tab
+States > States Orientation.
+• The setting Horizontal shows the state as a horizontally arranged cube along the bottom of his
+picture.
+For the setting Horizontal you can show all states which the Worker can take.
+States of the Worker
+Plant Simulation Help 11-3195
+Unpublished work. © 2026 Siemens
+
+• The setting Color colors the entire picture of the Worker.
+See also
+States > State Graphic [defined]
+States of the Material Flow Objects
+States of the Energy Features
+States of the Frame
+States of the Transporter
+States of the Method
+States of the MQTT Interface
+States of the Worker
+11-3196 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Methods of the Worker
+_Methods of the Worker
+The Worker provides:
+• The methods listed in the table of contents to the left.
+Note
+If you do not use a FootPath, Plant Simulation beams/teleports the Worker to the Workplace.
+• The _Methods of the Exporter as the Worker is an Exporter [object] with the capacity 1.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Methods of the Worker
+Plant Simulation Help 11-3197
+Unpublished work. © 2026 Siemens

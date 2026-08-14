@@ -1,0 +1,203 @@
+Example
+MyDataTable.setFontSizeCells({1,2}..{1,6},3)
+SimTalk
+getFontSizeCell [SimTalk]
+See also
+Font Size [drop-down list] - cells, columns
+Methods for Querying Statistics Values of List and Tables
+_Methods for Querying Statistics Values of Lists and Tables
+Lists and tables provide the methods listed in the table of contents to the left for querying statistics values.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Methods for Querying Statistics Values of List and Tables
+11-4020 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+_Methods for Querying Statistics Values of Lists and Tables
+Plant Simulation Help 11-4021
+Unpublished work. © 2026 Siemens
+
+max [SimTalk] - lists
+Returns the greatest value in the range of cells of the list or table designated by <Path>.
+Remarks
+After it found the greatest value, the method sets the cursor into the cell in which it found the value.
+The method only applies to entries of data types real or integer. Plant Simulation ignores entries of other
+data types in the ranges to be searched or considers their value to be 0.
+The method applies to the objectsDataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.max([Range:listrange, ...]) -> real
+Parameter
+The parameters Range of data type listrange designate the range of cells.
+max treats the boolean value true like 1.0 and the boolean value false like 0.0.
+Return Value
+The return value has the data type of the designated list range if this list range has a uniform data type.
+If the data type is not uniform, the return values are converted to the data type real and the method
+returns the data type real.
+Example
+print MyDataStack.max({*})
+print MyDataQueue.max({1}..{*})
+print MyDataList.max({*})
+print MyDataTable.max({3,3}..{3,*}) // maximum number of entries
+SimTalk
+min [SimTalk] - lists
+max [SimTalk] - lists
+11-4022 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+CursorX [SimTalk]
+CursorY [SimTalk]
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+max [SimTalk] - lists
+Plant Simulation Help 11-4023
+Unpublished work. © 2026 Siemens
+
+meanValue [SimTalk]
+Returns the arithmetic mean of all values in a range of cells of the list or table designated by <Path>.
+Remarks
+The method only applies to entries of data types real or integer. Plant Simulation ignores entries of other
+data types in the ranges to be searched or considers their value to be 0.
+The method applies to the objectsDataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.meanValue([Range:listrange, ...]) -> real/integer
+Parameter
+The parameters Range of data type listrange designate the range of cells.
+meanValue treats the boolean value true like 1.0 and the boolean value false like 0.0.
+Return Value
+The return value has the data type real or integer.
+Example
+print MyDataStack.meanValue({*})
+print MyDataQueue.meanValue({1}..{*})
+print MyDataList.meanValue({*})
+print MyDataTable.meanValue({3,3}..{3,*})
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+meanValue [SimTalk]
+11-4024 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+min [SimTalk] - lists
+Returns the smallest value in a range of cells of the list or table designated by <Path>.
+Remarks
+When the method finds the smallest value, it sets the cursor to the cell in which it found the value.
+The method only applies to entries of data types real or integer. Plant Simulation ignores entries of other
+data types in the ranges to be searched or considers their value to be 0.
+The method applies to the objectsDataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.min([Range:listrange, ...]) -> real
+Parameter
+The parameters Range of data type listrange designate the range of cells.
+min treats the boolean value true like 1.0 and the boolean value false like 0.0.
+Return Value
+The return value has the data type of the designated list range if this list range has a uniform data type.
+If the data type is not uniform, the return values are converted to the data type real and the method
+returns the data type real.
+Example
+print MyDataStack.min({*})
+print MyDataQueue.min({1}..{*})
+print MyDataList.min({3}..{*})
+print MyDataTable.min({3,3}..{3,*}) // minimum number of entries
+SimTalk
+max [SimTalk] - lists
+min [SimTalk] - lists
+Plant Simulation Help 11-4025
+Unpublished work. © 2026 Siemens
+
+CursorX [SimTalk]
+CursorY [SimTalk]
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+min [SimTalk] - lists
+11-4026 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+standardDeviation [SimTalk]
+Returns the standard deviation from the mean of all values in a range of cells of the list or table designated
+by <Path>.
+Remarks
+The method only applies to entries of data types real or integer. Plant Simulation ignores entries of other
+data types in the ranges to be searched or considers their value to be 0.
+The method applies to the objectsDataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.standardDeviation([Range:listrange, ...]) -> real/integer
+Parameter
+The parameters Range of data type listrange designate the range of cells.
+standardDeviation treats the boolean value true like 1.0 and the boolean value false like 0.0.
+Return Value
+The return value has the data type real or integer.
+Example
+print MyDataStack.standardDeviation({*})
+print MyDataQueue.standardDeviation({1}..{*})
+print MyDataList.standardDeviation({*})
+print MyDataTable.standardDeviation({3,3}..{3,*})
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+standardDeviation [SimTalk]
+Plant Simulation Help 11-4027
+Unpublished work. © 2026 Siemens
+
+sum [SimTalk] - lists
+Returns the sum of all values in a range of cells of the list or table designated by <Path>.
+Remarks
+The method only applies to entries of data types real or integer. Plant Simulation ignores entries of other
+data types in the ranges to be searched or considers their value to be 0.
+The method applies to the objectsDataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.sum([Range:listrange, ...]) -> real/integer
+Parameter
+The optional parameter Range of data type listrange designate the range of cells.
+If you do not specify the parameter, the sum is calculated over all cells.
+sum treats the boolean value true like 1.0 and the boolean value false like 0.0.
+Return Value
+The return value has the data type of the designated list range if this list range has a uniform data type.
+If the data type is not uniform, the return values are converted to the data type real and the method
+returns the data type real.
+Example
+print MyDataStack.sum({*})
+print MyDataQueue.sum({1}..{*})
+print MyDataList.sum({*})
+print MyDataTable.sum({3,3}..{3,*})
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+sum [SimTalk] - lists
+11-4028 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+Methods for Importing and Exporting Data in Text Format
+_Methods for Importing and Exporting Data in Text Format
+Lists and tables provide the methods listed in the table of contents to the left for working with them in text
+format, instead of in table format (.pslist).
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Importing and Exporting Data in Text Format
+Plant Simulation Help 11-4029
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,238 @@
+t.create
+obj.imp.getAlternativeServices(t)
+service := t[1,1][1,1]
+part := @ --if part.id = 4 then debug 
+end
+tab.create; allWorker := WorkerPartAssignment
+if part /= void 
+    j := allWorker.getRowNo(part)
+    if j = -1 
+        j := 1
+        while j<= allWorker.yDim AND allWorker[0,j]/=void 
+            j := j + 1
+        end
+        if j<= allWorker.yDim 
+            allWorker[0,j] := part
+            expObj := allWorker[1,j]
+            tab.writeRow(1,1, expObj, service, 1 )
+            broker.engage( obj, type, tab )
+        end
+    else
+        expObj := allWorker[1,j]
+        tab.writeRow(1,1, expObj, service, 1 )
+        broker.engage( obj, type, tab )
+    end
+end
+SimTalk
+engage [SimTalk]
+See also
+Importer Request Control [Broker]
+AGVPool
+AGVPool
+Use the object AGVPool for creating automated guided vehicles (AGVs). You can then model AGV systems
+in your installation in which the AGVs are not bound to a permanently installed route network.
+Image
+AGVPool
+11-3440 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+You might model the supervisor of an plant or the foreman of a shop with it. The AGVPool creates
+automated guided vehicles. You can then model AGV systems in your installation in which the AGVs are
+not bound to a permanently installed route network.
+This is especially helpful if you need to produce smaller lot sizes with a high variant mix on a single
+production line. Instead of fixed production lines you can then use AGVs to transport the loaded products
+through a modular structured installation. The AGVs can, depending on the situation, create and change
+virtual tracks on which they drive.
+The AGVPool looks like this:
+The AGVPool does initially not show any AGV. To show the AGVs, select the check box Show Content on
+the tab Graphics of the AGVPool.
+Then, click 
+  Start Simulation.
+AGVPool
+Plant Simulation Help 11-3441
+Unpublished work. © 2026 Siemens
+
+Use the object Marker 
+  to set way points along which the AGV drives from the AGVPool to its
+destination.
+To show a tooltip with information about the AGVPool, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the AGVPool, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object AGVPool to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Resources > AGVPool on the Home ribbon tab.
+See also
+Model an Automated Guided Vehicle System (AGVS)
+Dialog Box of the AGVPool
+Dialog Box of the AGVPool
+Double-click the icon of the AGVPool to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Dialog Box of the AGVPool
+11-3442 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-3443
+Unpublished work. © 2026 Siemens
+
+AGV [text box]
+Select the vehicle that you want to use for the Automated Guided Vehicle (AGV) of the Automated Guided
+Vehicle System (AGVS) in your model.
+Remarks
+Note
+By default, the Transporter in the folder MUs in the Class Library is the AGV. For this reason the
+methods, attributes, and read-only attributes of the Transporter apply to the AGV as well.
+Plant Simulation creates the specified Amount of AGVs during the init phase of the simulation run.
+For the AGV that drives freely within the area, you can define these settings for the Distance Control:
+Length Zone 1, ΔWidth Zone 1, Length Zone 2, and ΔWidth Zone 2
+SimTalk
+AGV [SimTalk]
+AGVPool [SimTalk] of the Transporter
+StoppingCounter [SimTalk] of the Transporter
+See also
+setRoute [SimTalk] - Transporter
+setRouteSegments [SimTalk]
+AGV [text box]
+11-3444 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Amount [text box] - AGVPool
+Type in the number of vehicles that you want to use for the Automated Guided Vehicle System (AGVS).
+Remarks
+Plant Simulation creates the specified amount of AGVs during the init phase of the simulation run.
+SimTalk
+Amount [SimTalk] - AGVPool
+Amount [text box] - AGVPool
+Plant Simulation Help 11-3445
+Unpublished work. © 2026 Siemens
+
+Shift Calendar [AGVPool]
+Select the ShiftCalendar. It contains the data of the shifts in your installation and controls during which
+shifts the AGVPool works in the plant.
+Remarks
+Click the ellipsis button and select the ShiftCalendar in the dialog Select Object.
+Or select the ShiftCalendar in a Frame, drag it to the text box and drop it there. Plant Simulation then
+automatically enters the objects into the list of the objects on the tab Resources of the ShiftCalendar.
+You can edit the contents of the text boxes with the commands on the Context Menu of Embedded Lists.
+SimTalk
+ShiftCalendarObject [SimTalk] - material flow objects
+See also
+ShiftCalendar [object]
+Select Object [for controls]
+Shift Calendar [AGVPool]
+11-3446 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [AGVPool]
+The tab Statistics shows the most important statistics values.
+Remarks
+Item English Description Read-only attribute Item German
+Paused Shows the portion of the statistics collection
+period during which the AGVPool was paused.
+StatPausingCount
+[SimTalk]
+Pausiert
+Unplanned Shows the portion of the statistics collection
+period during which the AGVPool was
+unplanned, i.e., is not scheduled to work to
+the statistics collection period.
+StatUnplannedPortio
+n [SimTalk]
+Ungeplant
+Average
+Traveled
+Distance
+Shows the average distance in meters which
+the AGV traveled from the AGVPool to its
+destination.
+StatAverageTraveled
+Distance [SimTalk] -
+AGVPool
+Durchschnittlich
+zurückgelegter
+Weg
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object, or click Show Statistics Report on the Home ribbon tab.
+You can also click the object in the Frame with the right mouse button and select Show Statistics Report
+on the context menu.
+Tab Statistics [AGVPool]
+Plant Simulation Help 11-3447
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [AGVPool]
+11-3448 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-3449
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+Assigned AGVs [AGVPool]
+Associated Shift Calendar
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+Navigate Menu
+11-3450 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Assigned AGVs [AGVPool]
+Opens a list showing all the AGVs that the AGVPool manages.
+SimTalk
+getAssignedAGVsTable [SimTalk]
+Assigned AGVs [AGVPool]
+Plant Simulation Help 11-3451
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls > Init control
+Edit Observers
+Tools Menu
+11-3452 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the AGVPool
+_Methods of the AGVPool
+The AGVPool provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-3453
+Unpublished work. © 2026 Siemens

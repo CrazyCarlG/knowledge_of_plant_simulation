@@ -1,0 +1,110 @@
+CurrentMaterial [SimTalk] - Portioner
+Returns the Current Material that flows into the Portioner designated by <Path>.
+Remarks
+The name is not case-sensitive, just like the names of attributes and methods of the objects are not
+case-sensitive.
+To save memory and improve access speed, all places which are using such a case-insensitive string are
+pointing to the same string in main memory. The visible and unexpected result is that the first occurrence
+of the string defines how the string is written in terms of upper- and lower-casing.
+In SimTalk you can compare strings in an case-insensitive manner with the ~= operator, compare
+Relational Operators.
+Type
+Read-only attribute
+Syntax
+<Path>.CurrentMaterial → string
+Return Value
+The return value has the data type string.
+Example
+print MyPortioner.CurrentMaterial
+See also
+Current Material [Portioner]
+Relational Operators
+Attributes of the Portioner
+_Attributes of the Portioner
+The Portioner provides:
+CurrentMaterial [SimTalk] - Portioner
+Plant Simulation Help 11-2905
+Unpublished work. © 2026 Siemens
+
+• The attributes listed in the table of contents to the left.
+• The _Attributes of the Fluid Objects.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyPortioner.AmountPerMU := 10
+• To get the value of an attribute, you might, for example, type:
+print MyPortioner.AmountPerMU
+posit := MyStation.Cont.XPos
+_Attributes of the Portioner
+11-2906 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+AmountPerMU [SimTalk] - Portioner
+Sets the Amount of the material in liters which the Portioner designated by <Path> is to transmute into
+individual MUs.
+Type
+Attribute
+Syntax
+<Path>.AmountPerMU:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyPortioner.AmountPerMU := 10
+See also
+Amount per MU [Portioner]
+AmountPerMU [SimTalk] - Portioner
+Plant Simulation Help 11-2907
+Unpublished work. © 2026 Siemens
+
+MUPath [SimTalk]
+Sets the type of MU which the Portioner designated by <Path> is to create.
+Remarks
+You can either use one of the predefined MUs or you can create your own MU for just this purpose.
+Type
+Attribute
+Syntax
+<Path>.MUPath:path
+Assignment Value
+You can assign a value of data type path.
+Example
+MyPortioner.MUPath := .MUs.Container
+See also
+MU [Portioner]
+MUPath [SimTalk]
+11-2908 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+PredecessorNumber [SimTalk]
+Sets the number of the predecessor object which delivers the material to the Portioner designated by
+<Path>.
+Type
+Attribute
+Syntax
+<Path>.PredecessorNumber:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyPortioner.PredecessorNumber := 2
+See also
+Fluid from Predecessor [text box]
+DePortioner
+DePortioner
+Use the object DePortioner to empty incoming parts of bulk goods or fluids, create a fluid out of it, and
+feed the resulting fluids into a Pipe.
+Image
+Description
+We provide three ways of defining the fluid that is to be created:
+• By a fixed material and a fixed amount for every MU. For this setting you can enter the Material and the
+Amount per MU.
+PredecessorNumber [SimTalk]
+Plant Simulation Help 11-2909
+Unpublished work. © 2026 Siemens

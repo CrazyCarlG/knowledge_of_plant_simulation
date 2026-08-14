@@ -1,0 +1,216 @@
+Origin [SimTalk] - Tank
+Returns the origin of the sensor of the Tank designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.Sensor.Origin → integer
+Return Value
+The return value has the data type integer.
+If the sensor does not have an origin, it returns VOID.
+Example
+print MyTank.Sensors.id1.Origin
+See also
+Sensors [Tank]
+Attributes of the Tank
+Attributes of the Tank
+The Tank provides:
+• The _General Attributes of the Tank.
+• The _Attributes of the Sensors of the Tank.
+• The _Attributes of the Fluid Objects.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Origin [SimTalk] - Tank
+11-2804 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyTank.OutflowRate := 1
+• To get the value of an attribute, you might, for example, type:
+print MyTank.OutflowRate
+posit := MyStation.Cont.XPos
+General Attributes of the Tank
+_General Attributes of the Tank
+The Tank provides the general attributes listed in the table of contents to the left.
+General Attributes of the Tank
+Plant Simulation Help 11-2805
+Unpublished work. © 2026 Siemens
+
+OutflowRate [SimTalk] - Tank
+Sets the Outflow Rate of the material, which the Tank designated by <Path> stores.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+The material then flows off through objects of type Pipe 
+  to the next object in the flow of materials.
+Note
+The current Outflow Rate depends on the number of attached Pipes. Let's say you attached two Pipes,
+then the specified Outflow Rate flows through each one of these Pipes in case the Outflow Rate of the
+connected Pipes permits this.
+If you just want to let the specified amount flow out of the object, attach a single Pipe and split that up
+into several Pipes later on.
+Note
+Plant Simulation outputs error messages if the Outflow Rate of an empty Tank is greater than the
+Inflow Rate or when the Inflow Rate of a full Tank is greater than the Outflow Rate. Do not ignore
+these error messages but create Sensors and program Methods which handle these situations. The
+Sensors have to prevent the Tank from becoming full or empty respectively by opening or closing the
+connected Pipes.
+Type
+Attribute
+Syntax
+<Path>.OutflowRate:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyTank.OutflowRate := 1
+OutflowRate [SimTalk] - Tank
+11-2806 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Outflow Rate [Tank]
+OutflowRate [SimTalk] - Tank
+Plant Simulation Help 11-2807
+Unpublished work. © 2026 Siemens
+
+Volume [SimTalk] - Tank
+Sets the Volume, i.e., the amount of the ingredient, which the Tank designated by <Path> can hold.
+Type
+Attribute
+Syntax
+<Path>.Volume:real
+Assignment Value
+You can assign a value of data type real.
+Example
+MyTank.Volume := 10
+See also
+Volume [Tank]
+Attributes of the Sensors of the Tank
+_Attributes of the Sensors of the Tank
+The Tank provides he attributes listed in the table of contents to the left for sensors.
+See also
+_Methods of the Sensors of the Tank
+Volume [SimTalk] - Tank
+11-2808 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Control [SimTalk] - senor, Tank
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plants Simulation runs the Control when the sensor of the Tank designated by <Path> is triggered. A
+value, which you assign, has to be the reference to a Method (object) or the name of the Method.
+As soon as the sensor calls this Method, it passes the Sensor-ID as optional parameter. If the Method
+expects an integer parameter, the sensor passes the Sensor-ID to the Method. If you do not enter an
+integer parameter, the Method will be called without a parameter.
+The optional parameter Exceeded of data type boolean shows the user if the sensor position is Exceeded
+or Underrun.
+The standard sensor control as a user-defined attribute looks like this:
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.Control:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyTank.Sensors.ID2.Control := &mySensorCtrl
+MyTank.Sensors.ID2.Control := "mySensorCtrl"
+See also
+Control [Tank]
+Sensor-ID
+Control [SimTalk] - senor, Tank
+Plant Simulation Help 11-2809
+Unpublished work. © 2026 Siemens
+
+Exceeded [SimTalk]
+Sets if the sensor is to be triggered if the amount of material in the Tank designated by <Path> has
+Exceeded, i.e., is located above the sensor position (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.Exceeded:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyTank.Sensors.id1.Exceeded := true
+if Exceeded = true then
+   ?.EntranceLocked := true
+end
+See also
+Exceeded [check box]
+Exceeded [SimTalk]
+11-2810 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Position [SimTalk] - Tank
+Sets the Position of the sensor on the Tank designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.Position:real
+Assignment Value
+You can assign a value of data type real.
+The values you can specify depend on the PositionType:
+• For relative you can specify a value between 0 and 1, i.e., between 0 percent and 100 percent, .
+• For abolute you can specify a value between 0 and the Volume you specified.
+Example
+MyTank.Sensors.id2.Position := 0.1
+SimTalk
+PositionType [SimTalk]
+Volume [SimTalk] - Tank
+See also
+Position [Tank]
+Volume [Tank]
+Position [SimTalk] - Tank
+Plant Simulation Help 11-2811
+Unpublished work. © 2026 Siemens
+
+PositionType [SimTalk]
+Sets the Position Type of the sensor on the Tank designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.PositionType:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "absolute" or "relative".
+Examples
+MyTank.Sensors.ID2.PositionType:= "absolute"
+MyTank.Sensors.ID1.PositionType:= "relative"
+See also
+Position [Tank]
+PositionType [SimTalk]
+11-2812 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Underrun [SimTalk]
+Sets if the sensor is to be triggered if the amount of material in the Tank designated by <Path> has
+Underrun, i.e., is located below the sensor position (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.Underrun:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyTank.Sensors.id1.Underrun := true 
+See also
+Underrun [check box]
+Mixer
+Mixer
+Use the object Mixer to transmute the ingredients of the process into an intermediate or a finished product
+by mixing them.
+Image
+Description
+The ingredients can flow into the Mixer simultaneously from several preceding FluidSources 
+  or Tanks
+.
+Underrun [SimTalk]
+Plant Simulation Help 11-2813
+Unpublished work. © 2026 Siemens

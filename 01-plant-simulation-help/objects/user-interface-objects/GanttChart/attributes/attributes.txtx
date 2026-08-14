@@ -1,0 +1,237 @@
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyGanttChart.UUID
+Attributes of the GanttChart
+_Attributes of the GanttChart
+The GanttChart provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyGanttChart.IsShown := true
+Attributes of the GanttChart
+11-4848 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To get the value of an attribute, you might, for example, type:
+print MyGanttChart.IsShown
+posit := Station.Cont.XPos
+_Attributes of the GanttChart
+Plant Simulation Help 11-4849
+Unpublished work. © 2026 Siemens
+
+CollectData [SimTalk] - GanttChart
+Sets if the GanttChart designated by <Path> collects data (true) or does not collect data (false).
+Remarks
+You cannot use setData and automatically collect the data simultaneously. When you assign true to
+CollectData, do not call the method setData.
+Type
+Attribute
+Syntax
+<Path>.CollectData:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.CollectData := true
+SimTalk
+setData [SimTalk]
+See also
+Collect Data [check box] - GanttChart
+CollectData [SimTalk] - GanttChart
+11-4850 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EnableVisualTracking [SimTalk]
+Activates (true) or deactivates (false) visual tracking of parts or resources in the GanttChart designated
+by <Path>.
+Type
+Attribute
+Syntax
+<Path>.EnableVisualTracking:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.EnableVisualTracking := true
+See also
+Show Chart [button] - GanttChart
+EnableVisualTracking [SimTalk]
+Plant Simulation Help 11-4851
+Unpublished work. © 2026 Siemens
+
+IsShown [SimTalk] - GanttChart
+Activates (true) or deactivates (false) the display of the GanttChart designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.IsShown:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.IsShown := false
+See also
+Show Chart [button] - GanttChart
+IsShown [SimTalk] - GanttChart
+11-4852 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+NumVisibleBars [SimTalk]
+Sets the maximum number of visible bars in the GanttChart designated by <Path>.
+Remarks
+The default setting is 100000. If this number is exceeded, older bars will not be shown any more.
+You can reduce this number if performance is impaired.
+Type
+Attribute
+Syntax
+<Path>.NumVisibleBars:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyGanttChart.NumVisibleBars := 8000
+See also
+Show Chart [button] - GanttChart
+NumVisibleBars [SimTalk]
+Plant Simulation Help 11-4853
+Unpublished work. © 2026 Siemens
+
+Parts [SimTalk]
+Sets the parts, i.e., the MUs that the GanttChart designated by <Path> visualizes.
+Remarks
+You can watch classes of parts or you can watch individual instances of parts.
+Type
+Attribute
+Syntax
+<Path>.Parts:array
+Assignment Value
+You can assign a value of data type array.
+Example
+MyGanttChart.Parts := [*.MUs.Entity]   // all parts of this class
+MyGanttChart.Parts := [*.MUs.Entity:1] // the part with the number 1
+See also
+Tab Parts [GanttChart]
+Parts [SimTalk]
+11-4854 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Resources [SimTalk] - GanttChart
+Sets the resources, i.e., the material flow objects that the GanttChart designated by <Path> visualizes.
+Remarks
+You can watch classes of resources or you can watch individual instances of resources.
+Type
+Attribute
+Syntax
+<Path>.Resources:array
+Assignment Value
+You can assign a value of data type array.
+Example
+MyGanttChart.Resources := [Source, Station, Station1, Drain]
+See also
+Tab Resources [GanttChart]
+Resources [SimTalk] - GanttChart
+Plant Simulation Help 11-4855
+Unpublished work. © 2026 Siemens
+
+ShowBarText [SimTalk]
+Sets if the GanttChart designated by <Path> shows the part name as text on the Gantt bar (true) or not
+(false).
+Type
+Attribute
+Syntax
+<Path>.ShowBarText:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.ShowBarText := true
+See also
+Show Bar Text [check box]
+ShowBarText [SimTalk]
+11-4856 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ShowPartView [SimTalk]
+Sets if the GanttChart designated by <Path> shows the resources in the Resource View (false) or the
+parts in the Part View (true).
+Type
+Attribute
+Syntax
+<Path>.ShowPartView:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.ShowPartView := true
+See also
+Show Chart [button] - GanttChart
+ShowPartView [SimTalk]
+Plant Simulation Help 11-4857
+Unpublished work. © 2026 Siemens
+
+ShowResourceLabels [SimTalk]
+Sets if the GanttChart designated by <Path> shows the labels of the resources (true) or their names
+(false).
+Type
+Attribute
+Syntax
+<Path>.ShowResourceLabels:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.ShowResourceLabels := true
+See also
+Show Resource Labels [check box]
+ShowResourceLabels [SimTalk]
+11-4858 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ShowResourceStates [SimTalk]
+Sets if the GanttChart designated by <Path> shows the states of the resources as color of the bars (true)
+or not (false).
+Type
+Attribute
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGanttChart.setLanes(MyLanesTable)
+MyGanttChart.ShowResourceStates := true
+See also
+Show Resource States [check box]
+States of the Material Flow Objects
+ShowResourceStates [SimTalk]
+Plant Simulation Help 11-4859
+Unpublished work. © 2026 Siemens
+
+TimeScale [SimTalk]
+Sets the time scale of the GanttChart designated by <Path>. Plant Simulation applies this value when
+opening the GanttChart.
+Remarks
+The unit of the time scale is logical pixels per second. For a time scale of 0.5 Plant Simulation shows a
+Gantt event with a duration of 60 seconds with a bar of a length of 30 logical pixels.
+Type
+Attribute
+Syntax
+<Path>.TimeScale:integer
+Assignment Value
+You can assign a value of data type real.
+Specify 0 to use the default time scaling.
+Example
+MyGanttChart.TimeScale := 2.5
+See also
+Show Chart [button] - GanttChart
+SankeyDiagram
+SankeyDiagram [object]
+Use the object SankeyDiagram for visualizing the Sankey flows of parts, the Sankey flows of Workers, who
+walk freely within the area or walk on FootPaths, and the Sankey flows of AGVs driving freely within the
+area of the model.
+Image
+TimeScale [SimTalk]
+11-4860 Plant Simulation Help
+Unpublished work. © 2026 Siemens

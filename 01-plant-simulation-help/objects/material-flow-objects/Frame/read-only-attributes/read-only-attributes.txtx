@@ -1,0 +1,123 @@
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print .Models.Model.Capacity
+_Read-Only Attributes of the Frame
+Plant Simulation Help 11-1525
+Unpublished work. © 2026 Siemens
+
+Capacity [SimTalk] - Frame
+Returns the capacity of all static material flow objects located in the Frame designated by <Path>.
+Remarks
+Plant Simulation does not include the capacities of MUs. When you place additional models into the
+selected model, Plant Simulation adds their capacities. If you insert at least one object with unlimited
+capacity, such as a Conveyor with a capacity of -1 in the Frame, Plant Simulation returns -1.
+Type
+Read-only attribute
+Syntax
+<Path>.Capacity → integer
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type integer.
+Example
+print .Models.MyPlant.Capacity
+Capacity [SimTalk] - Frame
+11-1526 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EventController [SimTalk] - Frame
+Returns the EventController that is located in the root Frame.
+Type
+Read-only attribute
+Syntax
+EventController → object
+Return Value
+The return value has the data type object.
+Example
+print EventController // returns for example .Models.Model.EventController
+See also
+EventController [object]
+EventController [SimTalk] - Frame
+Plant Simulation Help 11-1527
+Unpublished work. © 2026 Siemens
+
+NumberOfLimitedObjects [SimTalk]
+Counts the number of inserted objects per Frame containing an EventController.
+Remarks
+Plant Simulation does not count the following objects: Lists and Tables, Methods, Variables, Comments,
+MUs, Connectors, Interfaces, EventControllers, the Toolbar, Folders, and Class objects.
+Note
+NumberOfLimitedObjects applies to the Standard license, the Educational license, the Foundation
+license, and to the Student license.
+License name number of allowed objects
+Standard license 4000
+Educational license 1000
+Foundation license 500
+Student license 80
+For the Student license Plant Simulation shows the number of the objects inserted into this Frame next to
+the name of the Frame and the maximum number of allowed objects for the Student license in the Class
+Library.
+Note
+Plant Simulation only shows the value for Frames into which you inserted an EventController.
+For a model that you created with a Student license it might look like this:
+NumberOfLimitedObjects [SimTalk]
+11-1528 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Type
+Read-only attribute
+Syntax
+NumberOfLimitedObjects → integer
+Return Value
+The return value has the data type integer.
+Example
+print NumberOfLimitedObjects // returns 10 for the Frame named 'Model'
+SimTalk
+numOfLimitedObjects [SimTalk]
+See also
+Start Plant Simulation with Different Kinds of Licenses
+NumberOfLimitedObjects [SimTalk]
+Plant Simulation Help 11-1529
+Unpublished work. © 2026 Siemens
+
+NumNodes [SimTalk] - Frame
+Returns the number of objects in the Frame designated by <Path>.
+Remarks
+Each additional Frame you insert into the selected Frame counts as a single object. Plant Simulation does
+not count the objects contained within the Frames.
+Connectors also count as objects.
+Type
+Read-only attribute
+Syntax
+<Path>.NumNodes → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Models.MyPlant.NumNodes
+See also
+node [SimTalk] - Frame
+Attributes of the Frame
+_Attributes of the Frame
+The Frame provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+NumNodes [SimTalk] - Frame
+11-1530 Plant Simulation Help
+Unpublished work. © 2026 Siemens

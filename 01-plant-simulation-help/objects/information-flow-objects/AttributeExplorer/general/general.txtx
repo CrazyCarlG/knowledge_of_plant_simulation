@@ -1,0 +1,502 @@
+Image
+Description
+Instead of opening the dialog of each and every material flow object in your model and typing the
+attribute values into the text boxes, you can define which attributes of which object the AttributeExplorer
+gets and shows in a list window.
+To do so, click Show Explorer. Then type in the different values, for the capacities, the times, etc., which
+Plant Simulation writes back to the objects and uses in the model. You can Export this settings table as
+a tab-delimited text file and Import this file into the AttributeExplorer of another simulation model, thus
+using identical settings in several of your simulation models.
+You can also show the attribute table of an AttributeExplorer in an HtmlReport, compare Display an
+AttributeExplorer.
+To show a tooltip with information about the AttributeExplorer, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the AttributeExplorer, click Show
+Manipulators 
+  on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object AttributeExplorer to your simulation model, click 
+  Manage Class Library > Basic
+Objects > InformationFlow > AttributeExplorer on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+AttributeExplorer [object]
+11-4406 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Set Parameters with the AttributeExplorer
+Dialog Box of the AttributeExplorer
+Dialog Box of the AttributeExplorer
+Double-click the icon of the AttributeExplorer to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the AttributeExplorer
+Plant Simulation Help 11-4407
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Show Explorer
+Dialog Box of the AttributeExplorer
+11-4408 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Explorer
+To show the list window in which the AttributeExplorer displays the objects and the attributes you defined
+on the Tab Objects and the Tab Attributes, click this.
+Remarks
+To close the list window in which the AttributeExplorer displays the objects and attributes you defined,
+click the X 
+  in the title bar of the window.
+The results table is sorted according to Path, Name, or Label. The AttributeExplorer first shows the data of
+the objects you specified and then the data that is defined by the query.
+Instead, you can also right-click the AttributeExplorer in the Frame and select Show on the context menu.
+You can manipulate the contents of the list with the commands on the Context Menu of Embedded Lists.
+SimTalk
+IsShown [SimTalk] - AttributeExplorer
+AttributeTable [SimTalk]
+ExplorerTable [SimTalk]
+Show Explorer
+Plant Simulation Help 11-4409
+Unpublished work. © 2026 Siemens
+
+See also
+Tab Objects [AttributeExplorer]
+Tab Attributes [AttributeExplorer]
+Tab Data
+Tab Data
+Select the settings below for the mode of the attributes in the AttributeExplorer on the tab Data.
+Remarks
+Before you can select settings, click the Inheritance 
+  check box so that it looks like this 
+ .
+You can select one of these settings:
+• Watch
+• Edit
+• Read Only
+You can also select to:
+• Show Objects With their Path, their Name, or their Label.
+• Show Attributes With their Name, or their Alias.
+In addition, you can type in a Comment and select to Show a Comment.
+Tab Data
+11-4410 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can manipulate the contents of the list with the commands on the Context Menu of Embedded Lists.
+SimTalk
+AttributeRepresentation [SimTalk]
+Mode [SimTalk] - AttributeExplorer
+ObjectRepresentation [SimTalk]
+Tab Data
+Plant Simulation Help 11-4411
+Unpublished work. © 2026 Siemens
+
+Watch [AttributeExplorer]
+To display the values of the watchable attributes of any of the stations which you typed in on the tab
+Attributes, click Watch.
+Remarks
+Before you can select settings, click the Inheritance 
+  check box so that it looks like this 
+ .
+Plant Simulation displays the background of the cells in different colors to show if the attribute is
+watchable or not.
+Color Description
+blue The attribute is not watchable.
+gray The attribute is watchable.
+red You entered an invalid path to an attribute.
+SimTalk
+Mode [SimTalk] - AttributeExplorer
+See also
+Watchable Values
+Tab Attributes [AttributeExplorer]
+Watch [AttributeExplorer]
+11-4412 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit [AttributeExplorer]
+To allow editing the values of the attributes of any one of the stations you specified on the tab Attributes,
+click Edit.
+Remarks
+Before you can select settings, click the Inheritance 
+  check box so that it looks like this 
+ .
+Plant Simulation writes the values you modified back to the dialogs of the objects, when you click
+Apply/OK.
+SimTalk
+Mode [SimTalk] - AttributeExplorer
+See also
+Tab Attributes [AttributeExplorer]
+Edit [AttributeExplorer]
+Plant Simulation Help 11-4413
+Unpublished work. © 2026 Siemens
+
+Read Only [AttributeExplorer]
+To activate read-only mode for the values of the attributes of the objects which you typed in on the tab
+Objects and the tab Attributes, click Read Only.
+Remarks
+Before you can select settings, click the Inheritance 
+  check box so that it looks like this 
+ .
+In Read Only mode, you can only view, but not edit the values. Plant Simulation updates the displayed
+values when you click Apply.
+SimTalk
+Mode [SimTalk] - AttributeExplorer
+See also
+Tab Objects [AttributeExplorer]
+Tab Attributes [AttributeExplorer]
+Read Only [AttributeExplorer]
+11-4414 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Objects With
+Select how the AttributeExplorer shows the objects which you type in on the tab Objects.
+Remarks
+Before you can change the selection, click the Inheritance 
+  check box so that it looks like this 
+ .
+You can select one of these settings:
+• Entire Path
+• Name only
+• Label only
+SimTalk
+ObjectRepresentation [SimTalk]
+See also
+Tab Objects [AttributeExplorer]
+Show Objects With
+Plant Simulation Help 11-4415
+Unpublished work. © 2026 Siemens
+
+Show Attributes With
+Select how the AttributeExplorer shows the attributes, which you type in on the tab Attributes.
+Remarks
+Before you can change the selection, click the Inheritance 
+  check box so that it looks like this 
+ .
+You can select one of these settings:
+• Alias, which is a description you entered, in addition to the built-in name of the attribute.
+• Name only
+SimTalk
+AttributeRepresentation [SimTalk]
+See also
+Tab Attributes [AttributeExplorer]
+Show Attributes With
+11-4416 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Comment [AttributeExplorer]
+To show any explanations you typed into the text box Comment, select this check box.
+SimTalk
+ShowComment [SimTalk] - AttributeExplorer
+Comment [SimTalk] - AttributeExplorer
+Show Comment [AttributeExplorer]
+Plant Simulation Help 11-4417
+Unpublished work. © 2026 Siemens
+
+Comment [AttributeExplorer]
+Type in an explanation for the objects and values you defined on the tab Objects and on the tab
+Attributes.
+Remarks
+Before you can type in your comment, click the Inheritance 
+  check box so that it looks like this 
+ .
+Select Show Comment to display it above the list field.
+SimTalk
+Comment [SimTalk] - AttributeExplorer
+ShowComment [SimTalk] - AttributeExplorer
+See also
+Tab Objects [AttributeExplorer]
+Tab Attributes [AttributeExplorer]
+Comment [AttributeExplorer]
+11-4418 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Objects [AttributeExplorer]
+View or edit the attributes of an object on the tab Objects.
+Remarks
+Before you type in data, click the Inheritance 
+  check box so that it looks like this 
+ .
+• To view or to edit the attributes of an object, drag that object from the Frame window over the tab
+Objects in the open dialog of the AttributeExplorer and drop it there. Plant Simulation inserts the
+absolute path to and the name of the object into the selected cell of the list on the tab.
+You can also select and then drag-and-drop multiple objects at the same time!
+Plant Simulation adds the object in the order in which you selected them in the Frame.
+• To just enter the name of the object, drag that object from the Frame window over the icon of the
+AttributeExplorer and drop it there.
+Tab Objects [AttributeExplorer]
+Plant Simulation Help 11-4419
+Unpublished work. © 2026 Siemens
+
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+To manipulate the contents of the list, use the commands on the Context Menu of Embedded Lists.
+SimTalk
+ObjectTable [SimTalk]
+See also
+Context Menu of Embedded Lists
+Tab Objects [AttributeExplorer]
+11-4420 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Attributes [AttributeExplorer]
+To type the names of the attributes whose values you want to edit or view, into the cells in the column
+Name, click Show Attributes.
+Remarks
+Before you can type in data, click the Inheritance check box so that it looks like this 
+ .
+In the dialog Attribute Viewer:
+• Click 
+  and select the Object, whose attributes you want to show, in the dialog Select Object.
+• Select from the drop-down list if you want to view the built-in attributes of this object, or its user-
+defined attributes which you defined.
+Depending on what you selected above, the AttributeExplorer displays the built-in attributes or the
+user-defined attributes here.
+• Select one, or several contiguous attributes (Shift+click), and click this 
+  to add them to the
+attributes to be shown.
+The AttributeExplorer adds the attributes, which you selected in the left-hand list box, to the attributes,
+which it is going to show.
+• To add a sub-attribute of an attribute, type in the attribute, and the sub-attribute into the cell. You
+might, for example, type in imp.priority.
+Click OK to add these attributes to the list that the AttributeExplorer displays on the tab Attributes.
+Tab Attributes [AttributeExplorer]
+Plant Simulation Help 11-4421
+Unpublished work. © 2026 Siemens
+
+If the predefined Name of an attribute is not meaningful enough for your purposes, type in a descriptive
+term for that attribute that suits your modeling situation into the corresponding cell in the column Alias.
+Note
+Importing a file only works correctly if the file contains the Name of the attribute. It does not work
+correctly if the file only contains the Alias of the attribute.
+If you want an attribute to be read only, click into the cell Read Only. Then, you can just view, but not edit
+that value in the list that the button Show Explorer opens.
+Plant Simulation displays the background of the cells in different colors to show if the attribute is
+watchable or not.
+Color Description
+blue The attribute is not watchable.
+white The attribute is watchable.
+gray You entered a wrong name for a built-in attribute.
+To manipulate the contents of the list, use the commands on the Context Menu of Embedded Lists.
+Tab Attributes [AttributeExplorer]
+11-4422 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+ObjectTable [SimTalk]
+AttributeTable [SimTalk]
+See also
+Context Menu of Embedded Lists
+Tab Query
+Tab Query
+Define a query that finds objects according to the criteria you type into the cells of the list on the tab
+Query.
+Remarks
+Before you can type in data, click the Inheritance check box so that it looks like this 
+ .
+Select the number of opening Parentheses, type in an Attribute, select a Condition, a Value, select the
+number of closing Parentheses, select an Operator, and type in a Comment. Select the Frame that the
+AttributeExplorer queries.
+Select the check box Include Subframes to also query any Frames which located within the selected
+Frame.
+Select Include MUs to also include the parts (MUs) in your model in your query.
+Tab Query
+Plant Simulation Help 11-4423
+Unpublished work. © 2026 Siemens
+
+Spelled out in code our query reads like this:
+Name Expr Station.* and ((XPos > 100 and YPos = 200) or ExitStrategy = 
+Cyclic)
+To manipulate the contents of the list, use the commands on the Context Menu of Embedded Lists.
+SimTalk
+QueryTable [SimTalk]
+See also
+Context Menu of Embedded Lists
+Tab Query
+11-4424 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Parentheses [opening]
+Select the number of opening Parentheses of the query.
+Parentheses [opening]
+Plant Simulation Help 11-4425
+Unpublished work. © 2026 Siemens
+
+Attribute [AttributeExplorer]
+Type in the name of the Attribute you want to query.
+Remarks
+You can type in any of the attributes of the object which the window Show Attributes and Methods
+displays.
+Attribute [AttributeExplorer]
+11-4426 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Condition [AttributeExplorer]
+Click in the cell once with the left mouse button and select a Condition from the drop-down list.
+Remarks
+You can select one of these settings:
+• < (less than)
+• <= (less than or equal to)
+• > (greater than)
+• >= (greater than or equal to)
+• = (equal to), compares attributes of data type real, length, weight, speed, and time for the exact value
+• ~= (equal to, case-insensitive) compares if strings are equal not considering lower and upper-casing, or
+compares if the values of attributes are about equal
+• /= (not equal to)
+• Expr, which is a regular expression, compare regex_search. You might, for example, type in ^Inf,
+which finds any word beginning with Inf.
+• Exists, checks if the object has the designated attribute or not.
+Then, type the value into the corresponding cell in the column Value.
+Condition [AttributeExplorer]
+Plant Simulation Help 11-4427
+Unpublished work. © 2026 Siemens
+
+Value [AttributeExplorer]
+Type in the Value of the attribute which the AttributeExplorer is to find.
+Value [AttributeExplorer]
+11-4428 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Parentheses [closing]
+Select the number of closing Parentheses of the query.
+Parentheses [closing]
+Plant Simulation Help 11-4429
+Unpublished work. © 2026 Siemens
+
+Operator [AttributeExplorer]
+Click in the cell once with the left mouse button and select a boolean Operator from the drop-down list.
+Remarks
+This Operator connects the boolean values of the active row with the next row. The boolean values result
+from evaluating the logical expression that you defined in a row of the query table.
+You can select one of these settings:
+• and
+• or
+Operator [AttributeExplorer]
+11-4430 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Comment [query]
+Type in any Comment explaining what you intended with this query.
+Comment [query]
+Plant Simulation Help 11-4431
+Unpublished work. © 2026 Siemens
+
+Frame [find attribute in]
+Click the ellipsis button and select the Frame in the dialog Select Object, in which you want to start
+finding the attributes of the objects which you defined on the tab Objects.
+Remarks
+Select Include Subframes 
+  to also include any Frames located within the Frame you
+selected.
+SimTalk
+StartNode [SimTalk]
+See also
+Select Object
+Tab Objects [AttributeExplorer]
+Frame [find attribute in]
+11-4432 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Include Subframes [AttributeExplorer]
+To also include the Frames which are inserted in the Frame, which you selected under Frame in the text
+box above, into your query, select this check box.
+SimTalk
+IncludeSubframes [SimTalk]
+See also
+Frame [find attribute in]
+Include Subframes [AttributeExplorer]
+Plant Simulation Help 11-4433
+Unpublished work. © 2026 Siemens
+
+Include MUs [AttributeExplorer]
+To also include the MUs located within the Frame, which you selected under Frame in the text box above,
+into your query, select this check box.
+SimTalk
+IncludeMUs [SimTalk]
+See also
+Frame [find attribute in]
+Include MUs [AttributeExplorer]
+11-4434 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-4435
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-4436 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+Tools Menu
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls
+Edit Observers
+Export
+Import
+View Menu
+Plant Simulation Help 11-4437
+Unpublished work. © 2026 Siemens
+
+Export [AttributeExplorer]
+To export the contents of the tab Objects and of the tab Attributes to a tab-delimited text file, select this
+command.
+Remarks
+You can then import this file into another list, thus using identical settings in several of your simulation
+models.
+See also
+Tab Objects [AttributeExplorer]
+Tab Attributes [AttributeExplorer]
+Export [AttributeExplorer]
+11-4438 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Import [AttributeExplorer]
+To import a tab-delimited text file containing the data of the tab Objects and of the tab Attributes, select
+this command.
+Remarks
+You can thus use identical settings in several of your simulation models.
+See also
+Tab Objects [AttributeExplorer]
+Tab Attributes [AttributeExplorer]
+Import [AttributeExplorer]
+Plant Simulation Help 11-4439
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the AttributeExplorer
+Methods of the AttributeExplorer
+The AttributeExplorer provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+11-4440 Plant Simulation Help
+Unpublished work. © 2026 Siemens

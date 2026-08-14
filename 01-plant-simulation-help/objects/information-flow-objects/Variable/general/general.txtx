@@ -1,0 +1,527 @@
+Example
+PythonModule.PythonCode = "print(42)" -- enter Python code into the 
+PythonModule
+Variable
+Variable [object]
+Use the object Variable for storing data over an extended period of time.
+Image
+Description
+The object Variable is a global variable that other objects and methods in Plant Simulation can access
+during a simulation run. A variable can represent an unknown item which stores a quantity. Variables can
+change their content. Variables are also known as placeholders or unknowns. The opposite of a Variable
+is a constant, whose value is known and does not change. You might, for example, use a Variable to store
+data over an extended period of time during your simulation run, to increment or decrement values, to
+assign values, etc.
+A Variable of data type list, queue, stack, or table shows a type graphic to the left of its name when you
+insert it 
+ .
+• Double-click the Name of the Variable to open its dialog.
+Instead, you can also right-click the Variable and select Open on the context menu.
+• Double-click the type graphic of the Variable to open the window of the list object.
+Variable
+11-3762 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Instead, you can also right-click the Variable and select Open Dialog on the context menu.
+In addition, Plant Simulation provides local variables. You have to declare a local variable within the
+source code before you can use it. A local variable is only known in the Method in which you declare it
+and will be deleted at the end of the method call.
+You can show the contents of a Variable in an HtmlReport, compare Display a Variable.
+To show a tooltip with information about the Variable, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Variable, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Variable to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > Variable on the Home ribbon tab.
+See also
+Display a Value During the Simulation with a Variable
+Video on YouTube
+https://youtu.be/MXDcx2yplxc?si=PZPyKkBoAAWm4ns_&t=865
+Variable [object]
+Plant Simulation Help 11-3763
+Unpublished work. © 2026 Siemens
+
+Dialog Box of the Variable
+Dialog Box of the Variable
+Double-click the icon of the Variable to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Dialog Box of the Variable
+11-3764 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Name [text box] - Variable
+Shows the current name of the Variable, either the built-in name or the name that you specify.
+Remarks
+You can type in a combination of letters, digits, and underscore (_) characters, for example MyVariable,
+MyVariable1, My_Variable_1.
+The name of an object cannot start with a digit, i.e., you cannot specify 1Variable.
+SimTalk
+Name [SimTalk] - Variable
+Tab Value
+Tab Value [Variable]
+The Tab Value provides the settings listed in the table of contents to the left.
+Name [text box] - Variable
+Plant Simulation Help 11-3765
+Unpublished work. © 2026 Siemens
+
+Data Type [Variable]
+Select the data type of the Variable you are creating from the drop-down list.
+Remarks
+You can use any of the supported Data Types.
+• For a Variable of data type object, you have to type the path to and the name of the object into the text
+box Value. The starting point of the relative path is the Frame into which the Variable is inserted. Or you
+can click 
+  and select the object in the dialog Select Object.
+Instead of typing in the path of the object or of selecting the object, you can now also drag the object
+onto the Variable and drop it there. Plant Simulation then inserts a reference to the object.
+• To use the data type time with a random number distribution, select the data type randtime, and type
+in the parameters of the distribution function, as the data type Time only accepts constant values.
+Data Type [Variable]
+11-3766 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Then initialize the randtime value before accessing it, for example with the method rollDice which
+determines the next random number that the Variable uses.
+Note
+For the list data types (table, list, stack, queue) you can use the method unshare.
+• For the Data Type [user-defined attribute] > real, length, weight, time, speed, and acceleration you
+can type in the number of Decimal Places and Integer Places.
+SimTalk
+DataType [SimTalk] - Variable
+asString [SimTalk] - Variable
+See also
+Methods of the Distributions
+Data Type [Variable]
+Plant Simulation Help 11-3767
+Unpublished work. © 2026 Siemens
+
+Value [Variable]
+Select or type in the value, which the Variable shows.
+Remarks
+The Data type you select determines what you can do.
+• You can select the value from a drop-down list.
+• You can type in the value of the Variable.
+Note
+For the data types length, weight, and speed the units you select in the Plant Simulation main
+window under File > Model Settings/Preferences > Units > Mass/Speed/Length determine how
+Plant Simulation interprets the value.
+A value of 100 with the length set to km is interpreted as 100 km.
+• Click Open to open the dialog box of the objects that correspond to the data types table, list, stack or
+queue.
+If the Variable points to a list which is referenced from additional places/objects, the dialog shows the
+button Unshare.
+Unshare a Variable
+To unshare a Variable of data types table, list, stack or queue:
+• Click Unshare to make Plant Simulation assign its own copy of the list to the Variable instead of the
+shared contents of the list. This corresponds to the method unshare.
+Value [Variable]
+11-3768 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click 
+  and select the object of data type object in the dialog Select Object.
+• Or type the path to and the name of the object into the text box Value.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+The data type object designates an absolute or a relative path to an object.
+◦ The absolute path always starts with a period, starting in the Class Library, such as .building and
+identifies the object uniquely. Plant Simulation does not change the absolute path if you derive or
+insert a Frame using a Variable object, i.e., the absolute path will still reference the source object, not
+to the one you derived or inserted!
+◦ The relative path which starts with Location or ~, considers the current location of the Variable
+object each time the object Variable is accessed. Thus, when deriving or inserting an object consisting
+of several hierarchically structured Frames, you do not have to change the existing object values in
+the Variable objects.
+• To use the data type time with a random number distribution, select the data type randtime, and type
+in the parameters of the distribution function, as the data type Time only accepts constant values. Note
+you have to initialize the randtime value before accessing it, for example by employing the method
+rollDice, which determines the next random number that the Variable uses.
+SimTalk
+Value [SimTalk] - Variable
+Variable.inheritAttribute("Value")
+asString [SimTalk] - Variable
+unshare [SimTalk]
+See also
+Data Type [Variable]
+Value [user-defined attribute] > Unshare, user-defined attribute
+Unshare a List or Data Table
+Value [Variable]
+Plant Simulation Help 11-3769
+Unpublished work. © 2026 Siemens
+
+Inherit Value [Variable]
+To inherit the value of the Variable, click the inheritance check box next to the text box Value so that it is
+green.
+Remarks
+To not inherit the value, click the check box again so that it looks like this 
+ .
+SimTalk
+Value [Variable]
+Variable.inheritAttribute("Value")
+Inherit Value [Variable]
+11-3770 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Initial Value [Variable]
+To reset a value, which the Variable recorded during a simulation run to an initial value, select this check
+box.
+Remarks
+Plant Simulation sets the value during the reset phase and resets it in the init phase of the next simulation
+run.
+Initial Value - text box
+After you select the check box, the Variable shows a text box.
+Type the initial value for the next simulation run into the text box.
+Note
+The Data Types table, list, stack, queue, and randtime do not provide this feature.
+SimTalk
+InitValue [SimTalk] - Variable
+HasInitValue [SimTalk] - Variable
+Tab Display
+Tab Display [Variable]
+Select how Plant Simulation shows the global Variable in the Frame window on the Tab Display.
+It provides the settings listed in the table of contents to the left.
+Initial Value [Variable]
+Plant Simulation Help 11-3771
+Unpublished work. © 2026 Siemens
+
+Font Size [drop-down list] - Variable
+Select the Font Size for displaying the Variable in the Frame into which you inserted it.
+Remarks
+You can select one of these settings:
+Font size Looks like this
+Small
+Medium
+Large
+Extra large
+SimTalk
+Font [SimTalk] - Variable
+Font Size [drop-down list] - Variable
+11-3772 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Font Color [Variable]
+To select the Font Color with which Plant Simulation shows the Variable in the Frame window, click the
+drop-down arrow.
+Remarks
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+Color [SimTalk] - Variable
+Font Color [Variable]
+Plant Simulation Help 11-3773
+Unpublished work. © 2026 Siemens
+
+Background Color [drop-down list] - Variable
+To select the color of the background of the Variable which you inserted into a Frame, click the drop-
+down arrow.
+Remarks
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+BackgroundColor [SimTalk] - Variable
+Background Color [drop-down list] - Variable
+11-3774 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Alignment [Variable]
+Select the Alignment of the display of the Variable with its insertion point.
+Remarks
+You can select one of these settings:
+• Left aligns the Variable named VariableWithReal with the left border of the type graphic.
+• Name places the left border of the displayed Name or Value on the insertion point of the Variable.
+• Value places the right border of the displayed Name or the left border of the displayed Value on the
+insertion point of the Variable.
+• Right places the right border of the displayed Name or Value on the insertion point of the Variable.
+Alignment Looks like this
+Left
+Name
+Value
+Right
+SimTalk
+Alignment [SimTalk] - Variable
+Alignment [Variable]
+Plant Simulation Help 11-3775
+Unpublished work. © 2026 Siemens
+
+Integer Places [text box] - Variable
+Type in the number of Integer Places which the Variable shows.
+Remarks
+The Variable can show up to 15 integer places. The default setting -1 means that Plant Simulation applies
+no minimum to the number of integer places.
+Type in a positive value to fill up the space before the decimal point with blank spaces until the specified
+number of places has been reached when the Variable is shown in 3D.
+Integer places Looks like this
+-1
+8
+Note
+This setting only applies to the Data Type [user-defined attribute] > real, length, weight, time, speed,
+and acceleration.
+SimTalk
+IntegerPlaces [SimTalk] - Variable
+Integer Places [text box] - Variable
+11-3776 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Decimal Places [text box] - Variable
+Type in the number of Decimal Places which the object Variable shows. It can show up to 15 decimal
+places.
+Remarks
+The default setting -1 shows all existing places.
+Type in a positive value to show the number of decimal places, which you specified.
+Integer places Looks like this
+-1
+8
+Note
+This setting only applies to the Data Type [Variable] > real, length, money, weight, time, speed, and
+acceleration.
+The number of decimal places for the data type time affects values differently than for the data type real.
+The value -1 for the data type time means that the default time display format is displayed with four
+decimal places.
+A positive value means that Plant Simulation shows the number of decimal places that you typed in at
+most.
+SimTalk
+DecimalPlaces [SimTalk] - Variable
+Decimal Places [text box] - Variable
+Plant Simulation Help 11-3777
+Unpublished work. © 2026 Siemens
+
+Transparent [check box] - Variable
+To make the background of a Variable, which you inserted into a Frame, Transparent, select this check
+box. To show the space around the text in white, clear the check box.
+Remarks
+With a Transparent Background, the Variable shows the space around the text in the color of the
+background of the Frame.
+Transparent Not transparent
+SimTalk
+Transparent [SimTalk] - Variable
+Transparent [check box] - Variable
+11-3778 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Data Type [Variable]
+To show the data type in addition to the name and the value of the Variable in the Frame, into which you
+inserted it, select this check box.
+Remarks
+To hide the data type, clear the check box.
+On Off
+SimTalk
+ShowDataType [SimTalk] - Variable
+Show Data Type [Variable]
+Plant Simulation Help 11-3779
+Unpublished work. © 2026 Siemens
+
+Show Units [Variable]
+To show the unit of the physical size of the Variable, select this check box.
+Remarks
+Select the unit under File > Model Settings/Preferences > Units.
+To hide the units, clear the check box.
+For the data type randtime the check box Show Units also sets if Plant Simulation shows the distribution
+parameters in the Frame window or not.
+If you clear Show Units, you can type in the number of Decimal Places.
+Show Units on Show Units off
+SimTalk
+ShowUnit [SimTalk] - Variable
+Show Units [Variable]
+11-3780 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Tab Statistics [Variable]
+The tab Statistics provides the settings listed in the table of contents to the left.
+The tab shows the top five frequencies and the top five durations on the tab itself. Only Variables of Data
+type string or integer records statistics values.
+Tab Statistics
+Plant Simulation Help 11-3781
+Unpublished work. © 2026 Siemens
+
+Active [check box] - statistics, Variable
+To collect statistics data during a simulation run and to show the Top 5 Frequencies and the Top 5
+Durations on the tab, select this check box. To not collect statistics, leave it cleared.
+Remarks
+Only Variables of Data type string or integer record statistics values.
+The Variable only gathers statistics values if they exist for a time span greater than zero.
+Suppose we have a Variable of type integer with an Initial Value of 0 and the following SimTalk sequence:
+Variable = 1
+wait 1
+Variable = 2
+wait 1
+Variable = 1
+Variable = 3
+wait 1
+For these settings the Frequency of 1, 2, and 3 is 1 each, as for the second assignment of 1, the value was
+only present for a time span of 0.
+The Initial Value of 0 is not recorded as well, as it was only present for a time span of 0.
+The Durations of 1, 2, and 3 thus are 33.33% each.
+SimTalk
+StatisticsActive [SimTalk] - Variable
+Active [check box] - statistics, Variable
+11-3782 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Statistics Table [Variable]
+To open the statistics table, click this button.
+Remarks
+The Statistics Table shows these values:
+Item English Description Item German
+Value Shows the name of the value of the Variable. Wert
+Frequency Shows the number of occurrences of the value from the column
+Value. Statistics only counts, when the value actually changes.
+Häufigkeit
+Duration Shows the duration of the occurrences, which is the complete
+duration the Value had during the statistics collection period.
+Dauer
+Frequency [%] Shows the portion of the individual frequencies to the sum of all
+values in the column Frequency.
+%_Häufigkeit
+Duration [%] Shows the portion of the individual durations to the sum of all
+values in the column Duration.
+%_Dauer
+Mean Duration Shows the mean duration of the individual durations. Mittlere Dauer
+Standard
+Deviation
+Shows the standard deviation of the duration. Standardabweich
+ung
+SimTalk
+getStatisticsTable [SimTalk] - user-defined attribute
+Statistics Table [Variable]
+Plant Simulation Help 11-3783
+Unpublished work. © 2026 Siemens
+
+Charts [Variable]
+To open a pie chart each showing the frequency and the duration of the value, click this button.
+Charts [Variable]
+11-3784 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Frequency Histogram [Variable]
+To open a histogram showing the frequency, i.e., the number of occurrences of the value, click this button.
+Frequency Histogram [Variable]
+Plant Simulation Help 11-3785
+Unpublished work. © 2026 Siemens
+
+Tab Comment [Variable]
+Type any comment describing the function of the Variable into the text box on the tab Comment.
+Remarks
+First, click the check box 
+  to turn Inheritance 
+  off. Only then you can enter data.
+To show the comment you type in as a tooltip, drag the mouse over the object in the Frame. The tooltip is
+shown as you format it when you type it in. It does not automatically create line breaks, but shows the text
+with the line breaks you manually specify by pressing Enter.
+SimTalk
+Comment [SimTalk] - Variable
+Tab Comment [Variable]
+11-3786 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-3787
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+View Menu
+11-3788 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls
+Edit Observers
+Tools Menu
+Plant Simulation Help 11-3789
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Help Menu
+11-3790 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Assigning a Value to a Variable
+When assigning a new value to the Variable, this value has to be compatible with the active data type of
+the Variable.
+Remarks
+A value is compatible if Plant Simulation can automatically transform it into a correct value for the task.
+A change of value may occur because:
+• Plant Simulation cannot display digits after the decimal point and cuts them off. It transforms, for
+example, the real value 3.9 into the integer value 3.
+• Loss of significance occurs for great value differences. Floating point operations only save a certain
+number of digits and the magnitude of a number (mantissa and exponent). Plant Simulation deletes
+additional digits created during a calculation and the number does not return the expected value. This
+kind of error cannot be avoided and only occurs if the difference in size is at least 107.
+If you assign a Variable to a Method, keep in mind that Plant Simulation calls and executes this Method
+if you only type in the name of a Method. This way the Method is returned, instead of the reference you
+would like to receive. Use the reference operator & to get the required reference to a Variable of data type
+object.
+Syntax
+Path := any
+Example
+Variable := Value
+Variable := &MyMethod
+Assigning a Value to a Variable
+Plant Simulation Help 11-3791
+Unpublished work. © 2026 Siemens
+
+Calling the Contents of a Variable
+If the contents of the Variable references another Variable of data type object, access the contents of that
+variable by typing the name of this Variable in parenthesis.
+If the contents of the Variable references a Method, typing this Method in parentheses calls the Method
+itself.
+Syntax
+(Path)
+Example
+value := (Variable) + 1   // accesses the variable 
+(control_gate)            // calls the method
+(method)(3.4,"drill")     // calls the method with parameters
+Calling the Contents of a Variable
+11-3792 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Reading the Contents of a Variable
+To access the contents of the Variable designated by <Path>, use its name.
+Syntax
+<Path>
+Example
+MyTable[1,1] := MyVariable
+Methods of the Variable
+_Methods of the Variable
+The object Variable provides:
+• The methods listed in the table of contents to the left.
+Note
+You can only access the methods of the object Variable, which refer to the object itself, via the
+reference operator &. Without the operator the method will be applied to the contents of the
+Variable.
+Example
+.MyPlant.&MyVariable.openDialog
+Also compare:
+Assigning a Value to a Variable
+Calling the Contents of a Variable
+Reading the Contents of a Variable
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Reading the Contents of a Variable
+Plant Simulation Help 11-3793
+Unpublished work. © 2026 Siemens

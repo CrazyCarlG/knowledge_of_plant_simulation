@@ -1,0 +1,215 @@
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyGenerator.UUID
+Attributes of the Generator
+_Attributes of the Generator
+The Generator provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+Attributes of the Generator
+Plant Simulation Help 11-4397
+Unpublished work. © 2026 Siemens
+
+• To set the value of an attribute, you might, for example, type:
+MyGenerator.Duration.Type := "uniform"
+MyGenerator.Duration.Start := 600 // from 10 minutes
+MyGenerator.Duration.Stop := 1200 // to 20 minutes
+• To get the value of an attribute, you might, for example, type:
+print MyGenerator.Duration.Type
+posit := Station.Cont.XPos
+_Attributes of the Generator
+11-4398 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [SimTalk] - Generator
+Activates the object designated by <Path> (true) or deactivates it (false).
+Type
+Attribute
+Syntax
+<Path>.Active:boolean
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyGenerator.Active := true
+See also
+Active [check box] - Generator
+Active [SimTalk] - Generator
+Plant Simulation Help 11-4399
+Unpublished work. © 2026 Siemens
+
+Duration [SimTalk] - Generator
+Sets the time span between which the Generator designated by <Path> calls the Interval Control and the
+Duration Control.
+Type
+Attribute
+Syntax
+<Path>.Duration:time
+Assignment Value
+You can assign a value of data type time.
+Examples
+MyGenerator.Duration.Type := "uniform"
+MyGenerator.Duration.Start := 600 // from 10 minutes
+MyGenerator.Duration.Stop := 1200 // to 20 minutes
+Generator.Duration.setTypeAndAttr("cEmp", Table)
+SimTalk
+DurationCtrl [SimTalk]
+See also
+Duration [text box] - Generator
+Duration Control [Generator]
+Interval Control [Generator]
+Duration [SimTalk] - Generator
+11-4400 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DurationCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>. Plant Simulation calls the Method after it
+called the Interval Control of the Generator designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.DurationCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+// does an entry exist?
+if MyGenerator.DurationCtrl /= VOID // delete entry
+   MyGenerator.DurationCtrl := VOID
+end
+See also
+Duration Control [Generator]
+DurationCtrl [SimTalk]
+Plant Simulation Help 11-4401
+Unpublished work. © 2026 Siemens
+
+Interval [SimTalk] - Generator
+Sets the time between two activations of the Interval Control of the Generator designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.Interval:time
+Assignment Value
+You can assign a value of data type time.
+Examples
+obj.Interval.Type:= "Negexp"
+obj.Interval.Beta:=150
+obj.Interval.LowerBound:=1*60   // 1s *60
+obj.Interval.UpperBound:= 10*60 // 10s *60
+Generator.Interval.setTypeAndAttr("dEmp", Table)
+SimTalk
+IntervalCtrl [SimTalk]
+See also
+Interval [text box] - Generator
+Interval Control [Generator]
+Interval [SimTalk] - Generator
+11-4402 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IntervalCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>. Plant Simulation calls the Method during
+the specified interval for the Generator designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.IntervalCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+// nothing entered yet?
+if MyGenerator.IntervalCtrl = VOID 
+   // enter reference to method
+   MyGenerator.IntervalCtrl := &MyMethod
+end
+See also
+Interval Control [Generator]
+IntervalCtrl [SimTalk]
+Plant Simulation Help 11-4403
+Unpublished work. © 2026 Siemens
+
+Start [SimTalk] - Generator
+Sets the Start time of the Interval Control which the Generator designated by <Path> calls.
+Remarks
+The assignment has to be made during the Reset phase.
+Type
+Attribute
+Syntax
+<Path>.Start:time
+Assignment Value
+You can assign a value of data type time.
+Examples
+MyPlant.MyGenerator.Start.type := "const"
+MyPlant.MyGenerator.Start := 120 // 2 minutes
+Generator.Start.setTypeAndAttr("Normal", 30, 10)
+See also
+Start [text box] - Generator
+Interval Control [Generator]
+Start [SimTalk] - Generator
+11-4404 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Stop [SimTalk] - Generator
+Sets the Stop time of the Interval Control which the Generator designated by <Path> calls.
+Type
+Attribute
+Syntax
+<Path>.Stop:time
+Assignment Value
+You can assign a value of data type time.
+Examples
+// normally distributed end with left bound at 1 hour
+// and open right bound
+.InformationFlow.MyGenerator.Stop.Type := "normal"   // normal distribution
+.InformationFlow.MyGenerator.Stop.Mu := 3600         // 1 hour
+.InformationFlow.MyGenerator.Stop.Sigma := 600       // 10 minutes
+.InformationFlow.MyGenerator.Stop.LowerBound := 1200 // 20 minutes
+.InformationFlow.MyGenerator.Stop.UpperBound := 7200 // 2 hours
+Generator.Stop.setTypeAndAttr("Normal", 1:00, 10)
+See also
+Stop [text box] - Generator
+Interval Control [Generator]
+AttributeExplorer
+AttributeExplorer [object]
+Use the object AttributeExplorer for managing the attributes defining the settings of the individual stations
+in your simulation model at a single, central location.
+Stop [SimTalk] - Generator
+Plant Simulation Help 11-4405
+Unpublished work. © 2026 Siemens
+
+Image
+Description
+Instead of opening the dialog of each and every material flow object in your model and typing the
+attribute values into the text boxes, you can define which attributes of which object the AttributeExplorer
+gets and shows in a list window.
+To do so, click Show Explorer. Then type in the different values, for the capacities, the times, etc., which
+Plant Simulation writes back to the objects and uses in the model. You can Export this settings table as
+a tab-delimited text file and Import this file into the AttributeExplorer of another simulation model, thus
+using identical settings in several of your simulation models.
+You can also show the attribute table of an AttributeExplorer in an HtmlReport, compare Display an
+AttributeExplorer.
+To show a tooltip with information about the AttributeExplorer, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the AttributeExplorer, click Show
+Manipulators 
+  on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object AttributeExplorer to your simulation model, click 
+  Manage Class Library > Basic
+Objects > InformationFlow > AttributeExplorer on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+AttributeExplorer [object]
+11-4406 Plant Simulation Help
+Unpublished work. © 2026 Siemens

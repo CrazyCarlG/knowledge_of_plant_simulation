@@ -1,0 +1,163 @@
+Void [SimTalk] - cells of lists/tables
+Returns if specified cell of the list/table designated by <Path> is empty (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path-of-the-list[row]>.void -> boolean
+<Path-of-the-table[column,row]>.void -> boolean
+Return Value
+The return value has the data type boolean.
+Example
+if not DataTable[1,1].void
+   DataTable[1,1] += 1
+end
+Read-Only Attributes of Lists and Tables
+_Read-Only Attributes of Lists and Tables
+Lists and tables provide the read-only attributes listed in the table of contents to the left for returning their
+state.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Void [SimTalk] - cells of lists/tables
+11-4062 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDataTable.Full
+_Read-Only Attributes of Lists and Tables
+Plant Simulation Help 11-4063
+Unpublished work. © 2026 Siemens
+
+Dim [SimTalk] - lists
+Returns the Dimension, i.e., the number of entries, of the list/table designated by <Path>.
+Remarks
+For a DataTable the dimension is the product of x-dimension/column times the y-dimension/cell.
+The read-only attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and
+TimeSequence.
+Type
+Read-only attribute
+Syntax
+<Path>.Dim → integer
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataStack.Dim
+number := MyDataQueue.Dim
+print MyDataList.Dim
+number := table.Dim
+Dim [SimTalk] - lists
+11-4064 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Empty [SimTalk] - lists
+Returns if the list/table designated by <Path> contains blank cells (true) or no blank cells (false).
+Remarks
+The read-only attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and
+TimeSequence.
+Type
+Read-only attribute
+Syntax
+<Path>.Empty → boolean
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataQueue.Empty
+print MyDataList.Empty
+print MyDataTable.Empty
+SimTalk
+Full [SimTalk] - lists
+Occupied [SimTalk] - lists
+Empty [SimTalk] - lists
+Plant Simulation Help 11-4065
+Unpublished work. © 2026 Siemens
+
+Full [SimTalk] - lists
+Returns if the list/table designated by <Path> is full (true) or not (false).
+Remarks
+Normally the number of entries/cells in a list/table is unlimited, meaning it will never be full. You can limit
+the number of cells in the dialog or with the attributes MaxDim or MaxXDim and MaxYDim though.
+The read-only attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and
+TimeSequence.
+Type
+Read-only attribute
+Syntax
+<Path>.Full → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataStack.Full
+print MyDataList.Full
+print MyDataTable.Full
+SimTalk
+Empty [SimTalk] - lists
+Occupied [SimTalk] - lists
+MaxDim [SimTalk]
+MaxXDim [SimTalk]
+MaxYDim [SimTalk]
+Full [SimTalk] - lists
+11-4066 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Occupied [SimTalk] - lists
+Returns if at least one cell of the list/table designated by <Path> contains an entry (true) or not (false).
+Remarks
+The read-only attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and
+TimeSequence.
+Type
+Read-only attribute
+Syntax
+<Path>.Occupied → boolean
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataStack.Occupied
+print MyDataList.Occupied
+print MyDataTable.Occupied
+SimTalk
+Empty [SimTalk] - lists
+Full [SimTalk] - lists
+Attributes of Lists and Tables
+Attributes of Lists and Tables
+All manifestations of lists and tables, DataStack, DataQueue, DataList, DataTable, and TimeSequence,
+share a number of predefined attributes controlling their behavior or representing their state.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Occupied [SimTalk] - lists
+Plant Simulation Help 11-4067
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+See also
+_Attributes for the Format of Lists and Tables
+_Attributes for the Text Format of Lists and Tables
+_Attributes for Printing Lists and Tables
+_Attributes for Showing Settings of Lists and Tables
+_Miscellaneous Attributes of Lists and Tables
+Attributes of Lists and Tables
+11-4068 Plant Simulation Help
+Unpublished work. © 2026 Siemens

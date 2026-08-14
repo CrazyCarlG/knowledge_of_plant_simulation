@@ -1,0 +1,432 @@
+In the example below we showed Pose1. It moves the Prismatic Joint of the ToolHolder up when you
+press the right arrow key.
+Compare Tab Poses and Tab Joint
+Compare Configuring the Robot
+Back to Model Joints and Poses
+Video on YouTube
+https://youtu.be/wfVN-mcWNsc?si=LepG6cgh0MDLKilQ&t=22
+Creating a Realistic Looking Model
+Create a Realistic Looking Model
+You can create a visually pleasing and realistic looking model.
+You can:
+• Insert Factory Walls and Create Passageways
+• Add Text and Display Boards
+• Add a JT Layout File to Your Simulation Model
+• Add a Point Cloud
+• Import JT Graphics Representing an Object
+Video on YouTube
+Plant Simulation Help 10-1119
+Unpublished work. © 2026 Siemens
+
+The model Factory 51, which you can open from the Start Page under Example Models, exemplifies
+these and other techniques.
+Back to Visualizing the Material Flow
+Enhance the Visualization of Your Simulation Model in Omniverse
+You can use the Omniverse Connector to create an good looking visualization of your Plant Simulation
+2606 simulation model in Omniverse, compare these videos:
+https://support.sw.siemens.com/en-US/okba/KB000179528_EN_US
+Enhance the Visualization of Your Simulation Model in Omniverse
+10-1120 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+https://support.sw.siemens.com/en-US/knowledge-base/KB000179496_EN_US
+Insert Factory Walls and Create Passageways
+Insert Factory Walls and Create Passageways
+In our sample model we create four factory walls around a conveyor.
+Proceed as follows:
+• Click the Edit ribbon tab in 3D. Click Edit > Insert Shape > Factory Walls.
+• Select the settings for the walls. We selected the settings below:
+• The model then looks like this:
+Insert Factory Walls and Create Passageways
+Plant Simulation Help 10-1121
+Unpublished work. © 2026 Siemens
+
+Now we would like to cut a passageway through the wall between the Station and the Conveyor so that we
+can extend the conveyor through the passageway.
+We will demonstrate how to:
+• Cut an Open Passageway in a Wall
+• Create a Passageway and a Gate
+Back to Create a Realistic Looking Model
+Cut an Open Passageway in a Wall
+You can cut an open passageway through a wall.
+Proceed as follows:
+• Click the mouse at the position in the factory wall into which you want to cut the passageway. We
+clicked the position directly above the tooltip.
+Cut an Open Passageway in a Wall
+10-1122 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Press the + key on the keyboard until only the segment is selected which you want to cut.
+• Delete the segment (the graphic) by pressing Del on the keyboard. Plant Simulation then shows a
+message box. Click Yes.
+Cut an Open Passageway in a Wall
+Plant Simulation Help 10-1123
+Unpublished work. © 2026 Siemens
+
+• The model now looks like this:
+As we do not want the passageway to be open at the top, we add a lintel. To do so, proceed as follows:
+• For the lintel we use a Cube. You could also use a Textured Plate though.
+As we cannot change the Thickness of the cube any more after we inserted it, we open the Factory
+Wall Settings and note down the value of the Thickness of the factory walls, namely 0.3 meters. This
+way we can ensure that the lintel is just as thick as the factory wall.
+Cut an Open Passageway in a Wall
+10-1124 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the Cube and enter the settings below. The Thickness of 0.3 meters of the factory walls
+corresponds to the Width of 0.3 meters of the cube. Click Create, drag the mouse pointer to the
+position of the passageway at which you would like to insert the lintel and click the mouse button.
+• Change to Planning View and place the lintel roughly with the arrow keys on the keyboard.
+• As this is not accurate enough, click the lintel with the right mouse button and Show its 3D properties.
+Click in the text box X-Position with the left mouse button and roll the mouse wheel until the position
+of the lintel looks correct in this direction.
+Cut an Open Passageway in a Wall
+Plant Simulation Help 10-1125
+Unpublished work. © 2026 Siemens
+
+• Deactivate Planning View and adjust the Z-Position of the lintel until it looks correct. Proceed as you
+did for the X-Position.
+• In the next step we just have to adjust the material/the color of the lintel so that it matches the material
+of the factory walls. Open the Factory Wall Settings. Click Wall Material and copy the material in the
+dialog that opens.
+Cut an Open Passageway in a Wall
+10-1126 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Open the 3D properties of the lintel. Change to the tab Material and paste the copied material.
+• Now we can extend the conveyor so that it goes through the passageway.
+Cut an Open Passageway in a Wall
+Plant Simulation Help 10-1127
+Unpublished work. © 2026 Siemens
+
+• We can also make the lintel higher by changing the Scaling in the Z dimension.
+Back to Insert Factory Walls and Create Passageways
+Create a Passageway and a Gate
+Create a Passageway and a Gate
+You can create a passageway and a gate through the factory walls.
+In the example above we cut an opening into the wall, which might be covered by a PVC strip curtain for
+through traffic.
+Now we create a gate that opens automatically when a part approaches and closes again once it is out of
+the gate. We model this with a plate that moves up and down.
+Proceed as follows:
+• Repeat the steps described above to cut the selected segment out of the factory wall.
+• Insert a pillar (cuboid) each left and right into the passageway and a lintel that rests on the pillars.
+◦ For the two pillars we selected these settings:
+Create a Passageway and a Gate
+10-1128 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ For the lintel we selected these settings:
+The result looks like this after we adjusted the positions on the tab Transformation.
+To fine-tune the positions, we clicked in the respective text box, held down Ctrl and rolled the mouse
+wheel. The position of the lintel looks like this.
+Create a Passageway and a Gate
+Plant Simulation Help 10-1129
+Unpublished work. © 2026 Siemens
+
+We then create the gate and then can:
+• Open and Close the Gate with Poses
+• Open and Close the Gate without Poses
+• Move the Gate Up to the Height of the Part
+Back to Cut an Open Passageway in a Wall
+Back to Insert Factory Walls and Create Passageways
+Open and Close the Gate with Poses
+First we model opening and closing the gate with a joint and with two poses. In addition, we will program
+three controls.
+Proceed as follows:
+• Create the graphic for the gate. We use a flattened cuboid with these settings.
+Open and Close the Gate with Poses
+10-1130 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Position the gate between the pillars. To be able to do so, we first moved the lintel to the side.
+Now we color the gate so that it stands out from the wall. The result looks like this.
+• Then, we insert a Conveyor between the Station in the factory and the Drain outside of it. To overcome
+the height difference of a meter, we use a spiral conveyor with these settings, compare Model a Spiral
+Conveyor.
+Open and Close the Gate with Poses
+Plant Simulation Help 10-1131
+Unpublished work. © 2026 Siemens
+
+• In the next step we create an object out of the gate that can move up and down.
+Click the gate with the right mouse button and select Make Animatable Object.
+Click OK.
+• Select the joint properties on the Tab Joint. We use a Prismatic Joint that starts at 0 meters and moves
+upward to a height of 2 meters. To do so, we selected these settings.
+Open and Close the Gate with Poses
+10-1132 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click in the background in the Frame named FactoryWalls and select Edit 3D Properties. Change to the
+Tab Poses.
+Add two poses. We named our poses GateUp and GateDown and selected these settings.
+◦ GateUp moves the gate up to a height of 2 meters.
+◦ GateDown moves the gate down, back to the original position of 0 meters.
+• Now we have to set when the gate moves up and down. We do this in an Entrance Control and an Exit
+Control of the conveyor that transports the parts to the Drain.
+Open and Close the Gate with Poses
+Plant Simulation Help 10-1133
+Unpublished work. © 2026 Siemens
+
+We typed this source code into the Entrance Control:
+self.~.EntranceLocked := true
+_3D.Poses.moveTo("GateUp")
+self.~.ExitLocked := false
+We typed this source code into the Exit Control:
+self.~.ExitLocked := true
+wait _3D.Poses.moveTo("GateDown")
+@.move
+self.~.EntranceLocked := false
+We finally created a user-defined attribute and named it init. It makes sure that the exit of the
+conveyor is closed and that its entrance is open when we reset the model.
+We typed in this source code:
+self.~.ExitLocked := true
+self.~.EntranceLocked := false
+• When we now run the simulation, we can watch the gate move up when a part approaches, stays up
+until the part has passed through the passageway and then moves down again.
+Open and Close the Gate with Poses
+10-1134 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Create a Passageway and a Gate
+Open and Close the Gate without Poses
+Here we show how to model opening and closing the gate without poses.
+To do so, we have to change the code of our controls and use the method moveTo.
+Here the gate also moves 2 meters up, stops, and then returns to the initial position of 0 meters after the
+part passed through the passageway.
+• We changed the source code of the Entrance Control as follows:
+self.~.EntranceLocked := true
+wait _3D.getObject("Gate").moveTo(2) // gate moves 2 meters up
+// wait _3D.Poses.moveTo("GateUp")
+self.~.ExitLocked := false
+• We changed the source code of the Exit Control as follows:
+self.~.ExitLocked := true
+wait _3D.getObject("Gate").moveTo(0) // moves the gate back to initial 
+position
+// wait _3D.Poses.moveTo("GateDown")
+@.move
+self.~.EntranceLocked := false
+• We did not change the source code of the Init Control.
+When we run the simulation it looks like this:
+Open and Close the Gate without Poses
+Plant Simulation Help 10-1135
+Unpublished work. © 2026 Siemens
+
+Back to Create a Passageway and a Gate
+Move the Gate Up to the Height of the Part
+Here we show how to only move the gate up to the height of the part.
+To do so, we extended the source code of our methods.
+• We changed the source code of the Entrance Control as follows:
+self.~.EntranceLocked := true
+wait _3D.getObject("Gate").moveTo(@.MUHeight+0.1m)
+// moves the gate up to the height of the part
+// plus 10 cm for the height of the conveyor
+wait _3D.Poses.moveTo("GateUp")
+self.~.ExitLocked := false
+• We changed the source code of the Exit Control as follows:
+self.~.ExitLocked := true
+wait _3D.getObject("Gate").moveTo(0.1m)
+// moves the gate back to the initial position
+wait _3D.Poses.moveTo("GateDown")
+@.move
+self.~.EntranceLocked := false
+• We changed the source code of the Init Control as follows:
+self.~.ExitLocked := true
+self.~.EntranceLocked := false
+_3D.getObject("Gate").moveTo(0.1m, 0) 
+// 0 means that the target position becomes 
+// active immediately without moving there
+Move the Gate Up to the Height of the Part
+10-1136 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+When we run the simulation it looks like this:
+Back to Create a Passageway and a Gate
+Adding Text and Display Boards
+Add Text and Display Boards
+Sometimes you might want to show text and display boards in your model to make it visually pleasing and
+to present information to the user.
+• If you want to show static text that you do not need to change after creating it, you can insert 3D Text.
+You can also import a JT file, which you, for example, created in NX. We created the lettering Plant
+Simulation in the sample model Factory 51 like that.
+• If you want to create a display board, which you can edit after creating it, use the object Comment 
+ .
+You can:
+• Show Text
+• Show a Display Board
+Adding Text and Display Boards
+Plant Simulation Help 10-1137
+Unpublished work. © 2026 Siemens
+
+Back to Create a Realistic Looking Model
+Show Text
+To insert static text into your simulation model, click Text under Edit > Insert Shape.
+• Type in the text that you want to show and select the settings in the dialog. Click Create.
+• Drag the mouse to a position of your choice and click the left mouse button. This inserts the text flat on
+the floor of the factory. As compared to the factory building it is much too small though.
+Show Text
+10-1138 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To fix this, we adjust the size and the position of the lettering so that it matches the scale of the factory
+building. Click the text with the right mouse button and select Edit 3D Properties.
+◦ We selected Uniform Scaling with a factor of 3.
+◦ We rotated the text by 45 degrees around the X axis (1).
+◦ We moved it up on the Z axis until the lower border is located flat on the floor.
+Back to Add Text and Display Boards
+Show a Display Board
+To show a display board, click the object Comment on the toolbar User Interface and insert it into your
+model.
+Show a Display Board
+Plant Simulation Help 10-1139
+Unpublished work. © 2026 Siemens
+
+• Double-click the Comment 
+  and type in the text that you would like to show.
+We typed in My factory in Crailsheim, Baden-Württemberg, Germany and selected the
+Font Size > Extra Large.
+• Click OK.
+Show a Display Board
+10-1140 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• We want to show the display board rotated to the factory floor and above the upper border of the hall
+though.
+Click the display board with the right mouse button and select Edit 3D Properties.
+◦ Rotate the display board by 45 degrees around the X axis.
+◦ Move the position of display board up on the Z axis. We selected these settings.
+• Click OK. The result looks like this:
+Back to Add Text and Display Boards
+Show a Display Board
+Plant Simulation Help 10-1141
+Unpublished work. © 2026 Siemens
+
+Add a JT Layout File to Your Simulation Model
+A layout graphic adds a realistic touch to your simulation model.
+To add a JT graphic to your model:
+• Drag the layout graphic, Layout_Factory_Training.jt in our case, which we received from a colleague,
+from the Windows Explorer to the open Frame window containing the model and drop it there. Plant
+Simulation attaches the graphic to the mouse pointer and opens the dialog Insert Graphic. Accept the
+default settings and click OK.
+• Drag the mouse to the upper left corner of the Frame to the coordinates 0, 0 and click the left mouse
+button to place and insert the graphic. The model should look like this now:
+Add a JT Layout File to Your Simulation Model
+10-1142 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can now continue working with your model, by inserting objects and components and by
+manipulating them, etc.
+Instead of using a JT-layout file you can also use a point cloud as the background of your simulation model.
+Compare Import a 3D Graphic
+Compare Add a Background Graphic to the Frame
+Back to Create a Realistic Looking Model
+Add a Point Cloud
+A point cloud is a set of data points in three-dimensional space. These points are defined by their X-, Y-,
+and Z-coordinates. You might use a point cloud to visualize your actual factory layout and you can arrange
+your machines on the graphic to give it a realistic touch.
+To import a point cloud into your simulation model:
+• Click into the background of your simulation model and select Edit 3D Properties. Change to the Tab
+Point Cloud.
+• Click the 
+  button and select the point database file (*.pod) that you want to import. If the path is
+relative, it refers to the folder in which your simulation model is located.
+To remove the point cloud from the simulation model, delete its name from the text box.
+Add a Point Cloud
+Plant Simulation Help 10-1143
+Unpublished work. © 2026 Siemens
+
+• Click OK or Apply to show the point cloud.
+Note
+Initially, your window might only show small parts of the point cloud. When you start rotating the
+view, 3D shows additional parts of the graphic.
+Plant Simulation will load the point cloud significantly faster if the point cloud file is located on an SSD
+storage device.
+• To show or hide the point cloud, click Show Point Clouds on the View ribbon tab.
+• To adjust the position and the orientation of your point cloud, click into the background of the Frame
+containing the point cloud and select Edit 3D Properties. Change to the tab Point Cloud and modify its
+Position and its Rotation Angle.
+Add a Point Cloud
+10-1144 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Insert the objects of your simulation model at their respective positions.
+Be aware that for performance reasons Show Point Clouds is deactivated by default. For this reason you
+will not see the point cloud when you reopen the model at a later point in time. Click Show Point Clouds
+ to display it.
+Back to Create a Realistic Looking Model
+Import JT Graphics Representing an Object
+Instead of using shapes, which you create in 3D itself, you can also import graphics to represent an object.
+In our example we used a number of JT graphics, which we received from a colleague, to build a dune
+buggy.
+Proceed as follows:
+• Duplicate the part .MUs.Part in the Class Library and rename it to DuneBuggy. Add the graphic groups
+containing the graphics of the components on the Tab Graphics. We added the following graphic
+groups and named them as shown in the screenshot below.
+Import JT Graphics Representing an Object
+Plant Simulation Help 10-1145
+Unpublished work. © 2026 Siemens
+
+• Import the JT graphics into the graphic groups with the respective name. Import the files Body.jt and
+Seats.jt into all graphic groups whose name starts with Body or Seats.
+◦ Change to the 3D ribbon tab Edit and click Import Graphics, navigate to the folder containing the JT
+graphics, and click Open in the dialog Open.
+Import JT Graphics Representing an Object
+10-1146 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Drag the JT graphic, the Frame of the dune buggy in the example below, roughly to the position in
+the Frame named .MUs.DuneBuggy, where you want it to be, and click the left mouse button. Select
+the graphic group to which you want to add the graphic, Frame in our case.
+◦ Repeat the steps above for all JT files.
+◦ Arrange the position of the components of the dune buggy. We used a combination of the arrow keys
+and the settings in the dialog Edit 3D Properties.
+Place the three body panels at exactly the same position. Do the same for the three seat assemblies.
+This way you can later show or hide selected body panels and seats to test different color
+combinations.
+• To change the color of a graphic, click into the background of the Frame named .MUs.DuneBuggy with
+the right mouse button, and select Show Graphic Structure.
+Import JT Graphics Representing an Object
+Plant Simulation Help 10-1147
+Unpublished work. © 2026 Siemens
+
+◦ Expand the graphic group by clicking the 
+  button, BodyRed in our case.
+◦ Look for the node with a -M at the end of the name. This designates that this node defines a material.
+◦ Click that node with the right mouse button, (1-JtGroup-M) in our case, and select Edit 3D
+Properties. Experiment with the different material colors to create the look that you want. Using
+the color combinations, you can fine-tune glossy effects etc.
+Back to Create a Realistic Looking Model
+Optimizing a Graphic
+Optimizing the graphic, i.e., flattening the hierarchy of an object, deletes unnecessary information from
+the object, allowing for faster rendering, and a quicker display of the object.
+Whenever you import graphics, it is useful to optimize them. This is not because the graphics you import
+are badly designed, but because they are typically designed for another kind of use in the originating
+program. The engineer who designs a component, such as an engine, will naturally include every detail of
+that engine in the graphic that he creates, because it is imperative to provide these details for producing
+the engine.
+For us as users these details of the engine are of no interest at all. Our main concern is that the simulation
+runs fast and that the animation looks good and runs smoothly.
+We therefore advise to optimize every graphic you import. Do this as soon as possible, but not before you
+extracted all the structural information from the graphic that you need, compare Create a Simulation
+Object with Animation.
+Optimizing a Graphic
+10-1148 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Before you can do this, you have to make an animatable object from the graphic, compare Make
+Animatable Object.
+To optimize a 3D graphic, click the animatable object, whose graphic you would like to optimize, in the
+scene window, and click Optimize Selected Graphic 
+  on the Edit ribbon tab of the 3D window.
+Experiment with the settings described under Step 1: Prune Tiny Graphics, Step 2: Flatten Structure,
+and Step 3: Visibility Filter.
+Note
+Click Show External Graphic Group 
+  on the View ribbon tab to display the external graphics of the
+open 3D object.
+Plant Simulation shows two characteristics of the graphic under Graphic Complexity, namely the number
+of nodes and the number of polygons. The optimization strategies mainly affect the number of nodes and
+the number of polygons.
+Optimizing a Graphic
+Plant Simulation Help 10-1149
+Unpublished work. © 2026 Siemens

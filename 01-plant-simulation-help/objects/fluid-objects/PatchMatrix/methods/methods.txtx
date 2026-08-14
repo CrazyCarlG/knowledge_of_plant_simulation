@@ -1,0 +1,159 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the PatchMatrix
+_Methods of the PatchMatrix
+The PatchMatrix provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Fluid Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-2958 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+_Methods of the PatchMatrix
+Plant Simulation Help 11-2959
+Unpublished work. © 2026 Siemens
+
+getConnectionsForPred [SimTalk]
+Returns the numbers of the successors of the PatchMatrix designated by <Path> for which a connection
+from the predecessor exists.
+Type
+Method
+Syntax
+<Path>.getConnectionsForPred(Pred:integer) → array
+Parameter
+The parameter Pred of data type integer designates the number of the predecessor.
+Return Value
+The return value has the data type array.
+Example
+var c : integer[ ]
+c := Patchmatrix.getConnectionsForPred(1)
+SimTalk
+getConnectionsForSucc [SimTalk]
+setConnections [SimTalk]
+See also
+Connections [PatchMatrix]
+getConnectionsForPred [SimTalk]
+11-2960 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getConnectionsForSucc [SimTalk]
+Returns the numbers of the predecessor of the PatchMatrix designated by <Path> for which a connection
+to the successor exists.
+Type
+Method
+Syntax
+<Path>.getConnectionsForSucc(Succ:integer) → array
+Parameter
+The parameter Succ of data type integer designates the number of the successor.
+Return Value
+The return value has the data type array.
+Example
+var c : integer[ ]
+c := Patchmatrix.getConnectionsForSucc(1)
+SimTalk
+getConnectionsForPred [SimTalk]
+setConnections [SimTalk]
+See also
+Connections [PatchMatrix]
+getConnectionsForSucc [SimTalk]
+Plant Simulation Help 11-2961
+Unpublished work. © 2026 Siemens
+
+resetConnections [SimTalk]
+Resets the existing connections of the PatchMatrix designated by <Path> to their predecessors and
+successors, i.e. it cuts the connections.
+Type
+Method
+Syntax
+<Path>.resetConnections
+Example
+Patchmatrix.resetConnections
+SimTalk
+setConnections [SimTalk]
+See also
+Connections [PatchMatrix]
+resetConnections [SimTalk]
+11-2962 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setConnections [SimTalk]
+Establishes the connections between the predecessors and the successors of the PatchMatrix designated
+by <Path> (connect is true) or it cuts the connection (connect is false).
+Type
+Method
+Syntax
+<Path>.setConnections(Pred:any, Succ:any, connect:boolean) → array
+Parameters
+You can specify the following parameters:
+• The parameter Pred of data type any designates the predecessor(s).
+The parameter Pred can either be the number of the predecessor, the name of the predecessor, or an
+array of predecessor numbers.
+• The parameter Succ of data type any designates the successor(s).
+The parameter Succ can either be the number of the successor, the name of the successor, or an array of
+successor numbers.
+• The parameter connect of data type boolean sets if the Pipes are going to be connected (true) or not
+(false).
+Example
+Patchmatrix.setConnections(1,2,true)
+Patchmatrix.setConnections(1,[1,2],true)
+Patchmatrix.setConnections("PipeIn1","PipeOut2",false)
+SimTalk
+getConnectionsForPred [SimTalk]
+getConnectionsForSucc [SimTalk]
+resetConnections [SimTalk]
+See also
+Connections [PatchMatrix]
+setConnections [SimTalk]
+Plant Simulation Help 11-2963
+Unpublished work. © 2026 Siemens
+
+Read-Only Attributes of the PatchMatrix
+Read-Only Attributes of the PatchMatrix
+The PatchMatrix provides:
+• The _Read-Only Attributes of the Fluid Objects.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyPatchMatrix.UUID
+Attributes of the PatchMatrix
+Attributes of the PatchMatrix
+The PatchMatrix provides:
+Read-Only Attributes of the PatchMatrix
+11-2964 Plant Simulation Help
+Unpublished work. © 2026 Siemens

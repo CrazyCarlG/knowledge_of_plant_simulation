@@ -1,0 +1,204 @@
+Image
+Description
+Use the Cycle to only move a part on to the next station within a balanced line, when all stations have
+finished processing their parts and when none of the stations is failed, paused, or unplanned. In addition,
+the successor of the balanced line has to be ready to receive the part. To define the balanced line, type the
+name of the First Station and of the Last Station into the text boxes. All stations between the first and
+the last station, which are connected with Connectors, form the balanced line. Each station has to have a
+predecessor and a successor and can only have a single predecessor and a single successor.
+Note
+At the moment only objects of type Station and AssemblyStation can be part of the balanced line. If an
+AssemblyStation is part of the balanced line, the Cycle only continues balancing if the assembly process
+has been finished.
+Note
+A Front-triggered Exit Control is only called for the last station of the cycle defined by the object Cycle
+as the Destination for all other stations of the cycle is already set. Use a Rear-triggered Exit Control
+instead.
+Note
+A Pull Control is not called for the stations of the object Cycle.
+You can insert as many Cycle objects as you need into your simulation model. They all work independent
+of each other. If you use several Cycle objects, make sure to only assign each station to a single Cycle
+object.
+If you did not define any stations for the balanced line yet, drag a Station or an AssemblyStation onto the
+icon of the object Cycle and drop it there, Plant Simulation enters it as the first station of the balanced line.
+If you drag another object onto it and drop it there, Plant Simulation enters it as the last station. If you
+already defined the last station and would like to change it, hold down Shift, drag the object, which you
+would like to use as the last station of the balanced line over the Cycle and drop it there.
+To show a tooltip with information about the Cycle, hover with the mouse over it.
+Cycle
+Plant Simulation Help 11-2625
+Unpublished work. © 2026 Siemens
+
+To change the length of the graphic and the anchor points of the Cycle, click Show Manipulators 
+  on
+the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Cycle to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Cycle on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Cycle
+11-2626 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Balance a Production Line
+Dialog Box of the Object Cycle
+Dialog Box of the Cycle
+Double-click the icon of the Cycle to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Dialog Box of the Object Cycle
+Plant Simulation Help 11-2627
+Unpublished work. © 2026 Siemens
+
+Active [check box] - Cycle
+To synchronize the transfer of MUs from station to station, select this check box. To deactivate line
+balancing, clear the check box.
+Remarks
+After synchronizing a part is only moved on to the next station within the balanced line, when all stations
+have finished processing their parts and when none of the stations is failed, paused or unplanned.
+SimTalk
+Active [SimTalk] - Cycle
+Active [check box] - Cycle
+11-2628 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+First Station
+Type in the name of the first station of the group of stations, which you want to balance. Or click the
+ellipsis button and select a material flow object in the dialog Select Object.
+Remarks
+All stations between the First Station and the Last Station which are connected with Connectors form the
+balanced line.
+If you did not define any stations for the balanced line yet, drag a Station or an AssemblyStation onto the
+icon of the object Cycle and drop it there, Plant Simulation enters it as the first station of the balanced line.
+If you drag another object onto it and drop it there, Plant Simulation enters it as the last station.
+If you already defined the last station and would like to change it, hold down Shift, drag the object, which
+you would like to use as the last station of the balanced line over the Cycle, and drop it there. The status
+bar shows which object you are setting.
+SimTalk
+GetFirstStation [SimTalk]
+setFirstAndLastStation [SimTalk]
+See also
+Select Object [for controls]
+First Station
+Plant Simulation Help 11-2629
+Unpublished work. © 2026 Siemens
+
+Last Station
+Type in the name of the last station of the group of stations, which you want to balance. Or click the
+ellipsis button and select a material flow object in the dialog Select Object.
+Remarks
+All stations between the First Station and the Last Station, which are connected with Connectors form
+the balanced line.
+If you did not define any stations for the balanced line yet, drag a Station or an AssemblyStation onto the
+icon of the object Cycle and drop it there, Plant Simulation enters it as the first station of the balanced line.
+If you drag another object onto it and drop it there, Plant Simulation enters it as the last station.
+If you already defined the last station and would like to change it, hold down Shift, drag the object, which
+you would like to use as the last station of the balanced line over the Cycle, and drop it there. The status
+bar shows which object you are setting.
+SimTalk
+GetLastStation [SimTalk]
+setFirstAndLastStation [SimTalk]
+See also
+Select Object [for controls]
+Last Station
+11-2630 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Empty Cycle Allowed [check box]
+To allow parts on the balanced stations to be moved on, although no part is ready to move on from the
+predecessor of the balanced line, select this check box. This results in an idle cycle.
+SimTalk
+EmptyCycleAllowed [SimTalk]
+Empty Cycle Allowed [check box]
+Plant Simulation Help 11-2631
+Unpublished work. © 2026 Siemens
+
+Part Can Only Enter on Cycle [check box]
+To allow parts to enter the Cycle only if the cycle moves all MUs by one station on and is thus empty, select
+this check box.
+Remarks
+To allow parts to enter the Cycle at any time, clear the check box.
+SimTalk
+EntranceOnlyOnCycle [SimTalk]
+Part Can Only Enter on Cycle [check box]
+11-2632 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics
+Plant Simulation Help 11-2633
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-2634 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-2635
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+View Menu
+11-2636 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-2637
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Object Cycle
+Methods of the Object Cycle
+The object Cycle provides:
+• The method setFirstAndLastStation [SimTalk].
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-2638 Plant Simulation Help
+Unpublished work. © 2026 Siemens

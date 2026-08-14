@@ -1,0 +1,279 @@
+Watch the effects of optimizing the hierarchy of the animatable object in the dialog Show Graphic
+Structure [button].
+Note
+As you cannot restore discarded data, only flatten the structure after you are done with modeling the
+object! You will not detect any difference in the appearance of the object; you will see a difference
+though in its graphic structure, which Plant Simulation flattened for better performance at runtime.
+Only accept the result, when the optimized graphic meets your intentions in its looks and in its structure.
+Back to Visualizing the Material Flow
+Optimizing the Model
+After we created our model and are sure that we do not have to make any more changes, we can optimize
+it.
+Note
+As you cannot restore discarded data, we advise to optimize the model only after you finished creating it.
+Optimizing the model improves performance.
+We also recommend to save the model under a different name before optimizing it. This way you can
+return to the state the model had before optimizing it in case the optimized model reports errors or does
+not meet you expectations.
+Proceed as follows:
+• Save the model with a new name before optimizing it. This way you can return to the state the model
+had before optimizing it in case the optimized model reports errors or does not meet you expectations.
+• Click Optimize Model 
+  on the Home ribbon tab.
+• Select which optimization you want to execute. You can either choose only a single setting or any
+combination of the provided settings.
+Below we demonstrate the effects of the individual settings with our model
+MyTurnplateShrinkwrapper3D.spp.
+Optimizing the Model
+10-1150 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The finished model originally has this size.
+◦ First, we only select the setting Clean Up Class Library. This removes object classes from the Class
+Library that are not used in the model.
+This setting reduces the file size the most.
+Optimizing the Model
+Plant Simulation Help 10-1151
+Unpublished work. © 2026 Siemens
+
+If you want to continue working with the optimized model at a later point in time, you can re-add the
+missing objects with Start > Manage Class Library.
+◦ Then, we only select the setting Optimize 3D Attribute Inheritance.
+This setting reduces the file size in our example only marginally.
+◦ Then, we only select the setting Optimize 3D Graphic Structure.
+This setting reduces the file size in our example only marginally.
+If you want to work with your model later on and would like to be able to edit your graphics, we
+recommend to not activate Optimize 3D Graphic Structure.
+◦ Finally, we combine all settings.
+This results in the smallest file size which, alas, is only marginally smaller than the setting Clean up
+Class Library.
+Optimizing the Model
+10-1152 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Visualizing the Material Flow
+Recording a Video
+Record a Video
+You can record a video of the crucial parts of your simulation model. This way, you can pass the video on to
+anybody or publish it on the Intranet or the Internet, without the person viewing the video having to install
+Plant Simulation on his computer. The recorder creates an AVI file that any multimedia player can play.
+The Video Ribbon Tab provides all tools for recording and playing the video.
+Back to Visualizing the Material Flow
+Select Video Settings
+After you prepared the scene, you can select the video settings for recording the scene.
+Proceed as follows:
+Recording a Video
+Plant Simulation Help 10-1153
+Unpublished work. © 2026 Siemens
+
+• Click Start Simple Recording 
+  on the ribbon tab Video and select the settings to record a video of
+Plant Simulation or the active 3D window.
+The video will be recorded in real-time, meaning that recording a minute of physical real time
+corresponds to a minute of playback time in the video. You might, for example, use this type of video
+recording to demonstrate how to operate a model.
+• Click Start Simulation Recording 
+  on the ribbon tab Video and select the settings to record a
+video of a simulation. The simulation does not have to run beforehand.
+The video records in scaled simulation time, meaning that the number of minutes of simulation time,
+which you entered as Real-time x [video], corresponds to one minute of playback time of the video.
+You can, for example, use this type of video recording to play the simulated production with realistic
+time behavior.
+Select Video Settings
+10-1154 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+To prevent that Plant Simulation overwrites the last recorded AVI file, rename the output file before
+recording another video.
+Back to Record a Video
+Set Up the Scene for Recording
+There are a number of items to keep in mind before you start recording the scene.
+Proceed as follows:
+• Drag the window to a size that shows all that you want to show to the viewer, but not more,
+unnecessary information.
+Note
+If you would like to record a video in the display resolutions 720p or 1080p, you can set the size of
+the window to be recorded to these sizes in the dialogs Start Simple Recording and Start Simulation
+Recording.
+The size of the scene determines the size of the video, a large scene uses more processor time and
+might take a long time to animate and creates a larger video file.
+• Decide from which position and which angle you want to view and record the scene. Then, rotate and
+zoom the scene accordingly before starting the simulation.
+Set Up the Scene for Recording
+Plant Simulation Help 10-1155
+Unpublished work. © 2026 Siemens
+
+Note
+If you are recording a simulation video, you can automatically connect the recording with playing a
+camera animation by selecting Play Camera Path.
+Back to Record a Video
+Record the Video
+After you set up the scene and selected the video settings, you can record the video by using the features
+on the Video ribbon tab.
+• If you do not want to record the scene from the beginning of the simulation, start the simulation and
+let the animation proceed to about the time you want to start recording. Then, click 
+  or 
+respectively to start recording.
+• If necessary, reset the simulation model by clicking 
+ .
+• To start the simulation, click Start 
+ .
+• To start recording the animation, click 
+  on the Video ribbon tab.
+Note
+Be aware that the recorder records the contents of the currently active window. If you click into
+another window during the recording session, or roll the mouse over a button to display a tooltip,
+these will show up in your recorded video as well. This might ruin the effect of your recorded video.
+• To cancel recording, click 
+• To pause recording, click 
+ . This deactivates the Pause button.
+You might pause recording if you do not want to show a certain section of the animation, and start
+recording the next section of interest by clicking 
+  or 
+  respectively again.
+• To stop recording the video, click 
+ .
+3D show a dialog telling you that it saved the AVI file to the location and with the name you entered.
+Click OK to close the dialog and to continue working.
+Note
+If you want to view the video after you recorded it, we recommend to stop the simulation, as it uses a
+considerable amount of your computer’s resources.
+Record the Video
+10-1156 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Record a Video
+Play the Video
+After you have recorded the video, you can play it the way you recorded it. Or you can edit it with a digital
+video application, such as Adobe Premiere, Camtasia, etc.
+Proceed as follows:
+• To play the video, click 
+  on the Video ribbon tab.
+• The default player you set in MS Windows then plays the video.
+Back to Record a Video
+Visualizing the Simulation Model in Omniverse
+Visualize the Simulation Model in Omniverse
+You can visualize your Plant Simulation 2606 simulation model in NVIDIA Omniverse using the Omniverse
+Connector.
+The Omniverse Connector 
+  is only active if you have a subscription for this optional product.
+To create an excellent looking visualization of your Plant Simulation 2606 simulation model in Omniverse,
+proceed as follows:
+• Start the Omniverse Connector
+• Set Up a New Filesystem Connection
+• Establish a Live Connection to Omniverse
+You can then open the project in the Live data area of the Nvidia Omniverse Composer and work on
+enhancing the looks of the model.
+• Use Omniverse with the Function MVA_WriteUSD
+See also
+Omniverse Connector
+Videos
+Play the Video
+Plant Simulation Help 10-1157
+Unpublished work. © 2026 Siemens
+
+Start the Omniverse Connector
+Start the Omniverse Connector to establish a connection with NVIDIA Omniverse.
+Proceed as follows:
+• Start Plant Simulation 2606 and open the Frame containing the simulation model, which you want to
+use for exporting usd files or for a live connection with Omniverse.
+• Change to the Edit ribbon tab and click Omniverse Connector 
+ .
+• This opens the LiveConnect window.
+Back to Visualize the Simulation Model in Omniverse
+Start the Omniverse Connector
+10-1158 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Set Up a New Filesystem Connection
+Set up a New Filesystem connection to export usd files and then establish a connection with Omniverse.
+Proceed as follows:
+• Click the Omniverse node in the LiveConnect window and select New Filesystem connection.
+• Create a new folder in the file system on your computer by clicking the Make New Folder button or
+select an existing folder in the File Browser. Our folder is named USD Data Files.
+• Type a Description of the project into the dialog Add new Filesystem connection.
+The LiveConnect window then shows our connection node.
+Set Up a New Filesystem Connection
+Plant Simulation Help 10-1159
+Unpublished work. © 2026 Siemens
+
+ 
+• Click the USD Data Files folder and select Connect to establish the Omniverse connection with this
+folder. Then, select the data folder link. Once the folder is selected, you can type a file name into the text
+box File name at the bottom of the LiveConnect window.
+Plant Simulation does currently not use the setting Frames per second, you can leave this box empty.
+Export the Simulation in USD Format
+After setting-up the file system connection, you can export the running simulation to usd files. USD stands
+for Universal Scene Description.
+Proceed as follows:
+• Click Export to make Omniverse create the required usd files within the configured data folder.
+Start the simulation, which you want to record in Plant Simulation.
+Stop the simulation after everything is recorded that you want to show.
+• Click Export again to stop the usd recording,
+• Plant Simulation creates a library folder and a usd file in the data folder.
+• You can then open the exported simulation project in the Nvidia Omniverse Composer and visualize the
+simulation model.
+Back to Visualize the Simulation Model in Omniverse
+Set Up a New Filesystem Connection
+10-1160 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Establish a Live Connection to Omniverse
+Establishes a live connection to Omniverse using the Omniverse Nucleus Server.
+Proceed as follows:
+• Make sure that the Omniverse Nucleus Server is started and running.
+• Right-click the Omniverse node in the LiveConnect window and select New Nucleus connection.
+• Type in a Description and the IP address or the server name of the computer on which Omniverse
+Nucleus is installed.
+Type in the Port number, which is configured for the Omniverse Nucleus Server. Click OK to close the
+dialog.
+• Right-click the newly created server node and select Connect on the context menu.
+You will then see the Omniverse data folder on the server computer.
+• Create a folder structure in Nvidia Omniverse Composer in the Projects folder .
+Establish a Live Connection to Omniverse
+Plant Simulation Help 10-1161
+Unpublished work. © 2026 Siemens
+
+• Right-click the Library folder in the project, MyProject01 in our example. Then select Set System root
+folder on the context menu.
+• Select the project folder and type a project name into the text box File name. We typed in
+MyLiveProject01.
+• Click Connect and start the simulation in the Frame containing your simulation model.
+• Open the project in the Live data area of the Nvidia Omniverse Composer.
+• Stop the simulation in Plant Simulation and then terminate the Live connection by clicking Connect in
+the LiveConnect window.
+Back to Visualize the Simulation Model in Omniverse
+Video
+https://support.sw.siemens.com/en-US/knowledge-base/KB000179496_EN_US
+Establish a Live Connection to Omniverse
+10-1162 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Use Omniverse with the Function MVA_WriteUSD
+Creates and activates a Nucleus Connection, or creates and activates a Filesystem Connection, or
+terminates a Live Connection, or a Filesystem Connection via SimTalk.
+Remarks
+Before using MVA_WriteUSD, you
+• Either have to load the Omniverse DLL via SimTalk with
+loadLibrary(applicationHome + "PlantSimOmniverse.dll")
+• Or you have to manually start the Omniverse connection by clicking Omniverse Connector 
+  on
+the Edit ribbon tab in Plant Simulation.
+Type
+Function
+Syntax
+MVA_WriteUSD("parameter string")
+Create and Activate a Nucleus Connection
+Specify these instructions to create and activate a Nucleus Connection with MVA_WriteUSD:
+var system_root_path:string = "/Projects/My_Project01/Library"
+var output_path:string = "omniverse://127.0.0.1:80/Projects/My_Project01/
+myExport.live"
+MVA_writeUSD(output_path+"?sysroot="+system_root_path)
+Parameter
+The parameter string specifies the project file path in the first section and the Omniverse system root
+folder in the second section, which is to be used for the USD export or a live connection.
+MVA_writeUSD(<project file path>?systemroot=<system root path>) 
+Use Omniverse with the Function MVA_WriteUSD
+Plant Simulation Help 10-1163
+Unpublished work. © 2026 Siemens

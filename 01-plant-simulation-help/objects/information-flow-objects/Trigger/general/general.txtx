@@ -1,0 +1,312 @@
+Description
+The Trigger maps times to the values of a variable. User-defined attributes take on values designated by
+the Trigger during a simulation run. You can specify the values either in a single TimeSequence object or
+by combining several time sequences of other Triggers. In addition, a Trigger can control how and when a
+Source creates MUs.
+To show a tooltip with information about the Trigger, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Trigger, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Trigger to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > Trigger on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Produce Parts Using a Trigger Object
+Dialog Box of the Trigger
+Dialog Box of the Trigger
+Double-click the icon of the Trigger to open its dialog box.
+Dialog Box of the Trigger
+Plant Simulation Help 11-4337
+Unpublished work. © 2026 Siemens
+
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Period
+Tab Period
+The tab Period provides the settings listed in the table of contents to the left.
+Tab Period
+11-4338 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active [check box] - Trigger
+To activate the Trigger during the simulation run, select this check box. To deactivate it, clear the check
+box.
+Remarks
+Instead, you can also right-click the Trigger object in the Frame and select Activate on the context menu.
+To deactivate it, select Deactivate on the context menu.
+SimTalk
+Active [SimTalk] - Trigger
+Active [check box] - Trigger
+Plant Simulation Help 11-4339
+Unpublished work. © 2026 Siemens
+
+Time Reference [Trigger]
+Select the time reference which the Trigger uses during the simulation run.
+Remarks
+You can select one of these settings:
+• Relative
+Then type a point in time (time) into the text box Start Time [Trigger].
+• Absolute
+Then type a point in time on a certain date (dateTime) into the text box Start Date [Trigger].
+SimTalk
+Absolute [SimTalk] - Trigger
+Time Reference [Trigger]
+11-4340 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start Time [Trigger]
+Type in the point in time (of data type time) at which the Trigger starts working.
+SimTalk
+ReferenceTime [SimTalk] - Trigger
+Start Time [Trigger]
+Plant Simulation Help 11-4341
+Unpublished work. © 2026 Siemens
+
+Start Date [Trigger]
+Type in the date and the point in time at which the Trigger starts working for the setting Time Reference >
+Absolute.
+SimTalk
+ReferenceDate [SimTalk] - Trigger
+Start Date [Trigger]
+11-4342 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Active Interval
+Type the time interval during which the Trigger will be active into the text box.
+Remarks
+After this time interval has elapsed, the Trigger value will assume the default value.
+Define the default value under Values > Values > Value Table of the TimeSequence belonging to the
+Trigger.
+SimTalk
+ActiveInterval [SimTalk]
+Active Interval
+Plant Simulation Help 11-4343
+Unpublished work. © 2026 Siemens
+
+Repeat Periodically
+To make the Trigger repeat the values periodically instead of processing them one time only, select this
+check box.
+Remarks
+Only select the check box after you have set a suitable time unit on the Tab Representation! Otherwise
+drawing the display on screen may be time-consuming.
+SimTalk
+Periodic [SimTalk]
+Repeat Periodically
+11-4344 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Period Length
+Type in the duration of a Trigger’s cycle during the simulation run.
+Remarks
+When you selected Repeat Periodically, the Trigger repeats the values after a completed cycle.
+SimTalk
+PeriodLength [SimTalk]
+Tab Values
+Tab Values
+The tab Values provides the settings listed in the table of contents to the left.
+Period Length
+Plant Simulation Help 11-4345
+Unpublished work. © 2026 Siemens
+
+Trigger Type
+Select the Trigger Type. They differ in the way in which they generate events.
+Remarks
+You can select one of these settings:
+• Input Trigger takes the values from a single TimeSequence.
+Click Values, and type the values into the Value Table of the TimeSequence.
+• Combination generates a new Trigger by combining existing Triggers.
+Click Combination Table and type in the names of the Triggers that are to be combined. Plant
+Simulation saves the result of the combination in the combination list that clicking Values opens.
+SimTalk
+Combination [SimTalk]
+compute [SimTalk]
+Trigger Type
+11-4346 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Values [Trigger]
+To open the TimeSequence that contains the current sequence of values of the Trigger, click this button.
+Remarks
+Type in the default value of the Trigger on the tab Start Values > Default Value.
+Instead, you can also right-click the Trigger object in the Frame and select Open Values Table on the
+context menu.
+SimTalk
+ValueTable [SimTalk]
+Values [Trigger]
+Plant Simulation Help 11-4347
+Unpublished work. © 2026 Siemens
+
+Combination Table
+To open the Combination Table, click this button.
+Remarks
+Type the Trigger objects which Plant Simulation combines into the combination trigger into the cells of the
+table.
+• Type the name of a TimeSequence into the column Time Sequence. You can access the TimeSequence
+in the connection Formula with this name. Click one of the entries to open the respective value list.
+• Type the path to the source Trigger into the column Origin.
+• Type when the Trigger starts working into the column Start Time.
+• Type how often the Trigger is going to repeat into the column Count.
+• Type when the Trigger stops working, independently of repeated patterns, into the column End Time. If
+you do not specify a value, no end time applies.
+SimTalk
+CombinationTable [SimTalk]
+compute [SimTalk]
+Combination Table
+11-4348 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Formula [Trigger]
+For the Combination Trigger you can type in a formula that computes the Trigger’s value pattern.
+Remarks
+The formula connects the Trigger objects, which you typed into the Combination Table. The allowed
+operations depend on the data type of the involved Triggers.
+• For a TimeSequence of data type boolean, you can use the boolean operators AND, OR, and NOT.
+• For a TimeSequence with numerical data types, you can use the operators +, -, *, and /.
+Example
+TRIGGER AND TRIGGER2 AND TRIGGER3
+weeklyPlan AND dailyPlan
+employeenum - 2
+SimTalk
+Formula [SimTalk]
+Tab Actions
+Tab Actions
+The tab Actions provides the settings listed in the table of contents to the left.
+Formula [Trigger]
+Plant Simulation Help 11-4349
+Unpublished work. © 2026 Siemens
+
+Attributes [Trigger]
+Click Attributes below Trigger and type in the names of the objects and the attributes, which the Trigger
+controls into the list.
+Remarks
+First, click the check box 
+  to turn Inheritance 
+  off. Only then you can type data into the list.
+Then proceed as follows:
+• Type the name of the object that the Trigger controls into the column Object.
+• Type the name of the attribute of this object as a string into the column Attribute.
+For a Variable object, you do not have to type in an attribute. The Trigger then passes the current value
+to the attributes of the respective objects.
+• When an error occurs in the value assignment during the simulation run, Plant Simulation inserts the
+respective error message in the column Error Message.
+SimTalk
+insertTriggeredAttr [SimTalk]
+deleteTriggeredAttr [SimTalk]
+See also
+Context Menu of Embedded Lists
+Attributes [Trigger]
+11-4350 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Methods [Trigger]
+Click Methods below Trigger to open a list.
+Remarks
+First, click the check box 
+  to turn Inheritance 
+  off.
+Type in the names of the methods that the Trigger controls. This way, Plant Simulation can call a different
+Method whenever a value of the Trigger changes. Plant Simulation passes the previous and current trigger
+values as parameters when the methods are called.
+SimTalk
+insertTriggeredMeth [SimTalk]
+deleteTriggeredMeth [SimTalk]
+See also
+Context Menu of Embedded Lists
+Methods [Trigger]
+Plant Simulation Help 11-4351
+Unpublished work. © 2026 Siemens
+
+Objects [Trigger]
+To open a list containing the Source that creates the parts, click this button.
+Remarks
+The list shows the name of and the path to the Source object which Plant Simulation inserted when you
+selected Time of creation > Trigger in the dialog of the Source, clicked on Trigger, typed in the name of
+the Trigger and clicked OK or Apply.
+You cannot edit this table.
+Tab Representation
+Tab Representation
+Define the Value Pattern and the Time Unit which the Trigger uses to show the values over time on the
+tab Representation.
+See also
+Value Pattern
+Time Unit
+Objects [Trigger]
+11-4352 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value Pattern
+Shows the value pattern over time in an x-y diagram. The background color is white.
+You can also select the Time unit.
+Value Pattern
+Plant Simulation Help 11-4353
+Unpublished work. © 2026 Siemens
+
+Time Unit
+Select a Time Unit from the drop-down list that scales the time axis of the Trigger.
+Remarks
+Select one of these settings:
+• Second
+• Minute
+• Hour
+• Day
+Time Unit
+11-4354 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-4355
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+View Menu
+11-4356 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Controls
+Edit Observers
+See also
+Tools Menu [general description]
+Tools Menu
+Plant Simulation Help 11-4357
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Trigger
+_Methods of the Trigger
+The Trigger provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-4358 Plant Simulation Help
+Unpublished work. © 2026 Siemens

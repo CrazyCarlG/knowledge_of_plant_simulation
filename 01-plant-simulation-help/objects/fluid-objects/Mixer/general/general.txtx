@@ -1,0 +1,401 @@
+Underrun [SimTalk]
+Sets if the sensor is to be triggered if the amount of material in the Tank designated by <Path> has
+Underrun, i.e., is located below the sensor position (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.Sensors.ID<Number>.Underrun:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyTank.Sensors.id1.Underrun := true 
+See also
+Underrun [check box]
+Mixer
+Mixer
+Use the object Mixer to transmute the ingredients of the process into an intermediate or a finished product
+by mixing them.
+Image
+Description
+The ingredients can flow into the Mixer simultaneously from several preceding FluidSources 
+  or Tanks
+.
+Underrun [SimTalk]
+Plant Simulation Help 11-2813
+Unpublished work. © 2026 Siemens
+
+• If you defined the ingredients for the product in the MaterialsTable, the Mixer only uses the defined
+ingredients. As soon as the respective amount of these ingredients is present in the mixing container,
+the Mixer 
+  starts mixing them.
+• If you did not define ingredients for the product, the Mixer takes all materials from the connected Pipes
+and starts mixing when the mixing container is full.
+Once processing is finished, the product flows out of the Mixer. After the Mixer is empty again, the
+recovery time starts, which is required to flush and to clean it and to prepare it for the next process.
+To show a tooltip with information about the Mixer, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Mixer, click Show Manipulators 
+  on
+the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Mixer to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Fluids > Mixer on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Mixer
+11-2814 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Configure the Mixers Transmuting the Materials
+Configure the Mixer Which Mixes the Materials
+Dialog Box of the Mixer
+Dialog Box of the Mixer
+Double-click the icon of the Mixer to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the Mixer
+Plant Simulation Help 11-2815
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+11-2816 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Outflow Rate [Mixer]
+Type the Outflow Rate into the text box. This is the rate with which the material flows out of the object
+and flows through the objects of type Pipe to the next object in the flow of materials.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+Note
+The current Outflow Rate
+  depends on the number of attached Pipes. Let's say you attached two
+Pipes , then the specified Outflow Rate flows through each one of these Pipes in case the Outflow Rate
+of the connected Pipes enables this.
+If you just want to let the specified amount flow out of the object, attach a single Pipe and split that up
+into several Pipes later on.
+SimTalk
+OutflowRate [SimTalk] - Mixer
+Outflow Rate [Mixer]
+Plant Simulation Help 11-2817
+Unpublished work. © 2026 Siemens
+
+Volume [Mixer]
+Type the Volume of the Mixer into the text box. This is the amount of liters that is available for the
+ingredients or the product respectively within the mixing container.
+SimTalk
+Volume [SimTalk] - Mixer
+Volume [Mixer]
+11-2818 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Product [text box] - Mixer
+Type the name of the intermediate or of the finished Product into the text box. This is the product, which
+the Mixer is to produce by mixing the ingredients.
+Remarks
+Specify the name of this product in the MaterialsTable.
+If the product consists of more than ten ingredients, Add Additional Ingredients to the MaterialsTable.
+SimTalk
+Product [SimTalk]
+Product [text box] - Mixer
+Plant Simulation Help 11-2819
+Unpublished work. © 2026 Siemens
+
+Product Amount [text box]
+Type the Amount of the intermediate or of the finished Product into the text box. This is the amount,
+which the Mixer is to produce by mixing the ingredients.
+Remarks
+The default value -1 means that the finished product fully utilizes the volume of the Mixer. The product
+amount is measured in liters.
+Note
+If the Product Amount differs from the Product Amount which you typed into the MaterialsTable,
+Plant Simulation adjusts the amounts of the individual ingredients accordingly to ensure that the ratio of
+the ingredients is retained.
+Note
+If you type in -1 for a recipe into the column Product Amount of the MaterialsTable of the Mixer,
+Plant Simulation assumes the sum of all ingredients as the Product Amount. You only have to explicitly
+specify the Product Amount if mixing the ingredients increases or decreases the volume, i.e., if the
+Product Amount is not the sum of the ingredients.
+SimTalk
+ProductAmount [SimTalk]
+Product Amount [text box]
+11-2820 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Materials Table [Mixer]
+The MaterialsTable object contains the data of the different materials which the Mixer can mix.
+Remarks
+Click the ellipsis button and select the MaterialsTable in the dialog Select Object.
+Or select the MaterialsTable in a Frame, drag it to the text box and drop it there.
+If you type -1 for a recipe into the column Product Amount of the MaterialsTable of the Mixer, Plant
+Simulation assumes the sum of all ingredients as the Product Amount. You only have to explicitly specify
+the Product Amount if mixing the ingredients increases or decreases the volume, i.e., if the Product
+Amount is not the sum of the ingredients.
+SimTalk
+MaterialsTable [SimTalk] - Mixer
+See also
+MaterialsTable
+Select Object [for controls]
+Materials Table [Mixer]
+Plant Simulation Help 11-2821
+Unpublished work. © 2026 Siemens
+
+Current Fill Level [Mixer]
+Shows the Current Fill Level of the mixing container in which the Mixer transmutes the materials.
+Remarks
+The Mixer shows the current fill level of the material on the outflow side.
+SimTalk
+CurrentFillLevel [SimTalk] - Mixer
+Current Fill Level [Mixer]
+11-2822 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Current Amount [Mixer]
+Shows the Current Amount of product that is located in the mixing container of the Mixer at the moment.
+SimTalk
+CurrentAmount [SimTalk] - Mixer
+Current Amount [Mixer]
+Plant Simulation Help 11-2823
+Unpublished work. © 2026 Siemens
+
+Current Inflow Rate [Mixer]
+Shows the Current Inflow Rate, i.e., the amount of liters of the material which flows into the Mixer in a
+second.
+SimTalk
+CurrentInFlowrate [SimTalk]
+Current Inflow Rate [Mixer]
+11-2824 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Current Outflow Rate [Mixer]
+Shows the Current Outflow Rate, i.e., the amount of liters of the material that flows out of the Mixer in a
+second and that flows through objects of type Pipe to the next object in the flow of materials.
+SimTalk
+CurrentOutFlowrate [SimTalk]
+See also
+Pipe 
+Current Outflow Rate [Mixer]
+Plant Simulation Help 11-2825
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Processing Time [general description]
+Set-up Time [general description]
+Recovery Time [general description]
+Define Processing Times
+ProcTime [SimTalk] - Mixer
+SetupTime [SimTalk] - fluid objects
+RecoveryTime [SimTalk] - Mixer
+Select the Set-Up Time
+Tab Times
+11-2826 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Controls
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+Tab Failures
+Plant Simulation Help 11-2827
+Unpublished work. © 2026 Siemens
+
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+You can create a Ingredient Complete Control control.
+Tab Controls
+11-2828 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Ingredient Complete Control
+Modifies the built-in behavior of the object. The object calls the Ingredient Complete Control when an
+ingredient of the recipe has completely arrived in the Mixer.
+Remarks
+With the Ingredient Complete Control you can define/start any actions that need to take place in your
+simulation model via SimTalk.
+The Ingredient Complete Control will also be called if the last ingredient or the last ingredients arrived at
+the same time at which the Mixer reached the Volume [Mixer] you specified.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Ingredient Complete Control
+Plant Simulation Help 11-2829
+Unpublished work. © 2026 Siemens
+
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+SimTalk
+IngredientCompleteCtrl [SimTalk]
+See also
+Select Object [for controls]
+Ingredient Complete Control
+11-2830 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Shift Calendar [Mixer]
+Select the ShiftCalendar. It contains the data of the shifts in your installation and controls during which
+shifts the Mixer works.
+Remarks
+Click the ellipsis button and select the ShiftCalendar in the dialog Select Object.
+Instead of clicking the ellipsis button, you can also select the ShiftCalendar in a Frame, drag it to the text
+box, and drop it there.
+This automatically enters the object into the list of Objects on the tab Resources of the ShiftCalendar.
+SimTalk
+ShiftCalendarObject [SimTalk] - material flow objects
+See also
+ShiftCalendar [object]
+Associated Shift Calendar
+Select Object [for controls]
+Shift Calendar [Mixer]
+Plant Simulation Help 11-2831
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [Mixer]
+In addition to the values described under the Tab Statistics the tab Statistics of the Mixer shows these
+object-specific values.
+Item
+English Description
+Read-only
+attribute
+Item
+German
+Total
+Through
+put
+Shows the amount of product that flowed through the
+Mixer.
+StatDeleted
+[SimTalk] - Drain
+Gesamtdurc
+hsatz
+Relativel
+y Empty
+Shows the portion of the statistics collection period
+during which the Mixer was Empty in relation to the
+time during which it was available.
+StatRelativeEmpty
+Portion [SimTalk]
+Relativ leer
+Tab Statistics [Mixer]
+11-2832 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Importer
+On the Tab Importer you can define services for processing the parts, for setting the station up for a
+certain type of part, and for repairing the station.
+To view Importer Statistics in the Statistics Report, do one of the following:
+• Select View > Show Statistics Report in the dialog of the object.
+• Click the object with the right mouse button in the Frame and select Show Statistics Report or press
+F6.
+• Click Show Statistics Report on the Home ribbon tab.
+See also
+Processing Importer
+Set-up Importer
+Failure Importer
+Tab Importer
+Plant Simulation Help 11-2833
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-2834 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-2835
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+The View Menu also provides commands pertaining to the Transport Importer.
+Exporters Unavailable Services
+Services Associated Workplaces
+See also
+View Menu [general description]
+Transport Importer
+View Menu
+11-2836 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-2837
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Mixer
+_Methods of the Mixer
+The Mixer provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Fluid Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-2838 Plant Simulation Help
+Unpublished work. © 2026 Siemens

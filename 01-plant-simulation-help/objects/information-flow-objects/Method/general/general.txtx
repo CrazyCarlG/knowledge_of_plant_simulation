@@ -1,0 +1,405 @@
+Description
+In this topic we will only describe the object Method as such, reserving the description of the programming
+language SimTalk for the SimTalk Reference.
+You can build your own routines using a combination of built-in methods, Keywords, assignments, and
+control structures in the Method. Also check if one of the built-in Templates meets your needs. If this is
+not the case, you can write your own templates for your use and for sharing them with your colleagues.
+This construct combines productivity and flexibility. You can modify the behavior of an object, so that it
+exactly fits your modeling needs, by writing user-defined methods. The built-in properties of the objects,
+the large number of built-in methods provided, and the inheritance strategies help build valid models in a
+short amount of time.
+The Copilot can assist you in writing your source code in a Method.
+You can access the functions of the Method on the Edit Ribbon Tab and on the Tools Ribbon Tab of the
+Method.
+You can select preferences for the Method Editor under File > Preferences > Editor.
+Note
+You can specify the settings that Plant Simulation applies when calling Methods during the simulation
+runs under File > Model Settings/Preferences > Simulation > Methods.
+The Method and user-defined attributes of data type Method have their own random number stream
+which you can set with the attribute RandomSeed. As you are used to from the material flow objects,
+Plant Simulation automatically assigns the random number stream when you insert an object, so that each
+object has its own random number stream.
+You can show the return value of a Method in an HtmlReport, compare Display a Method.
+To show a tooltip with information about the Method, hover with the mouse over it.
+Tooltip as User-defined
+Attribute
+Tooltip of Source Code
+Comment Suspended Method
+Method [object]
+11-3566 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Use the Profiler to record the run-times and the call frequency of the Methods which are executed in
+your simulation model. This way you can detect which Methods consume the most time and find out how
+changes in modeling affect the performance of your model.
+To change the length of the graphic and the anchor points of the Method, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Method to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > Method on the Home ribbon tab.
+See also
+Programming a Method
+Working in the Method Window
+Calling a Method
+Colors for Syntax Highlighting
+Working with Breakpoints
+States of the Method
+The Method Editor
+Method Debugger
+Video on YouTube
+https://youtu.be/MXDcx2yplxc?si=scd-CDCJJVcBEPPP&t=40
+Method [object]
+Plant Simulation Help 11-3567
+Unpublished work. © 2026 Siemens
+
+Programming a Method
+The Method is the container for program routines which you write. To open it and type in the source code
+to be executed, double-click its icon in the Frame into which you inserted it. Then, type in your source
+code.
+Remarks
+You can access the functions of the Method 
+  on the Edit Ribbon Tab and on the Tools Ribbon Tab.
+The figure below shows the following exemplified:
+• In the Frame the Tooltip of the Method below the mouse pointer.
+• In the Method window the class breakpoint as a filled red circle 
+ .
+• In the Method window a bookmark as a filled rectangle 
+ .
+• In the Method window the instance breakpoint which we set to not active, as a white star within a red
+circle 
+ .
+• In the Method window the instance breakpoint as a red star 
+ .
+The structure of a Method is divided into several parts. If you do not need a certain part, you can delete or
+omit it.
+A Method which we might, for example, use as an Exit Control, could look like this:
+// My Tooltip. My text, my text, my text, ...
+param Sender:object
+if Sender /= void
+Programming a Method
+11-3568 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+   @.move(Sender)
+   return
+end
+var MUName:string := @.Name
+if MUName = "A"
+   @.move(1) // parts named 'A' will be moved to the first successor
+else
+   @.move(2) // parts named 'B' will be moved to the second successor
+end
+Plant Simulation highlights the different parts of the syntax of the SimTalk source code in different colors.
+Parameters
+The structure begins with the declaration of parameters with the keyword param. If you do not need any
+parameters, you do not have to declare any.
+See also
+Parameters [SimTalk]
+Declare Parameters
+Declare Default Arguments
+Programming a Method
+Plant Simulation Help 11-3569
+Unpublished work. © 2026 Siemens
+
+Return Value
+Type in the data type of the return value next if the Method is going to return a result (see Declare the
+Function Result of a Method).
+Local Variables
+Declare a local variable by typing in its name and its data type. If you do not need any local variables, you
+do not have to declare any.
+See also
+Local Variables
+Declare Local Variables in the Source Code
+Data Types in Local Variables
+Source Code
+Type in the source code which the Method executes. You can type in built-in methods, assignments,
+control structures, method calls, branches, and loops. To comment your source code type in two forward
+slashes // or two hyphens -- followed by the comment proper.
+The Method Editor shows commented source code in a different color than the source code proper.
+Note
+SimTalk normally does not distinguish between upper- and lower-casing for the names of methods,
+attributes, and read-only attributes which you type into the source code of your Method objects.
+Note
+Click Edit > Reformat to check if you typed the source code for branching and looping correctly.
+See also
+SimTalk 2.0 and SimTalk 1.0 Compared
+A Quick Tour Through SimTalk 2.0
+General Access to SimTalk
+Parameters [SimTalk]
+Colors for Syntax Highlighting
+Programming a Method
+11-3570 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Suspending Methods
+Programming a Method
+Plant Simulation Help 11-3571
+Unpublished work. © 2026 Siemens
+
+Working in the Method Window
+Double-click the icon of the Method, which you inserted into a Frame, to open its window. Then type in
+your source code, run, and debug it.
+Remarks
+To change the properties of the Class [general description] of the object, double-click it in the Class
+Library or on the tab Information Flow in the Toolbox. The method window provides access to the
+Method Editor and to the Method Debugger.
+• Click Debug 
+  on the Tools ribbon tab or press F11 to switch from the Method Editor to the Method
+Debugger.
+• Click any of the Step buttons 
+  on the debugger toolbar
+ repeatedly or once to return to the Method Editor.
+• To select a single word, double-click it. To select an entire line of source code, triple-click anywhere in
+the line.
+• To select all text in the method window, press Ctrl+A or click the mouse button four times.
+• To copy the selected text, press Ctrl+C, to paste text from the clipboard, press Ctrl+V.
+If you copy source code in the Method Editor, Plant Simulation pastes the copied source code in a
+suitable program, for example MS Word, with its color highlighting of the SimTalk syntax.
+Plant Simulation places the text, in addition to simple text, as RTF Text, on the clipboard. Suitable
+programs paste the formatted RTF text or provide options for the format to be pasted.
+Compare this example: We copy the source code of the method MyMethod. Then we paste it with the
+paste option Keep Source Formatting into our Word file. When we then copy the source code in Word,
+Plant Simulation pastes it with the saved formatting into a new Method.
+Working in the Method Window
+11-3572 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If your source code contains Class Breakpoints, Plant Simulation copies these as well when you copy
+the source code.
+Plant Simulation also applies Class Breakpoints from the class of a Method when you insert an instance
+of that Method into your simulation model.
+Working in the Method Window
+Plant Simulation Help 11-3573
+Unpublished work. © 2026 Siemens
+
+If you export the source code of the Method with the command Export to File, you can select the
+format of the text file to be exported. To save color highlighting of keywords and comments in the
+source code, select HTML Files or RichText Files.
+• To move the selected text, drag the mouse to a different location, and drop it.
+• To undo the last changes you made to the source code, click 
+  or press Ctrl+Z.
+• To restore (redo) the source code to the text it had before an undo action, click 
+  or press Ctrl+Y.
+• To insert a line break, type in a backslash \ if the source code is too long to fit on one line. This makes
+it easier to read the source code in the method window while Plant Simulation still interprets the source
+code as a single entity.
+priority:= "Urgent"
+very_long_text := "Frank Jones\
+                   Halford Lane 9\
+                   Cedar Rapids, IA 52409"
+Text := "It is \"very\" urgent." // outputs It is "very" urgent.
+• To type in a comment explaining the intention of your source code, type in two forward slashes //
+or two hyphens -- at the beginning of the line and then type in the comment. The Method displays
+comments in green.
+Comments improve the legibility of a Method and help to understand the intentions behind your source
+code. A comment is especially helpful in a long Method, when you or a colleague look at it again at a
+later point in time to extend its functionality or to debug it. We encourage you to make extensive use of
+comments. Comments do not affect the simulation speed at all!
+You can insert a comment anywhere, except within a string value of your source code. This means that
+you cannot type in a comment within the quotation marks "My string" that designate a string.
+◦ To start a one-lined comment, type in two forward slashes // and type in your remarks. This
+comment ends at the end of the line.
+◦ To start a comment that spans several lines, type in a forward slash and an asterisk /*, and type in
+your remarks. To end the comment, type in an asterisk and a forward slash */.
+// comment to the end of the line
+price := price * 1.16 // value added tax 
+/* start of the comment block
+   covering several lines
+end of the comment block */
+• To work with breakpoints in the Method window, use the following key combinations or the respective
+context menu commands. The Tools ribbon tab of the Method then activates or deactivates the
+respective buttons.
+◦ To insert or to delete Class Breakpoints, click in the area of the row markers and breakpoints with the
+middle mouse button or the mouse wheel.
+Working in the Method Window
+11-3574 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ To insert or to delete Instance Breakpoints, hold down Shift and click in the area of the row markers
+and breakpoints with the middle mouse button or the mouse wheel.
+◦ To activate the breakpoint contained in a line of source code, hold down Ctrl and click the middle
+mouse button or the mouse wheel. Instead, you can also press Ctrl+F9.
+◦ To open the dialog Breakpoint Settings, press Ctrl+B.
+◦ To show a tooltip for a breakpoint, drag the mouse pointer over it and hover.
+The tooltip always shows if the respective breakpoint is inactive.
+If you configured a Start Time and a Condition, the tooltip shows these as well.
+The Method window shows breakpoints like this:
+Symbol Description
+Designates an active class breakpoint.
+Designates a non-active class breakpoint.
+Designates an active instance breakpoint.
+Designates a non-active instance breakpoint.
+Working in the Method Window
+Plant Simulation Help 11-3575
+Unpublished work. © 2026 Siemens
+
+• To scroll horizontally in the Method Editor, hold down Shift and roll the mouse wheel.
+• To run the source code of the Method, click Run Method 
+  or press F5 or click Debug Method
+ or press F11.
+• To increase or decrease the font size in the window of the Method Editor or the Method Debugger,
+hold down Ctrl and roll the mouse wheel forward and backward.
+To decrease the font size, hold down Ctrl and roll the mouse wheel backward. If you change the font
+size with the mouse wheel, Plant Simulation uses the changed font size until you change it the next
+time or until the end of the Plant Simulation session for all Methods which you open afterward. Plant
+Simulation uses the changed font size in all open Method windows, not just in the one in which you
+rolled the mouse wheel.
+Instead of rolling the mouse wheel, you can also use these key combinations:
+Ctrl plus + (plus sign) increases the font size
+Ctrl plus 0 resets the font size to the standard size of 10 points
+Ctrl plus - (minus sign) decreases the font size
+• Select if you want to Show Line Numbers, if you want to highlight keywords and what kind of
+indentation you want to use on the Edit Ribbon Tab and on the Tools Ribbon Tab in the active instance
+of the Method.
+• Select how Plant Simulation shows SimTalk code in all Method objects under File > Preferences > >
+Editor in the Plant Simulation window.
+An asterisk (*) in the title bar of the Method window shows that the Method contains changes that have
+not been applied yet. To do so, click Apply changes 
+  on the Edit Ribbon Tab.
+The Context Menu of the Method Debugger and the Tools Ribbon Tab also provide a number of
+pertaining commands.
+Working in the Method Window
+11-3576 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Calling a Method
+You can call a Method you wrote in a number of ways. Either directly, by clicking Run or by calling it
+Method from another Method.
+Remarks
+You can call a Method:
+• By clicking Run 
+  on the Tools ribbon tab in the Method window. You have to click Apply Changes
+ first if you made changes to the source code. Pressing F5 and then F7 does the same.
+If the Method expects parameters to be passed, Plant Simulation opens the Debugger where you type in
+the parameters. You mainly use this way of calling a Method while developing your simulation model.
+• By a call from a control from within another object. An Entrance Control in a Track object may, for
+example, trigger a Method when a MU enters.
+• By a call from another Method. This only works if the name of the Method is known. If the Method is
+located in a different namespace, you also have to type in the Path to that Method.
+• By a call from the EventController. The call &method.executeIn(time) will start the designated
+Method after the time in seconds designated by the parameter of data type time has elapsed.
+• By calling a reference. If a variable of data type object contains a reference to a Method, you type in
+&Variable.execute.
+Example
+Method1                  // same namespace
+root.Frame2.Method1      // path and name
+&Method1.executeIn(8.5)  // pass to EventController, execute Method1 after 
+8.5 seconds
+Variable.execute         // call the referenced Method, note that the
+                         // object Variable has the data type object
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=wmQWlCx1uV34HBDY&t=284
+Calling a Method
+Plant Simulation Help 11-3577
+Unpublished work. © 2026 Siemens
+
+Colors for Syntax Highlighting
+Plant Simulation highlights elements in the source code in different colors according to their meaning.
+Color in
+source code Description Example
+Black Designates normal source code.
+Medium
+green
+Designates a comment you added to the source code.
+Medium
+blue
+Designates a SimTalk function.
+Purple Designates a keyword in SimTalk.
+Brown Designates a value of data type string.
+Medium red Designates an outdated function that is no longer
+supported.
+Compare Outdated SimTalk Names.
+Gray blue Designates a deprecated function which is outdated and
+should not be used.
+It is currently supported for backward compatibility, but it
+might become unsupported in the future.
+Colors for Syntax Highlighting
+11-3578 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Color in
+source code Description Example
+Compare Outdated SimTalk Names.
+Red Designates a template argument which you have to
+replace in the Method template.
+See also
+Programming a Method
+A Quick Tour Through SimTalk 2.0
+Colors for Syntax Highlighting
+Plant Simulation Help 11-3579
+Unpublished work. © 2026 Siemens
+
+Working with Breakpoints
+To work with breakpoints in the Method window, click the buttons on the Tools ribbon tab of the
+Method or select the respective context menu commands.
+Remarks
+Proceed as follows:
+• To insert or to delete a Class Breakpoint, click in the area of the row markers and breakpoints with the
+middle mouse button or the mouse wheel.
+To delete all class breakpoints, click Delete All Class Breakpoints.
+• To insert or to delete an Instance Breakpoint, hold down Shift and click in the area of the row markers
+and breakpoints with the middle mouse button or the mouse wheel.
+To delete all instance breakpoints, click Delete All Instance Breakpoints.
+• To activate the breakpoint contained in a line of source code, hold down Ctrl and click the middle mouse
+button or the mouse wheel. Instead, you can also press Ctrl+F9.
+• To open the dialog Breakpoint Settings, press Ctrl+B.
+• To show a tooltip for a breakpoint, drag the mouse pointer over it and hover.
+The tooltip always shows if the respective breakpoint is inactive.
+Working with Breakpoints
+11-3580 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you configured a Start Time and a Condition, the tooltip shows these as well.
+See also
+Tools Ribbon Tab
+Working with Breakpoints
+Plant Simulation Help 11-3581
+Unpublished work. © 2026 Siemens
+
+States of the Method
+During the simulation runs Plant Simulation shows the state of the Methods with colored rectangles in
+the display area along the upper border of their pictures in the Frame.
+Description Method shows a
+The source code contains syntax errors red rectangle
+The source code is being executed green rectangle
+Has been suspended by a stopuntil or a waituntil
+instruction
+purple rectangle
+Has been suspended by a wait instruction blue rectangle
+The source code is encrypted dark gray rectangle
+The source code is inherited dark green rectangle
+See also
+States > State Graphic [defined]
+States of the Energy Features
+States of the Frame
+States of the Transporter
+States of the Exporter
+The Method Editor
+The Method Editor
+Double-click the icon of the Method, which you inserted into a Frame, to open its window.
+Remarks
+To change the properties of the Class [general description] of the object, double-click it in the Class
+Library or on the tab Information Flow in the Toolbox. It provides access to the Method Editor and to the
+Method Debugger.
+States of the Method
+11-3582 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To edit the 3D properties of the object in the 3D model, select the object and press the spacebar. Then
+change the respective settings in the dialog box Edit 3D Properties.
+See also
+Edit Ribbon Tab [Method]
+Tools Ribbon Tab
+Context Menu of the Method
+Drag-and-Drop in the Method Editor
+Method Debugger
+Programming a Method
+Working in the Method Window
+Colors for Syntax Highlighting
+Edit Ribbon Tab
+Edit Ribbon Tab [Method]
+The Edit ribbon tab provides commands for editing the source code of your Method.
+Edit Ribbon Tab
+Plant Simulation Help 11-3583
+Unpublished work. © 2026 Siemens

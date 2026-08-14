@@ -1,0 +1,250 @@
+Amount [SimTalk] - AGVPool
+Sets the amount of AGVs which the AGVPool designated by <Path> creates.
+Remarks
+Plant Simulation creates the specified Amount of AGVs during the init phase of the simulation run.
+Type
+Attribute
+Syntax
+<Path>.Amount:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyAGVPool.Amount := 2 
+See also
+Amount [text box] - AGVPool
+AGV [SimTalk]
+Marker
+Marker
+Use the object Marker for setting waypoints in your simulation model along which the Automated Guided
+Vehicle drives from the AGVPool to its destination.
+Image
+Amount [SimTalk] - AGVPool
+11-3464 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+With the setting Default Curve Radius/DefaultCurveRadius you can set the size of the roundings at the
+Markers.
+A Default Curve Radius of 0 makes the AGV rotate on the spot instead of driving a curve.
+Note
+When you insert Markers into your model, make sure that the Markers are aligned. This prevents Plant
+Simulation from computing unnecessary roundings between the Markers. Misaligned Markers might
+occur if you inserted Markers into your model while Show Grid was off.
+Note
+If a standing Transporter cannot drive to the first Marker using the specified Default Curve Radius, the
+Transporter rotates on the spot, if possible, and then drives in a straight line toward the Marker.
+The Marker can be directional or omnidirectional. You can switch between these two states with the
+check box Use Rotation of Marker.
+Note
+To show or hide a Marker, click 
+  Show Connections.
+Add the Object to the Simulation Model
+To add the object Marker to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Resources > Marker on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Marker
+Plant Simulation Help 11-3465
+Unpublished work. © 2026 Siemens
+
+See also
+Directional and Omidirectional Markers
+Dialog Box of the Marker
+Model an Automated Guided Vehicle System (AGVS)
+Marker
+11-3466 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Directional and Omidirectional Markers
+The Markers in your simulation model can be directional or omnidirectional.
+Remarks
+You can switch between these two states with the check box Use Rotation of Marker.
+• The AGV does not drive through an inserted omnidirectional Marker but turns in front of the inserted
+Markers toward the next Marker. The icon of an omnidirectional marker looks like this 
+ .
+• The AGV can drive through directional Markers in both directions. For selecting the direction, Plant
+Simulation uses position of the previous Marker in the sequence of Markers.
+Plant Simulation computes the route by means of a Marker with the 90-degree angle as follows:
+◦ If, for example, the previous Marker is located above the Marker with the 90-degree angle, the AGV
+drives through the Marker with the 90-degree angle from top to bottom.
+◦ If the previous Marker is located below the Marker with the 90-degree angle, the AGV drives through
+the Marker with the 90-degree angle from bottom to top.
+◦ If the previous Marker is located exactly at the height of the Marker with the 90-degree angle, Plant
+Simulation evaluates the current direction of the AGV.
+If the front of the AGV points up, the AGV drives through the Marker with the 90-degree angle from
+top to bottom.
+If the front of the AGV points down, the AGV drives through the Marker with the 90-degree angle
+from bottom to top.
+If the front of the AGV points exactly to the center of the Marker with the 90-degree angle, the AGV
+drives through the Marker with the 90-degree angle from top to bottom.
+For Markers with other angles Plant Simulation proceeds accordingly.
+For a directional Marker with the default angle of 0° the AGV drives through the markers and then turns
+on the marker around the angle you set in the direction of the next marker. The icon of a directional
+marker looks like this 
+ .
+Directional and Omidirectional Markers
+Plant Simulation Help 11-3467
+Unpublished work. © 2026 Siemens
+
+For a directional Marker with another than the default angle the AGV drives toward the Marker at the
+angle you entered, crosses it, and leaves it at the designated angle. In the example below we used an
+angle of 90°. The icon of a directional marker with an angle of 90° looks like this 
+ .
+See also
+Marker
+Dialog Box of the Marker
+Dialog Box of the Marker
+Double-click the icon of the Marker to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+Dialog Box of the Marker
+11-3468 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-3469
+Unpublished work. © 2026 Siemens
+
+Use Rotation of Marker [check box]
+To make the AGV use the rotation of the Marker on its way to its destination, select this check box.
+Remarks
+Select the check box, to make the AGV drive across the Marker and rotate on the Marker with the defined
+angle in the direction of the next Marker. The graphic of a directional marker, which you inserted into the
+Frame, looks like this 
+ .
+For the default angle of 0° it looks like this:
+If you type in a rotation angle, for example 90°, it looks like this:
+You can set the rotation angle in the dialog Edit 3D Properties of the Marker on the tab Transformation
+under Settings for the Rotation.
+Use Rotation of Marker [check box]
+11-3470 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Clear the check box 
+  to make the AGV not drive across the inserted Markers but
+rotate in front of the Marker toward the next Marker. The graphic of an omnidirectional marker, which you
+inserted into the Frame, looks like this 
+ .
+SimTalk
+UseRotationOfMarker [SimTalk]
+See also
+Model an Automated Guided Vehicle System (AGVS) > Cover a Route Along Omnidirectional Markers
+Model an Automated Guided Vehicle System (AGVS) > Cover a Route Along Directional Markers
+Use Rotation of Marker [check box]
+Plant Simulation Help 11-3471
+Unpublished work. © 2026 Siemens
+
+Video on YouTube
+https://youtu.be/PYXYutlaGOs?si=6CKYE1f_nLtIVThg&t=924
+Use Rotation of Marker [check box]
+11-3472 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Arrival Control [Marker]
+Modifies the built-in behavior of the object. The object calls the Arrival Control as soon as the Transporter
+driving freely within the area arrives at the Marker. In the Arrival Control you can program actions that
+you want to take when an AGV arrives at the Marker or is closest to the Marker. You might provide your
+fleet management software with feedback about the position of the AGV.
+Remarks
+For an omnidirectional Marker Plant Simulation executes the control once the Transporter driving freely
+within the area arrives at the half-way point of the curvature/fillet at the Marker.
+If you did not enter a Method, the value of the control is VOID.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+Arrival Control [Marker]
+Plant Simulation Help 11-3473
+Unpublished work. © 2026 Siemens
+
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+SimTalk
+ArrivalCtrl [SimTalk]
+See also
+Select Object [for controls]
+Video on YouTube
+https://youtu.be/PYXYutlaGOs?si=FNgErAj2FbcGgyhv&t=409
+Arrival Control [Marker]
+11-3474 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-3475
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-3476 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+View Menu
+Plant Simulation Help 11-3477
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides these menu commands:
+Edit Controls
+Edit Observers
+Tools Menu
+11-3478 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Marker
+Methods of the Marker
+The Marker provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+Plant Simulation Help 11-3479
+Unpublished work. © 2026 Siemens

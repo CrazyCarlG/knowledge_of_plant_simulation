@@ -1,0 +1,1178 @@
+Working with Objects in the Frame
+Work with Objects
+Plant Simulation provides a number of ways for working with the objects in the scene.
+You can:
+• Insert Objects into the Scene
+• Select Objects
+• Simultaneously Paste Multiple Copies
+• Connect Objects with the Connector
+• Move an Object With Keyboard Keys
+• Move an Object With the Mouse
+• Rotate Objects in the Frame
+• Scale Objects in the Frame
+• Edit Grouped Graphics
+• Set the Material of a Graphic
+• Use a Different Graphic for an Object
+• Add a JT Layout File to Your Simulation Model
+• Work with Length-oriented Objects
+• Set the Capacity of a Material Flow Object
+• Set How Plant Simulation Shows an Object
+• Adapt the 3D Model to the 2D Model
+• Create Your Own Objects
+Compare Work with the Scene
+Compare Control Your View
+Compare Work with the Grid
+Compare Work with Animation Paths
+Compare Modeling Hierarchically [in 3D]
+Back to Visualizing the Material Flow
+Working with Objects in the Frame
+10-920 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insert Objects into the Scene
+You can insert objects into the 3D scene from the Toolbox or the Class Library. They contain the same
+objects by default.
+Proceed as follows:
+• To insert an object from the Toolbox, click the object you want to insert with the left mouse button and
+drag the mouse to the position in the 3D window at which you want to place the object. Click the mouse
+button to insert the object. Cancel inserting by clicking the right mouse button or by pressing Esc.
+• To insert an object from the Class Library, click the object you want to insert with the left mouse
+button, hold down the mouse button and drag the mouse to the position in the 3D window at which
+you want to place the object. Then, release the mouse button. As long as you do not release the mouse
+button, Plant Simulation shows a preview of the object in the 3D window. You can cancel inserting by
+releasing the mouse outside of the 3D window.
+• To insert an object which you copied with Home > Copy or with Ctrl+C to the Clipboard, press Ctrl+V in
+the 3D window to paste the copy into the object opened in the 3D window. Plant Simulation pastes the
+copy at the same position which the copied object takes within its location.
+To insert an object from the Toolbox:
+• If you want the object to snap to the closest intersection of two grid lines of where you click the mouse
+button, click 
+  on the Edit ribbon tab.
+If you want to place the object freely, do not click 
+ . Plant Simulation snaps the object according to
+the settings for aligning to the grid or for aligning the object to the grid and/or to objects.
+Note
+When you insert Markers into your model, make sure that the Markers are aligned. This prevents
+Plant Simulation from computing unnecessary roundings between the Markers. Misaligned Markers
+might occur if you inserted Markers into your model while Show Grid was off.
+• Click the object you want to insert with the left mouse button to select it. Then, drag the mouse to the
+location where you want to place it and release and click the mouse button.
+• If need be, you can fine-tune the location of the object in the dialog 3D Properties that clicking 
+  on
+the Home ribbon tab opens.
+• To open the dialog of the simulation object, click the button in the bottom left corner in the dialog 3D
+Properties or double-click the object in the 3D scene. Modify settings here.
+Insert Objects into the Scene
+Plant Simulation Help 10-921
+Unpublished work. © 2026 Siemens
+
+To insert the same object from the Toolbox into a Frame several times, one after the other without
+interruption, hold down Ctrl and select the object. The object remains selected in the Toolbox after
+inserting it and you can thus insert several of these objects one after the other. You can exit this mode by
+clicking the right mouse button or by pressing Esc.
+After you inserted objects into your simulation model, you can align them to the grid 
+ , make them
+snap to the grid 
+ , make them snap to other objects 
+ , or arrange them on the grid. To be
+able to do so, make sure that Show Grid 
+  is on.
+See also
+Move an Object With the Mouse
+Work with the Grid
+Back to Work with Objects
+Select Objects
+You can select objects in the 3D window by clicking it with the left mouse button.
+You can:
+• Select a simulation object, which is directly located in the object that is opened in the window.
+Plant Simulation shows selected simulation objects in green.
+• Select an animatable object, which belongs to the simulation object that is opened in the window.
+Plant Simulation shows selected animatable objects in purple.
+• Select a graphic, which visualizes the simulation object that is opened in the window.
+Plant Simulation shows selected graphics in yellow-green.
+• Select a displayed manipulator.
+• Select two or more items by holding down the Shift or the Ctrl key and clicking the desired elements
+with the left mouse button.
+• Select several items by dragging a marquee around the desired objects:
+◦ When you do not hold down the Shift or the Ctrl key, the selection with a marquee cancels an
+existing selection.
+◦ When you hold down the Shift or the Ctrl key, the new selection will be added to the existing
+selection.
+• Press Ctrl+A to select all objects in the scene.
+Select Objects
+10-922 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can modify the selection with the plus-key (+) and the minus key (-), compare the Quick Reference
+Card > While Modeling.
+To show objects, for example in the statistics report, in the sequence in which you selected them, hold
+down Shift and click the objects one after the other. In the example below we first clicked Station1, then
+Station2, and then Station3.
+Compare Move an Object With the Mouse
+Back to Work with Objects
+Simultaneously Paste Multiple Copies
+At times you may want to paste more than one copy of the object you copied. You might, for example,
+want to create a Store with a number of shelves.
+To paste multiple copies of an object:
+• Insert the object you need, for example a Station, into the scene.
+• Select the Station and copy it by pressing Ctrl+C.
+• Click Paste > Multiple Paste on the Home ribbon tab.
+• Enter the number of Stations you would like to paste into the combo box Count. We entered 4.
+Simultaneously Paste Multiple Copies
+Plant Simulation Help 10-923
+Unpublished work. © 2026 Siemens
+
+• Enter the Offset of the copies from the object you originally placed. Our Station is 2.0 meters wide:
+An offset of 2.0 meters on the X-axis pastes 4 copies of the Station with this Offset to the original
+toward the right. Note the initial predefined offset toward the right and downwards. We implemented
+this to prevent Plant Simulation from pasting the copies one on top of the other.
+Click Paste. If need be, move the pasted copies to where you need them.
+A Number of Copies of 4 and an Offset of 2.0 meters on the X-axis and on the Z-axis pastes 4 copies
+to the right and up of the original Station.
+Click Paste. If need be, move the pasted copies to where you need them.
+Back to Work with Objects
+Simultaneously Paste Multiple Copies
+10-924 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Move Objects in the Frame
+Move Objects in the Frame
+Plant Simulation provides several ways to move an object in the scene.
+You can:
+• Move an Object With the Mouse
+• Move an Object With Keyboard Keys
+• Move an Object Precisely
+Back to Work with Objects
+Move an Object With the Mouse
+You can manipulate an object by clicking it with the left mouse button and dragging the mouse.
+When you show the grid, manipulating the object relates to the grid plane. When you hide the grid,
+manipulating relates to the view plane.
+• To move the object freely on the grid plane, click the left mouse button, and drag the mouse.
+• To move the object vertically up or down, hold down the Alt/Alt Gr key and the left mouse button,
+and drag the mouse.
+Note
+If you are working with a Frame with visible content, the order of pressing the Alt/Alt Gr key and
+clicking the mouse button determines what 3D does: When you hold down the Alt/Alt Gr key before
+you click the mouse, you select simulation objects located within the Frame. In any case, holding the
+Alt/Alt Gr key down moves the selected object vertically up or down.
+If your keyboard does not have the Alt Gr key, hold down Ctrl-right+Alt-right instead.
+Compare Move an Object With Keyboard Keys
+Compare Move an Object Precisely
+Compare Rotate an Object Precisely
+Compare Select Objects
+Back to Move Objects in the Frame
+Move Objects in the Frame
+Plant Simulation Help 10-925
+Unpublished work. © 2026 Siemens
+
+Move an Object With Keyboard Keys
+Instead of using the mouse to manipulate the selected object, you can also hold down the Ctrl or Shift
+keys and press one of the arrow keys on the keyboard.
+To move the selected object on the grid plane, press the designated arrow key:
+• Press the left arrow to move the object to the left by 10% of the distance set in the dialog Edit Grid and
+Base Plate Settings under Grid Lines > Select for Snapping.
+Press the left arrow and hold down Shift to move the object to the left by the distance set in the dialog
+Edit Grid and Base Plate Settings under Grid lines > Select for Snapping.
+• Press the right arrow to move the object to the right by 10% of the distance set in the dialog Edit Grid
+and Base Plate Settings under Grid lines > Select for Snapping.
+Press the right arrow and hold down Shift to move the object to the right by the distance set in the
+dialog Edit Grid and Base Plate Settings under Grid lines > Select for Snapping.
+• Press the up arrow to move the object upward by 10% of the distance set in the dialog Edit Grid and
+Base Plate Settings under Grid lines > Select for Snapping.
+Press the up arrow and hold down Shift to move the object upward by the distance set in the dialog
+Edit Grid and Base Plate Settings under Grid lines > Select for Snapping.
+• Press the down arrow to move the object downward by 10% of the distance set in the dialog Edit Grid
+and Base Plate Settings under Grid lines > Select for Snapping.
+Press the down arrow and hold down Shift to move the object downward by the distance set in the
+dialog Edit Grid and Base Plate Settings under Grid lines > Select for Snapping.
+To move the selected object vertically up or down, hold down Ctrl and press the designated arrow key:
+• Hold down Ctrl and press the up arrow to move the object upward in the z-direction by 10% of the
+distance set in the dialog Edit Grid and Base Plate Settings
+Hold down Shift and Ctrl and press the up arrow to move the object upward in the z-direction by the
+distance set in the dialog Edit Grid and Base Plate Settings under Grid lines > Select for Snapping.
+• Hold down Ctrl and press the down arrow to move the object downward in the z-direction by 10%
+of the distance set in the dialog Edit Grid and Base Plate Settings under Grid lines > Select for
+Snapping.
+Hold down Shift and Ctrl and press the down arrow to move the object downward in the z-direction
+by the distance set in the dialog Edit Grid and Base Plate Settings under Grid lines > Select for
+Snapping.
+To rotate the selected object, hold down Ctrl and press the designated arrow key:
+• Hold down Ctrl and press the left arrow to rotate the object counterclockwise by 1°.
+Hold down Shift and Ctrl and press the left arrow to rotate the object counterclockwise by 45°.
+Move an Object With Keyboard Keys
+10-926 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Hold down Ctrl and press the right arrow to rotate the object clockwise by 1°.
+Hold down Shift and Ctrl and press the right arrow to rotate the object clockwise by 45°.
+Compare Move an Object With the Mouse
+Compare Edit Length-oriented Objects with Keyboard Keys
+Back to Move Objects in the Frame
+Move an Object Precisely
+At times manually moving an object with the mouse or with keyboard keys will not be accurate enough for
+your purposes. Then, you can enter exact values into a dialog.
+To do this, enter exact values into the text boxes in the dialog 3D Properties > Tab Transformation to
+fine-tune the position, the rotation, and the scale of the selected object:
+To precisely move an object:
+• Select the object you would like to move.
+• Press the spacebar or click 
+  on the Home ribbon tab and click the tab Transformation.
+• To move the object to the right on the x-axis, click in the text box and roll the mouse wheel forward
+to increase the position in steps of 0.1 meters. Hold down Shift and roll the mouse wheel forward to
+increase the position in steps of 1 meter.
+To move the object to the left on the x-axis, click in the text box and roll the mouse wheel backward
+to decrease the position in steps of 0.1 meters. Hold down Shift and roll the mouse wheel forward to
+decrease the position in steps of 1 meter.
+Move an Object Precisely
+Plant Simulation Help 10-927
+Unpublished work. © 2026 Siemens
+
+• Use the same procedure for the y-axis.
+• Use the same procedure for the z-axis.
+• Click Apply to apply your change and to see if the meet your requirements.
+• Click OK once you’re satisfied with the results.
+Compare Edit Grouped Graphics
+Back to Move Objects in the Frame
+Rotate Objects in the Scene
+Rotate Objects in the Frame
+Plant Simulation provides several ways of rotating an object in the 3D window.
+You can:
+• Rotate an Object with Keyboard Keys
+• Rotate an Object Precisely
+Rotate an Object with Keyboard Keys
+When you manually rotate an object around an axis by holding down Shift+Ctrl and pressing the left
+or the right arrow on the keyboard, 3D uses the settings under Rotation in the dialog 3D Properties >
+Transformation > Settings for the Rotation. You can either use the default settings or define the settings
+that meet your modeling needs.
+To manually rotate an object in the 3D window with the settings you define:
+• Click 
+  on the View ribbon tab to show the grid.
+• Click the object you want to rotate.
+• To rotate the object by 1° to the left, hold down Ctrl and press the left arrow.
+To rotate the object by 1° to the right, hold down Ctrl and press the right arrow.
+• To rotate the object by 45° to the left, hold down Ctrl and the Shift and press the left arrow.
+To rotate the object by 45° to the right, hold down Ctrl and Shift and press the right arrow.
+• To rotate the object by 10° on the x-axis to the left, press 7 on the numeric keypad.
+To rotate the object by 10° on the x-axis to the right, press 8 on the numeric keypad.
+• To rotate the object by 10° on the y-axis to the left, press 4 on the numeric keypad.
+To rotate the object by 10° on the y-axis to the right, press 5 on the numeric keypad.
+Rotate Objects in the Scene
+10-928 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To rotate the object by 10° on the z-axis to the left, press 1 on the numeric keypad.
+To rotate the object by 10° on the z-axis to the right, press 2 on the numeric keypad.
+To define settings for manually rotating an object:
+• Select 3D Properties > Transformation > Settings for the Rotation on the Home ribbon tab.
+• Define the settings how 3D rotates the object in the text boxes next to Axis.
+You can either click one of the buttons to rotate the object around that axis, or you can set the axis
+yourself.
+• To rotate the object around an arbitrary axis, defined by the x-component, y-component and z-
+component of this axis:
+Enter a value for the x-component of the rotation axis.
+Enter a value for the y-component of the rotation axis.
+Enter a value for the z-component of the rotation axis.
+• Then, click Apply to apply these settings, so that they are active when you rotate the object.
+Note
+Transformations of an object, such as moving, rotating or scaling it, in one 3D window are not
+immediately updated in all other 3D windows, but only after you deselect the changed object in its
+3D window.
+Back to Rotate Objects in the Frame
+Rotate an Object Precisely
+At times manually rotating an object with keyboard keys will not be accurate enough. Then, you can
+enter exact values into the text boxes in the dialog 3D Properties > Tab Transformation to fine tune the
+position, the rotation, and the scale of the selected object.
+To precisely rotate an object on the Tab Transformation:
+• Click it with the left mouse button to select it.
+Rotate an Object Precisely
+Plant Simulation Help 10-929
+Unpublished work. © 2026 Siemens
+
+• Press the spacebar or click 
+  on the Home ribbon tab.
+• To rotate the object around an arbitrary axis, defined by its x-component, y-component and z-
+component:
+Enter a value for the x-component of the rotation axis.
+Enter a value for the y-component of the rotation axis.
+Enter a value for the z-component of the rotation axis.
+• Type in the offset to the center of the object for the rotation around the x-axis, the y-axis, and the z-axis.
+Normally you do not type in another value but apply the presets of 0, 0, 0. This rotates the object around
+its center.
+• Enter the angle of rotation in degrees into the text box.
+• To apply your changes if you are satisfied with the results of your changes, click Apply.
+Transformations of an object, such as moving, rotating or scaling it, in one 3D window are not
+immediately updated in all other 3D windows, but only after you deselect the changed object in its
+3D window.
+Back to Rotate Objects in the Frame
+Scale Objects in the Frame
+You can scale objects in the Frame containing your simulation model.
+To scale an object in the 3D window, type exact values into the text boxes in the dialog 3D Properties >
+Tab Transformation > Scale to fine tune the position, the rotation, and the scale of the selected object:
+• Click it with the left mouse button to select it.
+Scale Objects in the Frame
+10-930 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Press the spacebar or click 
+  on the Home ribbon tab.
+• Select Uniform to scale the object with the same factor for all three dimensions and to not distort it
+while scaling it. This automatically enters the value you type into one text box into the remaining two
+text boxes. This way you do not have to manually type the same value into each text box again and
+again.
+Type in a value into the text boxes for the x-axis, the y-axis and the z-axis to scale the object on the
+respective axis with that factor. Typing 0.5, for example, halves the size of the object on the axis for
+which you typed it, typing in 2 doubles its size on that axis.
+Note
+You can only type in non-zero values.
+• Clear Uniform to scale the object with the factors you type in for the different dimensions. When you
+type in different values, it does distort the object, for example lengthens or shortens it.
+Type a value into the text boxes for the x-axis, the y-axis and the z-axis to scale the object with that
+factor on the respective axis.
+• Click Set Dimensions. Then type in the physical size of the scaled object considering the graphics of the
+object.
+Scale Objects in the Frame
+Plant Simulation Help 10-931
+Unpublished work. © 2026 Siemens
+
+Not scaled Scale Uniform 1.5
+Scale Not
+Uniform,
+X=1.5
+Set Dimensions
+Uniform 0.5
+Set Dimensions
+Not Uniform, X/
+Y=1, Z=0.5
+Transformations of an object, such as moving, rotating or scaling it, in one 3D window are not
+immediately updated in all other 3D windows, but only after you deselect the changed object in its
+3D window.
+Back to Work with Objects
+Work with Length-oriented Objects
+Work with Length-oriented Objects
+The length-oriented objects use their length and their dimensions during the simulation.
+Plant Simulation provides these length-oriented objects: The Conveyor, the Track, the TwoLaneTrack, the
+Footpath, the Container, the Transporter, and the Pipe.
+Plant Simulation generates the graphics automatically according to their settings for these objects and for
+the Turnplate, the Turntable, the Converter, the AngularConverter, and the Store.
+To create a class from a Conveyor, Turntable, Track, TwoLaneTrack, or FootPath, model this class in the
+Frame, and then drag this object from the Frame to the Class Library. You can then insert this class into
+the active and into any other simulation model.
+You can:
+• Insert Curved and Straight Segments
+• Auto-connect Length-oriented Objects
+• Draw Straight and Curved Segments with a 90° Angle
+• Draw Straight and Curved Segments without Fixed Values
+• Change the Shape of a Segment
+• Create a Curved Object with SimTalk Commands
+Work with Length-oriented Objects
+10-932 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Reuse the Segments of a Length-oriented Object
+• Keyboard Shortcuts for Inserting Straight and Curved Segments of an Object
+• Edit Length-oriented Objects with the Mouse
+• Edit Length-oriented Objects with Keyboard Keys
+• Edit Length-oriented Objects Precisely
+• Model Differences in Height Between Conveying Elements
+• Model a Spiral Conveyor
+Compare Generated and Non-Generated Graphics
+Compare Change the Shape of a Segment
+Back to Work with Objects
+Insert Curved and Straight Segments
+You can insert a Track, a TwoLaneTrack, a Conveyor, a FootPath, or a Pipe as a sequence of curved and
+straight segments into the Frame that contains your simulation model.
+Proceed as follows:
+• Zoom the Frame to a size that it can accommodate the object you want to insert.
+• Click the length-oriented object in the Toolbox, and drag the mouse to the Frame window and click the
+point where the object is to start. This opens the dialog Edit Parameters of Curve.
+To draw a straight segment, click a second time at the position at which you want the end of the
+segment to be. To draw a curved segment, hold down Ctrl, drag the mouse down to draw the curve
+downward, and click the left mouse button once to set the curve.
+Insert Curved and Straight Segments
+Plant Simulation Help 10-933
+Unpublished work. © 2026 Siemens
+
+To draw the next straight segment of the line, release Ctrl, drag the mouse to the end point of the line
+and click the left mouse button once.
+To draw a continuous sequence of straight and curved segments, for example for continuous conveyors,
+click an existing curved or straight end segment to start a new segment. Plant Simulation then uses the
+end coordinate of the first sequence as the start coordinate of the second sequence and automatically
+connects the two. You can prevent this by holding down Alt.
+Click the right mouse button once or click Finish 
+  to exit Insert mode and to insert the curve
+you drew. This also closes the dialog Edit Parameters of Curve.
+Press Esc or click Abort 
+  to terminate curve mode without inserting the curve.
+Click Delete Last Point 
+  to delete the most recently inserted anchor point.
+Insert Curved and Straight Segments
+10-934 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+When the grid is active 
+ , Plant Simulation places the points that make up the line onto grid points,
+provided this is possible. For this, fixed values take precedence. When you type in a radius of 2.5 meters,
+for example, the end point of the arc will not be placed onto a grid point. This results in a non-tangential
+transition between the end of the arc and the end of the next straight segment, which will be placed
+onto a grid point again.
+When you insert a straight segment after a curved segment, Plant Simulation always enforces a
+tangential angle of 0°.
+To insert the length-oriented curved object with fixed values, type them into the text boxes in the dialog
+and select the check box fixed of the respective item to tell Plant Simulation that you want to use these
+fixed values.
+◦ For a line segment, you can type in the Line Length in world coordinates and the Tangential Angle
+as compared to the previous segment.
+Insert Curved and Straight Segments
+Plant Simulation Help 10-935
+Unpublished work. © 2026 Siemens
+
+For both segment types you can type in an Anchor Point Height. It determines the height, i.e., the
+distance from the floor, to the next anchor point. It is, for example, useful when you model a ramp for
+material handling equipment.
+◦ For a curved segment, you can type in the Arc Length, its Radius, and its Curve Angle in degrees as
+compared to the previous segment.
+The Curve Angle is the angle that is formed by the radius between the start point A and the end
+point B of the arc segment. A positive number designates a clockwise angle. A negative number a
+counterclockwise angle.
+Insert Curved and Straight Segments
+10-936 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+When you define a curve angle of 360°, Plant Simulation automatically connects the end point the
+curve with its starting point.
+◦ For a following Straight Segment you can type in the Tangential Angle and the Line Length.
+The tangential angle designates the change in the tangential direction. Type in a positive number
+for a clockwise angle. Type in a negative number for a counterclockwise angle. Normally the
+tangential angle is relative to the previous direction of the curved segment. For the first segment the
+tangential angle is the angle to the positive x direction.
+When you insert a straight segment after a curved segment, Plant Simulation always enforces a
+tangential angle of 0 degrees.
+Insert Curved and Straight Segments
+Plant Simulation Help 10-937
+Unpublished work. © 2026 Siemens
+
+Plant Simulation creates the start tangential angle as follows:
+After clicking an existing object with the mouse, Plant Simulation applies the angle from the previous
+object as start tangential angle. This also applies to icons.
+When setting a straight segment by a mouse click on an existing object, Plant Simulation uses,
+depending on the mouse position, either the angle of the object or +-90 degrees to this angle as the
+start tangential angle.
+When setting a curved segment without clicking an existing object, Plant Simulation proceeds like
+this: When you type in an angle for straight segments, it uses this angle as the start tangential
+angle. When you hold down Ctrl, Plant Simulation uses, depending on the mouse position, 0, +-90 or
+180 degrees as the start tangential angle.
+When you insert a length-oriented curved object, Plant Simulation shows the extrusion path of this object.
+The path of the polycurve initially just consists of the starting point:
+• Either the insertion point, i.e., the position on the grid on which you click or
+• The end point of the picked object, which is its exit projected onto the XY layer.
+• Plant Simulation shows a movable line, which connects a manipulator at the starting point with another
+manipulator attached to the cursor.
+• You insert straight path segments by clicking the left mouse button. You insert curved path segments by
+holding down Shift and by clicking the left mouse button.
+• You terminate curve mode by clicking the right mouse button or by pressing Esc.
+• Plant Simulation will not insert a length-oriented object, if the curved object does not consist of at least
+two segments/points after you finished or terminated inserting the curved object.
+Compare Add Animations and Interactions to the Simulation Objects
+Compare Edit a Curved Path with the Mouse
+Back to Work with Length-oriented Objects
+Insert Curved and Straight Segments
+10-938 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Auto-connect Length-oriented Objects
+When you define a length-oriented object and click another object with the mouse to set that object as
+the successor of the length-oriented object, Plant Simulation attempts to automatically bridge the gap
+from the current end of the length-oriented object to the successor with additional straight and/or curved
+segments.
+How Plant Simulation Bridges a Gap
+To bridge the gap, Plant Simulation tries to create additional line and/or curve segments so that the
+resulting length-oriented object connects its predecessor object and its successor object tangentially.
+The predecessor and the successor can be a length-oriented object, a point-oriented object, or no object at
+all. The direction to be continued tangentially is determined by the last/first segment of a length-oriented
+predecessor/successor, the X-Axis of a point-oriented successor, or the X-Axis of the scene.
+Plant Simulation automatically corrects any existing difference in height in the last segment of the
+constructed length-oriented object.
+Plant Simulation can only close a gap under the following conditions:
+• The Curve Angle in the Line/Arc Parameters dialog is fixed to 90 degrees and the Radius is fixed as
+well.
+• The objects, which you want to connect, are aligned in parallel or perpendicular to each other.
+• The gap can be closed with maximally two right-angled curve segments.
+• The objects, which you want to connect, are not rotated around any other axis than the z-axis.
+Auto-connect Length-oriented Objects
+Plant Simulation Help 10-939
+Unpublished work. © 2026 Siemens
+
+Meeting the above conditions, Plant Simulation can bridge a gap in the following cases. The objects do not
+necessarily have to be aligned to the grid:
+• The objects, which you want to connect, are aligned to each other and point in the same direction.
+• The objects, which you want to connect, are positioned parallel to each other and point in the same
+direction. Both the tangential and vertical distance of the connection points is at least the double radius
+of the Line/Arc Parameters.
+• The objects, which you want to connect, are positioned parallel to each other but point in the opposite
+direction. The vertical distance of the connection points is at least the double radius of the Line/Arc
+Parameters.
+• The objects, which you want to connect, are placed with a right angle to each other. Both the tangential
+and vertical distance of the connection points is at least the radius of the Line/Arc Parameters.
+Auto-connect Length-oriented Objects
+10-940 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If Plant Simulation cannot close the gap under these conditions, it suggests a straight line pointing directly
+to the connection point of the successor object, provided you did not hold the Ctrl key down.
+You can then decide what you want to do:
+• Connect the length-oriented object with segments along the suggested polyline by clicking the
+successor object.
+• Move the cursor away from the successor object and manually define separate tangentially prolongating
+segments, compare Insert Curved and Straight Segments.
+How to Bridge and Close the Gap
+If Plant Simulation can bridge and close the gap with the picked successor object, then it shows the
+computed polyline as a preview as soon as you drag the cursor over the successor object.
+Click the successor, to close the gap and establish the connections.
+Auto-connect Length-oriented Objects
+Plant Simulation Help 10-941
+Unpublished work. © 2026 Siemens
+
+Back to Work with Length-oriented Objects
+Draw Straight and Curved Segments with a 90° Angle
+You can draw a length-oriented curved object with a straight segment,and a 90° curve followed by another
+straight or curved segment.
+Proceed as follows:
+• Click the icon 
+  if the Conveyor in the Toolbox.
+• Drag the mouse to the Frame window to the point where you would like to start the straight segment of
+the line.
+• Click the left mouse button once to set the starting point of the line.
+Draw Straight and Curved Segments with a 90° Angle
+10-942 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation opens the dialog Edit Parameters of Curve. Here, we defined default settings for
+inserting a curve with a 90° angle, i.e., a fixed tangential angle of 0°, a fixed curve angle of 90° and a
+fixed radius of 2 meters.
+You can either apply these values or you can type in a different radius to make the curve wider. To do so,
+drag the mouse to the dialog and type another value into the text box.
+Note
+Plant Simulation saves the last set of settings in the dialog, so that you can re-use them the next time
+you insert a curved object.
+To draw the curve, drag the mouse back to the Frame window, hold down Ctrl, drag the mouse down to
+draw the curve downward, and click the left mouse button once to set the curve.
+To draw a curve pointing to the left: Drag the mouse back to the Frame window and hold down Ctrl.
+Make sure that Fixed for the Curve angle of the arc segments is activated and type in 90. Then drag the
+mouse down to draw the curve downward, and click the left mouse button once to set the curve.
+Draw Straight and Curved Segments with a 90° Angle
+Plant Simulation Help 10-943
+Unpublished work. © 2026 Siemens
+
+• To draw the next straight segment of the line, release Ctrl, drag the mouse to the end point of the line
+and click the left mouse button once.
+• Click the right mouse button once to exit Insert mode. This also closes the dialog Edit Parameters of
+Curve.
+Draw Straight and Curved Segments with a 90° Angle
+10-944 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+When the grid is active 
+ , Plant Simulation places the points that make up the line onto grid points,
+provided this is possible. For this fixed vales take precedence. When you type in a radius of 2.5 meters,
+for example, the end point of the arc will not be placed onto a grid point. This results in a non-tangential
+transition between the end of the arc and the end of the next straight segment, which will be placed onto
+a grid point again.
+To get a tangential transition, you can:
+• Deactivate Snap to Grid by holding down Alt, when you click the left mouse button to set the end point
+of the second straight segment.
+• Type in a Tangential angle of 0 degrees and set it as fixed for this straight segment. Then deactivate
+this setting for the following straight segments.
+Draw Straight and Curved Segments with a 90° Angle
+Plant Simulation Help 10-945
+Unpublished work. © 2026 Siemens
+
+To draw a curved segment without using fixed values, you have to click the left mouse button three times.
+To activate curve mode, hold down Ctrl, when you click the mouse button the first time!
+• The first mouse click sets the starting point.
+• The second mouse click sets the radius.
+• The third mouse click sets the arc length or the curve angle respectively.
+Back to Work with Length-oriented Objects
+Draw Straight and Curved Segments without Fixed Values
+You can draw a straight and a curved segment of a length-oriented curved object without using fixed
+values.
+Proceed as follows:
+• To set the starting point of the segment, click the left mouse button once. You will notice that Plant
+Simulation attaches the icon of the Connector to the front end of the cursor 
+  in the Frame window.
+The text boxes now show the actual values of the line segment.
+• Drag the mouse in a direction of your choice and as far as you want the segment to be long. Click the
+left mouse button again to set the first anchor point. Now, Plant Simulation draws the segment with the
+settings you selected.
+Draw Straight and Curved Segments without Fixed Values
+10-946 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Continue this until the object has the length and the shape you want.
+• To set the end point of the segment, and to exit Insert mode, click the right mouse button.
+To draw a curved segment of a length-oriented curved object without using fixed values:
+• To set the starting point of the curved segment, hold down Ctrl and click the left mouse button once.
+You will notice that the text boxes now show the actual values of the curve segment.
+• To set the Tangential Angle, drag the mouse in a direction of your choice.
+• To set the Radius of the curved segment continue dragging the mouse until the curve has the radius
+you want it to be and click the left mouse button.
+• To set the Arc Length, continue dragging the mouse until the curve is as long as you want it to be and
+click the left mouse button.
+• To set the end point of the segment, click the right mouse button.
+• To delete the last anchor point from the curve, drag the mouse pointer from the Frame window to the
+dialog Edit Parameters of Curve and click Delete Last Point.
+Naturally you can combine both techniques to insert curved and straight segments in any sequence you
+like.
+Back to Work with Length-oriented Objects
+Change the Shape of a Segment
+You can modify the shape of a segment in a number of ways.
+Proceed as follows:
+• You can change the shape of a straight segment by clicking Show Manipulators and by then dragging
+the manipulators.
+• To delete an anchor point from the curve, right-click it and select Delete Anchor Point on the context
+menu.
+• To extend an existing curved segment of the length-oriented object without adding a new anchor point,
+click the drag point with the left mouse button and drag the mouse to the new position.
+Change the Shape of a Segment
+Plant Simulation Help 10-947
+Unpublished work. © 2026 Siemens
+
+• To append anchor points to the end of the curve, right-click anywhere on the curve and select
+Segments > Append [segment] on the context menu. Add an additional anchor point with the dialog
+Edit Parameters of Curve.
+• To edit existing segments and to insert new segments, select Segments > Edit [segment]. In the
+Segments Table you can also insert a segment at the beginning of the object which is not possible
+manually with the mouse.
+In the example below we insert a curved segment at the beginning of the Pipe so that it seamlessly
+attaches to the FluidSource.
+◦ Click the Pipe and press F7.
+◦ This opens the Segments table. Click in row 2 and select Insert Row. This inserts an empty row above
+row 2.
+We typed in these values:
+◦ The result looks like this. We then have to adjust the position of the Pipe.
+Change the Shape of a Segment
+10-948 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To change the direction of a curved object, for example from right to left, edit the Curve angle in the
+Segments table. Our Conveyor1 evades an obstacle to the right.
+The Curve angles in the Segments table look like this.
+Our Conveyor2 is to evade the obstacle to the left. To accomplish this, we changed the Curve angles in
+the Segments table as shown below.
+Change the Shape of a Segment
+Plant Simulation Help 10-949
+Unpublished work. © 2026 Siemens
+
+This then looks like this:
+• To replace the right angle of a curved object with a curve, we are going to edit the Segments table. We
+originally inserted this Footpath with a right angle. We now want the Worker to walk along a curve.
+We press F7 to open the Segments table of the Footpath. It looks like this:
+Change the Shape of a Segment
+10-950 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To see how we have to change the Segments table of our Footpath, we insert a second Footpath with a
+curve instead of the right angle above our Footpath. Footpath1 and its Segments table look like this:
+Then left-click the Footpath and press F7. Right-click in the last row of the Segments table and select
+Insert Row to insert an empty row before it. Type in the values that our curved Footpath1 has. Click
+Apply. Our Footpath now has a curve instead of a right-angle.
+You can then delete Footpath1 which just provided the template for our curve.
+• To change the direction of motion of a curved object, i.e., to make the last point of the object the first
+point, right-click the object and select Reverse [segment]. This is especially handy if you want to mirror
+the layout of a production line by copying it and then reversing the direction of motion of the mirrored
+line to ensure a circular flow of materials.
+Change the Shape of a Segment
+Plant Simulation Help 10-951
+Unpublished work. © 2026 Siemens
+
+• To split the length-oriented curved objects into individual separate segments at the selected point, click
+the point where you would like to split it up and select Split Up [segment]. This looks like this:
+• To move the entire length-oriented curved object, click it once with the left mouse button and drag the
+mouse up or down or left or right. You can also use the arrow keys to move the object one pixel at a
+time or hold down Shift and press an arrow key to move the object one grid unit at a time.
+• To delete the entire length-oriented curved object, click it once with the left mouse button and press
+Delete.
+Change the Shape of a Segment
+10-952 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To extend an existing length-oriented curved object, without adding a new anchor point, grab the
+handle 
+  with the left mouse button and drag the mouse to the new location.
+• To link two or more existing length-oriented curved object, insert a Connector between them.
+• To insert and connect another straight length-oriented object with an existing length-oriented curved
+object, click with the left mouse button on the end of the first object, move the mouse to the beginning
+of the second object and click the mouse button.
+Compare Work with Length-oriented Objects
+Compare Change the Shape of the Pipes
+Back to Work with Length-oriented Objects
+Create a Curved Object with SimTalk Commands
+You can also create a curved object with the SimTalk commands.
+To do so, use the methods derive and duplicate.
+var obj := .Materialflow.Conveyor.derive(.Models.Frame)
+obj.Coordinate3D := [5, 5, 0]
+var obj1 := .Materialflow.Conveyor.derive(.Models.Frame)
+obj1.Coordinate3D := [1, 1, 0]
+Reuse the Segments of a Length-oriented Object shows how to use the methods getCurveSegments
+[SimTalk] and setCurveSegments [SimTalk].
+Back to Work with Length-oriented Objects
+Reuse the Segments of a Length-oriented Object
+For smaller segments tables you can open two simulation models at the same time, copy the values in one
+model and paste them into the segments table of the other model. This way you do not have to type in the
+values a second time.
+In the example below we copy the values of a feeder line for a Drain from a German model to an English
+model.
+Create a Curved Object with SimTalk Commands
+Plant Simulation Help 10-953
+Unpublished work. © 2026 Siemens
+
+We copied the values of the individual cells in the German table and pasted them into the respective cell in
+the English table. As the English table originally only has three rows, we clicked the right mouse button in
+the index of row 2 and selected Append Row. This appended an empty row below row 2. Then we copied
+and pasted the remaining values and clicked OK.
+To transfer the segments table of a curved object from one Frame to another Frame in the same
+simulation model, we write the segments table into a Variable with a Method. Then, we copy this
+Variable and paste it into the other Frame.
+Reuse the Segments of a Length-oriented Object
+10-954 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To export the segments table:
+• Program a Method to export the coordinates of the curved object into a table with the method
+getCurveSegments [SimTalk]. Enter the following source code into the method which we named
+exportMySegments:
+Conveyor.getCurveSegments(MySegmentsVariable)
+Executing the method, exportMySegments in our example, writes this data into the Variable named
+MySegmentsVariable.
+Clicking Open opens the segments table. Here you can view and check the values of the segments
+table.
+Reuse the Segments of a Length-oriented Object
+Plant Simulation Help 10-955
+Unpublished work. © 2026 Siemens
+
+To import the segments table into another Frame in the same simulation model:
+• Insert a Conveyor of any shape into the other Frame.
+• Copy the Variable, MySegmentsVariable in our example, and paste it into that Frame, Model1 in our
+example. Then, insert a Method into Model1. We named our method importSegments.
+• Program the Method with the method setCurveSegments [SimTalk] to overwrite the settings of the
+Conveyor, which we inserted, with the exported settings. Run the Method.
+Conveyor.setCurveSegments(MySegmentsVariable)
+If you want to use these settings in another simulation model, insert a DataTable into that model. Save
+the segments table, MySegmentsVariable in our example, as an object file(.psobj). You can then import
+the exported segments into a DataTable in the other simulation model and reuse it there.
+Reuse the Segments of a Length-oriented Object
+10-956 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Work with Length-oriented Objects
+Keyboard Shortcuts for Inserting Straight and Curved Segments of an Object
+These keyboard shortcuts apply when you hold down the Ctrl key to activate Curve mode, drag the mouse
+and click the mouse button to insert a curved segment.
+To do this Press/click
+Set the starting point of a straight segment. left mouse button
+Set the starting point of a curved segment. Ctrl+left mouse button
+Deactivate the Snap To Grid feature. Alt+left mouse button
+Deactivate the Snap To Grid feature for the last
+point.
+Alt+right mouse button
+Draw a straight segment horizontally or vertically
+and to deactivate Snap To Grid.
+Shift+left mouse button
+Terminate Insert mode. right mouse button
+Insert a new curved object of the same class
+without having to select it in the Toolbox again.
+Ctrl+right mouse button, then left mouse button
+Draw the last straight segment horizontally or
+vertically and to deactivate Snap To Grid.
+The right mouse button just refers to the last
+anchor point.
+Shift+right mouse button
+Keyboard Shortcuts for Inserting Straight and Curved Segments of an Object
+Plant Simulation Help 10-957
+Unpublished work. © 2026 Siemens
+
+To do this Press/click
+Deactivate default settings Shift+Alt
+Insert the icon of the length-oriented object or
+of the length-oriented object as a curved object
+against the default values.
+Shift+first click of the left mouse button
+Open the dialog Sensor. Alt+double-click the red Sensor line on Conveyor,
+Track, TwoLaneTrack
+3D: Insert ascending curve Press the Up key, then the left mouse button
+3D: Insert descending curve Press the Down key, then the left mouse button
+Compare Edit Length-oriented Objects with Keyboard Keys
+Edit Length-oriented Objects with the Mouse
+You can edit the shape and the dimensions of the length-oriented objects and of the Store with the mouse.
+To do so, click Show Manipulators 
+  on the Edit ribbon tab. This shows all manipulators of the
+objects. Then, click one of the manipulators with the left mouse button and drag the mouse to the new
+position and release the mouse button.
+The appearance of the manipulator differs from object to object. For the length-oriented objects the
+manipulator at the start and at the end of the object is cut off. When you attach an object of the same type
+to the other object, the two combined halves result in a complete manipulator again. When you move the
+mouse over a manipulator, Plant Simulation shows a tooltip.
+These examples show what you can accomplish with the manipulators:
+• Here we selected Anchor Point 3 of the TwoLaneTrack and dragged the mouse to the left to shorten the
+first segment.
+Edit Length-oriented Objects with the Mouse
+10-958 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Here we selected Anchor Point 3 of the Conveyor, we held down Ctrl and pressed the Up arrow. This
+moves the anchor point and thus this part of the Conveyor up. This way you can raise individual
+segments, for example to allow Workers to walk underneath them or to allow forklifts to pass
+underneath. Hold down Ctrl and the Up arrow repeatedly to move the anchor point step-by-step.
+• Here we selected the Top right corner of the Store and dragged the mouse to the top right to enlarge
+the graphic of the Store. The changed size is reflected in the width and the depth of the Store and in
+the length and the width of the animation area.
+To rotate the Store around its center, click the rotation manipulator and drag the mouse to the left or to
+the right.
+Edit Length-oriented Objects with the Mouse
+Plant Simulation Help 10-959
+Unpublished work. © 2026 Siemens
+
+Back to Work with Length-oriented Objects
+Video on YouTube
+https://youtu.be/Kznlnw5BJGc?si=jK3z2M42kfyRVhUp&t=165
+Editing Length-oriented Objects with Keyboard Keys
+Edit Length-oriented Objects with Keyboard Keys
+You can edit length-oriented objects with keyboard keys.
+You can:
+• Edit Manipulators with Keyboard Keys
+• Move Sensors with Keyboard Keys
+Back to Work with Length-oriented Objects
+Compare Keyboard Shortcuts for Inserting Straight and Curved Segments of an Object
+Compare Move an Object With Keyboard Keys
+Edit Manipulators with Keyboard Keys
+You can use Page Up to lengthen the selected manipulator and to shorten it with the Page Down.
+• Select the first manipulator of a length-oriented object and press Page Up to lengthen the
+neighboring segment toward this manipulator.
+Page Up lengthens a linear segment in a linear way.
+It increases the curve angle for a horizontal curved segment.
+It has no effect on a vertical curved segment.
+Video on YouTube
+10-960 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select the last manipulator of a length-oriented object and press Page Up to shorten the neighboring
+segment toward this manipulator.
+Page Up shortens a linear segment in a linear way.
+It decreases the curve angle for a horizontal curved segment.
+It has no effect on a horizontal curved segment.
+• Select the first manipulator of a length-oriented object and press Page Down to shorten the
+neighboring segment toward this manipulator.
+Page Down shortens a linear segment in a linear way.
+It decreases the curve angle for a horizontal curved segment. It has no effect on a vertical curved
+segment.
+Select the last manipulator of a length-oriented object and press Page Down and to lengthen the
+neighboring segment toward this manipulator.
+Page Down lengthens a linear segment. It increases the curve angle for a horizontal curved segment. It
+has no effect on a vertical curved segment.
+Back to Edit Length-oriented Objects with Keyboard Keys
+Edit Manipulators with Keyboard Keys
+Plant Simulation Help 10-961
+Unpublished work. © 2026 Siemens
+
+Move Sensors with Keyboard Keys
+You can use Page Up and Page Down to move sensors.
+• Select a sensor and press Page Up to move the sensor to the left. The left arrow does the same.
+• Select a sensor and press the Page Down to move the sensor to the right. The right arrow does the
+same.
+Back to Edit Length-oriented Objects with Keyboard Keys
+Edit Length-oriented Objects Precisely
+You can change the length-oriented objects in your simulation model precisely by by entering exact values
+into the text boxes into a dialog.
+For some purposes this is not accurate enough though. If this is the case, you can edit the position, the
+rotation, and the scaling of the object in the dialog Edit 3D Properties on the Tab Transformation and
+on the tab Appearance of the Length-oriented Objects, by entering exact values into the text boxes.
+• Select the object that you want to edit.
+• Press the spacebar or click 
+  on the Home ribbon tab and click the tab Transformation.
+• Edit the values of the position, the rotation, and the scaling.
+• Click Apply to apply your changes once you are satisfied with the results.
+• If necessary, you can edit additional settings on the tab Appearance.
+Move Sensors with Keyboard Keys
+10-962 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Work with Length-oriented Objects
+Model Differences in Height Between Conveying Elements
+With the length-oriented objects you can create straight and curved ascending and descending slopes in
+your simulation model to model height differences between them.
+Proceed as follows to model straight ascending and descending slopes:
+• Select the length-oriented object that you want to insert into the Frame. In our example we insert a
+Conveyor that is 4 meters long. Then, click Show Manipulators on the 3D ribbon tab to show the
+manipulators.
+Model Differences in Height Between Conveying Elements
+Plant Simulation Help 10-963
+Unpublished work. © 2026 Siemens
+
+• Click the right manipulator with the right mouse button, hold down Ctrl and press the Up arrow until
+the right side of the Conveyor has the required height.
+• To append a segment to the ascending slope, click the Conveyor with the right mouse button and select
+Segments > Append.
+• Type in the radius and the angle of the segment into the dialog Line/Arc Parameters. Click in the scene
+to append the segment. Click Finish to close the dialog.
+Proceed as follows to model curved ascending and descending slopes:
+Model Differences in Height Between Conveying Elements
+10-964 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select the length-oriented object that you want to insert into the Frame. In our example we insert a
+Conveyor.
+• Press the Up arrow on the keyboard to insert an ascending slope, a curve pointing upward in the
+z-dimension.
+Press the Down arrow on the keyboard to insert a descending slope, a curve pointing downward in the
+z-dimension.
+• Type in the Radius and the Angle of the segment into the dialog Line/Arc Parameters.
+Note
+The greatest allowed curve angle is 90°.
+• Click with the mouse into the scene to insert the segment. Click Finish to close the dialog.
+The result looks like this:
+Model Differences in Height Between Conveying Elements
+Plant Simulation Help 10-965
+Unpublished work. © 2026 Siemens
+
+When you click the Segments button, the selected check box in the dialog shows, that our Conveyor
+contains a vertical curve.
+• To append segments to the ascending slope, click the Conveyor with the right mouse button and select
+Segments > Append.
+• Type in the Radius and the Angle of the segment into the dialog Line/Arc Parameters. Click the left
+mouse button to insert the segment you just defined and click Finish in the dialog.
+Model Differences in Height Between Conveying Elements
+10-966 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The result looks like this.
+• Repeat this until the Conveyor has the shape that you need.
+Compare Keyboard Shortcuts for Inserting Straight and Curved Segments of an Object
+Back to Work with Length-oriented Objects
+Model a Spiral Conveyor
+You can model a spiral conveyor in your simulation with the object Conveyor.
+A spiral conveyor transports products upward or downward thus leveling differences in height within your
+production facility. Depending on the height difference you can also use the spiral conveyor as a buffer.
+Proceed as follows to model the spiral conveyor:
+• Click the Conveyor on the tab MaterialFlow of the Toolbox.
+• Drag the mouse in the window to the position at which you would like to insert the conveyor.
+Model a Spiral Conveyor
+Plant Simulation Help 10-967
+Unpublished work. © 2026 Siemens
+
+• We used the standard settings in the dialog Line/Arc Parameters. If you need to use a wider arc, enter a
+greater radius.
+• Hold down Ctrl to insert the arc segments of the spiral conveyors. Click several times one after the other
+to insert the arc segments. The segments are initially placed on a single layer directly above each other.
+We first inserted a straight segment, then added 13 arc segments, and finished with a straight segment.
+• Press F7 to open the Segments table.
+Model a Spiral Conveyor
+10-968 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter the additional offset to the base height of the preceding segment into the cell ΔZ. We typed in
+0.5 meters.
+• Click OK in the dialog Segments.
+Model a Spiral Conveyor
+Plant Simulation Help 10-969
+Unpublished work. © 2026 Siemens
+
+The result looks like this:
+You can change the settings of the spiral conveyor on the tab Appearance.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Model a Spiral Conveyor
+10-970 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Work with Length-oriented Objects
+Setting the Capacity of a Material Flow Object
+Set the Capacity of a Material Flow Object
+While you set the capacity of a material flow object in the simulation properties in two dimensions, you
+set the position of a part on a simulation object in in three dimensions.
+You can:
+• Define the Capacity of a Simulation Object
+• Define the Animation Area of a Simulation Object
+Back to Work with Objects
+Define the Capacity of a Simulation Object
+For the simulation object you define the capacity, i.e., the number of parts the objects ParallelStation,
+Sorter, Store, Transporter, and Container can hold, in two dimensions.
+Type the respective values into the text boxes X-Dimension and Y-Dimension on the tab Attributes.
+Setting the Capacity of a Material Flow Object
+Plant Simulation Help 10-971
+Unpublished work. © 2026 Siemens
+
+Back to Set the Capacity of a Material Flow Object
+Define the Animation Area of a Simulation Object
+You set the animation of the simulation object in three dimensions on the animation area.
+To set the animation area of an object with matrix loading space of type Store (ParallelStation, Sorter,
+Store, Transporter, Container), of the PlaceBuffer, and the Worker in 3D, proceed as follows:
+• Click the object with the right mouse button to select it.
+• Select Edit 3D Properties > MU Animation > Area > Animation Area.
+In our example we demonstrate how to place cylinder-shaped containers in a storage box. This resembles
+a bottling plant in which the filled bottles are put into cases.
+Our finished model looks like this:
+Define the Animation Area of a Simulation Object
+10-972 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+A Source each produces the storage boxes and the cylinder-shaped containers. The AssemblyStation places
+the containers into the storage boxes and then moves them on across a Conveyor and a Station to the
+Drain.
+Proceed as follows to create the simulation model:
+• Insert two Sources. We named them SourceStorageBoxes and SourceCylinders.
+• Insert an AssemblyStation. We selected the settings below:
+• Insert a Conveyor. We used a Conveyor of type Guide-railed belt conveyor.
+• Insert a Station and a Drain.
+• Make sure that all objects are connected with Connectors.
+As we need customized MU Types for the storage boxes and the cylinder-shaped containers, we duplicate
+the Part and the Container in the folder MUs in the Class Library.
+Define the Animation Area of a Simulation Object
+Plant Simulation Help 10-973
+Unpublished work. © 2026 Siemens
+
+• Press F2 and rename the duplicated container from Container to StorageBox.
+To configure the storage box:
+◦ Click the storage box with the right mouse button and open it in a window.
+◦ Click with the right mouse button into the background of the window and select Exchange Graphics.
+We selected the storage box below.
+Click Yes in the message dialog that Plant Simulation shows.
+As you remember the s3D files do not only contain the graphic of the object, but also information
+about its dimensions and animation data.
+Define the Animation Area of a Simulation Object
+10-974 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you click No, Plant Simulation does not apply the adjustments of the dimensions of the storage box
+and scales it to the current size of the MU named Container, as the check box Scale Automatically on
+the tab Transformation is selected by default.
+◦ Type in the dimensions in the X-Dimension, Y-Dimension, and Z-Dimension, that set its capacity.
+• Press F2 and rename the duplicated part to Canister.
+To configure our Canister:
+◦ Click the Canister with the right mouse button and open it in 3D.
+◦ Click the default graphic of the Part and delete it. We are going to create our own graphic for our
+Canister.
+Click the Edit ribbon tab and click Cylinder. Type in the values below. Click Create. Make sure that our
+Canister is placed on the origin of the grid.
+Define the Animation Area of a Simulation Object
+Plant Simulation Help 10-975
+Unpublished work. © 2026 Siemens
+
+◦ Now we have to define the length, the width, and the height of our Canister. Double-click it in the
+Class Library. Type in these values:
+Run the simulation and watch how the AssemblyStation places 12 containers each in a storage box and
+then moves the full storage box on.
+The animation area of the storage box, which is activated by default, makes sure that the canisters are
+distributed evenly across the bottom of the storage box. In doing so, Plant Simulation automatically uses
+these settings:
+Define the Animation Area of a Simulation Object
+10-976 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click Show/Hide, to show the animation area in the window to see what it looks like. Plant Simulation
+shows the animation area proper in red with a red orientation indicator in the center.
+• The orientation > XY plane evenly distributes the containers in the x-y-direction.
+Define the Animation Area of a Simulation Object
+Plant Simulation Help 10-977
+Unpublished work. © 2026 Siemens
+
+• For the length Plant Simulation only uses 94 % of the Length of the graphic of the storage box of 80
+cm and for the width only 92 % of the Width of 60 cm. Plant Simulation automatically subtracted the
+Wall Thickness of the storage box from the dimensions of the Animation Area. Plant Simulation uses
+the area settings that we defined in the s3D graphic.
+• For the Z-Position of the center Plant Simulation automatically entered 0.05 m as the bottom of the
+storage box has a height of 5 cm.
+Stack Parts in the Store demonstrates how to distribute parts across the storage area and how to stack
+them.
+Compare Model a Bottle
+Compare Animate Bricks on the Animation Area of the Brick Carrier
+Compare Animate Brick Carriers on the Animation Area of the Truck
+Compare Model a Worker Who Carries Several Parts
+Context Menu of the Background of the Scene
+Context Menu of the Background of the Window
+Click in an empty area in the window with the right mouse button to show a context menu with these
+commands.
+Context Menu of the Background of the Scene
+10-978 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can also close the context menu and leave the mini toolbar open
+ by clicking the border of the mini toolbar with the left mouse
+button.
+ Reset Simulation [Home ribbon]
+  Show Structure [Home ribbon]
+ Start/Stop Simulation [Home ribbon]
+  Show Graphic Structure [context menu]
+ Start Fast Forward Simulation [Home ribbon]
+  Show Inheritance [Home ribbon]
+ Open Location [Home ribbon]
+  Show Attributes and Methods [Home ribbon]
+ Open Origin [Home ribbon]
+  Edit User-defined Attributes [Home ribbon]
+ Open Class [Home ribbon] Create User-defined Attribute
+ Snap to Grid
+ Find Object [context menu]
+ Snap to Objects
+  Exchange Graphics
+ Lock Structure [Frame ribbon]
+  Apply Changes [MUs]
+ Paste Contents of the Clipboard [Home
+ribbon], Multiple Paste
+ Unhide Objects
+Context Menu of the Background of the Window
+Plant Simulation Help 10-979
+Unpublished work. © 2026 Siemens
+
+Previous Scene
+  View All
+ Edit 3D Properties [dialog] View Options, compare the View Ribbon Tab
+Do not confuse the selected object with the selected graphic of the object!
+Context Menu of the Background of the Window
+10-980 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Create User-defined Attribute
+To create a user-defined attribute for a simulation object, which you opened in a window of its own, select
+this command.
+Plant Simulation creates the user-defined attribute at the position, where you click the mouse button.
+Note
+This does not apply to a Frame or a folder.
+Plant Simulation opens the dialog User-defined Attribute with the Transformation and Display Settings
+that the dialog had when you last created a user-defined attribute. Show in 3D is selected by default.
+Enter and select the settings you need and click OK to create the user-defined attribute.
+Create User-defined Attribute
+Plant Simulation Help 10-981
+Unpublished work. © 2026 Siemens
+
+Create User-defined Attribute
+10-982 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Previous Scene
+To return to the level in the hierarchy of objects or the camera mark that was active before the current
+level, select this command.
+Video on YouTube
+https://youtu.be/FNpiAaUK8iM?si=dYxqIjwYquKYheWo&t=571
+Adapt the 3D Model to the 2D Model
+When you created your simulation model in 2D in a 2D and 3D model while 3D was active and when
+your model contains a Frame containing objects, you might be surprised how the model looks with the
+standard settings in 3D.
+In our sample model the Frame contains two Interfaces and a Station.
+Previous Scene
+Plant Simulation Help 10-983
+Unpublished work. © 2026 Siemens
+
+If Show Content is active, the content of the Frame, i.e., the Interfaces and the Station, are shown on
+the same layer as the other material flow objects. This might look strange at first sight, compare the first
+screenshot.
+To make the 3D model look like the 2D model, we clear the check box Show Content.
+Adapt the 3D Model to the 2D Model
+10-984 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Our model then looks like this and matches what we expected to see:
+Compare Set How Plant Simulation Shows an Object
+Back to Work with Objects
+Adapt the 3D Model to the 2D Model
+Plant Simulation Help 10-985
+Unpublished work. © 2026 Siemens

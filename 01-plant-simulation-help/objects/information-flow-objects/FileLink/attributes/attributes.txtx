@@ -1,0 +1,111 @@
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyFileLink.UUID
+Attributes of the FileLink
+_Attributes of the FileLink
+The FileLink provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the FileLink
+11-4470 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+frame1.FileLink2.Embed := false
+• To get the value of an attribute, you might, for example, type:
+print frame1.FileLink2.Embed
+posit := Station.Cont.XPos
+_Attributes of the FileLink
+Plant Simulation Help 11-4471
+Unpublished work. © 2026 Siemens
+
+Embed [SimTalk]
+Makes the FileLink designated by <Path> embed the file into the Plant Simulation Frame (true) or not
+(false).
+Remarks
+Embed is not inherited and it is set to false by default.
+To embed the file into the Plant Simulation model, assign true. Then that version of the file will become
+part of the simulation model, meaning the program does not mind, when you move the original file
+to another location. Changes to file after embedding it will naturally not be reflected if you embed it.
+Embedding may significantly increase the file size of your .spp model file.
+If you assign false, Plant Simulation creates a link to the file in the file system of your computer. If you
+move or delete the file, the link will become invalid and Plant Simulation will not be able to find the file and
+open it.
+Type
+Attribute
+Syntax
+<Path>.Embed:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+Model1.FileLink2.Embed := false
+print Model1.FileLink2.Embed
+See also
+Embed File [check box]
+Embed [SimTalk]
+11-4472 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FileName [SimTalk] - FileLink
+Sets the name of the linked or embedded file of the FileLink designated by <Path> or returns it.
+Remarks
+You also have to specify the file extension when assigning the filename.
+Type
+Attribute
+Syntax
+<Path>.FileName:string
+Assignment Value
+You can assign a value of data type string.
+Example
+frame1.FileLink1.FileName := "myName.xls" // MS Excel file
+print frame1.FileLink1.FileName
+See also
+Filename [FileLink]
+FileInterface
+FileInterface
+Use the object FileInterface for accessing data you create and store in other programs in ASCII format.
+Image
+FileName [SimTalk] - FileLink
+Plant Simulation Help 11-4473
+Unpublished work. © 2026 Siemens
+
+Description
+You can create data for a simulation run in text files and import it into Plant Simulation during the
+simulation run with the FileInterface. You can also write protocol files, statistics tables, etc. directly into a
+text file, without having to take a detour by using tables or lists. You can then visualize or manipulate this
+data in a spreadsheet program or a word processing application.
+Note
+Plant Simulation can keep 10 files open at any one time. The FileInterface handles letters, numbers,
+and special characters. It cannot process binary data, such as programs, graphics, etc. One FileInterface
+manages one file at a time.
+If you deactivate the safety setting File > Model Settings > General > > Prohibit Access to the Computer,
+the FileInterface can only change files in the model folder as these are automatically opened for reading.
+Write functions of the FileInterface always return false. In addition the FileInterface can only delete files in
+the model folder and its sub-folders.
+To show a tooltip with information about the FileInterface, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the FileInterface, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object FileInterface to your simulation model, click 
+  Manage Class Library > Basic Objects
+> InformationFlow > FileInterface on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+FileInterface
+11-4474 Plant Simulation Help
+Unpublished work. © 2026 Siemens

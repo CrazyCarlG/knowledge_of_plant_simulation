@@ -1,0 +1,1742 @@
+Methods of the DataTable
+Methods of the DataTable
+The DataTable provides:
+• _Methods of Columns of the DataTable
+• _Methods of Rows of the DataTable
+• _Miscellaneous Methods of the DataTable
+• _Methods for Accessing the DataTable
+• _Methods for Instantiating the DataTable
+• The shared Methods of Lists and Tables.
+• The shared Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Methods of the DataTable
+11-4108 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• ◦ The expression <Path> designates the path of the object to which the method applies.
+◦ The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+If a parameter has a default value, the signature shows the default value after the parameter
+Methods of the DataTable
+Plant Simulation Help 11-4109
+Unpublished work. © 2026 Siemens
+
+If the method has a return value, the signature shows its data type after the arrow ->.
+• We use these abbreviations for the signature:
+Argument of data type Data type Range of values
+integer integer integer greater than zero
+any all data types depending on the data type
+listrange — a range
+direction string "up", "down", " "
+attributes string name of an attribute
+See also
+Address Columns and Rows with Methods
+Methods of Columns of the DataTable
+_Methods of Columns of the DataTable
+The DataTable provides the methods listed in the table of contents to the left for columns. The first
+parameter designates the column, either the column index, the column range, or the column number.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Methods of Columns of the DataTable
+11-4110 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+See also
+Address Columns and Rows with Methods
+_Methods of Columns of the DataTable
+Plant Simulation Help 11-4111
+Unpublished work. © 2026 Siemens
+
+cutColumn [SimTalk]
+Cuts the designated column, including all of its data, from the DataTable designated by <Path>.
+Remarks
+Plant Simulation shifts all columns with an index equal to or greater than any to the left.
+Note
+You cannot cut the column index with the instruction cutColumn(0).
+Type
+Method
+Syntax
+<Path>.cutColumn(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column you want to cut.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.cutColumn(8)
+SimTalk
+insertColumn [SimTalk]
+See also
+Remove Column [context menu, lists]
+Cut [Home ribbon]
+cutColumn [SimTalk]
+11-4112 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getAlignmentColumn [SimTalk] - DataTable
+Returns the Alignment of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getAlignmentColumn(Column:any) → string
+Parameter
+The parameter Column of data type any designates the column whose alignment you want to get.
+Return Value
+The return value has the data type string. Left, right, or centered.
+Example
+print MyDataTable.getAlignmentColumn(4)
+SimTalk
+isAlignmentColumn [SimTalk] - DataTable
+setAlignmentColumn [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+getAlignmentColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4113
+Unpublished work. © 2026 Siemens
+
+getBackgroundColorColumn [SimTalk] - DataTable
+Returns the Background Color of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getBackgroundColorColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose background color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.getBackgroundColorColumn(4)
+SimTalk
+setBackgroundColorColumn [SimTalk] - DataTable
+See also
+Background Color [cells]
+getBackgroundColorColumn [SimTalk] - DataTable
+11-4114 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getColumnNo [SimTalk]
+Searches for the column which contains a user-defined column index of the DataTable designated by
+<Path>.
+Remarks
+Note
+If the table contains a large number of entries, you might want to activate Fast Index Access.
+The method only works for simple data types, such as string, integer, etc.
+Type
+Method
+Syntax
+<Path>.getColumnNo(ColumnIndex:any) → integer
+Parameter
+The parameter ColumnIndex of data type any designates the column index which Plant Simulation
+searches for.
+Return Value
+The return value has the data type integer.
+Is the column number.
+Is -1 if the column index does not exist.
+Example
+var column : integer
+column := MyDataTable.getColumnNo("Urgent")
+SimTalk
+getRowNo [SimTalk]
+FastAccessColumnIndex [SimTalk]
+getColumnNo [SimTalk]
+Plant Simulation Help 11-4115
+Unpublished work. © 2026 Siemens
+
+FastAccessRowIndex [SimTalk]
+getColumnNo [SimTalk]
+11-4116 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getColumnUniqueValues [SimTalk]
+Returns an array with the values, which only are contained once in the specified column of the DataTable
+designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getColumnUniqueValues(Column:any) → any[]
+Parameter
+The parameter Column of data type any designates the column.
+The column has to be of data type String, Integer, Real, Time, Money, Length, Weight, Speed,
+Acceleration, Date, or DateTime.
+Return Value
+The return value is an array of data type any.
+Example
+print MyDataTable.getColumnUniqueValues(1)
+getColumnUniqueValues [SimTalk]
+Plant Simulation Help 11-4117
+Unpublished work. © 2026 Siemens
+
+getColumnWidth [SimTalk] - DataTable
+Returns the width of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getColumnWidth(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column.
+Return Value
+The return value has the data type integer.
+Example
+MyDataTable.getColumnWidth(1)
+print MyDataTable.getColumnWidth(1)
+SimTalk
+setColumnWidth [SimTalk] - DataTable
+See also
+Column Width [text box]
+getColumnWidth [SimTalk] - DataTable
+11-4118 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getColumnYDim [SimTalk]
+Returns the number of the last cell of the specified column of the DataTable designated by <Path> that
+contains an entry.
+Type
+Method
+Syntax
+<Path>.getColumnYDim(ColumnNumber:integer) → integer
+Parameter
+The parameter ColumnNumber of data type integer designates the number of the column you want to
+query.
+Return Value
+The return value has the data type integer.
+0 if the column is empty.
+Example
+MyDataTable.getColumnYDim(1)
+print MyDataTable.getColumnYDim(1)
+SimTalk
+XDim [SimTalk] - DataTable
+YDim [SimTalk] - DataTable
+getCommonFormat [SimTalk]
+Returns if Common Format of the specified column of the DataTable designated by <Path> is turned on
+(true) or off (false).
+Type
+Method
+getColumnYDim [SimTalk]
+Plant Simulation Help 11-4119
+Unpublished work. © 2026 Siemens
+
+Syntax
+<Path>.getCommonFormat(Column:any) -> boolean)
+Parameter
+The parameter Column of data type any designates the column.
+Example
+print MyDataTable.getCommonFormat(3)
+SimTalk
+setCommonFormat [SimTalk]
+CommonFormatColumnIndex [SimTalk]
+getCommonFormatData [SimTalk] - DataTable
+setCommonFormatData [SimTalk] - DataTable
+See also
+Tab Contents
+Common Format [check box]
+getCommonFormat [SimTalk]
+11-4120 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getDataType [SimTalk]
+Returns the data type of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getDataType(Column:any) → string
+Parameter
+The parameter Column of data type any designates the column.
+Return Value
+The return value has the data type string.
+Example
+print MyDataTable.getDataType(1)
+SimTalk
+DataType [SimTalk] - lists
+setDataType [SimTalk]
+setDataTypeDefault [SimTalk]
+See also
+Data Type [lists]
+getDataType [SimTalk]
+Plant Simulation Help 11-4121
+Unpublished work. © 2026 Siemens
+
+getEditorRightsColumn [SimTalk] - DataTable
+Returns the editor rights of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getEditorRightsColumn(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column whose editor rights you want to get.
+Return Value
+The return value has the data type boolean:
+true for read-only access.
+false for read and write access.
+Example
+MyDataTable.getEditorRightsColumn(1)
+print MyDataTable.getEditorRightsColumn(1)
+SimTalk
+setEditorRightsColumn [SimTalk] - DataTable
+See also
+Editor [check box]
+Information Flow [check box]
+getEditorRightsColumn [SimTalk] - DataTable
+11-4122 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFontColorColumn [SimTalk] - DataTable
+Returns the Font Color of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontColorColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose font color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+MyDataTable.getFontColorColumn(2)
+print MyDataTable.getFontColorColumn(3)
+SimTalk
+setFontColorColumn [SimTalk] - DataTable
+See also
+Font Color [cells]
+getFontColorColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4123
+Unpublished work. © 2026 Siemens
+
+getFontSizeColumn [SimTalk] - DataTable
+Returns the Font Size of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontSizeColumn(Column:any) → integer
+Parameter
+The parameter Column of data type any designates the column whose font size you want to get.
+Return Value
+The return value has the data type integer.
+1 stands for Small, 2 for Medium, 3 for Large, and 4 for Extra Large.
+Example
+print MyDataTable.getFontSizeColumn(2)
+SimTalk
+setFontsizeColumn [SimTalk] - DataTable
+See also
+Font Size [drop-down list] - cells, columns
+getFontSizeColumn [SimTalk] - DataTable
+11-4124 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFormatString [SimTalk] - DataTable
+Returns the Format String of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFormatString(Column:any) → string
+Parameter
+The parameter Column of data type any designates the column whose format string you want to get.
+Return Value
+The return value has the data type string.
+Example
+tab1.getFormatString("paint")
+print tab1.getFormatString(1)
+SimTalk
+setFormatString [SimTalk] - DataTable
+See also
+Format String [text box]
+getFormatString [SimTalk] - DataTable
+Plant Simulation Help 11-4125
+Unpublished work. © 2026 Siemens
+
+getVisibility [SimTalk] - DataTable
+Returns if a column of the DataTable designated by <Path> is visible (true) or hidden (false).
+Type
+Method
+Syntax
+<Path>.getVisibility(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column.
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataTable.getVisibility(4)
+SimTalk
+setVisibility [SimTalk] - DataTable
+See also
+Work with Data in the DataTable
+getVisibility [SimTalk] - DataTable
+11-4126 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+insertColumn [SimTalk]
+Adds an empty column to the left of the specified column into the DataTable designated by <Path>.
+Remarks
+Plant Simulation shifts all columns with an index equal to or greater than the parameter any one position
+to the right.
+Type
+Method
+Syntax
+<Path>.insertColumn(Column:any) → boolean
+Parameter
+The parameter Column of data type any designates the column number at which the empty column will be
+inserted into the DataTable.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.insertColumn(8)
+insertColumn [SimTalk]
+Plant Simulation Help 11-4127
+Unpublished work. © 2026 Siemens
+
+SimTalk
+cutColumn [SimTalk]
+See also
+Insert Column [context menu, lists]
+Insert Column [lists]
+insertColumn [SimTalk]
+11-4128 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+isAlignmentColumn [SimTalk] - DataTable
+Returns if the Alignment of the specified column of the DataTable designated by <Path> matches the
+designated value (true) or not (false).
+Type
+Method
+Syntax
+<Path>.isAlignmentColumn(Column:any, Alignment:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column.
+• The parameter Alignment of data type string designates the value of the alignment you want to check.
+You can specify "Right", "Left" or "Center".
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataTable.isAlignmentColumn("column4","right")
+SimTalk
+getAlignmentColumn [SimTalk] - DataTable
+setAlignmentColumn [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+isAlignmentColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4129
+Unpublished work. © 2026 Siemens
+
+setAlignmentColumn [SimTalk] - DataTable
+Sets the Alignment of column(s) of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setAlignmentColumn(Column:any [,Column:any,...], Aligmnent:string)
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column whose alignment you want to set.
+• The optional parameters Column of data type any designate additional columns whose alignment you
+want to set.
+• The parameter Alignment of data type string designates the alignment you want to assign.
+You can specify "Left", "Right", or "Centered".
+Example
+MyDataTable.setAlignmentColumn(1,"right")
+MyDataTable.setAlignmentColumn(1,2,"right")
+SimTalk
+getAlignmentColumn [SimTalk] - DataTable
+isAlignmentColumn [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+setAlignmentColumn [SimTalk] - DataTable
+11-4130 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setBackgroundColorColumn [SimTalk] - DataTable
+Sets the background color of column(s) of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setBackgroundColorColumn(Column:any[, Column:any,...], 
+BackgroundColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column whose background color you want to
+set.
+• The optional parameters Column of data type any designate additional columns whose background
+color you want to set.
+• The parameter BackgroundColor of data type integer designates the color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Examples
+var rgb: integer
+// sets the background color of column 2
+MyDataTable.setBackgroundColorColumn(2,makeRGBValue(120,0,0))
+// sets the background color of columns 3 and 5
+MyDataTable.setBackgroundColorColumn(3,5,makeRGBValue(120,10,0))
+print MyDataTable.getBackgroundColorColumn(2)
+MyDataTable.setBackgroundColorColumn(1,1)    
+// sets the background color of column 1 to black
+MyDataTable.setBackgroundColorColumn(1,2,2)  
+// sets the background color of columns 1 and 2 to red
+SimTalk
+getBackgroundColorColumn [SimTalk] - DataTable
+setBackgroundColorColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4131
+Unpublished work. © 2026 Siemens
+
+makeRGBValue [SimTalk]
+See also
+Background Color [cells]
+setBackgroundColorColumn [SimTalk] - DataTable
+11-4132 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setColumnWidth [SimTalk] - DataTable
+Sets the width of one or several columns of the DataTable designated by <Path> to the designated value.
+Type
+Method
+Syntax
+<Path>.setColumnWidth(Column:any[, Column:any, ...], ColumnWidth:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns.
+• The parameter ColumnWidth of data type integer designates the width in character widths of a non-
+proportional font.
+Example
+MyDataTable.setColumnWidth("column12",10)
+SimTalk
+getColumnWidth [SimTalk] - DataTable
+See also
+Column Width [text box]
+setColumnWidth [SimTalk] - DataTable
+Plant Simulation Help 11-4133
+Unpublished work. © 2026 Siemens
+
+setCommonFormat [SimTalk]
+Assigns the same format to all columns within the designated range of the DataTable designated by
+<Path>.
+Remarks
+If you activated Common Format for a column, assigning a subtable to a table cell creates a copy of the
+assigned table. Otherwise, Plant Simulation enters a reference to the assigned table. The reason for this is
+that it does not make sense to enter a reference if Common Format is active as the assigned table should
+not be subject to the common format.
+Type
+Method
+Syntax
+<Path>.setCommonFormat(Column:any[, Column:any, ..., ]CommonFormat:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns.
+• The parameter CommonFormat of data type boolean activates (true) or deactivates the Common
+Format (false).
+Note
+To define the Common Format of the specified column of data type table in a method, create a subtable
+and then format this table with the method setDataType.
+Examples
+// activate common format for the columns 3 to 5, for column 7 and for the
+// column with the user-defined column index “mycolumn”.
+MyDataTable.setCommonFormat({3,*}..{5,*},7,"mycolumn", true)
+MyDataTable.setDataType(3,"Table")
+MyDataTable.setCommonFormat(3,true) -- formats the subtable within the table
+MyDataTable.createNestedList(3,1)
+MyDataTable[3,1].setDataType(2,"Boolean")
+MyDataTable.createNestedList(3,7)
+MyDataTable[3,7][2,77] := true
+setCommonFormat [SimTalk]
+11-4134 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+getCommonFormat [SimTalk]
+CommonFormatColumnIndex [SimTalk]
+getCommonFormatData [SimTalk] - DataTable
+setCommonFormatData [SimTalk] - DataTable
+setDataType [SimTalk]
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - DataTable
+createNestedList [SimTalk] - local variable
+See also
+Creating Lists within Lists and Tables
+Activating and Deactivating Common Format
+Tab Contents
+Common Format [check box]
+setCommonFormat [SimTalk]
+Plant Simulation Help 11-4135
+Unpublished work. © 2026 Siemens
+
+setDataType [SimTalk]
+Sets the data type of the specified column(s) of the DataTable designated by <Path> to the designated
+value.
+Syntax
+<Path>.setDataType(Column:any, [Column:any, ..., ]DataType:string)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns.
+• The parameter DataType of data type string designates the data type.
+Data type Description
+Acceleration applies for the objects Conveyor, Track, TwoLaneTrack, and Transporter, meter
+per second squared
+Boolean true or false
+Date date statement (dd.MM.yyyy)
+DateTime date statement, including the time (dd.MM.yyyy HH:mm:ss)
+Integer integer value
+Length floating point number, value depends on the unit of the length
+List list with one column, shares properties of the DataList
+Money floating point numbers
+Object reference to a simulation model or an object
+Queue list with one column, shares properties of the DataQueue
+Real floating point number, such as 3.1415
+Speed floating point number, value depends on the unit for speed
+Stack list with one column, shares properties of the DataStack
+String characters, numbers and special characters
+Table table with one or more columns, shares properties of the DataTable
+Time time statement (hh:mm:ss.ss)
+Weight floating point number, value depends on the unit of the weight
+setDataType [SimTalk]
+11-4136 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+-- set data type of column 2 and column 5
+MyDataTable.setDataType(2, 5, "real")
+ 
+-- set the data type of the row index
+MyDataTable.setDataType(0, "integer")
+-- set the data type of columns 3 to 5, of column 7 and of the column 
+-- with the user-defined column index "mycolumn" to the data type real
+MyDataTable.setDataType({3,*}..{5,*},7,"mycolumn","real")
+SimTalk
+DataType [SimTalk] - lists
+getDataType [SimTalk]
+setDataTypeDefault [SimTalk]
+See also
+Data Type [lists]
+Tab Contents
+setDataType [SimTalk]
+Plant Simulation Help 11-4137
+Unpublished work. © 2026 Siemens
+
+setDataTypeDefault [SimTalk]
+Resets the data type of the specified column(s) of the DataTable designated by <Path> to the default data
+type of the table.
+Type
+Method
+Syntax
+<Path>.setDataTypeDefault(Column:any, ...)
+Parameter
+The parameters Column of data type any designate the columns.
+Example
+// resets the data type of the columns 3 to 4, and of column 10 to 
+// the standard data type of the table
+MyDataTable.setDataTypeDefault({3,*}..{4,*},10)
+SimTalk
+getDataType [SimTalk]
+setDataType [SimTalk]
+See also
+Data Type [lists]
+setDataTypeDefault [SimTalk]
+11-4138 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setEditorRightsColumn [SimTalk] - DataTable
+Sets the editing permissions of the specified column(s) of the DataTable designated by <Path> to the
+specified value.
+Syntax
+<Path>.setEditorRightsColumn(Column:any[, Column:any, ...], 
+ReadOnly:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the column(s) whose editing permissions you want
+to set.
+• The parameter ReadOnly of data type boolean designates read-only access (true) or read and write
+access (false).
+Example
+// sets the editor rights of column 1
+Tab1.setEditorRightsColumn(1,true)
+// sets the editor rights of columns 2 and 4
+Tab1.setEditorRightsColumn(2,4,true)
+SimTalk
+getEditorRightsColumn [SimTalk] - DataTable
+See also
+Editor [check box]
+Information Flow [check box]
+setEditorRightsColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4139
+Unpublished work. © 2026 Siemens
+
+setFontColorColumn [SimTalk] - DataTable
+Sets the Font Color of the specified column(s) of the DataTable designated by <Path> to the designated
+value.
+Type
+Method
+Syntax
+<Path>.setFontColorColumn(Column:any[, Column:any, ...], FontColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the column(s) whose font color you want to set.
+• The parameter FontColor of data type integer designates the font color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+// sets the font color of column 3 to cyan
+Tab2.setFontColorColumn(3,7)
+// sets the font color of column 1 and 5 to green
+Tab2.setFontColorColumn(1,5,3)
+SimTalk
+getFontColorColumn [SimTalk] - DataTable
+makeRGBValue [SimTalk]
+See also
+Font Color [cells]
+setFontColorColumn [SimTalk] - DataTable
+11-4140 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setFontsizeColumn [SimTalk] - DataTable
+Sets the Font Size of the specified column(s) of the DataTable designated by <Path> to the designated
+value.
+Type
+Method
+Syntax
+<Path>.setFontsizeColumn(Column:any[, Column:any, ...], FontSize:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns whose font size you want to set.
+• The parameter FontSize of data type integer designates the font size.
+You can specify 1 for Small, 2 for Medium, 3 for Large or 4 for Extra Large.
+Example
+// sets the font size of column 2 to medium
+Tab2.setFontsizeColumn(2,2)
+// sets the font size of columns 3 and 5 to small
+Tab2.setFontsizeColumn(3,5,1) 
+SimTalk
+getFontSizeColumn [SimTalk] - DataTable
+See also
+Font Size [drop-down list] - cells, columns
+setFontsizeColumn [SimTalk] - DataTable
+Plant Simulation Help 11-4141
+Unpublished work. © 2026 Siemens
+
+setFormatString [SimTalk] - DataTable
+Sets, depending on the data type, the Format String of the specified column(s) of the DataTable
+designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setFormatString(Column:any[, Column:any, ...], FormatString:string)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns for which you want to set the format
+string.
+• The parameter FormatString of data type string designates the format string.
+Example
+MyDataTable.setFormatString(1,"-15.3") // three digits after the comma
+SimTalk
+getFormatString [SimTalk] - DataTable
+See also
+Format String [text box]
+setFormatString [SimTalk] - DataTable
+11-4142 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setVisibility [SimTalk] - DataTable
+Shows (true) or hides (false) the designated column(s) of the DataTable designated by <Path>.
+Syntax
+<Path>.setVisibility(Column:any[, Column:any, ...], Visibility:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Column of data type any designate the columns which you want to show or hide.
+• The parameter Visibility of data type boolean sets if the columns will be shown (true) or not (false).
+Example
+MyDataTable.setVisibility(2,true)
+SimTalk
+getVisibility [SimTalk] - DataTable
+See also
+Work with Data in the DataTable
+Methods of Rows of the DataTable
+_Methods of Rows of the DataTable
+The DataTable provides the methods listed in the table of contents to the left for rows. The first parameter
+designates the column, either the column index, the column range or the column number.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+setVisibility [SimTalk] - DataTable
+Plant Simulation Help 11-4143
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+See also
+Address Columns and Rows with Methods
+_Methods of Rows of the DataTable
+11-4144 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+appendRow [SimTalk]
+Adds a new row to the DataTable designated by <Path> and writes the passed values to the individual
+columns.
+Remarks
+If the row has a row index, Plant Simulation writes the first value into the row index.
+You cannot add a row if the maximum number of rows has already been reached.
+Type
+Method
+Syntax
+<Path>.appendRow(Value:any[, Value:any, ..., Value:any]) -> integer
+Parameters
+You can specify the following parameters:
+• The parameter Value of data type any designates the value that Plant Simulation is to write to the first
+cell in the first free row.
+• The optional parameters Value of data type any designate additional values that Plant Simulation is to
+write to the remaining cells in the first free row.
+Return Value
+The return value has the data type integer. It is the index of the appended row.
+Example
+MyDataTable.appendRow("My value", "My value in row 2")
+See also
+Insert Row [lists] on the Edit ribbon tab
+Insert Row [context menu, lists]
+appendRow [SimTalk]
+Plant Simulation Help 11-4145
+Unpublished work. © 2026 Siemens
+
+cutEmptyRows [SimTalk]
+Cuts all empty rows from the DataTable designated by <Path>.
+Remarks
+In the example below we cut the empty rows 8 to 11 and row 12 thus moves up to row 8.
+Original DataTable Empty rows cut
+Type
+Method
+Syntax
+<Path>.cutEmptyRows → void
+Return Value
+The return value is void.
+Example
+MyNewDataTable.cutEmptyRows
+cutEmptyRows [SimTalk]
+11-4146 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+cutRow [SimTalk] - DataTable
+Cuts a row, including all of its data, from the DataTable designated by <Path>.
+Remarks
+You cannot cut the row index with the instruction cutRow(0).
+Type
+Method
+Syntax
+<Path>.cutRow(Row:any)
+Parameter
+The parameter Row of data type any designates the row. Plant Simulation shifts all rows with an index
+equal to or greater than any one position up.
+Example
+MyDataTable.cutRow(8)
+SimTalk
+insertRow [SimTalk]
+remove [SimTalk] - DataList
+See also
+Remove Row [context menu, lists]
+Cut [Home ribbon]
+cutRow [SimTalk] - DataTable
+Plant Simulation Help 11-4147
+Unpublished work. © 2026 Siemens
+
+getAlignmentRow [SimTalk] - DataTable
+Returns the alignment of the specified row of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getAlignmentRow(Row:any) → string
+Parameter
+The parameter Row of data type any designates the row whose alignment you want to get.
+Return Value
+The return value has the data type string.
+Example
+print MyDataTable.getAlignmentRow(14)
+SimTalk
+isAlignmentRow [SimTalk] - DataTable
+setAlignmentRow [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+getAlignmentRow [SimTalk] - DataTable
+11-4148 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getBackgroundColorRow [SimTalk] - DataTable
+Returns the background color of a row of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getBackgroundColorRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose background color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.getBackgroundColorRow(14)
+SimTalk
+setBackgroundColorRow [SimTalk] - DataTable
+See also
+Background Color [cells]
+getBackgroundColorRow [SimTalk] - DataTable
+Plant Simulation Help 11-4149
+Unpublished work. © 2026 Siemens
+
+getEditorRightsRow [SimTalk] - DataTable
+Returns the editor rights of a row of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getEditorRightsRow(Row:any) → boolean
+Parameter
+The parameter Row of data type any designates the row whose background color you want to get.
+Return Value
+The return value has the data type boolean:
+true for read-only access.
+false for read and write-access.
+Example
+print MyDataTable.getEditorRightsRow(1)
+SimTalk
+setEditorRightsRow [SimTalk] - DataTable
+See also
+Editor [check box]
+Information Flow [check box]
+getEditorRightsRow [SimTalk] - DataTable
+11-4150 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getFontColorRow [SimTalk] - DataTable
+Returns the Font Color of a row of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontColorRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose font color you want to get.
+Return Value
+The return value has the data type integer.
+Example
+DataTable3.getFontColorRow(34)
+SimTalk
+setFontColorRow [SimTalk] - DataTable
+See also
+Font Color [cells]
+getFontColorRow [SimTalk] - DataTable
+Plant Simulation Help 11-4151
+Unpublished work. © 2026 Siemens
+
+getFontSizeRow [SimTalk] - DataTable
+Returns the Font Size of the specified column of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFontSizeRow(Row:any) → integer
+Parameter
+The parameter Row of data type any designates the row whose font size you want to get.
+Return Value
+The return value has the data type integer.
+1 stands for Small, 2 for Medium, 3 for Large, and 4 for Extra Large.
+Example
+print DataTable3.getFontSizeRow(34)
+SimTalk
+setFontSizeRow [SimTalk] - DataTable
+See also
+Font Size [drop-down list] - cells, columns
+getFontSizeRow [SimTalk] - DataTable
+11-4152 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getRowNo [SimTalk]
+Searches for the row which contains a user-defined row index of the DataTable designated by <Path>.
+Remarks
+If the table contains a large number of entries, you might want to activate Fast Index Access.
+Type
+Method
+Syntax
+<Path>.getRowNo(RowIndex:any) → integer
+Parameter
+The parameter RowIndex of data type any designates the row index which Plant Simulation searches for.
+Note
+The method only works for simple data types, such as string, integer, etc.
+Return Value
+The return value has the data type integer.
+Is the row number. If the row index does not exist, Plant Simulation returns -1.
+Example
+MyDataTable.getRowNo("article1234")
+See also
+getColumnNo [SimTalk]
+FastAccessColumnIndex [SimTalk]
+FastAccessRowIndex [SimTalk]
+getRowNo [SimTalk]
+Plant Simulation Help 11-4153
+Unpublished work. © 2026 Siemens
+
+insertRow [SimTalk]
+Adds an empty row above the specified row of the DataTable designated by <Path>.
+Remarks
+Use insertRow to insert a row into an existing table, where you would like to move the existing cells down
+one position!
+You cannot add a row if the maximum number of rows has already been reached.
+Type
+Method
+Syntax
+<Path>.insertRow(Above:any) → boolean
+Parameter
+The parameter Above of data type any designates the row number that contains data. Plant Simulation
+moves all rows with an index equal to or greater than any down one position.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.insertRow(8)
+SimTalk
+cutRow [SimTalk] - DataTable
+See also
+Insert Row [context menu, lists]
+Insert Row [lists] on the Edit ribbon tab
+insertRow [SimTalk]
+11-4154 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+isAlignmentRow [SimTalk] - DataTable
+Returns if the Alignment of a row of the DataTable designated by <Path> matches the designated value
+(true) or not (false).
+Type
+Method
+Syntax
+<Path>.isAlignmentRow(Row:any, Alignment:string) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row.
+• The parameter Alignment of data type string designates the value of the alignment you want to check.
+You can specify "Right", "Left", or "Center".
+Return Value
+The return value has the data type boolean.
+Example
+print MyDataTable.isAlignmentRow(7,"center")
+SimTalk
+getAlignmentRow [SimTalk] - DataTable
+setAlignmentRow [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+isAlignmentRow [SimTalk] - DataTable
+Plant Simulation Help 11-4155
+Unpublished work. © 2026 Siemens
+
+setAlignmentRow [SimTalk] - DataTable
+Sets the Alignment of row(s) of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setAlignmentRow(Row:any[, Row:any,...], Alignment:string)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row whose alignment you want to set.
+• The optional parameters Row of data type any designate additional rows whose alignment you want to
+set.
+• The parameter Alignment of data type string designates the alignment you want to set.
+You can specify "Left", "Right", or "Centered".
+Example
+MyDataTable.setAlignmentRow(9,10,"center")
+MyDataTable.setAlignmentRow(10,"center")
+SimTalk
+getAlignmentRow [SimTalk] - DataTable
+isAlignmentRow [SimTalk] - DataTable
+See also
+Alignment [cells and columns]
+setAlignmentRow [SimTalk] - DataTable
+11-4156 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setBackgroundColorRow [SimTalk] - DataTable
+Sets the background color of row(s) of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setBackgroundColorRow(Row:any[, 
+Row:any,... , ]BackgroundColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type any designates the row whose background color you want to set.
+• The optional parameters Row of data type any designate additional rows whose background color you
+want to set.
+• The parameter BackgroundColor of data type integer designates the background color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow, or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Examples
+MyDataTable.setBackgroundColorRow(1,1)   // sets the background color of 
+row 1 to black
+MyDataTable.setBackgroundColorRow(1,2,2) // sets the background color of 
+rows 1 and 2 to red
+var rgb: integer
+// sets the background color of row 3
+MyDataTable.setBackgroundColorRow(3,makeRGBValue(0,200,0))
+// sets the background color of rows 4 and 8
+MyDataTable.setBackgroundColorRow(4,8,makeRGBValue(60,100,0))
+print MyDataTable.getBackgroundColorRow(3)
+SimTalk
+getBackgroundColorRow [SimTalk] - DataTable
+setBackgroundColorRow [SimTalk] - DataTable
+Plant Simulation Help 11-4157
+Unpublished work. © 2026 Siemens
+
+makeRGBValue [SimTalk]
+See also
+Background Color [cells]
+setBackgroundColorRow [SimTalk] - DataTable
+11-4158 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setEditorRightsRow [SimTalk] - DataTable
+Sets the editing permissions of row(s) of the DataTable designated by <Path> to the designated value.
+Type
+Method
+Syntax
+<Path>.setEditorRightsRow(Row:any[, Row:any, ...], ReadOnly:boolean)
+Parameters
+You can specify the following parameters:
+• The parameters Row of data type any designate the row(s) editing permissions you want to set.
+• The parameter ReadOnly of data type boolean designates read-only access (true) or read and write
+access (false).
+Example
+// sets the editor rights of row 1
+Tab1.setEditorRightsRow(1,true)
+// sets the editor rights of row 3 and 5
+Tab1.setEditorRightsRow(3,5,false)
+SimTalk
+Information Flow [check box]
+getEditorRightsRow [SimTalk] - DataTable
+See also
+Editor [check box]
+setEditorRightsRow [SimTalk] - DataTable
+Plant Simulation Help 11-4159
+Unpublished work. © 2026 Siemens
+
+setFontColorRow [SimTalk] - DataTable
+Sets the Font Color of row(s) of the DataTable designated by <Path> to the designated value.
+Type
+Method
+Syntax
+<Path>.setFontColorRow(Row:any[, Row:any, ...], FontColor:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Row of data type any designate the cells whose font color you want to set.
+• The parameter FontColor of data typeinteger designates the color.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow, or 7 for
+Cyan.
+Set the RGB values of the color with the method makeRGBValue.
+Example
+// sets the font color of row 34 to magenta
+DataTable3.setFontColorRow(34,5)
+// sets the font color of row 3 and 5 to yellow
+DataTable3.setFontColorRow(3,5,6)
+SimTalk
+getFontColorRow [SimTalk] - DataTable
+makeRGBValue [SimTalk]
+See also
+Font Color [cells]
+setFontColorRow [SimTalk] - DataTable
+11-4160 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setFontSizeRow [SimTalk] - DataTable
+Sets the Font Size of row(s) of the DataTable designated by <Path> to the designated value.
+Type
+Method
+Syntax
+<Path>.setFontSizeRow(Row:any[, Row:any, ...], FontSize:integer)
+Parameters
+You can specify the following parameters:
+• The parameters Row of data type any designate the rows whose font size you want to set.
+• The parameter FontSize of data type integer designates the font size.
+You can specify 1 for Small, 2 for Medium, 3 for Large, or 4 for Extra Large.
+Example
+// sets the font size of row 2 to medium
+DataTable3.setFontSizeRow(2,2)
+// sets the font size of rows 3 and 5 to small
+DataTable3.setFontSizeRow(3,5,1)
+SimTalk
+getFontSizeRow [SimTalk] - DataTable
+See also
+Font Size [drop-down list] - cells, columns
+Miscellaneous Methods of the DataTable
+_Miscellaneous Methods of the DataTable
+The DataTable provides the methods listed in the table of contents to the left for miscellaneous purposes.
+setFontSizeRow [SimTalk] - DataTable
+Plant Simulation Help 11-4161
+Unpublished work. © 2026 Siemens
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+_Miscellaneous Methods of the DataTable
+11-4162 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+calculateList [SimTalk]
+Recomputes formulas of the DataTable designated by <Path> and shows their current values in the
+respective cells.
+Type
+Method
+Syntax
+<Path>.calculateList([Range:listrange])
+Parameter
+The parameter Range of data type listrange designates the range of cells for which the formulas are
+computed.
+Example
+MyDataTable.calculateList({2,*},{3,3}) // computes column 2, cell 3,3
+See also
+Recompute Formulas
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+calculateList [SimTalk]
+Plant Simulation Help 11-4163
+Unpublished work. © 2026 Siemens
+
+copyFilteredTableTo [SimTalk]
+Copies all rows of the source table designated by <Path> into the target table for which the Condition
+returns true.
+Remarks
+copyFilteredTableTo also copies the column index if you defined it.
+Type
+Method
+Syntax
+<Path>.copyFilteredTableTo(TargetTable:table, Condition:string)
+Parameters
+You can specify the following parameters:
+• The parameter TargetTable of data type table designates the target table into which the rows of the
+source table will be copied.
+• The parameter Condition of data type string designates the condition.
+Within the condition the anonymous identifier @ references the DataTable and the variable ySelf
+contains the row number of the row that is to be copied.
+If the Condition returns true, the row of the source table is going to be copied to the target table.
+Example
+DataTable.copyFilteredTableTo(DataTable1, "@[2, ySelf] = 3")
+copyFilteredTableTo [SimTalk]
+11-4164 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+copyRangeTo [SimTalk]
+Copies the designated range of the source table designated by <Path> into the target table.
+Type
+Method
+Syntax
+<Path>.copyRangeTo(SourceRange:listrange, TargetTable:any, 
+TargetColumn:any, TargetRow:any)
+Parameters
+You can specify the following parameters:
+• The parameter SourceRange of data type listrange designates the range to be copied.
+• The parameter TargetTable of data type any designates the target table.
+• The parameter TargetColumn of data type any designates the column in the target table, where Plant
+Simulation inserts the copied range.
+• The parameter TargetRow of data type any designates the row in the target table, where Plant
+Simulation inserts the copied range.
+Example
+tableA.copyRangeTo({2,2}..{*,*}, tableB, 1,1)
+Depending if Column Index Belongs to Contents is active or not, the range has different effects on the
+method copyRangeTo of the DataTable.
+tableA.copyRangeTo({2,*}, tableB, 1,1)
+• If tableA has a column index and the column index belongs to the contents, the entire contents of
+column 2 is copied to the designated target DataTable, including the column index.
+• If tableB has a column index and the column index does not belong to the contents, only the contents
+of the column is copied, excluding the column index.
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+copyRangeTo [SimTalk]
+Plant Simulation Help 11-4165
+Unpublished work. © 2026 Siemens
+
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+Column Index Belongs to Contents
+copyRangeTo [SimTalk]
+11-4166 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+determineRange [SimTalk] - DataTable
+Resolves the actual list range for the DataTable designated by <Path>.
+Remarks
+The method determineRange assigns the boundaries of the list range to the local variables, which you
+specify.
+Type
+Method
+Syntax
+<Path>.determineRange(Range:listrange, byRef StartColumn:integer, byRef 
+StartRow:integer, byRef EndColumn:integer, byRef EndRow:integer)
+Local Variables
+You can specify the following local variables:
+• The parameter Range of data type listrange designates the range of the DataTable.
+• The local variable StartColumn of data type integer designates the number of the first column.
+• The local variable StartRow of data type integer designates the number of the first row.
+• The local variable EndColumn of data type integer designates the number of the last column.
+• The local variable EndRow of data type integer designates the number of the last row.
+Example
+param a: any
+var fromX, fromY, toX, toY: integer
+if isListRange(a) 
+   MyDataTable.determineRange(a, fromX, fromY, toX, toY)
+   print "{",fromX,",",fromY,"}..{",toX,",",toY,"}"
+end
+// You can call this method like this: 
+myMethod({2,3})
+myMethod({1,1}..{2,*})
+// range with a user-defined column/row index
+myMethod({#7,"abc"}..{#8,*})
+determineRange [SimTalk] - DataTable
+Plant Simulation Help 11-4167
+Unpublished work. © 2026 Siemens
+
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+determineRange [SimTalk] - DataTable
+11-4168 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getCommonFormatData [SimTalk] - DataTable
+Gets format data of the column of data type list/table of the DataTable designated by <Path> for which
+you activated Common Format and writes it to the target table.
+Type
+Method
+Syntax
+<Path>.getCommonFormatData(TargetTable:table[, Column:any])
+<Path>.getCommonFormatData(TargetList:list[, Column:any])
+Parameters
+You can specify the following parameters:
+• The parameter TargetTable of data type table designates the target table.
+The parameter TargetList of data type list designates the target list.
+• The optional parameter Column of data type any designates the column of the table designated by
+<Path>. The column has to be of data type list/table and Common Format has to be activated. If you do
+not specify this parameter, the common format data will be set for the first column.
+Example
+SourceTable.getCommonFormatData(DataTable,4)
+SimTalk
+setCommonFormatData [SimTalk] - DataTable
+getCommonFormat [SimTalk]
+setCommonFormat [SimTalk]
+See also
+Common Format [check box]
+getCommonFormatData [SimTalk] - DataTable
+Plant Simulation Help 11-4169
+Unpublished work. © 2026 Siemens
+
+getFormula [SimTalk]
+Returns the formula located in the specified cell of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.getFormula(Column:any, Row:any) → string
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column of the cell.
+• The parameter Row of data type any designates the row of the cell.
+Return Value
+The return value has the data type string.
+Example
+MyDataTable.getFormula(16,8)
+SimTalk
+setFormula [SimTalk]
+See also
+Create Formula
+Calculate Values with a Formula
+getFormula [SimTalk]
+11-4170 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+initialize [SimTalk]
+Initializes the cells within the designated range in the DataTable designated by <Path> with the designated
+value.
+Remarks
+Plant Simulation overwrites any existing data.
+Note
+If the designated range contains the index and the content, Plant Simulation only initializes the content.
+Type
+Method
+Syntax
+<Path>.initialize([Range:listrange, ..., ]Value:any)
+Parameters
+You can specify the following parameters:
+• The parameter Range of data type listrange designates the range of cells.
+• The parameter Value of data type any designates the value.
+The data type of the parameter Value has to match the data types of the ranges of cells that are to be
+initialized.
+Example
+MyDataTable.initialize({1,0}..{5,*},{7,*},5)
+MyDataTable.initialize({*,*},"Empty")
+See also
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+initialize [SimTalk]
+Plant Simulation Help 11-4171
+Unpublished work. © 2026 Siemens
+
+mergeTable [SimTalk]
+Copies the columns of the source table to the target table designated by <Path>.
+Remarks
+The method mergeTable uses the row index to correctly assign the rows. For this reason both DataTables
+have to have a row index otherwise the method will not copy anything.
+The method searches for the index of each row in the source table in the target table. If it exists, it adds
+the column values of the source table to the target table.
+If the source table contains a great number of rows, we recommend activating Fast Index Access as all
+index entries of the target table have to be found in the source table.
+Type
+Method
+Syntax
+<Path>.mergeTable(SourceTable:table)
+Parameters
+The parameter SourceTable of data type table designates the source table whose rows will be copied to the
+target table.
+Example
+TargetTable.mergeTable(SourceTable)
+Compare this example.
+mergeTable [SimTalk]
+11-4172 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Our SourceTable looks like this Our TargetTable looks like this
+Our merged table looks like this:
+See also
+Fast Index Access [rows]
+mergeTable [SimTalk]
+Plant Simulation Help 11-4173
+Unpublished work. © 2026 Siemens
+
+setCommonFormatData [SimTalk] - DataTable
+Sets the common format data for the subtables contained in columns of data type list/table of the target
+DataTable designated by <Path> for which you activated Common Format for the specified column.
+Remarks
+If you activated Common Format for a column, assigning a subtable to a table cell creates a copy of the
+assigned table. Otherwise Plant Simulation enters a reference to the assigned table. The reason for this is
+that it does not make sense to enter a reference if Common Format is active as the assigned table should
+not be subject to the common format.
+setCommonFormatData applies to the DataTable and the TimeSequence.
+Type
+Method
+Syntax
+<Path>.setCommonFormatData(FormatData:table[, Column:any])
+<Path>.setCommonFormatData(FormatData:list[, Column:any])
+Parameters
+You can specify the following parameters:
+• The parameter FormatData of data type table designates the table which contains the desired
+formatting for the subtables.
+The parameter FormatData of data type list designates the list which contains the desired formatting for
+the sublists.
+• The optional parameter Column of data type any designates the column of the table designated by
+<Path>. The column has to be of data type list/table and Common Format has to be activated. If you do
+not specify this parameter, the common format data will be set for the first column.
+Example
+MyTargetTable.setCommonFormatData(DataTable,2)
+SimTalk
+getCommonFormatData [SimTalk] - DataTable
+setCommonFormatData [SimTalk] - lists
+setCommonFormatData [SimTalk] - DataTable
+11-4174 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Common Format [check box]
+setCommonFormatData [SimTalk] - DataTable
+Plant Simulation Help 11-4175
+Unpublished work. © 2026 Siemens
+
+setCursor [SimTalk] - DataTable
+Sets the internal cursors of the DataTable designated by <Path> to the designated cell.
+Remarks
+The method find starts searching from the current cursor position and sets the cursor to the next found
+item.
+The methods max and min set the cursor to the maximum or minimum value of the given range.
+Type
+Method
+Syntax
+<Path>.setCursor(Column:any, Row:any) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column, i.e., the internal cursor CursorX.
+• The parameter Row of data type any designates the row, i.e., the internal cursor CursorY.
+Return Value
+The return value has the data type boolean.
+true tells that the cursors were set to the desired position.
+Examples
+MyDataTable.setCursor(1,1)
+MyDataTable.setCursor(1, "Test") // returns false if the index named Test 
+does not exist
+SimTalk
+CursorX [SimTalk]
+setCursor [SimTalk] - DataTable
+11-4176 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+CursorY [SimTalk]
+find [SimTalk] - lists
+max [SimTalk] - lists
+min [SimTalk] - lists
+setCursor [SimTalk] - DataTable
+Plant Simulation Help 11-4177
+Unpublished work. © 2026 Siemens
+
+setFormula [SimTalk]
+Enters the formula into the table cell(s) of the designated range of the DataTable designated by <Path>.
+Type
+Method
+Syntax
+<Path>.setFormula([Range:listrange, ..., ]Formula:string)
+Parameters
+You can specify the following parameters:
+• The optional parameter Range of data type any designates the range of cells for which you want to set a
+formula. You can also enter several ranges.
+• The parameter Formula of data type string designates the formula.
+Example
+// ‘myFormula’ is a method whose return value is the result of the formula
+MyDataTable.setFormula({1,2}..{2,3},"myFormula")
+// column 3 results from the difference of column 1 and column 2
+MyDataTable.setFormula({3,1}..{3,*}, "@[1,yself] - @[2,yself]") 
+SimTalk
+getFormula [SimTalk]
+See also
+Create Formula
+Calculate Values with a Formula
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+setFormula [SimTalk]
+11-4178 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Methods for Accessing the DataTable
+_Methods for Accessing the DataTable
+The DataTable provides the methods listed in the table of contents to the left for accessing it.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Accessing the DataTable
+Plant Simulation Help 11-4179
+Unpublished work. © 2026 Siemens
+
+[ , ] [SimTalk] - read cell contents, DataTable
+Returns the data of the designated cell of the DataTable designated by <Path>.
+Remarks
+Note
+If you use a string as the column/row index, the string is case-insensitive, for example when you print it
+with the method DataTable["my text", "aa bb"].
+If the table contains numerous entries, you might want to activate Fast Index Access.
+Type
+Method
+Syntax
+<Path>[Column:integer or string, Row:integer or string] → contents of the 
+cell
+Parameters
+You can specify the following parameters:
+• The optional parameter Column of data type integer or string designates the column.
+• The optional parameter Row of data type integer or string designates the row.
+Return Value
+The return value is the contents of the cell.
+Is a zero value if the cell is empty.
+Is 0 for numerical data types.
+false for the data types Boolean.
+Is an empty string "" for strings.
+Is void for the data types object, table, list, stack, and queue.
+[ , ] [SimTalk] - read cell contents, DataTable
+11-4180 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+Plant Simulation reads the contents of the cell, but does not remove it.
+Example
+print MyDataTable[1,2]
+print MyDataTable["Value",2]
+[ , ] [SimTalk] - read cell contents, DataTable
+Plant Simulation Help 11-4181
+Unpublished work. © 2026 Siemens
+
+[ , ] [SimTalk] - write cell contents, DataTable
+Writes data to the DataTable designated by <Path>.
+Remarks
+First you access the cell by its index and then you assign a value. The index statement begins and ends
+with a bracket. In the bracket you first enter the column and then the row of the cell to be accessed. You
+can use the system index or a user-defined index which you assigned.
+The data type of the new value has to be the same as the data type of the table cell.
+Type
+Method
+Syntax
+<Path>[Column:integer or string, Row:integer or string]
+Parameters
+You can specify the following parameters:
+• The optional parameter Column of data type integer or string designates the column of the cell.
+• The optional parameter Row of data type integer or string designates the row of the cell.
+Example
+MyDataTable[2,3] := 12.34                // system index
+orderList["OrderNo","Miller"] := 12.34   // user-defined index
+[ , ] [SimTalk] - write cell contents, DataTable
+11-4182 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+deleteContents [SimTalk]
+Deletes the contents of the DataTable designated by <Path>.
+Remarks
+The contents also includes the row index. If you also activated Settings > Column Index Belongs to
+Contents in the format of the DataTable, the column index will be deleted as well.
+Type
+Method
+Syntax
+<Path>.deleteContents
+Example
+MyDataTable.deleteContents
+See also
+delete [SimTalk] - lists
+deleteCellFormat [SimTalk]
+Column Index Belongs to Contents
+deleteContents [SimTalk]
+Plant Simulation Help 11-4183
+Unpublished work. © 2026 Siemens
+
+writeRow [SimTalk]
+Writes data to the DataTable designated by <Path> at the designated position.
+Remarks
+Plant Simulation replaces any data that may be located in the designated cells.
+Type
+Method
+Syntax
+<Path>.writeRow(Column:any, Row:any, Value:any[, Value:any, ..., Value:any])
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column of the table.
+• The parameter Row of data type any designates the row of the table.
+• The parameter Value of data type any designates the value(s) to be written.
+Examples
+var servicesTable : table[string,integer,string] 
+Station.imp.getServices(servicesTable)
+servicesTable.delete
+switch @.Name
+case "PartA" 
+   servicesTable.writeRow(1,1, "ServiceA",2)
+case "PartB" 
+   servicesTable.writeRow(1,1, "ServiceB",1)
+case "PartC" 
+   servicesTable.writeRow(1,1, "ServiceA",1)
+   servicesTable.writeRow(1,2, "ServiceB",1)
+end
+Station.imp.setServices(servicesTable)
+end
+MyDataTable.writeRow(1,2,"Smith")
+writeRow [SimTalk]
+11-4184 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Methods for Instantiating the DataTable
+_Methods for Instantiating the DataTable
+The DataTable provides the methods create [SimTalk] - DataTable and createNestedList [SimTalk] -
+DataTable for instantiating it.
+Remember that a local variable of data type table does not contain the data itself, but only a reference to
+the corresponding data structure. When the variables are entered into a Method object, they are void, i.e.,
+they do not contain a reference to a data structure yet. You have to create the variable, before you can
+access the data.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Instantiating the DataTable
+Plant Simulation Help 11-4185
+Unpublished work. © 2026 Siemens
+
+create [SimTalk] - DataTable
+Creates a data structure without contents in the local variable designated by <var>.
+Remarks
+create only applies to a local variable of data type table.
+Type
+Method
+Syntax
+<var>.create
+Example
+var OrderList : table[string,real]
+OrderList.create
+OrderList[1,1] := "Cans"
+OrderList[2,1] := 3000.0
+See also
+Data Types in Local Variables
+create [SimTalk] - DataTable
+11-4186 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+createNestedList [SimTalk] - DataTable
+Creates a nested list in the designated cell in the DataTable designated by <Path>.
+Remarks
+The data type of the columns of this DataTable has to be list, stack, queue, or table.
+Type
+Method
+Syntax
+<Path>.createNestedList(Column:any, Row:any[, Name:string]) → list
+Parameters
+You can specify the following parameters:
+• The parameter Column of data type any designates the column of the cell.
+• The parameter Row of data type any designates the row of the cell.
+• The optional parameter Name of data type string designates the name of the subtable to be created.
+Return Value
+The return value has the data type list.
+Is the nested list (DataList, DataQueue, DataStack, or DataTable) that was created.
+Example
+MyDataTable.createNestedList(1,2,"My subtable")
+See also
+setCommonFormatData [SimTalk] - DataTable
+getCommonFormatData [SimTalk] - DataTable
+Activating and Deactivating Common Format
+Creating Lists within Lists and Tables
+createNestedList [SimTalk] - DataTable
+Plant Simulation Help 11-4187
+Unpublished work. © 2026 Siemens
+
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - local variable of data type list or table
+Read-Only Attributes of the DataTable
+_Read-Only Attributes of the DataTable
+The DataTable provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of Lists and Tables.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDataTable.Full
+Read-Only Attributes of the DataTable
+11-4188 Plant Simulation Help
+Unpublished work. © 2026 Siemens

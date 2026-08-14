@@ -1,0 +1,58 @@
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print &MyVariable.AsString
+Read-Only Attributes of the Variable
+Plant Simulation Help 11-3803
+Unpublished work. © 2026 Siemens
+
+asString [SimTalk] - Variable
+Returns the value of the Variable as a string.
+Remarks
+Having the value as a string is especially useful for Variables of data type object. If the Variable contains a
+relative path, asString returns the relative path.
+Type
+Read-only attribute
+Syntax
+<&>Variable.asString → string
+Return Value
+The return value has the data type string.
+Example
+ObjVariable := "~.ProdMgr.prodplan"
+var a1 := ObjVariable             // assigns .Models.Model.ProdMgr.prodplan
+var a2 := &ObjVariable.asString   // assigns "~.ProdMgr.prodplan"
+See also
+Data Type [Variable]
+Attributes of the Variable
+_Attributes of the Variable
+The object Variable provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+asString [SimTalk] - Variable
+11-3804 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Note
+You can only access the attributes of the object Variable, which refer to the object itself, via the
+reference operator &. Without the operator the attribute will be applied to the contents of the Variable.
+&Variable.Name := "MyVariable"
+_Attributes of the Variable
+Plant Simulation Help 11-3805
+Unpublished work. © 2026 Siemens

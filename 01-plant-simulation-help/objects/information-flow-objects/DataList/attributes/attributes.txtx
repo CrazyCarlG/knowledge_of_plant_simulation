@@ -1,0 +1,37 @@
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+myDataList.InfoflowReadOnly := true
+• To get the value of an attribute, you might, for example, type:
+print myDataList.InfoflowReadOnly
+posit := Station.Cont.XPos
+DataStack
+DataStack
+Use the object DataStack for accessing data according to the LIFO method (Last In First Out).
+Image
+Description
+The objects DataQueue and DataStack are lists with one column. They share all methods and attributes,
+but differ in their built-in properties.
+DataStack
+Plant Simulation Help 11-4237
+Unpublished work. © 2026 Siemens
+
+• Plant Simulation accesses the content of the DataStack using the LIFO method (Last In First Out).
+• Plant Simulation accesses the content of the DataQueue using the FIFO method (First In First Out).
+To show a tooltip with information about the DataStack, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the DataStack, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DataStack to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > DataStack on the Home ribbon tab.
+See also
+Properties of the DataQueue
+DataStack
+11-4238 Plant Simulation Help
+Unpublished work. © 2026 Siemens

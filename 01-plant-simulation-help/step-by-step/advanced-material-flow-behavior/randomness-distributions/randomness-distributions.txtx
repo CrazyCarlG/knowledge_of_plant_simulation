@@ -1,0 +1,107 @@
+Back to Balance a Production Line
+Modeling Random Processes
+Model Random Processes
+Many computer programs use random number generators to create a stream of random numbers that
+generally are located in the interval between 0 and 1. Starting from given start values, the so-called seed
+values, a large number of stochastically independent random numbers has to be available.
+Compare these examples of the application of random numbers in computer programs:
+• Gaming programs use random numbers to allow for a greater diversity of the operating sequence of the
+game.
+• Database programs use random numbers to enter a large number of data sets and thus test the
+functionality of the database.
+• Simulation programs, such as Plant Simulation, use random numbers to represent, among others, the
+interval between failures of machines.
+Modeling Random Processes
+10-304 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Compare Simulating Random Processes
+Back to Modeling the Material Flow
+Random Numbers and Their Statistical Distribution
+We know that there are deterministic processes and random processes. For a deterministic process, we can
+predict the result of the process, for example by knowing a law of nature. If we do not know all factors that
+characterize a process, its result is random.
+When we simulate production processes, the occurrence of pauses is a deterministic process. Failures of
+machines or the rejects that are produced, on the other hand, are random processes. A random process
+results in a random number. The replication of the process results in the realization of the random number.
+Throwing the dice is a random process, the resulting number of points is the associated random number.
+There are random numbers that can have individual, separate values. These may be a limited or an
+unlimited number of different values, such as the number of rejects over a long period of time or the
+number of orders during a day. A limited number may result from throwing the dice, an unlimited number
+can be a countable numbered amount. These types of random numbers are called discrete. To simplify
+matters, we suppose that these values can be 0, 1, 2, etc. For describing the random number we specify
+the probability for the individual numbers to be the result of throwing the dice. Adding up all probabilities
+has to result in 1, as one of the numbers will always be thrown.
+A random number that can take all values within a limited or an unlimited interval of numbers is
+continuous. Examples of continuous random numbers are the mean time between failures (MTBF) and
+the mean time to repair (MTTR) of a machine. For describing a continuous random number, we cannot
+specify the probability for an individual number to occur. We rather have to specify the probability with
+which this random number is located between two given values, i.e., we specify an interval.
+The probability density function test describes the distribution of a random number. The density function
+of a continuous random number only has values greater than 0 or equal to 0. It can be continuously drawn
+without interruption. The area underneath the function between two values a and b is the probability that
+the random number is located between these values a and b. The value of the density function at the
+position x describes how often a value will occur that approximates x. The entire area below the curve
+of the density function has the value 1, as with each realization of the random number a certain value
+occurs.
+Random Numbers and Their Statistical Distribution
+Plant Simulation Help 10-305
+Unpublished work. © 2026 Siemens
+
+The screenshot above shows the density function of the gamma distribution with the parameters Alpha
+= 3 and Beta = 5.5. The most random numbers occur in the vicinity of the apex of the density function
+(random number x = 11). This value is called the modal value. When you build the mean of many
+realizations of this distribution, you will notice that the mean value is substantially greater than the mode/
+modal value. The mean value will be around 16.5. This gamma distribution will create random numbers
+between 24 and 26 with a probability of 0.04. This probability equals the gray area below the curve in the
+screenshot above.
+Back to Model Random Processes
+Use Pseudo Random Numbers
+On first sight it seems to be impossible to simulate random processes with a computer, as a computer
+computes the numbers according to fixed stipulated calculation rules. A computer cannot create a truly
+random sequence of numbers. A computer-generated sequence of numbers can only approximately have
+the properties of random numbers. This is why they are called pseudo random numbers.
+The sequence of numbers that a computer creates is called random number stream. The computer
+computes the following number starting from a random number. The algorithm for creating random
+numbers starts out with the so-called seed values and can generate any number of values from them. By
+using different seed values you can model several random processes that are independent of each other.
+For creating a random number it oftentimes suffices to create a uniformly distributed random number
+located in the interval between 0 and 1 (0,1). A random number is uniformly distributed, when the
+probability for an interval only depends on its length, and not from it position on the line of numbers.
+Using a uniformly distributed random number the computer can, for example, algorithmically create a
+normally distributed random number with a given mean value and standard deviation.
+A uniformly distributed pseudo random number has to meet a number of requirements:
+• The arrangement of the random numbers shows no typical characteristics, i.e., the algebraic signs of
+consecutive random numbers do not display any typical patterns.
+Use Pseudo Random Numbers
+10-306 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The algorithm for creating random numbers has to become periodic, as the computer only has a finite
+number of states. For this reason the period length has to be as large as possible.
+• Starting from the given seed values a large number of stochastically independent random numbers has
+to be available for the simulation.
+• The random processes of a simulation have to be reproducible to be able to use certain statistics
+methods, such as the variance reduction.
+Back to Model Random Processes
+Use Probability Distributions
+As a rule, only very few observed data about random process, such as the interval between two failures of
+a machine, will be available to you.
+To allow you to reproduce these random processes in your simulation model, Plant Simulation provides
+a number of probability distributions, compare Probability Distributions, Empirical Distributions, and
+User-defined Distributions.
+Step 3: Decide Which Distribution to Use assists you in picking the right distribution for your purpose
+with the object DataFit.
+Use Probability Distributions
+Plant Simulation Help 10-307
+Unpublished work. © 2026 Siemens
+
+Once you select the distribution from the list, Plant Simulation show the parameters, which this
+distribution requires, along the upper border of the tab.
+Calculate the respective values in the observed data, which you received from your customer, and type
+them into the text box. The lower bound and the upper bound are optional, meaning that you can, but do
+not have to specify them.
+Back to Model Random Processes
+Use Probability Distributions
+10-308 Plant Simulation Help
+Unpublished work. © 2026 Siemens

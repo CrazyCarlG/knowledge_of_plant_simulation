@@ -1,0 +1,629 @@
+Mathematical Functions
+Mathematical Functions
+Plant Simulation provides a number of mathematical functions .
+You do not have to enter a path for the mathematical functions.
+• Basic Mathematical Functions
+• Functions for Numerical Values
+• Trigonometric Functions
+• Distribution Functions, z_ functions
+See also
+Arithmetic Operators
+Mathematical Functions
+12-290 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Basic Mathematical Functions
+Plant Simulation provides a number of basic mathematical functions.
+You can specify these basic mathematical functions.
+Function Type Results in
+abs [SimTalk] abs(x) the absolute value of |x|
+beta [SimTalk] beta(x,y) the beta function beta(x,y), x, y > 0
+betai [SimTalk] betai(x,y,z) the incomplete beta function betai(x,y), x, y > 0 and
+0 <= z <= 1
+exp [SimTalk] exp(x) the exponential function ex The parameter is any
+number of data type real.
+gamma [SimTalk] gamma(x) the gamma function Γ (x), x > 0
+log [SimTalk] log(x) the natural logarithm
+log10 [SimTalk] log10(x) the logarithm to the base of 10
+pow [SimTalk] pow(x,y) xy
+If the basis is 0, the exponent has to be greater than
+0.
+If the exponent is not an integer, for example -0.5,
+the basis has to be greater than or equal to 0.
+exponentiation operator
+[SimTalk]
+x ** y the exponentiation operator. Is the same as
+pow(x,y).
+sqrt [SimTalk] sqrt(x) the square root. The parameter of data type real has
+to be equal to or greater than 0.
+* The square root function sqrt only accepts parameters greater than or equal to 0.
+* The functions sqrt and pow also support the use of a physical unit. For sqrt this is limited though. If the
+radiant has a square unit, the result has the non-square unit. For other powers of units Plant Simulation
+returns a number of data type real without a unit.
+Note
+When using the functions exp, pow, gamma and the arithmetic operators in SimTalk, you have to make
+sure that the result is located within the range of numbers your computer can show. Use the gamma
+function to compute the factorial of a number n: n! = 1 · 2 · … · n = Γ (n+1)
+Basic Mathematical Functions
+Plant Simulation Help 12-291
+Unpublished work. © 2026 Siemens
+
+Parameter
+The parameter for the basic mathematical functions has the data type real or integer or it can be a value
+with a physical unit.
+Return Value
+The return value has the data type real.
+Example
+var area := 2m * 2m; 
+print area        // outputs 4m² in the Console
+print sqrt(area)  // outputs 2m in the Console
+-- exponentiation operator ** instead of pow
+var x: real := 2
+var y: real := 3
+var z: real := x ** y  // z = 2*2*2 = 8
+See also
+Arithmetic Operators
+Basic Mathematical Functions
+12-292 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Functions for Numerical Values
+Plant Simulation provides a number of functions for numerical values.
+You can specify these functions for numerical values.
+Function Type Results in
+ceil [SimTalk] ceil(x) the smallest integer number greater than or
+equal to x
+floor [SimTalk] floor(x) the greatest integer number smaller than or
+equal to x
+max [SimTalk] max(x,y[,z, ...]) the maximum
+min [SimTalk] min(x,y[,z, ...]) the minimum
+round [SimTalk] round(x) the next integer number. print round(-1.5)
+yields -2
+round [SimTalk] round(x:real,
+places:integer)
+the rounding of the real number x to the number
+of specified places
+Note
+You can specify more than two parameters for the functions max and min.
+For the functions max and min you cannot mix data types arbitrarily, i.e., all data types either have to
+be numerical, or all data types have to be of data type date and dateTime, or all have to be of data type
+string.
+Parameters
+The parameter for the functions for numerical values can have the data type real, integer, or it can be a
+value with a physical unit.
+The parameter can also have the data type date, dateTime, or string for the functions min and max.
+Return Value
+The return value has the same data type as the parameter that you specify.
+See also
+Arithmetic Operators
+Functions for Numerical Values
+Plant Simulation Help 12-293
+Unpublished work. © 2026 Siemens
+
+Trigonometric Functions
+Trigonometric Functions
+Plant Simulation provides a number of trigonometric functions.
+You can specify these trigonometric functions.
+Function Type Results in
+acos [SimTalk] acos(x) the arc cosine of x
+asin [SimTalk] asin(x) the arc sine of x
+atan [SimTalk] atan(x) the arc tangent of x
+atan2 [SimTalk] atan2(y,x) the arc tangent of y and x
+cos [SimTalk] cos(x) the cosine of x
+sin [SimTalk] sin(x) the sine of x
+tan [SimTalk] tan(x) the tangent of x
+Parameter
+Trigonometric functions expect the parameter in radians or return the result in radians. You can specify
+parameters of data type real or integer.
+Return Value
+The return value has the data type real.
+See also
+atan2 [SimTalk]
+atan2 [SimTalk]
+The function atan2(y, x) returns the angle in radians between the positive x-axis of a plane and the point
+given by the coordinates (x, y) on it for any real number arguments x and y, both of which are not equal to
+zero.
+Type
+Function
+Trigonometric Functions
+12-294 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Syntax
+atan2(y:real, x:real) → real
+Parameters
+You can specify the following parameters:
+• The parameter y of data type real designates the coordinate on the y-axis.
+• The parameter x of data type real designates the coordinate on the x-axis.
+Return Value
+The return value has the data type real.
+The angle is positive for counter-clockwise angles (upper half-plane, y > 0), and negative for clockwise
+angles (lower half-plane, y 0).
+For x=0 and y=0 the function returns 0.
+Back to
+Trigonometric Functions
+Distribution Functions
+Distribution Functions, z_ functions
+Create probability distributions with the distribution functions (z_functions).
+Remarks
+You can create random numbers for times in the dialogs of the objects on the Tab Times and on the Tab
+Failures, with a Variable 
+  of data type randtime, and in SimTalk with the functions described below.
+Plant Simulation provides these distribution functions.
+Function Results in this distribution
+z_beta([Stream:integer,]Alpha1:real,A
+lpha2:real) -> real
+Beta [distribution], z_beta [SimTalk]
+z_binomial([Stream:integer,]n:integer
+,p:real) -> real
+Binomial [distribution], z_binomial [SimTalk]
+Distribution Functions
+Plant Simulation Help 12-295
+Unpublished work. © 2026 Siemens
+
+Function Results in this distribution
+z_cauchy([Stream:integer,]Mu:time,The
+ta:real[,LowerBound:real,UpperBound:r
+eal]) -> real
+Cauchy [distribution], z_cauchy [SimTalk]
+z_cemp([Stream:integer,]Table:table)
+-> real
+cEmp [continuous empirical distribution],
+z_cEmp [SimTalk]
+z_demp([Stream:integer,]Table:table)
+-> real
+dEmp [discrete empirical distribution], z_dEmp
+[SimTalk]
+z_emp([Stream:integer,]Table:table,Co
+lumn:integer) -> integer
+Emp [primitive empirical distribution], z_emp
+[SimTalk]
+z_erlang([Stream:integer,]Mu:time,Sig
+ma:time[,LowerBound:real,UpperBound:r
+eal]) -> real
+Erlang [distribution], z_erlang [SimTalk]
+z_frechet([Stream:integer,]Mu:time,Th
+eta:real[,LowerBound:real,UpperBound:
+real]) -> real
+Fréchet [distribution], z_frechet [SimTalk]
+z_gamma([Stream:integer,]Alpha:real,B
+eta:time[,LowerBound:real,UpperBound:
+real]) -> real
+Gamma [distribution], z_gamma [SimTalk]
+z_geom([Stream:integer,]p:real[,Lower
+Bound:real,UpperBound:real]) -> real
+Geom [distribution], z_geom [SimTalk]
+z_gumbel([Stream:integer,]Mu:time,The
+ta:real[,LowerBound:real,UpperBound:r
+eal]) -> real
+Gumbel [distribution], z_gumbel [SimTalk]
+z_hypgeom([Stream:integer,]m:integer,
+n:integer,p:real) -> real
+Hypgeo [distribution], z_hypgeom [SimTalk]
+z_laplace([Stream:integer,]Mu:time,Th
+eta:real[,LowerBound:real,UpperBound:
+real]) -> real
+Laplace [distribution], z_laplace [SimTalk]
+z_logistic([Stream:integer,]Mu:time,T
+heta:real[,LowerBound:real,UpperBound
+:real]) -> real
+Logistic [distribution], z_logistic [SimTalk]
+z_loglogistic([Stream:integer,]Mu:tim
+e,Theta:real[,LowerBound:real,UpperBo
+und:real]) -> real
+Loglogistic [distribution], z_loglogistic [SimTalk]
+z_lognorm([Stream:integer,]Mu:time,Si
+gma:time[,LowerBound:real,UpperBound:
+real]) -> real
+Lognorm [distribution], z_lognorm [SimTalk]
+Distribution Functions, z_ functions
+12-296 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Function Results in this distribution
+z_negexp([Stream:integer,]Beta:time[,
+LowerBound:real,UpperBound:real]) ->
+real
+Negexp [distribution], z_negexp [SimTalk]
+z_normal([Stream:integer,]Mu:time,Sig
+ma:time[,LowerBound:real,UpperBound:r
+eal]) -> real
+Normal [distribution], z_normal [SimTalk]
+z_paralogistic([Stream:integer,]Mu:ti
+me,Theta:real[,LowerBound:real,UpperB
+ound:real]) -> real
+Paralogistic [distribution], z_paralogistic
+[SimTalk]
+z_pareto([Stream:integer,]Mu:time,The
+ta:real[,LowerBound:real,UpperBound:r
+eal]) -> real
+Pareto [distribution], z_pareto [SimTalk]
+z_poisson([Stream:integer,]Lambda:rea
+l) -> real
+Poisson
+z_triangle([Stream:integer,]c:real,a:
+real,b:real) -> real
+Triangle [distribution], z_triangle [SimTalk]
+[triangular distribution]
+z_uniform([Stream:integer,]LowerBound
+:real,UpperBound:real) -> real
+Uniform [distribution], z_uniform [SimTalk]
+z_weibull([Stream:integer,]Alpha:real
+,Beta:time) -> real
+Weibull [distribution], z_weibull [SimTalk]
+Parameters
+You can specify the following parameters:
+• The parameter Stream of data type integer designates the random number stream (compare Random
+Number Seed Values).
+If you call one of the distribution functions in a Method, the parameter Stream is optional. If you do
+not specify the stream, Plant Simulation uses the random number stream of the Method or of the
+user-defined attribute of data type method.
+You can also call the distribution functions with the parameter Stream. For formulas this is required, as
+formulas never use the random number stream of the surrounding object.
+• All other parameters are the parameters of the corresponding distribution function as described under
+Probability Distributions. They all either are of data type real or integer.
+Return Value
+The return value has the data type real.
+The distribution function z_emp returns a value of data type integer.
+Distribution Functions, z_ functions
+Plant Simulation Help 12-297
+Unpublished work. © 2026 Siemens
+
+SimTalk
+RandomSeed [SimTalk] - Method/User-defined Attribute
+See also
+resetRandomNumberStream [SimTalk]
+Parameters of the Distributions
+Probability Distributions
+Methods of the Distributions
+Distribution Functions, z_ functions
+12-298 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Cauchy [distribution], z_cauchy [SimTalk]
+The Cauchy distribution is a continuous probability distribution.
+Remarks
+Use the Cauchy distribution to represent the occurrence of failures while developing large systems.
+Syntax
+z_cauchy([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:rea
+l]) → real
+Parameters
+The parameters are µ and θ both of which have to be greater than 0. The mean value and the standard
+deviation cannot be computed from the parameters.
+The density function is 
+The distribution function is 
+Cauchy [distribution], z_cauchy [SimTalk]
+Plant Simulation Help 12-299
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+SimTalk
+Trigonometric Functions
+See also
+Parameters of the Distributions
+Cauchy [distribution], z_cauchy [SimTalk]
+12-300 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Fréchet [distribution], z_frechet [SimTalk]
+The Fréchet distribution is also called the Gumbel type II distribution or the inverse Weibull distribution.
+Remarks
+Use the Fréchet distribution and the Gumbel distribution if you want to find out the maximum of several
+random numbers.
+Syntax
+z_frechet([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:re
+al]) → real
+Parameters
+The parameters µ and θ have to be positive.
+The density function for x > 0 is 
+The distribution function is 
+The following applies 
+  and 
+  for
+Fréchet [distribution], z_frechet [SimTalk]
+Plant Simulation Help 12-301
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Fréchet [distribution], z_frechet [SimTalk]
+12-302 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Gumbel [distribution], z_gumbel [SimTalk]
+The Gumbel distribution is also called the log-Weibull, the Gumbel type I distribution or the extreme value
+distribution.
+Remarks
+Use the Gumbel distribution to model the distribution of the maximum (or the minimum) of a number of
+samples of various distributions.
+Syntax
+z_gumbel([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:rea
+l]) → real
+Parameters
+The parameters µ and θ have to be positive.
+The parameter µ determines the mean value of the distribution. The variance is 
+  where
+ is the Euler-Mascheroni constant.
+We set 
+  and 
+The density function is 
+The distribution function is 
+Gumbel [distribution], z_gumbel [SimTalk]
+Plant Simulation Help 12-303
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Gumbel [distribution], z_gumbel [SimTalk]
+12-304 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Laplace [distribution], z_laplace [SimTalk]
+The Laplace distribution is a continuous distribution. The Laplace distribution is also called the Double-
+exponential distribution.
+Syntax
+z_laplace([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:re
+al]) → real
+Parameters
+The parameters are µ and σ > 0. The parameter µ sets the mean value of the distribution. The parameter σ
+> 0 sets the standard deviation of the distribution.
+The density function is 
+  where 
+For x < µ the distribution function is 
+  and for x ≥ µ it is 
+Laplace [distribution], z_laplace [SimTalk]
+Plant Simulation Help 12-305
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Laplace [distribution], z_laplace [SimTalk]
+12-306 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Logistic [distribution], z_logistic [SimTalk]
+The logistic distribution is a continuous probability distribution.
+Remarks
+Use the logistic distribution to model a lifetime distribution.
+Syntax
+z_logistic([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:r
+eal]) → real
+Parameters
+The parameters are µ and σ > 0.
+The parameter µ sets the mean value of the distribution.
+The parameter σ > 0 sets the standard deviation of the distribution.
+The density function is 
+  where 
+The distribution function is 
+Logistic [distribution], z_logistic [SimTalk]
+Plant Simulation Help 12-307
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Logistic [distribution], z_logistic [SimTalk]
+12-308 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Loglogistic [distribution], z_loglogistic [SimTalk]
+The loglogistic distribution is also called the Fisk distribution.
+Remarks
+Use the loglogistic distribution to model an income and lifetime distribution.
+Syntax
+z_loglogistic([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBoun
+d:real]) → real
+Parameters
+The parameters are α > 0 and β > 0.
+The density function is 
+ for x > 0
+The distribution function is 
+ where 
+ with β > 2
+Loglogistic [distribution], z_loglogistic [SimTalk]
+Plant Simulation Help 12-309
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Loglogistic [distribution], z_loglogistic [SimTalk]
+12-310 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Paralogistic [distribution], z_paralogistic [SimTalk]
+The paralogistic distribution is a transformed Pareto distribution.
+Syntax
+z_paralogistic([Stream:integer, ]Mu:time,Theta:real[, LowerBound:real, 
+UpperBound:real]) → real
+Parameters
+The parameters are α > 0 and θ > 0.
+The density function is 
+  with x > 0.
+The distribution function is 
+  with 
+ for 
+Paralogistic [distribution], z_paralogistic [SimTalk]
+Plant Simulation Help 12-311
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Paralogistic [distribution], z_paralogistic [SimTalk]
+12-312 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Pareto [distribution], z_pareto [SimTalk]
+The Pareto distribution is a power-law probability distribution.
+Syntax
+z_pareto([Stream:integer,]Mu:time,Theta:real[,LowerBound:real,UpperBound:rea
+l]) → real
+Parameters
+The parameters are α > 0 and θ > 0.
+The density function is 
+  for α > 1 and x ≥ θ
+The distribution function is 
+ for α > 2
+Pareto [distribution], z_pareto [SimTalk]
+Plant Simulation Help 12-313
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type real.
+See also
+Parameters of the Distributions
+Functions for Manipulating Individual Bits
+Functions for Manipulating Individual Bits
+SimTalk provides the functions listed in the table of contents to the left for manipulating individual bits of
+an integer value.
+Functions for Manipulating Individual Bits
+12-314 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BitAND [SimTalk]
+Executes a bitwise AND of value 1 and value 2 and returns the result.
+Type
+Function
+Syntax
+BitAND(Value1:integer, Value2:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter Value1 of data type integer designates value 1.
+• The parameter Value2 of data type integer designates value 2.
+Return Value
+The return value has the data type integer.
+BitAND [SimTalk]
+Plant Simulation Help 12-315
+Unpublished work. © 2026 Siemens
+
+BitClear [SimTalk]
+Changes the value of the parameter OriginalValue by setting the bit with the number designated by the
+parameter BitPosition to the bit value 0. The function returns the result of this computation.
+Type
+Function
+Syntax
+BitClear(OriginalValue:integer, BitPosition:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter OriginalValue of data type integer designates the original value of the computation.
+• The parameter BitPosition of data type integer designates the bit position. The value range for the bit
+position is 0 to 63. The least significant bit has the number 0, the most significant bit has the number
+63.
+Return Value
+The return value has the data type integer.
+See also
+BitSet [SimTalk]
+BitClear [SimTalk]
+12-316 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BitOR [SimTalk]
+Executes a bitwise OR of value 1 and value 2 and returns the result.
+Type
+Function
+Syntax
+BitOR(Value1:integer, Value2:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter Value1 of data type integer designates value 1.
+• The parameter Value2 of data type integer designates value 2.
+Return Value
+The return value has the data type integer.
+BitOR [SimTalk]
+Plant Simulation Help 12-317
+Unpublished work. © 2026 Siemens
+
+BitSet [SimTalk]
+Changes the value of the parameter OriginalValue by setting the bit with the number designated by the
+parameter BitPosition to the bit value 1. The function returns the result of this computation.
+Type
+Function
+Syntax
+BitSet(OriginalValue:integer, BitPosition:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter OriginalValue of data type integer designates the original value of the computation.
+• The parameter BitPosition of data type integer designates the bit position. The value range for the bit
+position is 0 to 63. The least significant bit has the number 0, the most significant bit has the number
+63.
+Return Value
+The return value has the data type integer.
+See also
+BitClear [SimTalk]
+BitSet [SimTalk]
+12-318 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BitShift [SimTalk]
+Shifts the bits of the value designated by the parameter integer using the number of digits designated by
+integer and returns the result.
+Type
+Function
+Syntax
+BitShift(Value:integer, NumberOfDigits:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter Value of data type integer designates the value.
+• The parameter NumberOfDigits of data type integer designates number of digits. It moves them to the
+left, if you specified digits greater than 0. It moves them to the right, if you specified digits smaller than
+0.
+Return Value
+The return value has the data type integer.
+BitShift [SimTalk]
+Plant Simulation Help 12-319
+Unpublished work. © 2026 Siemens
+
+BitTest [SimTalk]
+Returns if in the Value the bit at the position designated by BitPosition is set (true) or not (false).
+Type
+Function
+Syntax
+BitTest(Value:integer, BitPosition:integer) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter Value of data type integer designates the value.
+• The parameter BitPosition of data type integer designates the bit position. The value range for the bit
+position is 0 to 63. The least significant bit has the number 0, the most significant bit has the number
+63.
+Return Value
+The return value has the data type boolean.
+Example
+var i : integer := 40 // binary representation: 00101000
+print bitTest(i, 3)   // returns true because the bit 3 is set
+BitTest [SimTalk]
+12-320 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BitXOR [SimTalk]
+Executes a bitwise XOR of value 1 and value 2 and returns the result.
+Type
+Function
+Syntax
+BitXOR(Value1:integer, Value2:integer) → integer
+Parameters
+You can specify the following parameters:
+• The parameter Value1 of data type integer designates value 1.
+• The parameter Value2 of data type integer designates value 2.
+Return Value
+The return value has the data type integer.
+Functions for Manipulating Strings
+Functions for Editing Variables of Data Type String
+SimTalk provides the functions listed in the table of contents to the left for editing variables of data type
+string.
+These functions do not change the contents of the strings, but work with copies of the strings. The result
+of this operation is the return value. This enables Plant Simulation to enter names of objects into message
+texts during a simulation run.
+BitXOR [SimTalk]
+Plant Simulation Help 12-321
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,185 @@
+Getting to Know Plant Simulation
+Getting to Know Plant Simulation
+Introduces you to the basic concepts on which simulation is based and to the basics of working with Plant
+Simulation.
+Compare Modeling the Material Flow
+Compare Visualizing the Material Flow
+Simulation and Modeling Concepts
+Simulation and Modeling Concepts
+Simulation concepts and modeling concepts introduce you to the theoretical background of simulation
+as such and show you what to keep in mind before you start modeling.
+In general, operations research processes are intended to allow you to make the right decisions,
+qualitatively as well as quantitatively. They formulate optimization models, containing all relevant factors,
+such as target function, conditions and target description. These processes require a large amount of
+processing power the more detailed the model is. Besides, the results and acceptance of operations
+research processes often are not satisfactory.
+In addition to linear optimization models simulation nowadays is increasingly used for making the right
+decisions. Simulation offers good solutions for complex problems but does not automatically create the
+actual optimum. This is justified by the comparatively low amount of mathematical expenditure to obtain
+that result.
+As processes to be analyzed become more complicated and complex and as more factors have to included,
+the more important simulation becomes with its analysis of real processes. These processes cannot be
+covered by mathematical solution processes or optimization processes or they may be realized only by
+using a large amount of resources.
+The aim of simulation is to arrive at objective decisions by dynamic analysis, to allow managers to safely
+plan and, in the end, to reduce costs.
+Thus, if real systems and plants are too expensive for conducting experiments and the time to conduct
+trials is too limited and too expensive, modeling, simulation and animation are excellent tools for
+analyzing and optimizing time dynamic processes.
+Go to Working with Classes in the Class Library
+Go to Using Inheritance
+Go to Model Hierarchically [general]
+Getting to Know Plant Simulation
+10-2 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Getting to Know Plant Simulation
+Simulation and Modeling Concepts
+Plant Simulation Help 10-3
+Unpublished work. © 2026 Siemens
+
+What is Simulation?
+VDI Technical Rule 3633 defines simulation as the emulation of a system, including its dynamic processes,
+in a model one can experiment with. It aims at achieving results that can be transferred to a real world
+plant. In addition, simulation defines the preparation, execution and evaluation of carefully directed
+experiments within a simulation model.
+As a rule, you will execute a simulation study like this:
+• You first check out the real-world plant you want to model and collect the data you need for creating
+your simulation model.
+• You then abstract this real-world plant and create your simulation model according to the aims of the
+simulation studies.
+• After this, you run experiments, i.e., execute simulation runs, within the simulation model. This will
+produce a number of results, such as how often machines fail, how often they are blocked, which set-up
+times accrue for the individual types of station, which utilization the machines have, etc.
+• The next step will be to interpret the data the simulation runs produce.
+• Finally, management will use the results as a base for its decisions about optimizing the real plant.
+Developing your simulation model is a cyclical and evolutionary process. You will start out with a first draft
+of your model and then refine and modify it to make use of the intermediary results the simulation runs
+provide. Eventually, after several cycles, you will arrive at your final model.
+As a simulation expert, you must never loose sight of these questions:
+• What do you want to accomplish with the simulation study?
+• What are you examining?
+• Which conclusions do you draw from the results of the simulation study?
+• How do you transfer the results of the simulation study to the real-world plant?
+Go to Time-Oriented Simulation and Event-Controlled Simulation
+Back to Simulation and Modeling Concepts
+What is Simulation?
+10-4 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Time-Oriented Simulation and Event-Controlled Simulation
+Plant Simulation is a discrete, event-controlled simulation program, i.e., it only inspects those points in
+time, at which events take place within the simulation model.
+In reality, on the other hand, time elapses continually. When watching a part move along a conveyor
+system, you will detect no jumps in time. The curve for the distance covered, and the time it takes to cover
+it, is continuous, it is a straight line.
+A discrete, event-controlled simulation program on the other hand only takes points in time (events) into
+consideration that are important to the further course of the simulation. Such events may, for example,
+be a part entering a station or leaving it or of it moving on to another machine. Any movements in
+between are of little interest to the simulation as such. It is only important that the entrance and the
+exit (Out) events are displayed correctly. When a part enters a material flow object, Plant Simulation
+computes the time until it exits that object and enters an exit event into the list of scheduled events of the
+EventController for this point in time.
+Thus, the simulation time that the EventController displays, jumps from event to event. This happens as
+soon as an event is processed.
+The List shows all events that trigger an action. Click the 
+  button to open it.
+Time-Oriented Simulation and Event-Controlled Simulation
+Plant Simulation Help 10-5
+Unpublished work. © 2026 Siemens
+
+Go to What is Simulation?
+Back to Simulation and Modeling Concepts
+Time-Oriented Simulation and Event-Controlled Simulation
+10-6 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Why Use Simulation?
+You can use simulation for planning a new plant or for optimizing an existing plant.
+As a rule, you will employ simulation when you have to:
+• Plan a new plant. Here simulation helps you to:
+◦ Detect and eliminate problems that otherwise would require cost- and time-consuming correction
+measures during production ramp-up.
+◦ Determine and optimize the times, such as processing time, failure time, recovery time, etc., and the
+throughput of the plant.
+◦ Determine the size of buffers and the number of machines your intended throughput requires. When
+a single machine costs hundreds of thousands of dollars, it certainly helps to know if you need one or
+more machines of one type.
+◦ Determine the limits of performance of the machines and of the plant as a whole.
+◦ Investigate how failures affect the throughput and the utilization of the machines.
+◦ Determine how many workers and staff members are required for the intended throughput.
+◦ Gain knowledge about the behavior of the plant.
+◦ Determine suitable control strategies of the machines and of the way the machines interact.
+◦ Evaluate different alternatives by running a number of simulation experiments.
+◦ Minimize the investment cost for production lines without jeopardizing required output.
+• Optimize an existing plant. Here simulation helps you to:
+◦ Optimize the performance of existing production systems by implementing measures that have been
+verified in a simulation environment prior to implementation .
+◦ Optimize the control strategies you devised.
+◦ Optimize the sequence of orders that have to be fulfilled to make as few tool changes necessary as
+possible.
+◦ Test the daily proceedings to make sure that everything works smoothly.
+• Put the plan you formulated into practice. Here simulation helps you to:
+◦ Develop a template for creating the control strategies.
+◦ Test different scenarios during the warm-up phase of the plant.
+◦ Train the operators of the machines in the different states, which machines and the plant can be in.
+In general, you will reap these benefits from employing simulation:
+• Enhance the productivity of existing production facilities.
+• Reduce investment in planning new production facilities.
+Why Use Simulation?
+Plant Simulation Help 10-7
+Unpublished work. © 2026 Siemens
+
+• Cut inventory and throughput time.
+• Optimize system dimensions, including buffer sizes.
+• Reduce investment risks by early proof of concept.
+• Maximize use of manufacturing resources.
+• Improve line design and schedule.
+Back to Simulation and Modeling Concepts
+Why Use Simulation?
+10-8 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Implement a Simulation Project
+Developing your simulation model is a cyclical and evolutionary process. You will start out with a first draft
+of your model and then refine and modify it to make use of the intermediary results the simulation runs
+provide. Eventually, after several cycles, you will arrive at your final model.
+Before you start implementing your simulation project, you will, more or less, proceed like this. You will:
+• Describe the project
+Determine the goals, so that the purpose of the simulation project becomes clear. Why are you
+examining a problem? Which questions do you want answered? Put the definition of the project in
+writing and consult it repeatedly during the course of the project, as the purpose of the simulation study
+determines the efforts to be made.
+• Plan the project
+Create a concept of your model, with its initial values, its model items, variables, logic of proceeding
+and a preliminary description of the simulation experiments. Which parameters do you have to change,
+which data do you have to collect and how do you interpret this data? Make a list of all functional units
+that the installation you are modeling will contain. Think about which functional units have identical or
+similar functionality. Combine them and derive a list of application objects you and your colleagues have
+to create. Consider re-using existing objects. Specify and plan the remaining objects on paper. Define
+and describe the interfaces for material and information flow. Outline reset and init methods.
+• Find out about the data you need and how to acquire it
+Ensure early on that the data you need to run the simulation experiments is going to be available.
+Frequently a lot of time and effort is involved to acquire the data. Make sure that you have the name of
+a person who responsible for acquiring the data from your client, which may, for example, be another
+department of your company.
+• Build the simulation model
+Build a first version of the simulation model in its simplest, most basic form. Build the application objects
+you need and test them one by one. After you are sure that all objects work the way they are supposed
+to do, put together the overall model. Document the model in a clearly arranged manner, as six months
+or a year from the time you modeled you might not remember how you accomplished a certain task or
+why you solved a specific problem the way you did.
+• Verify the simulation model and check its validity
+After you are finished building the simulation model, you have to verify it, i.e., check if the components
+you modeled perform the tasks you programmed them to do. Test each and every object you created.
+Check for the correct functioning and for concurrence with the specifications. Test the objects in
+combination with other objects and then in the overall model. Make sure that all parameters are set to
+the correct values. Once you have verified the model, check it for its validity: Make sure the functionality
+of the model is as expected and conforms to the functionality of the planned or real plant and see if the
+results are plausible and credible. Make an estimate of the most important results and compare them
+with the results of the simulation. Introduce your model to a production or planning expert and discuss
+the results, the proceedings and your modeling approach with him.
+• Execute simulation experiments and collect the results
+Implement a Simulation Project
+Plant Simulation Help 10-9
+Unpublished work. © 2026 Siemens

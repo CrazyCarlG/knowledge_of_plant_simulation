@@ -1,0 +1,533 @@
+Turntable
+Turntable [object]
+Use the object Turntable for modeling a rotating platform, which moves the part onto one of several
+connected material flow objects and/or turns it around.
+Image
+Description
+The Turntable has a capacity of one, i.e. only one part can be located on it at any one time. The length of
+the MU must not be longer than the Length of the Turntable itself.
+The Turntable moves the part on to its successors within the flow of materials like this:
+• The MU arrives at the exit of the predecessor. It notifies the turntable that it wants to be rotated.
+• The turntable then determines if it accepts the MU for rotating it or not.
+◦ Without a Pull Control, the turntable will be notified that a MU wants to be rotated, and it accepts it.
+◦ If you entered a Pull Control, the turntable executes it, and when the MU is selected, it will be
+rotated.
+• The turntable rotates to the respective predecessor, and the MU moves onto the turntable and drives
+onto it.
+• Once one of the conditions below is met, the turntable looks for the target station and starts rotating
+toward it:
+◦ If the MU has completely entered the turntable.
+◦ If the MU has reached the rotation point on the table.
+◦ If the part is located in the center of the turntable, i.e., when both ends of the part have the same
+distance from the ends of the turntable.
+◦ If you want the turntable to not rotate automatically, but only if the MU has reached a user-defined
+sensor, select User-defined with Sensor. In the Sensor Control, you have to tell the turntable to call
+the method setDestination.
+• For determining the target station, the turntable either uses its default exit strategies or the Target
+Control. Within this Method you set the target station with the method setDestination.
+Turntable
+Plant Simulation Help 11-2317
+Unpublished work. © 2026 Siemens
+
+Note
+Do not use an Exit Control for determining the target of the MU, as an Exit Control will be called only
+when the MU is ready to exit the Turntable. This point in time is too late though, as the target has to
+be determined earlier in time.
+• Then the turntable rotates to the target and MU moves on, once the turntable has reached the final
+position of the rotation. Only then a new MU can move onto the Turntable. The Turntable has a
+Capacity of 1.
+Note
+You can query the current rotation angle with the read-only attribute CurrentAngle [SimTalk].
+Note
+If an object, from which/onto which the MU is to be moved, does not exist in the respective angle table,
+the Turntable checks the Exit Angle Table for an entering MU or the Entry Angle Table for a leaving
+MU, if the object exists there and uses that angle. If the object is not contained in the respective table,
+the Turntable uses the angle from the layout in the Frame.
+You can select different configurations for the Turntable on the tab Appearance of the Length-oriented
+Objects.
+An animatable object with the Velocity of 0 does not rotate with the Turntable when the Turntable
+rotates. This applies if the insertion position of the animatable object is located on the animation rotation
+axis of the Turntable. This is the case if the insertion point is exactly located on the animation rotation
+center or is reachable from there along the animation rotation axis without a sideways deviation.
+Turntable [object]
+11-2318 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+This resembles a real Turntable with a fixed base and a rotary table.
+To show a tooltip with information about the Turntable, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Turntable, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Turntable to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Turntable on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Turntable [object]
+Plant Simulation Help 11-2319
+Unpublished work. © 2026 Siemens
+
+See also
+Move Parts On with the Turntable
+Video on YouTube
+https://youtu.be/hOvdrDnvXXo?si=Cs5gOF4JB5PBlVma&t=532
+Dialog Box of the Turntable
+Dialog Box of the Turntable
+Double-click the icon of the Turntable to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+Dialog Box of the Turntable
+11-2320 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-2321
+Unpublished work. © 2026 Siemens
+
+Length [text box] - Turntable
+Type the Length of the Turntable into the text box.
+Remarks
+After you inserted it, Plant Simulation shows its length here. The Turntable only rotates parts, which are
+shorter or as long as the value, which you enter here.
+You can change the length of the graphic and the anchor points of the Turntable by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+Length [SimTalk] - Turntable
+See also
+OccupiedLength [SimTalk] - Conveyor
+Length [text box] - Turntable
+11-2322 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [text box] - Turntable
+Type the Width of the Turntable.
+Remarks
+You can change the width of the graphic and the anchor points of the Turntable by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+Width [SimTalk] - Turntable
+Width [text box] - Turntable
+Plant Simulation Help 11-2323
+Unpublished work. © 2026 Siemens
+
+Rotation Point [text box]
+Type the Rotation Point into the text box, i.e., the position of the fulcrum around which the Turntable
+rotates.
+Remarks
+You can type in a value between 0 and the length of the Turntable. 0 designates the point at which you
+start inserting the Turntable.
+The Center of Rotation is the fulcrum around which the table rotates.
+The Start Point is the point which you click, when you start inserting the Turntable.
+The End Point is the point which you click, when you finish inserting the Turntable. The circle in the
+screenshot below shows all points which the turntable can reach with its end point, when it rotates around
+the fulcrum.
+SimTalk
+RotationPoint [SimTalk]
+Rotation Point [text box]
+11-2324 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Conveyor Speed [text box]
+Type the Conveying Speed into the text box with which the Turntable transports the MU, while it is
+located on the table.
+SimTalk
+Speed [SimTalk] - Turntable
+See also
+Velocity [joint]
+Conveyor Speed [text box]
+Plant Simulation Help 11-2325
+Unpublished work. © 2026 Siemens
+
+Rotation Time per 90° [text box] - Turntable
+Type the Time into the text box, which it takes the Turntable to rotate by 90 degrees.
+Remarks
+To rotate the MU immediately, without using up any time at all, type in a rotation time of 0.
+SimTalk
+RotationTimePer90Degrees [SimTalk] - Turntable
+Rotation Time per 90° [text box] - Turntable
+11-2326 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Rotate When [drop-down list] - Turntable
+Select when the Turntable rotates toward its target object.
+Remarks
+You can select one of these settings:
+• When the MU has completely entered the Turntable.
+• When the MU has reached the rotation point/the fulcrum on the table.
+• When the MU is located in the center of the Turntable, i.e., when both ends of the MU have the same
+distance from the edges of the turntable.
+• If you want the Turntable to not rotate automatically, but only when the MU has reached a user-defined
+sensor, select User-defined with Sensor. In the Sensor Control, you have to tell the Turntable to call
+the method setDestination.
+SimTalk
+RotateWhen [SimTalk]
+Rotate When [drop-down list] - Turntable
+Plant Simulation Help 11-2327
+Unpublished work. © 2026 Siemens
+
+Go to Default Position [check box] - Turntable
+To rotate the Turntable back to its Default Position, when the MU has left the Turntable and when no new
+MU is ready to be rotated, select this check box.
+Remarks
+If you select the check box, the Turntable uses the Default Angle, when you reset the model.
+Then, type in the default angle at which the default position is located.
+SimTalk
+GoToDefaultPosition [SimTalk] - Turntable
+See also
+Default Angle [text box] - Turntable
+DefaultAngle [SimTalk] - Turntable
+Go to Default Position [check box] - Turntable
+11-2328 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Default Angle [text box] - Turntable
+Type the Default Angle into the text box to which the Turntable rotates, when you selected Go to Default
+Position.
+Remarks
+The default position is located at this angle. If you would like the Turntable to rotate to the side on which
+the start point is located, add 180 degrees to this angle.
+SimTalk
+DefaultAngle [SimTalk] - Turntable
+See also
+Go to Default Position [check box] - Turntable
+GoToDefaultPosition [SimTalk] - Turntable
+Default Angle [text box] - Turntable
+Plant Simulation Help 11-2329
+Unpublished work. © 2026 Siemens
+
+MU Leaves Backwards Depends On
+Type the name of the user-defined attribute of the MU, which triggers its rotation, so that it exits the
+table driving backward into the text box.
+Remarks
+This user-defined attribute can be an attribute of data type boolean or a Method which returns a value of
+data type boolean.
+MU leaves Backwards Depends On will only be evaluated, when you select Any as the side in the Exit
+Angle Table.
+SimTalk
+MURotationAttribute [SimTalk]
+See also
+Exit Angle Table
+MU Leaves Backwards Depends On
+11-2330 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Entry Angle Table
+To open the table of the Entry Angles at which the MUs move onto the Turntable, click this button.
+Remarks
+You can view or fine-tune these settings:
+• The number of the Predecessor.
+• The name of the Predecessor.
+• The Angle at which the Connector from this predecessor connects to the Turntable.
+• At Which Side it turns toward the predecessor.
+◦ If you select Start Point, the Turntable turns with the side, at which you started inserting the
+Turntable, toward this predecessor.
+◦ If you select End Point, the Turntable turns with the side, at which you finished inserting the
+Turntable, toward this predecessor.
+◦ If you select Any, the Turntable computes the smallest angle and turns with this computed side
+toward this predecessor.
+Note
+The button Entry Angle Table is only active after you connected the Turntable with its predecessor.
+The figure illustrates the position of the Entry Angle depending on the insertion direction of the Turntable.
+Entry Angle Table
+Plant Simulation Help 11-2331
+Unpublished work. © 2026 Siemens
+
+Left to right Right to left Top to bottom Bottom to top
+If you want the Turntable to compute the angles at which you connected it to its predecessors, click it with
+the right mouse button and select Calculate Angles.
+SimTalk
+setEntryAngles [SimTalk]
+getEntryAngles [SimTalk]
+calculateAngles [SimTalk] - Turntable
+Entry Angle Table
+11-2332 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Exit Angle Table
+To open the table of the Exit Angles at which the MUs leave the Turntable, click this button.
+Remarks
+You can view or fine-tune these settings:
+• The number of the Successor.
+• The name of the Successor.
+• The Angle at which the Connector from the Turntable connects toward this successor.
+• At Which Side it turns toward the successor.
+◦ If you select Start Point, the Turntable turns with the side, at which you started inserting the
+Turntable toward this successor.
+◦ If you select End Point, the Turntable turns with the side, at which you finished inserting the
+Turntable toward this successor.
+◦ If you select Any, the Turntable computes the smallest angle and turns with this computed side
+toward this successor. With this setting the MU can leave backward or forward, depending on the side
+which can be reached with the smallest angle.
+◦ If you select MU keeps Direction, the Turntable turns this side of the Turntable toward this successor
+which makes the MU keep its direction.
+• If you select MU leaves backward, the Turntable turns this side of the Turntable toward this successor
+so that the Turntable turns the MU around, and it leaves moving backward. Compare MU Leaves
+Backwards Depends On.
+Exit Angle Table
+Plant Simulation Help 11-2333
+Unpublished work. © 2026 Siemens
+
+Note
+The button Exit Angle Table is only active after you connected the Turntable with its successor.
+The figure illustrates the position of the Exit Angle depending on the insertion direction of the Turntable.
+Left to right Right to left Top to bottom Bottom to top
+If you want the Turntable to compute the angles at which you connected it to its successors, click it with
+the right mouse button and select Calculate Angles.
+SimTalk
+setExitAngles [SimTalk]
+getExitAngles [SimTalk]
+calculateAngles [SimTalk] - Turntable
+Exit Angle Table
+11-2334 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Automatic Stop [check box] - Turntable
+To set the Current Speed of the Turntable to 0 if it does not transport a part, select this check box.
+Remarks
+Automatically stopping the Turntable might, for example, be the case if it is empty or if it is blocked
+because a MU cannot leave it.
+If the speed of the Turntable is 0, the Energy State changes to Operational.
+SimTalk
+AutomaticStop [SimTalk] - Turntable
+Automatic Stop [check box] - Turntable
+Plant Simulation Help 11-2335
+Unpublished work. © 2026 Siemens
+
+Tab Times [Turntable]
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+Note
+The Turntable does not provide the Cycle Time.
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Recovery Time [general description]
+Recovery Time Starts
+Tab Times [Turntable]
+11-2336 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Controls
+Tab Controls [Turntable]
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+Tab Failures
+Plant Simulation Help 11-2337
+Unpublished work. © 2026 Siemens
+
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [general description]
+Target Control [Turntable]
+Tab Controls [Turntable]
+11-2338 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Target Control [Turntable]
+Modifies the built-in behavior of the object. The object calls the Target Control as soon as the MU has
+completely moved onto the Turntable or has reached the center of rotation. As opposed to the Exit
+Control, the MU is not ready to exit the object yet.
+Remarks
+Do not use an Exit Control for determining the target of the MU, as an Exit Control will be called only
+when the MU is ready to exit the Turntable. This point in time is too late though, as the target has to be
+determined earlier in time.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+Target Control [Turntable]
+Plant Simulation Help 11-2339
+Unpublished work. © 2026 Siemens
+
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+The standard target control looks like this:
+SimTalk
+TargetCtrl [SimTalk] - Turntable
+See also
+Select Object [for controls]
+setDestination [SimTalk] - Turntable
+getDestination [SimTalk] - Turntable
+Target Control [Turntable]
+11-2340 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit
+Plant Simulation Help 11-2341
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [Turntable]
+Statistics is described under the Tab Statistics.
+In addition, the Turntable collects these statistical values:
+Item English Description Read-only attribute Item German
+Rotation Empty Shows the portion of
+the statistics collection
+period during which
+the object was rotating
+Empty, i.e., without
+moving a part.
+StatRotationEmptyPort
+ion [SimTalk] -
+Turntable
+Drehung leer
+Rotation Loaded Shows the portion of
+the statistics collection
+period during which
+the object was rotating
+while moving a part.
+StatRotationLoadedPor
+tion [SimTalk] -
+Turntable
+Drehung belegt
+To view Rotation Time in the Statistics Report, select View > Show Statistics Report in the dialog of the
+object. You can also click the right mouse button in the Frame and select Show Statistics Report or you
+can press F6.
+Tab Statistics [Turntable]
+11-2342 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics [Turntable]
+Plant Simulation Help 11-2343
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+11-2344 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the Turntable transports MUs costs accrue which result from the sum of the total investment costs
+and the total operating costs.
+Note
+The total investment costs only accrue during the Depreciation Period.
+If the Turntable is empty, the costs remain with the Turntable as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+Plant Simulation Help 11-2345
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-2346 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-2347
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Backward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+Forward Blocking List
+View Menu
+11-2348 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-2349
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+11-2350 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Turntable
+_Methods of the Turntable
+The Turntable provides:
+• The methods listed in the table of contents to the left.
+• The _Methods of Curved Objects.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Help Menu
+Plant Simulation Help 11-2351
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,412 @@
+_Methods of DataQueue and DataStack
+Methods for Accessing Lists and Tables
+_Methods for Accessing Lists and Tables
+Lists and tables provide the methods listed in the table of contents to the left for accessing them.
+Read and write access depend on the object class and are described in the sub-chapters.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Accessing Lists and Tables
+11-3960 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+_Methods for Accessing the DataTable
+_Methods for Accessing Lists and Tables
+Plant Simulation Help 11-3961
+Unpublished work. © 2026 Siemens
+
+closeDialog [SimTalk] - lists
+Closes the dialog box of the list object designated by <Path>.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.closeDialog → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.closeDialog
+MyDataList.closeDialog
+MyDataStack.closeDialog
+MyDataQueue.closeDialog
+MyTimeSequence.closeDialog
+See also
+Close Model
+closeDialog [SimTalk] - lists
+11-3962 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+copy [SimTalk] - lists
+Copies the entire list/table designated by <Path> and returns it as a value of data type list/table.
+Remarks
+The method copy(Range) copies the specified range.
+If you do not specify a range, Plant Simulation copies the entire list. A range may only encompass a single
+range.
+If you would also like to copy the column index and/or the row index during the copy process, then enter
+the column 0 and/or the row 0 into the range.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.copy  → list or table
+<Path>.copy(Range:listrange) → list or table
+Parameter
+The parameter Range of data type listrange designates the range.
+You can then process the copied region in a number of ways:
+• Assign the copied range to a local variable of the corresponding type.
+Example
+var MyDataList : list[integer]
+MyDataList := MyDataList1.copy({1}..{5})
+...
+• Insert the copied range into the column of a table. The column where you paste the range has to have
+the same data type as the DataList.
+Example
+MyDataTable.insertList(3,1,MyDataList.copy({1}..{5}))
+copy [SimTalk] - lists
+Plant Simulation Help 11-3963
+Unpublished work. © 2026 Siemens
+
+• Make the copied range a DataList of its own. Data type is list. Therefore you can assign it to a cell in a
+DataList of data type list.
+Example
+MyDataList.insertList(2,tab.copy({1,1}..{1,5}))
+Return Value
+The return value has the data type list/table.
+See also
+Copy [context menu, lists]
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+copy [SimTalk] - lists
+11-3964 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+countMatches [SimTalk]
+Counts how often the designated value occurs in the designated range of the list or table designated by
+<Path>.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.countMatches(Value:any[, Range:any, CaseSensitive:boolean:=false])  
+→ integer
+Parameters
+You can specify the following parameters:
+• The parameter Value of data type any designates the value for which the matching values are counted.
+• The optional parameter Range of data type any designates the range within which the method looks
+for matching values. If you do not specify a range, Plant Simulation searches the entire range, i.e., the
+entire range {1,1}..{*,*}.
+• The optional parameter CaseSensitive of data type boolean sets if the search is case-sensitive (true) or
+not (false). If you do not specify this parameter, the search is not case-sensitive.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.countMatches("a1", {1,1}..{3,12})
+countMatches [SimTalk]
+Plant Simulation Help 11-3965
+Unpublished work. © 2026 Siemens
+
+delete [SimTalk] - lists
+Deletes the contents of the list object designated by <Path>.
+Remarks
+The method delete(Range) deletes the specified range of the list object.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Note
+You can also delete sub-tables, which inherit their contents, with the method delete. The inheritance
+relation causes the reference to be passed to the origin, thus deleting the contents in the origin.
+Type
+Method
+Syntax
+<Path>.delete
+<Path>.delete([Range:listrange, ...])
+Parameter
+The optional parameter Range of data type listrange designates the range which you want to delete. You
+can also enter several ranges.
+If you do not enter a parameter, i.e. no range, Plant Simulation deletes the contents of all cells without
+the cells of the column or row index. Therefore specifying no range, corresponds to specifying the range
+{1,1}..{*,*}.
+If you want to delete the user-defined row index or column index of DataTables, you have to do so
+explicitly by entering row 0 or column 0 respectively within the range you specify.
+Example
+MyDataStack.delete                                // deletes the data range
+MyDataQueue.delete({2}..{4})
+MyDataList.delete({1}..{5}, {8})
+MyDataTable.delete({2,2}..{*,*})
+MyDataTable.delete({0,1}..{0,*})                  // deletes the row index
+MyDataTable.delete({"ColumnB",0}..{"ColumnB",*})  // deletes the column 
+index
+delete [SimTalk] - lists
+11-3966 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+deleteCellFormat [SimTalk]
+deleteContents [SimTalk]
+See also
+Delete [Home ribbon]
+Cell Ranges in Lists with One Column
+Cell Ranges in Tables with Several Columns
+Specifying a Range of Cells [several columns] > Column Index Belongs to Contents
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+delete [SimTalk] - lists
+Plant Simulation Help 11-3967
+Unpublished work. © 2026 Siemens
+
+insert [SimTalk] - lists
+Adds additional entries to the list objects with one column designated by <Path>.
+Type
+Method
+Syntax
+<Path>.insert(Row:integer, Entry:any)
+Parameters
+You can specify the following parameters:
+• The parameter Row of data type integer designates the number of the cell into which Plant Simulation
+inserts the value.
+The list objects move all cells with the same or a greater index as the designated cell down one position.
+If the number you enter is greater than the highest position in the list objects, Plant Simulation does not
+place it at the position designated by integer, but adds it after the last current entry. Remember that
+Plant Simulation does not allow gaps between entries in a list object.
+• The parameter Entry of data type any designates the value, which you want to insert.
+The data type of this parameter has to be the same as the data type of the list objects.
+Example
+MyDataList.insert(2,12.24)
+MyDataStack.insert(3,32.34)
+MyDataQueue.insert(4,42.44)
+See also
+Insert [context menu, lists]
+insert [SimTalk] - lists
+11-3968 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+insertList [SimTalk]
+Inserts the contents of a list into the DataTable or DataList designated by <Path>.
+Remarks
+Plant Simulation deletes existing data in a DataTable. In a DataList it moves the data to another position.
+Note
+Copying a large amount of data from one list to another with the method insertList might be slow. For
+objects of type DataTable we recommend to the use the method copyRangeTo instead, whose code is
+executed much faster.
+Type
+Method
+Syntax
+<Path>.insertList(Cell:integer, SourceList:any)
+<Path>.insertList(Column:integer, Row:integer, SourceList:any)
+Parameters
+You can specify the following parameters:
+• For the DataList the parameter Cell of data type integer designates the cell from which on Plant
+Simulation inserts the contents of the list.
+• For the DataTable the parameter Column of data type integer designates the column of the cell from
+which on Plant Simulation inserts the contents of the list.
+• For the DataTable the parameter Row of data type integer designates the row of the cell from which on
+Plant Simulation inserts the contents of the list.
+• The parameter SourceList of data type any designates the contents of the list that is going to be
+inserted.
+Plant Simulation deletes all existing entries in a table, but moves entries in lists to another position.
+Example
+var lst: list [string]
+lst.create           // create
+lst.insert(1,"one")  // enters value
+lst.insert(2,"two")
+insertList [SimTalk]
+Plant Simulation Help 11-3969
+Unpublished work. © 2026 Siemens
+
+MyDataList.insertList(3,lst)
+DataTable.insertList(2,2,lst)
+SimTalk
+copyRangeTo [SimTalk]
+insertList [SimTalk]
+11-3970 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+intersection [SimTalk]
+Returns those values that the ranges of the list/table designated by <Path1> share, i.e., where they
+intersect.
+Remarks
+Both ranges or lists/tables have to have the same data type. The return value is a list with one column
+containing the shared items. Values may be listed more than once.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>1.intersection(Path2:any) → list
+<Path>1.intersection(Range:any, Path2:any) → list
+<Path>1.intersection(Range:any, Range:any) → list
+Parameters
+You can specify the following parameters:
+• The parameter Range of data type any designates a range of the table.
+• The parameters Path1 and Path2 of data type any designate two lists or tables.
+Return Value
+The return value has the data type list.
+Example
+// the second column of the DataTable contains the numbers 2,4, ... 40 
+// the third column contains the numbers 3,6, ... 60. The DataList 
+// contains the square numbers from -10 to 10.
+destination.delete
+destination.insertList(2,1,MyDataTable.intersection(DataList))
+// the second column of the DataTable destination 
+// contains the numbers 4,9,16,36,36
+destination.insertList(3,1,MyDataTable.intersection({2,1}..{3,2},DataList))
+// the third column of the DataTable destination contains 4
+dest.insertList(4,1,MyDataTable.intersection (2,1}..{2,*},{3,1}..{3,*}))
+intersection [SimTalk]
+Plant Simulation Help 11-3971
+Unpublished work. © 2026 Siemens
+
+// the fourth column of the DataTable 
+// destination contains the numbers 6,12,18,24,30,36
+intersection [SimTalk]
+11-3972 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+openDialog [SimTalk] - lists
+Opens the window of the list/table designated by <Path>.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence, as well
+as to sub-tables and to user-defined attribute of data type table.
+Type
+Method
+Syntax
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Parameter
+The optional parameter CallOpenControl of data type boolean sets if the Open Control will be executed
+(true) or not (false).
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.openDialog
+MyDataStack.openDialog(true)
+SimTalk
+closeDialog [SimTalk] - lists
+openDialogBox [SimTalk]
+See also
+Open Object [context menu, lists]
+openDialog [SimTalk] - lists
+Plant Simulation Help 11-3973
+Unpublished work. © 2026 Siemens
+
+openDialogBox [SimTalk]
+Opens the window of the list object designated by <Path> as a dialog in front of all other windows and
+dialog boxes.
+Remarks
+The dialog box shows the contents of the list object in a uniform standard font, not with the Font Size and
+Font Color, which you selected in the dialog Format.
+Make sure that you deactivate the command Inherit Contents/InheritContents before you attempt to type
+in data.
+The method applies to the objects DataStack, DataQueue, DataList, and DataTable.
+Note
+To prevent you from accidentally canceling your changes in the dialog, we deactivated the Close button
+in the title bar of the dialog. You have to decide what is going to happen, when you close the dialog, by
+clicking OK or Cancel.
+Type
+Method
+Syntax
+<Path>.openDialogBox([AutoSizeColumns:boolean:=false]) → boolean
+Parameter
+The optional parameter AutoSizeColumns of data type boolean sets if the column widths are calculated
+automatically according to the content of the widest occupied cell for each column (true) or not (false).
+This parameter applies for objects of type DataTable and for subtables and user-defined attributes of data
+type table.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+openDialogBox [SimTalk]
+11-3974 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+MyDataTable.openDialogBox
+MyDataList.openDialogBox
+SimTalk
+openDialog [SimTalk] - lists
+refillDialog [SimTalk]
+InheritContents [SimTalk]
+See also
+Open a List as a Dialog in the Foreground
+Open Object [context menu, lists]
+Inherit Contents [lists]
+openDialogBox [SimTalk]
+Plant Simulation Help 11-3975
+Unpublished work. © 2026 Siemens
+
+printList [SimTalk]
+Prints the contents of the list designated by <Path>, without the icon and information about origin and
+class.
+Remarks
+The printout is identical with the printout you get when you click Print on the List ribbon tab.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.printList([string]) → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyDataQueue.printList
+MyTimeSequence.printList
+See also
+Print List
+printList [SimTalk]
+11-3976 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+refillDialog [SimTalk]
+Fills the open dialog box of a list or a table designated by <Path> with the current values.
+Remarks
+Updating the contents of the dialog box is especially helpful if you changed values via information flow
+and you want to show these values in the list or table which you opened as a dialog box. If you did not
+open the table as a dialog box, but as a regular list window, Plant Simulation will always show the current
+values anyway. In this case the method recomputes any formulas contained in the list window.
+Note
+Values you changed in the dialog box but did not apply will be discarded.
+Type
+Method
+Syntax
+<Path>.refillDialog
+Example
+MyDataStack.refillDialog
+MyDataQueue.refillDialog
+MyDataList.refillDialog
+MyDataTable.refillDialog
+SimTalk
+openDialogBox [SimTalk]
+refillDialog [SimTalk]
+Plant Simulation Help 11-3977
+Unpublished work. © 2026 Siemens
+
+showPrintDialog [SimTalk] - lists
+Opens the dialog Print of the default printer you set under MS Windows.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.showPrintDialog → boolean
+Return Value
+The return value has the data type boolean.
+Example
+MyTimeSequence.showPrintDialog
+See also
+Print List
+Methods for the Order of Cells within Lists and Tables
+_Methods for the Order of Cells within Lists and Tables
+Lists and tables provide the methods listed in the table of contents to the left for manipulating the order of
+cells.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+showPrintDialog [SimTalk] - lists
+11-3978 Plant Simulation Help
+Unpublished work. © 2026 Siemens

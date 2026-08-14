@@ -1,0 +1,852 @@
+hasService [SimTalk]
+Returns if the Exporter/Worker designated by <Path> supports the designated service (true) or not (false).
+Type
+Method
+Syntax
+<Path>.hasService(ServiceName:string) → boolean
+Parameter
+The parameter ServiceName of data type string designates the name of the service.
+Return Value
+The return value has the data type boolean.
+Example
+MyExporter.hasService("drill")
+SimTalk
+Services [SimTalk] - Exporter
+See also
+Services [Exporter]
+Exported Services [Exporter]
+Exported Services [Worker]
+Read-Only Attributes of the Exporter
+_Read-Only Attributes of the Exporter
+The Exporter provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+hasService [SimTalk]
+11-3308 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print .Resources.myExporter:2.AvailableForMediation
+_Read-Only Attributes of the Exporter
+Plant Simulation Help 11-3309
+Unpublished work. © 2026 Siemens
+
+AvailableForMediation [SimTalk] - Exporter
+Returns if the Exporter designated by <Path> can be brokered (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.AvailableForMediation → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+true if the Exporter is not failed, not paused, and has available capacity.
+Example
+print .UserObjects.MyExporter:2.AvailableForMediation
+AvailableForMediation [SimTalk] - Exporter
+11-3310 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FreeCapacity [SimTalk]
+Returns the capacity which the Exporter designated by <Path> can provide at the moment.
+Type
+Read-only attribute
+Syntax
+<Path>.FreeCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.FreeCapacity
+See also
+Tab Statistics [Exporter]
+FreeCapacity [SimTalk]
+Plant Simulation Help 11-3311
+Unpublished work. © 2026 Siemens
+
+MediatedCapacity [SimTalk] - Exporter
+Returns the capacity which the Exporter designated by <Path> brokers at the moment.
+Type
+Read-only attribute
+Syntax
+<Path>.MediatedCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.MediatedCapacity
+See also
+Tab Statistics [Exporter]
+MediatedCapacity [SimTalk] - Exporter
+11-3312 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterFailedCount [SimTalk]
+Returns how often the Exporter designated by <Path> was failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterFailedCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatExporterFailedCount
+StatExporterFailedCount [SimTalk]
+Plant Simulation Help 11-3313
+Unpublished work. © 2026 Siemens
+
+StatExporterFailedDelta [SimTalk]
+Returns the standard deviation of the failure time of the Exporter designated by <Path> from the mean
+value.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterFailedDelta → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterFailedDelta
+StatExporterFailedDelta [SimTalk]
+11-3314 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterFailedMu [SimTalk]
+Returns the mean duration of a failure of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterFailedMu → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterFailedDelta
+StatExporterFailedMu [SimTalk]
+Plant Simulation Help 11-3315
+Unpublished work. © 2026 Siemens
+
+StatExporterFailedPortion [SimTalk]
+Returns the ratio of the times during which the Exporter designated by <Path> was failed to the statistics
+collection period of the Exporter.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterFailedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatExporterFailedPortion
+See also
+Tab Statistics [Exporter]
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatExporterFailedPortion [SimTalk]
+11-3316 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterFailedTime [SimTalk]
+Returns the total time during which the Exporter designated by <Path> was failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterFailedTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterFailedTime
+StatExporterFailedTime [SimTalk]
+Plant Simulation Help 11-3317
+Unpublished work. © 2026 Siemens
+
+StatExporterOperationalPortion [SimTalk]
+Returns the ratio of the working time of the Exporter designated by <Path> to the statistics collection
+period of the Exporter.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterOperationalPortion → real
+Return Value
+The return value has the data type real.
+Note
+As the Exporter computes the values that apply to the state working, it only provides the read-only
+attributes StatExporterOperationalPortion and StatExporterOperationalTime.
+Example
+print MyExporter.StatExporterOperationalPortion
+SimTalk
+StatExporterOperationalTime
+See also
+Tab Statistics of the Exporter
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatExporterOperationalPortion [SimTalk]
+11-3318 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterOperationalTime [SimTalk]
+Returns the total time taken up by working processes of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterOperationalTime → time
+Return Value
+The return value has the data type time.
+Note
+As the Exporter computes the values that apply to the state working, it only provides the read-only
+attributes StatExporterOperationalPortion and StatExporterOperationalTime.
+Example
+print MyExporter.StatExporterOperationalTime
+SimTalk
+StatExporterOperationalPortion [SimTalk]
+StatExporterOperationalTime [SimTalk]
+Plant Simulation Help 11-3319
+Unpublished work. © 2026 Siemens
+
+StatExporterPausedCount [SimTalk]
+Returns how often the Exporter designated by <Path> was paused.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterPausedCount → time
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatExporterPausedCount
+StatExporterPausedCount [SimTalk]
+11-3320 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterPausedDelta [SimTalk]
+Returns the standard deviation of the paused time of the Exporter designated by <Path> from the mean
+value.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterPausedDelta → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterPausedDelta
+StatExporterPausedDelta [SimTalk]
+Plant Simulation Help 11-3321
+Unpublished work. © 2026 Siemens
+
+StatExporterPausedMu [SimTalk]
+Returns the mean duration of a pause of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterPausedMu → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterPausedMu
+StatExporterPausedMu [SimTalk]
+11-3322 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterPausedPortion [SimTalk]
+Returns the ratio of the paused time of the Exporter designated by <Path> to the statistics collection period
+of the Exporter.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterPausedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatExporterPausedPortion
+See also
+Tab Statistics [Exporter]
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatExporterPausedPortion [SimTalk]
+Plant Simulation Help 11-3323
+Unpublished work. © 2026 Siemens
+
+StatExporterPausedTime [SimTalk]
+Returns the total time during which the Exporter designated by <Path> was paused.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterPausedTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterPausedTime
+StatExporterPausedTime [SimTalk]
+11-3324 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterUnplannedCount [SimTalk]
+Returns how often the Exporter designated by <Path> was not planned to work.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterUnplannedCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatExporterUnplannedCount
+StatExporterUnplannedCount [SimTalk]
+Plant Simulation Help 11-3325
+Unpublished work. © 2026 Siemens
+
+StatExporterUnplannedDelta [SimTalk]
+Returns the standard deviation of the unplanned time of the Exporter designated by <Path> from the mean
+value.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterUnplannedDelta → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterUnplannedDelta
+StatExporterUnplannedDelta [SimTalk]
+11-3326 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterUnplannedMu [SimTalk]
+Returns the mean duration of the unplanned time of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterUnplannedMu → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterUnplannedMu
+StatExporterUnplannedMu [SimTalk]
+Plant Simulation Help 11-3327
+Unpublished work. © 2026 Siemens
+
+StatExporterUnplannedPortion [SimTalk]
+Returns the ratio of the unplanned time to the statistics collection period of the Exporter designated by
+<Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterUnplannedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatExporterUnplannedPortion
+See also
+Tab Statistics [Exporter]
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatExporterUnplannedPortion [SimTalk]
+11-3328 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatExporterUnplannedTime [SimTalk]
+Returns the total time during which the Exporter designated by <Path> was not planned to work.
+Type
+Read-only attribute
+Syntax
+<Path>.StatExporterUnplannedTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatExporterUnplannedTime
+StatExporterUnplannedTime [SimTalk]
+Plant Simulation Help 11-3329
+Unpublished work. © 2026 Siemens
+
+StatMaxFreeCapacity [SimTalk]
+Returns the maximum capacity which the Exporter designated by <Path> can provide.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMaxFreeCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatMaxFreeCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatMaxFreeCapacity [SimTalk]
+11-3330 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatMaxMediatedCapacity [SimTalk]
+Returns the maximum occupied capacity of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMaxMediatedCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatMaxMediatedCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatMaxMediatedCapacity [SimTalk]
+Plant Simulation Help 11-3331
+Unpublished work. © 2026 Siemens
+
+StatMinFreeCapacity [SimTalk]
+Returns the minimum capacity which Exporter designated by <Path> can provide.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMinFreeCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatMinFreeCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatMinFreeCapacity [SimTalk]
+11-3332 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatMinMediatedCapacity [SimTalk]
+Returns the minimum occupied capacity of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMinMediatedCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatMinMediatedCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatMinMediatedCapacity [SimTalk]
+Plant Simulation Help 11-3333
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedCount [SimTalk] - Exporter
+Returns how often the services of the Exporter designated by <Path> were failed.
+Remarks
+The Exporter only collects failure times for the services if you activate FailServices.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesFailedCount
+SimTalk
+FailServices [SimTalk]
+StatServicesFailedCount [SimTalk] - Exporter
+11-3334 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedPortion [SimTalk] - Exporter
+Returns the portion of the failed times of the services of the overall statistics time of the Exporter
+designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+The Exporter only collects failure times for the services if you activate FailServices.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesFailedPortion
+SimTalk
+FailServices [SimTalk]
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesFailedPortion [SimTalk] - Exporter
+Plant Simulation Help 11-3335
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedTime [SimTalk] - Exporter
+Returns the total time during which services of the Exporter designated by <Path> were failed.
+Remarks
+The Exporter only collects failure times for the services if you activate FailServices.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesFailedTime
+SimTalk
+FailServices [SimTalk]
+StatServicesFailedTime [SimTalk] - Exporter
+11-3336 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingCount [SimTalk] - Exporter
+Returns how often the services of the Exporter designated by <Path> worked on repairs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesRepairingCount
+StatServicesRepairingCount [SimTalk] - Exporter
+Plant Simulation Help 11-3337
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingPortion [SimTalk] - Exporter
+Returns the portion of the repairing time of the services of the overall statistics time of the Exporter
+designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesRepairingPortion
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesRepairingPortion [SimTalk] - Exporter
+11-3338 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingTime [SimTalk] - Exporter
+Returns the total time which the services of the Exporter designated by <Path> spent for repairs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesRepairingTime
+StatServicesRepairingTime [SimTalk] - Exporter
+Plant Simulation Help 11-3339
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupCount [SimTalk] - Exporter
+Returns how often the services of the Exporter designated by <Path> were setting the station up.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesSetupCount
+StatServicesSetupCount [SimTalk] - Exporter
+11-3340 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupPortion [SimTalk] - Exporter
+Returns the portion of the set-up time of the services of the overall statistics time of the Exporter
+designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for
+the services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesSetupPortion
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesSetupPortion [SimTalk] - Exporter
+Plant Simulation Help 11-3341
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupTime [SimTalk] - Exporter
+Returns the total time the services of the Exporter designated by <Path> were setting the station up.
+Remarks
+Note
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for
+the services thus continues while the station is failed.
+Note
+If a station changes to the state failed and services for setting-up or processing are brokered for this
+station, the services remain assigned. For this reason the set-up time and the processing time for the
+services carry on running while the station is failed. To avoid this, activate FailServices [SimTalk].
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesSetupTime
+SimTalk
+FailServices [SimTalk]
+StatServicesSetupTime [SimTalk] - Exporter
+11-3342 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpCount [SimTalk] - Exporter
+Returns how often the services of the Exporter designated by <Path> waited for an importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesWaitingImpCount
+StatServicesWaitingImpCount [SimTalk] - Exporter
+Plant Simulation Help 11-3343
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpPortion [SimTalk] - Exporter
+Returns the portion of the overall statistics time which the services of the Exporter designated by <Path>
+spent waiting for an importer, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesWaitingImpPortion
+See also
+Tab Statistics [Exporter] of the Exporter
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWaitingImpPortion [SimTalk] - Exporter
+11-3344 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpTime [SimTalk] - Exporter
+Returns the total waiting time of the services of the Exporter designated by <Path> for an importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesWaitingImpTime
+StatServicesWaitingImpTime [SimTalk] - Exporter
+Plant Simulation Help 11-3345
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUCount [SimTalk] - Exporter
+Returns how often the services of the Exporter designated by <Path> spent waiting for a MU at the
+importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesWaitingMUCount
+StatServicesWaitingMUCount [SimTalk] - Exporter
+11-3346 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUPortion [SimTalk] - Exporter
+Returns the waiting portion for a MU at the importer of the services of the overall statistics time of the
+Exporter designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesWaitingMUPortion
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWaitingMUPortion [SimTalk] - Exporter
+Plant Simulation Help 11-3347
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUTime [SimTalk] - Exporter
+Returns the total time the services of the Exporter designated by <Path> were waiting at the importer for a
+MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesWaitingMUTime
+StatServicesWaitingMUTime [SimTalk] - Exporter
+11-3348 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingPortion [SimTalk] - Exporter
+Returns the portion of the waiting time of the services of the overall statistics time of the Exporter
+designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+The value of StatServicesWaitingPortion is the sum of StatServicesWaitingImpPortion and
+StatServicesWaitingMUPortion.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingPortion → time
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesWaitingPortion
+SimTalk
+StatServicesWaitingImpPortion [SimTalk] - Exporter
+StatServicesWaitingMUPortion [SimTalk] - Exporter
+StatServicesWaitingPortion [SimTalk] - Exporter
+Plant Simulation Help 11-3349
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingTime [SimTalk] - Exporter
+Returns the time which the services of the Exporter designated by <Path> were waiting in relation to the
+statistics collection period, weighted with the capacity.
+Remarks
+The value of StatServicesWaitingTime is the sum of StatServicesWaitingImpTime and
+StatServicesWaitingMUTime.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesWaitingTime
+SimTalk
+StatServicesWaitingImpTime [SimTalk] - Exporter
+StatServicesWaitingMUTime [SimTalk] - Exporter
+StatServicesWaitingTime [SimTalk] - Exporter
+11-3350 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingCount [SimTalk] - Exporter
+Returns the number of working processes which the services of the Exporter designated by <Path>
+provided.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatServicesWorkingCount
+StatServicesWorkingCount [SimTalk] - Exporter
+Plant Simulation Help 11-3351
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingPortion [SimTalk] - Exporter
+Returns the portion of the working time of the services of the overall statistics time of the Exporter
+designated by <Path>, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for
+the services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyExporter.StatServicesWorkingPortion
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWorkingPortion [SimTalk] - Exporter
+11-3352 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingTime [SimTalk] - Exporter
+Returns the time taken up by working processes of the services of the Exporter designated by <Path>.
+Remarks
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for the
+services thus continues while the station is failed. To avoid this, activate FailServices.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyExporter.StatServicesWorkingTime
+SimTalk
+FailServices [SimTalk]
+StatServicesWorkingTime [SimTalk] - Exporter
+Plant Simulation Help 11-3353
+Unpublished work. © 2026 Siemens
+
+StatSumFreeCapacity [SimTalk]
+Returns the sum of the free capacity of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatSumFreeCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatSumFreeCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+StatSumFreeCapacity [SimTalk]
+11-3354 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatSumMediatedCapacity [SimTalk]
+Returns the sum of the brokered capacity of the Exporter designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.StatSumMediatedCapacity → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyExporter.StatSumMediatedCapacity
+See also
+Tab Statistics [Exporter]
+Statistics report, Service Statistics — States — Capacities and States of the Exporters
+Attributes of the Exporter
+_Attributes of the Exporter
+The Exporter provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatSumMediatedCapacity [SimTalk]
+Plant Simulation Help 11-3355
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,1996 @@
+CollectData [SimTalk] - CostAnalyzer
+Sets if the CostAnalyzer designated by <Path> collects data (true ) or does not collect data (false).
+Type
+Attribute
+Syntax
+<Path>.CollectData:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyCostAnalyzer.CollectData := true
+See also
+Collect Data [check box] - CostAnalyzer
+HtmlReport
+HtmlReport [object]
+Use the object HtmlReport for presenting current data and results of the simulation run in a report that you
+can share with co-workers and customers.
+Image
+Description
+You can save the HtmlReport as an .htm file and open this file in an HTML-Browser, such as Microsoft
+Edge, Firefox, Google Chrome, etc. Plant Simulation is not required to open the HtmlReport in an external
+Browser, meaning that the HtmlReport can be displayed on any computer on which an HTML-Browser is
+installed.
+CollectData [SimTalk] - CostAnalyzer
+Plant Simulation Help 11-4911
+Unpublished work. © 2026 Siemens
+
+Note
+The easiest way to configure the contents of the HtmlReport is to drag an object from the Frame to
+the tab Content and to drop it there. You can type in additional content and formatting settings in the
+built-in markup language on the Tab Content.
+You can also show another HtmlReport within an HtmlReport, compare Display a HtmlReport.
+HtmlReport [object]
+11-4912 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the HtmlReport, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the HtmlReport, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object HtmlReport to your simulation model, click 
+  Manage Class Library > Basic Objects >
+UserInterface > HtmlReport on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Dialog Box of the HtmlReport
+Dialog Box of the HtmlReport
+Double-click the icon of the HtmlReport to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Dialog Box of the HtmlReport
+Plant Simulation Help 11-4913
+Unpublished work. © 2026 Siemens
+
+See also
+Show Report
+Show Report
+Show Report
+To open the display window of the HtmlReport, click Show Report.
+Remarks
+The Display Window contains:
+• The Display Pane of the Display Window on the right-hand side shows the content of the report which
+you define on the Tab Content.
+• The Structure Pane of the Display Window on the left-hand side shows the first two heading levels of
+the report. Click a heading in the structure pane to jump to this location in the display pane.
+Show Report
+11-4914 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Instead, you can also right-click the HtmlReport object in the Frame and select Show on the context menu.
+Show Report
+Plant Simulation Help 11-4915
+Unpublished work. © 2026 Siemens
+
+SimTalk
+IsShown [SimTalk] - HtmlReport
+show [SimTalk]
+Content [SimTalk] - HtmlReport
+WindowHeight [SimTalk]
+WindowWidth [SimTalk]
+Show Report
+11-4916 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Structure Pane of the Display Window
+The structure pane of the display window shows the table of contents of your HtmlReport.
+Remarks
+Proceed as follows to do the following in the structure pane of the display window:
+• To jump to a certain heading of level 1 or 2 in the display window, click this heading in the structure
+pane.
+• To print the report, click 
+  Open the print dialog.
+Note
+Print and Save do not work if the local security policies deny access to the operating system within
+the HTML functionality.
+• To save the content of the HTML page as a Web Page, complete, i.e., as an .htm file or an .html file,
+click 
+  Save the report to an HTML file.
+• To update the displayed data with the current data of the model, click 
+  Refresh the report.
+• To scroll the content of the structure pane and of the display pane up, roll the mouse wheel forward.
+• To scroll the content of the structure pane and of the display pane down, and roll the mouse wheel
+backward.
+• To zoom the content of the structure pane and of the display pane in, hold down Ctrl and roll the
+mouse wheel forward.
+• To zoom the content of the structure pane and of the display pane out, hold down Ctrl and roll the
+mouse wheel backward.
+Structure Pane of the Display Window
+Plant Simulation Help 11-4917
+Unpublished work. © 2026 Siemens
+
+Structure Pane of the Display Window
+11-4918 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display Pane of the Display Window
+The display pane of the display window displays the content of the report which you defined on the tab
+Content.
+Remarks
+Proceed as follows to do the following in the structure pane of the display window:
+Display Pane of the Display Window
+Plant Simulation Help 11-4919
+Unpublished work. © 2026 Siemens
+
+• To scroll the content of the structure pane and of the display pane up, roll the mouse wheel forward.
+• To scroll the content of the structure pane and of the display pane down, and roll the mouse wheel
+backward.
+• To zoom the content of the structure pane and of the display pane in, hold down Ctrl and roll the
+mouse wheel forward.
+• To zoom the content of the structure pane and of the display pane out, hold down Ctrl and roll the
+mouse wheel backward.
+• To open the respective Frame or the respective object of a picture shown in the report, click the link of
+the caption line.
+SimTalk
+save [SimTalk] - HtmlReport
+See also
+Tab Content [HtmlReport]
+Tab Content
+Tab Content [HtmlReport]
+Define the content which the HtmlReport shows on the tab Content.
+Tab Content
+11-4920 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remarks
+The built-in report provides examples of the most important items that you might use for your standard
+reports.
+The check box to the right of the canvas turns inheritance off or on.
+Tab Content [HtmlReport]
+Plant Simulation Help 11-4921
+Unpublished work. © 2026 Siemens
+
+• A green check box 
+  means that inheritance is turned on. Then the object inherits, i.e., uses, the value
+from the parent object from which it was derived. When you change the value of the parent object,
+Plant Simulation also changes the value of the child object.
+• An orange check box with a minus 
+  means that inheritance is turned off. Values you type in only apply
+to the selected object.
+You can type in the content of the HtmlReport as text, or you can type in and select settings in the
+dialog Object Parameters. You define special elements, such as headings, tables, and pictures in text
+form. For this purpose the HtmlReport provides a markup language which is designed for easy readability.
+The syntax is a superset of HTML, i.e., you can also type in the text in HTML syntax. We advise against
+doing this as HTML syntax is complicated to type and hard to read. You can also drag an object from the
+Frame to the tab Content and drop it there.
+You can also drag objects from the Frame onto the icon of the HtmlReport and drop them there.
+• If the Content of the HtmlReport is inherited, the data of the objects replaces the pre-defined content of
+the HtmlReport. Plant Simulation opens the display window of the HtmlReport automatically.
+• If the Content of the HtmlReport is not inherited, Plant Simulation appends the data of the objects
+to the pre-defined content of the HtmlReport. Plant Simulation opens the display window of the
+HtmlReport automatically.
+To open the dialog Object Parameters for an object, which you added to the tab Content with drag-and-
+drop, click the mouse between the name of the object and the closing bracket, and click 
+ .
+Then, select the settings you need in the dialog Select Object.
+You can:
+• Use the Default Settings of the HtmlReport
+• Define a Heading
+Tab Content [HtmlReport]
+11-4922 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Create a Bulleted List
+• Create a Numbered List
+• Highlight Text by Bolding and/or Italicizing It
+• Indent Text
+• Center Text
+• Add a Reference to an Object on the HTML Page
+• Add an Image of an Object
+• Add a Bitmap File
+• Collect Object Instances and Show Them
+• Insert a Comment into Your Report
+• Insert a Horizontal Line
+• Insert HTML Tags
+• Protect Characters
+• Use a String Unchanged in the HTML Code
+You can add some of the formatting options by clicking the respective button on the Toolbar of the
+HtmlReport or by pressing a key combination..
+See also
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Tab Content [HtmlReport]
+Plant Simulation Help 11-4923
+Unpublished work. © 2026 Siemens
+
+Toolbar of the HtmlReport
+You can add some of the formatting options by clicking the respective button on the toolbar or by pressing
+a key combination.
+Remarks
+The toolbar of the HtmlReport provides these buttons.
+To do this Click
+Key
+combination
+Undo your last action
+ Ctrl+Z
+Apply bold face to the selected text
+ Ctrl+B
+Italicize the selected text
+ Ctrl+I
+Convert the selected text to a numbered list
+ —
+Convert the selected text to a bulleted list
+ —
+Increase the indent of the selected text by one indent level
+ Ctrl+M
+Decrease the indent of the selected text by one indent level
+ Ctrl+Shift+M
+Insert a nonbreaking space (nonbreaking spaces are not wrapped and
+double-nonbreaking spaces are not removed)
+Ctrl+Shift+Hyp
+hen (-)
+Insert a page break, which is only visible in the printed report
+ Ctrl+Shift+Ente
+r
+Add a Reference to an Object
+ Ctrl+K
+Add an Image of an Object
+ —
+Add a Bitmap File
+ —
+Spell Check the Content of the HtmlReport
+ Ctrl+S
+You can press these buttons to insert markups.
+Toolbar of the HtmlReport
+11-4924 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To do this Click
+Key
+combination
+Insert the markup for a heading of level 1 or remove it again — Ctrl+1
+Insert the markup for a heading of level 2 or remove it again — Ctrl+2
+Insert the markup for a heading of level 3 or remove it again — Ctrl+3
+Insert the markup for a heading of level 4 or remove it again — Ctrl+4
+Insert the markup for a heading of level 5 or remove it again — Ctrl+5
+Insert the markup for a heading of level 6 or remove it again — Ctrl+6
+Remove all markups for headings, no matter what level they are — Ctrl+0
+Insert the markup for centering a line — Ctrl+E
+Insert a soft hyphen/ syllable hyphen to allow hyphenating words in
+the HtmlReport
+— Ctrl+-
+Default Settings of the HtmlReport
+We defined a number of default settings for the HtmlReport.
+You can adapt them to your needs with the options described under the Tab Content.
+## Drain Statistics
+The setting ## Drain Statistics shows these values by default.
+Item
+English Description
+Read-Only
+Attribute
+Item
+German
+Object Shows the names of all Drain objects within the entire
+simulation model that removed parts.
+— Objekt
+Name Shows the names of the part types which the Drain in this
+row removed from the plant.
+— Name
+Mean
+Life Time
+Shows the mean life time (throughput time) of all parts of
+this part type which the Drain in this row removed from the
+plant.
+StatAvgLifeSpan
+[SimTalk] - Drain
+Mittlere
+Durchlauf
+zeit
+Total
+Through
+put
+Shows the total throughput of all parts of this part type
+which the Drain in this row removed from the plant.
+StatDeleted
+[SimTalk] - Drain
+Durchsatz
+Through
+put per
+Hour
+Shows the number of parts that the Drain removed from the
+plant in an hour over all observed times during which the
+Drain was available.
+StatThroughput
+PerHour
+[SimTalk] - Drain
+Durchsatz
+pro
+Stunde
+Default Settings of the HtmlReport
+Plant Simulation Help 11-4925
+Unpublished work. © 2026 Siemens
+
+Item
+English Description
+Read-Only
+Attribute
+Item
+German
+Producti
+on
+Shows the time portion during which the parts spent on a
+resource object of type production.
+— Produktio
+n
+Transpor
+t
+Shows the time portion during which the parts spent on a
+resource object of type transport.
+— Transport
+Storage Shows the time portion during which the parts spent on a
+resource object of type storage.
+— Lagerung
+Value
+Added
+Shows the time portion during which the parts were
+processed and were located on resource objects of type
+production. This is the time during which the value of the
+parts was increased.
+StatProdWorkin
+gPortion
+[SimTalk] - Drain
+Wertschö
+pfung
+Portion Shows the accumulated values of the columns production
+(green), transport (orange), and storage (red) as bar
+segments.
+— Anteil
+Colors for the Portion
+The colored bars for the Portion show the accumulated values of the columns Production (green),
+Transport (orange), and Storage (red) as bar segments.
+Default Settings of the HtmlReport
+11-4926 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Define a Heading
+Type in a number sign # at the start of a line to create a heading of level 1.
+Remarks
+Type in two number signs ## to create a heading of level 2.
+You can specify a maximum of four heading levels, i.e., you can type in #####.
+The HtmlReport also shows the headings of level 1 and 2 in the table of contents in the structure pane on
+the left-hand side of the HTML page.
+# Heading 1
+## Heading 1.1
+Text below Heading 1.1.
+## Heading 1.2
+Text below Heading 1.2.
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Define a Heading
+Plant Simulation Help 11-4927
+Unpublished work. © 2026 Siemens
+
+Create a Bulleted List
+Type in an asterisk followed by a space * at the start of a line to create a bulleted list.
+Remarks
+Each asterisk followed by a space at the start of a line creates a new bullet. Each bullet can span several
+lines. Terminate the bulleted list with an empty line.
+Instead, you can also click 
+  on the toolbar 
+ .
+Insert a tab stop or type in four spaces at the start of the line, followed by * to create a sublist.
+Each additional four empty spaces or each additional tab stop create sub-sublists which are indented
+further to the right.
+* List item 1
+* List item 2
+    * Sublist item 2.1
+    * Sublist item 2.2
+* List item 3
+Text after the list...
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Create a Bulleted List
+11-4928 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Create a Numbered List
+Type in 1. followed by a space 1. at the start of a line to create a numbered list.
+Remarks
+Type in 1. at the start of a line creates a new numbered item in the list. Instead of a 1, you can also
+type in any other number in front of the numbered item. Plant Simulation ignores the number and always
+creates the correct numbering which starts with 1. Each numbered item can span several lines. Terminate
+the numbered list with an empty line.
+Instead, you can also click 
+  on the toolbar 
+ .
+Insert a tab stop or type in four spaces at the start of the line, followed by 1. to create a sublist within the
+numbered list.
+Each additional four spaces or each additional tab stop create sub-sublists within the numbered list which
+are indented further to the right.
+1. Numbered item 1
+1. Numbered item 2
+    1. Numbered item 2.1
+    1. Numbered item 2.2
+1. Numbered item 3
+Text after the numbered list...
+The result looks like this:
+Note
+You can also create bulleted sublists within numbered lists.
+1. Numbered item 1
+1. Numbered item 2
+        * Sublist item 2.1
+        * Sublist item 2.2
+1. Numbered item 3
+Create a Numbered List
+Plant Simulation Help 11-4929
+Unpublished work. © 2026 Siemens
+
+Text after the numbered list...
+See also
+Show Statistics and Other Values in a Report
+Create a Numbered List
+11-4930 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Highlight Text by Bolding and/or Italicizing It
+Type in a space followed by an asterisk *, followed by the text, which you would like to show, and then
+an asterisk followed by a space *, to italicize the enclosed text.
+Remarks
+Instead of an empty space, you can also use other spaces, such as a tab stop or a line break. The enclosed
+text cannot start or end with a space so that italicized text can be distinguished from a bulleted list (* at
+the start of a line) and from the multiplication sign (2*3 or 2 * 3).
+The italicized text range can span several lines and paragraphs.
+Enclose the text between ** and ** to highlight this text in bold face.
+Enclose the text between *** and *** to highlight this text in bold face and to italicize it.
+You can also increase highlighting consecutively: If you use * in already italicized text, it will be displayed
+in bold face in addition. If your text is already bolded, and you use *, it will be displayed in bold face and
+will be italicized.
+Text can be *italicized* or **bolded** or ***bolded and italicized.***
+**Important: *Essential information.* Do not ignore!**
+The result looks like this:
+Note
+Plant Simulation does not interpret the character combination space asterisk * as the start of italicized
+text to prevent that object references, such as *.MUs.Part:1, are going to be misinterpreted.
+Instead, you can also click 
+ /
+  on the toolbar 
+ .
+See also
+Show Statistics and Other Values in a Report
+Highlight Text by Bolding and/or Italicizing It
+Plant Simulation Help 11-4931
+Unpublished work. © 2026 Siemens
+
+Indent Text
+Type in a greater than sign > at the start of a line to indent a paragraph.
+Remarks
+A paragraph can span several lines. Terminate it with an empty line. To indent the paragraph more, type in
+more than one greater than sign >> at the start of the line.
+> This paragraph
+is indented.
+Non-indented body text after the indented paragraph.
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Indent Text
+11-4932 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Center Text
+Type in a greater than sign followed by a less-than sign >< at the start of a line to center the text in this
+line.
+Remarks
+>< This text is centered.
+This text is left-aligned.
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Add a Reference to an Object
+Add a Reference to an Object on the HTML Page
+Specify the settings for displaying a reference to an object on the HTML page.
+Type Object Parameters into the Dialog Object Parameters
+To select an object or an object attribute to be displayed on the HTML page, click 
+  on the toolbar
+. Then select the object and/or the value of an
+attribute or a method of this object, which you would like to show, in the dialog Select Object. Click
+OK.
+Center Text
+Plant Simulation Help 11-4933
+Unpublished work. © 2026 Siemens
+
+In this case the path, which was detected within brackets when you held down Shift while clicking Add
+Object 
+  is preselected.
+Type in the Caption which the HtmlReport shows below the statistics table on the HTML page.
+Select the Statistics table type you want to show for the object. The different object types provide
+different statistics table types.
+If the text cursor is located within an object reference ([…]), Plant Simulation opens the dialog Select
+Object Parameters. In this case the object parameter is preselected that was detected within brackets
+when you clicked Add Object 
+ .
+You can:
+Add a Reference to an Object on the HTML Page
+11-4934 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Display an Attribute of an Object
+• Display an AttributeExplorer
+• Display a Broker
+• Display a Chart
+• Display a Checkbox
+• Display an Object of Type Comment
+• Display a DataTable or a DataList
+• Display a Drain
+• Display an Object of Type Display
+• Display a Dropdown List
+• Display a FileLink
+• Compute a Formula
+• Display a Frame
+• Display a GanttChart
+• Display a HtmlReport
+• Display an Icon of an Object
+• Display a Method
+• Display a Picture of a Scene
+• Display a PythonModule
+• Display a SankeyDiagram
+• Display Statistics Values of an Object as a Table
+• Display a Table from the SQLite Interface
+• Display a Variable
+Type in the Parameters on the Tab Content
+You also type in the instructions that correspond to the settings you can type into the dialog.
+Type in an opening bracket, followed by the name of the object, followed by the closing bracket
+[ObjectName] to access that object, to read attribute values of this object, to use its icon, or to display
+the object itself on the HTML page.
+To display the value of an attribute on the HTML page, you can also type in the path to the attribute in
+brackets. Relative paths are resolved starting with the Frame in which the HtmlReport is located. To read
+the attributes of the HtmlReport itself, use the identifier self to access it.
+Add a Reference to an Object on the HTML Page
+Plant Simulation Help 11-4935
+Unpublished work. © 2026 Siemens
+
+Depending on the type of object, you can add additional arguments to fine-tune the HTML output. You can
+either add arguments in a specific order separated by commas or by name separated by white spaces.
+Compare these examples, which produce the same output.
+[.Models.Model._3D, "caption", 100%, %planningview]
+[.Models.Model._3D Caption="caption" ScaleTo=100% PlanningView=true]
+If the attribute contains a floating point value, you can round the value by typing in the number of decimal
+places, separated by a comma.
+To force a certain number of decimal places, even when these are zeros, type a 0 in front of the number of
+decimal places.
+[Station1.statFailPortion]
+[Station1.statFailPortion, 2]  // round to 2 digits
+[Station1.statFailPortion, 02] // 2 decimal places
+The result looks like this:
+Type in * to Display all Instances of an Object
+Instead of displaying a single object on an HTML page by typing in its name within brackets, you can also
+display all instances of an object one after the other.
+To do so, type in an asterisk * after the path to the object. Plant Simulation then displays all instances
+which inherit directly or indirectly from the object and which are located in the Frame into which you
+inserted the HtmlReport. This includes sub-Frames.
+The result looks like this:
+Add a Reference to an Object on the HTML Page
+11-4936 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[.UserInterface.HtmlReport*]     // gathers all HtmlReports inserted into 
+the model
+The result looks like this:
+If you select a Frame to be inserted, which provides the user-defined attribute named StatisticsObject, the
+dialog Object Parameters shows the available statistics functions.
+If you create a user-defined attribute named ReportObject for an object, Plant Simulation does not display
+this object but the ReportObject instead. If the user-defined attribute has the data type object, Plant
+Simulation displays the object which the attribute references. In many cases this will be an HtmlReport
+Add a Reference to an Object on the HTML Page
+Plant Simulation Help 11-4937
+Unpublished work. © 2026 Siemens
+
+which inserts its report into the HTML page. If you want to insert a DataTable or the result of a method
+call, you do not have to reference an object of type DataTable or Method, but you can set the data type of
+the user-defined attribute to table or method and define the table or method directly in the attribute.
+If you want to reference another object in a Frame, you do not have to create a user-defined attribute of
+data type object, but you can rename an inserted object to ReportObject. This object will then be displayed
+on the HTML page instead of the Frame.
+See also
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Add a Reference to an Object on the HTML Page
+11-4938 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display an Attribute of an Object
+Display attributes with a certain precision.
+Specify Named Arguments
+For the data types Real, Length, Weight, Speed, Time, and Acceleration the named argument Precision
+specifies the Integer Places and/or the Decimal Places with which the attribute is shown in the
+HtmlReport.
+The example shows two decimal places of our user-defined attribute named a of the Station.
+[Station.a precision=2]
+Display an Attribute of an Object
+Plant Simulation Help 11-4939
+Unpublished work. © 2026 Siemens
+
+Display an AttributeExplorer
+Specify the settings for displaying an AttributeExplorer on the HTML page.
+Select the Object in the Dialog Select Object
+To select an AttributeExplorer whose attribute table you want to show on the HTML page, click 
+  on
+the toolbar 
+ . Then select the AttributeExplorer in the
+dialog Select Object and click OK.
+Type in the Parameters on the Tab Content
+You can type in the following instructions to set the columns to be displayed.
+[AttributeExplorer]
+[AttributeExplorer, "Tab. 1: Mean value of the throughput times"]
+[AttributeExplorer, 0, 2..4, 7]
+[AttributeExplorer, *..4, 7]
+[AttributeExplorer, 0, 2..4, 7..*]
+[AttributeExplorer, 0, 2..4, 7, #ColumnName]
+The result looks like this:
+Display an AttributeExplorer
+11-4940 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Show Statistics and Other Values in a Report
+Display an AttributeExplorer
+Plant Simulation Help 11-4941
+Unpublished work. © 2026 Siemens
+
+Display a Broker
+Specify the settings for displaying a Broker on the HTML page.
+Type Object Parameters into the Dialog Object Parameters
+To display the statistics table of the Broker on the HTML page, click 
+  on the toolbar
+. Then select the Broker in the dialog Select Object
+and click OK.
+Type in the Caption which the HtmlReport shows below the statistics table of the Broker.
+Select the Statistics table type you want to show for the Broker.
+If you do not select the Statistics Type Table, the HtmlReport displays the broker statistics table.
+[MyBroker] // our Broker is called MyBroker
+[MyBroker, "Tab. 1: Broker Service Statistics"]
+[Broker1, 0, 2..4, 7]
+[Broker2, *..4, 7]
+[Broker3, 0, 2..4, 7..*]
+The result looks like this:
+See also
+Display Statistics Values of an Object as a Table
+Display a Broker
+11-4942 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Statistics and Other Values in a Report
+Display a Broker
+Plant Simulation Help 11-4943
+Unpublished work. © 2026 Siemens
+
+Display a Chart
+Specify the settings for displaying a Chart on the HTML page.
+Type Object Parameters into the Dialog Object Parameters
+To select an Chart whose diagram picture you want to show on the HTML page, click 
+  on the toolbar
+. Then select the Chart in the dialog Select Object
+and OK.
+Type in the Caption which the HtmlReport shows below the Chart.
+Type in the Image Width with which the HtmlReport shows the picture of the object. You can also type in
+an asterisk (*) for either the Width or the Height to ensure that the image will not be distorted.
+Type in the Image Height with which the HtmlReport shows the picture of the object. You can also type in
+an asterisk (*) for either the Width or the Height to ensure that the image will not be distorted.
+Type in the Parameters on the Tab Content
+Instead, you can also type in the instructions that correspond to the settings you can enter into the dialog.
+[StationChart] // our Chart is called StationChart
+[StationChart, 80, 60]
+[StationChart, "This is my caption"]
+[StationChart, "This is my caption", 80, 60]
+The result looks like this:
+Display a Chart
+11-4944 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Specify Named Arguments
+You can specify the following named arguments:
+Display a Chart
+Plant Simulation Help 11-4945
+Unpublished work. © 2026 Siemens
+
+• The named argument Caption specifies the caption with which the specified Chart is shown in the
+HtmlReport.
+[Chart Caption="This is my caption"]
+• The named argument Size specifies the size with which the specified Chart is shown in the HtmlReport.
+You can specify the size like this:
+◦ Do not specify the argument to show the picture of the Chart with its default size.
+◦ Specify [*, y] to set the height of the picture of the Chart to y and to use the width of the default
+width of the picture.
+◦ Specify [x, *] to set the width of the picture of the Chart to x and to use the height of the default
+height of the picture.
+◦ Specify [x, y] to scale the picture of the Chart to the size x and the height y. This might distort the
+picture though.
+[Chart Size=80,60]
+See also
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Display a Chart
+11-4946 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Checkbox
+Specify the settings for displaying a Checkbox on the HTML page.
+Type Object Parameters in the Dialog Object Parameters
+To display a Checkbox, which you inserted into your simulation model, on the HTML page, click 
+  on
+the toolbar 
+ . Then select the Checkbox in the dialog
+Select Object and click OK
+To show the Label of the object Checkbox to the right of the check mark on the HTML page, select the
+check box.
+To display the Label of the check box to the right of the icon 
+ , you can also type in the following:
+[Checkbox] or 
+[Checkbox, true]
+The result looks like this:
+To display the Label of the check box to the left of the icon 
+ , type in:
+[Checkbox, false]
+The result looks like this:
+Specify Named Arguments
+The named argument CheckBeforeText specifies if the check mark of the Checkbox is shown to the left of
+the text in the HtmlReport (true) or if it is shown to the right (false).
+Display a Checkbox
+Plant Simulation Help 11-4947
+Unpublished work. © 2026 Siemens
+
+The default value is false.
+[Checkbox CheckBeforeText=true]
+See also
+Show Statistics and Other Values in a Report
+Display a Checkbox
+11-4948 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display an Object of Type Comment
+Specify the settings for displaying an object of type Comment on the HTML page.
+Select the Object in the Dialog Select Object
+To display a Comment, which you inserted into your simulation model, on the HTML page, click 
+  on
+the toolbar 
+ . Then select the Comment in the dialog
+Select Object and click OK.
+The HtmlReport shows the text you typed in on the tab Comment to draw attention to information that
+you deem important. When you click the text/link, Plant Simulation opens the Comment object on the tab
+Comment.
+Display an Object of Type Comment
+Plant Simulation Help 11-4949
+Unpublished work. © 2026 Siemens
+
+Specify the Parameters on the Tab Content
+Instead of selecting the object, you can also type it in directly:
+[Comment]
+See also
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Display an Object of Type Comment
+11-4950 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a DataTable or a DataList
+Specify the settings for displaying a DataTable/list object on the HTML page.
+Type Object Parameters in the Dialog Object Parameters
+To display a DataTable or a list object (DataList, DataQueue, DataStack) in table form on the HTML page,
+click 
+  on the toolbar 
+ . Then select the DataTable/
+list object in the dialog Select Object and click OK.
+Type in the Caption which the HtmlReport shows below the DataTable/List.
+Type in the identifiers of the List columns of the DataTable/list object which the HtmlReport shows on the
+HTML page.
+Type the Parameters on the Tab Content
+Instead, you can also type in the instructions that correspond to the settings you can type into the dialog.
+[ThroughputList] // our DataTable is called ThroughputList
+[ThroughputList, "Figure 1: Mean value of the throughput times"]
+[ThroughputList, 0, 2]       // columns 0 and 2
+[ThroughputList, *..4, 7]    // all columns until column 4 and column 7
+[ThroughputList, 0, 2..4, 7..*]
+[ThroughputList, 0, 2..4, 7, #MyColumnName] // columns 0, 2 to 4, and 
+column 7, and the columns named MyColumnName
+The result looks like this:
+Display a DataTable or a DataList
+Plant Simulation Help 11-4951
+Unpublished work. © 2026 Siemens
+
+Access Cells of Lists and Tables to Add Their Content to the HtmlReport
+The syntax for accessing cells of lists and tables to add their content to the HtmlReport is similar to the
+syntax used in formulas:
+[MyDataTable[Column, Row]]
+You can specify the Column or Row with its number or with its index (if available). The text in the column
+or row index has to be surrounded by quotation marks and has to be started with the number sign/hash #:
+[MyDataTable[1, 1]]
+[MyDataTable["Name", 1]]
+[MyDataTable["Name", "Part type 1"]]
+[MyDataTable[#Name, 1]]
+[MyDataTable[#Name, #Part type 1]]
+You have to protect characters, that have a special meaning in the HtmlReport, within the text of the
+column index:
+[MyDataTable["\"Name\"", 1]
+[MyDataTable["Speed\, km/h", 1]]
+[MyDataTable[#Speed\, km/h, 1]]
+Specify Named Arguments
+You can specify the following named arguments:
+• The named argument Caption specifies the caption with which the DataTable is shown in the
+HtmlReport.
+• The named argument Columns specifies the columns of the DataTable that are shown in the
+HtmlReport.
+[DataTable Caption=Test Columns=[1,3,4]]
+See also
+Show Statistics and Other Values in a Report
+Protect Characters
+getHTMLCode [SimTalk] - lists
+Display a DataTable or a DataList
+11-4952 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display an Object of Type Display
+Specify the settings for displaying an object of type Display on the HTML page.
+Type Object Parameters in the Dialog Object Parameters
+To display the numeric value of an object of type Display on the HTML page, click 
+  on the toolbar
+. Then select the Display in the dialog Select Object
+and click OK.
+To use the Font Size and the Font Color, which you selected for the object Display, on the HTML page,
+select 
+ .
+Type the Parameters on the Tab Content
+Instead, you can also type in the instructions that correspond to the settings you can type into the dialog.
+You can type in true or false as the optional parameter. If you type in true, Plant Simulation displays
+the value using the Color and the Font Size which you selected on the tab Display of the Display.
+[Display]
+[Display, true]
+[Display, false]
+The result looks like this:
+Display an Object of Type Display
+Plant Simulation Help 11-4953
+Unpublished work. © 2026 Siemens
+
+Specify Named Arguments
+The named argument UseFontStyle specifies if the Display is shown in the HtmlReport with the Font Size
+and the Font Color of the Display object (true) or if it is shown with default values (false).
+The default value is false.
+[Display UseFontStyle=true]
+See also
+Show Statistics and Other Values in a Report
+Display an Object of Type Display
+11-4954 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Drain
+Specify the settings for displaying an object of type Drain on the HTML page by specifying object
+parameters.
+Type Object Parameters in the Dialog Object Parameters
+To display statistics values of the Drain as a table on the HTML page, click 
+  on the toolbar
+. Then select the Drain in the dialog Select Object
+and click OK.
+Type in the Caption which the HtmlReport shows below the statistics table of the Drain.
+Select the Statistics Table Type you want to show for the Drain.
+If you do not select the Statistics Type Table, the HtmlReport displays the same report on the HTML page
+that you can activate by checking Show Summary Report in the EventController. The Drain report does
+not show the first column with the name of the Drain as each Drain has its own Drain report in case no
+matching statistics table was provided.
+Type the Parameters on the Tab Content
+Instead, you can also type in the instructions that correspond to the settings you can enter into the dialog.
+[Shipping, "Statistics of the Drain 'Shipping", %DrainTypesPortions]
+Display a Drain
+Plant Simulation Help 11-4955
+Unpublished work. © 2026 Siemens
+
+See also
+Display Statistics Values of an Object as a Table
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Display a Drain
+11-4956 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Dropdown List
+Specify the settings for displaying an object of type DropDownList on the HTML page.
+Select the Object in the Dialog Select Object
+To display the text of the selected item of a DropDownList, which you inserted into your simulation
+model, on the HTML page, click 
+  on the toolbar 
+ .
+Then select the DropDownList in the dialog Select Object and click OK.
+Specify the Parameters on the Tab Content
+Instead, you can also type in
+[DropDownList]
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Display a Dropdown List
+Plant Simulation Help 11-4957
+Unpublished work. © 2026 Siemens
+
+Display a FileLink
+Specify the settings for displaying an object of type FileLink on the HTML page.
+Type Object Parameters in the Dialog Object Parameters
+To display a Bitmap file or an SVG file, which you imported with a FileLink, on the HTML page. Then
+select the bitmap file or the SVG file in the dialog of the FileLink and click OK.
+Click 
+  on the toolbar 
+ . Then select the
+DropDownList in the dialog Select Object and click OK.
+Type in the Caption which the HtmlReport shows below the FileLink image file.
+Type in the Image Size in percent to which the HtmlReport scales the screenshot of the FileLink. Instead,
+you can also enter the Image Width and the Image Height. You can also type in an asterisk (*) for either
+the Width or the Height to ensure that the image will not be distorted. The relative size takes precedence
+over the absolute size.
+Display a FileLink
+11-4958 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[FileLink, "Siemens logo imported via the FileLink", 110%]
+The result looks like this:
+Specify Named Arguments
+You can specify the following named arguments:
+• The named argument Caption specifies the caption with which the specified FileLink linked to a picture
+is shown in the HtmlReport.
+[FileLink Caption="Siemens logo imported via the FileLink"]
+• The named argument Size specifies the size of the icon (or of the non-SVG file).
+You can specify the size like this:
+◦ Specify * or [*, ] or do not specify the argument to show the icon with its default size.
+◦ Specify [*, y] to set the height of the icon to y and to use the width of the default width of the
+icon.
+◦ Specify [x, *] to set the width of the icon to x and to use the height of the default height of the
+icon.
+◦ Specify a percentage to scale the icon by the specified factor.
+◦ Specify [x, y] to scale the icon to the size x and the height y. This might distort the icon though.
+The named argument Size specifies the size of the SVG file.
+You can specify the size like this:
+◦ Do not specify the argument to show the picture with its default size.
+Display a FileLink
+Plant Simulation Help 11-4959
+Unpublished work. © 2026 Siemens
+
+◦ Specify [*, y] to set the height of the picture to y and to use the width of the default width of the
+picture.
+◦ Specify [x, *] to set the width of the picture to x and to use the height of the default height of the
+picture.
+◦ Specify [x, y] to scale the picture to the size x and the height y. This might distort the picture
+though.
+[FileLink Size=110%]
+See also
+Show Statistics and Other Values in a Report
+Display a FileLink
+11-4960 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Frame
+Specify the settings for displaying a Frame on the HTML page.
+Type Object Parameters in the Dialog Object Parameters
+To display a screenshot of a Frame, which contains the icons of all objects inserted into this Frame, on the
+HTML page, click 
+  on the toolbar 
+ .
+Then select the Frame whose screenshot you would like to show and click OK.
+Type in the Caption which the HtmlReport shows below the Frame. If you do not type in a Caption, the
+report shows the path to the Frame as the caption.
+Type in the relative Image Size in percent to which the HtmlReport scales the screenshot of the object.
+Instead, you can also type in the Image Width and the Image Height. You can also type in an asterisk *
+for either the Width or the Height to ensure that the image will not be distorted. The relative size takes
+precedence over the absolute size.
+Type the Parameters on the Tab Content
+You can also set the size of the screenshot on the HTML page by typing in these instructions:
+• Type in an asterisk * to zoom the screenshot out, when you zoom the report window out. When
+zooming in, the icon is never enlarged to more than its original size.
+• Type in a number and the percent sign % to scale the screenshot with this value.
+• Type in the width and the height of the image in millimeters to show the screenshot with these
+measurements. You can also type in an asterisk* for either the Width or the Height to ensure that the
+image will not be distorted.
+[MyEngines] // our Frame, which we inserted into ‘MyPlant’, is called 
+‘MyEngines’
+[MyEngines, *]
+[MyEngines, 150%]
+Display a Frame
+Plant Simulation Help 11-4961
+Unpublished work. © 2026 Siemens
+
+[MyEngines, 100, 150]
+[MyEngines, 100, *]
+[MyEngines, *, 150]
+[MyEngines, "This is my caption"]
+[MyEngines, "This is my caption", *]
+[MyEngines, "This is my caption", 150%]
+[MyEngines, "This is my caption", 100, 150]
+[MyEngines, "This is my caption", 100, *]
+[MyEngines, "This is my caption", *, 150]
+The result looks like this:
+If you create a user-defined attribute named ReportObject for an object, Plant Simulation does not display
+the object itself anymore, but its ReportObject instead. If the user-defined attribute has the data type
+object, Plant Simulation shows the object which the attribute references. In many cases this will be a
+HtmlReport which inserts its report into the HTML page. To insert a DataTable or the result of a method
+call, you do not have to reference an object of type DataTable or Method, but you can set the data type of
+the user-defined attribute to table or method respectively and define the DataTable or Method respectively
+in the attribute.
+If you want to reference another object in a Frame, you do not have to create a user-defined attribute of
+data type object, but you can name an inserted object ReportObject. This object will then be shown
+instead of the Frame on the HTML page.
+In this case only the parameters of the HtmlReport apply, not those of the 2D Frame, or of the 3D Frame.
+Display a Frame
+11-4962 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Specify Named Arguments
+The HtmlReport provides the same named arguments as a picture of a 3D scene for showing a Frame.
+See also
+Show Statistics and Other Values in a Report
+Display a HtmlReport
+getHTMLCode [SimTalk] - Frame
+getHTMLCode [SimTalk] - Chart
+Display a Frame
+Plant Simulation Help 11-4963
+Unpublished work. © 2026 Siemens
+
+Display a GanttChart
+Specify the settings for displaying an object of type GanttChart on the HTML page.
+Select the Object in the Dialog Select Object
+To display the diagram picture of a GanttChart on the HTML page, click 
+  on the toolbar
+. Then select the GanttChart in the dialog Select
+Object and click OK.
+Specify the Parameters on the Tab Content
+Instead, you can also type in the instructions that correspond to the settings you can enter into the dialog.
+## GanttChart
+[GanttChart, "My Caption", 0.5] 
+// adds our GanttChart with a time scale of 0.5, with the caption My 
+Caption.
+The result looks like this:
+Drag the scroll bar to the right to scroll to the right in the GanttChart.
+Specify Named Arguments
+You can specify the following named arguments:
+Display a GanttChart
+11-4964 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The named argument Caption specifies the caption with which the GanttChart is shown in the
+HtmlReport.
+[GanttChart Caption="My Caption"]
+• The named argument Scale sets the scaling on the time axis with which the GanttChart is shown in the
+HtmlReport.
+[GanttChart Scale=0.5]
+See also
+GanttChart [object]
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+exportChart [SimTalk]
+Display a GanttChart
+Plant Simulation Help 11-4965
+Unpublished work. © 2026 Siemens
+
+Display a HtmlReport
+Specify the settings for displaying an object of type HtmlReport on the HTML page.
+Select the Object in the Dialog Select Object
+To display an HtmlReport on the HTML page, click 
+  on the toolbar
+ and select it or type its name within brackets. Then
+select the HtmlReport which you would like to show and click OK.
+Specify the Parameters on the Tab Content
+You can specify an object as argument for the HtmlReport. You can then access the object in the called
+HtmlReport by typing in @ within brackets, [@]. This is especially useful if you want to display several
+objects in the same way.
+At times, you might also display an HtmlReport on its own and also embed it as part of a larger report.
+Suppose that you model a production line in a sub-Frame and assign this sub-Frame an HtmlReport. In
+this case you might want to display the HtmlReport individually on its own but also integrate it into
+the HtmlReport of the surrounding Frame. Then you might want to treat the heading for the sub-report
+different from for the individual report. You might, for example, want to display headings of level 1 in the
+sub-report as headings of level 2 and headings of level 2 as headings of level 3, etc. Then you can specify
+the numbers sign/hash # in the HtmlReport. You can also specify several number signs ##. The HtmlReport
+increases the heading levels by 1 per a single number sign, meaning that the size of the heading levels is
+decreased.
+[HtmlReport2]
+[HtmlReport2, Station1]
+[HtmlReport2, Station1, #]
+If you create a user-defined attribute named ReportObject for an object, Plant Simulation does not display
+the object itself anymore, but its ReportObject instead. If the user-defined attribute has the data type
+object, Plant Simulation shows the object which the attribute references. In many cases this will be a
+HtmlReport which inserts its report into the HTML page. To insert a DataTable or the result of a method
+call, you do not have to reference an object of type DataTable or Method, but you can set the data type of
+the user-defined attribute to table or method respectively and define the DataTable or Method respectively
+in the attribute.
+If you want to reference another object in a Frame, you do not have to create a user-defined attribute of
+data type object, but you can name an inserted object ReportObject. This object will then be shown
+instead of the Frame on the HTML page.
+You can also create sub-reports for all instances of an object. To do so, type in the path to the object,
+followed by an asterisk * ) as parameter. Plant Simulation then calls the specified HtmlReport for all
+Display a HtmlReport
+11-4966 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+instances which inherit directly or indirectly from the object, and which are inserted into the Frame, in
+which the outer HtmlReport is located. This also includes sub-Frames.
+[HtmlReport2, .MaterialFlow.Station*]
+See also
+HtmlReport [object]
+Show Statistics and Other Values in a Report
+Collect Object Instances and Show Them
+Display a HtmlReport
+Plant Simulation Help 11-4967
+Unpublished work. © 2026 Siemens
+
+Display an Icon of an Object
+Specify the settings for displaying an icon of an object on the HTML page.
+Type Object Parameters into the Dialog Object Parameters
+To display the icon of an object on the HTML page, click 
+  on the toolbar
+. Then select the object whose icon you want to
+show in the dialog Select Object and click OK.
+Select the icon you want to show and click OK.
+Type in the Caption which the HtmlReport shows below the icon.
+Display an Icon of an Object
+11-4968 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Either type in the Image Size in percent.
+Or type in the Image Width and the Image Height.
+The settings in the dialog Object Parameters translate to this statement:
+[!.Models.Model.Station, "Operational", "Operational icon", 200, 200]
+Specify Named Arguments
+Note
+When specifying named arguments to display an object icon, you have to type in an exclamation mark !
+in front of the actual statement.
+You can specify the following named arguments:
+• The named argument Icon specifies the icon of the object that is going to be shown in the HtmlReport.
+Specify a string to show the icon with the specified name of the specified object.
+Specify a number to show the icon with the specified number of the specified object. The number 2 for
+example shows the second icon of the object.
+If you not specify the named argument Icon, Plant Simulation shows the active icon.
+• The named argument Caption specifies the caption with which the specified icon of the object is shown
+in the HtmlReport.
+• The named argument Size specifies the size of the icon.
+You can specify the size like this:
+◦ Specify * or [*, *] or do not specify the argument to show the icon with its default size.
+◦ Specify [*, y] to set the height of the icon to y and to use the width of the default width of the
+icon.
+◦ Specify [x, *] to set the width of the icon to x and to use the height of the default height of the
+icon.
+Display an Icon of an Object
+Plant Simulation Help 11-4969
+Unpublished work. © 2026 Siemens
+
+◦ Specify a percentage to scale the icon by the specified factor.
+◦ Specify [x, y] to scale the icon to the size x and the height y. This might distort the icon though.
+[!Station Icon=Operational]
+Display an Icon of an Object
+11-4970 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Method
+Specify the settings for displaying an object of type Method on the HTML page.
+Specify the Parameters on the Tab Content
+To run the Method, whose name you type in brackets, and to display the return value on the HTML page,
+type in the following instructions.
+Within parentheses, you can also pass parameters to the Method.
+[Method]
+[Method(Argument1, Argument2])
+The source code of our Method named MyMethod queries the x-position and the y-position of the object
+named MyStation.
+The source code looks like this:
+param obj: object -> string
+return to_str("x=", obj.XPos, ", y=", obj.YPos)
+The following statement displays these positions in the HtmlReport.
+[MyMethod(MyStation)]
+The result looks like this:
+See also
+Method
+Show Statistics and Other Values in a Report
+Display a PythonModule
+You might want to display an object of type PythonModule on the HTML page in the HtmlReport to make
+use of the vast array of charting and display libraries that are available for Python.
+Display a Method
+Plant Simulation Help 11-4971
+Unpublished work. © 2026 Siemens
+
+Select the Object in the Dialog Select Object
+To display a PythonModule, which you inserted into your simulation model, on the HTML page, click 
+on the toolbar 
+ . Then select the PythonModule in the
+dialog Select Object and click OK.
+The HtmlReport then adds [PythonModule] to the Tab Content.
+If you do not specify a function, the PythonModule shows its source code in the HtmlReport.
+Specify Named Arguments
+The named argument Call specifies the function that is going to be called and whose return value,
+provided it has the data type string, is to be shown in the HtmlReport.
+[PythonModule Call="multiply"]
+See also
+PythonModule
+Display a PythonModule
+11-4972 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a SankeyDiagram
+Specify the settings for displaying an object of type SankeyDiagram on the HTML page.
+Select the Object in the Dialog Select Object
+To display the diagram picture of a SankeyDiagram on the HTML page, click 
+  on the toolbar
+. Then select the SankeyDiagram in the dialog
+Select Object and click OK.
+Type in the Parameters on the Tab Content
+Instead, you can also or type in the following instructions. The syntax resembles the syntax of the Frame,
+as the SankeyDiagram also depicts Frame images.
+Path[, Title][, SizeParameters]
+You might, for example, type in these instructions:
+[SankeyDiagram, Workers Sankey flows, 90, 90]
+[SankeyDiagramm1, Parts Sankey flows, 85%]
+If we do not specify a size, the depiction looks best though:
+Display a SankeyDiagram
+Plant Simulation Help 11-4973
+Unpublished work. © 2026 Siemens
+
+Display a SankeyDiagram
+11-4974 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can type in the camera position and the camera rotation in addition:
+Path[, Title][, SizeParameters][[CameraPosX, CameraPosY, CameraPosZ], 
+CameraRotX, CameraRotZ]
+If you do not specify any camera parameters, Plant Simulation shows the SankeyDiagram in the Planning
+View.
+Specify Named Arguments
+A SankeyDiagram expects the same named arguments as a picture of a 3D scene. If you do not specify
+the argument PlanningView, a SankeyDiagram will be shown in the PlanningView.
+• The named argument Type "exclusive" specifies that the SankeyDiagram is shown by itself in the
+HtmlReport.
+[SankeyDiagram Type="exclusive"]
+• The named argument Type "additional" specifies that the SankeyDiagram is shown together with
+the other visible Sankey Diagrams in the HtmlReport.
+[SankeyDiagram Type="additional"]
+• The named argument Type "all" specifies that all Sankey Diagrams of the Frame, in which the
+SankeyDiagram is located, are shown in the HtmlReport.
+[SankeyDiagram Type="all"]
+Default Value of the Parameter
+The default value is "exclusive".
+Note
+The named arguments Type "exclusive", Type "additional", Type "all" only work in simulation models with
+the model language English, Chinese, Japanese, and Hungarian.
+The named arguments Type "exklusiv", Type "zusätzlich", Type "alle" only work in simulation models with
+the model language German.
+See also
+SankeyDiagram
+Display a Frame
+Display a SankeyDiagram
+Plant Simulation Help 11-4975
+Unpublished work. © 2026 Siemens
+
+Show Statistics and Other Values in a Report
+Show Reports in a Hierarchically Structured Model
+Display a SankeyDiagram
+11-4976 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display Statistics Values of an Object as a Table
+Specify the settings for displaying statistics values of an object as a table on the HTML page.
+Select the Object in the Dialog Select Object
+To display statistics values as a table, click 
+  on the toolbar
+. Then select the object for which you would like
+to show statistics values. Click OK.
+Type in the Caption which the HtmlReport shows below the statistics table on the HTML page.
+Select the Statistics Table Type you want to show for the object. The different object types provide
+different table types. If you do not type anything into the text box List Columns, the HtmlReport shows all
+portions.
+Display Statistics Values of an Object as a Table
+Plant Simulation Help 11-4977
+Unpublished work. © 2026 Siemens
+
+The settings above result in this source code:
+[Receiving, "Statistics of the Source 'Receiving'", %Stati]
+The result might look like this:
+To only show certain columns, type in their column index, separated by commas, into the text box List
+columns, for example.
+The settings above result in this source code:
+[Receiving, "Statistics of the Source 'Receiving", %Stati, 4,6]
+The result might look like this:
+Note
+If the selected object collected statistics values, the HtmlReport shows values in a table. If the object did
+not collect statistics, the HtmlReport naturally cannot show any data.
+If the HtmlReport lists several objects one below the other, it aggregates their values if possible, i.e.,
+it lists their values row-by-row in a table. If the HtmlReport cannot aggregate the values, it shows the
+non-aggregated values and starts a new table. If you want to show instances of a class object, the
+HtmlReport lists the values of all instances row-by-row.
+Display Statistics Values of an Object as a Table
+11-4978 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+As statistics data can cover various values, the objects provide a number of different settings you can select
+in the drop-down list Statistics Table Type:
+Drop-down list item
+corresponds to this text
+you can type in, English
+corresponds to this text you
+can type in, German
+Portions of the States %ResStates %Stati
+Material Flow Properties %MatFlowProperties %Matflusseigenschaften
+Rotation Time %RotationTime (Turnplate,
+Turntable, PickAndPlace)
+%Drehungszeit (Drehplatte,
+Drehtisch, PickAndPlace)
+Moving Time %MovingTime (Converter) %Umsetzzeit (Umsetzer)
+Working Time %WorkingTime %Arbeitszeit
+Set-up Time %SetupTime %Rüstzeit
+Waiting Time %WaitingTime %Wartezeit
+Blocked Time %BlockedTime %Blockiertzeit
+Powering up/down Time %PowerUpDownTime %HochHerunterfahrzeit
+Stopped Time %StoppedTime %Angehaltenzeit
+Failed Time %FailedTime %Störungszeit
+Paused Time %PausedTime %Pausenzeit
+Empty Time %EmptyTime %Leerzeit
+Material Flow Properties of Mobile Units %MUMatFlowProperties %BEMatflusseigenschaften
+Empty Time of Mobile Units %MUEmptyTime %BELeerzeit
+Cumulated Statistics of the Parts Which the
+Drain Deleted
+%DrainCumulated %SenkeKumuliert
+Part Types Which the Drains Deleted %DrainAllTypes %SenkeAlleTypen
+Detailed Portions of the Part Types which
+the Drain Deleted
+%DrainTypesPortions (non
+summable)
+%SenkeTypenanteile (nicht
+addierbar)
+Detailed Times of the Part Types which the
+Drain Deleted
+%DrainTypesTimes (non
+summable)
+%SenkeTypenzeiten (nicht
+addierbar)
+Total Consumption and Portions of the
+Energy States
+%Energy %Energie
+Product-Oriented Statistics of all Existing
+and Deleted MUs (by Classes)
+%MUClassStatistics %BEKlassenStatistik
+Mean Time Portions of a MU Class of the
+Mean Life Span
+%MUClassTimePortions %BEKlassenZeitanteile
+Display Statistics Values of an Object as a Table
+Plant Simulation Help 11-4979
+Unpublished work. © 2026 Siemens
+
+Drop-down list item
+corresponds to this text
+you can type in, English
+corresponds to this text you
+can type in, German
+Mean Time Portions of a Individual MU of
+the Mean Life Span
+%MUTimePortions %BEZeitanteile
+Usage of the Transporters %TransUsageTime %TransVerwendungszeit
+Ready Times %TransReadyTime %TransBereitzeit
+Pauses %TransPausedTime %TransPausenzeit
+Failures %TransFailedTime %TransStörungszeit
+Traveled Distance %TransTraveledDistance %TransWegstrecke
+Battery %TransBatteryTime %TransBatteriezeit
+Broker Statistics %Broker %Broker
+Mediation Time %BrokerMediationTime %BrokerVermittlungsdauer
+Dwelling Time %BrokerDwellTime %BrokerVerweildauer
+Capacities and States of the Exporters %Exporter %Exporter
+Time Portions of the Exporters %ExporterTimePortions %ExporterZeitanteile
+Traveled Distance by Workers %WorkerTraveleledDistance %WerkerWegstrecke
+Importers Waiting for Services and Parts %ImporterWaiting %ImporterWartend
+Waiting Times for Services and Parts %ImporterWaitingTime %ImporterWartezeit
+Waiting Times for Parts %ImporterMUWaitingTime %ImporterBEWartezeit
+Waiting Times for Set-up Exporters %ImporterSetpWaitingTime %ImporterRüstWartezeit
+If you did not select a Statistics Type Table, the HtmlReport shows these default statistics types:
+Object Default Type, English Default Type, German
+Part %MUTimePortions %BEZeitanteile
+Container %MUMatFlowProperties %BEMatFlusseigenschaften
+Transporter %TransUsageTime %TransVerwendungszeit
+Worker %WorkerTraveledDistance %WerkerWegstrecke
+Turnplate, Turntable, PickAndPlace %RotationTime %Drehungszeit
+Converter %MovingTime %Umsetzzeit
+Drain %DrainCumulated %SenkeKumuliert
+Display Statistics Values of an Object as a Table
+11-4980 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Object Default Type, English Default Type, German
+Exporter %Exporter %Exporter
+Broker %BrokerMediationTime %BrokerVermittlungsdauer
+All other objects %States %Stati
+Specify the Parameters on the Tab Content
+Instead of selecting the Statistics Table Type in the dialog and typing the caption, you can also type the
+instructions into the tab Contents of the dialog of the HtmlReport:
+[Object path, caption, statistics table type] 
+You might, for example, type in:
+[Receiving, "Statistics of the Source 'Receiving'", %States]
+[Station, "My values", %States, 1..4]                 // shows columns 1 to 
+4
+[Station, "My values", %States, #Working, #SettingUp] // shows columns 1 
+and 2
+See also
+Display a Drain
+Display a Broker
+Show Statistics and Other Values in a Report
+Display Statistics Values of an Object as a Table
+Plant Simulation Help 11-4981
+Unpublished work. © 2026 Siemens
+
+Display a Table from the SQLite Interface
+Specify the settings for displaying a table containing data of a table of the SQLite interface on the HTML
+page.
+Select the Object in the Dialog Select Object
+To display data of a table of the SQLite interface on the HTML page, click 
+  on the toolbar
+. Then select the SQLite interface in the dialog
+Select Object and click OK.
+Specify the Parameters on the Tab Content
+This instruction displays the contents of the table called MUTrace.
+[MySQLite, "select * from MUTrace"]
+Specify Named Arguments
+You can specify the following named arguments:
+• The named argument Statement specifies the SQL statement of the SQLite object which is shown in the
+HtmlReport.
+[MySQLite Statement="select * from MUTrace"]
+• The named argument MaxRows shows the maximum number of rows which the SQLite object shows in
+the HtmlReport.
+[MySQLite MaxRows=5]
+See also
+SQLite
+Show Statistics and Other Values in a Report
+Display a Table from the SQLite Interface
+11-4982 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Display a Variable
+Specify the settings for displaying the contents of a Variable, according to the type of its contents on the
+HTML page.
+Select the Object in the Dialog Select Object
+To display the contents of a Variable on the HTML page, click 
+  on the toolbar
+. Then select the Variable in the dialog Select
+Object and click OK.
+If the Variable has the data type real, length, money, weight, time, speed, or acceleration, you can
+specify the Number of Decimal Places and/or the Number of Integer Places to which the value will be
+rounded as an optional parameter.
+If the Variable contains a DataTable/List object, it will be treated like a reference to a DataTable/List object,
+and you can parametrize it just like these. In the other case you cannot enter any parameters.
+If the Variable references an object, Plant Simulation displays the path of the object. If this object does not
+exist, the report shows a question mark (?) after the Path.
+Plant Simulation inserts all other values, in some cases with the respective unit, as text.
+[Variable] 
+[Variable, "Tab. 1: List of all tabular values"]
+[Variable, 0, 2..4, 7]
+[Variable, *..4, 7]
+[Variable, 0, 2..4, 7..*]
+[>Variable] // Shows the object specific content instead of the 
+            // object path if the variable references an object.
+Specify Named Arguments
+The named argument Precision specifies the Number of Decimal Places and/or the Number of Integer
+Places with which the Variable is shown in the HtmlReport.
+[Variable Precision=5]
+See also
+Variable
+Show Statistics and Other Values in a Report
+Display a Variable
+Plant Simulation Help 11-4983
+Unpublished work. © 2026 Siemens
+
+Display a Picture of a Scene
+Specify the settings for displaying a picture of a scene on the HTML page.
+Type in the Parameters on the Tab Content
+[Object._3D] 
+[Object._3D, w, h] 
+[Object._3D, [caption,] w, h]
+[Object._3D, w, h, crx, crz]
+[Object._3D, [caption,] w, h, crx, crz]
+[Object._3D, w, h, cpx, cpy, cpz, crx, crz]
+[Object._3D, [caption,] w, h, cpx, cpy, cpz, crx, crz]
+Note
+You can also embed _3D without specifying any additional arguments at all.
+To display a picture of a 3D scene on the HTML page, type in the following statement:
+[Object._3D, w, h] 
+[Object._3D, [caption,] w, h]
+[Object._3D, w, h, crx, crz]
+[Object._3D, [caption,] w, h, crx, crz]
+[Object._3D, w, h, cpx, cpy, cpz, crx, crz]
+[Object._3D, [caption,] w, h, cpx, cpy, cpz, crx, crz]
+The setting [Object._3D, w, h] creates the picture with the angles crx=45° and crz=15° and as a
+View All view.
+The individual arguments designate the following settings:
+• The optional argument caption designates the caption which the HtmlReport shows below the
+picture.
+• The named argument object designates the object whose picture you want do display.
+• The named argument w designates the width of the picture in pixels.
+• The named argument h designates the height of the picture in pixels.
+• The named argument cpx designates the x-coordinate of the camera position.
+• The named argument cpy designates the y-coordinate of the camera position.
+• The named argument cpz designates the z-coordinate of the camera position.
+• The named argument crx designates the rotation angle of the camera on the x-axis.
+• The named argument crz designates the rotation angle of the camera on the z-axis.
+Display a Picture of a Scene
+11-4984 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You might, for example, type in:
+[Station._3D, 150, 100, -29.596, -31.985, 39.985, 46.983, -36.669]
+The result looks like this:
+The coordinates are those that the command Marks > Generate SimTalk Code and Copy to Clipboard on
+the View ribbon tab of the 3D window copies.
+For a scene you can select the command Generate HtmlReport Code and Copy to Clipboard and then
+paste the code into the HtmlReport.
+• If Planning View is active, Plant Simulation generates the respective code.
+Display a Picture of a Scene
+Plant Simulation Help 11-4985
+Unpublished work. © 2026 Siemens
+
+[.Models.Model._3D Size=[874,491] PlanningView=true 
+ViewPos=[21.483,-11.597] ViewZoom=23.294]
+• If Planning View is not active, Plant Simulation uses the current camera position or camera rotation in
+the 3D scene respectively and copies it to the generated code.
+Display a Picture of a Scene
+11-4986 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[.Models.Model._3D Size=[874,491] PlanningView=false 
+CameraPos=[15.211,-46.816,29.319] CameraRotX=48.000 CameraRotZ=-8.500]
+You can access the 3D window.
+To allow this, we support the parameters for the rotation or for the rotation and position of the camera in a
+Frame in the simulation model:
+[Frame[,Caption][, {Width, Height} {Percent}][, CameraPositionX, 
+CameraPositionY, CameraPositionZ, CameraRotationX, CameraRotationZ} 
+{CameraRotationX, CameraRotationZ}]]
+If you specify the camera rotation, you have to type in two asterisks instead of one asterisk:
+[current, *, *, -45.0]
+If you specify the camera position and the camera rotation, you have to type in two asterisks instead of
+one asterisk:
+[current, *, *, -7.12, 8.123, 1.24, -45.0, 15,0]
+Display a Picture of a Scene
+Plant Simulation Help 11-4987
+Unpublished work. © 2026 Siemens
+
+Instead of the camera information you can also specify the keyword %planningview in 3D scenes. Then
+the HtmlReport shows the 3D scene in the planning view.
+[current, *, *, %planningview]
+You can show the views of 3D scenes in the HtmlReport with the keyword %modelingview.
+If a 3D scene is shown in Planning View, you can circumvent this state and show the modeling view
+instead of the planning view with the keyword %modelingview in the HtmlReport.
+[current, *, *, %modelingview]
+Specifying Named Arguments
+The HtmlReport provides these arguments for showing a picture of a 3D scene:
+• The named argument Caption specifies the caption with which the picture is shown in the HtmlReport.
+[.Models.Model._3D Caption="My Caption" Size=[874,491] PlanningView=true]
+Default Value of the Argument
+The default value is the object path.
+• The named argument PlanningView specifies if the picture to be shown in the HtmlReport is created in
+Planning View (true) or in Modeling View (false).
+[.Models.Model._3D Caption="My Caption" Size=[874,491] PlanningView=true]
+Default Value of the Argument
+The default value is the setting you selected for the View Options of the Frame. Otherwise, it is false.
+• The named argument Size sets the size with which the picture is shown in the HtmlReport.
+Specify * (asterisk) or [*, *] to make Plant Simulation set the size automatically.
+Specify [*, Height] or [Width, *] to make Plant Simulation set the size designated by * via the
+default aspect ratio from the other size.
+Specify [Width, Height] to make Plant Simulation set the width and the height of the picture.
+The default value is 700 by 500 pixels.
+[.Models.Model._3D Caption="My Caption" Size=[874,491] PlanningView=true]
+Display a Picture of a Scene
+11-4988 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The named argument ScaleTo specifies the scaling of the picture relative to the width of the HtmlReport
+in percent.
+Default Value of the Argument
+The default value is 100%.
+[.Models.Model._3D Caption="My Caption" ScaleTo=80% PlanningView=true]
+The HtmlReport provides these additional arguments for showing a picture of the planning view of a 3D
+scene:
+• The named argument ViewPos sets that the picture is shown centered in the HtmlReport.
+• The named argument ViewZoom sets the zoom factor or the view that is shown in the HtmlReport.
+[.Models.Model._3D Size=[874,491] PlanningView=true 
+ViewPos=[21.483,-11.597] ViewZoom=23.294]
+The HtmlReport provides these additional arguments for showing a picture of the modeling view of a 3D
+scene:
+• The named argument CameraPos sets the camera position with which the picture is shown it in the
+HtmlReport.
+• The named argument CameraRotX sets the camera rotation in degrees around the x-axis with which the
+picture is shown in the HtmlReport.
+• The named argument CameraRotZ sets the camera rotation in degrees around the z-axis with which the
+picture is shown in the HtmlReport.
+[.Models.Model._3D Size=[874,491] PlanningView=false 
+CameraPos=[15.211,-46.816,29.319] CameraRotX=48.000 CameraRotZ=-8.500]
+See also
+Generate HtmlReport Code and Copy to Clipboard
+Generate SimTalk Code and Copy to Clipboard [camera mark]
+Display a Picture of a Scene
+Plant Simulation Help 11-4989
+Unpublished work. © 2026 Siemens
+
+Compute a Formula
+To compute any formula, type in the formula between an opening bracket, followed by the equal sign [=
+and a closing bracket ].
+Remarks
+You can type in the number of decimal places, separated by a comma, as parameter. To force a certain
+number of decimal places, even when these are zeros, type in a space followed by zero 0 in front of the
+number of decimal places.
+[=Station1.statWorkingPortion + Station1.statBlockingPortion]
+[=Station1.statWorkingPortion + Station1.statBlockingPortion, 2]
+[=Station1.statWorkingPortion + Station1.statBlockingPortion, 02]
+The result looks like this:
+If you query an attribute or compute a formula, and if the return value has the data type object, Plant
+Simulation displays the object path on the HTML page. If you want to display the object itself instead of
+the object path on the HTML page, type in the attribute or the formula between [> and ].
+[>Source.path]  // displays the table of the delivery list
+[>@.~]  // displays the location of @m (for example the contents 
+        // of the Frame when @ is a Station inserted into the Frame)
+[>=str_to_obj(Variable)]
+See also
+Show Statistics and Other Values in a Report
+Compute a Formula
+11-4990 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Add an Image of an Object
+Specify the settings for displaying the current icon of an object, or for displaying an object and an icon on
+the HTML page.
+Select the Object in the Dialog Select Object
+To display an object to display its current icon, or an object and an icon to be displayed on the HTML page,
+click 
+  on the toolbar 
+ . Select the icon you want to
+use in the dialog that opens and click OK.
+Type in the Caption which the HtmlReport shows below the picture.
+Type in the Image Size in percent to which the HtmlReport scales the picture. Instead, you can also type in
+the Image Width and the Image Height. You can also type in an asterisk (*) for either the Width or the
+Height to ensure that the image will not be distorted. The relative size takes precedence over the absolute
+size.
+The settings above result in this statement:
+[!MyMethod, "ExitCtrl", "My icon of the object 'Method'", 110%]
+Add an Image of an Object
+Plant Simulation Help 11-4991
+Unpublished work. © 2026 Siemens
+
+The result looks like this:
+If the text cursor is located within a picture reference ([!…]), Plant Simulation first opens the dialog Open
+File and then the dialog Object Parameters for the path within brackets when you click Add Icon 
+ .
+If the text cursor is located within a picture reference ([!…]), Plant Simulation first opens the dialog Open
+File and then the dialog Object Parameters in which the path is preselected that was detected within
+brackets when you hold down Shift while clicking Add Icon 
+ .
+Specify the Parameters on the Tab Content
+Instead, you can also directly type in an opening bracket, followed by an exclamation mark, the path to the
+object, and a closing bracket, for example [!MyObject]. To not show the current icon, but a certain icon
+of the object, type in the name or the number of the icon, separated by a comma.
+[!Station1]
+[!Station1, Default]
+[!Station1, 0]
+The result looks like this:
+In addition, you can set the size of the icon as follows:
+• Type in an asterisk * to also zoom the icon out, when you zoom the report window out. When zooming
+in, the icon is never enlarged to more than its original size.
+• Type in a number and the percent sign % to scale the icon with this value.
+Add an Image of an Object
+11-4992 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Type in the width and the height of the icon in millimeters to show the icon with these measurements.
+You can also replace one of the two values with an *.
+[!Station1, "Operational","My Station 50 x 50%", 50, 50]
+[!Station1, "Operational", "My Station scaled to 110%", 110%]
+The result looks like this:
+See also
+Add a Menu and Menu Commands
+Show Statistics and Other Values in a Report
+Add an Image of an Object
+Plant Simulation Help 11-4993
+Unpublished work. © 2026 Siemens
+
+Add a Bitmap File
+Specify the settings for creating an icon from a bitmap file and for displaying this icon on the HTML page.
+Select the Object in the Dialog Select Object
+To select a bitmap file to create an icon in this HtmlReport and to display this icon on the HTML page,
+click 
+  on the toolbar 
+ . Select the bitmap file in the
+dialog Open and click OK.
+Type in the object parameters:
+In our example we selected the bitmap file named SiemensLogo. It is 31 mm wide and 6 mm high.
+[!self, "SiemensLogo", "Show Siemens Logo"]
+The result looks like this:´
+See also
+Show Statistics and Other Values in a Report
+Add a Bitmap File
+11-4994 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Collect Object Instances and Show Them
+To insert all instances of a certain object into the HtmlReport, type in the path to the object followed by an
+asterisk * as parameter.
+Remarks
+Type in:
+# Collect all instances of the object 'DataTable'
+[.InformationFlow.DataTable*]
+The result of this instruction looks like this:
+The title in the HtmlReport can also contain a formula. In the simplest form it looks like this:
+# Collect object instances as per @.Label
+[.InformationFlow.DataTable*, "=@.Label"]
+[.UserInterface.Chart*, "=@.Label"]
+The result looks like this:
+Collect Object Instances and Show Them
+Plant Simulation Help 11-4995
+Unpublished work. © 2026 Siemens
+
+Start the formula, just like in the normal syntax of the HtmlReport, with "=". As the formula is enclosed in
+double quotation marks, you have to protect the double quotation marks within the formula itself with a
+backslash, for example "=\"#\", to prevent it from being evaluated in the HtmlReport itself, so that the
+double quotation marks only matter in the formula itself.
+For the evaluation of the formulas you will use the usual anonymous identifiers where the anonymous
+identifier @ always points to the instance to be shown.
+If you access the name with @.Name or the label with @.Label in formulas and if either the name or the
+label is used for the title, Plant Simulation adds the name or the label as link to the HtmlReport. When you
+then click the link, Plant Simulation opens the instance.
+Compare this example:
+# Collect object instances as per @.Name
+[.InformationFlow.DataTable*, "=@.Name"]
+The result looks like this:
+Collect Object Instances and Show Them
+11-4996 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If the thus generated title contains a valid path to an existing object, Plant Simulation inserts the path as a
+link into the HtmlReport.
+The following example generates an HTML table for each instantiated DataTable within the Frame in
+which the HtmlReport is located and a title with the absolute path to the instance of the DataTable. You
+can then click the underlined link to open this DataTable instance.
+These instructions
+# Normal caption formula evaluations without quotation marks 
+[.InformationFlow.DataTable*, "=@.Location"]
+[.InformationFlow.DataTable*, "=@.Name + \" in \" + to_str(@.Location)"]
+insert this into the HtmlReport:
+Collect Object Instances and Show Them
+Plant Simulation Help 11-4997
+Unpublished work. © 2026 Siemens
+
+In general Plant Simulation underlines all titles below object depictions which contain a valid path. You
+can then click this link to open the respective object.
+This also applies for titles which, among others, contain a valid path. Here Plant Simulation adds the path
+to the contained Frame for each DataTable in the title as a link.
+These instructions
+# Collect object instances with complex expressions
+## Captions in quotation marks as column index/image width
+[.InformationFlow.DataTable*, "=1+sin(pi/2)"]
+[.InformationFlow.DataTable*, "=\"#\" + @.Name"]
+[.UserInterface.Chart*,"=1+sin(pi/2)"]
+insert this into the HtmlReport.
+Collect Object Instances and Show Them
+11-4998 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Statistics data do not support caption formulas. These instructions
+# Statistics data do not support caption formulas
+[.MaterialFlow.Station*, "=@.Name"]
+insert this into the HtmlReport:
+Collect Object Instances and Show Them
+Plant Simulation Help 11-4999
+Unpublished work. © 2026 Siemens
+
+This source code demonstrates the functions described above for our Frame. The DataTables have to
+contain data.
+# Collect all instances of the object 'DataTable'
+[.InformationFlow.DataTable*]
+# Collect object instances as per @.Name
+[.InformationFlow.DataTable*, "=@.Name"]
+# Collect object instances as per @.Label
+[.InformationFlow.DataTable*, "=@.Label"]
+[.UserInterface.Chart*, "=@.Label"]
+# Collect object instances with complex expressions
+## Captions in quotation marks as column index/image width
+[.InformationFlow.DataTable*, "=1+sin(pi/2)"]
+[.InformationFlow.DataTable*, "=\"#\" + @.Name"]
+[.UserInterface.Chart*,"=1+sin(pi/2)"]
+# Normal caption formula evaluations without quotation marks
+Collect Object Instances and Show Them
+11-5000 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[.InformationFlow.DataTable*, "=@.Location"]
+[.InformationFlow.DataTable*, "=@.Name + \" in \" + to_str(@.Location)"]
+# Statistics data do not support caption formulas
+[.MaterialFlow.Station*, "=@.Name"]
+See also
+Display a HtmlReport
+Collect Object Instances and Show Them
+Plant Simulation Help 11-5001
+Unpublished work. © 2026 Siemens
+
+Insert a Comment into Your Report
+Type in two hyphens -- to start a comment which extends to the end of the line.
+Remarks
+The comments will be ignored when generating the HTML page, meaning they do not affect the look of
+the HTML page. The comment is not part of the .htm file when you save the HtmlReport.
+This text will be displayed. -- This text will not be displayed.
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Insert a Comment into Your Report
+11-5002 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Insert a Horizontal Line
+Type in three hyphens ---, which are not followed by text, to create a solid horizontal line.
+Remarks
+You can also type more than three hyphens. If you type in other characters than the hyphens into the line
+of characters, Plant Simulation interprets --- as the start of a comment.
+Text above the line.
+------
+Text below the line.
+--- This is a comment ---
+The result looks like this:
+See also
+Show Statistics and Other Values in a Report
+Insert a Horizontal Line
+Plant Simulation Help 11-5003
+Unpublished work. © 2026 Siemens
+
+Insert HTML Tags
+Type the HTML tags within angle brackets, according to HTML syntax.
+Remarks
+Plant Simulation only recognizes the HTML tag if no space follows directly after the opening angle bracket
+(<), and only if the closing angle bracket (>) is located in the same line. If this is not the case, Plant
+Simulation displays a normal opening angle bracket.
+Plant Simulation does not analyze the markup language within the HTML tags. This way *, 1., --, etc. do
+not have any special meaning within the angle brackets.
+<span style="color:blue">My blue text</span>
+<a href="http://www.siemens.com">Visit us on the Siemens Homepage</a>
+<!-- This is an HTML comment which is exported to the .htm file. -->
+The result looks like this:
+<a href="mailto:Max.Mustermann@siemens.com?subject=Simulation 
+report">Max.Mustermann@siemens.com</a> 
+-- Opens the E-Mail program, enters the name and the E-Mail address into 
+the field To and Simulation report into the field Subject.
+The result looks like this:
+Insert HTML Tags
+11-5004 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Show Statistics and Other Values in a Report
+Insert HTML Tags
+Plant Simulation Help 11-5005
+Unpublished work. © 2026 Siemens
+
+Protect Characters
+When you type a character, which has a special meaning in the markup language, Plant Simulation does
+not display this character on the HTML page, but treats it as part of the notation of the markup language.
+Remarks
+To show such a character on the HTML page, type in a backslash \ to the left of the character.
+\-- This is not a comment.
+1\. This is not a numbered list.
+\[%\] This is a percentage sign within brackets.
+The result looks like this:
+You can protect the following special characters with a backslash \, but you do not have to protect them in
+each and every case:
+Special character Stands for Type in to protect
+\ backslash \\
+* asterisk \*
+# number sign \#
+[ opening bracket \[
+] closing bracket \]
+- hyphen \-
+. period \.
+< less-than \<
+> greater-than \>
+See also
+Show Statistics and Other Values in a Report
+Protect Characters
+11-5006 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Spell Check the Content of the HtmlReport
+To spell check the text on the tab Content starting at the cursor position, click the button. Plant Simulation
+then selects the next spelling error it found.
+Remarks
+Plant Simulation uses the Windows spell checker. It ignores text within '[' and ']'.
+Instead of clicking 
+  on the toolbar 
+ , you can also
+press Ctrl+S.
+Note
+The Windows spell checker does not work for Chinese and Japanese.
+Spell Check the Content of the HtmlReport
+Plant Simulation Help 11-5007
+Unpublished work. © 2026 Siemens
+
+Use a String Unchanged in the HTML Code
+To integrate a string into the HTML code without changing it, enclose it between two opening angle
+brackets << and two closing angle brackets >>.
+Remarks
+The string can have any length and can contain any number of line breaks.
+This may be required for two reasons:
+• To prevent that a long string of text is being interpreted as markup language.
+To prevent that a long string of text from being interpreted as markup language, you can type in a
+backslash \. This might prove to be cumbersome though. Imagine that you want to display the string
+------ on the HTML page. To prevent two consecutive hyphens from being interpreted as comment,
+you would have to protect each second hyphen with a backslash: -\--\--\-. Instead, you can also
+enclose the string within two angle brackets: <<------>>.
+• To generate characters which have a special meaning in HTML.
+When you type in a character that has a special meaning in HTML, Plant Simulation automatically
+converts this character into an HTML entity. An example for a special meaning in HTML are the
+quotation marks (" ). For this reason Plant Simulation generates the HTML entity &quot; for quotation
+marks within the HTML code.
+If you want to generate a quotation mark within the HTML code (this way you can easily generate
+invalid HTML), you cannot accomplish this by protecting the quotation mark with a backslash. Plant
+Simulation will convert this quotation mark into an HTML entity to avoid generating invalid HTML code.
+To prevent this, you can enclose the quotation mark in two opening and two closing angle brackets
+<<“>>.
+Suppose that you want to display the per mille sign ‰ but that you cannot enter it by typing on the
+keyboard. If you know that the per mille sign has the Unicode code 8240, you can formulate the sign
+as the HTML entity &#8240;. As the sign & has a special meaning in HTML (namely to open the HTML
+entities), Plant Simulation generates the HTML code &amp;#8240;, so that the Browser displays the
+string &#8240;.
+If you want to display the per mille sign in the Browser, you have to enclose the string in two angle
+brackets so that Plant Simulation integrates it into the HTML code: <<&#8240;>> without changing it.
+Use a String Unchanged in the HTML Code
+11-5008 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Show Statistics and Other Values in a Report
+Use a String Unchanged in the HTML Code
+Plant Simulation Help 11-5009
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-5010 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-5011
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+View Menu
+11-5012 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Controls
+Edit Observers
+See also
+Tools Menu [general description]
+Tools Menu
+Plant Simulation Help 11-5013
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the HtmlReport
+_Methods of the HtmlReport
+The HtmlReport provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+11-5014 Plant Simulation Help
+Unpublished work. © 2026 Siemens

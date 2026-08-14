@@ -1,0 +1,1131 @@
+WindowWidth [SimTalk]
+Sets the width in pixels with which Plant Simulation opens the display window of the HtmlReport
+designated by <Path>.
+Syntax
+<Path>.WindowWidth:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyHtmlReport.WindowWidth :=  800 // pixels
+SimTalk
+WindowWidth [SimTalk]
+WindowHeight [SimTalk]
+See also
+Show Report
+Dialog
+Dialog [object]
+Use the object Dialog for designing a dialog box for an object which is similar to the built-in dialog boxes.
+Image
+Description
+With the object Dialog you can:
+• Provide the user with a simple user interface for complex simulation models other users work with. This
+way you can ask the user to type in information which Plant Simulation needs to carry out a task.
+WindowWidth [SimTalk]
+11-5030 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Prevent the user from manipulating a Frame in which you modeled a complex machine, etc. To do so,
+insert a Method object as an Open Control into the Frame. Double-clicking the Frame will then not
+open it any longer, but call the method. The method in turn executes the parameter that you typed in,
+i.e., it opens the dialog, where the user can then select the settings.
+Each Dialog object manages a single dialog box. If you need more than one user-defined dialog boxes in
+your simulation model, insert as many Dialog objects as you need.
+• To create and insert a dialog item, click the right mouse button on the tab Elements and select a dialog
+item on the context menu, compare Insert a Dialog Item into Your Dialog.
+• To show the dialog you are creating, click Show Dialog.
+Note
+The display window of the object Dialog that contains menus does not use the standard Siemens
+PLM theme, but your Windows theme.
+The display window of the object Dialog that does not contain menus uses the standard Siemens
+PLM theme.
+Dialog [object]
+Plant Simulation Help 11-5031
+Unpublished work. © 2026 Siemens
+
+• To edit the position of a dialog item in the dialog you are creating, click Edit Dialog, select it and drag
+the mouse to a new location.
+Note
+The dialog box of the object Dialog uses the standard Siemens PLM theme.
+Dialog [object]
+11-5032 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the Dialog, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Dialog, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Dialog to your simulation model, click 
+  Manage Class Library > Basic Objects >
+UserInterface > Dialog on the Home ribbon tab.
+Dialog [object]
+Plant Simulation Help 11-5033
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+We created the dialog boxed of all the Tools with the Dialog.
+See also
+Set Parameters for Objects in Your Own Dialog
+Dialog Box of the Dialog
+Dialog Box of the Object Dialog
+Double-click the icon of the Dialog to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Show Dialog [Dialog]
+Edit Dialog [described]
+Label [text box] - Dialog
+Dialog Box of the Dialog
+11-5034 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Label [text box] - Dialog
+Type in a Label for the dialog you create. As opposed to the name, you can type in any expression of your
+choice as the label, including special characters and blank spaces.
+Remarks
+You can:
+• Type in a label. Plant Simulation then shows that Label in the title bar of the dialog you created.
+• Leave the text box Label empty. Plant Simulation then shows the Name of the Dialog object in the title
+bar of the dialog.
+SimTalk
+Label [SimTalk]
+Label [text box] - Dialog
+Plant Simulation Help 11-5035
+Unpublished work. © 2026 Siemens
+
+Show Dialog [Dialog]
+To show the dialog with the dialog items you created, click this button.
+Remarks
+The Dialog executes the Callback Method with the parameters you typed into the text boxes for
+Argument for Open, Argument for Apply or Argument for Close. This way you can detect if they do
+what you programmed them to do.
+Note
+Plant Simulation shows the dialog with the settings you select under Personalization > Font as well as
+with the settings you select under Start > Settings > System > Display > Scale & layout. If you change
+these settings, the dialog scales text, while the images always retain their size in pixels. For this reason
+it can happen that text overlaps the image. We recommend to test your dialogs with different display
+settings to make sure that everything works as you expect it.
+Note
+Dialog items which you create may be hidden by other dialog items if they have the same X and/or Y
+coordinates.
+Note
+As opposed to the object Dialog, which previous versions of Plant Simulation provided, which used one
+Callback Method per action, the current version of Plant Simulation uses a single callback method for
+defining all of the actions.
+Instead, you can also right-click the Dialog object and select Show Dialog on the context menu in the
+Frame.
+Show Dialog [Dialog]
+11-5036 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The display window of the object Dialog that contains menus does not use the standard Siemens PLM
+theme, but your Windows theme.
+SimTalk
+openDialog [SimTalk] - Dialog
+close [SimTalk] - Dialog
+closeDialog [SimTalk] - Dialog
+open [SimTalk] - Dialog
+Show Dialog [Dialog]
+Plant Simulation Help 11-5037
+Unpublished work. © 2026 Siemens
+
+Edit Dialog [described]
+To edit a dialog item which you created in the Dialog, click this button. The Dialog then selects the dialog
+item in the display window, and you can move it by dragging it to another position.
+Remarks
+To edit its properties, click it with the right mouse button and select Open on the context menu.
+Instead, you can also right-click the Dialog object and select Edit Dialog on the context menu in the
+Frame.
+Note
+The dialog box of the object Dialog uses the standard Siemens PLM theme.
+Edit Dialog [described]
+11-5038 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Elements
+Tab Elements
+The tab Elements provides a context menu with the commands for inserting dialog items into the dialog
+you are creating.
+Remarks
+To Insert a Dialog Item into Your Dialog, click into the text box with the right mouse button and select
+the respective item on the context menu.
+You can also select to show or hide the Default Buttons (OK, Cancel and Apply) and to open the dialog
+you create Modal, meaning that the user cannot open another dialog until he closes the present dialog.
+Then the user can only open another dialog after he closed the active dialog.
+Once you have inserted dialog items, the tree shows the structure of your dialog. Changing the order in
+the structure modifies the layout of the dialog.
+To change the order of the tabs in the dialog, select a tab on the tab Elements, hold down Shift and press
+the up arrow or the down arrow to move this tab to the left or to the right. The dialog shows the first tab in
+the structure as the leftmost tab.
+Tab Elements
+Plant Simulation Help 11-5039
+Unpublished work. © 2026 Siemens
+
+Open
+To modify an existing dialog item, right-click it and select Open on the context menu. This opens the
+dialog of the Dialog Item where you can change it.
+Delete
+To delete a dialog item, right-click it and select Delete on the context menu.
+See also
+Insert a Dialog Item into Your Dialog
+Define Properties of a Dialog Item
+Set Parameters for Objects in Your Own Dialog
+Inserting a Dialog Item into Your Dialog
+Insert a Dialog Item into Your Dialog
+Before you start creating your dialog, take a few moments to decide about its structure, i.e., which dialog
+items do you need, can you show them all in a flat hierarchy in the dialog or do you need to insert tabs and
+menus.
+Remarks
+The structure you decide upon determines how and in which order you create the dialog items. Let us say,
+you want to show the dialog items on tabs. Then, you first have to create the Tab Control, which is the
+container that accommodates the individual tabs. After this you have to create the individual Tabs, and
+finally you can insert the dialog items on each one of these tabs.
+• To create a new dialog item, select one of these items on the context menu:
+New Button New List View
+New Check Box New Menu/New Menu Command
+New DropDownList Box New Radio Button
+New Edit Text Box New Static Text Box
+New Group Box New Tab Control
+New Image New Tab Page
+New List Box
+Inserting a Dialog Item into Your Dialog
+11-5040 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To add one tab at a time to a Tab Control, click it with the right mouse button on the tab Elements,
+select Tab Page on the context menu, and type in a name and caption into the text box Dialog Item Tab
+Page.
+• To add a dialog item to a tab on a Tab Control you created, click the name of the tab with the right
+mouse button in the structure on the tab Elements and select the item you want to insert on the
+context menu.
+You can type in the same Name for dialog items, as long as those dialog items are not located in the same
+group of items. Groups of items are: Group Box, Menu, Tab Control and Tab.
+To rearrange the order of items of type Tab within a Tab Control and Menu in the structure on the tab
+Elements within these groups, use Shift+Up arrow or Shift+Down arrow. The structure shows all other
+dialog items according to their position in the user-defined dialog itself.
+To move items out of one of the groups or place them there, click the item with the left mouse button in
+the structure, drag it to the new location and drop it there.
+SimTalk
+getItemsList [SimTalk]
+deleteItem [SimTalk]
+See also
+Define Properties of a Dialog Item
+Set Parameters for Objects in Your Own Dialog
+Design a Simple Dialog
+Design a Tabbed Dialog
+Insert a Dialog Item into Your Dialog
+Plant Simulation Help 11-5041
+Unpublished work. © 2026 Siemens
+
+New Button
+Inserts a button into the dialog.
+Image on the Tab Elements
+Description
+When the user clicks a button, it calls the Callback Method with the parameter you typed in into the text
+box Callback Argument. It in turn executes the actions you programmed.
+Proceed as follows:
+• Type in the Name of the button.
+• Type in the Caption that the button displays.
+• Type in its X and Y position in the Dialog.
+• Type in its Width. The default value of 0 automatically sets the width of the button to the width of the
+OK button.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createButton [SimTalk]
+setCaption [SimTalk]
+setSensitive [SimTalk]
+See also
+Add a Button
+New Button
+11-5042 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+New Check Box
+Inserts a check box into the dialog. You can also select if the check box functions as an Inheritance box.
+Image on the Tab Elements
+Description
+A check box displays a setting or a set of settings that do not exclude each other. The user can select or
+clear one or several check boxes at the same time.
+Proceed as follows:
+• Type in the Name of the check box.
+• Type in the Caption that describes what the check box does.
+• Type in the Callback Argument, which will be passed to the Callback Method as a parameter.
+It will be executed, when the user selects or clears the check box.
+• Type in its X and Y position in the Dialog.
+• Select if you want to Enable the dialog item or not.
+• Select the check box Inheritance box so that the Dialog shows the check box as a check box for
+inheritance. It looks like a check box for inheritance in the dialogs of the built-in objects. The check box
+also works like this.
+New Check Box
+Plant Simulation Help 11-5043
+Unpublished work. © 2026 Siemens
+
+Clear the check box Inheritance box so that the Dialog shows the check box as a normal check box.
+Our callback method looks like this:
+param action: string
+switch action
+case "NameEdit"
+   ?.setCheckBox("NameInherit", false) 
+   // clear check box when the value changes
+case "Open"
+   ?.setCaption("NameEdit", ?.NameValue)
+   ?.setCheckBox("NameInherit", ?.NameValue.InheritValue)
+case "Apply"
+   var inherit:boolean := ?.getCheckBox("NameInherit") // 'inherit' is a 
+user-defined variable
+   if inherit
+       ?.NameValue := ?.Origin.NameValue // 'NameValue' is a user-defined 
+attribute
+       ?.NameValue.InheritValue := true
+       ?.setCaption("NameEdit", ?.NameValue)
+   else
+       ?.NameValue := ?.getValue("NameEdit")
+       ?.NameValue.InheritValue := false
+   end
+end
+• To insert the dialog item into your dialog, click OK.
+New Check Box
+11-5044 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+createCheckBox [SimTalk]
+getCheckBox [SimTalk]
+getInheritanceBox [SimTalk]
+getValue [SimTalk] - Dialog
+setCaption [SimTalk]
+setCheckBox [SimTalk]
+setInheritanceBox [SimTalk]
+setSensitive [SimTalk]
+See also
+Add a Check Box
+Inheritance [general description] in the Reference Help
+Using Inheritance
+New Check Box
+Plant Simulation Help 11-5045
+Unpublished work. © 2026 Siemens
+
+New DropDownList Box
+Inserts a drop-down list box into the dialog.
+Image on the Tab Elements
+Description
+The user can select a single item from the drop-down list. When it is closed, it displays the current value.
+When the user clicks the down arrow 
+ , it opens and displays more items for changing the value.
+Collapsed Opened
+Proceed as follows:
+• Type in the Name of the drop-down list.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+It will be executed when the user closes the drop-down list box.
+• Type in its X and Y position in the Dialog.
+• Type in its Width. The default value of 0 sets the width to the values defined by us.
+• Click Items and type in the items the list box displays into the dialog Items.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createDropDownListBox [SimTalk]
+setIndex [SimTalk]
+getIndex [SimTalk]
+setSensitive [SimTalk]
+New DropDownList Box
+11-5046 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+setList [SimTalk]
+See also
+Add a Drop-down List
+New DropDownList Box
+Plant Simulation Help 11-5047
+Unpublished work. © 2026 Siemens
+
+New Edit Text Box
+Inserts an edit text box into the dialog.
+Image on the Tab Elements
+Description
+The user can type text into the edit text box or edit text it already contains.
+Proceed as follows:
+• Type in the Name of the text box.
+• Type in the Callback Argument, which will be passed to the Callback Method as a parameter.
+It will be executed when the user changes the contents of the Text Box and selects another dialog item
+afterward, clicks in another text box, or clicks OK, Apply or Cancel.
+If the edit text box has a Callback Argument, the Callback Method of the Dialog will be called and the
+Callback Method is assigned the callback argument _Enter, when the user presses the Enter key and if
+the dialog does not show the Standard Buttons.
+• Select which kind of characters the user can type into the text box.
+Setting The user can type in
+Any Character any character, which includes special characters, lower and upper case
+letters and numbers.
+Letters and Digits lower and upper case letters, including special characters, such as
+umlauts, and letters of any kind of language, underscores, and blank
+spaces. The user can also type in the digits 0 to 9.
+Letters lower and upper case letters, including special characters, such as
+umlauts, and letters of any kind of language, and blank spaces.
+Decimal Number 0123456789
+Signed Decimal Number decimal numbers with a negative or positive sign: -+0123456789
+Hexadecimal Number ADbf09, for example.
+Octal Number 01234567, but not 18 for example.
+Binary Number 0 or 1
+Floating Point Number 12.3E-45, for example.
+New Edit Text Box
+11-5048 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Setting The user can type in
+Time time values.
+Date with Time a date containing time values.
+Date a date.
+Positive Real Number a positive real number.
+• Type in its X and Y position in the Dialog.
+• Type in its Width.
+• Select if you want to Enable the dialog item or not.
+• To show a password that the user types into the text box with superscripted lower case Xes 
+ ,
+instead of as clear text 
+ , select 
+ .
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createEditTextBox [SimTalk]
+setEditType [SimTalk]
+setCaption [SimTalk]
+getValue [SimTalk] - Dialog
+setSensitive [SimTalk]
+setPasswordMasking [SimTalk]
+getPasswordMasking [SimTalk]
+See also
+Add a Text Box
+New Edit Text Box
+Plant Simulation Help 11-5049
+Unpublished work. © 2026 Siemens
+
+New Group Box
+Inserts a group box.
+Image on the Tab Elements
+Description
+A group box graphically groups a set of dialog items or controls by drawing a frame around it.
+Empty Populated
+Proceed as follows:
+• Type in the Name of the group box.
+• Type in the Caption the group box displays.
+• Type in its X and Y position in the Dialog.
+• Type in its Width and its Height.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createGroupBox [SimTalk]
+setCaption [SimTalk]
+setSensitive [SimTalk]
+See also
+Add a Group Box Around Dialog Items
+New Group Box
+11-5050 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+New Image
+Inserts an image into the dialog.
+Image on the Tab Elements
+Description
+An image is an icon you defined for the object Dialog. You can type in a number, or a name, such as
+Icon1.
+Proceed as follows:
+• Type in the Name of the image.
+• Type in its X and Y position in the Dialog.
+• Type in its Width and Height in the Dialog.
+• Type in the Image ID, i.e., the number of the icon, or an image name. The image is an icon of the Dialog
+to which the image belongs.
+SimTalk
+createImage [SimTalk]
+setIcon [SimTalk]
+getIcon [SimTalk]
+See also
+Add an Image
+New Image
+Plant Simulation Help 11-5051
+Unpublished work. © 2026 Siemens
+
+New List Box
+Inserts a list box into the dialog.
+Image on the Tab Elements
+Description
+A list box displays a list of choices. The user can double-click one of the items in the list to select it. The list
+does not collapse.
+Proceed as follows:
+• Type in the Name of the list box.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+It will be executed, when the user selects and double-clicks an item in the list box.
+• Type in its X and Y position in the Dialog.
+• Type in its Width and Height in the Dialog. If you do not type in values, the Dialog sets the width and
+height to the values defined by us. When you type in a value for the height, it adds a vertical scrollbar
+to the list if the list contains more items than the height.
+• Click Items and type in the items the list box displays into the dialog Items.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+Mutation [SimTalk] - GASequence
+memUsage [SimTalk]
+getIndex [SimTalk]
+setList [SimTalk]
+setSensitive [SimTalk]
+getValue [SimTalk] - Dialog
+New List Box
+11-5052 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Add a List BoxAdd a List Box
+New List Box
+Plant Simulation Help 11-5053
+Unpublished work. © 2026 Siemens
+
+New List View
+Inserts a list view into the dialog.
+Icon on the Tab Elements
+Description
+A list view shows a table in the dialog.
+Note
+When displaying strings, Plant Simulation only shows the first 260 characters.
+Proceed as follows:
+• Type in the Name of the list view.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter. It will be
+executed, when the user double-clicks a row in the list view.
+Note
+The user can only select rows, but no columns or individual cells.
+• Type in the name of a table or click 
+  and select a table in the dialog Select Object.
+Type the items the list view shows into the cells of the columns.
+• Type in its X and Y position in the Dialog.
+• Type in its Width and Height in the Dialog.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+New List View
+11-5054 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+createListView [SimTalk]
+setTableRow [SimTalk]
+getTableRow [SimTalk]
+setSensitive [SimTalk]
+getTable [SimTalk] - Dialog
+setTable [SimTalk] - Dialog
+See also
+Add a List View
+New List View
+Plant Simulation Help 11-5055
+Unpublished work. © 2026 Siemens
+
+New Menu/New Menu Command
+Inserts a menu or a menu command into the dialog.
+Image on the Tab Elements
+Description
+A menu provides a list of textual choices from which the user can choose. The Dialog inserts the menus
+along the top of the dialog you define.
+Proceed as follows:
+• Type in the Name of the menu.
+• Type in the Caption of the menu. Type in a hyphen (-) as the caption of the menu command to insert a
+menu separator between groups of menu commands.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+It will be executed when the user selects a menu or a menu command.
+• Select if you want to Enable the dialog item or not.
+• To insert the menu into your dialog, click OK.
+• To add one menu command at a time to the selected menu, right-click it and select New Menu/New
+Menu Command again.
+◦ Type in the Name of the menu command.
+◦ Type in the Caption of the menu command.
+◦ Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+◦ Select if you want to Enable the dialog item or not.
+◦ To insert the menu into your dialog, click OK.
+• To add a submenu to the selected menu command, right click that menu command and select New
+Menu/New Menu Command again. Repeat the steps described above.
+A submenu looks like this.
+New Menu/New Menu Command
+11-5056 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Note
+The display window of the object Dialog that contains menus does not use the standard Siemens
+PLM theme, but your Windows theme.
+The display window of the object Dialog that does not contain menus uses the standard Siemens
+PLM theme.
+New Menu/New Menu Command
+Plant Simulation Help 11-5057
+Unpublished work. © 2026 Siemens
+
+SimTalk
+createMenu [SimTalk]
+setCaption [SimTalk]
+setSensitive [SimTalk]
+See also
+Add a Menu and Menu Commands
+New Menu/New Menu Command
+11-5058 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+New Radio Button
+Inserts a radio button into the dialog.
+Image on the Tab Elements
+Description
+A set of radio buttons enables the user to select a single setting from a fixed set of choices that exclude
+each other.
+Proceed as follows:
+• Type in the Name of the radio button.
+• Type in the Caption that describes what the radio button does and that the Dialog shows.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+It will be executed, when the user selects the radio button.
+• Type in its X and Y position in the Dialog.
+• Type in a Group ID, i.e., a number, for grouping any number of radio buttons to denote which radio
+buttons belong together.
+Group ID 1 might stand for one set of radio buttons, while Group ID 2 might stand for another set. The
+user can only select one radio button of a group.
+• Select if you want to Enable the dialog item or not.
+Note
+You have to create all items of a group of radio buttons sequentially because Plant Simulation creates
+the items according to their row and column position. You cannot arrange two sets of radio buttons
+as shown below, where the radio buttons Red and Blue on the left-hand side and the radio buttons
+Round and Square on the right-hand side form a group each. Windows ignores the Group ID you
+type in and groups the radio buttons row by row according to the Y-coordinate, i.e., it treats Red and
+Round as one group and Blue and Square as the other group.
+New Radio Button
+Plant Simulation Help 11-5059
+Unpublished work. © 2026 Siemens
+
+New Radio Button
+11-5060 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you want to model like this, do not place the radio buttons loosely onto the dialog, but group them
+within group boxes.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createRadioButton [SimTalk]
+setCheckBox [SimTalk]
+getCheckBox [SimTalk]
+setCaption [SimTalk]
+setGroupID [SimTalk]
+setSensitive [SimTalk]
+New Radio Button
+Plant Simulation Help 11-5061
+Unpublished work. © 2026 Siemens
+
+getValue [SimTalk] - Dialog
+See also
+Add a Set of Radio Buttons
+New Radio Button
+11-5062 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+New Static Text Box
+Inserts a static text box into the dialog.
+Image on the Tab Elements
+Description
+A static text box shows text that the user can view, but not edit.
+Proceed as follows:
+• Type in the Name of the static text box.
+• Type in the Caption that the static text box shows.
+• Type in its X and Y position in the Dialog.
+• Select if you want to Enable the dialog item or not.
+• To insert the dialog item into your dialog, click OK.
+SimTalk
+createStaticTextBox [SimTalk]
+setCaption [SimTalk]
+setSensitive [SimTalk]
+See also
+Add a Static Text Box
+New Static Text Box
+Plant Simulation Help 11-5063
+Unpublished work. © 2026 Siemens
+
+New Tab Control
+Inserts a tab control into the dialog.
+Image on the Tab Elements
+Description
+A tab control resembles a notebook that contains any number of pages.
+The user can navigate between different tabs and/or sections of information within the dialog box.
+Note
+Do not confuse the tab control with a single tab. The tab control is the container that holds the
+individual tabs (pages).
+When the user selects another tab, the Dialog calls the Callback Method, which in turn executes the
+actions you programmed with the first parameter you typed in as Callback Argument.
+Proceed as follows:
+• Type in the Name of the tab control.
+• Type in the Callback Argument which will be passed to the Callback Method as a parameter.
+New Tab Control
+11-5064 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+It will be executed when the user selects a tab in the tab control.
+• Type in its X and Y position in the Dialog.
+• Type in its Width and Height in the Dialog.
+• To insert the tab control into your dialog, click OK.
+• To add one tab at the time to the tab control, click it with the right mouse button on the tab Elements
+and select New Tab Page on the context menu.
+Note
+To change the order of the tabs in the dialog, select a tab on the tab Elements, hold down Shift and
+press the up arrow or the down arrow to move this tab to the left or to the right. The dialog shows
+the first tab in the structure as the leftmost tab.
+See also
+createTabControl [SimTalk]
+setTab [SimTalk]
+memUsage [SimTalk]
+getIndex [SimTalk]
+getValue [SimTalk] - Dialog
+setList [SimTalk], applies for all tab pages of the tab control.
+See also
+Add a Tab Control
+New Tab Control
+Plant Simulation Help 11-5065
+Unpublished work. © 2026 Siemens
+
+New Tab Page
+To insert a tab at the time to the tab control, click it with the right mouse button on the tab Elements and
+select New Tab Page.
+Image on the Tab Elements
+Description
+A tab offers settings that belong together.
+Proceed as follows:
+• Type in the Name of the tab into the dialog named Dialog Item Tab Page.
+• Type in the Caption of the tab into the dialog named Dialog Item Tab Page. The tab on the tab control
+shows this caption as the title on the tab itself.
+Note
+To change the order of the tabs in the dialog, select a tab on the tab Elements, hold down Shift and
+press the up arrow or the down arrow to move this tab to the left or to the right. The dialog shows
+the first tab in the structure as the leftmost tab.
+New Tab Page
+11-5066 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+createTabPage [SimTalk]
+setCaption [SimTalk] applies, when you change the caption of one tab page only.
+setTab [SimTalk]
+See also
+Add Tabs to a Tab Control
+Defining Properties of a Dialog Item
+Define Properties of a Dialog Item
+Depending on the type of item you define, the Dialog shows one or all of these items in the dialog of the
+item you are defining:
+Name Image ID
+Caption Width
+Callback Argument Height
+X Enable
+Y Items
+Group ID
+Defining Properties of a Dialog Item
+Plant Simulation Help 11-5067
+Unpublished work. © 2026 Siemens
+
+Name [dialog item in Dialog]
+Type in the Name of the dialog item. The Dialog shows this Name in the text box on the tab Elements.
+Remarks
+You can type in the same Name for dialog items, as long as those dialog items are not located in the same
+group of items. Groups of items are: Group Box, Menu, Tab Control and Tab.
+We recommend to type in a unique identifier, containing the type of dialog item, for example
+xyz_button, xyz_list, etc.
+Note
+You cannot use a period (.) in the name of a dialog item. As SimTalk treats this name as a string, you
+can also type in special characters.
+A Method object can call this dialog item using the Name you typed in. For some dialog items you can type
+in a Caption in addition.
+SimTalk
+setCaption [SimTalk]
+getValue [SimTalk] - Dialog
+Name [dialog item in Dialog]
+11-5068 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Caption [text box] - Dialog
+Certain dialog items show the text box Caption. Type in the text which the Dialog shows as the caption of
+the dialog item in your dialog.
+Remarks
+A caption is especially handy if you develop libraries in several languages and want the user to be able to
+switch languages. In addition, you can type in special characters and blanks, which you cannot use in the
+name.
+The Caption applies to these dialog items:
+New Static Text Box
+New Button
+New Group Box
+New Check Box
+New Menu/New Menu Command
+New Tab Page
+New Radio Button
+Create an Access Key
+Type in the ampersand character & in front of a letter of the Caption of the dialog items listed above
+to make this letter the access key (mnemonic key). Plant Simulation activates this dialog item, when you
+press Alt and that letter.
+If you want to use the ampersand character & instead of and in a dialog item, for example Drag & Drop,
+type in the & twice, Drag && Drop.
+Caption [text box] - Dialog
+Plant Simulation Help 11-5069
+Unpublished work. © 2026 Siemens
+
+Note
+If your dialogs do not show the access keys, make sure that Settings > Ease of Access > Keyboard >
+Change how keyboard shortcuts work is On.
+SimTalk
+setCaption [SimTalk]
+getValue [SimTalk] - Dialog
+Caption [text box] - Dialog
+11-5070 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Callback Argument [text box] - Dialog
+A a number of dialog elements show the text box Callback Argument.
+Remarks
+Type in the parameter that is passed to the Callback Method. Be aware that the parameters are case-
+sensitive!
+The callback method executes this parameter when the user performs the respective action, when he:
+• Closes the DropDownList Box.
+• Selects and double-clicks an item in the List Box.
+• Changes the contents of the Text Box and selects another dialog item afterward, clicks in another text
+box, or clicks OK, Apply, or Cancel.
+If the edit text box has a Callback Argument, the Callback Method of the Dialog will be called and the
+Callback Method is assigned the callback argument _Enter.
+• Clicks the Button.
+• Selects or clears the Check Box.
+• Selects the Radio Button.
+• Selects a row in the List View and double-clicks it.
+• Selects a tab in the Tab Control.
+• Selects a Menu/Menu Command.
+SimTalk
+setCallbackArgument [SimTalk]
+See also
+Program Actions which the Dialog Items Execute
+Callback Argument [text box] - Dialog
+Plant Simulation Help 11-5071
+Unpublished work. © 2026 Siemens
+
+X [text box] - Dialog
+Type in the position on the x-axis where Plant Simulation places the dialog item in the Dialog you define.
+The value corresponds to the average width of characters of your system font, not to pixels.
+Remarks
+If you cannot see the dialog items you inserted, check the settings for the position first. If you typed in
+identical values for different dialog items, the Dialog places them on top of each other, so that you can
+only see the first item(s) you inserted.
+SimTalk
+DialogX [SimTalk]
+DialogY [SimTalk]
+X [text box] - Dialog
+11-5072 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Y [text box] - Dialog
+Type in the position on the y-axis where Plant Simulation places the dialog item in the Dialog you define.
+The value corresponds to lines of characters of the system font, not to pixels. You can type in a value from
+0 to 10 for example.
+Remarks
+If you cannot see the dialog items you inserted, check the settings for the position first. If you typed in
+identical values for different dialog items, the Dialog places them on top of each other, so that you can
+only see the first item(s) you inserted.
+SimTalk
+DialogY [SimTalk]
+DialogX [SimTalk]
+Y [text box] - Dialog
+Plant Simulation Help 11-5073
+Unpublished work. © 2026 Siemens
+
+Group ID
+For a dialog item of Type > Radio Button the Dialog shows the text box Group ID. Type in a Group ID, i.e.,
+a number, for grouping any number of radio buttons to denote which radio buttons belong together.
+Remarks
+Group ID 1 might stand for one set of radio buttons, while Group ID 2 might stand for another set. The
+user can only select one radio button of a group.
+SimTalk
+setGroupID [SimTalk]
+See also
+New Radio Button
+Group ID
+11-5074 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Image ID
+For a dialog item of Type > Image the Dialog shows the text box Image ID. Type in an Image ID, i.e., the
+number of the icon, or the name of the image. The image is an icon of the Dialog to which the image
+belongs.
+SimTalk
+createImage [SimTalk]
+setIcon [SimTalk]
+getIcon [SimTalk]
+See also
+New Image
+Image ID
+Plant Simulation Help 11-5075
+Unpublished work. © 2026 Siemens
+
+Width [text box] - dialog item
+Type the Width of the dialog item in the average width of characters of your system font into the text box.
+The default value of 0 sets the width to the values defined by us.
+Width [text box] - dialog item
+11-5076 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Height [text box] - dialog item
+Type in the Height of the dialog item in lines of characters of your system font. The default value of 0 sets
+the height to the values defined by us.
+Height [text box] - dialog item
+Plant Simulation Help 11-5077
+Unpublished work. © 2026 Siemens
+
+Enable [check box] - dialog item
+Select this check box to Enable the respective dialog item. Clear the check box to not enable it.
+Remarks
+For a dialog item of Type > New Button, New Check Box, New Radio Button, New Edit Text Box, New
+List Box, and New List View the Dialog shows the check box Enable.
+You can:
+• Select Enable to activate the respective dialog item, 
+  for example, in the Dialog. When the user
+selects it, it triggers the Callback Method, which executes the actions you programmed.
+• Clear it to deactivate the dialog item, i.e., to gray it out 
+  in the Dialog, and thus make it not
+available to the user.
+SimTalk
+setSensitive [SimTalk]
+Enable [check box] - dialog item
+11-5078 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Items [Dialog]
+The Dialog shows the button Items for a dialog item of Type > DropDown List Box and ListBox.
+Remarks
+Click Items to open a dialog into which you type the items they show.
+• To add an item to the list field, type its name into the text box and click Insert or press the Enter key.
+Repeat this for all the items you want to add.
+• To delete an item from the list, select it in the list field and click Delete.
+• To move an item up one position in the list, select it in the list field and click Move Up.
+• To change the name of an item in the list, select it in the list field, type another name into the text box,
+and click Rename.
+To apply the items you typed in and to close the dialog, click OK.
+To discard what you have done so far, click Cancel.
+SimTalk
+setIndex [SimTalk]
+getIndex [SimTalk]
+See also
+DropDownList Box
+List Box
+setList [SimTalk]
+setCaption [SimTalk]
+getValue [SimTalk] - Dialog
+Items [Dialog]
+Plant Simulation Help 11-5079
+Unpublished work. © 2026 Siemens
+
+Show Default Buttons [check box]
+To show the standard buttons in the dialog that you are creating, select this check box. To hide these
+buttons, clear the check box.
+ 
+  
+  
+Remarks
+If you do not show the button combination OK, Cancel, and Apply, you have to define your own buttons
+to provide the user with a way to apply or to discard settings he chose.
+SimTalk
+ShowStandardButtons [SimTalk]
+Show Default Buttons [check box]
+11-5080 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open Modal [check box]
+To open the dialog box you are creating modal, select this check box. Then, the user cannot open any
+other Plant Simulation dialog boxes until he closes the dialog box of the user-defined dialog. To allow the
+user to open other dialog boxes in addition to the dialog box you are creating, clear the check box.
+SimTalk
+OpenModal [SimTalk]
+Tab Position
+Tab Position
+The Tab Position provides the settings listed in the table of contents to the left.
+Open Modal [check box]
+Plant Simulation Help 11-5081
+Unpublished work. © 2026 Siemens
+
+X-Position [dialog item]
+Type in the position on the x-axis of your computer screen at which Plant Simulation shows the Dialog
+when you open it.
+Remarks
+The default setting -1 for both X-Position and Y-Position centers the Dialog on screen.
+The unit is pixels, the zero point is the top left corner of the screen.
+SimTalk
+getUserDialogXYWH [SimTalk]
+X-Position [dialog item]
+11-5082 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Y-Position [dialog item]
+Type in the position on the y-axis of your computer screen at which Plant Simulation shows the Dialog
+when you open it.
+Remarks
+The default setting -1 for both X-Position and Y-Position centers the Dialog on screen.
+The unit is pixels, the zero point is the top left corner of the screen.
+SimTalk
+getUserDialogXYWH [SimTalk]
+Tab Method
+Tab Method
+The Tab Method provides the settings listed in the table of contents to the left.
+The parameters are going to be called when Plant Simulation executes the Callback Method.
+Y-Position [dialog item]
+Plant Simulation Help 11-5083
+Unpublished work. © 2026 Siemens
+
+Callback Method [text box] - Dialog
+Creates a Callback Method for the Dialog.
+Remarks
+Proceed as follows to create the Callback Method:
+• Click 
+  and select a Method in the dialog box Select Object. Type in the source code of the callback
+method. It sets the actions which the dialog items execute. Or you can accept the default, namely the
+user-defined attribute of data type method named self.callback.
+• Select the Method in a Frame, drag it to the text box and drop it there.
+• Select Create Control and create the control as a Method of the object.
+Type in the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Parameters
+The callback method can have the following parameters:
+• The Open section initializes the contents of the dialog box or sets the dialog items to values of your
+choice.
+• The Dialog executes the Apply section when the user clicks OK or Apply in the dialog box of the Dialog
+you define. The source code you type in may evaluate new or changed values.
+Callback Method [text box] - Dialog
+11-5084 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The Dialog executes the Close section when the user clicks Cancel in the dialog box of the Dialog you
+define, or when he closes it with Close 
+  on the title bar.
+• The Dialog executes the Callback Argument of a drop-down List Box when the user closes it.
+• The Dialog executes the Callback Argument of a List Box when the user selects and double-clicks an
+item in it.
+• The Dialog executes the Callback Argument of a Text Box when the user changes its contents and
+selects another dialog item afterward, clicks in another text box, or clicks OK, Apply, or Cancel.
+• The Dialog executes the Callback Argument of a Button when the user clicks the Button.
+• The Dialog executes the Callback Argument of a Check Box when the user selects or clears it.
+• The Dialog executes the Callback Argument of a Radio Button when the user selects it.
+• The Dialog executes the Callback Argument of a List View when the user selects a row in it and
+double-clicks it.
+• The Dialog executes the Callback Argument of a Tab Control when the user selects a tab.
+• The Dialog executes the Callback Argument of a Menu/Menu Command when the user selects a
+menu or a menu command.
+The standard callback method as a user-defined attribute looks like this:
+SimTalk
+CallbackMethod [SimTalk] - Dialog
+See also
+Program Actions which the Dialog Items Execute
+Callback Argument [text box] - Dialog
+Callback Method [text box] - Dialog
+Plant Simulation Help 11-5085
+Unpublished work. © 2026 Siemens
+
+Argument for Open [text box]
+Type in the name of the callback argument for the Open action into the text box.
+Remarks
+The Dialog executes the Argument for Open when it executes the Callback Method. The default setting
+is Open.
+The Open section of the callback method initializes the contents of the dialog box or sets the dialog items
+to values of your choice.
+SimTalk
+ArgumentForOpen [SimTalk]
+See also
+Program Actions for Interacting with the Dialog
+Argument for Open [text box]
+11-5086 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Argument for Apply [text box]
+Type in the name of the callback argument for the Apply action into the text box.
+Remarks
+The Dialog executes the Argument for Apply when it executes the Callback Method. The default setting
+is Apply.
+The Dialog executes the Apply section of the callback method when the user clicks OK or Apply in the
+dialog box of the Dialog you define. The source code that you type in may evaluate new or changed values.
+Note
+When the user clicks OK, the Dialog executes the callback method twice. The first time the Apply
+section is called. The second time the Close section is called.
+When the user clicks Apply, the Dialog only executes the Apply section of the callback method.
+SimTalk
+ArgumentForApply [SimTalk]
+See also
+Program Actions for Interacting with the Dialog
+Argument for Apply [text box]
+Plant Simulation Help 11-5087
+Unpublished work. © 2026 Siemens
+
+Argument for Close [text box]
+Type in the name of the callback argument for the Close action into the text box.
+Remarks
+The Dialog executes the Argument for Close when it executes the Callback Method. The default setting
+is Close.
+The Dialog executes the Close section of the callback method when the user clicks Cancel in the dialog
+box of the Dialog you define, or when he closes it with the Close button 
+  on the title bar.
+Note
+When the user clicks OK, the Dialog executes the callback method twice. The first time the Apply
+section is called. The second time, the Close section is called.
+When the user clicks Apply, the Dialog only executes the Apply section of the callback method.
+SimTalk
+ArgumentForClose [SimTalk]
+See also
+Program Actions for Interacting with the Dialog
+Argument for Close [text box]
+11-5088 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+The Dialog provides the Callback method as a user-defined attribute.
+Tab User-defined
+Plant Simulation Help 11-5089
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-5090 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+Plant Simulation Help 11-5091
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Controls
+Edit Observers
+See also
+Tools Menu [general description]
+Tools Menu
+11-5092 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Dialog
+_Methods of the Dialog
+The Dialog provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-5093
+Unpublished work. © 2026 Siemens

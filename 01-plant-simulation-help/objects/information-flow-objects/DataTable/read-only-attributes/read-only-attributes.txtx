@@ -1,0 +1,134 @@
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataList
+createNestedList [SimTalk] - local variable of data type list or table
+Read-Only Attributes of the DataTable
+_Read-Only Attributes of the DataTable
+The DataTable provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of Lists and Tables.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDataTable.Full
+Read-Only Attributes of the DataTable
+11-4188 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+XDim [SimTalk] - DataTable
+Returns the number of the last column of the DataTable designated by <Path> that contains an entry.
+Remarks
+Plant Simulation does not count the user-defined index.
+Type
+Read-only attribute
+Syntax
+<Path>.XDim -> integer
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.XDim
+print timeSequence.XDim
+See also
+YDim [SimTalk] - DataTable
+XDim [SimTalk] - DataTable
+Plant Simulation Help 11-4189
+Unpublished work. © 2026 Siemens
+
+XDimIndex [SimTalk]
+Returns the last cell of the column index of the DataTable designated by <Path> that contains an entry.
+Remarks
+Plant Simulation does not count column 0.
+Type
+Read-only attribute
+Syntax
+<Path>.XDimIndex -> integer
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.XDimIndex
+SimTalk
+YDimIndex [SimTalk]
+ColumnIndex [SimTalk]
+See also
+Number of Columns [lists]
+XDimIndex [SimTalk]
+11-4190 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+YDim [SimTalk] - DataTable
+Returns the number of the last row of the DataTable designated by <Path> that contains an entry.
+Remarks
+Plant Simulation does not count the user-defined index.
+Type
+Read-only attribute
+Syntax
+<Path>.YDim -> integer
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.YDim
+print timeSequence.YDim
+SimTalk
+XDim [SimTalk] - DataTable
+YDim [SimTalk] - DataTable
+Plant Simulation Help 11-4191
+Unpublished work. © 2026 Siemens
+
+YDimIndex [SimTalk]
+Returns the last cell of the row index of the DataTable designated by <Path> that contains an entry.
+Type
+Read-only attribute
+Syntax
+<Path>.YDimIndex -> integer
+Return Value
+The return value has the data type integer.
+Example
+print MyDataTable.YDimIndex
+SimTalk
+XDimIndex [SimTalk]
+RowIndex [SimTalk]
+See also
+Number of Rows [lists]
+Attributes of the DataTable
+_Attributes of the DataTable
+The DataTable provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of Lists and Tables.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+YDimIndex [SimTalk]
+11-4192 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.ColumnIndex := false
+MyDataTable.calculateList({1,3}..{2,4})
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+_Attributes of the DataTable
+Plant Simulation Help 11-4193
+Unpublished work. © 2026 Siemens

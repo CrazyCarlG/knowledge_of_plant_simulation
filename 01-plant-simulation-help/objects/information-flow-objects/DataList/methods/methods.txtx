@@ -1,0 +1,255 @@
+Methods of the DataList
+_Methods of the DataList
+The DataList provides:
+• The methods listed in the table of contents to the left.
+• The Methods of Lists and Tables.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Methods of the DataList
+11-4224 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type. We use these abbreviations:
+Argument of data type Data type Range of values
+integer integer integer greater than zero
+any all data types depending on data type
+listrange - a range
+any, ..., any any data type a range of cells
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+_Methods of the DataList
+Plant Simulation Help 11-4225
+Unpublished work. © 2026 Siemens
+
+If a parameter has a default value, the signature shows the default value after the parameter
+If the method has a return value, the signature shows its data type after the arrow ->.
+_Methods of the DataList
+11-4226 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+[row] [SimTalk]
+Returns the value of the designated row of the DataList designated by <Path>.
+Remarks
+You can also assign a new value to the cell in the row.
+Note
+When reading the contents of a cell of a DataList with the bracket operator in SimTalk 2.0, Plant
+Simulation reads the contents of the designated cell, but will leave it in the DataStack, DataQueue, and
+the DataList.
+When assigning a value to the designated cell with the bracket operator in SimTalk 2.0, this value
+will just overwrite the contents of the existing cell. This way a DataList will behave the same way as a
+DataTable with one column.
+Note
+When reading the contents of a cell of a DataList with the bracket operator in SimTalk 1.0, Plant
+Simulation reads and removes the contents of the designated cell. The remaining cells move up by one
+position.
+When assigning a value to the designated cell with the bracket operator in SimTalk 1.0, Plant
+Simulation inserts this value into the cell and moves the existing cells down by one position.
+Type
+Method
+Syntax
+<Path>[Row:integer]
+Parameter
+The parameter Row of data type integer designates the position of the cell.
+Example
+print DataList[2]  // prints the contents of row 2
+DataList[2] := 42  // overwrites the cell in row 2 with the value 42
+[row] [SimTalk]
+Plant Simulation Help 11-4227
+Unpublished work. © 2026 Siemens
+
+append [SimTalk] - DataList
+Appends the specified entry to the end of the DataList designated by <Path>.
+Remarks
+Plant Simulation does not allow to exceed the number of rows you set.
+Type
+Method
+Syntax
+<Path>.append(Entry:any)
+Parameter
+The parameter Entry of data type any designates the entry you want to append.
+Example
+MyDataList.append("crankshaft")
+See also
+Number of Rows [lists]
+append [SimTalk] - DataList
+11-4228 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+appendList [SimTalk]
+Adds the contents of all cells of the specified list to the DataList designated by <Path>.
+Remarks
+The contents of the existing cells remains untouched.
+Type
+Method
+Syntax
+<Path>.appendList(List:any)
+Parameter
+The parameter List of data type any designates the list you want to append.
+Our DataStack looks like this:
+Example
+var l: list[string]
+l.create
+l.insert(1,"one")
+l.insert(2,"two")
+MyDataList.appendList(l)
+MyDataList.appendList(DataStack)
+The content of MyDataList looks like this:
+appendList [SimTalk]
+Plant Simulation Help 11-4229
+Unpublished work. © 2026 Siemens
+
+appendList [SimTalk]
+11-4230 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+createNestedList [SimTalk] - DataList
+Creates a nested list in the DataList designated by <Path>, containing lists and tables.
+Remarks
+The DataList has to be of data type list, stack, queue, or table.
+Plant Simulation overwrites the existing sublist without moving existing list one row downward.
+Local variables of data type list have to be treated differently as they cannot contain the data itself but only
+references to the respective data structures. When entering the Method object, variables of this type do
+not contain a reference to such a data structure yet (void). You can only access the data after the nested
+list has been created.
+Type
+Method
+Syntax
+<Path>.createNestedList([Row:integer, Name:string]) → list
+Parameters
+You can specify the following parameters:
+• The optional parameter Row of data type integer designates the row of the cell. If you do not specify a
+row, Plant Simulation adds the list to the end of the DataList.
+• The optional parameter Name of data type string designates the name of the nested that is to be
+created.
+Return Value
+The return value has the data type list.
+Is the nested list (DataList, DataQueue, DataStack, or DataTable) that was created.
+Example
+MyDataList.createNestedList(1,"MyNestedlist")
+createNestedList [SimTalk] - DataList
+Plant Simulation Help 11-4231
+Unpublished work. © 2026 Siemens
+
+See also
+setCommonFormat [SimTalk]
+getCommonFormat [SimTalk]
+setCommonFormatData [SimTalk] - lists
+getCommonFormatData [SimTalk] - lists
+Activating and Deactivating Common Format
+Creating Lists within Lists and Tables
+createNestedList [SimTalk] - DataQueue
+createNestedList [SimTalk] - DataTable
+createNestedList [SimTalk] - local variable
+createNestedList [SimTalk] - DataList
+11-4232 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+determineRange [SimTalk] - DataList
+Resolves the actual list range for the DataList designated by <Path>.
+Type
+Method
+Syntax
+<Path>.determineRange(Range:listrange, byRef StartColumn:integer, byRef 
+StartRow:integer, byRef EndStartColumn:integer, byRef EndRow:integer)
+Parameters
+The method assigns the boundaries of the list range to the local variables, which you specify:
+• The parameter Range of data type listrange designates the range of the list.
+• The local variable StartColumn of data type integer designates the number of the first column of the
+range.
+• The local variable StartRow of data type integer designates the number of the first row of the range.
+• The local variable EndStartColumn of data type integer designates the number of the last column of the
+range.
+• The local variable EndRow of data type integer designates the number of the last row of the range.
+Example
+param a: any
+var fromX, fromY, toX, toY: integer
+if isListRange(a)
+   myDataList.determineRange(a, fromX, fromY, toX, toY)
+   print "{",fromY,"}..{",toY,"}"
+end
+// You can call this method like this: 
+myMethod({*})
+myMethod({1}..{*})
+// range with a user-defined row index
+myMethod({#7}..{*})  
+See also
+Specifying a Range of Cells [several columns] > Column index belongs to contents
+determineRange [SimTalk] - DataList
+Plant Simulation Help 11-4233
+Unpublished work. © 2026 Siemens
+
+Specifying a Range of Cells [several columns] > Column index does not belong to contents
+determineRange [SimTalk] - DataList
+11-4234 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+remove [SimTalk] - DataList
+Removes the contents of a cell from the DataList designated by <Path> and returns it.
+Remarks
+The DataList moves all cells with an index greater than the designated index up by one position.
+Type
+Method
+Syntax
+<Path>.remove(Row:integer) → any
+Parameter
+The parameter Row of data type integer designates the position of the cell.
+Return Value
+The return value has the data type any.
+The data type of the return value matches the data type of the DataList.
+Example
+value := MyDataList.remove(2)
+SimTalk
+cutRow [SimTalk] - DataTable
+See also
+Remove Row [context menu, lists]
+Read-Only Attributes of the DataList
+Read-Only Attributes of the DataList
+The DataList provides:
+remove [SimTalk] - DataList
+Plant Simulation Help 11-4235
+Unpublished work. © 2026 Siemens
+
+• The _Read-Only Attributes of Lists and Tables.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDataList.Full
+Attributes of the DataList
+Attributes of the DataList
+The DataList provides:
+• The Attributes of Lists and Tables.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the DataList
+11-4236 Plant Simulation Help
+Unpublished work. © 2026 Siemens

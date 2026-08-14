@@ -1,0 +1,655 @@
+Execute simulation experiments according to your final trial plans to arrive at the desired data. Plan
+a number of simulation runs and prepare for the variation of parameters and models to get reliable
+results.
+• Analyze the results of the experiments
+Analyze and interpret the results of the simulation experiments. Conduct a sensitivity analysis of the
+most important parameters, data and results.
+• Author the final documentation of the entire simulation project
+Once you are finished with the simulation project, update the notes you made while modeling to create
+the final documentation of the entire simulation project. This will help you, when you have to update
+or extend your simulation model or any of its components. Executing simulation experiments is a
+cyclical and evolutionary process. You will modify and improve your initial simulation model a number
+of times as you incorporate new insights from previous simulation runs. Thus you will arrive at your final
+simulation model after several cycles after continuously changing your initial draft of your simulation
+model.
+Go to Prepare Data for the Simulation with DataFit
+Go to Run Simulation Experiments
+Go to Modeling the Material Flow
+Getting to Know Plant Simulation
+Get to Know Plant Simulation
+You can familiarize yourself with Plant Simulation in a number of ways.
+You can:
+• View the Videos on YouTube
+• View the Sample Models
+• Consult the Step-by-Step Help
+Getting to Know Plant Simulation
+10-10 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View the Videos on YouTube
+The Videos, which you can access on the Start Page, provide a quick introduction to some of the most
+commonly used modeling tasks. We constantly add new videos.
+Click Videos to open the list of Videos we offer on YouTube. Then, click the respective video to view it.
+If we demonstrate a feature in a video, the respective help topic provides a link to the video on YouTube
+and jumps to the respective time in the video. The link shows the time code after the equal sign, =18 in
+the example below. Each video opens in a tab of its own.
+Note that we use the YouTube URL shortener in our links to the videos, for example https://youtu.be/
+PgT4wkT2Xj8?si=Udlvoq8KcAI9GxQw&t=18.
+Back to Get to Know Plant Simulation
+View the Videos on YouTube
+Plant Simulation Help 10-11
+Unpublished work. © 2026 Siemens
+
+View the Sample Models
+To get acquainted with Plant Simulation, we recommend to view the sample models. These models
+demonstrate how to approach a number of problems and will give you ideas on how to solve your
+modeling tasks.
+To view the sample modelso, click Example Models > Small Examples under Getting Started on the
+Start Page.
+• Select the respective Category, the Topic, and the Sample Model.
+View the Sample Models
+10-12 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click Open Model to open the selected.
+• Click More Info to show a short description of the model.
+• Type a search term describing the topic you want to find into the text box Search and click Search to
+find a model with this topic. Plant Simulation then searches the descriptions in the ReadMe files which
+are part of the models.
+If you inadvertently pressed the Enter key instead of clicking Search, Plant Simulation closes the dialog
+Examples Collection. To open the start page again, click the button Start Page on the Window ribbon
+tab.
+View the Sample Models
+Plant Simulation Help 10-13
+Unpublished work. © 2026 Siemens
+
+Back to Get to Know Plant Simulation
+View the Sample Models
+10-14 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Consult the Step-by-Step Help
+To get acquainted with Plant Simulation, we recommend to consult the Plant Simulation Step-by-Step
+Help and the Plant Simulation Help that are part of Plant Simulation. The former will cover most of your
+modeling tasks and provide you with information on how to solve them.
+Start Plant Simulation, go to File > Help and select Contents. Expand 
+  and select the
+topic you need information about.
+If you prefer to read the documentation as a book in consecutive order, consult the PDF file, which you can
+download from the website.
+We recommend to search the Online Help with Copilot.
+Back to Get to Know Plant Simulation
+Working with Plant Simulation, Basics
+Working with Plant Simulation, Basics
+Working with Plant Simulation, Basics provides these topics:
+• Work with Window Types
+• Select Settings in Plant Simulation
+• Select View Options in the Frame
+• Change the Settings of the Objects
+• Find Objects and Text in Your Simulation Model
+Working with Window Types
+Work with Window Types
+Plant Simulation is a multiple-document interface application (MDI) which shows its windows in the
+common parent window.
+Consult the Step-by-Step Help
+Plant Simulation Help 10-15
+Unpublished work. © 2026 Siemens
+
+The Plant Simulation program window has a magenta border in the figure above.
+Work with Window Types
+10-16 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The different window types open in a certain order within the program window. At times, it may happen
+that the window you want to work with opens in the background, instead of the foreground, where
+you would expect it to be. If this is the case, move the windows in the foreground aside to access the
+window into which you want to enter data.
+Instead of closing and reopening the Class Library, the Favorites, the Toolbox, and the Console, you can
+hide them: Click 
+  Auto Hide in the title bar 
+  to auto hide the window. When you then
+click in another window, Plant Simulation hides the window until you move the mouse over the name of
+the window again. To deactivate auto hide, click 
+ .
+For further information compare User Interface Components in the Reference section of the Plant
+Simulation Help.
+Back to Working with Plant Simulation, Basics
+Work with Window Types
+Plant Simulation Help 10-17
+Unpublished work. © 2026 Siemens
+
+Docking Windows
+Docking windows are windows that are docked to a part of the Plant Simulation program window. You can
+undock a docked window and drag it to another part of the window or you can leave it floating freely.
+Plant Simulation docking windows are the Class Library, the Favorites, the Toolbox, and the Console.
+Docking windows have a red border in the figure below Work with Window Types. Docking windows
+always open in the foreground, on top of any other windows, i.e., they will also be placed on top of any
+open dialog windows.
+• To undock a docking window, click into the title bar of the window with the right mouse button and
+select Floating.
+• To redock a floating window again, click in the title bar of the window with the right mouse button and
+select Docking.
+Or
+Click the title bar of the docking window and hold down the mouse button. Plant Simulation shows
+a docking indicator pointing to the upper, lower, right, and left border of the program window. Drag
+the mouse to the docking arrow where you would like to dock the window. Plant Simulation highlights
+this area of the program window in blue. Release the mouse button once the window is at the desired
+position. Plant Simulation then docks the window to the respective docking window.
+Plant Simulation also shows individual docking arrows 
+  at the four sides of the parent window,
+i.e., the Plant Simulation program window.
+Docking Windows
+10-18 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Drag the mouse to the docking arrow of the border of the program window at which you would like
+to dock the window. Plant Simulation highlights this area of the program window in blue. Release the
+mouse button once the window is at the desired position. Plant Simulation then docks the window at
+the respective border of the parent window, i.e., the Plant Simulation program window.
+Docking Windows
+Plant Simulation Help 10-19
+Unpublished work. © 2026 Siemens
+
+• To dock a floating window to any of the sides of the program window, drag the title bar on a floating
+window to another location. When you drag the window to the edge of the program window or to a
+location next to another docked window, it docks there.
+Note
+When you move a docked window, this might affect the location and size of other windows in the
+same row within the program window.
+• To prevent a floating window from docking when you drag it, hold down Ctrl, and move the window to
+a position of your choice.
+• To make a docked window a floating window, double-click the move handle or hold down Ctrl, and drag
+the window.
+• To dock a floating window again, double-click its title bar or drag the window to one of the sides of the
+program window or to a location next to another docked window, it docks there.
+• To close a floating window, click Close 
+  in the title bar.
+Docking Windows
+10-20 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To show or hide the Class Library, click 
+  on the Window ribbon tab.
+• To show or hide the Favorites window, click 
+  on the Window ribbon tab.
+• To show or hide the Console, click 
+  on the Window ribbon tab.
+• To show or hide the Toolbox, click 
+  on the Window ribbon tab.
+• To customize the Quick Access Toolbar and the Ribbon, click the down arrow on the Quick Access
+Toolbar and select More Commands.
+• To change between docking windows and object windows, press Ctrl+Tab.
+The Active Docking Windows are listed on the left and the Active Object Windows on the right.
+◦ The left arrow and the right arrow change between the columns Active Docking Windows and
+Active Object Windows.
+◦ The Tab key or the up/down arrows change between the windows within a column. Releasing Ctrl
+activates the selected window.
+Back to Work with Window Types
+Docking Windows
+Plant Simulation Help 10-21
+Unpublished work. © 2026 Siemens
+
+Object Windows
+Object windows are windows which you can maximize and minimize and arrange within the Plant
+Simulation program window.
+Plant Simulation object windows are the windows of the objects Frame 
+ , Method 
+ , Method
+Debugger, DataQueue 
+ , DataStack 
+ , DataList 
+ , DataTable 
+ , and the Icon Editor.
+Object windows always open in the background. Object windows have a blue border in the figure below
+Work with Window Types.
+To bring an open object window to the foreground, click the icon of the window in the window tab bar.
+To arrange the windows, i.e., to cascade, to tile them horizontally, or to tile them vertically, you can select
+the respective command on the Window Ribbon Tab.
+To bring an open object window to the front, select the name of the window on the Window ribbon tab.
+You can also arrange these windows with one of these commands.
+Object Windows
+10-22 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+You can open the DataList, the DataQueue, the DataStack, and the DataTable in the foreground as a
+window with the method openDialogBox, compare Opening a List as a Dialog in the Foreground.
+You can close all object windows with the function closeAllWindows.
+You can minimize and maximize an object window and move it around within the program window. When
+you maximize an object window, Plant Simulation adds the button combination Minimize, Maximize,
+Close 
+  that is otherwise located in the title bar of the window, above the Ribbon Bar.
+You can add links to the following object windows to the Favorites:
+• Frame windows 
+ .
+• Method windows 
+• DataList windows 
+• DataQueue windows 
+• DataStack window 
+• DataTable window 
+• Windows of user-defined attributes of data type method, table, list, stack, and queue.
+You can then quickly open the respective window by double-clicking its name in the favorites list.
+Object Windows
+Plant Simulation Help 10-23
+Unpublished work. © 2026 Siemens
+
+• To change between docking windows and object windows, press Ctrl+Tab.
+◦ The left arrow and the right arrow change between the columns Active Docking Windows and
+Active Object Windows.
+◦ The Tab key or the up/down arrows change between the windows within a column. Releasing Ctrl
+activates the selected window.
+Back to Work with Window Types
+Object Windows
+10-24 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Changing Between Docking and Object Windows
+Press Ctrl+Tab to open the Window Navigator. It shows a preview of the docking windows and of the
+opened object windows. The windows navigator stays open until you release Ctrl again.
+The Active Docking Windows are listed on the left and the Active Object Windows on the right.
+• The left arrow key and the right arrow key change between the columns Active Docking Windows
+and Active Object Windows.
+• The Tab key or the up/down arrow keys change between the windows within a column. Releasing the
+Ctrl key activates the selected window.
+If the focus is located on a docking window, Ctrl+Tab changes between the docking windows.
+If the focus is located on an object window, Ctrl+Tab changes between the object windows.
+Back to Work with Window Types
+Changing Between Docking and Object Windows
+Plant Simulation Help 10-25
+Unpublished work. © 2026 Siemens
+
+Dialog Boxes
+Plant Simulation dialog boxes are the dialog boxes of the Plant Simulation material flow objects, the
+mobile objects, the fluid objects, the resource objects, the information flow objects, and the user interface
+objects.
+Dialog boxes have a green border in the figure below Work with Window Types.
+A dialog box always opens in the front as it expects that you select or enter something. You cannot
+minimize or maximize it.
+You can drag a dialog box outside the program window and move it around on the entire screen.
+In the dialog boxes of the objects you can edit their simulation properties on the respective tabs.
+You can open the dialog box Edit 3D Properties by clicking the button 
+  on the left bottom corner of
+the dialog box to edit the 3D animation properties.
+Dialog Boxes
+10-26 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To close all open document windows at once, click Close All Windows 
+  on the Window ribbon tab.
+Back to Work with Window Types
+Selecting Settings in Plant Simulation
+Select Settings in Plant Simulation
+Before you start working with Plant Simulation, you might want to change some of the default settings
+that affect your simulation model.
+• To select settings, which apply to the active model, select File > Model Settings. Plant Simulation
+saves these settings in the model file.
+Selecting Settings in Plant Simulation
+Plant Simulation Help 10-27
+Unpublished work. © 2026 Siemens
+
+• To select settings, which apply to new models, select File > Preferences. On the tabs General
+[preferences], 3D [preferences], and Editor [preferences] you can select general settings, which are
+independent of the simulation model. On the tabs Simulation [preferences], User Interface, and Units
+[preferences] you can select model-specific settings, which apply to new models.
+You can:
+• Select General Options
+• Select Options for Units and for Displaying the Time
+Select Settings in Plant Simulation
+10-28 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+You can add commands, that you often use, to the Quick Access Toolbar
+.
+Compare Preferences
+Compare Select View Options in the Frame
+Back to Working with Plant Simulation, Basics
+Select Settings in Plant Simulation
+Plant Simulation Help 10-29
+Unpublished work. © 2026 Siemens
+
+Select General Options
+Select the language Plant Simulation uses when it creates a new simulation model. This language
+determines the names of folders and objects, such as MaterialFlow or Materialfluss, Station or
+Einzelstation, etc.
+Note
+The language of the operating system of your computer determines the language of the Plant
+Simulation user interface.
+The language determines:
+• The name of the items of the drop-down lists, such as the names of the distributions (Uniform or
+Gleich).
+• The return value of the attributes that correspond to the entries of the drop-down lists, such as
+Station.ProcTime.Type.
+• The contents of the window Show Attributes and Methods.
+• The names which the feature Auto Complete within the Method Editor suggests.
+Select if you want to use the 24-hour clock, the 12-hour clock (AM/PM), or the DMY (day-month-year)
+notation date and time format on the General ribbon tab.
+Select General Options
+10-30 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Date and time format Looks like this
+yyyy/mm/dd 12 hour
+yyyy-mm-dd 24 hour
+dd.mm.yyyy 24 hour
+Select which kind of comment Plant Simulation adds to your model file each time you save it:
+• Without comment adds no comment to the model (.spp) file.
+• With comment opens a comment window each time when you save the model. Enter your comment
+here.
+• When you select Without comment or With comment Plant Simulation adds a row to the dialog Model
+Saving History each time you save the model.
+When the model crashes, Plant Simulation adds a description of the problem to the model history
+window instead of a comment. This helps our software engineers detect what caused the crash.
+• None does not save the history of how you saved your model.
+To view the comment you entered:
+Select File > Options > Show Model History in the program window.
+Select General Options
+Plant Simulation Help 10-31
+Unpublished work. © 2026 Siemens
+
+Compare Creating a German Model with English Identifiers
+Back to Select Settings in Plant Simulation
+Select General Options
+10-32 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Select Options for Units and for Displaying the Time
+When creating your simulation models, you my have to choose settings for the units you are going to use
+and the settings for displaying the time.
+As daylight saving time is widely used internationally, you will also use it in your simulation model.
+Note
+To select units and time settings, which only apply to the active model, select File > Model Settings >
+Units.
+To select units and time settings, which apply to all new models, select File > Preferences > Units.
+• Select the check box Daylight Saving Time.
+• If the plant you are modeling is located in the European Union, you do not have to change the default
+settings. Here daylight saving time starts at 02:00 o’clock in the morning Greenwich Mean Time (GMT)
+on the last Sunday in March. It ends at 03:00 o’clock in the morning on the last Sunday in October. In
+the EU, all time zones change at the same moment.
+• If the plant you are modeling is located in the United States of America, you have to change the
+settings. For most of the US daylight saving time starts at 02:00 o’clock in the morning on the second
+Sunday of March. It ends at 02:00 o’clock in the morning on the first Sunday of November.
+Select Options for Units and for Displaying the Time
+Plant Simulation Help 10-33
+Unpublished work. © 2026 Siemens
+
+If your specific modeling needs require it, you can also change the display of the Time Scale. You can
+enter a number between 0 and 86400. You can enter an integer greater than 1 into the text boxes next to
+Transfer If.
+You might, for example, divide a minute into 100 units, instead of in 60 seconds, or you might want to
+read 1:50 as 1.5 hours instead of 1 minute and 50 seconds.
+Note
+You can only change the display of the time scale, not the time scale itself. You can only change these
+settings if no simulation model is open!
+A time statement consists of four numbers, separated by colons, normally in the format
+days:hours:minutes:seconds. Plant Simulation stores the value itself in seconds and converts it at output
+time for the display.
+Plant Simulation converts times according to the values you enter into the text boxes Time Scale and
+Transfer If.
+The following examples illustrate what to enter to achieve different displays of the time:
+• If you want to use the standard time format, 24 hours to the day, 60 minutes to the hour, 60 seconds to
+the minute, use the default setting Time Scale 1/1.0 Transfer If 24:60:60.
+• If you want to simulate a longer period of time and want to display the time in the format
+years:months:days:hours, enter Time Scale1/3600 Transfer If 12:30:24, as an hour has 3600
+seconds, a year has 12 months, a month has 30 days, and a day has 24 hours.
+• If you want to divide a minute into 100 subunits instead of 60 seconds, enter Time Scale1/0.6 Transfer
+If 24:60:100.
+Compare Select View Options in the Frame
+Compare Units [preferences]
+Back to Select Settings in Plant Simulation
+Select Options for Units and for Displaying the Time
+10-34 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Changing the Settings of the Objects
+Change the Settings of the Objects
+You can change the settings of the objects, i.e., the values of attributes, in a number of ways.
+You can:
+• Change Values in the Dialog of the Objects
+• Change Values by Assigning a Value in SimTalk
+• Change Values in the Window Show Attributes and Methods
+• Change Values with the AttributeExplorer
+Back to Working with Plant Simulation, Basics
+Changing the Settings of the Objects
+Plant Simulation Help 10-35
+Unpublished work. © 2026 Siemens
+
+Change Values in the Dialog of the Objects
+As a rule you are going to select the settings of the individual objects in your simulation model in the
+dialogs of the respective objects.
+To do so, you either enter a value into a text box.
+Or you select a value from a drop-down list.
+Change Values in the Dialog of the Objects
+10-36 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Or you check or clear a check box to activate or to deactivate a setting. Instead of clicking the check box
+itself, you can also click its label.
+Change Values in the Dialog of the Objects
+Plant Simulation Help 10-37
+Unpublished work. © 2026 Siemens
+
+All of these settings correspond to attributes which you can also access with the programming language
+SimTalk. The What’s This help for the respective dialog item shows the name of the attribute in the bottom
+row below SimTalk.
+Back to Change the Settings of the Objects
+Change Values in the Dialog of the Objects
+10-38 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Change Values by Assigning a Value in SimTalk
+You can change the settings, which you can select in or type into the dialogs of the objects, by assigning a
+value to an object attribute in SimTalk.
+To set a constant Processing Time of three minutes, you can type the setting below into the dialog.
+Or you can type this instruction into a Method:
+Paths in SimTalk Instructions
+In the example we inserted the material flow object MyStation into the Frame called Models. This is why
+the title bar of the station MyStation shows the absolute path .Models.MyPlantAnytown.MyStation.
+As we inserted the Method named MyMethodMyStation into the same Frame as the station
+MyStation, which the title bar of the Method also shows, we can type in the instruction
+MyStation.ProcTime := 180 or MyStation.ProcTime := 3:00 and do not have to type the
+entire path, i.e., .Models.MyPlantAnytown.MyStation.ProcTime := 180.
+Within the instruction MyStation.ProcTime := 180 the term MyStation designates the object for
+which the instruction applies. This is followed by a separator, namely a period ., followed by the name
+of the attribute which we want to change, ProcTime in our case. The value after the assignment
+operator :=, without a blank space between the colon and the equal sign, is assigned to the value of the
+attribute while the is being executed, 180, i.e., three minutes in our case.
+To set the Exit Strategy > Linear sequence, you can select it in the drop-down list and then type the
+numbers of the successors of the Station into the List that clicking the button Open List opens.
+Change Values by Assigning a Value in SimTalk
+Plant Simulation Help 10-39
+Unpublished work. © 2026 Siemens
+
+Or you can type these instructions into a Method:
+Note
+When you type a string into an assignment, Plant Simulation does not differentiate between sentence
+case and lower case.
+When you query the value, it shows it in sentence case as the respective drop-down list shows it. In the
+example above you could type “Linear sequence”, “linear sequence”, “LINEAR SEQUENCE”,
+etc.
+When you query the value with print, Plant Simulation shows Linear sequence.
+To manually set the Station up, clear the check box Automatic.
+Change Values by Assigning a Value in SimTalk
+10-40 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Or you can type this instruction into a Method:
+Back to Change the Settings of the Objects
+Change Values by Assigning a Value in SimTalk
+Plant Simulation Help 10-41
+Unpublished work. © 2026 Siemens
+
+Change Values in the Window Show Attributes and Methods
+You can access the values of the settings of the objects in the window Show Attributes and Methods.
+To change attributes in the window Show Attributes and Methods of the respective object, proceed as
+follows:
+• To open the dialog, click the object and press the F8 key.
+• Then, double-click the respective attribute.
+• Enter the new value into the dialog that opens or select a value in the drop-down list.
+To switch the value of an attribute of data type boolean from true to false and vice versa, double-click the
+row of the attribute in the window Show Attributes and Methods.
+Compare Simultaneously Show and Change Attributes of Several Objects
+Compare Working with the Window Show Attributes and Methods
+Back to Change the Settings of the Objects
+Change Values in the Window Show Attributes and Methods
+10-42 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Change Values with the AttributeExplorer
+Instead of opening the dialog of each and every material flow object in your model and entering values
+for a single attribute or for a number of attributes into the text boxes, you can define which attributes of
+which objects the AttributeExplorer gets.
+Using the AttributeExplorer 
+  you can manage the attributes defining the settings of the individual
+stations in your simulation model at a single location. You can then enter different values for the
+capacities, the times, etc. Plant Simulation writes these values back to the dialogs of the objects and
+uses them in your simulation model. You can also export this settings table as a tab-delimited text file
+and import this file into the AttributeExplorer of another simulation model, thus using identical settings in
+several of your simulation models.
+You can also use the AttributeExplorer to find objects of the type you define, to find attributes, for example
+the position of a number of objects. You can then align them in the Frame, etc.
+Compare Set Parameters with the AttributeExplorer
+Compare Specify the Attributes You Want to View or Change
+Back to Change the Settings of the Objects
+Finding Objects and Text in Your Simulation Model
+Find Objects and Text in Your Simulation Model
+You can find the name of an object, a condition, an expression contained in an attribute, part of the
+source code of a Method, or an expression contained in a table in your simulation model.
+Proceed as follows:
+1. Click the Frame ribbon tab and click Find Object.
+Or click the right mouse button anywhere in the Class Library and select Find Object on the context
+menu.
+Change Values with the AttributeExplorer
+Plant Simulation Help 10-43
+Unpublished work. © 2026 Siemens
+
+2. Select what you want to find from the left drop-down list.
+Compare Find Objects and Attributes using the AttributeExplorer
+Find Objects and Text in Your Simulation Model
+10-44 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Working with Plant Simulation, Basics
+Video on YouTube
+https://youtu.be/FNpiAaUK8iM?si=B1tgMoMpdc03wCmj&t=437
+Find Objects and Text in Your Simulation Model
+Plant Simulation Help 10-45
+Unpublished work. © 2026 Siemens
+
+Find the Name of an Object
+You can find the name of an object you inserted into your simulation model.
+Proceed as follows:
+1. Select Name from the left drop-down list.
+2. Type in the name of the object you want to find into the right drop-down combo box. We entered
+Station.
+3. If you do not select the check box Match Whole Word Only, Plant Simulation finds all words that
+contain the word you entered.
+In our example it finds all word containing the word Station, such as Station, Station1, Station11,
+MyStation, etc.
+4. Type the name of the folder or the Frame into the text box Look In, where Plant Simulation is going
+to start searching for the expression you entered into the text box.
+Instead, you can also click 
+  and select a folder or a Frame in the dialog Select Object.
+To search on the highest level of the structure, accept the default setting that Plant Simulation
+enters, namely the period (.).
+5. Select Include Subframes to also search all Frames located in the Frame in which the item you are
+searching for is located.
+6. Click Find, to start searching.
+Find the Name of an Object
+10-46 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+7. Double-click the name of the object in the results field, to open its dialog. You can then change any of
+the settings.
+8. If you select Match Whole Word Only, Plant Simulation only finds entire words that exactly match
+the word you entered. In our example it only finds the word Station.
+9. If you select Match Whole Word Only, and also select Match Case, Plant Simulation only finds words
+that exactly match the word you entered, including upper and lower casing. In our example it only
+finds the word Station.
+10. If you select Regular Expression, Plant Simulation also finds the regular expression you select. Click
+ and select any of the items displayed in the window Regular Expression. Plant Simulation enters
+the special characters designating that expression into drop-down combo box to the right.
+Select To enter and to find
+Any single character .
+Beginning of line ^
+End of line $
+Beginning of word \<
+End of word \>
+Group \(\)
+Zero or one matches ?
+Zero or more matches *
+One or more matches +
+Any one character in the set []
+Any one character not in the set [^]
+Or \|
+Searching with regular expressions enables you to use wild cards in the string you are searching for.
+• To find all strings that contain a sequence of the character a, followed by any character, and the
+character b, enter a.b into the text box.
+• To find all objects whose name starts with an upper case S, enter ^[S].
+• To find all objects whose name does not end with an e, enter [^e]$.
+• To find all objects whose name contains an upper case L, followed by any character, followed by
+proc, enter L.*proc into the text box.
+11. Click Find.
+Back to Find Objects and Text in Your Simulation Model
+Find the Name of an Object
+Plant Simulation Help 10-47
+Unpublished work. © 2026 Siemens
+
+Find a Condition of an Object
+You can find a condition of an object you inserted into your simulation model.
+Proceed as follows:
+1. Select Condition from the left drop-down list.
+2. Enter any SimTalk expression whose attributes or methods are identical to the expression you enter in
+the drop-down combo box.
+You might, for example, enter the name of an attribute or a method and the expression you are
+looking for, such as proctime = 100, or OpenCtrl = void, etc.
+3. Repeat steps 4 to 7 described under Find the Name of an Object
+4. Click Find.
+Back to Find Objects and Text in Your Simulation Model
+Find a Condition of an Object
+10-48 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Find Text in a Built-in or a User-defined Attribute of an Object
+You can find any text or any value contained in a built-in or a user-defined attribute of an object which you
+inserted into your simulation model.
+Proceed as follows:
+1. Select Attribute from the left drop-down list.
+2. Enter any text or value contained within a built-in or a user-defined attribute of an object in the
+search scope.
+Plant Simulation shows the name of the attribute in which the text was found in parenthesis after the
+object in the results list.
+3. Repeat steps 4 to 7 described under Find the Name of an Object
+4. Click Find.
+Back to Find Objects and Text in Your Simulation Model
+Find Text in a Built-in or a User-defined Attribute of an Object
+Plant Simulation Help 10-49
+Unpublished work. © 2026 Siemens
+
+Find Any Source Code in a Method
+You can find any text, which you entered as source code into any Method object which you inserted into
+your simulation model or in any user-defined attribute of data type method.
+Proceed as follows:
+1. Select Source Code from the left drop-down list.
+2. Enter any text or value contained within the source code of a Method in the search scope.
+3. Repeat steps 4 to 10 described under Find the Name of an Object.
+4. When you select Ignore Inherited Name or Text Plant Simulation then only finds the original source
+code you entered into a Method object, and not the source code in derived or duplicated objects.
+5. Click Find.
+6. To open the Method that Plant Simulation found and to jump to the first occurrence of the item,
+double-click it in the results pane. Double-clicking or selecting Open again jumps to the next
+occurrence of the found item.
+To jump to the previous occurrence in the source code, hold down Shift and double-click.
+Find Any Source Code in a Method
+10-50 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+7. To replace the found source code with other source code, click one or several Methods in the results
+list with the right mouse button and select the command Replace With. Then, enter the replacing
+source code into the dialog which opens.
+Compare Find Text [in Method]
+Back to Find Objects and Text in Your Simulation Model
+Find Any Source Code in a Method
+Plant Simulation Help 10-51
+Unpublished work. © 2026 Siemens

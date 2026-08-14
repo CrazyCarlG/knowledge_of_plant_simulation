@@ -1,0 +1,390 @@
+strTrim [SimTalk]
+Returns a string from which Plant Simulation removed leading and trailing blanks, tab stops, and carriage
+returns.
+Type
+Function
+Syntax
+strTrim(Text:string) → string
+Parameter
+The parameter Text of data type string designates the string, which contains leading and trailing blanks,
+tab stops, and carriage returns, i.e., whitespace characters.
+Return Value
+The return value has the data type string.
+Examples
+print strTrim(" ab c ") // returns "ab c"
+strTrim("  hello  ") = strTrim("hello    ") -- ignores leading and trailing 
+spaces
+Functions for Managing Date and Time
+Functions for Managing Date and Time
+SimTalk provides the functions listed in the table of contents to the left for managing date and time
+information.
+Note
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+strTrim [SimTalk]
+Plant Simulation Help 12-347
+Unpublished work. © 2026 Siemens
+
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+Functions for Managing Date and Time
+12-348 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+CalendarWeek [SimTalk]
+Returns the calendar week of the specified date according to DIN 1355/ ISO 8601.
+Remarks
+A new week always starts on Monday.
+According to DIN 1355/ ISO 8601 the first calendar week of a year is the first week that contains at least
+four days of the new year.
+Note
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+CalendarWeek(Date:dateTime) → integer
+Parameter
+The parameter Date of data type dateTime designates the date.
+Return Value
+The return value has the data type integer.
+CalendarWeek [SimTalk]
+Plant Simulation Help 12-349
+Unpublished work. © 2026 Siemens
+
+Examples
+print CalendarWeek(str_to_date("2023/11/21")) // returns 47, model language 
+English
+print CalendarWeek(str_to_date("21.11.2023")) // returns 47, model language 
+German
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+week [SimTalk]
+CalendarYear [SimTalk]
+Returns the current year of the Gregorian Calendar.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+CalendarYear(Value:dateTime) → integer
+CalendarYear [SimTalk]
+12-350 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Parameter
+The parameter Value of data type dateTime designates the date.
+Return Value
+The return value has the data type integer.
+Example
+print(CalendarYear(sysdate)) // 2024
+print(year(sysdate))         // 124
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+year [SimTalk]
+CalendarYear [SimTalk]
+Plant Simulation Help 12-351
+Unpublished work. © 2026 Siemens
+
+day [SimTalk]
+Extracts the day from a dateTime value.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+day(Date:date) → integer
+day(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date and time.
+Return Value
+The return value has the data type integer.
+day [SimTalk]
+12-352 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Examples
+print day(str_to_date("23/12/24"))            // returns 24, model language 
+English
+print day(str_to_dateTime("24/1/1 1:00:00"))  // returns 1
+print day(str_to_date("24.12.23"))            // returns 24, model language 
+German
+print day(str_to_dateTime("1.1.24 1:00:00"))  // returns 1
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+day [SimTalk]
+Plant Simulation Help 12-353
+Unpublished work. © 2026 Siemens
+
+dayOfWeek [SimTalk]
+Returns the number of days that has elapsed since the last Sunday.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+dayOfWeek(Date:date) → integer
+dayOfWeek(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date and time.
+Return Value
+The return value has the data type integer.
+Day of Week Return Value
+Monday 1
+Tuesday 2
+Wednesday 3
+dayOfWeek [SimTalk]
+12-354 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Day of Week Return Value
+Thursday 4
+Friday 5
+Saturday 6
+Sunday 0
+Examples
+var d: date; var dt: dateTime
+dt := str_to_dateTime("24/1/3 1:20:30")
+d := str_to_date("24/1/1")
+print dayOfWeek(dt)  // returns 3, model language English
+print dayOfWeek(d)   // returns 1
+var d: date; var dt: dateTime
+dt := str_to_dateTime("3.1.24 1:20:30")
+d := str_to_date("1.1.24")
+print dayOfWeek(dt)  // returns 3, model language German
+print dayOfWeek(d)   // returns 1
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+dayOfWeek [SimTalk]
+Plant Simulation Help 12-355
+Unpublished work. © 2026 Siemens
+
+dayOfYear [SimTalk]
+Returns the number of days that has elapsed since January first.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+dayOfYear(Date:date) → integer
+dayOfYear(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date and time.
+Return Value
+The return value has the data type integer.
+Examples
+var d: date; var dt: dateTime
+dt := str_to_dateTime("23/12/31 23:59:59")
+d := str_to_date("24/1/1")
+dayOfYear [SimTalk]
+12-356 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+print dayOfYear(dt)  // returns 364, model language English
+print dayOfYear(d)   // returns 0
+var d: date; var dt: dateTime
+dt := str_to_dateTime("31.12.23 23:59:59")
+d := str_to_date("1.1.24")
+print dayOfYear(dt)  // returns 364, model language German
+print dayOfYear(d)   // returns 0
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+dayOfYear [SimTalk]
+Plant Simulation Help 12-357
+Unpublished work. © 2026 Siemens
+
+getDate [SimTalk]
+Returns the date of a value containing date and time.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+getDate(Date/Datetime:dateTime)
+Parameter
+The parameter Date or DateTime of data type date or dateTime designates the value containing date and
+time.
+Examples
+var d: date; var dt: dateTime
+dt := str_to_dateTime("2023/11/12 11:30:00")
+d := getDate(dt)
+print d // returns 2023/11/11, model language English
+var d: date; var dt: dateTime
+dt := str_to_dateTime("12.11.2023 11:30:00")
+d := getDate(dt)
+print d // returns 12.11.2023, model language German
+getDate [SimTalk]
+12-358 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+getDate [SimTalk]
+Plant Simulation Help 12-359
+Unpublished work. © 2026 Siemens
+
+month [SimTalk]
+Returns the month of a value containing date and time.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+month(Date:date) → integer
+month(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date.
+Return Value
+The return value has the data type integer.
+Example
+print month(str_to_date("24.12.23"))             // returns 12
+print month(str_to_dateTime("1.1.24 1:00:00"))   // returns 1
+month [SimTalk]
+12-360 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+month [SimTalk]
+Plant Simulation Help 12-361
+Unpublished work. © 2026 Siemens
+
+setDaylightSavingTime [SimTalk]
+Sets the beginning and the end of daylight saving time.
+Type
+Function
+Syntax
+setDaylightSavingTime(BeginningAndEndOfDaylightSavingTime:string)
+Parameter
+The parameter BeginningAndEndOfDaylightSavingTime of data type string consists of the following
+components.
+The first set of four numbers sets the beginning of daylight saving time:
+• monthOfYear
+• weekOfMonth
+• dayInWeek
+• hour
+The second set of four numbers sets the end of daylight saving time:
+• monthOfYear
+setDaylightSavingTime [SimTalk]
+12-362 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• weekOfMonth
+• dayInWeek
+• hour
+To deactivate daylight saving time, specify an empty string "".
+Example
+setDaylightSavingTime("4,3,3,12,10,4,3,3")
+setDaylightSavingTime("") // no daylight saving time
+See also
+Daylight Saving Time [preferences]
+setDaylightSavingTime [SimTalk]
+Plant Simulation Help 12-363
+Unpublished work. © 2026 Siemens
+
+sysDate [SimTalk]
+Returns the current system time of the computer on which Plant Simulation runs.
+Title
+Function
+Syntax
+sysDate → dateTime
+Return Value
+The return value has the data type dateTime.
+The returned value has a resolution of 1 millisecond.
+Example
+print sysDate                          // current time
+EventController.StartDate := sysDate   // apply to simulation
+See also
+getHighResolutionClock [SimTalk]
+processTime [SimTalk]
+sysDate [SimTalk]
+12-364 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+timeOfDay [SimTalk]
+Returns the time portion of a value containing date and time.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+timeOfDay(DateTime:dateTime) → time
+Parameter
+The parameter DateTime of data type dateTime designates the value containing date and time.
+Return Value
+The return value has the data type time.
+Examples
+var EclipseOfTheSun: datetime; var t: time; var d: date
+EclipseOfTheSun := str_to_datetime("11.08.1999 11:30:00")
+t := timeOfDay(EclipseOfTheSun)
+print t // 11:30:00.0000
+timeOfDay [SimTalk]
+Plant Simulation Help 12-365
+Unpublished work. © 2026 Siemens
+
+d := getDate(EclipseOfTheSun)
+print d // returns 11.08.1999, model language English
+var Sonnenfinsternis: datetime; var t: time; var d: date
+Sonnenfinsternis := str_to_datetime("11.8.99 11:30:00")
+t := timeOfDay(Sonnenfinsternis)
+print t // 11:30:00.0000
+d := getDate(Sonnenfinsternis)
+print d // returns 11.08.1999, model language German
+See also
+Date and Time Format [model settings]
+Model Language [model settings]
+timeOfDay [SimTalk]
+12-366 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+week [SimTalk]
+Returns the number of weeks that started since January first of a year.
+Remarks
+The week always begins on a Monday. This week does not correspond to the calendar week.
+Type
+Function
+Syntax
+week(Date:date) → integer
+week(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date and the time.
+Return Value
+The return value has the data type integer.
+Example
+print week(str_to_date("1.1.24"))             // returns 1
+print week(str_to_date("1.2.24"))             // returns 5
+print week(str_to_dateTime("1.1.24 1:00:00")) // returns 1
+See also
+CalendarWeek [SimTalk]
+week [SimTalk]
+Plant Simulation Help 12-367
+Unpublished work. © 2026 Siemens
+
+year [SimTalk]
+Computes the number of years elapsed since the year 1900.
+Remarks
+Plant Simulation uses the Date and Time Format of the Model Language you selected.
+Type
+Function
+Syntax
+year(Date:date) → integer
+year(DateTime:dateTime) → integer
+Parameter
+The parameter Date of data type date designates the date.
+The parameter DateTime of data type dateTime designates the date and the time.
+Return Value
+The return value has the data type integer.
+year [SimTalk]
+12-368 Plant Simulation Help
+Unpublished work. © 2026 Siemens

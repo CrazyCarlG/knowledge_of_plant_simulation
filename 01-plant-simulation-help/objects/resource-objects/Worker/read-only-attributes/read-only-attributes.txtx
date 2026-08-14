@@ -1,0 +1,725 @@
+Return Value
+The method does not have a return value.
+It outputs error messages, which might cause the method to fail, because:
+• The specified Worker is a class object.
+• The specified Worker is brokered automatically.
+• The specified Worker cannot transport parts.
+• The specified Worker already carries a part.
+• The number of parts to be carried is greater than the current Capacity of the Worker.
+• The part does not exist or does not have the correct object type.
+• The Destination does not exist or does not have the correct object type.
+• You did not specify a Destination and the part/the parts do not have a Destination of their own.
+• The part itself, that is to be transported, has a defined Destination, which differs from the specified
+Destination.
+• The parts to be transported have to be picked up at different locations.
+• The part or one of the parts is already being transported by a Worker.
+• No parts are to be picked up and carried away at the Station by the Worker.
+• An error occurred while sending the Worker for picking up or transporting the parts.
+Examples
+waituntil .Resources.Worker:1.HasOrder = false
+.Resources.Worker:1.transportPart(Station.cont, Station1)
+SimTalk
+cancelTransportPart [SimTalk]
+Destination [SimTalk] - MUs
+Read-Only Attributes of the Worker
+_Read-Only Attributes of the Worker
+The Worker provides:
+• The read-only attributes listed in the table of contents to the left.
+• All read-only attributes of the Exporter, as the Worker is an Exporter with the capacity of 1.
+Read-Only Attributes of the Worker
+11-3214 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print .Resources.Worker:1.StatTraveledDistance
+_Read-Only Attributes of the Worker
+Plant Simulation Help 11-3215
+Unpublished work. © 2026 Siemens
+
+AvailableForMediation [SimTalk] - Worker
+Returns if the Worker designated by <Path> can be brokered to do a job (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.AvailableForMediation → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+true if the Worker is not failed, not paused, does not carry parts, and if he is not brokered.
+Example
+print .Resources.MyWorker:2.AvailableForMediation
+AvailableForMediation [SimTalk] - Worker
+11-3216 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+CurrentSpeed [SimTalk] - Worker
+Returns the Current Speed with which the Worker designated by >Path> walks on the Footpath or freely
+within the area.
+Type
+Read-only attribute
+Syntax
+<Path>.CurrentSpeed → speed
+Watchable
+The read-only attribute is watchable.
+By watching it, you might, for example detect the event when the speed of a Worker changes.
+Return Value
+The return value has the data type speed.
+It is the Speed which you set.
+0 if the Worker is failed or stopped or if he is located in the WorkerPool or on a Workplace.
+Example
+print .UserObjects.MyWorker:1.CurrentSpeed
+See also
+Speed [Worker]
+CurrentSpeed [SimTalk] - Worker
+Plant Simulation Help 11-3217
+Unpublished work. © 2026 Siemens
+
+HasOrder [SimTalk] - Worker
+Returns if the Worker designated by <Path> has the order to transport parts, currently transports parts, or
+just exports services.
+Type
+Read-only attribute
+Syntax
+<MU-Path>.HasOrder -> boolean
+Watchable
+The attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+waituntil not Worker.HasOrder   // wait until the Worker is idle, has no 
+order, or carries no parts
+ mu.move                        // transfer the MU, which should place an 
+order for the Worker to transport it
+HasOrder [SimTalk] - Worker
+11-3218 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ResCurrentState [SimTalk] - Worker
+Returns the Current State of the Worker designated by <Path>.
+Remarks
+During a simulation run the Worker can take on one of these states as described on the Tab Statistics:
+Services Setting-up, Services Processing, Services Repairing, Services Transporting, Services En-
+route to Job, Services Waiting, Exporter Paused, Exporter Unplanned, or Exporter failed.
+Note
+If two states occur at the same time, for example Paused and Failed, the read-only attribute returns the
+state that also has precedence for statistics collection. Paused for example for Paused and Failed.
+Type
+Read-only attribute
+Syntax
+<Path>.ResCurrentState → string
+Watchable
+The read-only attribute is watchable.
+Use it in waituntil-instructions or to make the object TimeSequence record it in watch mode.
+Return Value
+The return value has the data type string.
+VOID if Exporter statistics is turned off.
+Example
+print .Resources.John.ResCurrentState -- class
+print .Resources.John:1.ResCurrentState -- instance
+See also
+Resource Statistics [material flow objects]
+ResCurrentState [SimTalk] - Worker
+Plant Simulation Help 11-3219
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [Worker]
+ResCurrentState [SimTalk] - Worker
+11-3220 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteIdleCount [SimTalk]
+Returns how often the Worker designated by <Path> was on his way without having an order.
+Remarks
+The overall statistics time is the statistics collection time without the Unplanned Time and the Paused
+Time.
+This means that he was on his way, while he could be brokered. This occurs, for example, if you clear Get
+Job Orders at Home Only and also clear Worker Stays Here After Completing the Job at the Workplace.
+If you send the Worker to a Workplace with the method goTo, then this will also be added to the value
+StatServicesEnRouteIdleCount.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteIdleCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteIdleCount
+SimTalk
+goTo [SimTalk]
+See also
+Get Job Orders At Home Only
+Worker Stays Here After Completing the Job
+StatServicesEnRouteIdleCount [SimTalk]
+Plant Simulation Help 11-3221
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteIdlePortion [SimTalk]
+Returns the portion of the overall statistics time during which the Worker designated by <Path> was
+en-route without being assigned a job order.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+This means that he was on his way, while he could be brokered. This occurs, for example, if you clear Get
+Job Orders at Home Only and also clear Worker Stays Here After Completing the Job at the Workplace.
+If you send the Worker to a Workplace with the method goTo, then the time he was on this way will also be
+added to the value StatServicesEnRouteIdlePortion.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteIdlePortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteIdlePortion
+SimTalk
+goTo [SimTalk]
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+Get Job Orders At Home Only
+Worker Stays Here After Completing the Job
+StatServicesEnRouteIdlePortion [SimTalk]
+11-3222 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteIdleTime [SimTalk]
+Returns the total time during which the Worker designated by <Path> was en-route without having a job.
+Remarks
+This means that he was on his way, while he could be brokered. This occurs, for example, if you clear Get
+Job Orders at Home Only and also clear Worker Stays Here After Completing the Job at the Workplace.
+If you send the Worker to a Workplace with the method goTo, then the time he was on this way will also be
+added to the value StatServicesEnRouteIdlePortion.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteIdleTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteIdleTime
+SimTalk
+goTo [SimTalk]
+See also
+Get Job Orders At Home Only
+Worker Stays Here After Completing the Job
+StatServicesEnRouteIdleTime [SimTalk]
+Plant Simulation Help 11-3223
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteToJobCount [SimTalk]
+Returns how often the Worker designated by <Path> was en-route to a Workplace, to which he was
+brokered for do a job at the associated station.
+Remarks
+If you select Get Job Orders at Home Only, Plant Simulation also counts how often the Worker walked
+back to the WorkerPool to get the next order.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteToJobCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteToJobCount
+See also
+Get Job Orders At Home Only
+StatServicesEnRouteToJobCount [SimTalk]
+11-3224 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteToJobPortion [SimTalk]
+Returns the portion of the overall statistics time during which the Worker designated by <Path> was
+en-route to a Workplace, to which he was brokered to do a job at the associated station.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+If you select Get Job Orders at Home Only, Plant Simulation also counts the time during which the
+Worker walked back to the WorkerPool to get the next order.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteToJobPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteToJobPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+Get Job Orders At Home Only
+StatServicesEnRouteToJobPortion [SimTalk]
+Plant Simulation Help 11-3225
+Unpublished work. © 2026 Siemens
+
+StatServicesEnRouteToJobTime [SimTalk]
+Returns the total time during which the Worker designated by <Path> was en-route to a Workplace for
+which he was brokered to do a job at the associated station.
+Remarks
+If you select Get Job Orders at Home Only, Plant Simulation also counts the time during which the
+Worker walked back to the WorkerPool to get the next order.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesEnRouteToJobTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesEnRouteToJobTime
+See also
+Get Job Orders At Home Only
+StatServicesEnRouteToJobTime [SimTalk]
+11-3226 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedCount [SimTalk] - Worker
+Returns how often the services of the Worker designated by <Path> were failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesFailedCount
+StatServicesFailedCount [SimTalk] - Worker
+Plant Simulation Help 11-3227
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedPortion [SimTalk] - Worker
+Returns the portion of the failed time of the services of the overall statistics time of the Worker designated
+by <Path>.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesFailedPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesFailedPortion [SimTalk] - Worker
+11-3228 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesFailedTime [SimTalk] - Worker
+Returns the total time during which services of the Worker designated by <Path> were failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesFailedTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesFailedTime
+StatServicesFailedTime [SimTalk] - Worker
+Plant Simulation Help 11-3229
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingCount [SimTalk] - Worker
+Returns how often the services of the Worker designated by <Path> worked on repairs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesRepairingCount
+StatServicesRepairingCount [SimTalk] - Worker
+11-3230 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingPortion [SimTalk] - Worker
+Returns the portion of the repairing time of the services of the overall statistics time of Worker designated
+by <Path>.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesRepairingPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesRepairingPortion [SimTalk] - Worker
+Plant Simulation Help 11-3231
+Unpublished work. © 2026 Siemens
+
+StatServicesRepairingTime [SimTalk] - Worker
+Returns the total time which the services of the Worker designated by <Path> spent for repairs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesRepairingTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesRepairingTime
+StatServicesRepairingTime [SimTalk] - Worker
+11-3232 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupCount [SimTalk] - Worker
+Returns how often the services of the Worker designated by <Path> were setting the station up.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesSetupCount
+StatServicesSetupCount [SimTalk] - Worker
+Plant Simulation Help 11-3233
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupPortion [SimTalk] - Worker
+Returns the portion of the set-up time of the services of the overall statistics time of the Worker designated
+by <Path>.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for
+the services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesSetupPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesSetupPortion [SimTalk] - Worker
+11-3234 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesSetupTime [SimTalk] - Worker
+Returns the total time the services of the Worker designated by <Path> were setting the station up.
+Remarks
+If a station fails and/or is unplanned or paused and services for setting-up or processing are brokered for
+this station, the services remain assigned. For this reason the set-up time and the processing time for the
+services continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesSetupTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesSetupTime
+StatServicesSetupTime [SimTalk] - Worker
+Plant Simulation Help 11-3235
+Unpublished work. © 2026 Siemens
+
+StatServicesTransportingCount [SimTalk]
+Returns how often the Worker designated by <Path> was carrying parts from Workplace to Workplace.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesTransportingCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesTransportingCount
+StatServicesTransportingCount [SimTalk]
+11-3236 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesTransportingPortion [SimTalk]
+Returns the portion of the overall statistics time during which the Worker designated by <Path> was
+carrying parts from Workplace to Workplace.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesTransportingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesTransportingPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesTransportingPortion [SimTalk]
+Plant Simulation Help 11-3237
+Unpublished work. © 2026 Siemens
+
+StatServicesTransportingTime [SimTalk]
+Returns the total time during which the Worker designated by <Path> was carrying parts from Workplace
+to Workplace.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesTransportingTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesTransportingTime
+StatServicesTransportingTime [SimTalk]
+11-3238 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpCount [SimTalk] - Worker
+Returns how often the services of the Worker designated by <Path> waited for an importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingImpCount
+StatServicesWaitingImpCount [SimTalk] - Worker
+Plant Simulation Help 11-3239
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpPortion [SimTalk] - Worker
+Returns the portion of the overall statistics time which the services of the Worker designated by <Path>
+spent waiting for an importer, weighted with the capacity.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingImpPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWaitingImpPortion [SimTalk] - Worker
+11-3240 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingImpTime [SimTalk] - Worker
+Returns the total waiting time of the services of the Worker designated by <Path> for an importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingImpPortion → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingImpPortion
+StatServicesWaitingImpTime [SimTalk] - Worker
+Plant Simulation Help 11-3241
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUCount [SimTalk] - Worker
+Returns how often the services of the Worker designated by <Path> spent waiting for a MU at the
+importer.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingMUCount
+StatServicesWaitingMUCount [SimTalk] - Worker
+11-3242 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUPortion [SimTalk] - Worker
+Returns the portion of the overall statistics time during which the services of the Worker designated by
+<Path> were waiting for a MU at the importer.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingMUPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWaitingMUPortion [SimTalk] - Worker
+Plant Simulation Help 11-3243
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingMUTime [SimTalk] - Worker
+Returns the total time the services of the Worker designated by <Path> were waiting at the importer for a
+MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingMUTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingMUTime
+StatServicesWaitingMUTime [SimTalk] - Worker
+11-3244 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingPortion [SimTalk] - Worker
+Returns the portion of the waiting time of the services of the overall statistics time of the Worker
+designated by <Path>.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+The value of StatServicesWaitingPortion is the sum of StatServicesWaitingImpPortion plus
+StatServicesWaitingMUPortion.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingPortion
+SimTalk
+StatServicesWaitingImpPortion [SimTalk] - Worker
+StatServicesWaitingMUPortion [SimTalk] - Worker
+StatServicesWaitingPortion [SimTalk] - Worker
+Plant Simulation Help 11-3245
+Unpublished work. © 2026 Siemens
+
+StatServicesWaitingTime [SimTalk] - Worker
+Returns the time which the services of the Worker designated by <Path> were waiting in relation to the
+statistics collection period.
+Remarks
+The value of StatServicesWaitingTime is the sum of StatServicesWaitingImpTime and
+StatServicesWaitingMUTime.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWaitingTime → time
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:2.StatServicesWaitingTime
+SimTalk
+StatServicesWaitingImpTime [SimTalk] - Exporter
+StatServicesWaitingMUTime [SimTalk] - Exporter
+StatServicesWaitingTime [SimTalk] - Worker
+11-3246 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingCount [SimTalk] - Worker
+Returns the number of working processes which the services of the Worker designated by <Path> provided.
+Remarks
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for the
+services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print .Resources.MyWorker:1.StatServicesWorkingCount
+StatServicesWorkingCount [SimTalk] - Worker
+Plant Simulation Help 11-3247
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingPortion [SimTalk] - Worker
+Returns the working portion of the services of the overall statistics time of the Worker designated by
+<Path>.
+Remarks
+The overall statistics time is the statistics collection period without the Unplanned Time and the Paused
+Time.
+Note
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for
+the services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print .Resources.MyWorker:1.StatServicesWorkingPortion
+See also
+Tab Statistics [Worker]
+Statistics report, Service Statistics — States — Time Portions of the Exporters
+StatServicesWorkingPortion [SimTalk] - Worker
+11-3248 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatServicesWorkingTime [SimTalk] - Worker
+Returns the time taken up by working processes of the services of the Worker designated by <Path>.
+Remarks
+If a station changes to the state failed and/or unplanned or paused and if then services for setting-up
+or processing are brokered, the services remain brokered. The set-up time and the processing time for the
+services thus continues while the station is failed.
+Type
+Read-only attribute
+Syntax
+<Path>.StatServicesWorkingTime → real
+Return Value
+The return value has the data type time.
+Example
+print .Resources.MyWorker:1.StatServicesWorkingTime
+StatServicesWorkingTime [SimTalk] - Worker
+Plant Simulation Help 11-3249
+Unpublished work. © 2026 Siemens
+
+StatTraveledDistance [SimTalk] - Worker
+Returns the distance which the instance of the Worker designated by <Path> covered while walking from
+the WorkerPool to the Workplaces attached to the stations and between the stations in meters.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTraveledDistance → length
+Return Value
+The return value has the data type length.
+Example
+print .Resources.MyWorker:2.StatTraveledDistance
+See also
+Tab Statistics [Worker]
+Statistics report, Worker Statistics — Traveled Distance by Workers
+Attributes of the Worker
+_Attributes of the Worker
+The Worker provides:
+• The attributes listed in the table of contents to the left.
+Note
+If you do not use a FootPath, Plant Simulation beams the Worker to the Workplace.
+• The _Attributes of the Exporter as the Worker is an Exporter [object] with the capacity of 1.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatTraveledDistance [SimTalk] - Worker
+11-3250 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,1456 @@
+Chart
+Chart [object]
+Use the object Chart for presenting current data and results of the simulation run.
+Image
+Description
+Define data to be plotted:
+• By using a Table containing the data, such as simulation results.
+• By defining Input Channels that record values of attributes of interest of the objects.
+A Chart, which you insert into a Frame, provides the Statistics Wizard. Select the command Statistics
+Wizard on the context menu of the Frame to open it.
+Chart
+11-4640 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the Chart, hover with the mouse over it.
+To show statistics of the Workers managed by the WorkerPool, drag it over a Chart and drop it there. Select
+the settings that you need.
+Chart [object]
+Plant Simulation Help 11-4641
+Unpublished work. © 2026 Siemens
+
+To change the length of the graphic and the anchor points of the Chart, click Show Manipulators 
+  on
+the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Chart to your simulation model, click 
+  Manage Class Library > Basic Objects >
+UserInterface > Chart on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Chart [object]
+11-4642 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Show Statistics in a Chart
+Statistics Wizard [described]
+Drag-and-Drop in the Chart
+Chart [object]
+Plant Simulation Help 11-4643
+Unpublished work. © 2026 Siemens
+
+Statistics Wizard [described]
+A Chart, which you insert into a Frame, shows the Statistics Wizard.
+Remarks
+Select the command Statistics Wizard on the context menu of the Frame to open it.
+Select the class(es) of object(s) for which you would like to show statistics values in the Chart. The Chart
+only adds material flow objects to the display for which you selected the check box Resource Statistics on
+the Tab Statistics.
+Note
+If you are working with a model that was created in a previous version of Plant Simulation that still
+uses the outdated object names of these versions, the dialog shows a + sign in front of the new object
+names.
+• To inherit the settings you select below, select Inherit Settings 
+ .
+• Select the object classes in the group box Class for which you want to show statistics values in the
+Chart. The Chart only adds material flow objects to the display for which you selected the check box
+Resource Statistics on the Tab Statistics. You can select any number of classes.
+Select the type of resource(s) for which you would like to show statistical data of the selected object(s)
+in the Chart under Resource Type on the tab Statistics of an object collecting statistical data. With the
+check boxes in the Statistics Wizard you can restrict, which objects Plant Simulation shows.
+◦ Production is the default for the Source, Drain, Station, ParallelStation, AssemblyStation, and
+DismantleStation.
+Statistics Wizard [described]
+11-4644 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Transport is the default for the PlaceBuffer, Buffer, Sorter, Track, TwoLaneTrack, Conveyor,
+AngularConverter, Turntable, Transporter, and Container.
+◦ Storage is the default for the Store.
+• Select the criteria according to which Plant Simulation sorts statistical data from the drop-down list Sort
+Criterion:
+To sort the stations by their name in alphabetical order from A to Z, select Sort Criterion > Name.
+To sort the stations in the order that meets your needs, drag the stations onto the Chart in the order it is
+to show them.
+To change the order at a later point in time, edit the table of the Input channels by cutting the respective
+columns of the objects and pasting them in the desired order.
+• Select the statistics type: Resource Statistics, Energy Statistics, or Occupancy.
+• To also show statistical data of objects contained in Frames contained in the Frame in which the Chart is
+located, select Include Subframes 
+ .
+• To reapply the settings while the simulation model is initialized, select Reapply at Init 
+ .
+• Click OK to display the Chart window with the settings you selected.
+• If you drag a material flow object onto a Chart, which you have not configured yet, you have to select
+the statistics type. By default, you can select Resource or Occupancy. If you activate energy features,
+you can also select Energy. The different statistics types provide different value sets. The meaning of the
+different states is described in the Statistics Report under Resource Statistics of Stationary Resources
+and Energy Statistics — Energy Statistics.
+• For the Statistics type > Resource, the Chart shows the Name of the object and the states it is in:
+Working, Setting-Up, Waiting, Blocked, Powering up/down, Failed, Stopped, Paused, or Unplanned.
+Statistics Wizard [described]
+Plant Simulation Help 11-4645
+Unpublished work. © 2026 Siemens
+
+• For the Statistics Type > Energy, the Chart shows the energy states of the object:
+Working, Setting-up, Operational, Failed, Standby, and Off.
+Note
+The energy states of the material flow objects differ from the resource states with the same name.
+The values for the resource states refer to the statistics collection period, while the values for the
+energy states refer to the total energy consumption.
+• For the Statistics Type > Occupancy, the Chart shows the Name of the object and the number of parts
+located on it. The colored bars serve for differentiating between the objects.
+Statistics Wizard [described]
+11-4646 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• You can also show the diagram picture of a Chart in an HtmlReport, compare Display a Chart.
+Statistics Wizard [described]
+Plant Simulation Help 11-4647
+Unpublished work. © 2026 Siemens
+
+Drag-and-Drop in the Chart
+Drag-and-drop in the Chart performs a number of actions.
+Remarks
+Hold down the keys described below when dragging and dropping in the Chart.
+To do this Drag To
+Acceler
+ator
+Show the statistics of a single material flow object material flow object Chart *
+Show the statistics of multiple material flow objects material flow objects Chart *
+Show Driving statistics of the Transporter Transporter Chart *
+Show Services statistics of the Worker/Exporter Worker/Exporter Chart *
+Show Exporter statistics of the Worker/Exporter Worker/Exporter Chart Shift
+Show statistics of Workers controlled by a WorkerPool WorkerPool Chart —
+Show the frequency distribution of the number of MUs PlaceBuffer, Buffer or Store Chart *
+Show the frequency distribution for the individual part
+types of Supermarket
+Store configured as
+Supermarket
+Chart —
+Show statistics of all resources which are assigned to
+the LockoutZone
+LockoutZone Chart *
+Show the contents of a table DataTable, TimeSequence Chart —
+Show the value of the Variable you inserted into a
+Frame
+Variable Chart *
+Show statistics of a Frame, which has the user-defined
+attribute StatisticsObject
+User-defined object
+(Frame)
+Chart *
+Show statistics of the object Workplace within a
+Frame, which has the user-defined attribute AOLType
+User-defined object
+(Frame)
+Chart *
+* If you hold down Shift while dropping the object onto the Chart, Plant Simulation does not add the
+dropped object to the Data Source > Input Channels, but deletes the existing entries from the input
+channels.
+The method addObject accomplishes the same as using drag-and-drop actions described above.
+Note
+To delete one of the displayed objects, click Data Table next to Data Source and delete the object from
+the data table.
+Drag-and-Drop in the Chart
+11-4648 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To delete the entire contents of the input channels table, hold down Shift while you drag-and-drop a
+new object onto the Chart.
+If you want your own object, which you modeled in a Frame, to behave like one of the built-in Plant
+Simulation objects when you drag-and-drop it, create a user-defined attribute of data type object for this
+Frame and name it StatisticsObject. This attribute may designate any of the material flow objects.
+The Chart then acts as if the object, to which the user-defined attribute refers, was dropped onto the
+Chart. This way you can show the statistics of a Frame according to your needs.
+If your Frame contains a number of objects whose statistics you would like to show, then assign the data
+type table to the user-defined attribute named StatisticsObject. The first column of the table has to
+be of data type string. The Chart now acts if all objects contained in the first column of the table were
+dropped onto the Chart. You can also use a user-defined row index and type in the labels of the input
+channels.
+Dialog Box of the Chart
+Dialog Box of the Chart
+Double-click the icon of the Chart to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+See also
+Show Chart [button] - Chart
+Collect Data [check box] - Chart
+Dialog Box of the Chart
+Plant Simulation Help 11-4649
+Unpublished work. © 2026 Siemens
+
+Show Chart [button] - Chart
+To show the data, which the Chart collected in the display window, click this button.
+Remarks
+To open the dialog of the Chart, double-click anywhere in the display window.
+To delete one of the displayed objects, click DataTable next to Data Source and delete the object from the
+input channels table.
+To delete the entire contents of the input channels table, hold down Shift while you drag-and-drop a new
+object onto the Chart.
+To show the data, you can also right-click the Chart object in the Frame and select Show on the context
+menu.
+If your Chart contains a large number of values, you can zoom an area of interest by dragging a selection
+rectangle over the area.
+Accelerators for the Chart
+You can press the following keys on the keyboard in the display window of the Chart to execute these
+actions:
+Show Chart [button] - Chart
+11-4650 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To do this Press this Keyboard Key
+Switch between monochrome and color viewing
+styles
+S
+Show the Export dialog X
+Maximize the window to full screen M
+Zoom all, i.e., to show all data without a scrollbar. Z
+Show the Text/Data export dialog. D
+Show the Print dialog P
+Scroll both vertical and horizontal scrollbars by one
+line.
+Arrow keys
+Page vertical scrollbar. PgUp/PgDown
+Page horizontal scrollbar to the right. Shift+PgUp
+Page horizontal scrollbar to the left. Shift+PgDown
+Move vertical scrollbar to its first position. Home
+Move vertical scrollbar to its last position. End
+Move horizontal scrollbar to its left-most position. Shift+Home
+Move horizontal scrollbar to its right-most position. Shift+End
+SimTalk
+IsShown [SimTalk] - Chart
+Show Chart [button] - Chart
+Plant Simulation Help 11-4651
+Unpublished work. © 2026 Siemens
+
+Collect Data [check box] - Chart
+To make a Chart of the Category > Histogram or Plotter collect data during the simulation run, select this
+check box. To deactivate data collection, clear the check box.
+SimTalk
+CollectData [SimTalk] - Chart
+See also
+Category [drop-down list]
+Tab Data
+Tab Data
+On the tab Data you can select the Data Source, i.e., which data the Chart displays, from the drop-down
+list.
+Collect Data [check box] - Chart
+11-4652 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remarks
+You can select one of these settings:
+• Data from a Data Table.
+• Data from Input Channels.
+You can also select the Mode:
+• Sample mode shows sampled data after an interval you enter.
+• Watch mode updates the data each and every time one of the displayed values changes.
+• Plot mode updates the display whenever a simulation event takes place.
+In addition, you can select different views on the Data to be displayed.
+See also
+Data Source [Chart]
+Tab Data
+Plant Simulation Help 11-4653
+Unpublished work. © 2026 Siemens
+
+Data Source [Chart]
+Select from where the Chart gets the data you want to display.
+Data Table
+For this setting the Chart shows the contents of a DataTable as a diagram.
+Type in the name of and path to the data table containing the data, or click the button 
+  and select the
+table in the dialog Select Object.
+Type in the Range of the table cells you want to show.
+• To show all cells in all columns and rows, type in {*,*}..{*,*}.
+• To show the first four cells of column one, type in {1,1}..{1,4}.
+• To show all cells in column one, type in {1,1}..{1,*}.
+You can also type in negative numbers:
+• To show the one but last column, type in {-2,*}..{-2,*}.
+• To show the one but last and the last column of the table, type in {-2,*}..{*,*}.
+Input Channels
+For this setting the Chart shows the channels contained in the Input Channels table.
+Data Source [Chart]
+11-4654 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To open a table into which you type in the input channels, click Input Channels.
+These channels are, as a rule, the paths to attributes or methods of objects, whose values you want
+to display. You can also type in complex expressions, i.e., method calls, formulas, or the sum of two
+attributes. Also type in row and column headers as labels of the Chart.
+To delete the entire contents of the input channels table, hold down Shift while you drag-and-drop a new
+object onto the Chart.
+Note
+To specify a formula, type it directly into the respective cell of the DataTable.
+Data Source [Chart]
+Plant Simulation Help 11-4655
+Unpublished work. © 2026 Siemens
+
+Do not click the formula button 
+  on the List ribbon tab of the DataTable!
+Note
+To change the order in which the Chart shows the stations, edit the Table of the Input Channels by
+cutting the respective columns and pasting them in the desired order.
+Note
+If the amount of data to be displayed is extremely large, it can take some time to show the Chart. This
+applies, for example, to a table containing several tens of thousands of cells. Some chart types, for
+example the 3D types, also take a comparatively large amount of time to display.
+Worker Pools
+For this setting the Chart shows the Workers managed by WorkerPools as a diagram.
+• To open a table into which you type in the WorkerPools to be used, click Worker Pools.
+Drag the WorkerPools whose Workers you want to show to the cells of the dialog List of Worker Pools
+to Configure and click OK.
+Data Source [Chart]
+11-4656 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select how you want to group the Workers. According to the:
+◦ Pool, which uses the entire WorkerPool.
+◦ Creation Table, which only uses the Workers contained in the Workers to Create table of the
+WorkerPool.
+• Select which statistics values for the Occupancy you want to show:
+◦ Operational + failed shows the time during with the Worker was operational plus the time during
+which he was failed.
+◦ Overall Time
+Note
+To initially add the WorkerPools to the Chart, you can select them, drag them over the icon of the Chart
+and drop them there.
+Data Source [Chart]
+Plant Simulation Help 11-4657
+Unpublished work. © 2026 Siemens
+
+Then continue configuring the Chart on the tab Data.
+SimTalk
+DataRange [SimTalk]
+DataTable [SimTalk] - Chart
+InputChannels [SimTalk]
+UseInputChannels [SimTalk]
+See also
+Show Worker Statistics in a Chart
+Data Source [Chart]
+11-4658 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Data [Chart]
+Select how the Chart shows the data to be visualized.
+Remarks
+You can select one of these settings:
+• In Rows
+• In Columns
+This way you can present different views of the same record.
+SimTalk
+DataInColumn [SimTalk]
+Data [Chart]
+Plant Simulation Help 11-4659
+Unpublished work. © 2026 Siemens
+
+Mode [drop-down list] - Chart
+Select the Mode with which the Chart updates the displayed data.
+Remarks
+You can select one of these settings:
+• Sample Mode
+Updates the Chart periodically after the interval you enter.
+Type in the time span (Interval) after which the Chart takes the next sample.
+• Watch Mode
+Updates the Chart whenever the watchable input data changes.
+The column Watchable in the window Show Attributes and Methods, shows the methods and
+attributes which Plant Simulation can watch.
+• Plot Mode
+Updates the Chart whenever a simulation event takes place.
+SimTalk
+update [SimTalk] - Chart]
+Mode [drop-down list] - Chart
+11-4660 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+NumIntervals [SimTalk]
+Mode [SimTalk] - Chart
+SampleInterval [SimTalk]
+Tab Display
+Tab Display
+Select how the Chart shows the data on the tab Display.
+Remarks
+The tab Display provides the settings listed in the table of contents to the left.
+• For the Category > Histogram, you can show the data Accumulated.
+• For the Category > Plotter, you can show the data as a Step Curve.
+Tab Display
+Plant Simulation Help 11-4661
+Unpublished work. © 2026 Siemens
+
+Chart Category
+Category [drop-down list]
+Select the Category for displaying the data.
+Remarks
+You can select one of these settings:
+• Chart
+Shows a number of values or several sets of a number of values.
+• Histogram
+Shows the frequency distribution for one or several input channels. For this setting you can select the
+check box Accumulated.
+Note
+The input channels for Histograms should to be watchable to show exact values.
+• Plotter
+Shows the progression of one or more values over time. For this setting you can select the check box
+Step Curve.
+• 3D Chart
+Chart Category
+11-4662 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Shows a 3D Chart embedded in the 3D display window with the settings you select. You cannot open
+the 3D Chart in a window of its own by clicking Show Chart.
+• 3D Histogram
+Shows a 3D Histogram embedded in the 3D display window with the settings you select. You cannot
+open the 3D Histogram in a window of its own by clicking Show Chart.
+• XY Graph
+Shows a number of x-y pairs of values or several sets of x-y pairs of values. This setting is only active if
+you select Table File as the Data Source.
+The XY Graph shows the range like this:
+◦ The x values are contained in the first row or column.
+◦ The range determines the y values. The first row or column, which contains the x values, will
+automatically be excluded.
+Note
+If you select another Category, the Chart in 3D automatically shows the graphic of this category in the
+Frame.
+Category [drop-down list]
+Plant Simulation Help 11-4663
+Unpublished work. © 2026 Siemens
+
+SimTalk
+Category [SimTalk]
+putValuesIntoTable [SimTalk] - Chart
+resetValues [SimTalk]
+Category [drop-down list]
+11-4664 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Category - 3D Chart
+The Category 3D Chart shows a 3D Chart embedded in the 3D display window with the settings you
+select.
+Remarks
+Note
+You cannot open the 3D Chart in a window of its own by clicking Show Chart.
+The category 3D Chart has these properties:
+• It has a fixed Font Size. Only the setting Bold affects it. For a Width and/or Height greater than 5
+meters, the font size is absolutely fixed. For a size smaller than 5 meters the font size scales down with
+all other display elements.
+• It uses the settings for the Color and the Line Weight, which you select on the Tab Color, for the setting
+Chart Type > Line. It does neither use a Marker Type nor a Line Style.
+• It enables you to hide the Base plate and the background of the displayed data by setting the Opacity
+of the Background and the Desk to 0 on the Tab Color. This way you can create a transparent chart
+which you can lay on top of other graphics or objects.
+• Its Base plate has a thickness of 20 cm by default. If you set the Opacity of the Background to 0, it has
+a thickness of 10 cm. For a Width and/or Height smaller than 5 meters, the thickness scales down with
+all other display elements. If the minimum size is 2.5 m for example, the chart with a base plate has a
+thickness of 10 cm and a thickness of 5 cm without a base plate.
+A 3D Chart attached to the wall of your factory might look like this.
+Category - 3D Chart
+Plant Simulation Help 11-4665
+Unpublished work. © 2026 Siemens
+
+See also
+Category [drop-down list]
+Category - 3D Chart
+11-4666 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Category - 3D Histogram
+The Category 3D Histogram shows a 3D Histogram embedded in the 3D display window with the
+settings you select.
+Remarks
+Note
+You cannot open the 3D Histogram in a window of its own by clicking Show Histogram.
+The category 3D Histogram has these properties:
+• It has a fixed Font Size. Only for the setting bold affects it. For a Width and/or Height greater than 5
+meters, the font size is absolutely fixed. For a size smaller than 5 meters the font size scales down with
+all other display elements.
+• It uses the settings for the Color and the Line Weight, which you select on the Tab Color, for the setting
+Chart Type > Line. It does neither use a Marker Type nor a Line Style.
+• It enables you to hide the Base plate and the background of the displayed data by setting the
+Opacity of the Background and the Desk to 0 on the Tab Color. This way you can create a transparent
+histogram which you can lay on top of other graphics or objects.
+• Its Base plate has a thickness of 20 cm by default. If you set the Opacity of the Background to 0, it has
+a thickness of 10 cm. For a Width and/or Height smaller than 5 meters, the thickness scales down with
+all other display elements. If the minimum size is 2.5 m for example, the chart with a base plate has a
+thickness of 10 cm and a thickness of 5 cm without a base plate.
+See also
+Category [drop-down list]
+Category - 3D Histogram
+Plant Simulation Help 11-4667
+Unpublished work. © 2026 Siemens
+
+Chart Type [drop-down list]
+Select the Type of Chart which displays the values of the simulation run. A record consists of the entries of
+a row or a column, depending on the setting you selected under Display > Data.
+Remarks
+Depending on the Category you selected, the Chart provides some or all of these chart types:
+Category Description
+Columns Shows each record as a column. When displaying several records, the Chart
+places the columns next to each other. Use this to compare values across
+categories.
+Stacked Columns Shows each record as a column. When displaying several records, the Chart
+places the columns of the individual records on top of each other. It stacks
+positive values upward, negative values downward.
+100% Stacked
+Columns
+Shows each record as a column, stacked one on top of the other, showing the
+respective percentage of the entire set of 100 percent.
+Bars Shows each record as bars positioned horizontally on top of each other. When
+displaying several records, the Chart places the bars of the individual records
+next to each other. Use this to compare values across categories.
+Stacked Bars Shows each record as a set of bars stacked horizontally next to each other.
+Positive values are stacked to the right, negative values are stacked to the left.
+100% Stacked Bars Shows each record as a set of bars, one stacked horizontally next to each other,
+showing its respective percentage of the entire set of 100 percent.
+Area Shows each record as areas. When displaying several records, the Chart stacks
+the areas from the individual records one behind the other. Use this to show
+the trend of the contribution of each value over time or categories.
+Stacked Area Shows each record as areas. When displaying several records, the Chart stacks
+the areas from the individual records one on top of the other.
+100% Stacked Area Shows each record as a set of areas, one stacked on top of the other, showing
+the respective percentage of the entire set of 100 percent. Displays the trend of
+the percentage each value contributes over time or categories.
+Line Shows each record as a line.
+Line with Markers Shows each record as a line with markers.
+Spline Shows each record as a curve.
+Spline with Markers Shows each record as a curve with markers.
+Chart Type [drop-down list]
+11-4668 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Category Description
+Markers Shows each record as a set of different markers.
+Points and Best Fit
+Conveyor
+Shows each record as a set of data points, and fits the best straight line to
+them. The line is calculated from least-squares-approximations of the data set.
+Points and Best Fit
+Curve
+Shows each record as a set of data points, and fits the best curved line to them.
+The curve is calculated from least-squares-approximations of the data set.
+Pie Shows each record as a slice of a pie, depicting its percentage of the whole.
+Enter a negative prefix, so that the Chart offsets this slice from the rest of
+the pie. Use the scrollbar to scroll from record to record. Use this to show the
+contribution of each value to a total.
+XY Points Shows x-y pairs as data points. The first record contains the x-coordinates. The
+Chart interprets all additional records as the associated y-coordinates. Use this
+to compare pairs of values.
+Line Shows x-y pairs as data points and connects them with a line. The first record
+contains the x-coordinates. The Chart interprets all additional records as the
+associated y-coordinates.
+Sticks Shows a vertical bar for each x-y pair, starting from the zero line. The first
+record contains the x-coordinates. The Chart interprets all additional records as
+the associated y-coordinates.
+Area Shows the connected points belonging to the x-y pairs and fills the areas thus
+created. The first record contains the x-coordinates. The Chart interprets all
+additional records as the associated y-coordinates.
+3D Columns Shows each record as columns stacked in three-dimensional space. To turn the
+chart left or right you can enter an angle of Rotation or you can also drag the
+horizontal slider in the display window. To turn the chart up or down, you can
+enter the Height or you can drag the vertical slider.
+3D Wire Frame Shows each record as wire-frames stacked in three-dimensional space. To turn
+the chart left or right you can enter an angle of Rotation or you can also drag
+the horizontal slider in the display window. To turn the chart up or down, you
+can enter and the Height or you can drag the vertical slider.
+3D Surface Shows each record as solid areas stacked in three-dimensional space. To turn
+the chart left or right you can enter an angle of Rotation or you can also drag
+the horizontal slider in the display window. To turn the chart up or down, you
+can enter the Height or you can drag the vertical slider.
+SimTalk
+ChartType [SimTalk]
+Rotation [SimTalk] - Chart
+Chart Type [drop-down list]
+Plant Simulation Help 11-4669
+Unpublished work. © 2026 Siemens
+
+Height [SimTalk] - 3D charts
+See also
+Data [Chart]
+Chart Type [drop-down list]
+11-4670 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+3D Effect
+Select one of the 3D effects.
+Remarks
+You can select one of these settings:
+• None
+Adds no 3D effect to the Chart Type you selected.
+• Shadow
+Adds a black shadow to the chart type.
+• 3D
+Adds three-dimensional depth to the chart type.
+3D Effect
+Plant Simulation Help 11-4671
+Unpublished work. © 2026 Siemens
+
+• Gradient Bars
+Adds an effect between a gradient and a 3D look to the chart types Columns and Bars.
+• Contoured
+3D Effect
+11-4672 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Applies to the chart types 3D Columns and 3D Surface.
+Note
+Some chart types do not provide 3D Effects.
+SimTalk
+Effect [SimTalk]
+3D Effect
+Plant Simulation Help 11-4673
+Unpublished work. © 2026 Siemens
+
+Graph/table [drop-down list]
+Select how the Chart shows the records.
+Remarks
+You can select one of these settings:
+• Graph
+Shows the records as a graph only in the Chart window.
+• Table
+Shows the records as a table only in the Chart window.
+Graph/table [drop-down list]
+11-4674 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Graph and Table
+Shows the records as a graph and as a table in the Chart window.
+SimTalk
+GraphTable [SimTalk]
+Graph/table [drop-down list]
+Plant Simulation Help 11-4675
+Unpublished work. © 2026 Siemens
+
+Display in Frame
+Display in Frame [check box] - Chart
+To display the Chart itself in the Frame, instead of the icon of the object, select this check box.
+Remarks
+Then, type in the Width and the Height of the Chart and set the 3D Image Quality.
+We advise increasing the size of the icon of the Chart in the Frame: Hold down Shift+Ctrl, grab one of the
+four corners of the icon with the mouse and drag the icon to a convenient size.
+Display in Frame On Display in Frame Off
+Note
+When you select Display in Frame, you cannot freely combine Line Styles and Line Weights of the
+Chart.
+SimTalk
+DisplayInFrame [SimTalk]
+Display in Frame
+11-4676 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [text box] - display in frame
+Activate Display in Frame and type in the Width and the Height of the Chart in meters.
+SimTalk
+SizeInFrame [SimTalk]
+See also
+Display in Frame [check box] - Chart
+Height [text box] - display in frame
+Width [text box] - display in frame
+Plant Simulation Help 11-4677
+Unpublished work. © 2026 Siemens
+
+Height [text box] - display in frame
+Activate Display in Frame and type in the Height and the Width of the Chart in meters.
+SimTalk
+SizeInFrame [SimTalk]
+See also
+Display in Frame [check box] - Chart
+Width [text box] - display in frame
+Height [text box] - display in frame
+11-4678 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+3D Image Quality [drop-down list]
+Select the 3D Image Quality with which the Chart shows the image in 3D.
+Remarks
+3D Image Quality is only available when you activate Display in Frame.
+You can select one of these settings:
+• High quality
+Results in high resolution and improved image quality with bad performance.
+• Balanced
+Results in medium resolution, is a good compromise between image quality and performance.
+• High performance
+Results in low resolution and bad image quality with better performance.
+High quality Balanced High performance
+SimTalk
+ImageQuality3D [SimTalk]
+DisplayInFrame [SimTalk]
+See also
+Display in Frame [check box] - Chart
+3D Image Quality [drop-down list]
+Plant Simulation Help 11-4679
+Unpublished work. © 2026 Siemens
+
+Gap When Null [check box]
+To interrupt the line, which the Chart draws for values that are not defined, select this check box. To
+continue drawing the line, clear the check box.
+Undefined Value
+Type in the value that the Chart takes to be as an undefined value. If a point takes this value, the Chart
+does not display it. The default value is -999999, i.e., a value that most likely none of the values to be
+displayed ever takes.
+SimTalk
+GapWhenNull [SimTalk]
+NullValue [SimTalk]
+Gap When Null [check box]
+11-4680 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Accumulated [check box] - Chart
+To create an accumulated histogram, select this check box.
+Remarks
+The Chart then adds the sum of all previous values to each value. The last value thus will be 100 percent.
+Note
+The Chart only shows the check box for the Category > Histogram.
+SimTalk
+Accumulated [SimTalk]
+Accumulated [check box] - Chart
+Plant Simulation Help 11-4681
+Unpublished work. © 2026 Siemens
+
+Step Curve [check box]
+To show a Step Curve instead of straight lines connecting the data points, select this check box.
+Remarks
+A Step Curve might show some trends more clearly but might not quite be as accurate as the straight
+lines.
+Note
+The Chart only shows the check box for the Category > Plotter.
+Step Curve Lines
+SimTalk
+StepCurve [SimTalk]
+Tab Axes
+Tab Axes
+Select how Plant Simulation shows the axes used in the Chart on the tab Axes.
+The tab shows different settings depending on the Category you selected.
+Step Curve [check box]
+11-4682 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Axes
+Plant Simulation Help 11-4683
+Unpublished work. © 2026 Siemens
+
+Grid Lines Y-Axis
+To show Grid Lines on the Y-Axis in the display window of the Chart, select this check box. To hide them,
+clear the check box.
+SimTalk
+XGrid [SimTalk]
+YGrid [SimTalk]
+Interval
+Type the Interval between the grid lines on the y-axis into the text box. It sets the distance of the
+horizontal grid lines and the labels on the y-axis.
+If you do not type a value into the text box, Plant Simulation determines a meaningful interval based on
+the displayed values.
+SimTalk
+YGridLineInterval [SimTalk]
+Grid Lines Y-Axis
+11-4684 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Grid Lines X-Axis
+To show Grid Lines on the X-Axis in the display window of the Chart, select this check box. To hide them,
+clear the check box.
+Type in the maximum Number of grid lines that the Chart shows on the x-axis.
+SimTalk
+YGrid [SimTalk]
+XGrid [SimTalk]
+XGridlines [SimTalk]
+Number
+Type in the Number of grid lines which the Chart shows on the x-axis. The Chart also shows a label for
+each grid line on the x-axis. If you are displaying a large number of data sets, it makes sense to enter a
+smaller number so that the labels can be shown completely.
+If the number of grid lines is greater than the number of data sets on the x-axis, the Chart only shows as
+many grid lines as there are data sets.
+If the number of grid lines is less than the number of data sets, the Chart reduces the number of grid lines
+and labels.
+Note
+For the Category > XY-Graph, the Chart only evaluates the Number, if you also type a fixed Range X,
+i.e., if you did not type in an asterisk *.
+SimTalk
+XGridlines [SimTalk]
+Grid Lines X-Axis
+Plant Simulation Help 11-4685
+Unpublished work. © 2026 Siemens
+
+Logarithmic Y-Axis
+To activate Logarithmic scaling on the y-axis, select this check box.
+Remarks
+Logarithmic Y-Axis is useful if the data to be displayed is scattered across several orders of magnitude.
+Logarithmic representation cannot show negative values.
+Note
+If you activate Logarithmic Y-Axis, you also have to type in a value greater than 0, for example 0.1, for
+the Range Y, so that Plant Simulation can display the scale logarithmically.
+SimTalk
+YLog [SimTalk]
+Logarithmic Y-Axis
+11-4686 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Logarithmic X-Axis
+To activate Logarithmic scaling on the x-axis, select this check box.
+Remarks
+Logarithmic X-Axis is useful if the data to be displayed is scattered across several orders of magnitude.
+Logarithmic representation cannot show negative values.
+Note
+Logarithmic X-Axis is only available for the Chart Type > XY-Graph.
+Note
+Plant Simulation does not show the check box Logarithmic X-Axis for all Chart Types.
+SimTalk
+XLog [SimTalk]
+Logarithmic X-Axis
+Plant Simulation Help 11-4687
+Unpublished work. © 2026 Siemens
+
+Number of Values [text box]
+Type in the Number of Values, which the Chart collects over time per channel.
+Remarks
+The setting Number of Values applies to the Category > Plotter.
+The more values the Chart collects, the more memory Plant Simulation uses. Once the Chart reaches the
+number you entered, it starts dropping the least recent values.
+SimTalk
+NumValues [SimTalk]
+See also
+Category [drop-down list]
+Number of Values [text box]
+11-4688 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Scrollbar [check box]
+To add a scrollbar to the Chart window for the Category > Plotter, select this check box. Clear the check
+box to not add a scrollbar.
+Remarks
+If the scrollbar is active, you can type in a Feed Rate in grid units. The Feed Rate sets the number of grid
+units by which the Chart scrolls, when it reaches the right border of the display.
+SimTalk
+ScrollBar [SimTalk]
+See also
+Category [drop-down list]
+Scrollbar [check box]
+Plant Simulation Help 11-4689
+Unpublished work. © 2026 Siemens
+
+Feed Rate [text box]
+Type in the Feed Rate in grid units. It sets the number of grid units by which the Chart scrolls, once it
+reaches the right border of the display.
+Remarks
+The setting Feed Rate applies to the Category > Plotter.
+You can type in a value between 0.1 and 12.
+Type in 0.1 for smooth scrolling, type in 12 for scrolling the entire page.
+SimTalk
+FeedRate [SimTalk]
+See also
+Category [drop-down list]
+Feed Rate [text box]
+11-4690 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Step Size [text box]
+Type in a Step Size. This is the width of the intervals into which the Chart divides the frequency
+distribution.
+Remarks
+The setting Step Size applies to the Category > Histogram.
+SimTalk
+StepSize [SimTalk]
+See also
+Category [drop-down list]
+Step Size [text box]
+Plant Simulation Help 11-4691
+Unpublished work. © 2026 Siemens
+
+Range Y
+Type in the first value of the Range the Chart is to display on the y-axis into the left text box.
+Remarks
+The default setting 0 ... * means that Plant Simulation shows the vales between 0 and the largest
+displayed value.
+Note
+When you activate Logarithmic Y-Axis, you also have to type in a value greater than 0, for example 0.1,
+for the Range Y, so that Plant Simulation can display the scale logarithmically.
+Type in the last value of the range the Chart is to display scaled on the y-axis into the right text box.
+Use the asterisk * to designate open or semi-open ranges along the y-axis and along the x-axis.
+Compare these examples:
+Type in To do this
+* … * Show the values between the smallest and the greatest
+displayed value on the y-axis.
+0 … * Show the values between 0 and the greatest displayed value
+on the y-axis.
+* … 7.5 Show the values between the smallest displayed value and
+7.5 on the y-axis.
+-20 … 20 Show the values between -20 and +20 on the y-axis.
+Note
+If you specify neither Title nor Subtitle, the Chart might, under certain circumstances, cut off the upper
+part of the Range Y.
+Type a blank space into the text box Subtitle to prevent this.
+SimTalk
+YScaleMin [SimTalk]
+Range Y
+11-4692 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+YScaleMax [SimTalk]
+See also
+XScaleMin [SimTalk]
+XScaleMax [SimTalk]
+Range Y
+Plant Simulation Help 11-4693
+Unpublished work. © 2026 Siemens
+
+Range X
+Type in the first value of the Range, which the Chart is to display scaled on the x-axis in the left text box.
+Remarks
+Type the last value of the Range, which the Chart is to display scaled on the x-axis into the right text box.
+The default setting 0 … 0 means that Plant Simulation shows the entire range of definition.
+If you are only displaying part of the range, the Chart shows a horizontal scrollbar, allowing you to scroll
+through the entire range of definition.
+For the Category > Histogram, the Range X directly defines the range of definition. Type 0 into the right
+text box, so that the Chart dynamically adjusts the upper bound. Type the size of the intervals, into which
+the Chart divides the frequency distribution, into the text box Step size.
+For the Category > Plotter, the Range X defines the time span, which the Chart shows in the display. You
+can also define the Feed Rate by which the Chart scrolls when it reaches the right-hand side of the display.
+Type in a number between 0.1 and 12. The number 0.1 stands for smooth scrolling, while 12 scrolls the
+entire page.
+Use the asterisk * to designate open or semi-open ranges along the x-axis. You can also use it to designate
+dynamic upper limits for the Histogram.
+Compare these examples:
+Type in To do this
+* … * Show the values between the smallest and the greatest
+displayed value.
+0 … * Show the values between 0 and the greatest displayed value
+on the x-axis.
+* … 7.5 Show the values between the smallest displayed value and
+7.5 on the x-axis.
+-20 … 20 Show the values between -20 and +20 on the x-axis.
+Negative values and 0 are useful for charts of category XY Graph.
+SimTalk
+XScaleMin [SimTalk]
+Range X
+11-4694 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+XScaleMax [SimTalk]
+XRange [SimTalk]
+See also
+FirstInterval [SimTalk]
+NumIntervals [SimTalk]
+StepSize [SimTalk]
+Tab Labels
+Tab Labels [Chart]
+Type in a Title, a Subtitle, and labels for the X-Axis, the Y-Axis and the Z-Axis of the Chart.
+Remarks
+Select if and where Plant Simulation shows the Legend and type in Annotations on the tab Labels.
+Tab Labels
+Plant Simulation Help 11-4695
+Unpublished work. © 2026 Siemens
+
+Note
+If you type in neither Title nor Subtitle, the Chart might, under certain circumstances, cut off the upper
+part of theY Range. Enter a blank space into the text box Subtitle to prevent this.
+See also
+Title [text box] - Chart
+Subtitle [text box] - Chart
+X-Axis [text box] - Chart
+Y-Axis [text box] - Chart
+Z-Axis [text box] - Chart
+Tab Labels [Chart]
+11-4696 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Title [text box] - Chart
+Type any text that Plant Simulation shows as the title of the Chart in the Chart window into the text box.
+Remarks
+Select a font for the Title, select if you want to use Bold face and/or Italic face, and select a relative Size
+on the Tab Font.
+SimTalk
+Title [SimTalk]
+Title [text box] - Chart
+Plant Simulation Help 11-4697
+Unpublished work. © 2026 Siemens
+
+Subtitle [text box] - Chart
+Type any text that Plant Simulation shows as the subtitle of the Chart in the Chart window into the text
+box.
+Remarks
+Select a font Subtitle, select if you want to use Bold face, and/or Italic face on the Tab Font.
+SimTalk
+SubTitle [SimTalk]
+Subtitle [text box] - Chart
+11-4698 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+X-Axis [text box] - Chart
+Type in any text that the Chart shows in the Chart window on the x-axis.
+SimTalk
+XLabel [SimTalk]
+X-Axis [text box] - Chart
+Plant Simulation Help 11-4699
+Unpublished work. © 2026 Siemens
+
+Y-Axis [text box] - Chart
+Type in any text that the Chart shows in the Chart window on the y-axis.
+SimTalk
+YLabel [SimTalk]
+Y-Axis [text box] - Chart
+11-4700 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Z-Axis [text box] - Chart
+Type in any text that Chart shows in the Chart window on the z-axis.
+Remarks
+Note
+The Chart only shows the text box when you select one of the 3D Chart Types > 3D Columns/3D Wire
+Frame or 3D Surface.
+SimTalk
+ZLabel [SimTalk]
+Z-Axis [text box] - Chart
+Plant Simulation Help 11-4701
+Unpublished work. © 2026 Siemens
+
+Legend
+Select if and on which side of the Chart window Plant Simulation shows the legend for the values which
+the Chart displays.
+Remarks
+You can select one of these settings:
+• Off, i.e., no legend.
+• On the Right, in one line.
+• On the Right, in two lines.
+• On the Right, stacked.
+Shows the input channels from bottom to top instead of from top to bottom. It is especially well suited
+for the Chart Types > Stacked Columns and 100 % Stacked Area.
+• On the Left, in one line.
+• On the Left, in two lines.
+• At the Top, in one line.
+• At the Top, in two lines.
+• At the Bottom, in one line.
+• At the Bottom, in two lines.
+SimTalk
+LegendLocation [SimTalk]
+Legend
+11-4702 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Annotations [button]
+To open the table Annotations, click this button. Then, add additional lines and text to the Chart.
+Remarks
+You can select these settings:
+• Type
+Select the Type of the annotation:
+Select 0: Vertical Line to show a vertical line.
+Select 1: Horizontal Line to show a horizontal line.
+Select 2: X-axis Label for labeling the x-axis.
+Select 3: Y-axis Label for labeling the y-axis.
+Select 4: Text for any text.
+• Value
+Type in the value where the Chart displays the line in the Chart window.
+For a horizontal line or for an annotation of the Y-axis or for this is the Y-value.
+For a vertical line or for an annotation of the X-axis this is X-value.
+Type in Y-values in the Y scale of the Chart.
+Type in X-values in the X scale of the Chart. For a bar chart the value 3.5 means that the X-value is
+placed between the third and the fourth bar.
+• From
+Type in the starting point of the line here. If you do not type in a value, the Chart extends an existing
+line.
+This way you can not only create horizontal and vertical lines but also diagonal lines.
+For a horizontal line or for text this is an X-value. For a vertical line this is a Y-value.
+• To
+Annotations [button]
+Plant Simulation Help 11-4703
+Unpublished work. © 2026 Siemens
+
+Type in the end point of the line here.
+If you do not type a value into the cells From and To, the Chart draws the line from the left to right, or
+from the top to the bottom of the display window.
+For a horizontal line this is an X-value. For a vertical line this is a Y-value.
+• Color
+Type in the number of the color of the line here. Define colors on the Tab Color.
+• Style
+For lines of Type 0 or 1, you can type in the line style.
+For text of Type 4, you can type in the marker style.
+Value Line style Marker style
+0 a thin solid line text only without a marker
+1 a dashed line a plus sign
+2 a dotted line a cross
+3 a dash-dot line a circle
+4 a dash-dot-dot line a filled circle
+5 a medium thin solid line a square
+6 a thick solid line a filled square
+7 a grid tick a diamond
+8 a grid line a filled diamond
+9 none upward triangle
+10 a medium thick solid line solid upward triangle
+11 an extra thick solid line downward triangle
+12 none solid downward triangle
+13 none small plus
+14 none small cross
+15 none small circle
+16 none small solid circle
+17 none small square
+18 none small solid square
+19 none small diamond
+20 none small solid diamond
+Annotations [button]
+11-4704 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value Line style Marker style
+21 none small upward triangle
+22 none small solid upward triangle
+23 none small downward triangle
+24 none small solid downward triangle
+25 none large plus
+26 none large cross
+27 none large circle
+28 none large solid circle
+29 none large square
+30 none large solid square
+31 none large diamond
+32 none large solid diamond
+33 none large upward triangle
+34 none large solid upward triangle
+35 none large downward triangle
+36 none large solid downward triangle
+92 none arrow north
+93 none arrow north east
+94 none arrow east
+95 none arrow south east
+96 none arrow south
+97 none arrow south west
+98 none arrow west
+99 none arrow north west
+• Text
+Type in any text that describes the line here. You can optionally enter the following two-character prefix
+codes, consisting of the pipe symbol (|) and a letter. These control at which position in the graph the
+text will be positioned:
+Annotations [button]
+Plant Simulation Help 11-4705
+Unpublished work. © 2026 Siemens
+
+Prefix Position
+|l left inside edge of the graph
+|L left outside edge of the graph
+|r right inside edge of the graph
+|R right outside edge of the graph
+|c centered inside of the graph
+Plant Simulation always shows user-defined annotations in the foreground. In previous versions this
+was not the case if the Y-Axis showed time values. As the Chart component, which Plant Simulation
+uses, cannot display times, Plant Simulation creates the captions for time values on the Y-Axis and the
+horizontal grid lines as annotations.
+If you do add your own annotations to such a Chart, Plant Simulation now shows all annotations,
+including the grid lines, in the foreground. In this case, we recommend to hide the grid lines or to set the
+Color of the grid to a light color, for example to light gray.
+SimTalk
+getAnnotations [SimTalk]
+setAnnotations [SimTalk]
+See also
+Add Labels and a Legend
+Tab Color
+Tab Color [Chart]
+Select a Color for the Grid, the Background, the Desk, the Text, for the plotted data (numbers 1 through
+14), and for additional colors on the tab Color.
+Remarks
+You can Add or Delete a color. You can also select the Opacity, a Line Style, and a Line Weight. For
+certain chart types you can also select a Marker Size.
+If you would like the Chart to inherit color attributes, make sure that the inheritance check box for on the
+right-hand side of the tab looks like this 
+ .
+Tab Color
+11-4706 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+setColor [SimTalk]
+setLineStyle [SimTalk]
+getColor [SimTalk]
+getLineStyle [SimTalk]
+See also
+Color [Chart]
+Tab Color [Chart]
+Plant Simulation Help 11-4707
+Unpublished work. © 2026 Siemens
+
+Color [Chart]
+The Chart shows the number of the color or the name of item for which you define the color in the column
+Color.
+Remarks
+The tab shows these values:
+• Grid (number -3)
+Is the color the Chart uses for displaying the grid, i.e., the bounding rectangles, and the grid lines of the
+graph proper in the Chart window.
+• Background (number -2)
+Is the color the Chart uses for displaying the background of the graph proper in the Chart window.
+• Desk (number -1)
+Is the color the Chart uses for displaying the area located outside of the bounding rectangle of the
+graph’s grid in the Chart window.
+• Text (number 0)
+Is the color the Chart uses for displaying text.
+• Colors (numbers 1 through 14)
+1 through 14 are the predefined colors of the input channels of the displayed data.
+You can add 
+  additional colors and define their properties to meet your modeling needs.
+Double-click the Color box to open the MS Windows dialog Colors where you define colors.
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+Color [Chart]
+11-4708 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+setColor [SimTalk]
+getColor [SimTalk]
+Color [Chart]
+Plant Simulation Help 11-4709
+Unpublished work. © 2026 Siemens
+
+Opacity
+Type in a number for the opacity of the color. Type in 0 for an entirely transparent color, type in 255 for a
+completely opaque color.
+Remarks
+Semi-transparent colors will, for example, increase the readability of the Chart Type > Area.
+SimTalk
+setColor [SimTalk]
+getColor [SimTalk]
+Opacity
+11-4710 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Line Style
+To change the properties of the line with which the Chart shows the values, click the down-arrow in the
+cell whose property you want to change.
+Remarks
+After selecting the Line Style, you can select another Line Weight and another Marker Type from the
+drop-down lists.
+Note
+If you select Display in Frame, you cannot freely combine line styles and Line Weights of the Chart.
+Select the line style with which the Chart shows the values.
+The Chart uses these settings for the Chart Types > Line and Spline.
+SimTalk
+setLineStyle [SimTalk]
+getLineStyle [SimTalk]
+Line Style
+Plant Simulation Help 11-4711
+Unpublished work. © 2026 Siemens
+
+Line Weight
+Select the Line Weight with which the Chart shows the values.
+SimTalk
+setLineStyle [SimTalk]
+getLineStyle [SimTalk]
+Line Weight
+11-4712 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Marker Type
+Select the Marker Type with which the Chart shows the values.
+Remarks
+The Chart uses these settings for the Chart Types > Line with Markers and Spline with Markers.
+SimTalk
+setLineStyle [SimTalk]
+getLineStyle [SimTalk]
+Marker Type
+Plant Simulation Help 11-4713
+Unpublished work. © 2026 Siemens
+
+Add [color]
+To add additional colors to the color table, click Add.
+Remarks
+Define a color in the dialog Colors, and click OK to add that color to the bottom of the Color table.
+Double-click the Color box to open the MS Windows dialog Color where you define colors.
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+Add [color]
+11-4714 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Delete [color]
+To delete the color you selected from the Color Table, click this button.
+See also
+Color [Chart]
+Delete [color]
+Plant Simulation Help 11-4715
+Unpublished work. © 2026 Siemens
+
+Marker Size
+Select the size of the markers from the drop-down list.
+Remarks
+The setting Marker Size applies to the settings Chart Types > Line with Markers and Spline with
+Markers.
+See also
+Chart Type [drop-down list]
+Tab Font
+Tab Font [Chart]
+Select a font, text effects and a zoom factor for the Labels, the Title and the Subtitle, and for data
+displayed as a Table on the tab Font.
+Marker Size
+11-4716 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+MS UI Gothic is intended for our Japanese users. The English or German version of Microsoft Windows
+might not provide this font by default.
+See also
+Labels [Chart]
+Title [font] - Chart
+Subtitle [font] - Chart
+Table [font] - Chart
+Tab Font [Chart]
+Plant Simulation Help 11-4717
+Unpublished work. © 2026 Siemens
+
+Labels [Chart]
+Select a font from the drop-down list for the labels.
+Remarks
+This font does not apply to the Title, the Subtitle and to data displayed in Table format in the Chart
+window.
+Bold
+To apply bold face to all labels, select Bold. This does not apply to the Title, the Subtitle and to data
+displayed in Table format in the Chart window.
+Italic
+To italicize all labels, select Italic. This does not apply to the Title, the Subtitle and to data displayed in
+Table format in the Chart window.
+Size
+Select a size for the lettering for all labels. This does not apply to the Title, the Subtitle and to data
+displayed in Table format in the Chart window.
+Note
+The numbers in the drop-down list are not actual point sizes, but set a factor which the Chart uses for
+sizing labels.
+SimTalk
+LabelFont [SimTalk]
+Labels [Chart]
+11-4718 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Title [font] - Chart
+Select a font from the drop-down list for the Title of the Chart displayed in the Chart window.
+Bold
+To apply bold face to the Title of the Chart, which is displayed in the Chart window, select Bold.
+Italic
+To italicize the Title of the Chart, which is displayed in the Chart window, select Italic.
+Size
+Select a size for the lettering from the drop-down list for the Title of the Chart displayed in the Chart
+window.
+Note
+The numbers in the drop-down list are not actual point sizes, but set a factor that the Chart uses for
+sizing labels.
+SimTalk
+TitleFont [SimTalk]
+Title [font] - Chart
+Plant Simulation Help 11-4719
+Unpublished work. © 2026 Siemens
+
+Subtitle [font] - Chart
+Select a font from the drop-down list for the Subtitle of the Chart, which is displayed in the Chart window.
+Bold
+To apply bold face to the Subtitle of the Chart, which is displayed in the Chart window, select Bold.
+Italic
+To italicize the Subtitle of the Chart, which is displayed in the Chart window, select Italic.
+SimTalk
+SubtitleFont [SimTalk]
+Subtitle [font] - Chart
+11-4720 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Table [font] - Chart
+Select a font from the drop-down list for data which the Chart shows in Table format in the Chart window.
+Size
+Select a size for data, which the Chart shows in Table format in the Chart window.
+Note
+The numbers in the drop-down list are not actual point sizes, but set a factor the Chart uses for sizing
+labels.
+SimTalk
+TableFont [SimTalk]
+Table [font] - Chart
+Plant Simulation Help 11-4721
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-4722 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-4723
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+Tools Menu
+Tools Menu
+The Tools Menu provides the commands listed in the table of contents to the left.
+View Menu
+11-4724 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Use Metric Prefix [command]
+Activates or deactivates if the Chart shows a unit prefix on the y-axis for very great or very small values, for
+example 100K instead of 100000.
+The prefix stands for
+p pico
+n nano
+u micro
+m milli
+K kilo
+M million
+B billion
+T trillion
+SimTalk
+UseMetricPrefix [SimTalk]
+Use Metric Prefix [command]
+Plant Simulation Help 11-4725
+Unpublished work. © 2026 Siemens
+
+Reset Values [command]
+Deletes all values which the Chart collected.
+SimTalk
+resetValues [SimTalk]
+Reset Values [command]
+11-4726 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Print [Chart]
+Opens the dialog Print. Select a printer from the drop-down list.
+Click Setup to open the Properties dialog of the selected printer and modify settings there.
+SimTalk
+showPrintDialog [SimTalk] - Chart
+Print [Chart]
+Plant Simulation Help 11-4727
+Unpublished work. © 2026 Siemens
+
+Copy to Clipboard
+Copies the content of the Chart window as a bitmap to the clipboard.
+SimTalk
+copyBitmapToClipboard [SimTalk] - Chart
+Copy to Clipboard
+11-4728 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Chart
+_Methods of the Chart
+The Chart provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-4729
+Unpublished work. © 2026 Siemens

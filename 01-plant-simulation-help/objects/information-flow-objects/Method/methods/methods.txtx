@@ -1,0 +1,332 @@
+Copy [in Method Debugger]
+To copy the selected text to the clipboard, select Copy.
+Paste [in Method Debugger]
+To paste the contents of the clipboard at the cursor position, select Paste.
+Delete [in Method Debugger]
+To delete the selected text, select Delete.
+Methods of the Method
+_Methods of the Method
+Accessing a Method automatically executes its source code. If you want to access built-in methods,
+read-only attributes, or attributes, you have to use the reference operator &.
+The object Method provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+Note
+You can only access the methods of the object Method, which refer to the object itself, via the reference
+operator &. Without the & operator the method will be applied to the contents of the Method.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Copy [in Method Debugger]
+Plant Simulation Help 11-3701
+Unpublished work. © 2026 Siemens
+
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+An example of the Syntax of the individual methods might look like this:
+&Method.execute([Argument1:any, ...[, @:object:=@, ?:object:=self]])
+The signature of the method, consisting of the anonymous identifier &, the name of the method, and the
+data type of the parameter, which is listed in parentheses. The expression (Parameter:string), for example,
+designates a parameter of data type string. Instead of a constant value, you can also use a variable of the
+required type or a method that returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may lead
+to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example, means
+that you can, but do not have to enter the boolean parameter.
+_Methods of the Method
+11-3702 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If a parameter has a default value, the signature shows the default value after the parameter
+If the method has a return value, the signature shows its data type after the arrow ->.
+_Methods of the Method
+Plant Simulation Help 11-3703
+Unpublished work. © 2026 Siemens
+
+checkArguments [SimTalk]
+Checks if the parameters passed to the Method designated by the reference operator <&> have a
+compatible data type.
+Remarks
+Use checkArguments to make sure that values, which you or a user of a model you create enters into a
+dialog, may be passed to Methods.
+Type
+Method
+Syntax
+<&>Method.checkArguments([Argument1:any, ...])´
+Parameter
+The optional parameters Argument of data type any designate the arguments that are to be checked.
+Example
+&MyMethod.checkArguments(42,void) 
+checkArguments [SimTalk]
+11-3704 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+decrypt [SimTalk]
+Decrypts the Method designated by the reference operator <&> which you or somebody else encrypted.
+Type
+Method
+Syntax
+<&>Method.decrypt(Key:string) → boolean
+Parameter
+The parameter Key of data type string designates the password.
+Return Value
+The return value has the data type boolean.
+Example
+&MyMethod.decrypt("zTrqYa8%e")
+SimTalk
+encrypt [SimTalk]
+See also
+Decrypt Method
+decrypt [SimTalk]
+Plant Simulation Help 11-3705
+Unpublished work. © 2026 Siemens
+
+deleteMethCall [SimTalk]
+Deletes all scheduled calls of the Method designated by the reference operator <&> in the EventController.
+Remarks
+Use deleteMethCall to delete calls you do not need any longer.
+Type
+Method
+Syntax
+<&>Method.deleteMethCall
+Example
+&MyMethod.deleteMethCall // deletes all scheduled method calls 
+See also
+executeIn [SimTalk]
+deleteMethCall [SimTalk]
+11-3706 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+encrypt [SimTalk]
+Encrypts the source code of the Method designated by the reference operator <&>.
+Type
+Method
+Syntax
+<&>Method.encrypt(Key:string) → boolean
+Parameter
+The parameter Key of data type string designates the password.
+Return Value
+The return value has the data type boolean.
+Example
+&MyMethod.encrypt("zTrqYa8%e")
+SimTalk
+decrypt [SimTalk]
+See also
+Encrypt Method
+encrypt [SimTalk]
+Plant Simulation Help 11-3707
+Unpublished work. © 2026 Siemens
+
+execute [SimTalk] - Method
+Runs the Method designated by the reference operator <&> as a subroutine.
+Remarks
+The execution of the calling Method will be interrupted until the called Method is finished.
+The method execute is especially handy if the path to a Method is stored in a Variable of data type object.
+Type
+Method
+Syntax
+<&>Method.execute([Argument1:any, ... ][, @:object=@, ?:object=self])
+Parameters
+The optional parameters Argument of data type any designate the arguments which are to be executed.
+If you type in two additional optional parameters of data type object, then the parameter @ is assigned to
+the anonymous identifier @ and the parameter ? is assigned self.
+Example
+Variable := &MyMethod1      // variable is of data type object
+Variable.execute            // executes MyMethod1 
+&MyMethod2.execute("abc")   // executes myMethod2 
+                            // that expects 1 parameter
+                            // of data type string
+self.execute(n+1)           // calls a method recursively 
+Note
+You can call the method execute from Python. In this case execute will be executed like a formula.
+Therefore you cannot move or delete MUs in the Method, and you cannot use a wait-instruction, a
+waituntil-instruction, or a stopuntil-instruction.
+In addition,Plant Simulation does not show the tab Expressions of the Method Debugger.
+# call myMethod from Python 
+res = current.myMethod.execute()
+print(res)
+execute [SimTalk] - Method
+11-3708 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Run [button] - Method
+Tab Expressions [Watch window]
+execute [SimTalk] - Method
+Plant Simulation Help 11-3709
+Unpublished work. © 2026 Siemens
+
+executeIn [SimTalk]
+Calls the Method or the user-defined attribute of data type method designated by the reference operator
+<&> after the specified number of seconds of simulation time has elapsed.
+Remarks
+Plant Simulation enters a MethCall event into the list of scheduled events in the EventController at the
+simulation time which is the current simulation time plus the time you passed as the parameter CallAt.
+Since the Method will be called at some time in the future, the parameter CallAt must be greater than or
+equal to 0. If events are already scheduled at this time, the MethCall will be appended at the end of the
+existing simultaneous events.
+In the called Method the anonymous identifier ? references the caller, i.e., the Method which contained the
+Method executeIn.
+If the caller is a user-defined attribute of data type method, it references the location of this user-defined
+attribute. The anonymous identifier @ references the EventController.
+Type
+Method
+Syntax
+<&>Method.executeIn(CallAt:time[, Argument1:any, ...])
+<&>Method.executeIn(CallAt:dateTime[, Argument1:any, ...])
+Parameters
+You can specify the following parameters:
+• The parameter CallAt of data type time designates the time in seconds after which the Method will be
+called. Instead, you can also pass a value of data type dateTime. Then the Method will be called at the
+specified point in time.
+• The following optional parameters (Argument1, ...) are passed to the Method when it is being called.
+Example
+&MyMethod1.executeIn(23.5) 
+// throttle the engine in 5 seconds to 85 percent
+&ThrottleEngine.executeIn(5, 0.85)
+// New year's day 2025 midnight, year-month-day notation
+&MyMethod2.executeIn(str_to_date("2025/12/31")) 
+// New year's day 2025 midnight, day-month-year notation
+executeIn [SimTalk]
+11-3710 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+&MyMethod2.executeIn(str_to_date("31.12.2025")) 
+// call the method with a local variable reference, passing two parameters 
+to the method
+var obj: object := &MyMethod3
+obj.executeIn(4, "my string", true)
+See also
+deleteMethCall [SimTalk]
+executeNewCallChain [SimTalk]
+List of Events
+Video on YouTube
+https://youtu.be/5t-wLNmKpbU?si=mzWCkc2Y2B1VGtIF&t=1121
+executeIn [SimTalk]
+Plant Simulation Help 11-3711
+Unpublished work. © 2026 Siemens
+
+executeNewCallChain [SimTalk]
+Runs the Method designated by the reference operator <&> after Plant Simulation has processed all active
+call chains.
+Remarks
+The effect of &Method.executeNewCallChain is similar to &Method.executeIn(0). Let's say you
+schedule a method in a reset method with executeNewCallChain, then the scheduled method will only be
+executed after all already scheduled methods have been finished.
+Note
+If executing a method triggers controls, Plant Simulation interrupts the method and runs the controls.
+Let's say that the instruction @.move triggers an Entrance Control and an Importer Request Control.
+The interrupted method will only be continued, after these controls have been processed all the way. If
+one of the controls schedules a new method with executeNewCallChain, this method will be executed
+after controls have been executed, but before interrupted method will be continued.
+The method executeNewCallChain behaves differently than the method executeIn(0). The difference
+is that executeIn requires an EventController and that a method, that was scheduled with
+&Method.executeIn(0), will only be executed after the already scheduled simultaneous events.
+In the called method the anonymous identifier ? references the caller, i. e., the method, which contained
+the method executeNewCallChain.
+If the caller is a user-defined attribute of data type method, ? references the location of the user-defined
+attribute.
+Type
+Method
+Syntax
+<&>Method.executeNewCallChain([Argument1:any, ...]
+[,@:object:=@, ?:object:=self])
+Parameter
+The optional parameters Argument1 of data type any and following designate the arguments which are to
+be executed.
+If you enter two additional optional parameters of data type object, then the parameter @ is assigned to
+the anonymous identifier @ and the parameter ? is assigned self.
+executeNewCallChain [SimTalk]
+11-3712 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+var o : object := .Models.Model.&MyMethodWithoutParameters
+o.executeNewCallChain
+See also
+& [SimTalk] - reference operator
+executeIn [SimTalk]
+executeNewCallChain [SimTalk]
+Plant Simulation Help 11-3713
+Unpublished work. © 2026 Siemens
+
+hasSyntaxError [SimTalk]
+Returns if the source code of the Method designated by the reference operator <&> has syntax errors.
+Remarks
+The method also applies to user-defined attributes of type method.
+Type
+Method
+Syntax
+<&>Method.HasSyntaxError([byref ErrorMessage:string, byref Line:integer]) 
+-> boolean
+Parameters
+You can specify the following parameters:
+• The optional parameter ErrorMessage of data type string designates a local variable to which Plant
+Simulation assigns an error message if the Method contains a syntax error.
+If the Method does not contain a syntax error, Plant Simulation assigns an empty string ("") to the local
+variable.
+• The optional parameter Line of data type integer designates a local variable to which Plant Simulation
+assigns the line in which the error is located.
+Return Value
+The return value has the data type boolean.
+Example
+var NewSourceCode: string := prompt  -- user input
+&MyMethod.Program := NewSourceCode   -- assign new source code
+if &MyMethod.HasSyntaxError
+   print "syntax error"
+else
+   MyMethod   -- call the Method and execute the new source code
+end
+hasSyntaxError [SimTalk]
+11-3714 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+load [SimTalk] - source code
+Loads the contents of a text file in ASCII format as source code into the Method designated by the
+reference operator <&>.
+Type
+Method
+Syntax
+<&>Method.load(FileName:string) → boolean
+Parameter
+The parameter FileName of data type string designates the name of the text file.
+Return Value
+The return value has the data type boolean.
+Example
+&MyMethod.load("C:\Users\Ralf\sourcecode.txt")
+See also
+Import from File
+Read-Only Attributes of the Method
+Read-Only Attributes of the Method
+The Method provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+Note
+You can only access the read-only attributes of the object Method, which refer to the object itself, via the
+reference operator &.
+load [SimTalk] - source code
+Plant Simulation Help 11-3715
+Unpublished work. © 2026 Siemens
+
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print &Method.Encrypted
+Read-Only Attributes of the Method
+11-3716 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,167 @@
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyDropDownList.UUID
+Attributes of the DropDownList
+_Attributes of the DropDownList
+The DropDownList provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDropdownList.UseIcon := false
+Attributes of the DropDownList
+11-5214 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To get the value of an attribute, you might, for example, type:
+print MyDropdownList.UseIcon
+posit := Station.Cont.XPos
+_Attributes of the DropDownList
+Plant Simulation Help 11-5215
+Unpublished work. © 2026 Siemens
+
+Control [SimTalk] - DropDownList
+Sets the Control which the DropDownList designated by <Path> executes when you select an item in the
+DropDownList in the Frame.
+Remarks
+The anonymous identifiers ? and @ are set to the DropDownList when the method is called.
+Type
+Attribute
+Syntax
+<Path>.Control:string
+Assignment Value
+You can assign a value of data type string.
+Examples
+MyDropdownList.Control := "myControl"
+switch ?.Value
+case 1 
+   print "Item 1 selected"
+case 2 
+   print "Item 2 selected"
+end
+See also
+Control [DropDownList]
+Control [SimTalk] - DropDownList
+11-5216 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Item [SimTalk] - DropDownList
+Sets which Item in the DropDownList designated by <Path> will be selected using its name.
+Remarks
+If you localize the items, you will usually use the attribute Value instead of the attribute Item. The value
+is a number which is language-independent, while the Item is a string which differs from language to
+language.
+Type
+Attribute
+Syntax
+<Path>.Item:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDropdownList.Item := "My item text 1"
+SimTalk
+Items [SimTalk] - DropDownList
+Value [SimTalk] - DropDownList
+See also
+Items [button] - DropDownList
+Item [SimTalk] - DropDownList
+Plant Simulation Help 11-5217
+Unpublished work. © 2026 Siemens
+
+Items [SimTalk] - DropDownList
+Sets or gets the Items which the DropDownList designated by <Path> shows.
+Remarks
+If you want to use the index number to access an item in the list, use the attribute Value.
+If you want to use the name to access an item in the list, use the attribute Item.
+Type
+Attribute
+Syntax
+<Path>.Items:array
+Assignment Value
+You can assign a value of data type array.
+Example
+var a : string[] := ["Item 1", "Item 2", "Item 1"]
+MyDropdownList.Items := a
+SimTalk
+Value [SimTalk] - DropDownList
+Item [SimTalk] - DropDownList
+See also
+Items [button] - DropDownList
+Configure the Feeder Line with Sensor and Sensor Control
+Items [SimTalk] - DropDownList
+11-5218 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ObjectHeight [SimTalk] - DropDownList
+Sets the Height of the Drop-Down List designated by <Path> with which it is shown in the Frame.
+Type
+Attribute
+Syntax
+<Path>.ObjectHeight:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDropDownList.ObjectHeight := 1 // meter
+See also
+Height [text box] - DropDownList
+ObjectHeight [SimTalk] - DropDownList
+Plant Simulation Help 11-5219
+Unpublished work. © 2026 Siemens
+
+ObjectWidth [SimTalk] - DropDownList
+Sets the Width of the DropDownList designated by <Path> with which it is shown in the Frame.
+Remarks
+If you enter long identifiers for the Items, you have to adjust the width so that the label fits on the
+DropDownList without the text being cut off.
+Type
+Attribute
+Syntax
+<Path>.ObjectWidth:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDropDownList.ObjectWidth := 4 // meters
+See also
+Width [text box] - Button
+Items [button] - DropDownList
+ObjectWidth [SimTalk] - DropDownList
+11-5220 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value [SimTalk] - DropDownList
+Sets which item in the DropDownList designated by <Path> will be selected. Plant Simulation uses the
+index number of the item to do so.
+Remarks
+If you localize the items to other languages, you will usually use the attribute Value instead of the attribute
+Item. The value is a number which is language-independent, while the Item is a string which differs from
+language to language.
+Type
+Attribute
+Syntax
+<Path>.Value:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDropdownList.Value := 3
+SimTalk
+Item [SimTalk] - DropDownList
+See also
+Value [text box] - DropDownList
+Mobile Objects
+Mobile Units [MUs]
+Plant Simulation provides the mobile units to model the materials that flow through a simulation model
+while being processed and transported by the material flow objects.
+Value [SimTalk] - DropDownList
+Plant Simulation Help 11-5221
+Unpublished work. © 2026 Siemens

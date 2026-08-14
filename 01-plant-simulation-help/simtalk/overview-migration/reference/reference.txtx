@@ -1,0 +1,67 @@
+12. SimTalk Reference
+SimTalk Reference
+Introduces SimTalk, the programming language that is integrated in Plant Simulation. It enables you
+to implement custom behavior and logic in your simulation model which is not covered by the built-in
+functionality of the simulation objects.
+Remarks
+SimTalk contains an Interpreter, which directly executes the instructions you wrote in objects of type
+Method 
+ , when Plant Simulation runs the simulation.
+SimTalk is tightly integrated with the simulation objects. With SimTalk you can access all attributes,
+read-only attributes, and methods of the built-in objects.
+Note
+The Copilot, which accesses the Plant Simulation Help can assist you in writing your source code in a
+Method.
+The Copilot (local) provides a better knowledge base and the ability to hook up an own LLM to solve
+your programming tasks.
+You can also create your own reusable objects in an object of type Dialog 
+  with behavior for your
+specific needs and implemented in SimTalk. Together with the integrated Method Debugger SimTalk is an
+easy-to-use programming environment.
+Instead of programming code in SimTalk, you can also program code in Python.
+Note
+Python code is not intended to replace SimTalk code. As SimTalk code also accesses compiled built-in
+functions, it generally is quite a bit faster in execution than Python code.
+As many university graduates are exposed to Python, writing Python code during their studies, the
+PythonModule makes programming in Plant Simulation easier and faster.
+In Plant Simulation 12.1 we introduced SimTalk 2.0. We simplified the syntax and added a number of
+features to make it easier to write your code.
+The Plant Simulation Help only describes SimTalk 2.0. The topic SimTalk 2.0 and SimTalk 1.0 Compared
+describes the major differences.
+SimTalk Reference
+Plant Simulation Help 12-1
+Unpublished work. © 2026 Siemens
+
+SimTalk 1.0 stills works in the current and previous versions of Plant Simulation and you can continue
+using SimTalk 1.0 in old and new models.
+The command Find Outdated Functions 
+  on the Debugger ribbon tab finds outdated methods,
+attributes, read-only attributes, and functions in the source code of all Methods in your simulation model.
+The description of SimTalk is divided in:
+• General Access to SimTalk
+• SimTalk Access to 3D Functions
+Note
+SimTalk supports English and German for programming the source code of your methods.
+For this reason the German Help shows the English name of the attribute, read-only attribute, and
+method next to the German name, separated by a forward slash, for example EnergieAktiv [SimTalk] /
+EnergyActive. This facilitates programming methods if you are working with the German version of
+Plant Simulation and are creating an English language model that your colleagues in other countries
+can use as well.
+Compare Creating a German Model with English Identifiers.
+See also
+What's New
+SimTalk Reference
+12-2 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Introducing Plant Simulation
+Update Arbitrary Old Models
+The User Interface Components
+The Step-by-Step Help
+Outdated SimTalk Names
+The Quick Reference Card
+The Add-Ins Reference Help
+The Libraries Reference
+SimTalk Reference
+Plant Simulation Help 12-3
+Unpublished work. © 2026 Siemens

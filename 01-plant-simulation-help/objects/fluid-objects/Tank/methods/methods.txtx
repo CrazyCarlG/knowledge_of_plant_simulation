@@ -1,0 +1,244 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Tank
+Methods of the Tank
+The Tank provides:
+• The General Methods of the Tank.
+• The Methods of the Sensors of the Tank.
+• The Methods of the Fluid Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Help Menu
+11-2782 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+General Methods of the Tank
+General Methods of the Tank
+The Tank provides the general method setCurrentContent.
+General Methods of the Tank
+Plant Simulation Help 11-2783
+Unpublished work. © 2026 Siemens
+
+setCurrentContent [SimTalk] - Tank
+Sets the Current Amount of the material in the Tank designated by <Path>.
+Remarks
+The new content replaces the previous content.
+Note
+Typically, you set the initial state of the object with the method setCurrentContent.
+Type
+Method
+Syntax
+<Path>.setCurrentContent(Amount:real[, Material:string, 
+MaterialsTable:path])
+Parameters
+You can specify the following parameters:
+• The parameter Amount of data type real designates the amount of the material.
+• The optional parameter Material of data type string designates the material as such.
+• The optional parameter MaterialsTable of data type path designates the path to the MaterialsTable.
+Note
+If the Tank already contains a material, you can just enter the new Amount as a single parameter.
+Otherwise, you also have to specify the Material and the MaterialsTable.
+Examples
+Tank1.setCurrentContent(3, "MyProduct", .Fluids.MaterialsTable)
+MyTank.setCurrentContent(5) -- MyTank already contains a material
+See also
+MaterialsTable
+setCurrentContent [SimTalk] - Tank
+11-2784 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Methods of the Sensors of the Tank
+_Methods of the Sensors of the Tank
+The Tank provides the methods listed in the table of contents to the left for sensors.
+See also
+_Attributes of the Sensors of the Tank
+Methods of the Sensors of the Tank
+Plant Simulation Help 11-2785
+Unpublished work. © 2026 Siemens
+
+createSensor [SimTalk] - Tank
+Creates a new sensor for the Tank designated by <Path>.
+Type
+Method
+Syntax
+<Path>.createSensor([Position:real, Control:method, Exceeded:boolean, 
+Underrun:boolean, PositionType:string]) → integer
+Parameters
+The sensor itself is defined by these parameters:
+• The optional parameter Position of data type real sets the relative position.
+• The optional parameter Control of data type method designates the name of the Method object that the
+sensor triggers.
+You can specify the name of the method as a string, i.e., "myMethod" or you can specify &myMethod.
+• The optional parameter Exceeded of data type boolean sets if the sensor is going to be triggered when
+the amount of material in the Tank has exceeded, i.e., is located above the sensor position (true) or not
+(false).
+• The optional parameter Underrun of data type boolean sets if the sensor is going to be triggered once
+the amount of material in the Tank has underrun, i.e., is located below the sensor position (true) or not
+(false).
+• The optional parameter PositionType of data type string designates the position type of the sensor:
+Relative or Absolute.
+Return Value
+The return value has the data type integer.
+It is the unique number of the sensor. You can use this number to access the sensor.
+Example
+var ID1,ID2: integer
+ID1 := MyTank.createSensor(0.5,"SensorCtrl",true,false)
+ID2 := MyTank.createSensor(0.7,&myMethod,false,true)
+ID3 := MyTank.createSensor(3,"SensorCtrl",true,false,"absolute")
+createSensor [SimTalk] - Tank
+11-2786 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+deleteSensor [SimTalk] - Tank
+See also
+Sensors [Tank]
+_Attributes of the Sensors of the Tank
+createSensor [SimTalk] - Tank
+Plant Simulation Help 11-2787
+Unpublished work. © 2026 Siemens
+
+deleteSensor [SimTalk] - Tank
+Deletes the specified sensor from the Tank designated by <Path>.
+Type
+Method
+Syntax
+<Path>.deleteSensor(SensorID:integer) 
+Parameter
+The parameter SensorID of data type integer designates the SensorID.
+Example
+MyTank.deleteSensor(2)
+SimTalk
+createSensor [SimTalk] - Tank
+sensorID [SimTalk] - Tank
+See also
+Sensors [Tank]
+Delete [sensor]
+deleteSensor [SimTalk] - Tank
+11-2788 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+existsSensorID [SimTalk] - Tank
+Returns if the specified sensor exists (true) or does not exist (false) in the Tank designated by <Path>.
+Type
+Method
+Syntax
+<Path>.existsSensorID(SensorID:integer) → boolean
+Parameter
+The parameter SensorID of data type integer designates the SensorID.
+Return Value
+The return value has the data type boolean.
+Example
+print MyTank.existsSensorID(2)
+SimTalk
+sensors.ID [SimTalk] - Tank
+sensorID [SimTalk] - Tank
+See also
+Sensors [Tank]
+existsSensorID [SimTalk] - Tank
+Plant Simulation Help 11-2789
+Unpublished work. © 2026 Siemens
+
+sensorID [SimTalk] - Tank
+Returns the designated sensor of the Tank designated by <Path>.
+Remarks
+The methods sensorNo(SensorID:integer) and sensorID(SensorID:integer) may reference different sensors.
+Type
+Method
+Syntax
+<Path>.sensorID(SensorID:integer) → any
+Parameter
+The parameter SensorID of data type integer designates the unique Sensor-ID which Plant Simulation
+assigns when you create the sensor.
+Return Value
+The return value has the data type any.
+Example
+MyTank.SensorID(3).Exceeded := true
+if MyTank.SensorID(3).Exceeded = true then
+   ?.EntranceLocked := true
+end
+SimTalk
+sensors.ID [SimTalk] - Tank
+sensorNo [SimTalk] - Tank
+deleteSensor [SimTalk] - Tank
+existsSensorID [SimTalk] - Tank
+See also
+Sensors [Tank]
+sensorID [SimTalk] - Tank
+11-2790 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+sensorNo [SimTalk] - Tank
+Returns a sensor of the Tank designated by <Path> whose unique identifier you do not know.
+Remarks
+The methods sensorNo(SensorNumber:integer) and sensorID(SensorID:integer) may reference different
+sensors.
+Type
+Method
+Syntax
+<Path>.sensorNo(SensorNumber:integer) → object
+Parameter
+The parameter SensorNumber of data type integer may be a value between 1 and the number of sensors.
+Which sensor Plant Simulation returns may change during the simulation, i.e., if existing sensors are
+deleted. Thus only use the method sensorNo if a method call iterates through all sensors of the object.
+Return Value
+The return value has the data type object.
+Example
+MyTank.sensorNo(1).Underrun := true
+SimTalk
+sensorID [SimTalk] - Tank
+See also
+Sensors [Tank]
+sensorNo [SimTalk] - Tank
+Plant Simulation Help 11-2791
+Unpublished work. © 2026 Siemens
+
+sensors.ID [SimTalk] - Tank
+Returns the specified sensor of the Tank designated by <Path>.
+Type
+Method
+Syntax
+<Path>.sensors.ID(<Number>) → any
+Return Value
+The return value has the data type any.
+The number after the ID designates the unique identifier which Plant Simulation assigns when you create
+the sensor.
+Examples
+MyTank.sensors.ID3.Front := true
+var sensor := MyTank.sensors.ID2
+sensor.Front := true
+SimTalk
+sensorID [SimTalk] - Tank
+existsSensorID [SimTalk] - Tank
+See also
+Sensors [Tank]
+New [sensor]
+Read-Only Attributes of the Tank
+Read-Only Attributes of the Tank
+The Tank provides:
+sensors.ID [SimTalk] - Tank
+11-2792 Plant Simulation Help
+Unpublished work. © 2026 Siemens

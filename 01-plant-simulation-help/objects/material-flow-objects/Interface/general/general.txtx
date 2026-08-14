@@ -1,0 +1,242 @@
+Unplanned [SimTalk] - Frame
+Sets the Frame designated by <Path> to unplanned when the current time is outside of any shift of the
+ShiftCalendar to which the Frame is assigned (true).
+Type
+Attribute
+Syntax
+<Path>.Unplanned:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify false to set it to planned to work.
+Example
+EngineAssembly.Unplanned := false
+See also
+States of the Frame
+Unplanned [state, material flow objects]
+Interface
+Interface
+Use the object Interface for modeling transitions between Frames, i.e., from one part of the model to
+another. It also facilitates hierarchic modeling.
+Image
+Unplanned [SimTalk] - Frame
+Plant Simulation Help 11-1543
+Unpublished work. © 2026 Siemens
+
+Description
+The Interface, which can be an entrance or an exit, is the place at which the MUs move from one Frame
+to another in your simulation model. You can position the Interface anywhere in a Frame. You can address
+these connections via their names.
+• You always have to insert Interfaces into a sub-Frame, when it contains more than one material flow
+object. If a sub-Frame contains Interfaces, the materials always flow across these.
+For an Interface, which you inserted into a Frame, Plant Simulation shows if the Interface is connected
+to another object with a Connector or not. Plant Simulation also recognizes if an Interface is an
+Entrance or an Exit.
+Entrance Interface Exit Interface
+To open the list showing all externally connected objects, select Open External Connections List on the
+context menu or Tools > External Connections in the dialog of the Interface.
+To show a tooltip containing the externally connected objects, roll the mouse over the Interface in the
+Frame.
+Interface
+11-1544 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To select the objects connected with this Interface, select Show External Connected Objects on the
+context menu.
+The Interface shows the number of the next selected exit on the tab Exit provided you already
+determined it, for example by calling the method succ for the successor object.
+• If the sub-Frame only contains a single material flow object, you do not have to insert Interfaces,
+but can connect the sub-Frame directly with its predecessor and its successor. Connections without
+Interfaces only work across a single lower hierarchy level, not across several nested hierarchy levels.
+The tooltip shows the externally connected objects.
+Interface
+Plant Simulation Help 11-1545
+Unpublished work. © 2026 Siemens
+
+Note
+If Interfaces are inserted into your simulation model, the simulation in 3D runs across these
+Interfaces.
+Add the Object to the Simulation Model
+To add the object Interface to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Interface on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Interface
+11-1546 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Model Transitions Between Frames
+Adapt the 3D Model to the 2D Model
+Dialog Box of the Interface
+Dialog Box of the Interface
+Double-click the icon of the Interface to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the Interface
+Plant Simulation Help 11-1547
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+11-1548 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Type [Interface]
+An Interface object, which you insert into a Frame and connect with a Connector, shows its type in the text
+box.
+Remarks
+The Interface can be:
+• An Entrance interface through which MUs enter the Frame.
+• An Exit interface through which MUs exit the Frame.
+SimTalk
+IsEntry [SimTalk]
+IsExit [SimTalk]
+Type [Interface]
+Plant Simulation Help 11-1549
+Unpublished work. © 2026 Siemens
+
+Maximum Number of External Connections [Interface]
+Type in the maximum number of external connections the Interface may have.
+Remarks
+Depending on the type, any number of Interfaces may have more than one predecessor or successor.
+The default value -1 designates an unlimited number of external connections.
+SimTalk
+MaxConnections [SimTalk] - Interface
+Maximum Number of External Connections [Interface]
+11-1550 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Side [drop-down list]
+Select the side at which Plant Simulation places the Interface.
+Remarks
+You can select: The Top, the Right, the Bottom, the Left of the Frame, or depending on the Angle.
+Angle-dependent takes the angle between the objects into account when determining the starting point
+or the end point of the Connector.
+SimTalk
+Side [SimTalk]
+Side [drop-down list]
+Plant Simulation Help 11-1551
+Unpublished work. © 2026 Siemens
+
+Position in % [Interface]
+Type in the position at which Plant Simulation shows an arriving or leaving Connector at the icon of the
+Frame.
+Remarks
+You can type in a value between 0 and 100 %.
+Position 0 is either the top or the left-hand side at the icon of the Frame, position 100 the bottom or the
+right-hand side at the icon.
+Plant Simulation uses the value you specify, when you activate File > Preferences > General > Connect
+Objects Automatically.
+Connecting objects automatically only works, if the exit of FrameA and the entrance of FrameB are not
+more than three pixels apart.
+SimTalk
+Position [SimTalk] - Interface
+See also
+Connect Objects Automatically [model settings]
+Position in % [Interface]
+11-1552 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit [Interface]
+Select to which of its successors the object moves the MU on the tab Exit.
+Remarks
+Note
+If Plant Simulation determines the n-th successor of an object, for example with print
+MyStation.succ(n) and if the n-th successor is an Interface, Plant Simulation does not return the
+Interface itself, but any successor of the Interface according to the Exit strategy of the Interface.
+If you select a non-blocking exit strategy, Plant Simulation returns the next available successor
+according to the exit strategy or it returns VOID, when no successor can receive parts.
+When the Interface has a single successor, Plant Simulation returns this successor, even if you selected
+a non-blocking exit strategy and if the successor is occupied or failed/paused.
+The Interface shows the number of the next selected exit (next Aimed Successor) provided you already
+determined it, for example by calling the method succ for the successor object.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Tab Exit [Interface]
+Plant Simulation Help 11-1553
+Unpublished work. © 2026 Siemens
+
+See also
+Tab Exit [general description]
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit [Interface]
+11-1554 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-1555
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Attributes and Methods [on View menu]
+External Connections
+Forward Blocking List
+SimTalk
+updateDialog [SimTalk]
+Navigate Menu
+11-1556 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+External Connections
+Opens a table displaying the paths of the external connections in the Frame in which the Interface object
+is located.
+Remarks
+The column Connector designates the Connector at the exit of the Frame.
+The column Object designates the object name of the succeeding object.
+Instead, you can also click the Interface with the right mouse button in the Frame and select Open
+External Connections List on the context menu.
+See also
+Refresh [on View menu]
+Context menu > Open External Connections List
+Context menu > Show External Connected Objects
+External Connections
+Plant Simulation Help 11-1557
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-1558 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Interface
+Methods of the Interface
+The Interface provides the Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Help Menu
+Plant Simulation Help 11-1559
+Unpublished work. © 2026 Siemens

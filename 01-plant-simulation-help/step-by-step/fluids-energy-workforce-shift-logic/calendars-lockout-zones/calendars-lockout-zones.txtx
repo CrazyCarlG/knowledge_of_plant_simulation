@@ -1,0 +1,487 @@
+• Finally, open the EventController and click Start/Stop Simulation. As the Exporter can only work at
+one station at a time, and because the stations Station1 and Station3 share Exporter1, short standstills
+occur. Station1 has to wait until Station3 releases ExporterJob1, and thus is blocked. Station3 in turn
+has to wait until Station1 releases Exporter1, and thus is Waiting. All stations receive the service Setup
+from Exporter3, which does not cause a problem as it is needed once only for each station.
+You can also click the tab Statistics and view the most important data, which the object collected.
+Back to Model Workers with Importer, Broker, and Exporter
+Modeling a Shift System
+Model a Shift System
+When creating your simulation model, you will, more than likely, also have to integrate the shift system
+that applies to your plant. You can quickly and easily define these shifts with the object ShiftCalendar.
+The ShiftCalendar 
+  can control the working hours as well as the paused times, the planned times,
+and the unplanned times of these material flow objects: Frame 
+ , Station 
+ , ParallelStation 
+ ,
+AssemblyStation 
+ , DismantleStation 
+ , Buffer 
+ , PlaceBuffer 
+ , Store 
+ , Sorter 
+ , Conveyor 
+ ,
+AngularConverter 
+ , Turntable 
+ , Turnplate, Track 
+ , TwoLaneTrack 
+ , Source 
+ , Drain 
+ , WorkerPool
+, and Exporter 
+ .
+Modeling a Shift System
+Plant Simulation Help 10-559
+Unpublished work. © 2026 Siemens
+
+Naturally, you can also control Frames in which you modeled components of your overall plant, with
+the ShiftCalendar. Here you use Methods as unplanned time and paused time controls of that Frame to
+propagate the shift settings to the objects, which you inserted into this Frame.
+The ShiftCalendar can control the working hours as well as the paused times, the planned times, and the
+unplanned times of these fluid objects: FluidSource 
+ , Mixer 
+ , Portioner 
+ , and DePortioner 
+ .
+You can use the method schedule to make the ShiftCalendar set the date and time to start or to finish the
+production process.
+Starting and Ending a Shift
+When a ShiftCalendar starts a shift, it sets the attribute Unplanned of the material flow objects and of
+any of the Frames at controls to false, i.e., it deactivates unplanned times. If need be, you can program an
+Unplanned Control that executes other actions, which your modeling situation requires.
+The statistics of the material flow objects then starts to collect the unplanned time. This is the time when a
+resource is not planned to work.
+When you define shifts that are active from 6 o’clock in the morning until 10 o’clock at night, for example,
+the planned time lasts from 6 o’clock to 22 o’clock. The unplanned time lasts from 22 o’clock to 6 o’clock
+the following morning.
+When a ShiftCalendar finishes a shift, it sets the attribute Unplanned of the material flow object and
+Frames it controls to true, i.e., it activates unplanned times. Then, the objects stop processing the current
+part and release all services.
+Starting and Ending a Break
+When a ShiftCalendar starts a break, it sets the attribute Pause of the material flow objects and of the
+Frames it controls to true, i.e., it activates pauses. For the material objects activating a pause also affects
+statistics. For Frames Plant Simulation only changes the state of the attribute. If need be, you can program
+a Pause Control for your Frames that executes the actions your modeling situation requires.
+When a ShiftCalendar ends a break, it sets the attribute Pause of the material flow object and Frames it
+controls to false, i.e., it deactivates pauses. For the Frames you can react to the end of a pause in a pause
+control that executes the actions your modeling situation requires.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Starting and Ending a Shift
+10-560 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Go to Define Shifts with the ShiftCalendar
+Go to Pause Material Flow Objects and Frames
+Back to Modeling the Material Flow
+Defining Shifts with the ShiftCalendar
+Define Shifts with the ShiftCalendar
+You can define the settings for the entire shift system in the ShiftCalendar.
+You can insert the ShiftCalendar into your simulation model from the folder Resources in the Class Library
+or from the toolbar Resources in the Toolbox.
+You can define the settings for the entire shift system in the ShiftCalendar 
+ .
+Defining Shifts with the ShiftCalendar
+Plant Simulation Help 10-561
+Unpublished work. © 2026 Siemens
+
+You can:
+• Specify the Names of the Shifts, the Respective Times and Days
+• Specify Times During Which the Plant Works Part of the Time
+• Specify the Stations Which the ShiftCalendar Controls
+• Schedule Date and Time to Start or Finish the Production Process
+Once you have entered all the settings for the shifts, you have to select the check box Active, so that Plant
+Simulation uses the shifts in your simulation model.
+Compare Pause Material Flow Objects and Frames
+Back to Model a Shift System
+Specify the Names of the Shifts, the Respective Times and Days
+You can specify the names of the shifts, the respective times and days.
+Before you can type in data, click the Inheritance check box so that it looks like this 
+ .
+Type the data pertaining to one shift into the cells of one row.
+• Type the names of the different shifts into the cells below Shift. You might, for example, enter Morning
+shift, Day shift, Evening shift, Graveyard shift, etc.
+• Type the times at which the shifts start into the cells below From. Enter a time between 0:00 o’clock
+and 24:00 o’clock. You can only enter hours and minutes, not hours, minutes and seconds.
+◦ To create a shift located within one day, type in a greater number for the time it ends than for
+the time it starts. You might, for example, define a Morning shift that starts at 6:00 o’clock in the
+morning and ends at 14:00 o’clock on the same day.
+Specify the Names of the Shifts, the Respective Times and Days
+10-562 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ To create a shift that spans two days, type in a smaller number for the time it ends than for the time
+it starts. You might, for example, define a Graveyard shift that starts at 22:00 o’clock at night on one
+day, and ends at 6:00 o’clock in the morning on the next day.
+• Type the times at which the shifts end into the cells below To. Enter a time between 0:00 o’clock and
+24:00 o’clock. You can only specify hours and minutes, not hours, minutes and seconds.
+• To select the individual days on which the shift in the row is active, click in the cells below the days of
+the week.
+You might, for example:
+◦ Define a Morning shift that works from Monday up to and including Saturday.
+◦ Define an Evening shift that works from Monday up to and including Friday.
+• Type the times of the breaks for each shift into the cells below Pauses. Enter the hour and the minute
+when the break starts, a hyphen and the hour and minute the break ends. When you define several
+breaks during one work day, separate them with a semicolon.
+To define a coffee break from 9 o’clock to a quarter past 9 o’clock, and a lunch break from 12 o’clock to a
+quarter till 1 o’clock, enter 9:00-9:15;12:00-12:45.
+To make the ShiftCalendar check if the values you entered for the breaks are plausible or not and if you
+used the correct format to enter the break times, click Apply.
+You can also import the settings for the individual shifts, which you saved as a tab-delimited text file or
+which you received from factory management. Type in the data, so that it matches the screenshot below.
+Or you can export a shift, which you defined, and then import it into another simulation model. To do so,
+right-click in the list field and select Export or Import on the context menu.
+Compare Context Menu of Embedded Lists
+Back to Define Shifts with the ShiftCalendar
+Specify Times During Which the Plant Works Part of the Time
+You can specify times during which the plant works part of the time.
+Specify Times During Which the Plant Works Part of the Time
+Plant Simulation Help 10-563
+Unpublished work. © 2026 Siemens
+
+Before you can type in data pertaining to public holidays, retooling periods and times during which the
+plant only works part of the time, click the check box Inheritance, so that it looks like this 
+ .
+• To type the date when your plant starts not working into the cells below Date From:
+◦ Double-click into the cell and click the down arrow 
+ .
+◦ Select a date in the calendar. Click the right or left buttons to move to another month.
+To designate an entire day as a day-off, only type in a start date and no end date (Date To), and no
+Reduce Time To.
+• To type the date when your plant stops not working into the cells below Date To:
+◦ Double-click into the cell and click the down arrow 
+ .
+◦ Select a date in the calendar. Click the right or left buttons to move to another month.
+• To designate a single day on which your plant only works part of the time, type its date in the cell in the
+column Date From. Type the hour and the minute when the reduced working time starts, a hyphen and
+the hour and minute the reduced time ends into the cells below Reduce Time To.
+If your plant only works half a day on Christmas Eve, for example the shifts from midnight to noon, you
+would type 0:00 - 12:00 into the cell Reduce Time To.
+Note
+The ShiftCalendar combines the reduced time and the definition of the shifts for a day. If, for example,
+the start time of a day with a reduced working time falls on a break, then this work day starts with a
+break.
+• Type a description of the event of why your plant does not work into the cells below Comment.
+You can also import a calendar, which you saved as a tab-delimited text file or which you received from
+factory management. Type in the data, so that it matches the screenshot below. Or you can export a
+Specify Times During Which the Plant Works Part of the Time
+10-564 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+calendar you defined and then import it into another simulation model. To do so, right-click in the list field
+and select Export or Import on the context menu.
+Back to Define Shifts with the ShiftCalendar
+Specify the Stations Which the ShiftCalendar Controls
+You can specify the stations which the ShiftCalendar controls.
+Enter the name of any of the built-in material flow objects, or enter the name of a Frame you used to
+model a machine, whose working hours you would like to control with the ShiftCalendar into the cells of
+the list.
+This automatically enters the ShiftCalendar:
+• Into the dialog Select Shift Calendar that the command Select Shift Calendar on the Frame ribbon tab
+of the Frame opens.
+• Into the text box Shift calendar on the tab Controls of the material flow object.
+Specify the Stations Which the ShiftCalendar Controls
+Plant Simulation Help 10-565
+Unpublished work. © 2026 Siemens
+
+Back to Define Shifts with the ShiftCalendar
+Schedule Date and Time to Start or Finish the Production Process
+You can schedule date and time to start or finish the production process with the method schedule.
+Use the method schedule to set the date and the time to start or to finish the production process. We
+distinguish between:
+• Forward scheduling, beginning from the start date forward into the future, and
+• Backward scheduling, which computes the start date going backward in time from the demand date.
+Normally you start with the demand date, and compute the start date through backward scheduling. If this
+start date is located in the past though, you have to recompute the dates beginning with the present time
+and forward-schedule the end date.
+Schedule Date and Time to Start or Finish the Production Process
+10-566 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In our example below we programmed the method schedule to compute the end date of two jobs taking
+into account the shifts we defined in the ShiftCalendar.
+The source code looks like this:
+var startTime := str_to_dateTime( "4.1.2013 0:00" )
+var durationTime := str_to_time( "10:00:00.0" )
+var EndTime := ShiftCalendar.schedule( startTime, durationTime, "forward" )
+print "StartDate: ", startTime, "   Duration: ", durationTime, "   EndDate: 
+", EndTime
+startTime := str_to_dateTime( "20.12.2013 0:00" )
+durationTime := str_to_time( "19:00:00.0" )
+EndTime := ShiftCalendar.schedule( startTime, durationTime, "forward" )
+print "StartDate: ", startTime, "   Duration: ", durationTime, "   EndDate: 
+", EndTime
+The first job starts on January 4, 2013 at midnight and takes 10 hours to finish. The second job starts on
+December 12, 2013 and takes 19 hours. We want to know on what days and at which times the parts will
+be all processed, considering the morning and day shifts we defined in the ShiftCalendar.
+We also programmed the Method to print the results of its computations to the Console.
+Back to Define Shifts with the ShiftCalendar
+Schedule Date and Time to Start or Finish the Production Process
+Plant Simulation Help 10-567
+Unpublished work. © 2026 Siemens
+
+Pausing Material Flow Objects and Frames
+Pause Material Flow Objects and Frames
+The ShiftCalendar interacts with the material flow objects and the Frames it controls by changing their
+Paused/Planned/Unplanned state.
+One of these objects is:
+• Paused if it is not processing parts due to a pause. It resumes processing once you terminate the pause,
+either by selecting Planned from the drop-down list or by setting its attribute Pause to false.
+Note
+When a station fails, and a pause occurs during the failure, the failure time of the station will still be
+consumed, although the station is paused. Statistics counts the times during which these two states
+overlap as paused time. Resetting your model removes both failures and pauses of the object.
+• Unplanned if it is not scheduled to work during the shifts which you defined in the ShiftCalendar.
+• Planned if it is scheduled to work during the shifts which you defined in the ShiftCalendar. The
+scheduled/planned time is the processing time minus the times of the breaks.
+We distinguish between:
+• Paused Material Flow Objects and
+• Paused Frames
+Back to Model a Shift System
+Paused Material Flow Objects
+The ShiftCalendar interacts with the material flow objects by changing their paused state according to the
+shifts you defined. During a simulation run the dialog of these objects also reflects this by selecting the
+present state in the drop-down list.
+Pausing Material Flow Objects and Frames
+10-568 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+When it is paused, the material flow object does not receive any mobile parts. MUs can exit the object,
+when you program a Method to make them do so. Plant Simulation stops set-up and processing until the
+end of the pause or of the unplanned time.
+The unplanned state is identical to the paused state. The only difference is how Plant Simulation counts
+the internal statistics of the objects. When you define shifts that are active from 6 o’clock in the morning
+until 10 o’clock at night, for example, the planned time lasts from 6 o’clock to 22 o’clock. The unplanned
+time lasts from 22 o’clock to 6 o’clock the following morning.
+When it is planned/scheduled to work, the object receives and processes MUs and moves them on to the
+succeeding object in the material flow.
+Back to Pause Material Flow Objects and Frames
+Paused Frames
+You can pause a Frame with its attributes Pause and Unplanned.
+As opposed to the material flow objects, which you can also pause manually, you can only change the
+paused and the unplanned states of the Frame with its attributes Pause and Unplanned.
+In addition, you can program a pause and/or an unplanned time control, both of which activate a Method
+in changing the value of the attribute.
+Paused Frames
+Plant Simulation Help 10-569
+Unpublished work. © 2026 Siemens
+
+Example of a Pause Control
+You can change the paused state of the Frame by assigning the value true or false to the attribute
+Pause. Use the anonymous identifier ? to access the object from within a control.
+Plant Simulation executes the Pause Control, whenever the paused state of the Frame changes. When
+you get the paused state within the Method, it shows the state after the change.
+The source code looks like this:
+print "Current pause ", current.pause
+MyStation.pause := current.pause
+var shift := root.ShiftCalendar.getCurrShift
+print "Current shift: ", shift
+if not current.unplanned 
+   if current.pause 
+      current.currIcon := "pause"
+   else
+       current.currIcon := "working"
+   end
+end 
+Example of a Pause Control
+10-570 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example of an Unplanned Control
+Plant Simulation executes the Unplanned Control, whenever the unplanned state of the Frame changes,
+i.e., whether the Frame is not scheduled to work during the time you entered or whether it is scheduled to
+work.
+You can change the unplanned state by assigning the value true or false to the attribute Unplanned.
+Use the anonymous identifier ? to access the object from within a control.
+The source code looks like this:
+print "Frame unplanned: ", current.unplanned
+MyStation.unplanned := current.unplanned
+if current.unplanned 
+   current.currIcon := "unplanned"
+else
+   if current.pause 
+      current.currIcon := "pause"
+   else
+      current.currIcon := "working"
+   end
+end
+Back to Pause Material Flow Objects and Frames
+Modeling a Lockout Zone
+Model a Lockout Zone
+The LockoutZone combines a group of material flow objects. If one of these stations fails, all other stations
+that are part of the lockout zone stop processing their parts.
+You have to define failure profiles for at least one of the stations assigned to the LockoutZone. As soon as
+one of the stations fails, the LockoutZone stops all processing operations of all assigned stations. You can
+select if it stops the processing operations immediately or when the required service arrives.
+The stations only start processing parts again after all failures were removed. They then only use up
+the respective remaining processing time. You can assign any of the built-in Material Flow Objects or a
+station you modeled in a Frame to the LockoutZone.
+You can insert the LockoutZone 
+  into your simulation model from the folder Resources in the Class
+Library or from the toolbar Resources in the Toolbox.
+Example of an Unplanned Control
+Plant Simulation Help 10-571
+Unpublished work. © 2026 Siemens
+
+You can:
+• Specify the Stations Which the LockoutZone Stops
+• Create a Failure Profile for One of the Stations
+• Stop the Associated Stations Immediately After a Failure
+• Stop the Associated Stations When the Repair Man Arrives
+• Use a Stop Processing Control
+• Use a Resume Processing Control
+Go to Stopped Material Flow Objects and Frames
+Back to Modeling the Material Flow
+Specify the Stations Which the LockoutZone Stops
+In our sample model the processing stations Station2, Station3, and Station4 are part of the lockout
+zone. If Station3 fails, the lockout zone stops the processing operations of Station2 and Station4.
+The percentages of the stopped time of Station2 and Station4 have to match the percentage of the Failed
+time of Station3. The total availability of the stations within the lockout zone matches the availability of
+Station3.
+To add a station as a resource to the lockout zone:
+• Drag the icon of that object, in our case Station2, over the icon of the LockoutZone and drop it there.
+• Repeat this with Station3 and Station4.
+Specify the Stations Which the LockoutZone Stops
+10-572 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To clarify which objects are part of the lockout zone, you might, for example, insert a Cuboid into the
+Frame and assign a Material to it. Proceed as follows:
+• Click the Cuboid on the ribbon tab Edit. Type in a small value for the Dimension Z, the height of the
+Cuboid.
+• Insert the Cuboid above Station2 and press the M key to show the manipulators.
+• Click the bottom right corner of the Cuboid and drag it, so that it covers the LockoutZone and the
+Stations.
+Specify the Stations Which the LockoutZone Stops
+Plant Simulation Help 10-573
+Unpublished work. © 2026 Siemens
+
+• As our Cuboid overlaps the captions of the objects, we move it, so that they become visible. Select
+Station1, press the spacebar and change to the tab Captions in the dialog Edit 3D Properties. We
+selected -1.35 as the Y position for the three affected Stations.
+• We finally have to adjust the position of the caption of the LockoutZone and assign a Material/color to
+the Cuboid.
+Specify the Stations Which the LockoutZone Stops
+10-574 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The result looks like this:
+Back to Model a Lockout Zone
+Create a Failure Profile for One of the Stations
+To make the LockoutZone stop the processing operations of the stations it controls, we have to create a
+failure profile for one of the stations.
+To make one of the stations, in our example Station3, fail, proceed as follows:
+• Click the tab Failures and click New.
+• Enter an availability and a mean time to repair. We entered an availability of 85 percent and a mean
+time to repair of 15 minutes.
+Create a Failure Profile for One of the Stations
+Plant Simulation Help 10-575
+Unpublished work. © 2026 Siemens
+
+• Click OK to close the dialog.
+Back to Model a Lockout Zone
+Stop the Associated Stations Immediately After a Failure
+To make the LockoutZone stop the processing operations of the stations it controls immediately, select the
+Stop mode > Stop immediately.
+The LockoutZone then immediately stops the processing operations of Station2 and Station4 as soon as
+Station3 fails. Plant Simulation only stops the stations that are part of the LockoutZone, but none of the
+other stations in the model!
+Stop the Associated Stations Immediately After a Failure
+10-576 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Then, check the statistics values of the stations, which you assigned to the LockoutZone:
+• Open the dialogs of Station2, Station3, and Station4 and change to the tab Statistics.
+• You’ll notice that the stopped percentages of Station2 and Station4 match the failed percentage
+of Station3. This means that the overall availability ofStation2, Station3, and Station4 matches the
+availability of the failed station, namely Station3.
+The statistics report show additional statistics data about the stopped and failed times.
+To open it, select the stations in the Frame and press F6.
+Stop the Associated Stations Immediately After a Failure
+Plant Simulation Help 10-577
+Unpublished work. © 2026 Siemens
+
+Back to Model a Lockout Zone
+Stop the Associated Stations When the Repair Man Arrives
+To make the LockoutZone stop the processing operations of the stations it controls once the service
+technician, who repairs the failed stations, arrives, select the Stop mode > Stop when Service arrives.
+Stop the Associated Stations When the Repair Man Arrives
+10-578 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In our example the LockoutZone stops the processing operations of the assigned stations, namely
+Station2, Station3, and Station4, when the repair service, which the failed Station3 requested, is
+assigned.
+Proceed as follows to create our simple sample model:
+• Insert the stations you want to simulate and drag these stations over the icon of the LockoutZone to
+assign them. In our case these are Station2, Station3, and Station4.
+• As a service technician is to repair the failed machines, add a Workplace to them and connect the
+Workplace with the WorkerPool with a footpath.
+Stop the Associated Stations When the Repair Man Arrives
+Plant Simulation Help 10-579
+Unpublished work. © 2026 Siemens
+
+• As we want Station3 to fail, define a failure profile for it.
+• To make a service technician repair Station3 once it fails, insert a Broker into the model and assign it on
+the sub-tab Failure. Then activate the failure importer. There is no need to change any other settings.
+Stop the Associated Stations When the Repair Man Arrives
+10-580 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Then, run the simulation by clicking 
+  on the Home ribbon tab. Once Station3 fails, the Worker walks
+from the WorkerPool to the failed station on the footpath. Once our service technician has reached
+the Workplace attached to the failed station Station2, the LockoutZone stops the associated stations,
+namely Station2 and Station4.
+Back to Model a Lockout Zone
+Use a Stop Processing Control
+If you want to use your own logic when one of the stations assigned to the LockoutZone fails, you have to
+program a Stop Control.
+In our example we write the following information into the table ReportStopping.
+Use a Stop Processing Control
+Plant Simulation Help 10-581
+Unpublished work. © 2026 Siemens
+
+Within the Stop Control the anonymous identifier @ designates the triggering station, while the
+anonymous identifier ? designates the LockoutZone.
+The source code looks like this:
+var row:integer := ReportStopping.ydim + 1
+ReportStopping["First Failed Station",row] := @.name
+ReportStopping["Start Stopping",row] := eventcontroller.simTime
+Back to Model a Lockout Zone
+Use a Resume Processing Control
+If you want to use your own logic when all failures of all assigned stations were repaired and the stations
+can thus continue processing parts, you have to program a Resume Control.
+In our example we write the following information into a table.
+Use a Resume Processing Control
+10-582 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Within the Resume Control the anonymous identifier @ designates the triggering station, while the
+anonymous identifier ? designates the LockoutZone.
+The source code looks like this:
+var row: integer := ReportStopping.ydim
+ReportStopping["Last Failed Station",row] := @.name
+ReportStopping["End Stopping",row] := eventcontroller.simTime
+ReportStopping["Duration",row] := ReportStopping["End Stopping",row] - 
+ReportStopping["Start Stopping",row]
+The result of our control looks like this:
+Use a Resume Processing Control
+Plant Simulation Help 10-583
+Unpublished work. © 2026 Siemens
+
+Back to Model a Lockout Zone
+Stopped Material Flow Objects and Frames
+The LockoutZone stops the assigned material flow objects by setting their attribute Stopped to true.
+Stopped Material Flow Objects and Frames
+10-584 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The LockoutZone stops an assigned Frame by setting its attribute Stopped to true.
+Back to Model a Lockout Zone
+Stopped Material Flow Objects and Frames
+Plant Simulation Help 10-585
+Unpublished work. © 2026 Siemens

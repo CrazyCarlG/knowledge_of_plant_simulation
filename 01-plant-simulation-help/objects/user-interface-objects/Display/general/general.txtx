@@ -1,0 +1,348 @@
+Transparent [SimTalk] - Comment
+Makes the background of the object designated by <Path> transparent in the Frame (true) or not
+transparent (false).
+Type
+Attribute
+Syntax
+<Path>.Transparent:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify true to show the Comment in the color that you selected as the Font Color on the background of
+the Frame.
+Specify false to show the space around the text in white.
+Example
+MyComment.Transparent := false
+See also
+Transparent [check box] - Comment
+Font Color [Comment]
+Display
+Display [object]
+Use the object Display for presenting current data and results of the simulation run. The Display shows a
+value, for example of an attribute, at all times throughout the entire simulation run.
+Image
+Transparent [SimTalk] - Comment
+11-4594 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+If the Display is not active, Plant Simulation shows its icon in the Frame, into which you inserted it. If it
+is active, the Display shows a value. In Sample Mode it updates its display periodically, in Watch mode it
+update it when the displayed value changes.
+The Display shows the value either as text (string), as a bar or as a slice of a pie. Bar and pie display are
+only supported for numerical values. They are easy to comprehend, but not very well suited if accuracy is
+important.
+For bar or pie representation the Display shows the value in relation to a specified range. An empty bar/pie
+indicates values less-than or equal to the lower bound of the range. A full bar/pie represents values beyond
+or equal to the upper bound of the range. Modify the overall size of the bar/pie representation by dragging
+its outline with the left mouse button while holding both the Shift and the Ctrl keys down.
+The Display shows the actual minimal and maximal values as dashed lines which is not very accurate. In
+Bar and Pie mode it shows the current values in the text boxes Minimum and Maximum on the tab Data.
+You can also show the numerical value of a Display in an HtmlReport, compare Display an Object of Type
+Display.
+Note
+The Display only shows values if MUs and States [Home ribbon] is activated 
+ .
+If MUs and States is deactivated, Plant Simulation prevents updating a number of values during the
+simulation, for example of objects of type Variable or Display.
+Drag-and-Drop for Display Objects
+Use drag-and-drop to accomplish these tasks:
+To Drag To the
+Show the statistics of a material
+flow object
+the material flow object Display
+Show the current value of a
+Variable
+the Variable Display
+To show a tooltip with information about the Display, hover with the mouse over it.
+Display [object]
+Plant Simulation Help 11-4595
+Unpublished work. © 2026 Siemens
+
+To change the length of the graphic and the anchor points of the Display, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Display to your simulation model, click 
+  Manage Class Library > Basic Objects >
+UserInterface > Display on the Home ribbon tab.
+See also
+Show Values During the Simulation with the Display
+Dialog Box of the Display
+Dialog Box of the Display
+Double-click the icon of the Display to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Dialog Box of the Display
+11-4596 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Active [check box] - Display
+Dialog Box of the Display
+Plant Simulation Help 11-4597
+Unpublished work. © 2026 Siemens
+
+Active [check box] - Display
+To activate the display of the Display, select this check box.
+Remarks
+If the Display is not active, Plant Simulation shows its Name in the Frame instead of a Value.
+Active Not Active
+To deactivate it, clear the check box or select Deactivate on the context menu.
+Instead, you can also right-click the Display object in the Frame and select Activate on the context menu.
+SimTalk
+Active [SimTalk] - Display
+Tab Data
+Tab Data
+The tab Data provides the settings listed in the table of contents to the left.
+Active [check box] - Display
+11-4598 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Path [text box] - Display
+Click the ellipsis button and select the attribute or the method in the dialog Select Object whose value the
+Display displays.
+Remarks
+If you want to show the value of a global variable, you can type in the path to the Variable itself. You can
+also type in an expression, such as buffer.NumMU+1.
+The Display supports the data types boolean, integer, real, string, object, time, money, length, weight,
+speed, date, and dateTime. If the path you type in is invalid, the background of the text box changes to
+red.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+SimTalk
+Path [SimTalk] - Display
+See also
+Select Object [for controls]
+Path [text box] - Display
+Plant Simulation Help 11-4599
+Unpublished work. © 2026 Siemens
+
+Comment [text box] - Display
+Type a brief description of the displayed value into the text box Comment.
+Remarks
+You might, for example, type in the name of the attribute that the Display displays, such as Fill Level
+Buffer.
+The Display shows this text below the value in the Frame window.
+SimTalk
+Comment [SimTalk] - Display
+Comment [text box] - Display
+11-4600 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Mode [drop-down list] - Display
+Select the Operating Mode of the Display: Sample or Watch.
+ 
+Remarks
+You can select one of these settings:
+• Sample mode updates the display with the frequency you type into the text box Interval.
+• Watch mode updates the displayed value each and every time the value changes. If the path and the
+value you typed in is not watchable, Plant Simulation does not update the display.
+The column Watchable in the window Show Attributes and Methods shows which attributes and
+read-only attributes Plant Simulation can watch.
+SimTalk
+Sampler [SimTalk]
+SmpPeriod [SimTalk] - Display
+See also
+DisplayType [SimTalk]
+update [SimTalk] - Display
+Mode [drop-down list] - Display
+Plant Simulation Help 11-4601
+Unpublished work. © 2026 Siemens
+
+Interval [text box] - Display
+Select Sample Mode to show the text box Interval. Type in the update frequency of the display into the
+text box. The format is the normal time format.
+SimTalk
+SmpPeriod [SimTalk] - Display
+See also
+Mode [drop-down list] - Display
+Interval [text box] - Display
+11-4602 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Value [Display]
+Select Bar or Pie mode to show the Current Value.
+SimTalk
+Value [SimTalk] - Display
+Value [Display]
+Plant Simulation Help 11-4603
+Unpublished work. © 2026 Siemens
+
+Minimum [Display]
+Select Bar or Pie mode to show the Minimum of the reached value.
+SimTalk
+GetMinimum [SimTalk]
+GetMaximum [SimTalk]
+resetMinMax [SimTalk]
+Minimum [Display]
+11-4604 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Maximum [Display]
+Select Bar or Pie mode show the Maximum of the reached value.
+SimTalk
+GetMaximum [SimTalk]
+GetMinimum [SimTalk]
+resetMinMax [SimTalk]
+Maximum [Display]
+Plant Simulation Help 11-4605
+Unpublished work. © 2026 Siemens
+
+Reset Values [button]
+To reset the displayed minimum and maximum values shown on the tab, click this button.
+SimTalk
+resetMinMax [SimTalk]
+Tab Display
+Tab Display
+The tab Display provides the settings listed in the table of contents to the left.
+Reset Values [button]
+11-4606 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Type [drop-down list] - Display
+Select how the Display displays the data it records.
+Remarks
+You can select one of these settings:
+• Text
+Shows the value as text. For floating point values you can type in the number of decimal places. The
+Display can show up to 15 decimal places. For the default setting -1 it shows all existing places. Type in
+a positive value to show this number of places in the Frame.
+Type the text into the text box Comment on the tab Data.
+• Bar and Pie
+Maps the value in relation to the Minimum and the Maximum of the range that you specify. They
+visualize values inside the range by the height of a bar or a filled segment of the pie. An empty bar/pie
+corresponds to values below or equal to the lower bound. A full bar/pie represents values above or equal
+to the upper bound. To change the height and the width of the bar/pie graphic, hold down the Shift and
+die Ctrl keys and drag the border of the graphic with the left mouse button.
+Plant Simulation converts the current value to the range, whose bounds you type in and shows it
+averaged.
+Type in the Maximum Value of the displayed range of values.
+Type in the Minimum Value of the displayed range of values.
+Type [drop-down list] - Display
+Plant Simulation Help 11-4607
+Unpublished work. © 2026 Siemens
+
+The Display shows the actual Minimum and Maximum values as dotted lines in the Frame window.
+This might not be as accurate as you need them to be. The Display shows the current values on the tab
+Data in the text boxes Minimum and Maximum.
+Note
+The Display can only show numerical values as a bar or a piece of a pie. These are easy to understand
+but not necessarily suited if accuracy is important.
+To reset the values on the tab to 0, click Reset Values on the tab Data.
+Text Bar Pie
+SimTalk
+DisplayType [SimTalk]
+MinVal [SimTalk]
+MaxVal [SimTalk]
+See also
+GetMaximum [SimTalk]
+GetMinimum [SimTalk]
+resetMinMax [SimTalk]
+Type [drop-down list] - Display
+11-4608 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Font Size [drop-down list] - Display
+Select the font size of the text which the Display displays for the Type > Text.
+SimTalk
+Font [SimTalk] - Display
+See also
+Type [drop-down list] - Display
+Font Size [drop-down list] - Display
+Plant Simulation Help 11-4609
+Unpublished work. © 2026 Siemens
+
+Decimal Places [text box] - Display
+If the Type > Text shows floating point values you can type in the number of decimal places.
+Remarks
+The Display can show up to 15 decimal places. For the default setting -1 shows all existing places. Type in a
+positive value to show this number of places in the Frame.
+SimTalk
+DecimalPlaces [SimTalk] - Display
+See also
+Type [drop-down list] - Display
+Decimal Places [text box] - Display
+11-4610 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Color [Display]
+To select the color of the text, which the Display shows, and the color of the outline of its display graphic,
+click the drop-down arrow.
+Remarks
+You can select one of the predefined colors, or you can click More Colors and click the Select button to
+select a color in the color matrix. Then click OK. Plant Simulation shows this color next to More Colors and
+uses it as the active color.
+SimTalk
+Color [SimTalk] - Display
+Color [Display]
+Plant Simulation Help 11-4611
+Unpublished work. © 2026 Siemens
+
+Transparent [check box] - Display
+To make the background of a Display, which you inserted into a Frame, transparent, select this check box.
+Remarks
+With a Transparent Background, the Display shows the space around the text in the color of the
+background image, or it shows the grid points of the Frame.
+To show the space around the text in white, clear the check box.
+Transparent Not transparent
+SimTalk
+Transparent [SimTalk] - Display
+Transparent [check box] - Display
+11-4612 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-4613
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-4614 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The commands are described under the View Menu.
+SimTalk
+updateDialog [SimTalk]
+View Menu
+Plant Simulation Help 11-4615
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The Tools Menu provides commands to access its functions.
+Edit Controls
+Edit Observers
+See also
+Tools Menu [general description]
+Tools Menu
+11-4616 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Display
+_Methods of the Display
+The Display provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-4617
+Unpublished work. © 2026 Siemens

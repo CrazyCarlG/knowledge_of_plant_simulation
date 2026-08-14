@@ -1,0 +1,97 @@
+str_to_time("10:00:00.0")                                            // 10 
+hours
+endDateAndTime := MyShiftCalendar.schedule(startDateAndTime,Duration, 
+"forward") // Monday 12:00
+See also
+Schedule Date and Time to Start or Finish the Production Process
+Read-Only Attributes of the ShiftCalendar
+_Read-Only Attributes of the ShiftCalendar
+The ShiftCalendar provides:
+• The read-only attributes listed in the table of contents to the left.
+• The Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Read-Only Attributes of the ShiftCalendar
+Plant Simulation Help 11-3515
+Unpublished work. © 2026 Siemens
+
+To query the value of a read-only attribute, you might, for example, type:
+print MyShiftCalendar.Unplanned
+_Read-Only Attributes of the ShiftCalendar
+11-3516 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GetCurrShift [SimTalk]
+Returns the name of the shift of the ShiftCalendar designated by <Path> that is currently active.
+Remarks
+This is the name you typed into the column Shift on the tab Shift Times.
+Type
+Read-only attribute
+Syntax
+<Path>.GetCurrShift → string
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type string.
+Example
+shift := root.MyShiftCalendar.GetCurrShift
+See also
+Tab Shift Times
+Shift [ShiftCalendar]
+GetCurrShift [SimTalk]
+Plant Simulation Help 11-3517
+Unpublished work. © 2026 Siemens
+
+Pause [SimTalk] - ShiftCalendar
+Returns if the ShiftCalendar designated by <Path> is paused (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.Pause → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print MyShiftCalendar.Pause
+See also
+Paused [state, material flow objects]
+Pause [SimTalk] - ShiftCalendar
+11-3518 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Unplanned [SimTalk] - ShiftCalendar
+Returns, if the ShiftCalendar designated by <Path> is unplanned (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.Unplanned → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print MyShiftCalendar.Unplanned
+See also
+Unplanned [state, material flow objects]
+Attributes of the ShiftCalendar
+_Attributes of the ShiftCalendar
+The ShiftCalendar provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Unplanned [SimTalk] - ShiftCalendar
+Plant Simulation Help 11-3519
+Unpublished work. © 2026 Siemens

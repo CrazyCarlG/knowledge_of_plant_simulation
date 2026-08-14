@@ -1,0 +1,162 @@
+LengthOfPipe [SimTalk]
+Returns the Length of the Pipe designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.LengthOfPipe → real
+Return Value
+The return value has the data type real.
+Is the length of the Pipe which you inserted into the Frame by clicking the left mouse button to set its first
+and its last point.
+Example
+print Pipe1.LengthOfPipe
+Attributes of the Pipe
+_Attributes of the Pipe
+The Pipe provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+LengthOfPipe [SimTalk]
+11-2700 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+Pipe.PipeOpened := true
+• To get the value of an attribute, you might, for example, type:
+print Pipe.PipeOpened
+posit := MyStation.Cont.XPos
+_Attributes of the Pipe
+Plant Simulation Help 11-2701
+Unpublished work. © 2026 Siemens
+
+ExitStrategy [SimTalk] - Pipe
+Sets how the flow rate of the Pipe designated by <Path> is going to be distributed to the succeeding fluid
+objects.
+Syntax
+<Path>.ExitStrategy:string
+Type
+Attribute
+Assignment Value
+You can assign a value of data type string.
+You can specify "Evenly distributed" or "Percentage".
+Example
+MyPipe.ExitStrategy := "Evenly distributed"
+See also
+Exit Strategy - Pipe
+ExitStrategy [SimTalk] - Pipe
+11-2702 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitStrategyPercentageValues [SimTalk] - Pipe
+Sets the proportional distribution of the flow rate of the Pipe designated by <Path> for the Exit Strategy >
+Percentage.
+Remarks
+Specify 0 in the cell of the respective successor to prevent that successor from receiving any material.
+If a successor cannot receive any material, because a succeeding Tank is full for example, the Pipe
+distributes the portion of that successor of the flow rate according to the percentages to the remaining
+successors.
+The sum of the percentages does not have to add up to 100%. Instead, the actual sum of the percentages
+of all successors, which can receive material, corresponds to a value of 100%. The percentages [40, 60],
+[0.4, 0.6], and [2, 3] are equivalent for example.
+Type
+Attribute
+Syntax
+<Path>.ExitStrategyPercentageValues:array
+Assignment Value
+You can assign a value of data type array.
+Example
+MyPipe.ExitStrategy := "Percentage"
+MyPipe.ExitStrategyPercentageValues := [20, 50, 30]
+See also
+Exit Strategy - Pipe > Percentage [Pipe]
+ExitStrategyPercentageValues [SimTalk] - Pipe
+Plant Simulation Help 11-2703
+Unpublished work. © 2026 Siemens
+
+OutflowRate [SimTalk] - Pipe
+Sets the outflow rate with which the material flows out of the Pipe designated by <Path> to the next object
+in the flow of materials.
+Remarks
+The default value -1 denotes that the Pipe uses the same outflow rate as its predecessor.
+The outflow rate is the amount of liters of the material that flows off in a second.
+Note
+This applies to a Pipe that is located directly after a FluidSource, a DePortioner, a Tank, or a Mixer.
+Note
+If you specify another value than the default value, Plant Simulation uses the specified Outflow Rate
+even if it is higher than the Outflow Rate of the predecessor.
+DePortioner
+The Outflow Rate enables you to create the effect that not all of the succeeding Pipes connected to a
+FluidSource, a Tank, a DePortioner, or a Mixer, have to have the same Outflow Rate.
+If the predecessor of the Pipe is another Pipe, Plant Simulation ignores the value. For this reason the text
+box is unavailable.
+This does not apply if the Pipe has a single successor and if the predecessor Pipe has a single successor as
+well. Thus, if several Pipes are arranged one behind the other, Plant Simulation uses the lowest specified
+value for all Pipes.
+Type
+Attribute
+Syntax
+<Path>.OutflowRate:real
+Assignment Value
+You can assign a value of data type real.
+OutflowRate [SimTalk] - Pipe
+11-2704 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+Pipe.OutflowRate := 1
+See also
+Outflow Rate [Pipe]
+OutflowRate [SimTalk] - Pipe
+Plant Simulation Help 11-2705
+Unpublished work. © 2026 Siemens
+
+PipeOpened [SimTalk]
+Opens the Pipe designated by <Path> so that materials can flow through it (true).
+Remarks
+Use PipeOpened to model a valve or a gate valve to open and to close the Pipe.
+To close the Pipe specify false. The Pipe then shows the state Pipe Closed in cyan.
+State vertical State horizontal
+Type
+Attribute
+Syntax
+<Path>.PipeOpened:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+Pipe.PipeOpened := true
+See also
+Pipe Opened [check box]
+PipeOpened [SimTalk]
+11-2706 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FluidSource
+FluidSource
+Use the object FluidSource to produce the ingredients of the product, either bulk goods or fluids, which are
+processed in the plant.
+Image
+Description
+Use the FluidDrain 
+  to remove the processed and mixed products from the plant.
+To change the length of the graphic and the anchor points of the FluidSource, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+To show a tooltip with information about the FluidSource, hover with the mouse over it.
+Add the Object to the Simulation Model
+To add the object FluidSource to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Fluids > FluidSource on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+FluidSource
+Plant Simulation Help 11-2707
+Unpublished work. © 2026 Siemens

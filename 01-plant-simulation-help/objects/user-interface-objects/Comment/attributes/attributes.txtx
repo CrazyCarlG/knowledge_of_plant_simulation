@@ -1,0 +1,182 @@
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyComment.UUID
+Attributes of the Comment
+_Attributes of the Comment
+The Comment provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the Comment
+11-4586 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyComment.Color := makeRGBColor(255,0,0)
+• To get the value of an attribute, you might, for example, type:
+print MyComment.font
+posit := Station.Cont.XPos
+_Attributes of the Comment
+Plant Simulation Help 11-4587
+Unpublished work. © 2026 Siemens
+
+BackgroundColor [SimTalk] - Comment
+Sets the Background Color of the Comment designated by <Path> which you inserted into a Frame.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.BackgroundColor:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyComment.BackgroundColor := makeRGBValue(100,100,100)
+MyComment.BackgroundColor := 6579300 // is the same as the color above
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Background Color [drop-down list] - Comment
+BackgroundColor [SimTalk] - Comment
+11-4588 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Color [SimTalk] - Comment
+Sets the Color with which Plant Simulation displays the text of the Comment designated by <Path> in the
+Frame.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.Color:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyComment.Color := makeRGBValue(255,0,0)
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Font Color [Comment]
+Color [SimTalk] - Comment
+Plant Simulation Help 11-4589
+Unpublished work. © 2026 Siemens
+
+Cont [SimTalk] - Comment
+Sets the Contents of the text box on the tab Comment of the Comment designated by <Path>.
+Remarks
+Enter a backslash \ to insert a line break.
+Type
+Attribute
+Syntax
+<Path>.Cont:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyComment.Cont := "Species: Aardvark\
+                 amount: 45 \
+                 weight: 780kg" // assign a multi-line comment
+SimTalk
+mu [SimTalk] - material flow objects
+See also
+Tab Comment [Comment]
+Cont [SimTalk] - Comment
+11-4590 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Font [SimTalk] - Comment
+Sets the Font Size with which Plant Simulation displays the Comment designated by <Path> in the Frame.
+Type
+Attribute
+Syntax
+<Path>.Font:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Small, 2 for Medium, 3 for Large, 4 for Extra Large.
+Example
+if MyComment.Font < 4 
+   MyComment.Font := MyComment.Font + 1
+See also
+Font Size [drop-down list] - Comment
+Font [SimTalk] - Comment
+Plant Simulation Help 11-4591
+Unpublished work. © 2026 Siemens
+
+SaveAsRichedit [SimTalk]
+Makes the Comment designated by <Path> save the contents of the text box in rich-text format (true) or
+not (false).
+Remarks
+Rich-text preserves all the formatting properties you applied.
+Type
+Attribute
+Syntax
+<Path>.SaveAsRichedit:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyComment.SaveAsRichedit := false
+See also
+Save the Content in Rich-text Format
+SaveAsRichedit [SimTalk]
+11-4592 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Text [SimTalk] - Comment
+Sets the comment text that the Comment designated by <Path> shows in the Frame.
+Remarks
+The text may also contain blanks and/or special characters.
+Type
+Attribute
+Syntax
+<Path>.Text:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyComment.Text := "Buffer utilization in %"
+See also
+Text [text box] - Comment
+Text [SimTalk] - Comment
+Plant Simulation Help 11-4593
+Unpublished work. © 2026 Siemens
+
+Transparent [SimTalk] - Comment
+Makes the background of the object designated by <Path> transparent in the Frame (true) or not
+transparent (false).
+Type
+Attribute
+Syntax
+<Path>.Transparent:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify true to show the Comment in the color that you selected as the Font Color on the background of
+the Frame.
+Specify false to show the space around the text in white.
+Example
+MyComment.Transparent := false
+See also
+Transparent [check box] - Comment
+Font Color [Comment]
+Display
+Display [object]
+Use the object Display for presenting current data and results of the simulation run. The Display shows a
+value, for example of an attribute, at all times throughout the entire simulation run.
+Image
+Transparent [SimTalk] - Comment
+11-4594 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,200 @@
+Read-Only Attributes of the EventController
+_Read-Only Attributes of the EventController
+The EventController provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print EventController.AbsSimTime
+Read-Only Attributes of the EventController
+Plant Simulation Help 11-1385
+Unpublished work. © 2026 Siemens
+
+AbsSimTime [SimTalk]
+Returns the current simulation time of the EventController designated by <Path> as an absolute time
+statement.
+Type
+Read-only attribute
+Syntax
+<Path>.AbsSimTime → dateTime
+Return Value
+The return value has the data type dateTime.
+Example
+print EventController.AbsSimTime // might return 22026-01-01 06:00:00.0000
+See also
+Time [EventController]
+AbsSimTime [SimTalk]
+11-1386 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GetNextEventTime [SimTalk]
+Returns the time at which the next event in the event list of the EventController designated by <Path> is
+scheduled to be executed.
+Type
+Read-only attribute
+Syntax
+<Path>.GetNextEventTime → time
+Return Value
+The return value has the data type time.
+Example
+print EventController.GetNextEventTime // might return 10.0000
+See also
+List of Events
+GetNextEventTime [SimTalk]
+Plant Simulation Help 11-1387
+Unpublished work. © 2026 Siemens
+
+IsFinished [SimTalk]
+Returns if the EventController designated by <Path> has stopped the simulation and has executed all
+endSim methods (true) or not (false).
+Remarks
+In contrast to the read-only attribute IsRunning the read-only attribute IsFinished only will become true
+after all endSim methods have been executed.
+Type
+Read-only attribute
+Syntax
+<Path>.IsFinished → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print root.EventController.IsFinished
+SimTalk
+endSim [SimTalk]
+IsRunning [SimTalk]
+IsFinished [SimTalk]
+11-1388 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsInitialized [SimTalk]
+Returns if the EventController designated by <Path> has been initialized (true) or not (false).
+Remarks
+Plant Simulation initializes the EventController if all the init methods, which expect an integer argument,
+are called with a value of 1 for init phase 1 and all the objects are initialized.
+This is, for example, the case, if a failure profile is active and all objects have calculated their first failure
+event, if the attribute HasInitValue of any Variable is set to true and the Initial Value has been reset, etc.,
+…
+Type
+Read-only attribute
+Syntax
+<Path>.IsInitialized → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print root.EventController.IsInitialized
+See also
+HasInitValue [SimTalk] - Variable
+InitValue [SimTalk] - Variable
+Initial Value [Variable]
+IsInitialized [SimTalk]
+Plant Simulation Help 11-1389
+Unpublished work. © 2026 Siemens
+
+IsResetting [SimTalk]
+Returns if the EventController designated by <Path> is being reset at the moment (true) or not (false).
+Remarks
+Plant Simulation sets IsResetting to true when you reset the simulation model with the EventController
+designated by <Path>.
+Plant Simulation sets it to false again as soon as all reset methods have been processed.
+Type
+Read-only attribute
+Syntax
+<Path>.IsResetting → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print EventController.IsResetting
+See also
+reset [SimTalk] - EventController
+IsResetting [SimTalk]
+11-1390 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsRunning [SimTalk]
+Returns if the EventController designated by <Path> is running at the moment (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.IsRunning → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print root.EventController.IsRunning
+SimTalk
+IsFinished [SimTalk]
+IsRunning [SimTalk]
+Plant Simulation Help 11-1391
+Unpublished work. © 2026 Siemens
+
+SimTime [SimTalk]
+Returns the current simulation time of the EventController designated by <Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.SimTime → time
+Watchable
+The read-only attribute is watchable.
+Note
+You can, for example, watch the SimTime value with an object of type Display or Chart. You should
+never use SimTime in a method, which affects the simulation, with a waituntil-instruction or a
+stopuntil-instruction.
+The time does not advance continuously, but jumps from event to event. If you activate the animation,
+Plant Simulation generates additional events so that the waituntil-instruction or stopuntil-instruction
+might be woken up at an earlier point in time than intended.
+Return Value
+The return value has the data type time.
+Examples
+param sensorID: integer, Front: boolean
+if @.ID = 1 
+   @.Speed := 0
+   print EventController.SimTime, " The first Transporter stopped."
+end
+print "Machine was deactivated at:",
+root.EventController.SimTime."
+See also
+Time [EventController]
+SimTime [SimTalk]
+11-1392 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+waituntil [SimTalk] and stopuntil [SimTalk]
+waituntil [SimTalk]
+stopuntil [SimTalk]
+Attributes of the EventController
+_Attributes of the EventController
+The EventController provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+EventController.AbsTimeFormat := true
+Attributes of the EventController
+Plant Simulation Help 11-1393
+Unpublished work. © 2026 Siemens

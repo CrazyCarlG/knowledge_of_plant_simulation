@@ -1,0 +1,172 @@
+Type
+Method
+Syntax
+<Path>.setAttributeList(AttributeList:table)
+Parameter
+The parameter AttributeList of data type table designates the path to a list or a variable of the same data
+type. Plant Simulation then copies the contents of the passed list to the target list of the Converter.
+Example
+Converter.setAttributeList(MyAttributes)
+SimTalk
+getAttributeList [SimTalk] - Converter
+See also
+Open List [button] - Converter
+Data Held in Tabular Form in Attributes [material flow objects]
+Strategy [drop-down list] - Converter
+Read-Only Attributes of the Converter
+_Read-Only Attributes of the Converter
+The Converter provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+Read-Only Attributes of the Converter
+Plant Simulation Help 11-2287
+Unpublished work. © 2026 Siemens
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print Converter.GetCurrentExit
+_Read-Only Attributes of the Converter
+11-2288 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+GetCurrentExit [SimTalk]
+Returns the number of the side at which the MU exits the Converter designated by <Path>.
+Remarks
+The figures below illustrate the sides depending on the direction in which you inserted the Converter into
+your simulation model. The numbers designate the side of the Converter at which the MU exits.
+Type
+Read-only attribute
+Syntax
+<Path>.GetCurrentExit → integer
+Return Value
+The return value has the data type integer.
+Example
+No := ?.GetCurrentExit
+GetCurrentExit [SimTalk]
+Plant Simulation Help 11-2289
+Unpublished work. © 2026 Siemens
+
+GetNextEntranceNumber [SimTalk]
+Returns the number of the side at which the next MU can enter the Converter designated by <Path>.
+Remarks
+The figures below illustrate the sides depending on the direction in which you inserted the Converter into
+your simulation model. The numbers designate the side of the Converter at which the MU exits.
+Type
+Read-only attribute
+Syntax
+<Path>.GetNextEntranceNumber → integer
+Return Value
+The return value has the data type integer.
+Example
+No := ?.GetNextEntranceNumber
+GetNextEntranceNumber [SimTalk]
+11-2290 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsUp [SimTalk] - Converter
+Returns if the Converter designated by <Path> is in the up position (true) or in the down position (false).
+Type
+Read-only attribute
+Syntax
+<Path>.IsUp → boolean
+Return Value
+The return value has the data type boolean.
+Example
+PosUpDown := MyConverter.IsUp
+You can also use the attribute IsUp to start the lifting process.
+Example
+MyConverter.IsUp := true
+IsUp [SimTalk] - Converter
+Plant Simulation Help 11-2291
+Unpublished work. © 2026 Siemens
+
+StatMovingEmptyPortion [SimTalk]
+Returns the portion of the statistics collection period during which the Converter designated by <Path>
+was raising or lowering itself and was not conveying a MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMovingEmptyPortion → real
+Return Value
+The return value has the data type real.
+Example
+print Converter.StatMovingEmptyPortion
+See also
+Tab Statistics [Converter]
+Moving Time [statistics report]
+StatMovingEmptyPortion [SimTalk]
+11-2292 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatMovingEmptyTime [SimTalk]
+Returns the total time during which the Converter designated by <Path> was raising or lowering itself and
+was not conveying a MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMovingEmptyTime → time
+Return Value
+The return value has the data type time.
+Example
+print Converter.StatMovingEmptyTime
+See also
+Moving Time [statistics report]
+StatMovingEmptyTime [SimTalk]
+Plant Simulation Help 11-2293
+Unpublished work. © 2026 Siemens
+
+StatMovingLoadedPortion [SimTalk]
+Returns the portion of the statistics collection period during which the Converter designated by <Path>
+was raising or lowering itself and was conveying a MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMovingLoadedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print Converter.StatMovingLoadedPortion
+See also
+Tab Statistics [Converter]
+Moving Time [statistics report]
+StatMovingLoadedPortion [SimTalk]
+11-2294 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatMovingLoadedTime [SimTalk]
+Returns the total time during which the Converter designated by <Path> was raising or lowering itself and
+was conveying a MU.
+Type
+Read-only attribute
+Syntax
+<Path>.StatMovingLoadedTime → time
+Return Value
+The return value has the data type time.
+Example
+print Converter.StatMovingLoadedTime
+See also
+Moving Time [statistics report]
+Attributes of the Converter
+_Attributes of the Converter
+The Converter provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatMovingLoadedTime [SimTalk]
+Plant Simulation Help 11-2295
+Unpublished work. © 2026 Siemens

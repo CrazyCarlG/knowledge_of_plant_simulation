@@ -1,0 +1,103 @@
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Connector
+_Methods of the Connector
+The Connector provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-1301
+Unpublished work. © 2026 Siemens
+
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+_Methods of the Connector
+11-1302 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+connect [SimTalk]
+Connects the specified objects within a Frame with the Connector designated by <Connector-Path>.
+Remarks
+The method connect also connects any end of a TwoLaneTrack with any end of another TwoLaneTrack. To
+do so, you have to pass two lanes to the method connect. The exit of the first lane, which you specify, will
+then be connected with the entrance of the second lane. The method still connects the TwoLaneTracks
+and not the individual lanes.
+Type
+Method
+Syntax
+<Connector-Path>.connect(StartOfConnection:any, EndOfConnectionY:any) → 
+object
+<Connector-Path>.connect(StartOfConnection:any, EndOfConnectionY:any[, 
+SideOfConverterStart:integer, SideOfConverterEnd:integer]) → object
+Parameters
+You can specify the following parameters:
+• The parameter StartOfConnection of data type any designates the starting point of the Connector
+designated by <Connector-Path>.
+• The parameter EndOfConnection of data type any designates the end point of the connection.
+You can also set an Interface object as first or as second parameter. The return value is the Connector
+that was just created. If Plant Simulation cannot create the Connector, it opens the Method Debugger.
+• The optional parameter SideOfConverterStart of data type integer sets at which side of the Converter
+the Connector is to dock: 0 designates right, 1 designates bottom, 2 designates left, and 3 designates
+top.
+Left Bottom Top Right
+connect [SimTalk]
+Plant Simulation Help 11-1303
+Unpublished work. © 2026 Siemens
+
+• The optional parameter SideOfConverterEnd of data type integer is only required when you insert a
+Connector between two Converters.
+• SideOfConverterStart then designates the side of the source Converter. The parameter
+SideOfConverterEnd of data type integer designates the side of the target Converter at which the
+Connector ends.
+Return Value
+The return value has the data type object.
+Is the Connector that has been created.
+Examples
+.Materialflow.Connector.connect(Station, Store)
+.Materialflow.Connector.connect(Station, Interface3)
+.Materialflow.Connector.connect(T1, T2)
+// connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.A)
+// connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.B)
+// connects the exit of T1 with the exit of T2
+.Materialflow.Connector.connect(T1.B, T2.A)
+// connects the entrance of T1 with the entrance of T2
+.MaterialFlow.Connector.connect("TwoLaneTrack1.B", "TwoLaneTrack2.A")
+// connects lanes of two-laned tracks
+Read-Only Attributes of the Connector
+_Read-Only Attributes of the Connector
+The Connector provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+Read-Only Attributes of the Connector
+11-1304 Plant Simulation Help
+Unpublished work. © 2026 Siemens

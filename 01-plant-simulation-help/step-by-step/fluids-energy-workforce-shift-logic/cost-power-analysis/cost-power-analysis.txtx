@@ -1,0 +1,257 @@
+If you want to repeat the sequence more than once, you can also use the setting Material selection >
+Sequence Cyclical.
+Back to Simulate Free-flowing Materials and Fluids
+Simulating the Accrued Costs of the Machines
+Simulate the Accrued Costs of the Machines
+You can simulate the accrued costs of the machines, which you entered on the tab Costs, with the object
+CostAnalyzer.
+With the object CostAnalyzer 
+  you can analyze the costs that accrue for the active material flow
+objects, for the Part and for the Container in your plant.
+You can enter the respective costs on the tab Costs of the material flow objects, and on the tab Costs of
+the Part and of the Container.
+We will demonstrate how to:
+• Specify the Costs of the Conveyors
+• Specify the Costs of the Stations and the Parts
+• Configure the Costs Report
+• View the Costs Report
+The finished simulation model looks like this:
+Simulating the Accrued Costs of the Machines
+Plant Simulation Help 10-415
+Unpublished work. © 2026 Siemens
+
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Simulate the Accrued Costs of the Machines
+10-416 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Modeling the Material Flow
+Specify the Costs of the Conveyors
+We also enter the costs which the Conveyors create. To show how the costs from sub-Frames are collected
+and displayed, we modeled part of our model in the sub-Frame named SubFrame.
+While creating our model, we also enter the costs which the Conveyors create. To show how the costs
+from sub-Frames are collected and displayed, we modeled part of our model in the sub-Frame named
+SubFrame. To show the content of the sub-Frame, we activated Show Content on the tab Graphics of
+the sub-Frame.
+For Conveyor1 we typed in these costs:
+Specify the Costs of the Conveyors
+Plant Simulation Help 10-417
+Unpublished work. © 2026 Siemens
+
+For the Conveyor in the sub-Frame we typed in these values:
+For Conveyor1 in the sub-Frame we typed in these values:
+Specify the Costs of the Conveyors
+10-418 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+For the Conveyor connecting the AssemblyStation with the Drain we typed in these values:
+Back to Simulate the Accrued Costs of the Machines
+Specify the Costs of the Stations and the Parts
+We also enter the costs that the Stations create. To show how the costs from sub-Frames are collected and
+displayed, we modeled part of our model in the sub-Frame named SubFrame.
+Specify the Costs of the Stations and the Parts
+Plant Simulation Help 10-419
+Unpublished work. © 2026 Siemens
+
+To show the content of the sub-Frame instead of its icon, we activated Show Content on the tab Graphics
+of the sub-Frame in 3D.
+• For Station1 we typed in these values:
+In addition we typed in a constant processing time of 10 minutes:
+• For the Station in the sub-Frame we typed in these values:
+Specify the Costs of the Stations and the Parts
+10-420 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In addition we typed in a constant processing time of 15 minutes:
+• For the AssemblyStation we typed in these values:
+Specify the Costs of the Stations and the Parts
+Plant Simulation Help 10-421
+Unpublished work. © 2026 Siemens
+
+We also selected these settings:
+Note
+Only type the name of the mounting part into the Assembly Table, not the entire path.
+• Next we entered the costs for our part types, namely for the Part and for MyMountingPart:
+Specify the Costs of the Stations and the Parts
+10-422 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Finally we configured our Sources named SourceMainParts and SourceMountingParts by typing
+in a creation interval each:
+Back to Simulate the Accrued Costs of the Machines
+Configure the Costs Report
+We cannot configure the CostAnalyzer as such. To show the results of the cost analysis, drag the
+CostAnalyzer from the Frame onto the icon of the HtmlReport and drop it there.
+• If the Content of the HtmlReport is inherited, the data of the CostAnalyzer 
+  replaces the pre-defined
+content of the HtmlReport. Plant Simulation opens the display window of the HtmlReport automatically.
+Configure the Costs Report
+Plant Simulation Help 10-423
+Unpublished work. © 2026 Siemens
+
+• If the Content of the HtmlReport is not inherited, Plant Simulation appends the data of the
+CostAnalyzer to the pre-defined content of the HtmlReport. Plant Simulation opens the display window
+of the HtmlReport automatically.
+To show the results of the cost analysis, you can also drag the object CostAnalyzer into the open window
+of the HtmlReport and drop it there, for example below the heading Statistics. Then the HtmlReport also
+shows the pre-defined General Information when you click Show Report.
+Configure the Costs Report
+10-424 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+This adds the following instruction to the HtmlReport:
+# Statistics
+## CostAnalyzer
+[CostAnalyzer]
+Back to Simulate the Accrued Costs of the Machines
+View the Costs Report
+The HtmlReport shows the costs report with the settings we defined.
+• In the table Investment Costs the Report shows the summed up investment costs of this Frame in the
+unavailable cells.
+Below it lists the investment costs, the depreciation period, and the operating costs of the individual
+objects inserted into this Frame, row by row.
+You can also query the investment costs with the method putInvestmentCostsIntoTable.
+• In the table Piece Costs the Report shows die summed up piece costs of the used MU type, in our case
+of the Part.
+◦ The MU Type (part type) designates the name of the parts when they arrive in the Drain. When parts
+change their name during the simulation, for example during the different production phases, the
+costs are assigned to the final product.
+View the Costs Report
+Plant Simulation Help 10-425
+Unpublished work. © 2026 Siemens
+
+◦ The Piece costs proper is the sum of the material costs, the accrued costs, and the general costs
+are 8.32 €.
+◦ The Material costs designate the costs, which accrue during the simulation when a new part enters
+the production, are 8.00 €.
+◦ The Accrued costs designate the costs, which are assigned to the part while it is processed on the
+material flow object, are 0.17 €.
+◦ The General costs designate the costs, which accrue when a material object is empty during the
+simulation, are 0.15 €. These costs are distributed across the part types which were processed by the
+material flow object.
+◦ The Throughput designates the number of parts which were processed and moved through the
+production line, 10650 parts in our case.
+◦ The Work in process designates the number of parts which are currently passing through the
+production process, 6 parts in our case.
+Click Investment Costs in the dialog of the CostAnalyzer to show the investment costs.
+You can also query the investment costs with the method putInvestmentCostsIntoTable.
+Click Piece Costs in the dialog of the CostAnalyzer to show the piece costs.
+You can also query the piece costs with the method putPieceCostsIntoTable.
+Back to Simulate the Accrued Costs of the Machines
+View the Costs Report
+10-426 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Simulating the Power Consumption in Your Facility
+Simulate the Power Consumption in Your Facility
+To accommodate the growing environmental awareness, Plant Simulation provides features to keep track
+of energy consumption in the face of rising energy costs and the depletion of energy resources.
+The features on the Tab Energy provide these evaluations regarding energy consumption during the
+production process in the plant:
+• Power consumption per machine
+• Total power consumption for all objects contained within a Frame
+In our example we will demonstrate how to:
+• Configure the Processing Stations and the Conveyor
+• Configure the ShiftCalendar
+• Check the Power Consumption in the Dialogs of the Objects
+• Check the Power Consumption in the Statistics Report
+• Check the Power Consumption in the Chart
+We use most of the material flow objects with their default settings. We just entered energy-related
+settings and defined failures for some of the objects.
+The finished simulation model looks like this:
+Simulating the Power Consumption in Your Facility
+Plant Simulation Help 10-427
+Unpublished work. © 2026 Siemens
+
+Back to Modeling the Material Flow
+Configure the Processing Stations and the Conveyor
+Insert the following stations to simulate our parts moving through the factory.
+• The Source feeds the parts into the plant. We did not change any of its default settings.
+• The first machine, the Station, processes the parts for 1 minute each. We entered the kilowatts it uses
+up in the states it can be in. We also entered the times that the machine requires for switching from one
+energy state to another.
+Configure the Processing Stations and the Conveyor
+10-428 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The second machine, Station1, processes the parts for 2 minutes each. We entered the kilowatts it uses
+up in the states it can be in. We also entered the times that the machine requires for switching from one
+energy state to another.
+Configure the Processing Stations and the Conveyor
+Plant Simulation Help 10-429
+Unpublished work. © 2026 Siemens
+
+To simulate a real situation, we also defined a failure profile with these settings:
+Configure the Processing Stations and the Conveyor
+10-430 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The conveyor, the object of type Conveyor, transports the parts from the processing station Station1 to
+the ParallelStation. We entered the kilowatts it uses up in the states it can be in. We also entered the
+times that the conveyor requires for switching from one energy state to another. You will notice that the
+length-oriented object Conveyor provides fewer energy settings than the point-oriented objects Station
+and ParallelStation.
+Configure the Processing Stations and the Conveyor
+Plant Simulation Help 10-431
+Unpublished work. © 2026 Siemens
+
+To simulate a real situation, we also defined a failure profile with these settings:
+• The third machine, the ParallelStation, processes the parts for 1 minute each. We entered the kilowatts
+it uses up in the states it can be in. We also entered the times that the machine requires for switching
+from one energy state to another.
+Configure the Processing Stations and the Conveyor
+10-432 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The Drain removes the parts from the factory. We did not change any of its built-in settings.
+• The Charts display a resource statistics chart, and an energy statistics chart for the selected objects.
+Back to Simulate the Power Consumption in Your Facility
+Configure the ShiftCalendar
+To model a realistic situation in the factory, we insert a ShiftCalendar that controls the hours during which
+people and machines work in the factory. We did not change the default shift times, we just entered the
+material flow objects.
+To do so, we held down Shift and dragged a marquee over the objects. We then dragged the selected
+objects onto the ShiftCalendar 
+  and dropped them there.
+Configure the ShiftCalendar
+Plant Simulation Help 10-433
+Unpublished work. © 2026 Siemens
+
+Back to Simulate the Power Consumption in Your Facility
+Check the Power Consumption in the Dialogs of the Objects
+You can view the energy consumption values, which the objects collected, in their dialogs.
+• Double-click the icon of the respective object and click the Tab Statistics.
+• Click Energy Statistics to view more detailed values about the different portions of energy
+consumption.
+Check the Power Consumption in the Dialogs of the Objects
+10-434 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Simulate the Power Consumption in Your Facility
+Check the Power Consumption in the Statistics Report
+You can check the power consumption of the material flow objects in you simulation model in the
+StatisticsReport.
+To view the total energy consumption and the portions of the different energy states, select Energy
+Statistics in the drop-down list of the Statistics Report. The values are described under Energy Statistics
+— Energy Statistics.
+Check the Power Consumption in the Statistics Report
+Plant Simulation Help 10-435
+Unpublished work. © 2026 Siemens
+
+Note
+The energy states of the material flow objects differ from the resource states with the same name. The
+values for the resource states refer to the statistics collection period, while the values for the energy
+states refer to the total energy consumption.
+The material flow objects also show these values on the Tab Statistics and in the dialog that clicking
+Energy Statistics opens.
+Back to Simulate the Power Consumption in Your Facility
+Check the Power Consumption in the Chart
+You can view the energy consumption values, which the objects collected, in a Chart.
+• To view the energy consumption of the different energy states, select the objects which you want
+to display in the Chart. Drag them onto the Chart. Select the Statistics Type > Energy Statistics in the
+dialog that opens and click OK.
+Check the Power Consumption in the Chart
+10-436 Plant Simulation Help
+Unpublished work. © 2026 Siemens

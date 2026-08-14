@@ -1,0 +1,551 @@
+SimTalk
+typeStatistics [SimTalk] - Drain
+TypeStatOn [SimTalk]
+Read-Only Attributes of the Drain
+_Read-Only Attributes of the Drain
+The Drain provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print Drain.StatAvgExitInterval
+Read-Only Attributes of the Drain
+Plant Simulation Help 11-1669
+Unpublished work. © 2026 Siemens
+
+StatAvgExitInterval [SimTalk]
+Returns the average time interval between exits of the MUs which the Drain designated by <Path>
+removed from the plant.
+Remarks
+StatAvgExitInterval results from adding up the times of all intervals, and then dividing them by the number
+of intervals. Statistics only starts counting from the time at which the first MU arrived.
+Type
+Read-only attribute
+Syntax
+<Path>.StatAvgExitInterval → time
+Return Value
+The return value has the data type time.
+Example
+print MyDrain.StatAvgExitInterval
+See also
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatAvgExitInterval [SimTalk]
+11-1670 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatAvgLifeSpan [SimTalk] - Drain
+Returns the average life span of the MUs which the Drain designated by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatAvgLifeSpan → time
+Return Value
+The return value has the data type time.
+Example
+print MyDrain.StatAvgLifeSpan
+See also
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatAvgLifeSpan [SimTalk] - Drain
+Plant Simulation Help 11-1671
+Unpublished work. © 2026 Siemens
+
+StatDeleted [SimTalk] - Drain
+Returns the number of MUs which the Drain designated by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatDeleted → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyDrain.StatDeleted
+See also
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+Statistics report, Part Types Which the Drain Removed From the Plant
+StatDeleted [SimTalk] - Drain
+11-1672 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatProdFailPortion [SimTalk] - Drain
+Returns the portion of the sum of all life times of the MUs during which these stayed on a failed material
+flow object of resource type Production, and which the Drain designated by <Path> removed from the
+plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdFailPortion → real
+Return Value
+The return value has the data type real.
+Example
+var ra: real
+ra := Drain.StatProdFailPortion + Drain.StatStoreFailPortion + 
+Drain.StatTranspFailPortion
+if ra > 0.6 
+   print "Considerable delays caused by failed machines."
+end
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdFailPortion [SimTalk] - Drain
+Plant Simulation Help 11-1673
+Unpublished work. © 2026 Siemens
+
+StatProdPausingPortion [SimTalk] - Drain
+Returns the portion of the sum of all life times of the MUs during which these stayed on a paused or
+unplanned material flow object of resource type Production, and which the Drain designated by <Path>
+removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdPausingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatProdPausingPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdPausingPortion [SimTalk] - Drain
+11-1674 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatProdSetupPortion [SimTalk] - Drain
+Returns the portion of the sum of all life times of the MUs during which these stayed on a material flow
+object of resource type Production that was setting-up for the MU type, and which the Drain designated
+by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdSetUpPortion → real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatProdWaitingPortion
+print "The waiting time portion on resources of resource type Production 
+for all parts is ", round(100*(wa),2)," %."
+ra := MyDrain.StatProdSetUpPortion
+print "The set-up time portion on resources of resource type Production for 
+all parts is ", round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdSetupPortion [SimTalk] - Drain
+Plant Simulation Help 11-1675
+Unpublished work. © 2026 Siemens
+
+StatProdStoppedPortion [SimTalk] - Drain
+Returns the time portion during which the MU was located on a material flow object of resource type
+Production that was stopped by a LockoutZone, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdStoppedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print Drain.StatProdStoppedPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdStoppedPortion [SimTalk] - Drain
+11-1676 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatProdWaitingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a waiting
+material flow object of resource type Production, and which the Drain designated by <Path> removed
+from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdWaitingPortion → real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatProdWaitingPortion
+print "The waiting time portion on resources of resource type Production 
+for all parts is ", round(100*(wa),2)," %."
+ra := MyDrain.StatProdSetUpPortion
+print "The set-up time portion on resources of resource type Production for 
+all parts is ", round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdWaitingPortion [SimTalk] - Drain
+Plant Simulation Help 11-1677
+Unpublished work. © 2026 Siemens
+
+StatProdWorkingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a working
+material flow object of resource type Production, and which the Drain designated by <Path> removed
+from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatProdWorkingPortion → real
+Return Value
+The return value has the data type real.
+Example
+var wao: real
+wp := MyDrain.StatProdWorkingPortion
+print "The working time portion on resources of resource type Production 
+for all parts is ", round(100*(wa),2)," %."
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatProdWorkingPortion [SimTalk] - Drain
+11-1678 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatStoreFailPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a failed
+material flow object of resource type Storage, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStoreFailPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatProdFailPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStoreFailPortion [SimTalk] - Drain
+Plant Simulation Help 11-1679
+Unpublished work. © 2026 Siemens
+
+StatStorePausingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a paused
+or unplanned material flow object of resource type Storage, and which the Drain designated by <Path>
+removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStorePausingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatStorePausingPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStorePausingPortion [SimTalk] - Drain
+11-1680 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatStoreSetUpPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a material
+flow object of resource type Storage that was setting-up for the MU type, and which the Drain designated
+by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStoreSetUpPortion → real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatStoreWaitingPortion
+print "The waiting time portion on resources of resource type Storage is ", 
+round(100*(wa),2)," %."
+ra := MyDrain.StatProdSetUpPortion
+print "The set-up time portion on resources of resource type Storage is ", 
+round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStoreSetUpPortion [SimTalk] - Drain
+Plant Simulation Help 11-1681
+Unpublished work. © 2026 Siemens
+
+StatStoreStoppedPortion [SimTalk] - Drain
+Returns the time portion during which the MU was located on a material flow object of type Store that was
+stopped by a LockoutZone, and which the Drain designated by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStoreStoppedPortion → real
+Return Value
+The return value has the data type real.
+Example
+print Drain.StatStoreStoppedPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStoreStoppedPortion [SimTalk] - Drain
+11-1682 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatStoreWaitingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a waiting
+material flow object of resource type Storage, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStoreWaitingPortion → real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatStoreWaitingPortion
+print "The waiting time portion on resources of resource type Storage for 
+all parts is ", round(100*(wa),2)," %."
+ra := MyDrain.StatProdSetUpPortion
+print "The set-up time portion on resources of resource type Storage for 
+all parts is ", round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStoreWaitingPortion [SimTalk] - Drain
+Plant Simulation Help 11-1683
+Unpublished work. © 2026 Siemens
+
+StatStoreWorkingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a working
+material flow object of resource type Storage, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatStoreWorkingPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatStoreWorkingPortion
+See also
+Resource Type of the material flow objects
+Tab Type Statistics of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatStoreWorkingPortion [SimTalk] - Drain
+11-1684 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatThroughputPerDay [SimTalk] - Drain
+Returns the number of MUs that the Drain designated by <Path> removed from the plant in a day over all
+observed times during which the Drain was available.
+Type
+Read-only attribute
+Syntax
+<Path>.StatThroughputPerDay → real
+Return Value
+The return value has the data type real.
+This is the value of the throughput per hour multiplied with 24.
+The throughput is measured in liters.
+Example
+print MyDrain.StatThroughputPerDay
+See also
+Tab Type Statistics of the Drain
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatThroughputPerDay [SimTalk] - Drain
+Plant Simulation Help 11-1685
+Unpublished work. © 2026 Siemens
+
+StatThroughputPerHour [SimTalk] - Drain
+Returns the number of MUs that the Drain designated by <Path> removed from the plant in an hour over
+all observed times during which the Drain was available.
+Type
+Read-only attribute
+Syntax
+<Path>.StatThroughputPerHour → real
+Return Value
+The return value has the data type real.
+The throughput is measured in liters.
+Example
+print MyDrain.StatThroughputPerHour
+See also
+Tab Type Statistics of the Drain
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatThroughputPerHour [SimTalk] - Drain
+11-1686 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatThroughputPerMinute [SimTalk]
+Returns the number of MUs that the Drain designated by <Path> removed from the plant in a minute over
+all observed times during which the Drain was available.
+Type
+Read-only attribute
+Syntax
+<Path>.StatThroughputPerMinute → real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatThroughputPerMinute
+See also
+Tab Type Statistics of the Drain
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatThroughputPerMinute [SimTalk]
+Plant Simulation Help 11-1687
+Unpublished work. © 2026 Siemens
+
+StatTranspFailPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a failed
+material flow object of type Transport which the Drain designated by <Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspFailPortion -> real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatTranspFailPortion
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatTranspFailPortion [SimTalk] - Drain
+11-1688 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatTranspPausingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a paused
+or unplanned material flow object of type Transport, and which the Drain designated by <Path> removed
+from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspPausingPortion -> real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatTranspPausingPortion
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatTranspPausingPortion [SimTalk] - Drain
+Plant Simulation Help 11-1689
+Unpublished work. © 2026 Siemens
+
+StatTranspSetupPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a material
+flow object of type Transport that was setting-up for the MU type, and which the Drain designated by
+<Path> removed from the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspSetUpPortion -> real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatTranspWaitingPortion
+print "The waiting time portion on resources of type transport for all 
+parts is ", round(100*(wa),2)," %."
+ra := MyDrain.StatTranspSetUpPortion
+print "The set-up time portion on resources of type transport for all parts 
+is ", round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatTranspSetupPortion [SimTalk] - Drain
+11-1690 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatTranspStoppedPortion [SimTalk] - Drain
+Returns the time portion during which the MU was located on a material flow object of resource type
+Transport that was stopped by a LockoutZone, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspStoppedPortion -> real
+Return Value
+The return value has the data type real.
+Example
+print Drain.StatTranspStoppedPortion
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatTranspStoppedPortion [SimTalk] - Drain
+Plant Simulation Help 11-1691
+Unpublished work. © 2026 Siemens
+
+StatTranspWaitingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a waiting
+material flow object of resource type Transport, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspWaitingPortion -> real
+Return Value
+The return value has the data type real.
+Example
+var ra,wa: real
+wa := MyDrain.StatTranspWaitingPortion
+print "The waiting time portion on resources of resource type Transport for 
+all parts is ", round(100*(wa),2)," %."
+ra := MyDrain.StatTranspSetUpPortion
+print "The set-up time portion on resources of type transport for all parts 
+is ", round(100*(ra),2)," %."
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+StatTranspWaitingPortion [SimTalk] - Drain
+11-1692 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatTranspWorkingPortion [SimTalk] - Drain
+Returns the time portion of the sum of all life times of the MUs during which these stayed on a working
+material flow object of resource type Transport, and which the Drain designated by <Path> removed from
+the plant.
+Type
+Read-only attribute
+Syntax
+<Path>.StatTranspWorkingPortion -> real
+Return Value
+The return value has the data type real.
+Example
+print MyDrain.StatTranspWorkingPortion
+See also
+Resource Type of the material flow objects
+Detailed Statistics Table [FluidDrain] of the Drain
+Statistics report, Cumulated Statistics of the Parts which the Drain Removed From the Plant
+Attributes of the Drain
+Attributes of the Drain
+The Drain provides:
+• The attribute TypeStatOn [SimTalk].
+• The Attributes of the Station.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+StatTranspWorkingPortion [SimTalk] - Drain
+Plant Simulation Help 11-1693
+Unpublished work. © 2026 Siemens

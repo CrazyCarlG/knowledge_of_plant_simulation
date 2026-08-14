@@ -1,0 +1,71 @@
+ModuleName [SimTalk]
+Queries the name of the PythonModule designated by <Path>, which is returned in Python with the
+instruction __name__.
+Type
+Read-only attribute
+Syntax
+<Path>.ModuleName -> string
+Return Value
+The return value has the data type string.
+Example
+print PythonModule.ModuleName -- might return 
+pmbc4890ad_881f_45b2_b7a2_388d30656003
+Attributes of the PythonModule
+_Attributes of the PythonModule
+The PythonModule provides:
+• The attribute PythonCode [SimTalk].
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+ModuleName [SimTalk]
+11-3760 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+PythonModule.Name := "MyPythonModule"
+• To get the value of an attribute, you might, for example, type:
+print MyPythonModule.Origin
+PythonCode [SimTalk]
+Designates the Python source code of the PythonModule designated by <Path>, which is passed to SimTalk
+and then executed in Plant Simulation.
+Type
+Attribute
+Syntax
+<Path>.PythonCode:string
+Assignment Value
+You can assign a value of data type string.
+PythonCode [SimTalk]
+Plant Simulation Help 11-3761
+Unpublished work. © 2026 Siemens
+
+Example
+PythonModule.PythonCode = "print(42)" -- enter Python code into the 
+PythonModule
+Variable
+Variable [object]
+Use the object Variable for storing data over an extended period of time.
+Image
+Description
+The object Variable is a global variable that other objects and methods in Plant Simulation can access
+during a simulation run. A variable can represent an unknown item which stores a quantity. Variables can
+change their content. Variables are also known as placeholders or unknowns. The opposite of a Variable
+is a constant, whose value is known and does not change. You might, for example, use a Variable to store
+data over an extended period of time during your simulation run, to increment or decrement values, to
+assign values, etc.
+A Variable of data type list, queue, stack, or table shows a type graphic to the left of its name when you
+insert it 
+ .
+• Double-click the Name of the Variable to open its dialog.
+Instead, you can also right-click the Variable and select Open on the context menu.
+• Double-click the type graphic of the Variable to open the window of the list object.
+Variable
+11-3762 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,136 @@
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyHtmlReport.UUID
+Attributes of the HtmlReport
+_Attributes of the HtmlReport
+The HtmlReport provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the HtmlReport
+11-5024 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyReport.TocLevels := 3
+• To get the value of an attribute, you might, for example, type:
+print MyReport.TocLevel
+_Attributes of the HtmlReport
+Plant Simulation Help 11-5025
+Unpublished work. © 2026 Siemens
+
+Content [SimTalk] - HtmlReport
+Sets the Content which the HtmlReport designated by <Path> displays.
+Type
+Attribute
+Syntax
+<Path>.Content:string
+Assignment Value
+You can assign a value of data type string.
+Example
+HtmlReport.Content := "[!self, Header, *]\
+# General Information\
+[Receiving, \"Statistics of the Source named 'Receiving' and the station 
+named 'MyStation'\"]\
+[MyStation]\
+Created on [=day(sysdate)].[=month(sysdate)].[=year(sysdate)+1900]"
+See also
+Tab Content [HtmlReport]
+Content [SimTalk] - HtmlReport
+11-5026 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsShown [SimTalk] - HtmlReport
+Sets if the HtmlReport designated by <Path> is displayed in the Frame window into which it is inserted
+(true) or not (false).
+Type
+Method
+Syntax
+<Path>.IsShown:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyReport.IsShown := true
+See also
+Show Report
+IsShown [SimTalk] - HtmlReport
+Plant Simulation Help 11-5027
+Unpublished work. © 2026 Siemens
+
+TocLevels [SimTalk]
+Sets the number of levels of the table of contents which the HtmlReport designated by <Path> shows.
+Type
+Attribute
+Syntax
+<Path>.TocLevels:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify a value between 1 and 4.
+If you specify a value greater than 4, Plant Simulation treats this value as 4.
+Example
+MyReport.TocLevels := 4
+See also
+Study the HtmlReport
+TocLevels [SimTalk]
+11-5028 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+WindowHeight [SimTalk]
+Sets the height in pixels with which Plant Simulation opens the display window of the HtmlReport
+designated by <Path>.
+Syntax
+<Path>.WindowHeight:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyHtmlReport.WindowHeight := 600 // pixels
+SimTalk
+WindowHeight [SimTalk]
+WindowWidth [SimTalk]
+See also
+Show Report
+WindowHeight [SimTalk]
+Plant Simulation Help 11-5029
+Unpublished work. © 2026 Siemens
+
+WindowWidth [SimTalk]
+Sets the width in pixels with which Plant Simulation opens the display window of the HtmlReport
+designated by <Path>.
+Syntax
+<Path>.WindowWidth:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyHtmlReport.WindowWidth :=  800 // pixels
+SimTalk
+WindowWidth [SimTalk]
+WindowHeight [SimTalk]
+See also
+Show Report
+Dialog
+Dialog [object]
+Use the object Dialog for designing a dialog box for an object which is similar to the built-in dialog boxes.
+Image
+Description
+With the object Dialog you can:
+• Provide the user with a simple user interface for complex simulation models other users work with. This
+way you can ask the user to type in information which Plant Simulation needs to carry out a task.
+WindowWidth [SimTalk]
+11-5030 Plant Simulation Help
+Unpublished work. © 2026 Siemens

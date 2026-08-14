@@ -1,0 +1,348 @@
+PredecessorNumber [SimTalk]
+Sets the number of the predecessor object which delivers the material to the Portioner designated by
+<Path>.
+Type
+Attribute
+Syntax
+<Path>.PredecessorNumber:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyPortioner.PredecessorNumber := 2
+See also
+Fluid from Predecessor [text box]
+DePortioner
+DePortioner
+Use the object DePortioner to empty incoming parts of bulk goods or fluids, create a fluid out of it, and
+feed the resulting fluids into a Pipe.
+Image
+Description
+We provide three ways of defining the fluid that is to be created:
+• By a fixed material and a fixed amount for every MU. For this setting you can enter the Material and the
+Amount per MU.
+PredecessorNumber [SimTalk]
+Plant Simulation Help 11-2909
+Unpublished work. © 2026 Siemens
+
+• By the MU Name depending on the MU names that are defined in the Mapping Table.
+• By the MU Attribute, for which you can enter the Material Attribute and the Amount Attribute of the
+MU.
+When the created fluid flows out of the DePortioner into a Pipe, the MU that delivered it will be deleted.
+If the outflow of fluids is interrupted, caused by a failure, a pause, or because the successor cannot accept
+anything at the moment, the Exporters will not be released.
+You can, for example, use the DePortioner to empty barrels of fluids or bulk goods, which are then used as
+ingredients for mixed goods down your production line, and feed the material into Pipes.
+You can think of the DePortioner as the counterpart of the Portioner.
+To show a tooltip with information about the DePortioner, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Portioner, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DePortioner to your simulation model, click 
+  Manage Class Library > Basic Objects >
+Fluids > DePortioner on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+DePortioner
+11-2910 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Portion and Deportion Materials
+Configure the DePortioner
+Dialog Box of the DePortioner
+Dialog Box of the DePortioner
+Double-click the icon of the DePortioner to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+Dialog Box of the DePortioner
+Plant Simulation Help 11-2911
+Unpublished work. © 2026 Siemens
+
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+11-2912 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Outflow Rate [DePortioner]
+Type the Outflow Rate into the text box. This is the rate, with which the material flows out of the
+DePortioner after it has emptied the arriving part and flows through the objects of type Pipe to the next
+object in the flow of materials.
+Remarks
+The Outflow Rate is the amount of liters of the material that flows off in a second.
+Note
+The current Outflow Rate depends on the number of attached Pipes 
+ . Let's say you attached two
+Pipes, then the specified Outflow Rate flows through each one of these Pipes in case the Outflow Rate
+of the connected Pipes enables this.
+If you just want to let the specified amount flow out of the object, attach a single Pipe and split that up
+into several Pipes later on.
+SimTalk
+OutflowRate [SimTalk] - DePortioner
+Outflow Rate [DePortioner]
+Plant Simulation Help 11-2913
+Unpublished work. © 2026 Siemens
+
+Fluid Depends On
+Select how the DePortioner defines the material and the amount of the fluid that is to be created.
+Remarks
+You can select one of these settings:
+• Fixed
+Set the material and the amount per MU in the dialog items Material and Amount per MU.
+• MU Name
+Set the material and the amount per MU in the Mapping Table.
+• MU Attribute
+Fluid Depends On
+11-2914 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Set the material and the amount per MU in the dialog items Material Attribute and Amount Attribute.
+These are user-defined attributes of the MU which you have to create.
+Define the name of each material that is to be used in the MaterialsTable.
+SimTalk
+FluidDependsOn [SimTalk]
+Fluid Depends On
+Plant Simulation Help 11-2915
+Unpublished work. © 2026 Siemens
+
+Material [DePortioner]
+Type the name of the Material into the text box, which the DePortioner creates.
+Remarks
+It applies if you select Fixed for the setting Fluid Depends On.
+SimTalk
+Material [SimTalk] - DePortioner
+Material [DePortioner]
+11-2916 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Amount per MU [DePortioner]
+Type the total amount in liters of the fluid into the text box, which the DePortioner creates.
+Remarks
+Amount per MU applies if you select Fixed for the setting Fluid Depends On.
+SimTalk
+AmountPerMU [SimTalk] - Portioner
+Amount per MU [DePortioner]
+Plant Simulation Help 11-2917
+Unpublished work. © 2026 Siemens
+
+Mapping Table
+Type the name of the Mapping Table into the text box.
+Remarks
+The Mapping Table contains the MU Name of the arriving MU, and the Material and the Amount of the
+fluid which the DePortioner creates.
+The Mapping Table applies if you select MU Name for the setting Fluid Depends On.
+You can also click 
+  and select the Mapping Table.
+SimTalk
+MappingTable [SimTalk]
+Mapping Table
+11-2918 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Material Attribute
+Type the name of the user-defined Material Attribute into the text box. It defines the fluid which the
+DePortioner creates.
+Remarks
+The Material Attribute applies if you select MU Attribute for the setting Fluid Depends On.
+SimTalk
+AttrNameMaterial [SimTalk]
+Material Attribute
+Plant Simulation Help 11-2919
+Unpublished work. © 2026 Siemens
+
+Amount Attribute
+Type the name of the user-defined Amount Attribute into the text box, which sets the amount of the fluid
+which the DePortioner creates.
+Remarks
+The Amount Attribute applies if you select MU Attribute for the setting Fluid Depends On.
+SimTalk
+AttrNameAmount [SimTalk]
+Amount Attribute
+11-2920 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Materials Table [DePortioner]
+The MaterialsTable contains the data of the different materials which the DePortioner can create.
+Remarks
+Click the ellipsis button and select the MaterialsTable in the dialog Select Object.
+Or select the MaterialsTable in a Frame, drag it to the text box and drop it there.
+SimTalk
+MaterialsTable [SimTalk] - DePortioner
+See also
+MaterialsTable
+Select Object [for controls]
+Materials Table [DePortioner]
+Plant Simulation Help 11-2921
+Unpublished work. © 2026 Siemens
+
+Current Amount [DePortioner]
+Shows the Current Amount of the fluid that is located in the DePortioner at the moment.
+SimTalk
+CurrentAmount [SimTalk] - DePortioner
+Current Amount [DePortioner]
+11-2922 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Current Outflow Rate [DePortioner]
+Shows the Current Outflow Rate, i.e., the amount of liters of the fluid which flows out of the DePortioner
+in a second.
+SimTalk
+CurrentOutFlowrate [SimTalk]
+Current Outflow Rate [DePortioner]
+Plant Simulation Help 11-2923
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Recovery Time [general description]
+Set-up Time [general description]
+Select the Set-Up Time
+RecoveryTime [SimTalk] - Mixer
+SetupTime [SimTalk] - fluid objects
+Tab Times
+11-2924 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Setup
+Define properties for setting the object up as described under the Tab Set-Up.
+See also
+Set a Station Up Set-up Only When Empty
+Set-up For Set-up After n Parts
+Automatic Set-up Set-up Depends On
+Tab Setup
+Plant Simulation Help 11-2925
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2926 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+Plant Simulation Help 11-2927
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Select Object [for controls]
+Before Actions
+Entrance Control [general description]
+Exit Control [general description]
+Set-up Control
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls
+11-2928 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+The DePortioner shows resource statistics as described under the Tab Statistics.
+Tab Statistics
+Plant Simulation Help 11-2929
+Unpublished work. © 2026 Siemens
+
+Tab Importer [DePortioner]
+Define services for processing the parts, for setting the station up for a certain type of part, and for
+repairing the station on the tab Importer.
+To view Importer Statistics in the Statistics Report, do one of the following:
+• Select View > Show Statistics Report in the dialog of the object.
+• Click the object with the right mouse button in the Frame and select Show Statistics Report or press
+F6.
+• Click Show Statistics Report on the Home ribbon tab.
+See also
+Tab Importer [general description]
+Processing Importer
+Set-up Importer
+Failure Importer
+Tab Importer [DePortioner]
+11-2930 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-2931
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2932 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+The View menu also provides commands pertaining to the Transport Importer.
+Exporters [on View menu] Unavailable Services [on View menu]
+Services [on View menu] Associated Workplaces [on View menu]
+See also
+View Menu [general description]
+Transport Importer
+View Menu
+Plant Simulation Help 11-2933
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2934 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the DePortioner
+Methods of the DePortioner
+The DePortioner provides:
+• The Methods of the Fluid Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-2935
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,780 @@
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+See also
+_Attributes for the Format of Lists and Tables
+_Attributes for the Text Format of Lists and Tables
+_Attributes for Printing Lists and Tables
+_Attributes for Showing Settings of Lists and Tables
+_Miscellaneous Attributes of Lists and Tables
+Attributes of Lists and Tables
+11-4068 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Attributes for the Format of Lists and Tables
+_Attributes for the Format of Lists and Tables
+Lists and tables provide the attributes listed in the table of contents to the left for setting the format of the
+entire list or table.
+In the dialog of the objects, you can select these settings on the List ribbon tab > Edit Format.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+Attributes for the Format of Lists and Tables
+Plant Simulation Help 11-4069
+Unpublished work. © 2026 Siemens
+
+Alignment [SimTalk] - lists
+Sets the Alignment of all cells of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.Alignment:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "left", "right", or "center".
+Example
+MyDataQueue.Alignment := "left"
+print MyDataQueue.Alignment
+See also
+Alignment [cells and columns]
+Alignment [SimTalk] - lists
+11-4070 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+BackgroundColor [SimTalk] - lists
+Sets the Background Color for all cells of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.BackgroundColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6 for Yellow, and 7 for
+Cyan.
+Or set the RGB values of the color with the method makeRGBValue.
+Example
+var rgb: integer
+MyDataTable.BackgroundColor := makeRGBValue(120,120,120)
+rgb := MyDataTable.BackgroundColor
+print rgb
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Background Color [cells]
+BackgroundColor [SimTalk] - lists
+Plant Simulation Help 11-4071
+Unpublished work. © 2026 Siemens
+
+ColumnWidth [SimTalk]
+Sets the Column Width in character widths of a non-proportional font of all cells of the list/table
+designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.ColumnWidth:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify a value between 20 for the default setting, and 180 for the maximum column width.
+Example
+MyDataQueue.ColumnWidth := 10
+See also
+Column Width [text box]
+ColumnWidth [SimTalk]
+11-4072 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DataType [SimTalk] - lists
+Sets the Data Type of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.DataType:string
+Assignment Value
+You can assign a value of data type string.
+Data type Description
+Acceleration applies for the objects Conveyor, Track, TwoLaneTrack, and Transporter, meter per
+second squared
+Boolean true or false
+Date date statement (dd.MM.yyyy)
+DateTime date statement, including the time (dd.MM.yyyy HH:mm:ss)
+Integer integer value
+Length floating point number, value depends on the unit of the length
+List list with one column, shares properties of the DataList
+Money floating point numbers
+Object reference to a simulation model or an object
+Queue list with one column, shares properties of the DataQueue
+Real floating point number, such as 3.1415
+Speed floating point number, value depends on the unit for speed
+Stack list with one column, shares properties of the DataStack
+String characters, numbers and special characters
+DataType [SimTalk] - lists
+Plant Simulation Help 11-4073
+Unpublished work. © 2026 Siemens
+
+Data type Description
+Table table with one or more columns, shares properties of the DataTable
+Time time statement (hh:mm:ss.ss)
+Weight floating point number, value depends on the unit of the weight
+Example
+MyDataList.DataType := "integer"
+See also
+Data Type [lists]
+DataType [SimTalk] - lists
+11-4074 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EditorReadOnly [SimTalk]
+Sets if you have read-only permissions to the list/table designated by <Path> (true) or if you can also edit
+it (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.EditorReadOnly:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.EditorReadOnly := false
+See also
+Editor [check box]
+Information Flow [check box]
+EditorReadOnly [SimTalk]
+Plant Simulation Help 11-4075
+Unpublished work. © 2026 Siemens
+
+FontColor [SimTalk]
+Sets the Font Color used for displaying the data in the cells of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.FontColor:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Black, 2 for Red, 3 for Green, 4 for Blue, 5 for Magenta, 6for Yellow, and 7 for
+Cyan.
+Or set the RGB values of the color with the method makeRGBValue.
+Example
+MyDataTable.FontColor := 2
+SimTalk
+makeRGBValue [SimTalk]
+setFontColorCells [SimTalk]
+setFontColorColumn [SimTalk] - DataTable
+getFontColorColumn [SimTalk] - DataTable
+setFontColorRow [SimTalk] - DataTable
+getFontColorRow [SimTalk] - DataTable
+FontColor [SimTalk]
+11-4076 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Font Color [cells]
+FontColor [SimTalk]
+Plant Simulation Help 11-4077
+Unpublished work. © 2026 Siemens
+
+FontSize [SimTalk] - DataTable
+Sets the Font Size used for displaying the data in the cells of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.FontSize:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Small, 2 for Medium, 3 for Large, and 4 for Extra Large.
+Example
+MyDataTable.FontSize := 2
+See also
+Font Size [drop-down list] - cells, columns
+FontSize [SimTalk] - DataTable
+11-4078 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+FormatString [SimTalk] - lists
+Sets, depending on the data type, the Format String of the list/table designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.FormatString:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDataQueue.FormatString := "5.3"
+See also
+Format String [text box]
+FormatString [SimTalk] - lists
+Plant Simulation Help 11-4079
+Unpublished work. © 2026 Siemens
+
+InfoflowReadOnly [SimTalk]
+Sets if you can only read the list or table via methods (true) or if methods may also write to the list/table
+designated by <Path> (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.InfoflowReadOnly:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.InfoflowReadOnly := true
+See also
+Information Flow [check box]
+Attributes for the Text Format of Lists and Tables
+_Attributes for the Text Format of Lists and Tables
+Lists and tables provide the attributes listed in the table of contents to the left for working with them in
+text format.
+In the dialog of the objects, you can select these settings under Export >Text File Format on the List
+ribbon tab.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+InfoflowReadOnly [SimTalk]
+11-4080 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+_Attributes for the Text Format of Lists and Tables
+Plant Simulation Help 11-4081
+Unpublished work. © 2026 Siemens
+
+ColumnSeparator [SimTalk]
+Sets the Column Separator when saving the list/table designated by <Path> in text format.
+Remarks
+Note
+We strongly advise against using the comma (,) as decimal separator as well as as column separator.
+Only use it either as decimal separator or as column separator.
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.ColumnSeparator:string
+Assignment Value
+You can assign a value of data type string.
+You can specify Tab, a blank Space, , (comma), or ; (semicolon).
+Example
+MyDataQueue.ColumnSeparator := " "
+See also
+Text File Format
+ColumnSeparator [SimTalk]
+11-4082 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DecimalSeparator [SimTalk]
+Sets the Decimal Separator, when saving the list/table designated by <Path> in text format.
+Remarks
+Note
+We strongly advise against using the comma (,) as decimal separator as well as as column separator.
+Only use it either as decimal separator or as column separator.
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.DecimalSeparator:string
+Assignment Value
+You can assign a value of data type string: "." (period) or "," (comma).
+Example
+MyDataStack.DecimalSeparator := "," // comma
+See also
+Text File Format
+DecimalSeparator [SimTalk]
+Plant Simulation Help 11-4083
+Unpublished work. © 2026 Siemens
+
+TimeFormat [SimTalk]
+Sets the Time Format when saving the list/table designated by <Path> in text format.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.TimeFormat:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "D:H:M:S", "H:M:S", "M:S", or "S".
+Example
+MyDataList.TimeFormat := "M:S"
+See also
+Text File Format
+TimeFormat [SimTalk]
+11-4084 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Attributes for Printing Lists and Tables
+_Attributes for Printing Lists and Tables
+Lists and tables provide the attributes listed in the table of contents to the left for printing their contents.
+In the dialog of the objects, you can select these settings by clicking Print > Print Setup on the List ribbon
+tab.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+Attributes for Printing Lists and Tables
+Plant Simulation Help 11-4085
+Unpublished work. © 2026 Siemens
+
+GenerateColumnWidth [SimTalk]
+Uses the widest column of the list when printing the list/table designated by <Path> (true) or not
+(false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.GenerateColumnWidth:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.GenerateColumnWidth := true
+See also
+Print Setup
+GenerateColumnWidth [SimTalk]
+11-4086 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+PrintColumnNumber [SimTalk]
+Prints the column number of the list/table designated by <Path> (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.PrintColumnNumber:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.PrintColumnNumber := false
+See also
+Print Setup
+PrintColumnNumber [SimTalk]
+Plant Simulation Help 11-4087
+Unpublished work. © 2026 Siemens
+
+PrintDataType [SimTalk]
+Prints the data type of the list/table designated by <Path> (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.PrintDataType:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.PrintDataType := false
+See also
+Print Setup
+PrintDataType [SimTalk]
+11-4088 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+PrintInternalLists [SimTalk]
+Prints nested lists located in the list/table designated by <Path> (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.PrintInternalLists:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.PrintInternalLists := false
+See also
+Print Setup
+PrintInternalLists [SimTalk]
+Plant Simulation Help 11-4089
+Unpublished work. © 2026 Siemens
+
+PrintRowNumber [SimTalk]
+Prints the row number of the list/table designated by <Path> (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.PrintRowNumber:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataStack.PrintRowNumber := false
+See also
+Print Setup
+PrintRowNumber [SimTalk]
+11-4090 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+RepeatColumnIndex [SimTalk]
+Prints the user-defined column index on each page of the printed list/table designated by <Path> (true) or
+not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.RepeatColumnIndex:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.RepeatColumnIndex := false
+See also
+Print Setup
+RepeatColumnIndex [SimTalk]
+Plant Simulation Help 11-4091
+Unpublished work. © 2026 Siemens
+
+RepeatRowIndex [SimTalk]
+Prints the user-defined row index on each page of the printed list/table designated by <Path> (true) or not
+(false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.RepeatRowIndex:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.RepeatRowIndex := true
+See also
+Print Setup
+Attributes for Showing Settings of Lists and Tables
+_Attributes for Showing Settings of Lists and Tables
+Lists and tables provide the attributes listed in the table of contents to the left for showing and hiding their
+settings.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+RepeatRowIndex [SimTalk]
+11-4092 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+_Attributes for Showing Settings of Lists and Tables
+Plant Simulation Help 11-4093
+Unpublished work. © 2026 Siemens
+
+ShowComment [SimTalk] - lists
+Shows the Comment of the list/table designated by <Path> (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.ShowComment:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.ShowComment := true
+See also
+Show Comment [lists]
+ShowComment [SimTalk] - lists
+11-4094 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ShowDataType [SimTalk] - lists
+Shows the Data Type of the list/table designated by <Path> (true) or hides it (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.ShowDataType:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.ShowDataType := false
+See also
+Show Data Type [lists]
+ShowDataType [SimTalk] - lists
+Plant Simulation Help 11-4095
+Unpublished work. © 2026 Siemens
+
+ShowVoid [SimTalk]
+Shows Empty Cells in the list/table designated by <Path> in gray (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.ShowVoid:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataQueue.ShowVoid := false
+See also
+Highlight Empty Cells
+Miscellaneous Attributes of Lists and Tables
+_Miscellaneous Attributes of Lists and Tables
+Lists and tables provide the attributes listed in the table of contents to the left for miscellaneous purposes.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+ShowVoid [SimTalk]
+11-4096 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyDataTable.MaxXDim := -1
+• To get the value of an attribute, you might, for example, type:
+print MyDataTable.MaxXDim
+posit := Station.Cont.XPos
+_Miscellaneous Attributes of Lists and Tables
+Plant Simulation Help 11-4097
+Unpublished work. © 2026 Siemens
+
+Comment [SimTalk] - lists
+Sets the comment of the list/table designated by <Path>.
+Remarks
+The attribute applies to the DataTable, the DataList, the DataStack, and the DataQueue.
+Type
+Attribute
+Syntax
+<Path>.Comment:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyDataQueue.Comment := "parts produced"
+print MyDataQueue.Comment
+SimTalk
+ShowComment [SimTalk] - lists
+See also
+Show Comment [lists]
+Comment [SimTalk] - lists
+11-4098 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Cursor [SimTalk]
+Sets the cell in the list with one column designated by <Path> in which the cursor is placed.
+Remarks
+The attribute applies to the DataList, the DataStack, and the DataQueue.
+All methods that use ranges, such as find or max, use the current position of the cursor. Plant Simulation
+ignores ranges located before the current cursor position. The method starts its task beginning at the
+cursor position. If a method does not return the expected values, check the cursor position.
+Note
+You can also set the cursor by using a user-defined index. Use the method setCursor when using a
+user-defined index of data type integer.
+Type
+Attribute
+Syntax
+<Path>.Cursor:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyDataStack.Cursor := 1
+MyDataQueue.Cursor := 2
+MyDataList.Cursor := MyDataList.Cursor + 1
+SimTalk
+CursorX [SimTalk]
+CursorY [SimTalk]
+setCursor [SimTalk] - lists
+find [SimTalk] - lists
+Cursor [SimTalk]
+Plant Simulation Help 11-4099
+Unpublished work. © 2026 Siemens
+
+max [SimTalk] - lists
+See also
+Search Lists with Methods
+Cursor [SimTalk]
+11-4100 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+InheritComment [SimTalk]
+Makes the list/table designated by <Path> inherit its comment (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.InheritComment:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataTable.InheritComment := true
+See also
+Inherit Comment [button]
+InheritComment [SimTalk]
+Plant Simulation Help 11-4101
+Unpublished work. © 2026 Siemens
+
+InheritContents [SimTalk]
+Makes the list/table designated by <Path> inherit its contents from the class (true) or not (false).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Note
+Plant Simulation does not deactivate Inherit Contents when you instantiate the class of a list
+containing a sublist, and then write to the instance with a method, or when you write to the sublist
+with a method. If you model like that, you have to deactivate Inherit Contents yourself in the window of
+the list object.
+Note
+User-defined attributes and local variables do not provide this attribute.
+Type
+Attribute
+Syntax
+<Path>.InheritContents:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyDataList.InheritContents := false
+See also
+Inherit Contents [lists]
+InheritContents [SimTalk]
+11-4102 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+InheritFormat [SimTalk]
+Makes the list/table designated by <Path> inherit its format from the class (true) or not (false ).
+Remarks
+The attribute applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Attribute
+Syntax
+<Path>.InheritFormat:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Note
+User-defined attributes and local variables do not provide this attribute.
+Example
+MyDataStack.InheritFormat:= true
+See also
+Inherit Format [button]
+InheritFormat [SimTalk]
+Plant Simulation Help 11-4103
+Unpublished work. © 2026 Siemens
+
+MaxDim [SimTalk]
+Sets the maximum number of cells for a list with one column designated by <Path>.
+Remarks
+The attribute applies to the objects DataStack, DataQueue, and DataList.
+Type
+Attribute
+Syntax
+<Path>.MaxDim:integer
+Assignment Value
+You can assign a value of data type integer.
+Specify -1 for an infinite size.
+Example
+MyDataStack.MaxDim := -1                  // unlimited dimension
+MyDataQueue.MaxDim := 20                  // 20 entries
+MyDataList.MaxDim := 2*MyDataList.MaxDim  // double the number of entries
+See also
+Number of Rows [lists]
+DataTable
+DataTable [object]
+Use the object DataTable for storing data in several columns, which can have different data types.
+Image
+MaxDim [SimTalk]
+11-4104 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Description
+You can access the individual cells in the DataTable via their index, i.e., by their position designated by the
+number of the row and the number of the column. You can compare a DataTable to a shelf in which you
+enter values and references to the cells and remove them again. As opposed to the DataList, the contents
+of the cells remain in the DataTable and the DataTable can also have blank cells in a range. You can add
+and remove rows and columns during a simulation run at will.
+You can access the functions of the list objects on the List Ribbon Tab.
+Note
+The DataTable always opens in the background behind any open dialog boxes. You can open it in the
+foreground as a dialog box with the method openDialogBox.
+The DataTable shares its built-in properties with the data type table. Note the difference between the
+object DataTable that you can insert into models and the data type table. You can create user-defined
+attributes and local and global variables of data type table that are part of another object and thus are not
+an object of their own and do not have their own icon.
+For this reason these variables and attributes do not recognize the SimTalk functions of the DataTable,
+such as Location or existsIcon. All other methods, especially for read and write access apply to both the
+DataTable and to variables and attributes.
+You can also show the contents of a DataTable in an HtmlReport, compare Display a DataTable or a
+DataList.
+To show a tooltip with information about the DataTable, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the DataTable, click Show Manipulators
+ on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object DataTable to your simulation model, click 
+  Manage Class Library > Basic Objects >
+InformationFlow > DataTable on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Note
+The MaterialsTable of the fluid objects shares the properties of the DataTable.
+DataTable [object]
+Plant Simulation Help 11-4105
+Unpublished work. © 2026 Siemens

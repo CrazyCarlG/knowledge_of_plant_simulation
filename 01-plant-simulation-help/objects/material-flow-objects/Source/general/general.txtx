@@ -1,0 +1,840 @@
+Side [SimTalk]
+Sets the Side of the Frame on which the Interface designated by <Path> is located.
+Type
+Attribute
+Syntax
+<Path>.Side:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Top", "Right", "Bottom", "Left", or "Angle-dependent".
+"Angle-dependent" takes the angle between the objects into account when determining the starting
+point or the end point of the Connector.
+Example
+interface.Side := "right"
+See also
+Side [drop-down list]
+Source
+Source
+Use the object Source for producing the parts that move through your model. It usually represents the
+receiving department of your plant or the main machine producing the parts.
+Image
+Side [SimTalk]
+Plant Simulation Help 11-1567
+Unpublished work. © 2026 Siemens
+
+Description
+The Source has a capacity of one and no processing time. The Source produces the same or different
+types of MUs one after the other or in a mixed sequence. It might, for example, represent the receiving
+department of your plant that introduces parts produced at another location into the plant. Or it can be a
+machine, which produces the parts that the other stations process.
+You can set a procedure to determine the times at which it creates the parts as well as a procedure
+to determine the types of MUs to be produced. As an active material flow object, the Source attempts
+to move the MUs it produced to the objects to which it is connected. You can also define how the
+Source proceeds when it cannot move a MU to its succeeding object, by selecting or clearing Blocking
+.
+You will use the Source to produce the parts and workpieces that move through your plant and which are
+processed by the different stations.
+You will use the Drain 
+  to remove these parts from the factory to model, for example, the shipping
+department of your facility.
+To show a tooltip with information about the Source, hover with the mouse over it.
+To change the length of the graphic and the anchor points of the Source, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+Add the Object to the Simulation Model
+To add the object Source to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Source on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Source
+11-1568 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Produce Parts with the Source
+Check How Many Parts Were Introduced into the Plant
+Dialog Box of the Source
+Dialog Box of the Source
+Double-click the icon of the Source to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the Source
+Plant Simulation Help 11-1569
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+11-1570 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Operating Mode [check box]
+The Operating Mode sets how the Source proceeds if it cannot create the MUs at the Time of Creation
+you entered.
+Remarks
+You can:
+• Select Blocking, to make the Source remember the time at which it was supposed to produce the next
+MU. It then produces the following MUs at the next possible point in time, i.e., when the MU that was
+blocked by the successor, was moved on. The Source stops creating parts when the simulation time has
+reached the Stop time.
+• Clear Blocking, to make the Source create another MU exclusively at the time of creation you entered.
+Note
+When the Source is temporarily not operational because it is failed, paused or blocked, the times of
+creation may shift, if you select Blocking. Then, the settings for the times of creation cannot be realized.
+SimTalk
+Blocking [SimTalk]
+See also
+Time of Creation [Source]
+Time of Creation
+Time of Creation [Source]
+Select the point in time at which and how the Source produces MUs from the drop-down list.
+Remarks
+You can select one of these settings:
+Operating Mode [check box]
+Plant Simulation Help 11-1571
+Unpublished work. © 2026 Siemens
+
+• Interval Adjustable
+The Source produces the first MU at the Start time. The Time of Creation designates the Interval
+between two creation events. It produces the last MU at the Stop time.
+If you do not type in a Stop time for this setting, Plant Simulation produces the amount of parts you
+entered at the most. The default value -1 designates an unlimited number of parts to be produced.
+Otherwise, the Source produces parts until the Stop time is reached and ignores the Amount of parts
+you entered.
+Note
+If you select a constant time all MUs are produced at this point in time.
+• Number Adjustable
+The Source produces the number of MUs, which you type in as the Amount. If you activate the check
+box Generate as Batch, the Amount does not designate the number of parts, but the number of
+batches that the Source produces. The times at which the MUs are created are distributed according to
+the distribution you select for the Interval.
+If you select a constant time all MUs are produced at this point in time.
+• Delivery Table
+The Source produces MUs according to the Delivery Time, the Class, the Number, the Name, and the
+Attribute which you type into the Delivery Table.
+Note
+If you assign a new Delivery Table to the Source during the simulation, it also produces parts which
+were to be produced in the past according to the new delivery table.
+• Trigger
+The Source produces MUs according to the values that a set of Trigger objects control.
+Note
+Depending on the setting you select, the attribute Path (dialog item MU or Table) either sets the path
+to the MU class, the delivery list, the sequence table, the frequency table, or the percentage table.
+Time of Creation [Source]
+11-1572 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If the Source cannot produce the MUs at the Time of Creation, the Operating Mode determines how it
+proceeds:
+• Select Blocking 
+ , to make the Source remember the time at which it was
+supposed to produce the next MU. It then produces the following MUs at the next possible point in time,
+i.e., when the MU that blocked the successor was moved on.
+• Clear Blocking, to make the Source create another MU exclusively at the time of creation you typed in.
+Note
+When the Source is temporarily not operational because it is failed, paused or blocked, the Time of
+Creation may shift, if you select Blocking. Then, the settings for the times of creation cannot be
+realized.
+SimTalk
+TimeOfGeneration [SimTalk]
+Time of Creation [Source]
+Plant Simulation Help 11-1573
+Unpublished work. © 2026 Siemens
+
+Interval Adjustable [time of creation]
+Produces the MUs according to point in time defined by the settings Interval, Start, and Stop.
+Remarks
+Select a distribution and enter the values, which that distribution requires, into the text box. Plant
+Simulation shows these values below the text box.
+• The Start time designates the point in time at which the Source produces the first MU. It produces
+additional MUs after the time, which you enter as the Interval, has elapsed.
+• The Interval designates the time span between two events at which the Source produces MUs.
+• The Stop time designates the point in time at which the Source produces the last MU. If you type in 0 as
+the Stop time, the Source produces MUs according to the Amount you entered.
+You can also select one of the Probability Distributions for the Interval, for the Start time, and for the
+Stop time.
+Amount
+Type in the amount of MUs which the Source produces.
+Interval Adjustable [time of creation]
+11-1574 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The setting Amount is only available for the Time of Creation > Number Adjustable and Interval
+Adjustable.
+If you do not type in a Stop time for the setting Interval Adjustable, Plant Simulation produces the
+amount of parts you typed in at the most. The default value of -1 designates an unlimited number of
+parts to be produced. Otherwise, the Source produces parts until the Stop time is reached and ignores
+the Amount of parts you entered.
+For the setting Interval Adjustable the Source might create more parts than the Amount you typed in,
+if the check box Generate as Batch is activated. This is because the batches are always produced in their
+entirety, not in part only.
+For the setting Time of Creation > Number Adjustable the value does not designate the amount of
+MUs, but the amount of batches/lots which the Source produces if you activated Generate as Batch.
+SimTalk
+Number [SimTalk]
+TimeOfGeneration [SimTalk]
+See also
+Produce Parts During an Interval Which You Define
+Interval [Source]
+Start [Source]
+Stop [Source]
+Interval [SimTalk] - Source
+Start [SimTalk] - Source
+Stop [SimTalk] - Source
+Interval Adjustable [time of creation]
+Plant Simulation Help 11-1575
+Unpublished work. © 2026 Siemens
+
+Number Adjustable [time of creation]
+Produces the number of MUs, which you type into the text box Amount for the setting Number
+Adjustable of the Source.
+Remarks
+If you activate the check box Generate as Batch, the Amount does not designate the number of parts, but
+the number of batches that the Source produces.
+You can also select one of the Probability Distributions from the drop-down list Creation Times and type
+the values that the selected distribution requires into the text box. The distribution determines the point in
+time at which the Source creates the MUs.
+The Source produces the number of MUs at the different times which the random number generator
+generated at the beginning of the simulation. The determined times are contained within the bounds if
+you type in a lower bound and an upper bound.
+If you select a Constant time, the Source creates the number of MUs all at one point in time.
+Note
+If you set the Creation Times via SimTalk, use the attribute Interval.
+Number Adjustable [time of creation]
+11-1576 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+For the setting Number Adjustable you cannot select the MU Selection > Sequence.
+SimTalk
+Number [SimTalk]
+TimeOfGeneration [SimTalk]
+See also
+Produce the Number of Parts You Need
+Number Adjustable [time of creation]
+Plant Simulation Help 11-1577
+Unpublished work. © 2026 Siemens
+
+Delivery Table [time of creation]
+Produces the MUs according to the settings, which you typed into the Delivery Table for the setting
+Delivery Table of the Source.
+Remarks
+Type the path of the Delivery Table into the text box next to Table.
+Or click 
+  and select a table in the dialog Select Object.
+You can also add information about the name and number of the produced parts as well as values for their
+attributes to the Delivery Table.
+The Delivery Table has five columns with the data types time, object, integer, string, and table. Instead of
+the data type time you can also use the data types date, dateTime, or real. Each row of the Delivery Table
+defines one order for producing MUs:
+Delivery Table [time of creation]
+11-1578 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Type the time at which the Source produces the MUs into the column Delivery Time.
+Note
+Plant Simulation processes the Delivery Table row by row. For this reason the time should increase
+from row to row. If Plant Simulation processes a row in which the time is located in the past, it creates
+the part immediately. This may not be what you would expect to happen.
+• Type the class of the MU into the column MU. You can also drag the MU class into the respective cell and
+drop it there.
+• Type the number of MUs to be produced into the column Number.
+Note
+If you enter 0 as Number into a row, Plant Simulation does take the specified interval for the next
+creating cycle into account. This means that Plant Simulation does not skip this row, but does not
+produce a part during this cycle.
+• Enter a name for the MUs to be produced into the column Name.
+Note
+You have to type data in the columns Delivery Time and MU. If you do not type in a Number, Plant
+Simulation produces a single MU. If you do not type in a Name, the produced MUs inherit the name
+of their class.
+• Type in the name of the table attributes and user-defined attributes that the Source sets when it
+produces the MUs into the column Attributes.
+Type the name of the attribute in column 1 of the attribute table. If an attribute with that name does not
+exist, Plant Simulation creates it. Set the data type of the attribute with the data type of an additional
+column in the attributes table.
+Note
+Plant Simulation assigns the data type of the column containing the value of the attribute to the data
+type of the attribute. The respective entry is the value of the generated attribute.
+If the data type of the column is table/list/stack/queue, Plant Simulation does not copy the sublists of
+the attribute table, but creates a reference to this list. The newly created user-defined attribute then
+Delivery Table [time of creation]
+Plant Simulation Help 11-1579
+Unpublished work. © 2026 Siemens
+
+accesses this list, i.e., when you change one of the two lists, the contents of the other list is changed
+as well.
+Note
+The Source does not produce parts whose time of creation is in the future when you assign a Delivery
+Table during the simulation.
+Instead of using a DataTable, which you inserted into a Frame, you can also use a user-defined attribute of
+data type table of the Source as the Delivery Table.
+SimTalk
+Path [SimTalk] - Source
+See also
+creationTable [SimTalk] - Source
+TimeOfGeneration [SimTalk]
+Produce Parts According to a Delivery Table
+Delivery Table [time of creation]
+11-1580 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Trigger [time of creation]
+Produces MUs according to the values that one or several Trigger objects control for the setting Trigger of
+the Source.
+Remarks
+Click Trigger and type the name(s) of the Trigger object(s) into the list that opens. Each Trigger in this list
+sends orders as strings to produce MUs to the Source.
+Open the Trigger, click the tab Values, make sure that the Trigger Type > Input is selected and click
+Values.
+Type the orders into the cells on the tab Contents:
+• Type the Point in Time at which the Source creates MUs into the cells on the left-hand side.
+• Type the Value of the order into the cells on the right-hand side. An order is a string with this
+format: Amount of MUs to be produced, type of the MU to be produced, type of the distribution, and
+the parameters of the distribution, (<num>, <mu_Type>,<distributionType[, distribution
+parameters]> in SimTalk).
+You always have to type in the amount of MUs to be produced, the type of the MU to be produced, and
+the distribution type. When you type in Const as the distribution type, the Source produces the MUs at
+the point in time which you type into the respective cell in the column Point in Time. If you would like it
+to produce the MUs with an offset to the time you entered there, type in number of seconds after which
+it produces them after the constant time (Const) you specified. For all other distribution types you have
+to enter the respective distribution parameters after the distribution type.
+If you select a distribution, its values set the time offset to the time you entered into the respective cell
+in the column Point in Time. The offset you type in has to be a positive number.
+Trigger [time of creation]
+Plant Simulation Help 11-1581
+Unpublished work. © 2026 Siemens
+
+In the figure above the creation time for each MU is computed as 1:00.000 + z_negexp(…, 20, 0,
+60) and 5:00.000+z_normal(…, 20, 5) respectively.
+The random stream used is the internal stream of the Source.
+If you type in the Source as a resource into the ShiftCalendar, Plant Simulation interrupts the production
+sequence during the weekends:
+• If you select the Operating Mode > Blocking 
+ , the Source does not produce MUs at all during
+the weekends.
+• If you clear Blocking 
+ , the Source produces and moves the MUs, as soon as its shift starts
+again.
+You might, for example, use a Source that is controlled by a Trigger, if you want to set a time of creation,
+such as with a delivery table, and you would like to periodically repeat using the values in this list, for
+example when you select MU Selection > Sequence Cyclical.
+SimTalk
+Trigger [SimTalk]
+Trigger [time of creation]
+11-1582 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Trigger [object]
+Produce Parts Using a Trigger Object
+creationTable [SimTalk] - Source
+TimeOfGeneration [SimTalk]
+Trigger [time of creation]
+Plant Simulation Help 11-1583
+Unpublished work. © 2026 Siemens
+
+Interval [Source]
+For Time of Creation > Interval Adjustable the interval is the time span that elapses between two events
+at which the Source produces parts. The Source creates an infinite number of MUs.
+Remarks
+Select a distribution from the drop-down list, and type the values, which that distribution requires, into the
+text box. Plant Simulation shows these values along the upper border of the tab.
+You can also select Const and type in a constant time.
+SimTalk
+Interval [SimTalk] - Source
+See also
+Interval Adjustable [time of creation]
+Start [SimTalk] - Source
+Stop [SimTalk] - Source
+Times and Distributions
+Probability Distributions
+Empirical Distributions
+User-defined Distributions
+Interval [Source]
+11-1584 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start [Source]
+The Start time designates the point in time at which the Source produces the first MU.
+Remarks
+Select a distribution from the drop-down list, and type the values, which that distribution requires, into the
+text box. Plant Simulation shows these values along the upper border of the tab. You can also type in a
+constant time (Const).
+SimTalk
+Start [SimTalk] - Source
+See also
+Interval [SimTalk] - Source
+Stop [SimTalk] - Source
+Times and Distributions
+Probability Distributions
+Empirical Distributions
+User-defined Distributions
+Start [Source]
+Plant Simulation Help 11-1585
+Unpublished work. © 2026 Siemens
+
+Stop [Source]
+The Stop time designates the time at which the Source stops producing MUs.
+Remarks
+Select a distribution from the drop-down list, and type the values, which that distribution requires, into the
+text box. Plant Simulation shows these values along the upper border of the tab.
+You can also type in a constant time (Const).
+SimTalk
+Stop [SimTalk] - Source [SimTalk]
+See also
+Interval [SimTalk] - Source
+Start [SimTalk] - Source
+Times and Distributions
+Probability Distributions
+Empirical Distributions
+User-defined Distributions
+MU Selection
+MU selection [drop-down list]
+Select which type of MUs and how the Source produces MUs.
+Remarks
+You can select one of these settings:
+Stop [Source]
+11-1586 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Constant
+The Source produces one type of MU only. Type its path into the text box MU.
+• Sequence Cyclical
+The Source produces the MUs in a fixed sequence, which you type into a table. As soon as the Source
+has processed the sequence, it repeats the production sequence periodically.
+• Sequence
+The Source produces MUs according to the sequence table, whose name you typed into the text box
+next to Table. As opposed to Sequence Cyclical, Sequence processes the sequence only once, not
+repeatedly.
+• Random
+The Source produces MUs in random frequencies according to the values which you typed into the
+frequency table.
+• Percentage
+• The Source produces MUs in percentages according to the values which you typed into the percentage
+table.
+• Order Controlled
+The Source only produces MUs if they are ordered by a Store with activated setting Supermarket or with
+the method orderParts.
+MU selection [drop-down list]
+Plant Simulation Help 11-1587
+Unpublished work. © 2026 Siemens
+
+Note
+Depending on the Time of Creation you select, the dialog item MU or Table (attribute Path) either sets
+the path to the MU class, the delivery list, the sequence table, the frequency table, or the percentage
+table.
+Note
+To use a copy of the DataTable instead of a reference to the DataTable, assign the name .unshare to
+the subtable.
+SimTalk
+MUSelection [SimTalk]
+Path [SimTalk] - Source
+unshare [SimTalk]
+See also
+Store as Supermarket [check box] Configuration [button]
+getCurrentOrderTableRow [SimTalk]
+Video on YouTube
+https://youtu.be/BvHLQCIjGIA?si=Jy0O3wvXpSNFltdg&t=100
+MU selection [drop-down list]
+11-1588 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Constant [MU selection]
+Produces one type of MU for the setting MU Selection > Constant.
+Remarks
+Type the path to this type of MU into the text box next to MU.
+Or click 
+  and select a MU class, Part, Container or Transporter, in the dialog Select Object.
+Or select the MU in the Toolbox or the Class Library, drag it to the text box and drop it there.
+SimTalk
+MUSelection [SimTalk]
+Path [SimTalk] - Source
+See also
+Produce a Single Part Type Only
+Constant [MU selection]
+Plant Simulation Help 11-1589
+Unpublished work. © 2026 Siemens
+
+Sequence Cyclical [MU selection]
+Produces parts according to the sequence table whose path you enter for the setting MU Selection >
+Sequence Cyclical.
+Remarks
+You can also click 
+  and select the name of the table in the dialog Select Object. Plant Simulation
+automatically formats the table.
+Or select the MU in the Toolbox or the Class Library, drag it to the text box and drop it there.
+Note
+For the MUs that are to be produced, you can also preallocate user-defined attributes. If the attribute
+has the data type table, the MU gets a reference to the table defined in the Source. A reference saves
+memory and increases performance. In some cases you might need a copy of the table though. You can
+enforce this by assigning the name .unshare to the subtable, compare unshare.
+To make the Source produce the number of MUs, which you typed into the cell Number of the Table, in a
+single lot, select Generate as Batch.
+If you select Number Adjustable as the Time of Creation, the Amount does not designate the number of
+parts, but the number of batches. Then the Source produces the entire set of parts all at once at the given
+start time and attempts to move all of the parts on to the next object in a single lot.
+To make the Source produce the MUs as a sequence of individual parts one after the other, clear the check
+box.
+Once the Source has processed the entire sequence, it starts processing the information in the table again,
+starting at the beginning of the sequence.
+Sequence Cyclical [MU selection]
+11-1590 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+MUSelection [SimTalk]
+Path [SimTalk] - Source
+GenerateAsBatch [SimTalk]
+getCurrentOrderTableRow [SimTalk]
+unshare [SimTalk]
+See also
+Produce Parts in a Fixed Sequence Over and Over Again
+Sequence Cyclical [MU selection]
+Plant Simulation Help 11-1591
+Unpublished work. © 2026 Siemens
+
+Sequence [MU selection]
+Produces MUs according to the values which you typed into the sequence table, whose name you typed
+into the text box next to Table for the setting MU Selection > Sequence.
+Remarks
+You can also click 
+  and select the name of the table in the dialog Select Object. Plant Simulation
+automatically formats the table.
+Or select the MU in the Toolbox or the Class Library, drag it to the text box and drop it there.
+Note
+As opposed to the setting Sequence Cyclical, the setting Sequence processes the sequence only once,
+not repeatedly.
+The setting Sequence is not available if you set Time of Generation to Number Adjustable.
+Note
+For the MUs to be produced you can also preallocate user-defined attributes. If the attribute has the data
+type table, the MU gets a reference to the table defined in the Source. A reference saves memory and
+increases performance. In some cases you might need a copy of the table though. You can enforce this
+by assigning the name .unshare to the subtable, compare unshare.
+To make the Source produce the number of MUs, which you typed into the cell Number of the Table in a
+single lot, select Generate as Batch 
+ . Then the Source produces the entire set of parts
+all at once at the given start time and attempts to move all of the parts on to the next object in a single lot.
+To make the Source produce the MUs as a sequence of individual MUs, clear the check box.
+Sequence [MU selection]
+11-1592 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+MUSelection [SimTalk]
+Path [SimTalk] - Source
+GenerateAsBatch [SimTalk]
+getCurrentOrderTableRow [SimTalk]
+unshare [SimTalk]
+See also
+Produce Parts in a Fixed Sequence One Time Only
+Sequence [MU selection]
+Plant Simulation Help 11-1593
+Unpublished work. © 2026 Siemens
+
+Random [MU selection]
+Produces MUs according to the values which you type into the frequency table for the setting MU
+Selection > Random.
+Remarks
+Type the path to this table into the text box next to Table.
+You can also click 
+  and select the name of the table in the dialog Select Object. Plant Simulation
+automatically formats the table.
+Note
+For the MUs to be produced you can also preallocate user-defined attributes. If the attribute has the data
+type table, the MU gets a reference to the table defined in the Source. A reference saves memory and
+increases performance. In some cases you might need a copy of the table though. You can enforce this
+by assigning the name .unshare to the subtable, compare unshare.
+Define a frequency number for each type of MU in the frequency table. It has five columns with the data
+types object, real, integer, string, and table. Each row in the frequency table designates a production
+order.
+• Type the MU class into the column MU.
+• Type the frequency of the respective production order into the column Frequency.
+• Type the number of MUs to be produced into the column Number.
+You can, but you do not have to, type a Name and Attributes into the table.
+• Type the name of MUs to be produced into the column Name.
+• Type the name of the attribute subtable of the produced MUs into the column Attributes.
+Random [MU selection]
+11-1594 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To make the Source produce the number of MUs, which you typed into the cell Number of the Table in a
+single lot, select Generate as Batch 
+ .
+If you select Number Adjustable as the time of creation, the amount does not designate the number of
+parts, but the number of batches that the Source produces. Then the Source produces the entire set of
+parts all at once at the given start time and attempts to move all of the parts on to the next object in a
+single lot.
+To make the Source produce the MUs as a sequence of individual MUs, clear the check box.
+To check which part types were produced at which point in time, activate the check box Creation Table on
+the tab Statistics and then open the table.
+SimTalk
+MUSelection [SimTalk]
+Path [SimTalk] - Source
+GenerateAsBatch [SimTalk]
+getCurrentOrderTableRow [SimTalk]
+unshare [SimTalk]
+See also
+Produce Parts With a Random Frequency Entered into a Data Table
+Random [MU selection]
+Plant Simulation Help 11-1595
+Unpublished work. © 2026 Siemens
+
+Percentage [MU selection]
+Produces MUs according to the values which you typed into the percentage table for the setting MU
+Selection > Percentage.
+Remarks
+Type the path to this table into the text box next to Table.
+You can also click 
+  and select the name of the table in the dialog Select Object. Plant Simulation
+automatically formats the table.
+Note
+For the MUs to be produced you can also pre-allocate user-defined attributes. If the attribute has the
+data type table, the MU gets a reference to the table defined in the Source. A reference saves memory
+and increases performance. In some cases you might need a copy of the table though. You can enforce
+this by assigning the name .unshare to the subtable, compare unshare.
+Define the percentage for each type of MU in the percentage table. Each row in the percentage table
+pertains to a production order.
+• Type the name of and the path to the MU class into the column MU.
+• Type the percentage of the respective part types to be produced into the column Portion.
+• Type the amount of the respective part types to be produced into the column Number.
+You can, but you do not have to, type a Name and Attributes into the table.
+• Type the name of the respective part types to be produced into the column Name.
+• Type the name of the attribute subtable of the respective part types to be produced into the column
+Attributes.
+Percentage [MU selection]
+11-1596 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To make the Source produce the number of MUs, which you typed into the cell Number of the Table in a
+single lot, select Generate as Batch 
+ .
+If you select Number Adjustable as the Time of Creation, the amount does not designate the number
+of parts, but the number of batches that the Source produces. Then the Source produces the entire set of
+parts at the point in time you entered as Start time.
+To make the Source produce the MUs as a sequence of individual MUs, clear the check box.
+Note
+MU Selection > Percentage designates a deterministic process for realizing the frequencies of the part
+types which you typed into the column Portion for the part types. When selecting the next part, the
+Source goes to the row on the table which has the greatest need in the column Portion at this point in
+time. This creates periodically repeating patterns in the sequence of the part types to be produced.
+SimTalk
+MUSelection [SimTalk]
+CreationTableActive [SimTalk]
+GenerateAsBatch [SimTalk]
+getCurrentOrderTableRow [SimTalk]
+unshare [SimTalk]
+See also
+Produce Parts With a Percentage Entered into a Data Table
+Exit strategy > Percentage [described]
+Video on YouTube
+https://youtu.be/BvHLQCIjGIA?si=b7Ua-Nl7_uxT39m4&t=158
+Percentage [MU selection]
+Plant Simulation Help 11-1597
+Unpublished work. © 2026 Siemens
+
+Order Controlled [MU selection]
+Only produces MUs if they are ordered by a Store with activated setting Supermarket or with the method
+orderParts for the setting MU Selection > Order Controlled.
+Remarks
+Automatic Routing of the produced part delivers it to the ordering station. If automatic routing of the
+part is deactivated, Plant Simulation automatically activates it.
+The Source produces MUs according to the setting Interval Adjustable and the Interval between the
+creation times, that you type in.
+SimTalk
+MUSelection [SimTalk]
+orderParts [SimTalk] - Source
+See also
+Store as Supermarket [check box]
+Configuration [button]
+View > Show Orders [Source]
+Use the Store as Supermarket
+Order Controlled [MU selection]
+11-1598 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Generate as Batch [check box]
+To make the Source produce the number of MUs, which you typed into the cell Number of the Table in a
+single lot, select this check box.
+Remarks
+If you activate Generate as Batch, the Source produces the entire set of parts all at once at the given start
+time and attempts to move all of the parts on to the next object in a single lot instead of one by one.
+To make the Source produce the MUs as a sequence of individual parts, clear the check box.
+The setting applies for the MU Selection > Sequence, Sequence Cyclical, Random, and Percentage.
+Note
+If you select Number Adjustable as the Time of Creation, the Amount does not designate the number
+of parts, but the number of batches that the Source produces. Then the Source produces the entire set
+of parts at the point in time you entered as Start Time.
+SimTalk
+GenerateAsBatch [SimTalk]
+CurrentBatchNumber [SimTalk]
+Generate as Batch [check box]
+Plant Simulation Help 11-1599
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-1600 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls
+Plant Simulation Help 11-1601
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Select Object [for controls]
+Entrance Control [general description]
+Exit Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls
+11-1602 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Statistics
+Tab Statistics [Source]
+In addition to the values described under the Tab Statistics, the tab Statistics provides the dialog items
+Creation Table and Open.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object. You can also click the right mouse button in the Frame and
+select Show Statistics Report or you can press F6.
+See also
+View and Visualize Statistics
+Statistics Report [described]
+Resource Statistics [check box]
+Resource Type
+Tab Exit
+Plant Simulation Help 11-1603
+Unpublished work. © 2026 Siemens
+
+Creation Table [Source]
+To write all events, for which the Source produced MUs during a simulation run, into a table, select this
+check box.
+Remarks
+Then click Open to open the creation table and check the values.
+Note
+The Source records the creation events in addition to the resource statistics it collects in any case.
+SimTalk
+CreationTableActive [SimTalk]
+creationTable [SimTalk] - Source
+Creation Table [Source]
+11-1604 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Open [creation table]
+To open the creation table of the Source, if you selected the check box Creation Table, click Open.
+Remarks
+Each row lists a production event:
+• The column Name shows the name of the MU class.
+• The column Path shows the path of the MU class, the name of the MU, and its number.
+• The column Time of Generation shows the time at which the Source created the individual MU.
+SimTalk
+creationTable [SimTalk] - Source
+Open [creation table]
+Plant Simulation Help 11-1605
+Unpublished work. © 2026 Siemens
+
+See also
+Creation Table [Source]
+Open [creation table]
+11-1606 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-1607
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Forward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Show Orders [Source] Associated Shift Calendar
+Contents [material flow objects]
+Navigate Menu
+11-1608 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Orders [Source]
+Opens a table that shows the orders which are pending with the Source.
+Remarks
+The table contains the Name of the ordered part, its Amount, and the Target of the part. The Target is
+the object that orders the parts.
+See also
+MU selection [drop-down list] > Order Controlled [MU selection]
+Supermarket [check box]
+Configuration [button]
+Show Orders [Source]
+Plant Simulation Help 11-1609
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-1610 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Source
+_Methods of the Source
+The Source provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-1611
+Unpublished work. © 2026 Siemens

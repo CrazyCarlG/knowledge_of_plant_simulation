@@ -1,0 +1,253 @@
+Syntax
+<Path>.statWaitingTimeTable(WaitingTimes:table) → boolean
+Parameter
+The parameter WaitingTimes of data type table designates the name of the table.
+Return Value
+The return value has the data type boolean.
+false for the settings MU Types and Depends on Main MU.
+Examples
+var myWaitingTimesTable: table
+MyAssembly.statWaitingTimeTable(myWaitingTimesTable)
+print MyAssembly.statWaitingTimeTable(myWaitingTimesTable)
+See also
+Waiting [state, material flow objects]
+Tab Statistics [AssemblyStation]> Waiting Times
+Read-Only Attributes of the AssemblyStation
+_Read-Only Attributes of the AssemblyStation
+The AssemblyStation provides:
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+Read-Only Attributes of the AssemblyStation
+Plant Simulation Help 11-1795
+Unpublished work. © 2026 Siemens
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print AssemblyStation.StatWaitingPartsCount
+_Read-Only Attributes of the AssemblyStation
+11-1796 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+NumMUsToBeDeleted [SimTalk]
+Returns the number of MUs from the table MUs To Be Deleted of the AssemblyStation designated by
+<Path>.
+Type
+Read-only attribute
+Syntax
+<Path>.NumMUsToBeDeleted → integer
+Return Value
+The return value has the data type integer.
+Example
+for var i := 1 to MyAssembly.NumMUsToBeDeleted 
+   print MyAssembly.MUToBeDeleted(i)
+next
+SimTalk
+muToBeDeleted [SimTalk]
+musToBeDeleted [SimTalk]
+See also
+MUs To Be Deleted
+NumMUsToBeDeleted [SimTalk]
+Plant Simulation Help 11-1797
+Unpublished work. © 2026 Siemens
+
+StatWaitingPartsCount [SimTalk]
+Returns how often the AssemblyStation designated by <Path> was waiting for mounting parts.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingPartsCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyAssembly.StatWaitingPartsCount
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Parts
+StatWaitingPartsCount [SimTalk]
+11-1798 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatWaitingPartsDelta [SimTalk]
+Returns the deviation from the mean value of the time spans during which the AssemblyStation
+designated by <Path> was waiting for MUs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingPartsDelta → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingPartsDelta
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Parts
+StatWaitingPartsDelta [SimTalk]
+Plant Simulation Help 11-1799
+Unpublished work. © 2026 Siemens
+
+StatWaitingPartsMu [SimTalk]
+Returns the mean duration of the time spans during which the AssemblyStation designated by <Path> was
+waiting for MUs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingPartsMu → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingPartsMu
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Parts
+StatWaitingPartsMu [SimTalk]
+11-1800 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatWaitingPartsPortion [SimTalk]
+Returns the portion of the statistics collection period during which the AssemblyStation designated by
+<Path> was waiting for mounting parts.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingPartsPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingPartsPortion
+See also
+Waiting [state, material flow objects]
+Tab Statistics [AssemblyStation]
+Statistics report, Waiting Times for Parts
+StatWaitingPartsPortion [SimTalk]
+Plant Simulation Help 11-1801
+Unpublished work. © 2026 Siemens
+
+StatWaitingPartsTime [SimTalk]
+Returns the entire time during which the AssemblyStation designated by <Path> was waiting for MUs.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingPartsTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyAssembly.StatWaitingPartsTime
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Parts
+StatWaitingPartsTime [SimTalk]
+11-1802 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatWaitingResCount [SimTalk] - AssemblyStation
+Returns how often the AssemblyStation designated by <Path> was waiting for mounting parts and/or for
+processing-Exporters/processing-services.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingResCount → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyAssembly.StatWaitingResCount
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Services and Parts
+StatWaitingResCount [SimTalk] - AssemblyStation
+Plant Simulation Help 11-1803
+Unpublished work. © 2026 Siemens
+
+StatWaitingResDelta [SimTalk] - AssemblyStation
+Returns the standard deviation of the times during the AssemblyStation designated by <Path> was waiting
+for mounting parts and/or for processing-Exporters/processing-services.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingResDelta → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingResDelta
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Services and Parts
+StatWaitingResDelta [SimTalk] - AssemblyStation
+11-1804 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatWaitingResMu [SimTalk] - AssemblyStation
+Returns the average duration of a period of time during which the AssemblyStation designated by <Path>
+was waiting for mounting parts and/or for processing-Exporters/processing-services.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingResMu → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingResMu
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Services and Parts
+StatWaitingResMu [SimTalk] - AssemblyStation
+Plant Simulation Help 11-1805
+Unpublished work. © 2026 Siemens
+
+StatWaitingResPortion [SimTalk] - AssemblyStation
+Returns the ratio of the time during which the AssemblyStation designated by <Path> was waiting for
+mounting parts and/or for processing-Exporters/processing-services to the statistics collection period.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingResPortion → real
+Return Value
+The return value has the data type real.
+Example
+print MyAssembly.StatWaitingResPortion
+See also
+Waiting [state, material flow objects]
+Tab Statistics [AssemblyStation]
+Statistics report, Importers Waiting for Services and Parts
+Statistics report, Waiting Times for Services and Parts
+StatWaitingResPortion [SimTalk] - AssemblyStation
+11-1806 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StatWaitingResTime [SimTalk] - AssemblyStation
+Returns the entire time during which the AssemblyStation designated by <Path> was waiting for
+mounting parts and/or for processing-Exporters/processing-services.
+Type
+Read-only attribute
+Syntax
+<Path>.StatWaitingResTime → time
+Return Value
+The return value has the data type time.
+Example
+print MyAssembly.StatWaitingResTime
+See also
+Waiting [state, material flow objects]
+Statistics report, Waiting Times for Services and Parts
+Attributes of the AssemblyStation
+_Attributes of the AssemblyStation
+The AssemblyStation provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+StatWaitingResTime [SimTalk] - AssemblyStation
+Plant Simulation Help 11-1807
+Unpublished work. © 2026 Siemens

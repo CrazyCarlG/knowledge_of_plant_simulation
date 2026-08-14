@@ -1,0 +1,221 @@
+IsUp [SimTalk] - AngularConverter
+Returns if a MU is located on the exit leg of the AngularConverter designated by <Path> after the Moving
+Time has elapsed and after the MU has exited while the Moving Time is still running (true) or not (false).
+Type
+Read-only attribute
+Syntax
+<Path>.IsUp → boolean
+Watchable
+The read-only attribute is watchable.
+Return Value
+The return value has the data type boolean.
+Example
+print MyAngularConverter.IsUp
+Attributes of the AngularConverter
+_Attributes of the AngularConverter
+The AngularConverter provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+• The Attributes of the Material Flow Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+IsUp [SimTalk] - AngularConverter
+11-2230 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyAngularConverter.AutomaticStop := false
+• To get the value of an attribute, you might, for example, type:
+print MyAngularConverter.Pause
+posit := MyStation.Cont.XPos
+_Attributes of the AngularConverter
+Plant Simulation Help 11-2231
+Unpublished work. © 2026 Siemens
+
+AutomaticStop [SimTalk] - AngularConverter
+Automatically stops the AngularConverter designated by<Path>. This means that it sets its current speed to
+0 if it does not transport a part.
+Remarks
+This might, for example, be the case if it is empty or if it is blocked because a MU cannot leave it.
+If the speed of the AngularConverter is 0, the Energy State changes to operational.
+Type
+Attribute
+Syntax
+<Path>.AutomaticStop:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyAngularConverter.AutomaticStop := true
+See also
+Automatic Stop [check box] - AngularConverter
+Operational [energy]
+AutomaticStop [SimTalk] - AngularConverter
+11-2232 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EntryLength [SimTalk]
+Sets the length of the first leg of the AngularConverter designated by <Path>.
+Remarks
+The EntryLength covers the distance from the entry point to the point at which the AngularConverter
+switches the conveying direction.
+Type
+Attribute
+Syntax
+<Path>.EntryLength:length
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type length.
+Example
+MyAngularConverter.EntryLength := 2
+SimTalk
+ExitLength [SimTalk]
+EntryLength [SimTalk]
+Plant Simulation Help 11-2233
+Unpublished work. © 2026 Siemens
+
+See also
+Entry Length [text box]
+EntryLength [SimTalk]
+11-2234 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EntrySpeed [SimTalk]
+Sets the speed with which the MU moves on the AngularConverter designated by <Path> from the entry
+point to the point at which the AngularConverter switches the conveying direction.
+Type
+Attribute
+Syntax
+<Path>.EntrySpeed:speed
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type speed.
+Example
+MyAngularConverter.EntrySpeed := 2
+SimTalk
+ExitSpeed [SimTalk]
+See also
+Entry Speed [text box]
+EntrySpeed [SimTalk]
+Plant Simulation Help 11-2235
+Unpublished work. © 2026 Siemens
+
+ExitLength [SimTalk]
+Sets the length of the second leg of the AngularConverter designated by <Path>.
+Remarks
+The ExitLength covers the distance from the point at which the AngularConverter switches the conveying
+direction to the point at which the MU exits the object.
+Type
+Attribute
+Syntax
+<Path>.ExitLength:length
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type length.
+Example
+MyAngularConverter.ExitLength := 2
+SimTalk
+EntryLength [SimTalk]
+See also
+Exit Length [text box]
+ExitLength [SimTalk]
+11-2236 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitSpeed [SimTalk]
+Sets the speed with which the MU moves on the AngularConverter designated by <Path> from the point at
+which the AngularConverter switches the conveying direction to the point at which it exits the object.
+Type
+Attribute
+Syntax
+<Path>.ExitSpeed:speed
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type speed.
+Example
+MyAngularConverter.ExitSpeed := 2
+SimTalk
+EntrySpeed [SimTalk]
+See also
+Exit Speed [text box]
+ExitSpeed [SimTalk]
+Plant Simulation Help 11-2237
+Unpublished work. © 2026 Siemens
+
+MovingTime [SimTalk] - AngularConverter
+Sets the time it takes the AngularConverter designated by <Path> to switch from lengthwise to crosswise
+conveyance and vice versa.
+Remarks
+The Moving Time is triggered, when the MU arrives at the corner at which the AngularConverter switches
+conveyance. It is triggered again, when it has exited the AngularConverter altogether to set it back to its
+original position.
+If you use the formula distribution, you can enter a numeric expression or the name of a Method. You can
+use the anonymous identifier @ to access the MU for which the moving time applies.
+Type
+Attribute
+Syntax
+<Path>.MovingTime:time
+Assignment Value
+You can assign a value of data type time.
+Example
+MyAngularConverter.MovingTime := 20
+See also
+Moving Time [drop-down list] - AngularConverter
+Formula [distribution]
+MovingTime [SimTalk] - AngularConverter
+11-2238 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [SimTalk] - AngularConverter
+Sets the Width of the AngularConverter designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.Width:length
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type length.
+Note
+In SimTalk 2.0 you can specify the length units m, mm, km, cm, yd, ft, and in.
+Type in the unit directly after the values, without a separating blank space, for example 10m or 10.2m.
+You can specify the unit for floating point values and for integer values.
+Example
+MyAngularConverter.Width := 4
+See also
+Width [text box] - AngularConverter
+Converter
+Converter [object]
+Use the object Converter for conveying a part either straight through or for lifting it onto a laterally moving
+transport level and then conveying it to the left or right-hand side.
+Width [SimTalk] - AngularConverter
+Plant Simulation Help 11-2239
+Unpublished work. © 2026 Siemens
+
+Image
+Description
+Use the Converter to model materials handling equipment. If the MU moves onto the Converter it either
+passes straight through in the conveying direction or it is, for example, lifted onto a laterally moving
+transport level by a lifting mechanism and then conveyed laterally to the left or laterally to the right.
+If the part enters on side 1 or 3, straight means that the part keeps its conveying direction and exits on the
+opposite side. The insertion direction for this lateral movement is from side 3 to side 1 when the insertion
+direction of the Converter is from left to right, i.e., up to down.
+You can query the side on which the part enters the Converter with the method getObjectOfSide
+[SimTalk].
+The Converter can only be connected to a single object per side. The numbers designate the side of the
+Converter at which the MU exits. The figures below illustrate the sides depending on the direction in which
+you inserted the Converter into your simulation model.
+Converter [object]
+11-2240 Plant Simulation Help
+Unpublished work. © 2026 Siemens

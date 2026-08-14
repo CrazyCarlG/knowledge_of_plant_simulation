@@ -1,0 +1,683 @@
+Back to Model a Complex Receiving Department
+Working with Animation Paths
+Work with Animation Paths
+Animation paths consist of a set of points in space describing the path on which an animated moving
+object moves on the material flow objects or through the scene.
+The cameras, through which you view the scene when you fly through it, also use animation paths.
+The animatable objects have the animation paths described below. The procedure for creating and editing
+the different path types are only slightly different. For this reason we describe the common properties
+here.
+• MU animation paths
+You can create and edit animation paths and the animation area, on which the parts are animated
+under Edit 3D Properties > Tab MU Animation on the Home ribbon tab.
+Working with Animation Paths
+Plant Simulation Help 10-1071
+Unpublished work. © 2026 Siemens
+
+Work with Animation Paths
+10-1072 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Self animation paths
+You can create and edit paths on which the object itself is animated by clicking Edit 3D Properties > Tab
+Self Animation on the Home ribbon tab.
+The anchor points of the self animation paths are the vertices of the line, polycurve, or spline on
+which the selected object itself moves. You can, for example, use it a self animation path to simulate the
+movement of a robot.
+The polycurve animation anchor points are the vertices of a curved path, i.e., a sequence of curved
+and straight lines, on which the material flow object itself moves.
+The spline animation anchor points are the vertices of a spline curve.
+• Camera animation paths
+You can create and edit paths on which the camera moves through the 3D scene in the Frame by
+clicking Edit 3D Properties > Tab Camera Animation on the Home ribbon tab.
+The anchor points of the camera animation paths are the vertices of the line, polycurve, or spline on
+which the camera moves through the scene in the Frame.
+The polycurve animation anchor points are the vertices of a curved path, i.e., a sequence of curved
+and straight lines, on which the camera moves.
+The spline animation anchor points are the vertices of a spline curve.
+Compare Model Joints and Poses
+Back to Visualizing the Material Flow
+Videos on YouTube
+https://youtu.be/YleFq6afRs4?si=QsQRL-NA5J-OMGpK&t=145
+https://youtu.be/jHOZhlwGhkQ?si=0AsRC64JxvckO1sM&t=623
+Create an Animation Path
+You can create three types of animation path: A path on which the MU will be animated while it moves
+through the plant. A path on which the material flow object itself will be animated. A path on which the
+object camera moves through the Frame.
+Proceed as follows:
+• Open the dialog Edit 3D Properties. Click the Tab MU Animation, or the Tab Self Animation, or the
+Tab Camera Animation depending on the path you want to create.
+• Click Add.
+• Enter a unique name for the path, if you are creating an animation path. As a rule you will use the
+Default path for the animation.
+Videos on YouTube
+Plant Simulation Help 10-1073
+Unpublished work. © 2026 Siemens
+
+• Select the Path type you would like to create.
+If objects, such as the Store or the ParallelStation, have several defined locations for placing incoming
+mobile objects, you can distribute them on the animation area on the tab MU Animation.
+• Click OK to create the path you just defined. Initially this path consists of a single anchor point located at
+the origin of the selected object.
+• Extend and/or edit the new initial path by clicking Edit 3D Properties > MU Animation/Self
+Animation/Camera Animation > Edit > Path Anchor Points on the Home ribbon tab.
+Compare Insert Curved and Straight Segments
+Compare Draw Straight and Curved Segments with a 90° Angle
+Compare Draw Straight and Curved Segments without Fixed Values
+Back to Edit an Animation Path
+Videos on YouTube
+https://youtu.be/YleFq6afRs4?si=QsQRL-NA5J-OMGpK&t=145
+https://youtu.be/h2cFAH46ESQ?si=39K86uqevyTU2N3Y&t=870
+Create an Animation Path that Rotates Objects
+You can create an animation path, which causes a circular rotation of an object, for example the
+movement of the arm of a crane, by setting parameters for the rotation instead of by editing anchor
+points.
+Proceed as follows:
+• Select the material flow object or the scene object and click Edit 3D Properties on the Home ribbon tab.
+• To rotate the MUs that the selected object processes, click the Tab MU Animation.
+To rotate the object itself, click the Tab Self Animation.
+• Click Add. Enter a name for the rotation path into the dialog Create Rotation Path that opens. Select
+the Path Type > Rotation Path [MU animation] - Lines.
+Videos on YouTube
+10-1074 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Edit the settings in the dialog Create Rotation Path:
+Enter the Start Angle where the rotation starts. Enter the End Angle where the rotation ends. 3D only
+rotates the MU if these values are not identical. The values can be greater than 360 degrees and smaller
+than -360 degrees to execute more than an entire rotation.
+Start Angle and End Angle set the direction of the rotation, depending on which value is the greater
+one:
+◦ An End Angle greater than the Start Angle results in a clockwise rotation.
+◦ An End Angle smaller than the Start Angle results in a counter-clockwise rotation.
+• Enter the values for the Axis around which you want to rotate the MUs.
+◦ Normally, you will use the Z-Axis (0,0,1) to rotate the object on the XY plane.
+◦ You also can define the Y-Axis (0,1,0) to rotate the object on the XZ plane or the
+◦ X-Axis (1,0,0) to rotate the object on the YZ plane.
+Naturally you can also define any other axis to rotate the object diagonally in 3D space.
+To tilt the rotation axis, and thus the way the MU rotates, you would enter a value into at least two
+text boxes.
+You can change one, two or three settings to tilt the axis the MU rotates around on the surface of the
+object.
+• Enter the Center point of the rotation in the coordinate system of the selected object. If the center is not
+the same as the start position, the rotated object moves on a circular arc and stops at a different position
+than its starting point, except after a 360 degree rotation.
+• Click Apply to compute the animation path. This path is the trace on which the animated object moves.
+The movement on this path is the rotation.
+Note
+You can use the method _3D.SelfAnimations.scheduleRotation to run self-rotations or camera-
+rotations without having to create a path.
+• To test the rotation path you defined, select an object and start the test animation.
+Create an Animation Path that Rotates Objects
+Plant Simulation Help 10-1075
+Unpublished work. © 2026 Siemens
+
+• If the rotation movement does not meet your expectations, open the dialog Create Rotation Path
+again, and edit the parameters there. Then, click Apply and test the settings again until the rotation
+meets your needs.
+• To change the duration of one or more individual rotation steps:
+◦ Select the path in the list, and click Edit.
+◦ Select the anchor point in the dialog Path Anchor Points and click Edit Values to open the dialog
+Edit Anchor Point.
+Under Time you can edit the time of every anchor point, which matches the rotation steps.
+Compare Rotation path [camera animation] - Lines
+Back to Edit an Animation Path
+Edit an Animation Path
+You can edit the different animation paths in the dialog Edit 3D Properties.
+To work with animation paths of parts (MUs) on an object, do one of the following:
+• Select the object and click 
+  Edit 3D Properties on the Home ribbon tab.
+Edit an Animation Path
+10-1076 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the Tab MU Animation in the dialog Edit 3D Properties and create a new animation path or edit
+an existing animation path.
+To work with animation paths on which the object itself is animated in the scene, do one of the
+following:
+• Select the object and click 
+  Edit 3D Properties on the Home ribbon tab.
+• Click the Tab Self Animation in the dialog Edit 3D Properties and create a new animation path or edit
+an existing animation path.
+Edit an Animation Path
+Plant Simulation Help 10-1077
+Unpublished work. © 2026 Siemens
+
+To work with camera animation paths of the Frame, do one of the following:
+• Select the Frame, and click 
+  Edit 3D Properties on the Home ribbon tab.
+• Click the Tab Camera Animation in the dialog Edit 3D Properties and create a new camera animation
+path or edit an existing camera animation path.
+Note
+Only the Frame provides the tab Camera Animation.
+Edit an Animation Path
+10-1078 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+In or from the dialog you can:
+• Create an Animation Path.
+• Test an Animation Path.
+• Edit an Animation Path with the Mouse.
+• Edit an Animation Path via Anchor Points.
+• Create an Animation Path that Rotates Objects.
+• Rename an animation path.
+• Delete an animation path.
+Back to Work with Animation Paths
+Edit an Animation Path with the Mouse
+You can edit an animation path with the mouse in the Frame window.
+• To edit an animation path, open the dialog Edit 3D Properties. Click the tab MU Animation, the
+tab Self Animation, or the tab Camera Animation [Frame], or the tab Robot Arm Animation
+[PickAndPlace] depending on the path you want to edit.
+Edit an Animation Path with the Mouse
+Plant Simulation Help 10-1079
+Unpublished work. © 2026 Siemens
+
+•
+To show the selected path in the scene window, click the button in the cell Show under animation
+paths. Plant Simulation then shows the path with its anchor points.
+• To add new anchor points to the path, click Extend and click the left mouse button at the position
+where you would like to insert a new anchor point. Repeat this as often as you need, until the path has
+the shape you want.
+• To change the shape of the path, select an anchor point and manipulate it with the mouse and/or use
+the settings by clicking Edit 3D Properties > Tab Transformation on the Home ribbon tab.
+When you drag an anchor point in the X-direction/Y-direction, Plant Simulation also drags the connected
+curved segments in both directions (until the next straight segment follows).
+Edit an Animation Path with the Mouse
+10-1080 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• To rotate an anchor point, click it, hold down the left mouse button, and drag the mouse, and/or click
+Edit 3D Properties > Transformation.
+Note
+When you rotate a anchor point describing an animation path, this also rotates any MU moving along
+that path.
+• To delete a part of the path, select an anchor point and press Delete. This removes the selected anchor
+point from the path, thus modifying its shape.
+Back to Work with Animation Paths
+Edit a Curved Path with the Mouse
+You an edit and extend a curved path with the mouse in a number of ways.
+In addition to editing any of the path types with the mouse, you can edit polycurve paths as follows:
+• Add new anchor points to the animation path by clicking Extend.
+◦ To add a straight segment, click the left mouse button at the position where you would like to insert
+a new anchor point.
+◦ To add a curved segment, hold down Ctrl, and click the left mouse button at the position where you
+would like to insert a new anchor point.
+◦ Repeat this as often as you need, until the path has the shape you want.
+• Change the shape of a straight segment by selecting an anchor point and by dragging the mouse.
+When you drag an anchor point in the X/Y-direction, 3D also drags attached curved segments (until the
+next straight segment follows) in both directions.
+Compare Model Differences in Height Between Conveying Elements
+Compare Insert Curved and Straight Segments
+Compare Draw Straight and Curved Segments with a 90° Angle
+Compare Draw Straight and Curved Segments without Fixed Values
+Back to Work with Animation Paths
+Edit an Animation Path via Anchor Points
+You can edit an animation path by entering exact values into the dialog Path Anchor Points.
+At times it may not be precise enough to Edit an Animation Path with the Mouse. Then, you can enter
+exact values into the dialog Path Anchor Points:
+Edit a Curved Path with the Mouse
+Plant Simulation Help 10-1081
+Unpublished work. © 2026 Siemens
+
+• Open the dialog Edit 3D Properties. Select the animation path you would like to edit on the Tab MU
+Animation, on the Tab Self Animation, or on the Tab Camera Animation.
+• Click Edit.
+• Select the anchor point you would like to edit and in the dialog Path Anchor Points and then click the
+button Edit Values or double-click the row in the table.
+Edit an Animation Path via Anchor Points
+10-1082 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Enter or select the new settings for the Position and for the Rotation of this anchor point into the dialog
+Edit Anchor Point.
+• To add a new anchor point to the end of the selected path, click Add. The list adds the settings of the
+new anchor point you added to its bottom. Once you have added an anchor point, you can edit its
+settings in the dialog Edit Anchor Point.
+• To insert a new anchor point before the selected anchor point, click Insert Before.
+• To delete an anchor point, select it in the list, and click Delete.
+• To delete contiguous anchor points, hold down Shift and click the first anchor point in the range and
+then the last anchor point.
+To delete non-contiguous anchor points, hold down Ctrl and click the anchor points you want to delete
+one after the other.
+• To move the selected anchor point up one position in the list, click Move Up.
+• To move the selected anchor point down one position in the list, click Move Down.
+• To duplicate the settings of the selected anchor point and to insert the duplicated anchor point below
+the original, click Duplicate.
+Note
+You can edit paths of type Polycurve in the dialog Edit.
+Back to Edit an Animation Path
+Test an Animation Path
+After defining the animation path, you can test the settings you chose on the Animation tabs in the group
+box Test Path, and modify them, if the results do not meet your expectations. This way, you do not have to
+run a simulation to test your settings.
+Proceed as follows:
+• Select the Test Object, i.e., a MU whose graphic 3D copies and uses as the test object.
+Test an Animation Path
+Plant Simulation Help 10-1083
+Unpublished work. © 2026 Siemens
+
+• Enter the Velocity with which the test object moves on the path.
+• Select if the test object moves in the forward direction or if it moves Backwards.
+3D automatically enters a negative Velocity, when you select Backwards.
+• Click 
+  to play the animation with the settings you selected.
+• Click 
+  to pause the test animation.
+• Click 
+  to stop the test animation.
+Back to Work with Animation Paths
+Test an Animation Path
+10-1084 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Controlling the MU Animation
+Control the MU Animation
+On the tab MU Animation you can define how the mobile objects (MUs) are animated on the material
+flow objects. The Frame also counts as a material flow object.
+The tab looks different for objects without loading space and for objects with loading space.
+• On the Sub-tab Animation Paths you can define these MU Animations:
+◦ The MU Animation on Length-Oriented Objects
+◦ The MU Animation on Point-Oriented Objects
+◦ The MU Animation on Point-Oriented Objects Holding Several Parts
+◦ The MU Animation on Animation Paths on the Workplace
+• On the Sub-tab Animation Area you can define the MU Animation on Objects with Loading Space by
+activating the Animation Area.
+Controlling the MU Animation
+Plant Simulation Help 10-1085
+Unpublished work. © 2026 Siemens
+
+The objects with a loading space – AGVPool, Container, ParallelStation, PlaceBuffer, Store,
+Transporter, Worker, Workplace, and WorkerPool – use the Animation Area, provided you activated
+it. If it is not activated, the objects use animation paths. Except for the AGVPool you have to create the
+animation paths yourself though.
+MU Animation on Length-Oriented Objects
+The length-oriented objects animate the parts automatically. If a path named Default exists, the objects
+use that path.
+MU Animation on Length-Oriented Objects
+10-1086 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The length-oriented objects AngularConverter, FootPath, Turnplate, and Turntable can each hold and
+transport a single part.
+• The length-oriented objects Conveyor, Track, and TwoLaneTrack can hold and transport several parts.
+For all length-oriented objects you can add an Animation Offset and select or clear Gravity Mode. To do
+so, press the M key to show the manipulators in the scene.
+• The Conveyor animates the parts on the blue line in the center of the conveyor. The standard setting
+looks like this:
+Animation offset up is 0 Animation offset up is 0.4
+• The FootPath animates the Workers on the blue line in the center.
+MU Animation on Length-Oriented Objects
+Plant Simulation Help 10-1087
+Unpublished work. © 2026 Siemens
+
+• The Converter animates the parts automatically. If a path named Default exists for length-wise
+movements and Cross for cross-wise movements exits, it uses that path.
+• The Track animates the Transporters in the center of the travel track.
+• The TwoLaneTrack animates the Transporters automatically. If paths named A or B exist, depending on
+the lane and the setting for right-hand traffic or left-hand traffic exist on which the Transporter drives,
+it uses that.
+Right-hand traffic Left-hand traffic
+Back to Control the MU Animation
+Video on YouTube
+https://youtu.be/rQi5oRyZckQ?si=nQLvgpv7FieRe5mX&t=455
+Video on YouTube
+10-1088 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+MU Animation on Point-Oriented Objects
+You can create an MU animation path on point-oriented objects.
+For point-oriented objects, which can hold a single part, for example the Station, you can:
+• Specify the Animation Object and the MU Side to Attach.
+• Add, extend, edit, and delete an animation path.
+The point-oriented objects, which hold a single part animate the parts as follows:
+• The Station uses the path named Default for animating the parts.
+Click Show to show the MU animation path of the Station in the model. As the Station can only process
+a single part, the animation path consists of a single point. The path tool, i. e., the red pyramid, shows
+where the part is going to be animated. You can click the path tool and move it with the arrow keys on
+the keyboard. The part will then be animated at the new position.
+MU Animation on Point-Oriented Objects
+Plant Simulation Help 10-1089
+Unpublished work. © 2026 Siemens
+
+• The DePortioner uses the path named Default for animating the parts.
+• The Portioner uses the path named Default for animating the parts.
+Back to Control the MU Animation
+Video on YouTube
+https://youtu.be/rQi5oRyZckQ?si=GwvsYiXqtDPQHw-8&t=76
+MU Animation on Point-Oriented Objects Holding Several Parts
+You can create an MU animation path on point-oriented objects holding several parts.
+For point-oriented objects, which can hold several parts, you can:
+Video on YouTube
+10-1090 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Specify the Animation Object and the MU Side to Attach.
+• Add, extend, edit, and delete an animation path.
+The point-oriented objects, which can hold several parts animate the parts as follows:
+• The Buffer stacks the parts along the standard animation path upward one on top of the other. You can
+set the capacity of the Buffer in the dialog of the simulation properties on the tab Attributes.
+• The PickAndPlace robot animates the parts automatically. If a path exists, it uses the first path for the
+first MU, the second path for the second MU, etc. If no suitable path exists, but if a path named Default
+exists, the robot uses that path.
+• For the WorkerPool you can select if it shows the Workers in the WorkerPool on animation paths or on
+an animation area distributed along the Y-dimension.
+The WorkerPool in the Class Library only shows the created Workers when you activate Show Content
+on the tab Graphics. In our example we created four Workers.
+MU Animation on Point-Oriented Objects Holding Several Parts
+Plant Simulation Help 10-1091
+Unpublished work. © 2026 Siemens
+
+MU-Animation > Animation Path MU-Animation > Animation Area
+For the setting Animation Path the WorkerPool uses the first path for the first MU for the animation, the
+second path for the second MU, etc. If no suitable path exists, but if a path named Default exists, the
+WorkerPool uses that path.
+• For the Workplace you can select if it shows the Workers on it on animation paths or on an animation
+area distributed along the X-dimension. Our three Workers on an animation area look like this:
+MU Animation on Point-Oriented Objects Holding Several Parts
+10-1092 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you do not use an animation area this applies:
+Plant Simulation animates the first Worker on the first animation path, the second Worker on the second
+animation path, and the third Worker on the third animation path. You have to define these animation
+paths yourself. If, for example, no third path exists for the third Worker, Plant Simulation uses the
+default animation path. If no default animation path exists, Plant Simulation does not animate the
+Worker at all.
+CompareHow Workers Queue Up in Front of the Workplace
+Back to Control the MU Animation
+MU Animation on Objects with Loading Space
+Plant Simulation animates MUs on objects with a loading space on their animation area.
+The objects with a loading space – AGVPool, Container, ParallelStation, PlaceBuffer, Store,
+Transporter, Worker, Workplace, and WorkerPool – use the animation area, provided you activated
+it. If it is not activated, the objects use animation paths.
+Note
+The indexes for paths start with 0, not with 1. The signature #0#0 designates the first animation point,
+#1#2 designates the position with the X-index 2 and the Y-index 3, etc.
+As a rule you can use the factory settings for these objects unless these do not meet your requirements.
+Plant Simulation distributes the parts evenly across the animation area, which is defined by its length and
+its width.
+Note
+We recommend to use the Animation Area instead of animation paths as this means substantially less
+modeling effort on your side because you do not have to create the animation paths.
+The objects with a loading space which use the Animation Area animate the parts as follows:
+MU Animation on Objects with Loading Space
+Plant Simulation Help 10-1093
+Unpublished work. © 2026 Siemens
+
+• The AGVPool only shows the created Transporters if you activate Show Content on the tab Graphics.
+The AGVPool animates parts as follows:
+◦ If the Animation Area is active, the AGVPool uses it. Here the index of the MU is the index of the area
+in the Y-direction; the capacity in the X-direction always is 1.
+◦ If the Animation Area is not active, the AGVPool uses the first path for the first MU for the animation,
+the second path for the second MU, etc. If no suitable path exists, but if a path named Default exists,
+the AGVPool uses that path.
+In our example we created four Transporters.
+• The Container with the standard setting, two parts each in two rows, looks like this with four loaded
+parts.
+MU Animation on Objects with Loading Space
+10-1094 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The ParallelStation has a Capacity of four parts by default. The standard setting distributes these parts
+as shown below across the animation area.
+If we increase the Capacity in the X-Dimension to three parts, it looks like this.
+MU Animation on Objects with Loading Space
+Plant Simulation Help 10-1095
+Unpublished work. © 2026 Siemens
+
+Capacity 2 times 2 Capacity 3 times 2
+You can also increase the length of the animation area, in our example to 3 meters. Plant Simulation
+then evenly distributes the parts across the changed animation area.
+• The PlaceBuffer has a Capacity of four parts by default. It animates the parts as follows:
+◦ If the Animation Area is active, the PlaceBuffer uses it. Here the index of the MU is the index of the
+area in the Y-direction; the capacity in the X-direction always is 1. It looks like this for the standard
+capacity of four parts:
+MU Animation on Objects with Loading Space
+10-1096 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ If a MU animation path named Default with more than one anchor point exists, the index of the MU
+is converted to a relative position. Plant Simulation then evenly distributes the MUs on this line.
+Otherwise the PlaceBuffer uses the first path for animating the first MU, the second path for the
+second MU, etc. If no suitable path exists, but if a path named Default consisting of a single point
+exists, the PlaceBuffer uses that path.
+• The Store with the standard setting, three parts each in three rows, looks as shown below with nine
+parts placed in stock. The parts exactly fit the individual storage compartments.
+You can change the Dimensions of the individual storage compartments and the Capacity of the Store
+in the Z-Dimension. In the example below we increased the height in the Z-Dimension and the number
+of parts in the Z-Dimension. This way Plant Simulation stacks several parts in the individual storage
+compartments.
+MU Animation on Objects with Loading Space
+Plant Simulation Help 10-1097
+Unpublished work. © 2026 Siemens
+
+The storage area is placed on the XZ plane and looks like this when it is shown.
+• The Transporter with the standard settings Store and Animation Area, with three parts each in two
+rows, looks like this with six loaded parts.
+MU Animation on Objects with Loading Space
+10-1098 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The Transporter with an active loading space of type Line uses the animation path named Line.
+The Transporter with a passive loading space of type Track uses the animation path named Track.
+• The Worker with the standard settings has a Capacity of one part in the X-Dimension and in the
+Z-Dimension.
+MU Animation on Objects with Loading Space
+Plant Simulation Help 10-1099
+Unpublished work. © 2026 Siemens
+
+It looks like this when shown in the Frame.
+Walk without part, one part Walk and carry part, one part
+If you want the Worker to carry two stacked parts, type in 2 as Z-Dimension. This then looks like this.
+MU Animation on Objects with Loading Space
+10-1100 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you want the Worker to carry two parts in each hand, type in 2 as X-Dimension and clear Animation
+Area. The Worker then uses the Animation Paths which we defined. This then looks like this.
+See also Model a Worker Who Carries Several Parts
+Back to Control the MU Animation
+MU Animation on Animation Paths on the Workplace
+The Workplace provides a single MU animation path named Queue by default.
+MU Animation on Animation Paths on the Workplace
+Plant Simulation Help 10-1101
+Unpublished work. © 2026 Siemens
+
+Plant Simulation animates the Workers, who are waiting in front a Workplace which they cannot enter, on
+this animation path that visualizes the queue.
+Note
+If a Workplace does not provide a MU animation path named Queue, all Workers wait at the same
+position until they can enter the Workplace.
+You can set the Distance in Queue in the dialog of the Workplace.
+MU Animation on Animation Paths on the Workplace
+10-1102 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Click Show to show the MU animation path. The path tool, i. e., the pyramid, shows where the Worker is
+going to be animated. You can click the path tool and move it with the arrow keys on the keyboard. The
+Worker will then be animated at the new position.
+The predefined animation path looks like this.
+MU Animation on Animation Paths on the Workplace
+Plant Simulation Help 10-1103
+Unpublished work. © 2026 Siemens
+
+You can also define a path of type Polycurve, Spline, or Rotation path. Before you do that though,
+rename the original, predefined path named Queue.
+In this example we first renamed the default path to MyQueue and then created a spline path named
+Queue. Plant Simulation then animates the Workers waiting in line on this path.
+MU Animation on Animation Paths on the Workplace
+10-1104 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you want to use the default path again, rename your path and change the name of the original path
+back to Queue.
+To animate the Worker on an animation area, select the check box Animation Area and define the
+respective settings. Our Workplace has a Capacity of 3.
+Note
+If you do not use an animation area this applies:
+Plant Simulation animates the first Worker on the first animation path, the second Worker on the second
+animation path, and the third Worker on the third animation path. You have to define these animation
+paths yourself. If, for example, no third path exists for the third Worker, Plant Simulation uses the
+MU Animation on Animation Paths on the Workplace
+Plant Simulation Help 10-1105
+Unpublished work. © 2026 Siemens
+
+default animation path. If no default animation path exists, Plant Simulation does not animate the
+Worker at all.
+In most cases an animation path is the suitable way to animate the Workers on the Workplace. If you
+modeling situation requires it, you can also animate the Workers on an animation area though.
+We animate it on an Animation Area with these settings:
+MU Animation on Animation Paths on the Workplace
+10-1106 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+This looks like this in our model:
+See also
+Model a Worker Who Waits in Line
+How Workers Queue Up in Front of the Workplace
+Back to Control the MU Animation
+MU Animation on Animation Paths on the Workplace
+Plant Simulation Help 10-1107
+Unpublished work. © 2026 Siemens
+
+Video on YouTube
+https://youtu.be/gU1pqu7sWA8?si=HgdhN-JsmsY7HQSH&t=775
+Modeling Joints and Poses
+Model Joints and Poses
+In our sample model we show how to model realistic kinematics with joints and poses.
+You find the respective settings on the tabs Joint and Poses in the dialog Edit 3D Properties.
+You can use poses to animate the object itself. As opposed to the normal self animation, you only have to
+set the place to which the animation is to move when using the animation with poses. As Plant Simulation
+knows the previous position, it then internally creates self animations which ensure a smooth transition
+from the previous to the new state.
+In our model the Source produces parts. The Conveyor transports the part to the processing station which
+processes it. A revolute joint rotates the ToolHead to the right and left and a prismatic joint moves the
+ToolHolder up and down. We could also attach the part to the ToolHolder and manipulate it there. This
+would go beyond the scope of this short demonstration though. The Station then passes the part on to the
+Drain, which removes it from the installation.
+We will demonstrate how to:
+• Configure the Simulation Objects
+• Create the Animation Objects
+• Configure the Joints
+• Configure the Poses
+The finished simulation model looks like this:
+Video on YouTube
+10-1108 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The sample model Factory 51 on the Start Page shows additional usages for revolute joints and for
+prismatic joints.
+Compare Move Poses and Joints with Mouse and Keyboard Keys
+Compare Create a Simulation Object with Animation
+Back to Visualizing the Material Flow
+Configure the Simulation Objects
+In our first step we configure the simulation settings of the objects.
+Proceed as follow:
+• For the Source we entered a constant Time of Creation of 10 seconds. Apart from that we use the
+default settings.
+Configure the Simulation Objects
+Plant Simulation Help 10-1109
+Unpublished work. © 2026 Siemens
+
+• For the Conveyor we entered a Capacity of 1, so that it only transports a single part. Apart from that we
+use the default settings.
+Configure the Simulation Objects
+10-1110 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• For the Station we entered a Processing Time of 20 seconds and a Recovery Time of 5 seconds. Apart
+from that we use the default settings.
+• For the Drain we use the default settings.
+Back to Model Joints and Poses
+Create the Animation Objects
+When the part is located on the machine, the ToolHead rotates to the right and the ToolHolder moves up.
+Then ToolHead and ToolHolder remain at their new position while the Processing Time passes. After that
+they both return to their original pose.
+Proceed as follows to create the animation object of our machine:
+• Click the Station with the right mouse button and open it in a new window.
+• Click the part of the graphic called default.tool with the right mouse button.
+Create the Animation Objects
+Plant Simulation Help 10-1111
+Unpublished work. © 2026 Siemens
+
+• Select Make Animatable Object. Type in ToolHead as the Name. Click OK.
+Note
+The Object Position sets the origin of the rotation around which the tool head will be rotated. If
+the object does not rotate as expected, check the values for the individual axes of the origin of the
+rotation.
+Then, set the joint settings on the Tab Joint. We describe this in the next topic.
+Create the Animation Objects
+10-1112 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Click the ToolHead with the right mouse button and open it in a new window.
+• Click the ToolHead with the left mouse button. Press the + key, i. e., the square part with the telescopic
+holder, to select the ToolHolder. Click it with the right mouse button and select Make Animatable
+Object. Enter as the Name. During the simulation the toolholder moves up and down.
+Create the Animation Objects
+Plant Simulation Help 10-1113
+Unpublished work. © 2026 Siemens
+
+Back to Model Joints and Poses
+Configure the Joints
+In the next step we configure the joints of the ToolHead and of the ToolHolder. We equip the ToolHead
+with a Revolute Joint and the ToolHolder with a Prismatic Joint.
+• Click the ToolHead with the right mouse button and select Edit 3D Properties. Change to the Tab Joint.
+We selected the Joint Settings below for the Revolute Joint.
+• Click the ToolHolder with the left mouse button and press the Spacebar. Change to the tab Joint. As
+the ToolHolder is to move up in the z-direction, we clicked on the button 
+  next to Z. This sets the
+z-direction as the Translation Direction. We then selected the Joint Settings below.
+Configure the Joints
+10-1114 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to Model Joints and Poses
+Configure the Poses
+In our last step we configure the Poses of our Station.
+Proceed as follows on the Tab Poses:
+• Click into the background of the window of the Station with the right mouse button. Add Pose1 and
+Pose2.
+Configure the Poses
+Plant Simulation Help 10-1115
+Unpublished work. © 2026 Siemens
+
+• Click Pose1 with the left mouse button and click Edit. The dialog shows the settings which we selected
+on the tab Joint.
+• Click Pose2 with the left mouse button and click Edit. The dialog shows the settings we selected on the
+tab Joint.
+• Now that we configured joints and poses, we can program the movements in the respective controls. To
+do so, we return to the simulation object and change to the tab Controls. Here we create an Entrance
+Control and an Exit Control each.
+Configure the Poses
+10-1116 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Within the controls we define to which poses the ToolHead and the ToolHolder move.
+For the Entrance Control we entered these instructions:
+?._3D.Poses.moveTo("Pose2") // moves to Pose2
+For the Exit Control we entered these instructions:
+wait ?._3D.Poses.moveTo("Pose1") // returns to Pose1 
+@.move                           // and moves the part
+When you now start the simulation, you can watch how the ToolHead rotates and how the ToolHolder
+moves up and then down again.
+To better view the sequence, we selected the Real time factor x 3.
+Configure the Poses
+Plant Simulation Help 10-1117
+Unpublished work. © 2026 Siemens
+
+You can show and hide poses with the toggle button 
+ . Plant Simulation only shows a single
+pose at a time. If you show a different pose, Plant Simulation first hides the pose that is already shown.
+Plant Simulation moves the object to the state that corresponds to the pose. While the pose is shown and
+the dialog is open, you can change the state of the pose stepwise by clicking the left or right arrow key:
+Press one of the arrow keys to
+• rotate the pose by 1 ° of the range from the joint settings if both limits are defined.
+• move the pose by 0.1 m if at least one limit is missing when a Prismatic Joint is selected, or
+• rotate the pose by 1 ° if at least one limit is missing when a Revolute Joint is selected.
+The left arrow key moves the pose toward the lower limit.
+The right arrow key moves the pose toward the upper limit, independent of rotation axis or translation
+direction.
+Configure the Poses
+10-1118 Plant Simulation Help
+Unpublished work. © 2026 Siemens

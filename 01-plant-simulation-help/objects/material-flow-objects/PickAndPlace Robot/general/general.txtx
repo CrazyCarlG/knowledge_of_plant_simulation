@@ -1,0 +1,1299 @@
+Assignment Value
+You can assign a value of data type string.
+You can specify "MUs to all successors", "MUs exiting independent of other MUs", or
+"Main MU after other MUs".
+Example
+MyDismantleStation.Sequence := "Main MU after other MUs"
+See also
+Sequence [drop-down list] - DismantleStation
+DismantleMode [SimTalk]
+DismantleTable [SimTalk]
+PickAndPlace Robot
+PickAndPlace Robot
+Use the object PickAndPlace robot for picking up a part at one station, rotating it, and placing it onto
+another station.
+Image
+Description
+The PickAndPlace robot can pick up and deliver one or more parts. To deliver several parts, type in the
+Capacity. The PickAndPlace robot transports the part on to its successors within the flow of materials like
+this:
+• The part arrives at the exit of the predecessor. It notifies the PickAndPlace robot that it wants to be
+picked up.
+• The PickAndPlace robot then determines if it picks the part up or not.
+◦ Without a Pull Control, the robot will be notified that a part wants to be picked up, and it accepts it.
+◦ If you entered a Pull Control, the robot executes it, and when the part is selected, it will be picked up.
+• The PickAndPlace robot rotates to the respective predecessor and picks the part up.
+PickAndPlace Robot
+11-1868 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• For determining the target station, the robot either uses its default Exit Strategies or the Target
+Control. Within this Method you set the target station.
+The Target Control is called, when the robot picks up a part or when it places a part. Within the method
+setDestination the boolean parameter controls if the robot waits at the target station or not.
+• Then, the PickAndPlace robot rotates to the target station and places the part.
+• It then rotates back to the standard position.
+The PickAndPlace robot can emulate most of the functions of the TransferStation.
+To show a tooltip with information about the PickAndPlace robot, hover with the mouse over it.
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+With the manipulators of the bounding box of the PickAndPlace-Robot you can edit its appearance of the
+object.
+PickAndPlace Robot
+Plant Simulation Help 11-1869
+Unpublished work. © 2026 Siemens
+
+With the rotation manipulator 
+  you can set the rotation of the object with the mouse and with
+keyboard keys:
+Note
+You cannot select a rotation manipulator together with anything else in a 3D window at the same time.
+As soon as you select a rotation manipulator, Plant Simulation deselects the other selection.
+As soon as you select anything else, Plant Simulation deselects the rotation manipulator.
+This also applies when you hold down Ctrl or Shift when selecting.
+• Drag the manipulator with the mouse to the right to rotate the object around the z-axis clockwise.
+Drag the manipulator to the left to rotate the object counter-clockwise.
+• Click the rotation manipulator and press the left arrow key or the right arrow key to rotate the object by
+1° at a time.
+Hold down Shift and press the left arrow key or the right arrow key to rotate the object by 45° at a time.
+Add the Object to the Simulation Model
+To add the object PickAndPlace robot to your simulation model, click 
+  Manage Class Library > Basic
+Objects > MaterialFlow > PickAndPlace on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+PickAndPlace Robot
+11-1870 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Capacity [text box] - PickAndPlace
+Pick and Place Parts with the PickAndPlace Robot
+Configuring the Robot with Drag-and-Drop
+Configuring the Robot
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=UI_gAeEPqPykZWCM
+PickAndPlace Robot
+Plant Simulation Help 11-1871
+Unpublished work. © 2026 Siemens
+
+Configuring the Robot with Drag-and-Drop
+Use drag-and-drop to quickly and easily configure the operations that the PickAndPlace robot can execute.
+Remarks
+To use drag-and-drop, drag the PickAndPlace robot over the Conveyor, the Track, or the TwoLaneTrack and
+select the operation that is to take place:
+Note
+You can only configure the PickAndPlace robot with drag-and- drop for length-oriented objects for which
+you can define sensors.
+The title bar of the dialog shows the path of the PickAndPlace robot that is to move the part and of the
+length-oriented object.
+A complete configuration requires two drag-and-drop operations, one for picking or unloading and one for
+placing or loading.
+You can select one of these settings:
+• Pick part
+The PickAndPlace robot picks parts from a length-oriented object at a sensor. Plant Simulation creates
+a front-triggered sensor with light barrier mode at the desired position on the length-oriented object
+with a sensor control for moving the part to the PickAndPlace robot.
+• Unload part
+The PickAndPlace robot unloads parts from a Container or a Transporter at a sensor on a length-oriented
+object.
+Plant Simulation creates a front-triggered sensor with light barrier mode at the desired position on the
+length-oriented object with a sensor control for unloading the part to the PickAndPlace robot.
+• Place part
+The PickAndPlace robot places parts onto a length-oriented object at a sensor. Plant Simulation creates
+a rear-triggered sensor with light barrier mode at the desired position on the length-oriented object
+Configuring the Robot with Drag-and-Drop
+11-1872 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+without a sensor control. It also sets the settings Target Selection, Target Object, and Target Sensor
+ID of the exit behavior of the PickAndPlace robot.
+• Load part
+The PickAndPlace robot loads parts onto a Container or a Transporter located at a sensor of a length-
+oriented object.
+Plant Simulation creates a sensor, which is triggered by the booking point, at the desired/clicked
+position on the length-oriented object without a sensor control. It also sets the settings Target
+Selection, Target Object, and Target Sensor ID of the exit behavior of the PickAndPlace robot.
+Plant Simulation stops the Container or Transporter automatically at the sensor position and starts it
+again automatically when it is full. If you do not want to use the default behavior, you have to create a
+sensor control in which you have to make sure to start and stop the Container or Transporter.
+For all of the cases described above Plant Simulation creates an entry each in the Angles Table and in the
+Times Table of the PickAndPlace robot.
+See also
+Pick and Place Parts with the PickAndPlace Robot
+Configuring the Robot
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=jhaYSU7_maKTcYBb&t=437
+Configuring the Robot
+Configuring the Robot
+You can set how the arm of the robot will be animated on the tab Robot Arm Animation. The robot arm
+animation paths determine which points the robot touches before it picks a part up or deposits it.
+Remarks
+This way you can model more specific gripping actions than the predefined ones as well as prevent
+collisions manually. Robot arm animation paths are only used for robots which have at least three axes.
+You can choose to animate the robot with one axis, with three axes, with four axes including a ball joint,
+with five axes, or with six axes. You can, for example, see the number of axes by opening the dialog
+Graphic Structure of the object and counting how often you can expand an entry with an animatable
+object until no additional nested entry exists. If a robot in the structure has a different number of axes, the
+next lower level applies, a robot with two axes, is for example, treated as a one axis robot.
+For the animation the PickAndPlace robot expects that the required nesting of axes with animation data is
+defined in the required depth as well as a suitable axes configuration.
+Configuring the Robot
+Plant Simulation Help 11-1873
+Unpublished work. © 2026 Siemens
+
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+For a six axis robot the Animation Object looks like this:
+Note
+Plant Simulation automatically adjusts a model created in previous versions of Plant Simulation.
+The PickAndPlace robot starts with the highest animation level and then checks one after the other from
+top to bottom. Once it recognized a robot type, it does not proceed to find the next robot type.
+The PickAndPlace robot applies the animation procedures in the sequence described below. It checks for a
+• Six Axis Robot
+• Five Axis Robot
+• Four Axis Robot with Ball Joint Gripper
+• SCARA Robot with Concluding Revolute Joint
+• SCARA Robot with Concluding Prismatic Joint
+• Three Axis Robot
+• One Axis Robot
+• Linear Robot
+If the recognition process does not recognize any of the mentioned robot types, Plant Simulation rotates
+the robot completely around the rotation axis [0,0,-1] through the Rotation Center [0,0,0].
+Configuring the Robot
+11-1874 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The default PickAndPlace robot in versions before Plant Simulation 13.0 was a one axis robot that
+rotated as such. When loading a model from previous versions, which contains such a robot, this robot
+will not be changed.
+You can edit the dimension of the graphic of the objects by clicking Show Manipulators on the Edit
+ribbon tab or by pressing M on the keyboard.
+The CranesAndMore library provides a seven axis robot moving on rails as a demonstrator.
+Note
+You can transform any material flow object or fluid object into a robot by exchanging its graphic with
+one of the robots in the folder 3D\s3d-graphics in the Plant Simulation installation folder.
+See also
+Robot Arm Animation [PickAndPlace]
+Pick and Place Parts with the PickAndPlace Robot
+Configuring the Robot with Drag-and-Drop
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=cy1EdJiu-gSTFGdy&t=795
+Six Axis Robot
+Plant Simulation recognizes a robot as a six axis robot/6-axis robot if exactly the specified criteria are met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+Six Axis Robot
+Plant Simulation Help 11-1875
+Unpublished work. © 2026 Siemens
+
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,0,1], or [0,0,-1], or [1,0,0], or [-1,0,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,0,1], or [0,0,-1],or [1,0,0], or [-1,0,0] (the latter two axes only apply if you also had [1,0,0], or
+[-1,0,0] in axis number 4/the fourth bullet point in the list) through the rotation center [0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a six axis
+robot.
+The six axis robot can reach all points in its gripping range. It can position the MU in all positions if it can
+reach the position.
+Note
+If you change rotations of the three lowest-positioned animatable objects so that a rotation around a
+slanting axis results, it might happen that the robot cannot position the MU in all positions even if it
+is located within its gripping range. The same can occur if the toolholder of the robot is positioned
+perpendicular above the insertion point.
+If you change the rotation of any animatable object, except for the fourth object, so that the object is
+rotated by an angle unequal to 0° around an axis that is not the rotation axis as specified above, it might
+happen that the robot cannot position or rotate the MU as expected. The same might happen, if the
+fourth object is rotated differently than either by an angle of -90° around [0,1,0] or by an angle of 90°
+around [0,-1,0].
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+Note
+The six axis robot uses user-defined robot arm animations. If the robot does not have user-defined
+robot arm animations, it moves up and down to make the animation look more realistic.
+Six Axis Robot
+11-1876 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The robots PickAndPlaceComau.s3d and PickAndPlaceKuka.s3d in the installation folder > 3D > s3d-
+graphics are six axis robots. You can replace a robot with these two robots with the command
+Exchange Graphics.
+Six Axis, Comau Graphic Six Axis, Comau Graphic Structure
+Six Axis Robot
+Plant Simulation Help 11-1877
+Unpublished work. © 2026 Siemens
+
+Six Axis, Kuka Graphic Six Axis, Kuka Graphic Structure
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+Back to
+Configuring the Robot
+Six Axis Robot
+11-1878 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=cy1EdJiu-gSTFGdy&t=795
+Five Axis Robot
+Plant Simulation recognizes a robot as a five axis robot/5-axis robot if exactly the specified criteria are
+met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,0,1] or [0,0,-1] through the rotation center [0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a five axis
+robot.
+The five axis robot can reach all points in its gripping range. It can position the MU in most of the
+established, but not in all positions.
+Note
+If you change the rotation of any animatable object, except for the fourth object, so that the object is
+rotated by an angle unequal to 0° around an axis that is not the rotation axis as specified above, it might
+happen that the robot cannot position or rotate the MU as expected. The same might happen, if the
+fourth object is rotated differently than either by an angle of -90° around [0,1,0] or by an angle of 90°
+around [0,-1,0].
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+Five Axis Robot
+Plant Simulation Help 11-1879
+Unpublished work. © 2026 Siemens
+
+Note
+This robot uses user-defined robot arm animations. If the robot does not have user-defined robot arm
+animations, it moves up and down to make the animation look more realistic.
+Five Axis, Graphic Five Axis, Graphic Structure
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+Five Axis Robot
+11-1880 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to
+Configuring the Robot
+Four Axis Robot with Ball Joint Gripper
+Plant Simulation recognizes a robot as a four axis robot with ball joint gripper/4-axis robot if exactly the
+specified criteria are met.
+• The first animatable object has a revolute joint around the z-axis through the coordinate [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint through the rotation center
+[0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a four
+axis robot with ball joint gripper.
+The four axis robot can reach all points within its gripping range. It can position the MU in all positions if it
+can reach the point.
+Note
+If you change the rotation of any animatable object, except for the fourth object, so that the object is
+rotated by an angle unequal to 0° around an axis that is not the rotation axis as specified above, it might
+happen that the robot cannot position or rotate the MU as expected.
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+Note
+This robot uses user-defined robot arm animations. If the robot does not have user-defined robot arm
+animations, it moves up and down to make the animation look more realistic.
+Four Axis Robot with Ball Joint Gripper
+Plant Simulation Help 11-1881
+Unpublished work. © 2026 Siemens
+
+Note
+The default robot in Plant Simulation is a four axis robot with ball joint gripper. You cannot move its
+poses and joints with the mouse or with keyboard keys.
+Four Axis Robot with Ball Joint Gripper, Graphic Four Axis, Graphic Structure
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+Four Axis Robot with Ball Joint Gripper
+11-1882 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Back to
+Configuring the Robot
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=RT-DUXOYBHpr4spB&t=700
+SCARA Robot with Concluding Revolute Joint
+Plant Simulation recognizes a robot as a SCARA robot with concluding revolute joint if exactly the
+specified criteria are met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+• And the first animatable object in the next lower hierarchy level has a revolute joint around the
+rotation axis [0,0,1] or [0,0,-1] through the rotation center [0,0,0].
+• And the first animatable object in the next lower hierarchy level has a prismatic joint with the
+translation direction [0,0,1] or [0,0,-1].
+• And the first animatable object in the next lower hierarchy level has a revolute joint around the
+rotation axis [0,0,1] or [0,0,-1] through the rotation center [0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a SCARA
+robot with concluding revolute joint.
+The SCARA robot with concluding revolute joint can reach all points within its gripping range. It can only
+place the MUs in positions which are exclusively described by a rotation around the z-axis.
+Note
+If you change the rotation of any animatable object that is a revolute joint, so that the object is rotated
+by an angle unequal to 0° around an axis that is not the rotation axis as specified above, it might
+happen that the robot cannot position or rotate the MU as expected.
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+SCARA Robot with Concluding Revolute Joint
+Plant Simulation Help 11-1883
+Unpublished work. © 2026 Siemens
+
+Back to
+Configuring the Robot
+SCARA Robot with Concluding Prismatic Joint
+Plant Simulation recognizes a robot as a SCARA robot with concluding prismatic joint if exactly the
+specified criteria are met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+• And the first animatable object in the next lower hierarchy level has a revolute joint around the
+rotation axis [0,0,1] or [0,0,-1] through the rotation center [0,0,0].
+• And the first animatable object in the next lower hierarchy level has a revolute joint around the
+rotation axis [0,0,1] or [0,0,-1] through the rotation center [0,0,0].
+• And the first animatable object in the next lower hierarchy level has a prismatic joint with the
+translation direction [0,0,1] or [0,0,-1].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a SCARA
+robot with concluding prismatic joint.
+The SCARA robot with concluding prismatic joint can reach all points within its gripping range. It can
+only place the MUs in positions which are exclusively described by a rotation around the z-axis.
+Note
+If you change the rotation of any animatable object that is a revolute joint, so that the object is rotated
+by an angle unequal to 0° around an axis that is not the rotation axis as specified above, it might
+happen that the robot cannot position or rotate the MU as expected.
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+Note
+The robot PickAndPlaceComauSCARA.s3d in the installation folder > 3D > s3d-graphics is a SCARA
+robot. You can replace a robot with this robot with the command Exchange Graphics.
+SCARA Robot with Concluding Prismatic Joint
+11-1884 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Comau SCARA Robot, Graphic Comau SCARA Robot, Graphic Structure
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+Back to
+Configuring the Robot in 3D
+SCARA Robot with Concluding Prismatic Joint
+Plant Simulation Help 11-1885
+Unpublished work. © 2026 Siemens
+
+Three Axis Robot
+Plant Simulation recognizes a robot as a three axis robot/3-axis robot if exactly the specified criteria are
+met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the first animatable object in the next lower level has a revolute joint around the rotation axis
+[0,1,0] or [0,-1,0] through the rotation center [0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists on the object which the attribute _3D.AnimationObject references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a three
+axis robot.
+A three axis robot can reach all points within it gripping range. The MU is attached rigidly at the gripper
+and is only rotated by the robot movement, not independently by itself.
+Note
+If you change the rotation of any animatable object, so that the object is rotated by an angle unequal to
+0° around an axis that is not the rotation axis as specified above, it might happen that the robot cannot
+position or rotate the MU as expected.
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+Note
+This robot uses user-defined robot arm animations. If the robot does not have user-defined robot arm
+animations, it moves up and down to make the animation look more realistic.
+Note
+All robots delivered with Plant Simulation 13.0 are three axis robots. When loading a model created in
+this version, the robot will not be adjusted.
+The text box Animation Object on the MU Animation contains the defined animation objects for the
+respective robot.
+Back to Configuring the Robot
+Three Axis Robot
+11-1886 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+One Axis Robot
+Plant Simulation recognizes a robot as a one axis robot/1-axis robot if exactly the specified criteria are
+met.
+• The first animatable object has a revolute joint around the rotation axis [0,0,1] or [0,0,-1] through the
+rotation center [0,0,0].
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists for the object, which the attribute _3D.AnimationObject
+references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a one
+axis robot.
+If Plant Simulation does not recognize any robot type, it will rotate the entire robot, which can look
+similar to a one axis robot.
+The one axis robot cannot reach all points within it gripping range. The MU is attached rigidly at the
+gripper and is only rotated by the robot movement, not independently by itself.
+Note
+The one axis robot does not use any user-defined robot arm animations.
+The text box Animation Object on the tab MU Animation contains the defined animation objects for the
+respective robot.
+Back to Configuring the Robot
+One Axis Robot
+Plant Simulation Help 11-1887
+Unpublished work. © 2026 Siemens
+
+Linear Robot
+Plant Simulation recognizes a robot as a linear robot if exactly the specified criteria are met.
+• The first animatable object has a prismatic joint.
+• And the first animatable object in the next lower level has a prismatic joint with a translation direction
+that is orthogonal to the one from above.
+• And the first animatable object in the next lower level has a prismatic joint with a translation direction
+that is orthogonal to both above.
+• And the attribute _3D.AnimationObject exactly references the respective lowest animatable object.
+• And a suitable animation path exists on the object which the attribute _3D.AnimationObject references.
+Note
+If any of the criteria listed above are not met, Plant Simulation will not recognize the object as a linear
+robot.
+Plant Simulation still recognizes a linear robot if the latter animatable object does not exist.
+A linear robot can reach all points within it gripping range, except if the last described animatable object
+does not exist. The MU is attached rigidly at the gripper and is not rotated..
+Note
+If you change the rotation of any animatable object, so that the object is rotated by an angle unequal to
+0° around an axis that is not the rotation axis as specified above, it might happen that the robot cannot
+position or rotate the MU as expected.
+This also affects the pose/joint tool 
+ , which might be positioned incorrectly.
+The text box Animation Object on the MU Animation contains the defined animation objects for the
+respective robot.
+Back to Configuring the Robot
+Dialog Box of the PickAndPlace Robot
+Dialog Box of the PickAndPlace Robot
+Double-click the icon of the PickAndPlace Robot to open its dialog box.
+Linear Robot
+11-1888 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-1889
+Unpublished work. © 2026 Siemens
+
+Angles Table [PickAndPlace]
+To open the table of the angles, at which the PickAndPlace robot picks the part up or at which it places it,
+click this button.
+Remarks
+You can view or fine-tune these settings:
+• The Name of the predecessor at which the PickAndPlace robot picks the part up or the Name of the
+successor onto which the PickAndPlace robot deposits the part.
+You can also type a sensor on the Conveyor in the column Name, for example
+Conveyor.Sensors.ID1. This is useful if you want to set several angles on the Conveyor.
+• The Angle between the station in the column Name and the PickAndPlace robot.
+If you insert Connectors or if you drag an object onto the PickAndPlace robot and drop it there, Plant
+Simulation adds the respective values to the angles table.
+If you delete a Connector, Plant Simulation does not delete the entry of the now unconnected object
+from the table. You have to delete the entry yourself, for example by right-clicking the respective row and
+selecting Delete Row on the context menu.
+Angles Table [PickAndPlace]
+11-1890 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+You can also manually change values or names in the angles table or add new stations to it. This way you
+can, for example, request the PickAndPlace robot in a Sensor Control.
+Note
+Plant Simulation automatically applies changed names of stations to the Times Table.
+If you want the PickAndPlace robot to compute the angles at which you connected it to its predecessors
+and to its successors, click it with the right mouse button and select Calculate Angles.
+SimTalk
+setAnglesTable [SimTalk]
+getAnglesTable [SimTalk]
+calculateAngles [SimTalk] - PickAndPlace
+See also
+Times Table [PickAndPlace]
+Calculate Angles
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=rrKhAn5Vtns3Px7p&t=109
+Angles Table [PickAndPlace]
+Plant Simulation Help 11-1891
+Unpublished work. © 2026 Siemens
+
+Times Table [PickAndPlace]
+To open the table of the rotation times, click this button.
+Remarks
+The rotation times are the times, which the PickAndPlace robot needs to rotate from the station in the
+leftmost column to the respective stations in the columns to the right and vice versa.
+You can also type in a Time Factor with which all times in the table are multiplied. This way you can
+simulate the PickAndPlace robot with different speeds without having to manually change the times in the
+table.
+You can view or fine-tune these settings:
+• The Names of all objects, which the PickAndPlace robot is to serve and the Default Angle to which the
+PickAndPlace robot moves after it has deposited the part.
+• The Times above the diagonal are the times during which the PickAndPlace robot rotates Empty.
+The times below the diagonal are the times during which the PickAndPlace robot rotates full, i.e., while
+a part is located on it.
+The diagonal in the table runs from the values in the topmost cell in the column default angle to the
+bottommost cell in the last column.
+In the example above the cell labeled A contains the rotation time from the Station to the Source with
+picked-up parts, namely 0.3743 seconds.
+The cell labeled B contains the rotation time from the Drain to the Source without parts.
+The cell labeled C contains the rotation time from Drain1 to the Default Angle without parts.
+Times Table [PickAndPlace]
+11-1892 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+If you insert Connectors or if you drag an object onto the PickAndPlace robot and drop it there, Plant
+Simulation enters the respective values into the Times Table. For the calculation Plant Simulation assumes
+that a quarter-rotation takes up one second. You can change these times.
+If you delete a Connector, Plant Simulation does not delete the entry of the now unconnected object
+from the Times Table. You have to delete the entry in the Angles Table, for example by right-clicking the
+respective row and selecting Delete Row on the context menu. When you click Apply in the dialog box of
+the PickAndPlace robot, Plant Simulation also deletes this entry from the Times Table.
+You can also manually change the times.
+SimTalk
+setTimesTable [SimTalk]
+getTimesTable [SimTalk]
+See also
+Time Factor [PickAndPlace]
+Default Angle [PickAndPlace]
+Use Kinematics for Times
+Angles Table [PickAndPlace]
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=rrKhAn5Vtns3Px7p&t=109
+Times Table [PickAndPlace]
+Plant Simulation Help 11-1893
+Unpublished work. © 2026 Siemens
+
+Go to Default Position [check box] - PickAndPlace
+To rotate the PickAndPlace robot back to its default position after it has deposited the part, select this
+check box.
+Remarks
+Note
+When you activate the check box, the PickAndPlace robot uses the Default Angle, when you reset the
+model.
+Then, type in the Default Angle at which the default position is located.
+When Go to Default Position is active, you can also activate the check box Only for Empty Blocking List.
+SimTalk
+GoToDefaultPosition [SimTalk] - PickAndPlace
+OnlyForEmptyBlockingList [SimTalk]
+DefaultAngle [SimTalk] - PickAndPlace
+See also
+Default Angle [PickAndPlace]
+Only for Empty Blocking List [PickAndPlace]
+Go to Default Position [check box] - PickAndPlace
+11-1894 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Only for Empty Blocking List [PickAndPlace]
+To make the PickAndPlace robot only rotate back to its default position if its blocking list is empty, i.e., if no
+additional requests are registered for it, select this check box.
+Remarks
+Note
+You can only change the state of Only for Empty Blocking List if Go to Default Position is active.
+SimTalk
+OnlyForEmptyBlockingList [SimTalk]
+GoToDefaultPosition [SimTalk] - PickAndPlace
+See also
+Go to Default Position [check box] - PickAndPlace
+Only for Empty Blocking List [PickAndPlace]
+Plant Simulation Help 11-1895
+Unpublished work. © 2026 Siemens
+
+Use Kinematics for Times
+Uses the 3D kinematics of the PickAndPlace robot to calculate its timing, instead of using the times defined
+in the Angles Table and in the Times Table.
+Remarks
+The PickAndPlace robot can only use the 3D kinematics if Plant Simulation finds supported robot
+kinematics as described under Configuring the Robot.
+Note
+3D kinematics can either be kinematics that are part of a robot graphic, which you import or 3D
+kinematics which are defined in Plant Simulation.
+Plant Simulation supports all kinematics that it also supports for the other objects for
+using the functions _3D.Poses.moveToCoordinate [SimTalk], _3D.Poses.moveToMU [SimTalk], and
+_3D.Poses.moveToMUAnimationPosition [SimTalk], except for linear robots.
+Define the Joint Settings of an Animatable Object on the tab Joint of the animatable objects of the
+PickAndPlace robot.
+Increase the Joint Velocity to make the robot arm move faster around this joint.
+Use Kinematics for Times
+11-1896 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+UseKinematicsForTimes [SimTalk]
+See also
+Configuring the Robot
+_3D.Poses.moveToCoordinate [SimTalk]
+_3D.Poses.moveToMU [SimTalk]
+_3D.Poses.moveToMUAnimationPosition [SimTalk]
+Joint
+Velocity [joint]
+JointVelocity [SimTalk]
+Times Table [PickAndPlace]
+Use Kinematics for Times
+Plant Simulation Help 11-1897
+Unpublished work. © 2026 Siemens
+
+Time Factor [PickAndPlace]
+Type the Time Factor with which all times in the Times Table are multiplied into the text box.
+Remarks
+The Time Factor allows to simulate the PickAndPlace robot with different speeds without having to
+manually change the times in the table.
+SimTalk
+TimeFactor [SimTalk]
+See also
+Times Table [PickAndPlace]
+Time Factor [PickAndPlace]
+11-1898 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Default Angle [PickAndPlace]
+Type in the Default Angle in degrees to which the PickAndPlace robot rotates when you selected Go to
+Default Position.
+Remark
+If you would like the PickAndPlace robot to rotate to the side on which the start position is located, add
+180° to this angle. You can type in a value between 0° and 360°.
+Note
+The Default Angle is also used as the start position after a Reset, no matter if Go to Default Position is
+activated or not.
+SimTalk
+DefaultAngle [SimTalk] - PickAndPlace
+See also
+Go to Default Position [check box] - PickAndPlace
+Default Angle [PickAndPlace]
+Plant Simulation Help 11-1899
+Unpublished work. © 2026 Siemens
+
+Blocking Angle [text box]
+Type in the Blocking Angle in degrees which the PickAndPlace robot cannot cross while rotating. This
+prevents the robot from taking the shortest way.
+Remarks
+The default setting -1 means that no blocking angle applies and that the robot thus takes the shortest way.
+You can type in an angle between 0 and 360 degrees.
+The Blocking Angle only affects the animation, the simulation is controlled by the rotation times which
+you defined in the Times Table.
+SimTalk
+BlockingAngle [SimTalk]
+See also
+Times Table [PickAndPlace]
+Blocking Angle [text box]
+11-1900 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - PickAndPlace
+Type the Capacity into the text box, i.e., the number of MUs that the PickAndPlace robot can transport at
+any one time.
+Remarks
+The Capacity enables the PickAndPlace robot to transport more than one part at the same time. It might,
+for example, pick up a number of bottles and place them into the appropriate slots of a bottle crate one at
+a time (FIFO).
+Type in a number greater than 1.
+If you want to unload the parts according to another rule, for example LIFO, you can program this in an
+Exit Control.
+SimTalk
+Capacity [SimTalk] - PickAndPlace
+See also
+Pick Up Several Parts and Place Them with the Robot
+Capacity [text box] - PickAndPlace
+Plant Simulation Help 11-1901
+Unpublished work. © 2026 Siemens
+
+MU Conveying Direction [drop-down list]
+Select the conveying direction of the MU when the PickAndPlace robot passes the part on to its successor
+and places it there.
+Remarks
+Note
+For the settings Retain, Rotate by 90° to the right, Rotate by 90° to the left, and Rotate by 180° the
+PickAndPlace robot executes a relative rotation depending on the direction from which the MU arrives.
+For the settings Forwards, Lateral right, Backwards, and Lateral left the rotation is an absolute
+rotation independent of the direction from which the MU arrives.
+Conveying
+direction Description Looks like this
+Retain The robot continues conveying
+the part in the same direction in
+which it arrives.
+Rotate 90° to
+the right
+The robot rotates the part 90°
+to the right and places it on the
+successor.
+Rotate 90° to
+the left
+The robot rotates the part 90°
+to the left and places it on the
+successor.
+Rotate 180° The robot rotates the part 180°
+and places it on the successor.
+Forwards The robot rotates the part, so
+that it comes to rest on the
+successor forward and then
+places it on the successor.
+MU Conveying Direction [drop-down list]
+11-1902 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Conveying
+direction Description Looks like this
+Lateral right The robot rotates the part,
+so that it comes to rest on
+the successor laterally to the
+right and then places it on the
+successor.
+Backwards The robot rotates the part, so
+that it comes to rest on the
+successor backward and then
+places it on the successor.
+Lateral left The robot rotates the part,
+so that it comes to rest on
+the successor laterally to the
+left and then places it on the
+successor.
+SimTalk
+MUConveyingDirection [SimTalk]
+See also
+Set the Conveying Direction of the Parts
+MU Conveying Direction [drop-down list]
+Plant Simulation Help 11-1903
+Unpublished work. © 2026 Siemens
+
+Loading Time [PickAndPlace]
+The Loading Time is the time it takes the PickAndPlace robot for picking up a part at a station. If the
+PickAndPlace robot is full, it rotates to the target station and places the part there.
+Remarks
+The Loading Time is the time it takes the PickAndPlace robot for picking up a part at a station.
+• If the delivering station is a point-oriented object, the part is booked on the PickAndPlace robot while it
+picks it up. The delivering station is locked until the loading time has elapsed.
+• If the delivering station is a length-oriented object, the part remains on the delivering station during the
+loading time and is then moved on to the PickAndPlace robot.
+Select a distribution, and type the values, which that distribution requires, into the text box. Plant
+Simulation shows these values along the upper border of the tab.
+You can also enter a constant time (Const).
+If you select the Formula distribution, you can type in a numeric expression or the name of a Method.
+You can use the anonymous identifier @ to access the part for which the loading time applies. The
+anonymous identifier ? points to the PickAndPlace robot.
+Note
+During the Loading Time no part can be placed onto the delivering station.
+Note
+Behavior during interruptions of the PickAndPlace robot
+Plant Simulation extends the Loading Time by Interruption times of the PickAndPlace robot. The
+delivering station remains locked during the interruption.
+Note
+Behavior during interruptions of the delivering station.
+Loading Time [PickAndPlace]
+11-1904 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Interruptions of the delivering station do not affect loading the part by the PickAndPlace robot. The
+loading operation will be executed while the interruption lasts.
+Note
+The entrance of the PickAndPlace robot is open while its Loading Time is running. The entrance is
+closed once the part is actually moved on. The PickAndPlace robot opens the entrance again after the
+Unloading Time has passed.
+SimTalk
+LoadingTime [SimTalk] - PickAndPlace
+LoadingTime.Type [SimTalk] - distribution parameter
+IsLoading [SimTalk]
+putAttributeNamesIntoTable [SimTalk] - distributions
+Loading Time [PickAndPlace]
+Plant Simulation Help 11-1905
+Unpublished work. © 2026 Siemens
+
+Unloading Time [PickAndPlace]
+The Unloading Time is the time it takes the PickAndPlace robot for placing the part it picked up at another
+station onto the target station.
+Remarks
+The Unloading Time is the time it takes the PickAndPlace robot for placing the part, which it picked up at
+another station, onto the target station.
+• If the target station is a point-oriented object, the part is booked on the PickAndPlace robot while it
+places it. The target station is locked until the unloading time has elapsed.
+• If the target station is a length-oriented object, the part is moved on to the length-oriented object before
+the Unloading Time starts.
+Select a distribution, and type the values, which that distribution requires, into the text box. Plant
+Simulation shows these values along the upper border of the tab.
+You can also type in a constant time (Const).
+If you select the Formula distribution, you can type in a numeric expression or the name of a Method.
+You can use the anonymous identifier @ to access the part for which the unloading time applies. The
+anonymous identifier ? points to the PickAndPlace robot.
+Note
+Behavior during interruptions of the PickAndPlace robot.
+Plant Simulation extends the Unloading Time by interruption times of the PickAndPlace robot. The
+target processing station remains locked during the Interruption.
+Note
+Behavior during interruptions of the target station.
+Interruptions of the target station do not affect unloading the part by the PickAndPlace robot. The
+unloading operation continues while the interruption lasts.
+Unloading Time [PickAndPlace]
+11-1906 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Note
+The entrance of the PickAndPlace robot is open while its Loading Time is running. The entrance is
+closed once the part is actually moved on. The PickAndPlace robot opens the entrance again after the
+Unloading Time has passed.
+SimTalk
+UnloadingTime [SimTalk] - PickAndPlace
+UnloadingTime.Type [SimTalk] - distribution parameter
+IsLoading [SimTalk]
+putAttributeNamesIntoTable [SimTalk] - distributions
+Unloading Time [PickAndPlace]
+Plant Simulation Help 11-1907
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Controls
+Tab Controls
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+Tab Failures
+11-1908 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+See also
+Entrance Control [general description]
+Exit Control [general description]
+Pull Control [PickAndPlace]
+Target Control [PickAndPlace]
+Tab Controls
+Plant Simulation Help 11-1909
+Unpublished work. © 2026 Siemens
+
+Target Control [PickAndPlace]
+Modifies the built-in behavior of the object. The object calls the Target Control as soon as the
+PickAndPlace robot has picked up the part. As opposed to the Exit Control, the part is not ready to exit the
+object yet.
+Remarks
+The Target Control sets the target at which the PickAndPlace robot places the part
+Plant Simulation also calls the Target Control when the PickAndPlace robot has deposited the part. In
+this case you set the object at which the robot is going to pick up the next part by calling the method
+setDestination.
+When the PickAndPlace robot calls the Target Control after depositing the part, the active element (@) is
+void.
+Plant Simulation only calls the Target Control while unloading if you cleared the check box Go to Default
+Position.
+If you use a Target Control, you have to use the method setDestination to determine the target object.
+Note
+Do not use an Exit Control for determining the target of the MU, as an Exit Control will be called only
+when the MU is ready to exit the PickAndPlace robot. This point in time is too late though, as the target
+has to be determined earlier in time.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Target Control [PickAndPlace]
+11-1910 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+The standard target control as a user-defined attribute looks like this:
+SimTalk
+TargetCtrl [SimTalk] - PickAndPlace
+Target Control [PickAndPlace]
+Plant Simulation Help 11-1911
+Unpublished work. © 2026 Siemens
+
+See also
+Select Object [for controls]
+Configure the Robot
+setDestination [SimTalk] - PickAndPlace
+getDestination [SimTalk] - PickAndPlace
+Target Control [PickAndPlace]
+11-1912 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Pull Control [PickAndPlace]
+Modifies the built-in behavior of the object. The object calls the Pull Control whenever the PickAndPlace
+robot is ready to pick up a new part or when it is ready when a new MU is waiting at its entrance.
+Remarks
+In the Pull Control you can determine which of the parts, which intend to move onto the object, the
+PickAndPlace robot will accept. For this you have to get the Forward Blocking List of the object with the
+method fwBlockList and unblock a MU in the list with the method unblock.
+If you select Load Part onto MU at Sensor as the Target Selection, Plant Simulation only considers the
+PickAndPlace robot to be ready if a Container/Transporter is waiting at the sensor. This also applies if you
+programmed a Pull Control. It will only be called when a Container/Transporter is waiting at the sensor.
+Note
+If you only need the first entry of the Forward Blocking List, you can use the read-only-attribute
+FwBlockListEntry1 for those objects which have a Forward Blocking List. Access is much faster than
+with the method fwBlockList.
+Let us assume that red parts are especially important and thus have a priority for being processed. Then
+you can always pull red parts first from the predecessors and only then pull parts in other colors.
+Note
+The Pull Control does not determine if a MU is to be moved to this or to another successor. Instead, it
+selects one of the parts which have already been determined to move on to this successor.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Pull Control [PickAndPlace]
+Plant Simulation Help 11-1913
+Unpublished work. © 2026 Siemens
+
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+The standard pull control as a user-defined attribute looks like this:
+SimTalk
+PullCtrl [SimTalk] - PickAndPlace
+Pull Control [PickAndPlace]
+11-1914 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+See also
+Select Object [for controls]
+Waiting [state, material flow objects]
+Tab Exit
+Tab Exit
+Select how the PickAndPlace robot moves the parts on to its target stations on the tab Exit.
+As a rule you will be Configuring the Robot with Drag-and-Drop.
+• For the setting Target Selection > Exit strategy or target control you can select the desired exit
+strategy. Here the PickAndPlace robot has to be connected with the target objects with Connectors.
+To only rotate the PickAndPlace robot to a part that wants to exit the predecessor and to pick it up if the
+destination object is also ready to receive it, select Wait for Free Target.
+• For the settings Target Selection > Place part at sensor and Load part onto MU at sensor the tab
+shows the settings Target Object and Target Sensor ID. Here the PickAndPlace robot does not have
+to be connected with a Connector. Instead, the PickAndPlace robot uses the sensor which you have to
+create.
+Note
+For the setting Load part onto MU at sensor the robot only picks the part up at the sensor if a
+Container/Transporter waits at the sensor.
+See also
+Tab Exit [general description]
+Tab Exit
+Plant Simulation Help 11-1915
+Unpublished work. © 2026 Siemens
+
+Blocking [exit strategy]
+Target Selection [drop-down list]
+Strategy [material flow objects]
+Wait for Free Target [PickAndPlace]
+Video on YouTube
+https://youtu.be/K-NEPvShU10?si=K_SUgl3BdFCcsjMm&t=606
+Tab Exit
+11-1916 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Wait for Free Target [PickAndPlace]
+To only rotate the PickAndPlace robot to a part that wants to exit the predecessor and to pick it up if the
+destination object is also ready to receive it, select this check box.
+Remarks
+To rotate the PickAndPlace robot immediately to the part, clear the check box.
+Activating Wait for Free Target prevents that the PickAndPlace robot transports parts to a Station or a
+Conveyor that is already occupied or reserved. The PickAndPlace robot thus is available for other jobs that it
+can do the moment.
+Plant Simulation only evaluates Wait for Free Target for the setting Target Selection > Exit strategy or
+target control.
+Plant Simulation enters the part that cannot be transported into the Forward Blocking List of the target
+object.
+Note
+If you select the check box, Plant Simulation already evaluates the entered Exit Strategy or the Target
+Control for the part before the PickAndPlace robot rotates to the part to pick it up.
+Plant Simulation enters the thus determined target into the text box Target Object.
+SimTalk
+WaitForFreeTarget [SimTalk] -PickAndPlace
+See also
+Target Selection [drop-down list]
+TargetSelection [SimTalk]
+Wait for Free Target [PickAndPlace]
+Plant Simulation Help 11-1917
+Unpublished work. © 2026 Siemens
+
+ReservedFor [SimTalk]
+ReservedPlace [SimTalk]
+contentsAndReservedList [SimTalk]
+Wait for Free Target [PickAndPlace]
+11-1918 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Target Selection [drop-down list]
+Select how the PickAndPlace robot selects the target for the part that is to be moved:
+Remarks
+You can select one of these settings:
+• Exit strategy or target control
+This is the default behavior of previous versions of the PickAndPlace robot. You either set the target with
+the selected Exit Strategy or you define the target in the Target Control.
+• Load part onto MU at sensor
+For this setting you have to manually create a front-triggered sensor with light-barrier mode on the
+length-oriented target object. In addition, you have to enter the Target Object and the Target Sensor
+ID. Stopping the Container/Transporter, loading and sending the Container/Transporter on only works
+automatically if you did not enter a control. If you use a control, you have to program stopping and
+sending the Container/Transporter on in this control.
+Note
+The PickAndPlace robot only picks the part to be loaded up at the sensor if a Container/Transporter is
+waiting at the sensor.
+This also applies when you programmed a Pull Control. It will only be called if a Container/
+Transporter is waiting at the sensor.
+• Place part at sensor
+For this setting you have to manually create a rear-triggered sensor with light barrier mode on the
+length-oriented target object. In addition, you have to enter the Target Object and the Target Sensor
+ID.
+Target Selection [drop-down list]
+Plant Simulation Help 11-1919
+Unpublished work. © 2026 Siemens
+
+Note
+Selecting and setting the target object is actually quite easy. Just drag the PickAndPlace robot over the
+Conveyor, Track, or TwoLaneTrack and select the operation that is to take place, compare this. Plant
+Simulation then automatically sets the attributes and creates the respective sensor.
+SimTalk
+TargetSelection [SimTalk]
+See also
+Configuring the Robot with Drag-and-Drop
+Place Parts with a Target Control
+Load and Unload Parts at the Sensor of a Conveyor
+Configure the Robots
+Video on YouTube
+https://youtu.be/9g6Uou-8eMc?si=5rrGO9qnGKLoDx4L&t=1298
+Target Selection [drop-down list]
+11-1920 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Target Object
+Type the path to the length-oriented object, at which the part is to be placed or loaded, into the text box.
+Remarks
+Or click
+  and select the target object in the dialog Select Object.
+SimTalk
+TargetObject [SimTalk]
+See also
+Load and Unload Parts at the Sensor of a Conveyor
+Configure the Robots
+Target Object
+Plant Simulation Help 11-1921
+Unpublished work. © 2026 Siemens
+
+Target Sensor ID [text box]
+Type in the Sensor ID of the target sensor at which the part will be placed or loaded.
+Remarks
+Note
+Plant Simulation does not create the sensor automatically. You have to create it manually or use
+drag-and-drop.
+SimTalk
+TargetSensorID [SimTalk]
+See also
+Load and Unload Parts at the Sensor of a Conveyor
+Configure the Robots
+Target Sensor ID [text box]
+11-1922 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Statistics [PickAndPlace]
+Statistics is described under the Tab Statistics.
+In addition to these vales, the PickAndPlace robot collects these statistical values:
+Item Description Read-only attribute
+Item
+German
+Rotation
+Empty
+Shows the portion of the statistics collection period
+during which the PickAndPlace robot was rotating
+without moving a part, i.e., was Empty
+StatRotationEmptyP
+ortion [SimTalk] -
+PickAndPlace
+Drehung
+leer
+Rotation
+Loaded
+Shows the portion of the statistics collection period
+during which the PickAndPlace robot was rotating
+while moving a part
+StatRotationLoaded
+Portion [SimTalk] -
+PickAndPlace
+Drehung
+belegt
+To view Rotation Time in the Statistics Report, select View > Show Statistics Report in the dialog of the
+object. You can also click the right mouse button in the Frame and select Show Statistics Report or you
+can press F6.
+Tab Statistics [PickAndPlace]
+Plant Simulation Help 11-1923
+Unpublished work. © 2026 Siemens
+
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics [PickAndPlace]
+11-1924 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Importer [PickAndPlace]
+The importer is described under the Tab Importer. The PickAndPlace robot only provides the Failure
+Importer.
+To view Importer Statistics in the Statistics Report, click the object in the Frame, and press F6 (Show
+Statistics Report), or click Show Statistics Report on the Home ribbon tab.
+You can also click the object in the Frame with the right mouse button and select Show Statistics Report
+on the context menu.
+See also
+Failure Importer
+Tab Importer [PickAndPlace]
+Plant Simulation Help 11-1925
+Unpublished work. © 2026 Siemens
+
+Tab Energy
+Select energy settings for the object on the Tab Energy.
+Tab Energy
+11-1926 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Costs
+Select costs settings for the object on the Tab Costs.
+While the PickAndPlace-robot picks a part up at a station, rotates to the target station, and places it there
+costs accrue. These result from the sum of the investment costs and the operating costs.
+Note
+The investment costs only accrue during the Depreciation Period.
+The costs are allocated to the part as accrued costs.
+If the PickAndPlace-robot is empty, the costs remain with the PickAndPlace-robot as general costs.
+See also
+Simulate the Accrued Costs of the Machines
+CostAnalyzer > How the CostAnalyzer Assigns Costs to Part Types
+CostAnalyzer > Costs Shown in the Costs Report
+Tab Costs
+Plant Simulation Help 11-1927
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+11-1928 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+Plant Simulation Help 11-1929
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Forward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+View Menu
+11-1930 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+Plant Simulation Help 11-1931
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+11-1932 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the PickAndPlace Robot
+_Methods of the PickAndPlace Robot
+The PickAndPlace robot provides:
+• The methods listed in the table of contents to the left.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-1933
+Unpublished work. © 2026 Siemens

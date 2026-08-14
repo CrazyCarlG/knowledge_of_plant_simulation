@@ -1,0 +1,432 @@
+Specifying a Range of Cells [several columns] > Column Index Does Not Belong to Contents
+Methods for Importing and Exporting Data in Text Format
+_Methods for Importing and Exporting Data in Text Format
+Lists and tables provide the methods listed in the table of contents to the left for working with them in text
+format, instead of in table format (.pslist).
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the attributes and methods of the selected Instance [general
+description].
+Methods for Importing and Exporting Data in Text Format
+Plant Simulation Help 11-4029
+Unpublished work. © 2026 Siemens
+
+readExcelFile [SimTalk]
+Imports data from the designated Excel file (*.xls) into the list or table designated by <Path>.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Plant Simulation overwrites any existing data.
+Plant Simulation does not overwrite the column index and/or the row index of the Plant Simulation
+DataTable if the respective Excel cells are empty. To overwrite the contents of the column index and/or the
+row index in the Plant Simulation DataTable, delete this content before importing the Excel data.
+Note
+Plant Simulation uses Excel as COM-server when reading and writing MS Excel-files. For this reason MS
+Excel has to be installed on your computer. To continue using the previous, no longer supported Excel
+interface, you can use the start option -NativeExcel.
+Type
+Method
+Syntax
+<Path>.readExcelFile(FileName:string[, Sheet:string, 
+NoDebugger:boolean:=false, Password:string]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the path to and the name of the Excel file (*.xls).
+• The optional parameter Sheet of data type string designates the worksheet. If you do not specify it and if
+the Excel file has more than one worksheets, Plant Simulation opens a dialog allowing you to select the
+desired worksheet.
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+If you do not specify this parameter, the Method Debugger always opens.
+If you type in true, the Method Debugger does not open and the method returns the value false when
+an error occurs.
+Default Value of the Parameter
+readExcelFile [SimTalk]
+11-4030 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The default value is false.
+• The optional parameter Password of data type string designates the password.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataList.readExcelFile("C:\users\johnE\times.xls")
+MyDataTable.readExcelFile("C:\temp\product_plan.xls","plant xy anytown")
+if MyDataStack.readExcelFile("C:\temp\data.xls", true) = false 
+   // could not read file
+end
+See also
+Import File
+Specifying Start Options, -NativeExcel
+readExcelFile [SimTalk]
+Plant Simulation Help 11-4031
+Unpublished work. © 2026 Siemens
+
+readFile [SimTalk] - lists
+Imports data from the designated file into the list or table designated by <Path>. Plant Simulation
+overwrites any existing data.
+Remarks
+The method readFile can import text files, which you exported with the method writeFile, as well as object
+files, which you exported with the method writeObjectFile.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.readFile(FileName:string[, NoDebugger:boolean:=false, 
+CodePage:string:="ANSI"]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the path to and the name of the text file (*.txt).
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+Do not specify this parameter to always open the Method Debugger .
+Specify true to not open the Method Debugger and to make the method return the value false when an
+error occurs.
+Default Value of the Parameter
+The default value is false.
+• The optional parameter CodePage of data type string sets the encoding you want to use.
+You can specify "ANSI" or "System", "UTF-8", or "Unicode".
+Do not specify this parameter to use the default encoding ANSI.
+Default Value of the Parameter
+The default value is "ANSI".
+readFile [SimTalk] - lists
+11-4032 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Return Value
+The return value has the data type boolean.
+Example
+MyDataList.readFile("C:\users\johnE\times.txt")
+MyDataTable.readFile("C:\temp\product_plan.psobj")
+if MyDataStack.readFile("C:\temp\data.txt", true) = false 
+   // could not read file
+end
+SimTalk
+writeFile [SimTalk] - lists
+writeObjectFile [SimTalk]
+See also
+Import File
+readFile [SimTalk] - lists
+Plant Simulation Help 11-4033
+Unpublished work. © 2026 Siemens
+
+readXMLFile [SimTalk]
+Imports data from the designated XML file (*.xml) into the list/table designated by <Path>. Plant
+Simulation overwrites any data that this file might already contain.
+Remarks
+Note
+When reading an XML file that does not use our proprietary format, but Plant Simulation tries to
+construct a list/table from any XML data contained in the specified file. For complex XML files some XML
+data might not be entirely imported.
+If you need to read complex XML files, use the XMLInterface instead.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.readXMLFile(FileName:string[, NoDebugger:boolean:=false]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the path to and the name of the XML file
+(*.xml).
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+If you do not specify this parameter, the Method Debugger always opens.
+Specify true to not open the Method Debugger and to return the value false when an error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+readXMLFile [SimTalk]
+11-4034 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Example
+MyDataTable.readXMLFile("D:\MyName\Public\xmltest.xml")
+SimTalk
+writeXMLFile [SimTalk]
+See also
+Import File
+XMLInterface
+readXMLFile [SimTalk]
+Plant Simulation Help 11-4035
+Unpublished work. © 2026 Siemens
+
+readXMLString [SimTalk]
+Imports the designated string, which contains valid XML syntax, into the list or table designated by <Path>.
+Remarks
+Plant Simulation overwrites any existing data.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.readXMLString(XML:string[, NoDebugger:boolean:=false]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter XML of data type string designates the text of the XML content.
+• The optional parameter NoDebugger of data type boolean sets if the Debugger opens after an
+unsuccessful access or not.
+When you do not specify the optional parameter of data type boolean, the Debugger always opens.
+When you specify true, the Debugger does not open and the method returns the value false when an
+error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+SimTalk
+writeXMLFile [SimTalk]
+See also
+Import File
+readXMLString [SimTalk]
+11-4036 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeExcelFile [SimTalk]
+Exports the contents of the list/table designated by <Path> to the designated Excel file.
+Remarks
+Plant Simulation overwrites any existing content and the format of the Excel file.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Note
+Plant Simulation uses Excel as COM-server when reading and writing MS Excel-files. For this reason MS
+Excel has to be installed on your computer. To continue using the previous, no longer supported Excel
+interface, you can use the start option -NativeExcel.
+Note
+If you defined a background color in the Plant Simulation DataTable, Plant Simulation writes this
+background color to the Excel file. If this is not the case and if the contents of the Plant Simulation
+DataTable is written to an existing Excel file, its background color is not altered.
+Type
+Method
+Syntax
+<Path>.writeExcelFile(FileName:string[, Sheet:string, 
+NoDebugger:boolean=false]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the Excel file into which Plant Simulation exports
+the data.
+The file name has to have one of the following extensions: .xls, .xlsx, .xlsm, or .xlsb. The file extension
+determines which Excel file format Plant Simulation writes.
+• The optional parameter Sheet of data type string designates the worksheet. If you do not type it in, Plant
+Simulation saves the list with the name of the worksheet, as Table1.
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+Do not specify this parameter to always open the Method Debugger .
+writeExcelFile [SimTalk]
+Plant Simulation Help 11-4037
+Unpublished work. © 2026 Siemens
+
+Specify true to not open the Method Debugger and to return the value false when an error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataStack.writeExcelFile("C:\users\nelly\factory_a.xls")
+MyDataTable.writeExcelFile("C:\temp\factory_a.xls","Engines",true)
+if MyDataList.writeExcelFile("C:\temp\data.xls") 
+   // data written successfully
+else // take appropriate measures
+end
+SimTalk
+readExcelFile [SimTalk]
+writeExcelXMLFile [SimTalk]
+See also
+Export Excel File
+Specifying Start Options, -NativeExcel
+writeExcelFile [SimTalk]
+11-4038 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeExcelXMLFile [SimTalk]
+Exports the contents of the list/table designated by <Path> to the designated Excel file in Microsoft Excel
+Spreadsheet 2003-Format.
+Remarks
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Plant Simulation overwrites any existing content of the file.
+Note
+As opposed to the method writeExcelFile Plant Simulation does not need a Microsoft Excel Installation
+on your computer. For this reason writeExcelXMLFile is considerably faster than writeExcelFile.
+Note
+If you defined a background color in the Plant Simulation DataTable, Plant Simulation writes this
+background color to the Excel file. If this is not the case and if the contents of the Plant Simulation
+DataTable is written to an existing Excel file, its background color is not altered.
+Type
+Method
+Syntax
+<Path>.writeExcelXMLFile(FileName:string[, Sheet:string, 
+NoDebugger:boolean:=false]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the Excel file into which Plant Simulation exports
+the data.
+The file name has to have the extension xml.
+• The optional parameter Sheet of data type string designates the worksheet. If you do not enter it, Plant
+Simulation saves the list with the name of the worksheet, as Table1.
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+If you do not specify this parameter, the Method Debugger always opens.
+writeExcelXMLFile [SimTalk]
+Plant Simulation Help 11-4039
+Unpublished work. © 2026 Siemens
+
+Specify true to not open Method Debugger and to return the value false when an error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataStack.writeExcelXMLFile("C:\users\nelly\factory_a.xml")
+MyDataTable.writeExcelXMLFile("C:\temp\factory_a.xml","Engines",true)
+if MyDataList.writeExcelXMLFile("C:\temp\data.xml") 
+   // data written successfully
+else // take appropriate measures
+end
+SimTalk
+readExcelFile [SimTalk]
+writeExcelFile [SimTalk]
+See also
+Export Excel File
+writeExcelXMLFile [SimTalk]
+11-4040 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeFile [SimTalk] - lists
+Exports the contents of the list/table designated by <Path> to the designated text file.
+Remarks
+Plant Simulation overwrites any data that this file might already contain.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.writeFile(FileName:string[, NoDebugger:boolean:=false, 
+CodePage:string:="UTF-8"]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the name of the text file into which Plant
+Simulation exports the data.
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+Do not specify this parameter to always open the Method Debugger.
+Specify true to not open the Method Debugger and to make the method return the value false when an
+error occurs.
+Default Value of the Parameter
+The default value is false.
+• The optional parameter CodePage of data type string sets the encoding you want to use.
+You can specify "ANSI" or "System", "UTF-8", or "Unicode".
+If you don’t specify this parameter, the default encoding ANSI is used.
+Default Value of the Parameter
+The default value is "ANSI".
+Return Value
+The return value has the data type boolean.
+writeFile [SimTalk] - lists
+Plant Simulation Help 11-4041
+Unpublished work. © 2026 Siemens
+
+Example
+MyDataStack.writeFile("C:\users\nelly\times.txt")
+MyDataTable.writeFile("C:\temp\run1.txt")
+if MyDataList.writeFile("C:\temp\data.txt", true) 
+   // data written successfully
+else // take appropriate measures
+end
+SimTalk
+readFile [SimTalk] - lists
+See also
+Export to File [lists]
+writeFile [SimTalk] - lists
+11-4042 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeObjectFile [SimTalk]
+Exports data of the list/table designated by <Path> to the designated file of type .pslist.
+Remarks
+Plant Simulation overwrites any data that this file might already contain.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.writeObjectFile(FileName:string[, NoDebugger:boolean:=false]) → 
+boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the name of the object file of data type .pslist
+into which Plant Simulation exports the data.
+Plant Simulation saves the file either to the current folder, compare setCurrentDirectory or to the folder
+which you pass as the absolute path.
+• The optional parameter NoDebugger of data type boolean sets if the Method Debugger opens after an
+unsuccessful access (false) or not true.
+If you do not specify this parameter, the Method Debugger always opens.
+Specify true to not open the Method Debugger and to return the value false when an error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataStack.writeObjectFile("C:\users\johnE\times.pslist")
+MyDataTable.writeObjectFile("C:\temp\run1.pslist")
+if MyDataList.writeObjectFile("C:\temp\data.pslist", true) 
+writeObjectFile [SimTalk]
+Plant Simulation Help 11-4043
+Unpublished work. © 2026 Siemens
+
+   // data written successfully
+else // take appropriate measures
+end
+SimTalk
+readFile [SimTalk] - lists
+setCurrentDirectory [SimTalk]
+See also
+Export Object File
+writeObjectFile [SimTalk]
+11-4044 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+writeXMLFile [SimTalk]
+Exports the contents of the list/table designated by <Path> to the designated XML file. Plant Simulation
+overwrites any data that this file might already contain.
+Remarks
+Note
+When writing an XML file, Plant Simulation always uses our proprietary format.
+The method applies to the objects DataStack, DataQueue, DataList, DataTable, and TimeSequence.
+Type
+Method
+Syntax
+<Path>.writeXMLFile(FileName:string[, NoDebugger:boolean:=false]) → boolean
+Parameters
+You can specify the following parameters:
+• The parameter FileName of data type string designates the name of the XML file into which Plant
+Simulation exports the data.
+• The optional parameter NoDebugger of data type boolean sets if the Debugger opens after an
+unsuccessful access or not. When you do not specify a value for this optional parameter, the Debugger
+always opens. When you specify true the Debugger does not open and the method returns the value
+false when an error occurs.
+Default Value of the Parameter
+The default value is false.
+Return Value
+The return value has the data type boolean.
+Example
+MyDataTable.writeXMLFile("D:\MyName\Public\xmltest.xml")
+writeXMLFile [SimTalk]
+Plant Simulation Help 11-4045
+Unpublished work. © 2026 Siemens
+
+SimTalk
+readXMLFile [SimTalk]
+See also
+Export XML File
+Methods for Indirectly Accessing Lists and Tables
+_Methods for Indirectly Accessing Lists and Tables
+Lists and tables provide the methods listed in the table of contents to the left for indirectly accessing them.
+These methods only apply to ranges of data type object. The contents of the cells are references to objects
+whose attributes are to be processed.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the attributes
+and methods of the selected Class [general description].
+Methods for Indirectly Accessing Lists and Tables
+11-4046 Plant Simulation Help
+Unpublished work. © 2026 Siemens

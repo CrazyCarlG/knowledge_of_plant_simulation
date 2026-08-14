@@ -1,0 +1,330 @@
+Image
+Description
+You might, for example, use the Track and the Transporter to model an AGV (automated guided vehicle)
+system. The distance, which the Transporter 
+  has to travel on the Track—defined by the Track’s Length,
+the Transporter’s MU Length, and its Speed—determines the time, which the Transporter remains on the
+Track. As opposed to the point-oriented material flow objects, Plant Simulation uses the actual Length,
+which you type in, during your simulation run. A Transporter cannot pass another Transporter moving in
+front of it. Transporters thus retain their order of moving onto and of moving off the Track (FIFO)
+If several Transporters travel along the Track at a different speed, and a faster one collides with a slower
+one, Plant Simulation activates the Collision Control of the faster Transporter and automatically reduces
+its speed to the speed of the slower Transporter.
+The maximum capacity of the Track is defined by its length and the lengths of the individual Transporters
+moving on it, i.e., a Track that is three yards long accepts three Transporters of one yard each at the most.
+You can use the Capacity to further restrict the number of Transporters located on the Track.
+The Transporter can drive forward and Backwards on the Track, i.e., it drives onto the Track at its Exit
+and exits it at its Entrance. Driving forward and backward are not properties of the Track, but of the
+Transporters, which drive on it.
+You can insert the Track into a Frame as follows:
+• As a curved object, which is the default setting.
+• By inserting any sequence of curved segments and straight segments, you can realistically model curved
+conveyor systems on which the Transporters move.
+You can select different configurations for the Track on the tab Appearance.
+Track [object]
+11-2438 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To show a tooltip with information about the Track, hover with the mouse over it.
+Show Manipulators
+To change the length of the graphic and the anchor points of the object, click Show Manipulators 
+on the Edit ribbon tab or press M on the keyboard.
+The manipulator at the start and at the end of the length-oriented object is cut off. When you attach an
+object of the same type to the other object, the two combined halves result in a complete manipulator
+again. When you move the mouse over a manipulator, Plant Simulation shows a Tooltip.
+Track [object]
+Plant Simulation Help 11-2439
+Unpublished work. © 2026 Siemens
+
+Add the Object to the Simulation Model
+To add the object Track to your simulation model, click 
+  Manage Class Library > Basic Objects >
+MaterialFlow > Track on the Home ribbon tab.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+See also
+Model a Transport System with Passive Objects
+Work with Length-oriented Objects
+Routing [TwoLaneTrack]
+Track [object]
+11-2440 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Routing [Track]
+To facilitate a branching Track, can use any of these controls to move a Transporter on to the succeeding
+object.
+Remarks
+Plant Simulation uses:
+• The Exit Control of the Track.
+• Automatic Routing of the Transporter.
+• The Driving Control of the Transporter.
+• The built-in properties of the Track described below.
+The Exit Control of the Track has the highest priority. If you did not define an Exit Control and if you
+typed in a destination list for the Transporter, Automatic Routing moves the Transporter on to the proper
+successor, using the destination lists of the successors.
+You can also assign a Destination to the Transporter. The Track has a Forward Destination List and a
+Backward Destination List, into which you type all destinations that the Transporter can reach when it
+drives on the Track. If you assigned a destination list to the Transporter that is ready to be moved on,
+the Track searches the Forward Destination List and the Backward Destination List of all successors for
+the Destination that you typed in, and, as soon as it finds it, moves the Transporter on to that successor.
+If the Track does not find the destination, it moves the Transporter to the next successor in turn. Plant
+Simulation terminates the search after it finds the first instance of the Destination. Automatic routing is
+inactive if you did not type in a Destination for the Transporter or if you typed in an Exit Control for the
+Track.
+If you neither typed in an Exit Control nor any Destination Lists for the successors, the Track uses the
+Driving Control of the Transporter to move it. If you do not type in any controls at all, the built-in
+properties of Track move the Transporters to each of the successors, to which it is connected, in turn.
+Compare the sample models: Click the Window ribbon tab, click Start Page > Getting Started > Example
+Models > Small Examples. Then, select the respective Category, the Topic, and the Example in the
+dialog Examples Collection, and click Open Model.
+Routing [Track]
+Plant Simulation Help 11-2441
+Unpublished work. © 2026 Siemens
+
+See also
+Model a Transport System with Passive Objects
+Dialog Box of the Track
+Dialog Box of the Track
+Double-click the icon of the Track to open its dialog box.
+Edit Simulation Properties
+In the dialog box you can change the simulation properties of the object. The shared properties are
+described under Dialog Items of the Objects.
+Edit Animation Properties
+To edit the 3D properties of the object in the dialog box Edit 3D Properties:
+• Click the button 
+  Edit 3D Properties in the lower left corner of the simulation properties dialog box.
+• Select the object in the model and press the spacebar.
+Dialog Box of the Track
+11-2442 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To manipulate the graphic of the object, click Show Manipulators on the Edit ribbon tab or press M on the
+keyboard.
+Tab Attributes
+Tab Attributes
+The tab Attributes provides the settings, which the object offers.
+The settings are listed in the table of contents to the left.
+The shared properties are described under the Tab Attributes.
+Tab Attributes
+Plant Simulation Help 11-2443
+Unpublished work. © 2026 Siemens
+
+Length [text box] - Track
+Type the Length of the Track into the text box.
+Remarks
+After you inserted it, Plant Simulation shows its length here. The length of the Track and the sum of the
+lengths of all Transporters located on it determine how many Transporters it can accommodate at any one
+time.
+You can change the length of the graphic and the anchor points of the Track by clicking Show
+Manipulators 
+  on the Edit ribbon tab or by pressing M on the keyboard.
+SimTalk
+Length [SimTalk] - Track
+See also
+OccupiedLength [SimTalk] - Track
+Length [text box] - Track
+11-2444 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Width [text box] - Track
+Type the Width of the Track into the text box.
+SimTalk
+Width [SimTalk] - Track
+Width [text box] - Track
+Plant Simulation Help 11-2445
+Unpublished work. © 2026 Siemens
+
+Capacity [text box] - Track
+Type in the Capacity of the Track into the text box.
+Remarks
+The Capacity is the maximum number of Transporters that may be located on the Track as a whole or in
+part at any one time.
+The default value -1 stands for an infinite capacity.
+SimTalk
+Capacity [SimTalk] - Track
+Capacity [text box] - Track
+11-2446 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Backward Destination List [text box]
+Click the ellipsis button and select a List object in the dialog Select Object. Or type the path to a list into
+the text box.
+Remarks
+Type all destination objects into this List object, which the Track can reach, when the Transporter moves in
+reverse on it.
+Plant Simulation evaluates the destination lists when a Transporter is to be moved on to a successor. Plant
+Simulation searches for the destination of the Transporter in the destination lists of all succeeding Tracks,
+which are directly connected with Connectors. If a succeeding Track is connected via an Interface, this
+Interface should only have a single successor because Plant Simulation only searches in the first successor
+of the Interface for a destination list.
+Note
+The Transporter cannot only move forward but also in reverse on the Track, i.e., a Transporter can enter
+the Track at its exit and leave it at its entrance. Moving forward or in reverse are not properties of the
+object Track, but of the Transporter moving on it!
+SimTalk
+BwDestList [SimTalk]
+See also
+Select Object [for controls]
+Backward Destination List [text box]
+Plant Simulation Help 11-2447
+Unpublished work. © 2026 Siemens
+
+Forward Destination List [text box]
+Type all destination objects into this List object, which the Track can reach, when the Transporter drives
+forward on it.
+Remarks
+Plant Simulation evaluates the destination lists when a Transporter is to be moved on to a successor. Plant
+Simulation searches for the destination of the Transporter in the destination lists of all succeeding Tracks,
+which are directly connected with Connectors. If a succeeding Track is connected via an Interface, this
+Interface should only have a single successor because Plant Simulation only searches in the first successor
+of the Interface for a destination list.
+SimTalk
+FwDestList [SimTalk]
+See also
+Select Object [for controls]
+Forward Destination List [text box]
+11-2448 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Times
+Define Times as described under the Tab Times.
+Select a distribution from the drop-down list and type the values that this distribution requires into the
+text box. Plant Simulation shows the parameters along the upper border of the tab. You can also select a
+constant time (Const).
+You can set the type of the distribution and a complete set of parameters with the method
+setTypeAndAttr [SimTalk].
+See also
+Recovery Time [general description]
+Recovery Time Starts
+Tab Times
+Plant Simulation Help 11-2449
+Unpublished work. © 2026 Siemens
+
+Tab Failures
+Define failures as described under the Tab Failures.
+Tab Failures
+11-2450 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Controls [Track]
+Provides controls to modify the built-in behavior of the object.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+Tab Controls [Track]
+Plant Simulation Help 11-2451
+Unpublished work. © 2026 Siemens
+
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+In addition, you can create and insert Sensors.
+The Track shows the sensors, which you defined, on its graphic in the Frame window. To open the dialog
+Sensors, hold down Alt and double-click the sensor.
+See also
+Define Controls for Length-Oriented Objects
+Entrance Control [general description]
+Exit Control [general description]
+Backward Entrance Control
+Backward Exit Control
+Pull Control [general description]
+Shift Calendar [tab Controls]
+Tab Controls [Track]
+11-2452 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab Exit
+Select to which of its successors the object moves the MU on the Tab Exit.
+See also
+Blocking [exit strategy]
+Strategy [material flow objects]
+Tab Exit
+Plant Simulation Help 11-2453
+Unpublished work. © 2026 Siemens
+
+Tab Statistics
+Statistics is described under the Tab Statistics.
+To view Resource Statistics of Stationary Resources in the Statistics Report, select View > Show
+Statistics Report in the dialog of the object.
+You can also click the right mouse button in the Frame and select Show Statistics Report or you can press
+F6.
+See also
+Resource Statistics [check box]
+Resource Type
+Tab Statistics
+11-2454 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tab User-defined
+Define your own attributes as described under the Tab User-defined.
+Tab User-defined
+Plant Simulation Help 11-2455
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+Navigate Menu
+11-2456 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu] Backward Blocking List
+Show Statistics Report [on View menu] Exit Blocking List
+Show Attributes and Methods [on View menu] Associated Lockout Zones
+Contents [material flow objects] Associated Shift Calendar
+Forward Blocking List
+View Menu
+Plant Simulation Help 11-2457
+Unpublished work. © 2026 Siemens
+
+Tools Menu
+The commands are described under the Tools Menu.
+Tools Menu
+11-2458 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Tabs Menu
+Use the commands of the Tabs menu to show or hide individual tabs of the selected material flow objects.
+If you hide tabs that you do not need, Plant Simulation opens the dialog faster, and you can change to
+those tabs faster that you need in your daily work.
+Remarks
+To apply the changed settings, click OK, close the dialog, and reopen it
+The menu shows a check mark to the left of the displayed tabs.
+The command Inherit turns inheritance of the displayed or hidden tabs in the dialog off or on.
+Tabs Menu
+Plant Simulation Help 11-2459
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the Track
+Methods of the Track
+The Track provides:
+• The method getRouteLength [SimTalk] - Track.
+• The _Methods of Curved Objects.
+• The Methods of the Material Flow Objects.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Help Menu
+11-2460 Plant Simulation Help
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,377 @@
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print MyFlowControl.UUID
+Attributes of the FlowControl
+_Attributes of the FlowControl
+The FlowControl provides:
+• The attributes listed in the table of contents to the left.
+• The Attributes of All Objects.
+As the FlowControl cannot receive any MUs, it does not have the attributes that the other material flow
+objects provide.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+Attributes of the FlowControl
+11-2610 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+flowcontrol.name := "MyFlowControl"
+• To get the value of an attribute, you might, for example, type:
+print flowcontrol.DefaultSuccessor
+posit := MyStation.Cont.XPos
+_Attributes of the FlowControl
+Plant Simulation Help 11-2611
+Unpublished work. © 2026 Siemens
+
+AttributeType [SimTalk] - FlowControl
+Sets the data type of the attribute that determines how the FlowControl designated by <Path> moves the
+MUs on.
+Remarks
+AttributeType applies to the Exit Strategy > MU Attribute.
+Type
+Attribute
+Syntax
+<Path>.AttributeType:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyFlowControl.AttributeType := "integer"
+See also
+MU Attribute [FlowControl, exit]
+AttributeType [SimTalk] - FlowControl
+11-2612 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+DefaultSuccessor [SimTalk] - FlowControl
+Sets the number of the default successor to which the FlowControl designated by <Path> moves the MUs.
+Remarks
+DefaultSuccessor applies if none of the MUs has an attribute with the Value you entered into the
+DataTable. To not move a MU, which does not meet one of the conditions on the table, specify 0.
+To show a message, when a MU is to be moved which does not meet any of the conditions in the
+DataTable, specify -1.
+Type
+Attribute
+Syntax
+<Path>.DefaultSuccessor:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyFlowControl.DefaultSuccessor := 1
+See also
+MU Attribute [FlowControl, exit]
+MU Name
+DefaultSuccessor [SimTalk] - FlowControl
+Plant Simulation Help 11-2613
+Unpublished work. © 2026 Siemens
+
+EntryBehavior [SimTalk]
+Sets the strategy according to which the FlowControl designated by <Path> receives the MUs from its
+predecessors.
+Type
+Attribute
+Syntax
+<Path>.EntryBehavior:string
+Assignment Value
+You can assign a value of data type string.
+• To cyclically receive the MUs from all predecessors, specify Cyclic.
+• To cyclically receive the MUs from the predecessor according to the sequence of predecessors, which
+you typed into the list, specify Cyclic Sequence.
+• To receive the MUs from the predecessor in the order in which they intended to exit, specify First come,
+first served.
+• To receive the MUs from the predecessor that has not provided a MU for the longest time, specify Least
+recently used.
+• To receive the MUs from the predecessor defined by the return value of a Method, specify Method.
+• To receive the MUs from the predecessor, from which the FlowControl received a MU the last time,
+specify Most recently used.
+• To receive the MUs from the predecessors according to a percentage distribution, specify Percentage.
+• To receive the MUs from the predecessors in a random fashion, specify Random.
+• To receive the MUs from the predecessors according to the state and the material flow balance of the
+predecessors, specify Selection. Then, specify a Property.
+• To receive the MUs from the first available predecessor, specify Start at Predecessor 1.
+Example
+MyFlowControl.EntryBehavior := "random"
+See also
+Strategy [FlowControl, entry]
+EntryBehavior [SimTalk]
+11-2614 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EntryBlocking [SimTalk]
+Sets if the FlowControl designated by <Path> uses blocking behavior if a MU enters the FlowControl
+(true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.EntryBlocking:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyFlowControl.entryBlocking := true
+See also
+Blocking [FlowControl, entry]
+EntryBlocking [SimTalk]
+Plant Simulation Help 11-2615
+Unpublished work. © 2026 Siemens
+
+EntryDistribution [SimTalk]
+Sets the random number distribution of the FlowControl designated by <Path>.
+Remarks
+EntryDistribution applies when you set the attribute EntryBehavior to Random.
+Type
+Attribute
+Syntax
+<Path>.EntryDistribution:time
+Assignment Value
+You can assign a value of data type time.
+Example
+MyFlowControl.EntryBehavior := "random"
+MyFlowControl.EntryDistribution.Type := "normal"
+MyFlowControl.EntryDistribution.Mu := 5
+MyFlowControl.EntryDistribution.Sigma := 1
+See also
+EntryBehavior [SimTalk]
+Random [FlowControl, entry]
+EntryDistribution [SimTalk]
+11-2616 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+EntrySelectionMethod [SimTalk]
+Sets the name of the Method object, which the FlowControl designated by <Path> uses.
+Remarks
+EntrySelectionMethod applies when you set the attribute EntryBehavior to Method.
+Note
+You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula.
+For this reason Plant Simulation does not show the tab Expressions of the Method Debugger.
+In addition, you cannot use a wait-instruction, a waituntil-instruction, or a stopuntil-instruction
+within the Method.
+Type
+Attribute
+Syntax
+<Path>.EntrySelectionMethod:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyFlowControl.EntryBehavior := "method"
+MyFlowControl.EntrySelectionMethod := &myMethod
+See also
+EntryBehavior [SimTalk]
+Method [FlowControl, entry]
+Tab Expressions [Watch window]
+EntrySelectionMethod [SimTalk]
+Plant Simulation Help 11-2617
+Unpublished work. © 2026 Siemens
+
+EntrySelectionProperty [SimTalk]
+Sets the selection criterion, which the FlowControl designated by <Path> uses.
+Remarks
+EntrySelectionProperty applies when you set the attribute EntryBehavior to Selection.
+Type
+Attribute
+Syntax
+<Path>.EntrySelectionProperty:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Max. Contents", "Min. Contents", "Max. Proc. Time", "Min. Proc.
+Time", "Max. Num. Out", "Min. Num. Out", "Max. Rel. Occu.", or "Min. Rel. Occu.".
+Example
+MyFlowControl.EntryBehavior := "selection"
+MyFlowControl.EntrySelectionProperty := "Max. Contents"
+See also
+EntryBehavior [SimTalk]
+Selection [FlowControl, entry]
+EntrySelectionProperty [SimTalk]
+11-2618 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitBehavior [SimTalk]
+Sets the strategy according to which the FlowControl designated by <Path> moves the MUs on its
+successors.
+Type
+Attribute
+Syntax
+<Path>.ExitBehavior:string
+Assignment Value
+You can assign a value of data type string.
+• The strategy Assignment does not determine the successor to which the FlowControl moves the MU.
+Instead, you can change the values of the attributes of the MU, when it moves to the one and only
+successor of the FlowControl. As soon as the MU is moved on to the successor, Plant Simulation calls the
+Method, whose name you entered into the text box Method. Define the assignments to be made in this
+Method.
+• To move the MUs cyclically on to all successors, specify Cyclic.
+• To cyclically move the MUs on to the successor according to the sequence of successors, which you
+typed into a list, specify Cyclic Sequence.
+• To move the MUs on to the successor, which has been Waiting the longest for a MU, specify Least
+recently used.
+• To move the MUs on to a successor according to the return value of a Method, specify Method.
+Note
+You cannot move or delete MUs in the Method because Plant Simulation calls the Method like
+a formula. For this reason Plant Simulation does not show the tab Expressions of the Method
+Debugger.
+In addition, you cannot use a wait-instruction, a waituntil-instruction, and a stopuntil-instruction
+within the Method.
+• To move the MUs on to the successor, which has Waiting the shortest time for a MU, specify Most
+recently used.
+• To move the MUs on to a successor according to the values of attributes of the MUs, specify MU
+Attribute.
+• To move the MUs on to a successor according to their names, specify MU Name.
+• To move the MUs on to a successor according to a percentage distribution, specify Percentage.
+ExitBehavior [SimTalk]
+Plant Simulation Help 11-2619
+Unpublished work. © 2026 Siemens
+
+• To move the MUs on to a randomly selected successor, specify Random.
+• To move the MUs on to the successor meeting a certain Property, specify Selection. Then, specify a
+Property.
+• To move the MUs on to the first available successor, specify Start at Successor 1.
+• To copy the MUs that enter, and move a copy each to each of the successors, specify To all Successors.
+Example
+MyFlowControl.ExitBehavior := "random"
+See also
+Strategy [FlowControl, exit]
+ExitBehavior [SimTalk]
+11-2620 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitBlocking [SimTalk]
+Sets if the FlowControl designated by <Path> uses blocking behavior.
+Remarks
+ExitBlocking applies if a MU exits the FlowControl (true) or not (false).
+Note
+The non-blocking strategy of the setting Exit Strategy > MU attribute moves the part on when any of
+the desired successors can receive it.
+Type
+Attribute
+Syntax
+<Path>.ExitBlocking:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyFlowControl.ExitBlocking := true
+See also
+Blocking [FlowControl, exit]
+MU Attribute [FlowControl, exit]
+ExitBlocking [SimTalk]
+Plant Simulation Help 11-2621
+Unpublished work. © 2026 Siemens
+
+ExitDistribution [SimTalk]
+Sets the random number distribution which the FlowControl designated by <Path> uses.
+Remarks
+ExitDistribution applies when you set the attribute ExitBehavior to "Random".
+Type
+Attribute
+Syntax
+<Path>.ExitDistribution:randTime
+Assignment Value
+You can assign a value of data type time.
+Example
+MyFlowControl.ExitBehavior := "random"
+MyFlowControl.ExitDistribution.Type := "normal"
+MyFlowControl.ExitDistribution.Mu := 5
+MyFlowControl.ExitDistribution.Sigma := 1
+See also
+ExitBehavior [SimTalk]
+Random [FlowControl, exit]
+ExitDistribution [SimTalk]
+11-2622 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExitSelectionMethod [SimTalk]
+Sets the name of the Method object, which the FlowControl designated by <Path> uses.
+Remarks
+ExitSelectionMethod applies when you set the attribute ExitBehavior to Method.
+Note
+You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula.
+For this reason Plant Simulation does not show the tab Expressions of the Method Debugger.
+In addition, you cannot use a wait-instruction, a waituntil-instruction, or a stopuntil-instruction
+within the Method.
+Type
+Attribute
+Syntax
+<Path>.ExitSelectionMethod:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyFlowControl.ExitBehavior := "method"
+MyFlowControl.ExitSelectionMethod := &myMethod
+See also
+ExitBehavior [SimTalk]
+Method [FlowControl, exit]
+Tab Expressions [Watch window]
+ExitSelectionMethod [SimTalk]
+Plant Simulation Help 11-2623
+Unpublished work. © 2026 Siemens
+
+ExitSelectionProperty [SimTalk]
+Sets the selection property, which the FlowControl uses.
+Remarks
+ExitSelectionProperty applies when you set the attribute ExitBehavior to Selection.
+Type
+Attribute
+Syntax
+<Path>.ExitSelectionProperty:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Max. Contents", "Min. Contents", "Max. Rel. Occu.", "Min. Rel.
+Occu.", "Max. Num. In", "Min. Num. In", "Max. Proc. Time", "Min. Proc. Time", "Max.
+Set-up Time", or "Min. Set-up Time".
+Example
+MyFlowControl.ExitBehavior := "Selection"
+MyFlowControl.ExitSelectionProperty := "Max. contents"
+See also
+ExitBehavior [SimTalk]
+Selection [FlowControl, exit]
+Cycle
+Cycle
+Use the object Cycle for synchronizing the transfer of parts from station to station.
+ExitSelectionProperty [SimTalk]
+11-2624 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Image
+Description
+Use the Cycle to only move a part on to the next station within a balanced line, when all stations have
+finished processing their parts and when none of the stations is failed, paused, or unplanned. In addition,
+the successor of the balanced line has to be ready to receive the part. To define the balanced line, type the
+name of the First Station and of the Last Station into the text boxes. All stations between the first and
+the last station, which are connected with Connectors, form the balanced line. Each station has to have a
+predecessor and a successor and can only have a single predecessor and a single successor.
+Note
+At the moment only objects of type Station and AssemblyStation can be part of the balanced line. If an
+AssemblyStation is part of the balanced line, the Cycle only continues balancing if the assembly process
+has been finished.
+Note
+A Front-triggered Exit Control is only called for the last station of the cycle defined by the object Cycle
+as the Destination for all other stations of the cycle is already set. Use a Rear-triggered Exit Control
+instead.
+Note
+A Pull Control is not called for the stations of the object Cycle.
+You can insert as many Cycle objects as you need into your simulation model. They all work independent
+of each other. If you use several Cycle objects, make sure to only assign each station to a single Cycle
+object.
+If you did not define any stations for the balanced line yet, drag a Station or an AssemblyStation onto the
+icon of the object Cycle and drop it there, Plant Simulation enters it as the first station of the balanced line.
+If you drag another object onto it and drop it there, Plant Simulation enters it as the last station. If you
+already defined the last station and would like to change it, hold down Shift, drag the object, which you
+would like to use as the last station of the balanced line over the Cycle and drop it there.
+To show a tooltip with information about the Cycle, hover with the mouse over it.
+Cycle
+Plant Simulation Help 11-2625
+Unpublished work. © 2026 Siemens

@@ -1,0 +1,226 @@
+States of the Method
+Methods of the Frame
+_Methods of the Frame
+The Frame provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+An example of the Syntax line of the individual methods might look like this:
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+Methods of the Frame
+Plant Simulation Help 11-1517
+Unpublished work. © 2026 Siemens
+
+• The expression <Path> designates the path of the object to which the method applies.
+• The signature of the method, consisting of the identifier and the data type of the parameter, is listed
+in parentheses. The expression (Parameter:string), for example, designates a parameter of data type
+string. Instead of a constant value, you can also use a variable of the required type or a method that
+returns the required data type.
+Note
+Make sure to enter the parentheses for expressions within parentheses (…). Not entering them may
+lead to unexpected results and open the Debugger.
+Optional parameters are listed within brackets. The expression [,Parameter:boolean], for example,
+means that you can, but do not have to enter the boolean parameter.
+If a parameter has a default value, the signature shows the default value after the parameter, := false
+in the example above.
+If the method has a return value, the signature shows its data type after the arrow ->, → boolean in
+the example above.
+_Methods of the Frame
+11-1518 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+getHTMLCode [SimTalk] - Frame
+Returns the contents of the Frame designated by <Path> as HTML code of a pixel-based graphic and
+assigns it to the passed parameters.
+Type
+Method
+Syntax
+<Path>.getHTMLCode([Caption:string, Width:integer, Height:integer, 
+SizeInPercent:string, CameraPositionX:real, CameraPositionY:real, 
+CameraPositionZ:real, CameraRotationX:real, CameraRotationZ:real, 
+CameraRotationX:real, CameraRotationZ:real]) → string
+Parameters
+You can specify the following parameters:
+• The optional parameter Caption of data type string designates the desired caption of the graphic. If you
+specify the caption, Plant Simulation shows the graphic with this caption.
+• The optional parameter Width of data type integer designates the desired Width of the graphic.
+If you do not specify the Width and the Height, Plant Simulation uses the width and the height of the 2D
+view or of the 3D view respectively in which all objects contained in the Frame are visible.
+• The optional parameter Height of data type integer designates the desired Height of the graphic.
+If you do not specify the Width and the Height, Plant Simulation uses the width and the height of the 2D
+view or of the 3D view respectively in which all objects contained in the Frame are visible.
+• The optional parameter SizeInPercent of data type string designates the desired size of the graphic in
+percent, for example "75%". You can specify the percentage instead of the parameters for the Width
+and the Height.
+• The optional parameter CameraPositionX of data type real designates the x-axis of the camera position.
+• The optional parameter CameraPositionY of data type real designates the y-axis of the camera position.
+• The optional parameter CameraPositionZ of data type real designates the z-axis of the camera position.
+You only have to specify the optional parameters for the CameraPosition if you also specify the optional
+parameters for the CameraRotation.
+• The optional parameter CameraRotationX of data type real designates the rotation of the camera
+around the x-axis.
+• The optional parameter CameraRotationZ of data type real designates the rotation of the camera
+around the z-axis.
+getHTMLCode [SimTalk] - Frame
+Plant Simulation Help 11-1519
+Unpublished work. © 2026 Siemens
+
+You can also use the optional parameters for the CameraRotation without specifying the
+CameraPosition.
+If you specify the optional parameters for the CameraPosition and/or CameraRotation, you also have to
+specify the parameters for the Width and the Height or for the SizeInPercent.
+Return Value
+The return value has the data type string.
+Examples
+print MyFrame.getHTMLCode
+MyFrame.getHTMLCode("Caption")
+MyFrame.getHTMLCode(100, 100) // size in mm
+MyFrame.getHTMLCode("Caption", 100, 100) // caption and size in mm
+MyFrame.getHTMLCode("75%")
+// size in percent of the graphic showing all objects
+MyFrame.getHTMLCode(*)
+// as big as necessary to show all objects and shown as big as possible in 
+the HtmlReport
+MyFrame.getHTMLCode(100,*)
+// width in mm, height proportional calculated from the size required to 
+show all objects
+MyFrame.getHTMLCode(*, 100)
+// height in mm, width proportional calculated from the size required to 
+show all objects
+MyFrame.getHTMLCode(100%, -1.123, 2.345, -3.456, -45.0, 15.0)
+// 100% of the size of the graphic showing all objects while specifying 
+CameraPosition and CameraRotation
+See also
+Display a Frame
+Display a HtmlReport
+getHTMLCode [SimTalk] - Frame
+11-1520 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+node [SimTalk] - Frame
+Returns the designated object in the Frame designated by <Path>.
+Remarks
+Plant Simulation numbers the objects within models in the order in which you insert them. You can also
+call the method for the Class Library.
+Type
+Method
+Syntax
+<Path>.node(ObjectNumberOrName:integer/string) → object
+Parameter
+The parameter ObjectNumberOrName of data type integer designates the number of the object.
+The parameter ObjectNumberOrName of data type string designates the name of the object.
+If a string is passed, the method returns the object with the name of the parameter. If no such object
+exists, it returns void.
+Return Value
+The return value has the data type object.
+Examples
+print .model.node(3)
+// might, for example, return .Models.MyPlant.MyStation
+// Writes all objects in the Frame and in Sub-frames to the DataTable.
+// Assign the data type object to the first column.
+param Frame: object := void
+if Frame = VOID
+   Frame := current
+end
+for var i := 1 to Frame.numNodes
+   DataTable[1, DataTable.yDim + 1] := Frame.Node(i)     // object
+   DataTable [2, DataTable.yDim] := Frame.Node(i).Name   // string
+   if Frame.Node(i).InternalClassType = "Frame"          // substructure
+node [SimTalk] - Frame
+Plant Simulation Help 11-1521
+Unpublished work. © 2026 Siemens
+
+        self.execute(Frame.Node(i))                      // recursive call
+   end
+next
+See also
+node [SimTalk] - folder
+NumNodes [SimTalk] - Frame
+node [SimTalk] - Frame
+11-1522 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+pasteClipboard [SimTalk] - Frame
+Pastes the contents of the clipboard into the Frame designated by <Path>.
+Type
+Method
+Syntax
+<Path>.pasteClipboard([TargetTable:table])
+Parameter
+The optional parameter TargetTable of data type table writes all pasted objects to the specified table after
+it executed the method.
+The table has one column of data type object.
+Example
+var tbl: table
+var   i: integer
+pasteClipboard(tbl)
+for var i := 1 to tbl.yDim 
+   print tbl[1,i]  // outputs all pasted objects
+next
+SimTalk
+copyObjectsToClipboard [SimTalk]
+See also
+Paste Contents of the Clipboard [Home ribbon]
+Copy [Home ribbon]
+pasteClipboard [SimTalk] - Frame
+Plant Simulation Help 11-1523
+Unpublished work. © 2026 Siemens
+
+statistics [SimTalk] - Frame
+Returns the statistics of all material flow objects collecting statistical data of the Frame designated by
+<Path>.
+Remarks
+Also applies for objects on lower levels of the model, i.e., models within models.
+Type
+Method
+Syntax
+<Path>.statistics
+<Path>.statistics(NameOfTable:table_path)
+<Path>.statistics(FileName:string[, CodePage:string:="UTF-8"])
+Parameters
+You can specify the following parameters:
+• Specify the parameter NameOfTable of data type table_path to write the data to that table.
+• Specify the parameter FileName of data type string to write the table to that file. Plant Simulation will
+overwrite existing entries.
+Specify a filename and use the optional parameter CodePage of data type string to set the encoding you
+want to use: ANSI, UTF-8, or Unicode.
+Default Value of the Parameter
+If you do not specify this parameter, the encoding UTF-8 is used as default value.
+Example
+building12.statistics                             // outputs to the screen
+.plant.statistics(stat_tab)                       // outputs to a table
+MySubFrame.statistics("C:\temp\statistics1.txt")  // outputs to a file
+Read-Only Attributes of the Frame
+_Read-Only Attributes of the Frame
+The Frame provides:
+statistics [SimTalk] - Frame
+11-1524 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The read-only attributes listed in the table of contents to the left.
+• The _Read-Only Attributes of All Objects.
+• The Read-Only Attributes of the Material Flow Objects.
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print .Models.Model.Capacity
+_Read-Only Attributes of the Frame
+Plant Simulation Help 11-1525
+Unpublished work. © 2026 Siemens

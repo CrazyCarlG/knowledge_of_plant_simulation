@@ -1,0 +1,1162 @@
+See also
+Width [text box] - Connector
+EventController
+EventController [object]
+Use the object EventController for coordinating, synchronizing, and controlling the events taking place
+during a simulation run.
+Image
+Description
+Note
+You cannot change the name of the EventController
+You can start, stop, and reset the simulation with the EventController. Plant Simulation is a discrete
+event-oriented simulation system that shows the state changes of the model components at certain points
+in time, not continually over time. When a part enters a processing station, for example a Station, Plant
+Simulation computes the time it takes to cover it and enters that time and that event into the List of
+scheduled events of the EventController. Imagine a timeline where you insert markers at certain points in
+time.
+The EventController moves along the timeline like the play-back head of a video player, and interprets
+messages relating to the events the objects execute. All the while messages about the events arrive which
+the objects execute. After a certain simulation time, for example the Processing Time, has elapsed, the
+EventController arrives at the marker which has been set when the part entered the station. This marker
+denotes that the processing time has elapsed and that an Out event is pending. The EventController
+notifies the Station that has to process the Out event and moves the part on to the succeeding object in
+the flow of materials. Plant Simulation repeats this process cyclically for all MUs located in the simulation
+model.
+EventController
+Plant Simulation Help 11-1313
+Unpublished work. © 2026 Siemens
+
+Note
+If you manually delete the EventController, Plant Simulation resets the model beforehand.
+Starting and Stopping the Simulation
+You can start the simulation:
+• By clicking Start/Stop Simulation 
+  in the dialog of the EventController.
+• By clicking Start/Stop Simulation 
+  on the Home Ribbon Tab of the Frame. If you start the simulation
+by clicking 
+  without having inserted an EventController, Plant Simulation asks if you would like to
+insert one.
+• By clicking Start/Stop Simulation on the mini toolbar 
+ .
+You can stop the simulation:
+• By clicking Single Step Simulation 
+  in the dialog of the EventController.
+• By clicking Start/Stop Simulation 
+  on the Home ribbon tab a second time.
+• By clicking Start/Stop Simulation on the mini toolbar 
+ .
+The simulation stops after the current event has been completely processed.
+At the end of the simulation run Plant Simulation executes all methods that are named endSim. The end
+of the simulation run is reached, when the event list is empty or when the End time, which you entered
+on the tab Settings has been reached.
+Instead of clicking the buttons in the dialog of the EventController, you can also click the corresponding
+buttons on the Home Ribbon Tab.
+Or click the buttons on the Quick Access Toolbar 
+ .
+To show a tooltip with information about the EventController, hover with the mouse over it.
+EventController [object]
+11-1314 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+To change the length of the graphic and the anchor points of the EventController, click Show
+Manipulators 
+  on the Edit ribbon tab or press M on the keyboard.
+In addition to running the simulation with the EventController, you can also run the simulation step-by-
+step with the EventDebugger.
+Add the Object to the Simulation Model
+To add the object EventController to your simulation model, click 
+  Manage Class Library > Basic
+Objects > MaterialFlow > EventController on the Home ribbon tab.
+See also
+Control the Simulation with the EventController
+Dialog Box of the EventController
+Dialog Box of the Event Debugger
+EventController [object]
+Plant Simulation Help 11-1315
+Unpublished work. © 2026 Siemens
+
+Dialog Box of the EventController
+Dialog Box of the EventController
+Double-click the icon of the EventController to open its dialog box.
+Edit Simulation Properties
+There you can change its simulation properties. The shared properties are described under Dialog Items
+of the Objects.
+Instead of clicking the buttons in the dialog of the EventController, you can also click the respective
+buttons on the Home Ribbon Tab.
+When you are running the simulation with the EventController buttons 
+  on
+the Home ribbon tab, Plant Simulation shows the time as it progresses in the status bar
+. When the simulation is finished, the status bar shows the end time
+.
+Edit Animation Properties
+You can change the dimensions of the graphic of the EventController by clicking Show Manipulators 
+on the Edit ribbon tab or by clicking M on the keyboard.
+Dialog Box of the EventController
+11-1316 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Time [EventController]
+Shows the current simulation time of the simulation run in the box next to Time.
+Remarks
+Click Time to change the display of the time between the
+• Relative time
+Plant Simulation resets the relative time to zero, when it starts the simulation run. This is the default.
+Here the EventController shows the simulation time next to the button Time.
+• Current time plus simulation time
+Plant Simulation adds the simulation time to the time and date at which it started the simulation run.
+Here the EventController shows the current time plus the simulation time next to the button Time.
+Let us assume that today is the second of January 2023, six o'clock in the morning and that the simulation
+is to run for two days.
+• For the setting relative time the time display shows 2:00:00:0000, i.e., two days.
+• For the setting current time plus simulation time the time display shows Mi, 2023/01/04
+06:00:00.0000, i.e., Wednesday, January 04, 2023, 6 o'clock in the morning.
+Time [EventController]
+Plant Simulation Help 11-1317
+Unpublished work. © 2026 Siemens
+
+When you run the simulation, Plant Simulation shows the time as it progresses in the status bar at
+the bottom of the Plant Simulation program window 
+ . When the simulation is
+finished, the status bar shows the end time 
+ .
+SimTalk
+AbsSimTime [SimTalk]
+SimTime [SimTalk]
+Tab Controls
+Tab Controls
+The tab Controls provides settings for controlling the simulation run.
+Remarks
+When you run the simulation, Plant Simulation shows the time as it progresses in the status bar at
+the bottom of the Plant Simulation program window 
+ . When the simulation is
+finished, the status bar shows the end time 
+ .
+Tab Controls
+11-1318 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Reset Simulation [EventController]
+To reset your simulation model, click the button. Plant Simulation then calls all Methods named reset in
+your simulation model.
+Remarks
+Once all reset methods have been executed, Plant Simulation:
+• Deletes all unprocessed events
+• Resets the simulation time to 0
+• Resets statistics
+• Clears all failures of all objects in the simulation model
+• Sets all objects to the state planned
+• Reactivates inheritance of the settings Entrance Locked and Exit Locked for new models if you leave
+Tools > Inherit 'Entrance/Exit Locked On Reset active
+The Request Control, the Receive Control, and the Release Control of the Importer are not called when
+you reset the simulation.
+When you click Reset Simulation while the simulation is running, Plant Simulation finishes processing the
+current event and then resets the model.
+Resetting the simulation model also deletes MUs on the Clipboard, as MUs on the Clipboard would lead to
+a different numbering of the MUs for a new simulation run.
+Note
+If the simulation model still contains MUs after resetting the model, meaning that Plant Simulation does
+not start counting MUs with 1, for example MUs.Part:1, for a new simulation run, check if the model
+contains additional Frames with inserted EventControllers. Reset the EventControllers there as well.
+Plant Simulation deletes suspensions of methods, which are located in the same Frame as the
+EventController or in a sub-Frame of this Frame. It also deletes suspensions of methods, whose caller
+(the anonymous identifier ?) is located in the same Frame as the EventController or in a sub-Frame of this
+Frame.
+The global method deleteSuspendedMethods deletes all suspensions of all methods.
+Instead, you can also click 
+  on the Home Ribbon Tab.
+Reset Simulation [EventController]
+Plant Simulation Help 11-1319
+Unpublished work. © 2026 Siemens
+
+Or you can right-click the EventController in the Frame and select Reset Simulation on the context menu.
+SimTalk
+reset [SimTalk] - EventController
+reset [SimTalk] - predefined name
+deleteSuspendedMethods [SimTalk]
+See also
+Inherit 'Entrance/Exit Locked' On Reset
+initStat [SimTalk] - material flow objects
+IsInitialized [SimTalk]
+ResetCtrl [SimTalk]
+Reset Simulation [EventDebugger]
+Reset Simulation [EventController]
+11-1320 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start/Stop Simulation [EventController]
+To start the simulation runs, click the button.
+Remarks
+To stop the simulation after the active simulation event has been processed, click the button again. Plant
+Simulation calls init methods when you click Start/Stop Simulation if they have not been called yet.
+Instead, you can also click 
+  on the Home Ribbon Tab or double-click the icon of the EventController
+while holding down Shift.
+Or you can right-click the EventController in the Frame and select Start/Stop Simulation on the context
+menu.
+SimTalk
+start [SimTalk] - EventController
+stop [SimTalk] - EventController
+StartStopCtrl [SimTalk]
+init [SimTalk] - predefined name
+InitCtrl [SimTalk] - EventController
+See also
+Init Control [EventController]
+Init Control [general description]
+Init Control [Transporter]
+IsInitialized [SimTalk]
+Start/Stop Simulation [EventController]
+Plant Simulation Help 11-1321
+Unpublished work. © 2026 Siemens
+
+Start Full Speed Simulation [EventController]
+To start the simulation run with the animation of MUs and States and with full speed, click the button.
+Remarks
+Start Full Speed Simulation updates a number of values, for example of objects of type Variable or
+Display, etc.
+When you click Start Full Speed Simulation, Plant Simulation ignores the Real Time scaling factor.
+SimTalk
+Realtime [SimTalk]
+RealtimeScale [SimTalk]
+start [SimTalk] - EventController
+See also
+MUs and States [Home ribbon] 
+Start Full Speed Simulation [EventController]
+11-1322 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start Fast Forward Simulation [EventController]
+To start the simulation run without the animation of MUs and States and with maximum speed, click the
+button. This makes the simulation run as fast as possible.
+Remarks
+Start Fast Forward Simulation prevents updating a number of values, for example of objects of type
+Variable or Display, etc.
+When you click Start Fast Forward Simulation Plant Simulation ignores the Real Time scaling factor.
+Instead, you can also click 
+  on the Home Ribbon Tab.
+Or you can right-click the EventController in the Frame and click Start Fast Forward Simulation on the
+context menu.
+See also
+MUs and States [Home ribbon] 
+Start Fast Forward Simulation [EventController]
+Plant Simulation Help 11-1323
+Unpublished work. © 2026 Siemens
+
+Single Step Simulation [EventController]
+To process the next simulation event in line, to stop the simulation afterward, and to thus proceed through
+your model step-by-step, click the button.
+Remarks
+When you hold down Shift while clicking Step 
+ , Plant Simulation opens the Method Debugger for
+all methods and formulas, which are executed while the event is being processed. This means that the
+debugger opens for all executed controls, formulas and for suspended methods, which were woken up.
+If init methods have not been called yet, the init methods are started instead of processing an event.
+Instead, you can also click 
+  on the Home Ribbon Tab.
+SimTalk
+StartStopCtrl [SimTalk]
+List of Scheduled Events
+List of Events
+To open the Event Debugger that shows the event list, click the button.
+Single Step Simulation [EventController]
+11-1324 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Remarks
+The Event List in the Event Debugger contains the events, which the objects in your simulation model
+scheduled and which the EventController has to process. It is sorted ascending by time. It lists the Type
+of event, the scheduled Time, the Receiver and the Sender of the event, the Insertion Time, and
+Parameters.
+• The column Breakpoint shows an S, for a breakpoint which you inserted by double-clicking a cell in the
+row.
+Double-click a cell in the row where you would like to insert a single breakpoint. Then the Event
+Debugger stops the simulation immediately before the EventController processes that event. Double-
+click again to remove the breakpoint.
+• The column Type shows the type of the event.
+• The column Time shows the point in time at which the event is going to be executed.
+Note
+The time does not designate the time of day here but the time interval from the Start Time of the
+EventController.
+• The column Receiver shows the object that receives the simulation event.
+• The column Sender shows the object that sends the simulation event.
+• The column Insertion Time shows the point in time at which the event was entered into the event list.
+This column is hidden by default. Drag the column separator to show it.
+• The column Parameters shows additional information for certain event types, for example the sensor
+ID (SensorStart), the name of the failure profile (DisruptionBegin), or the parameters passed to a
+Method (MethCall).
+List of Events
+Plant Simulation Help 11-1325
+Unpublished work. © 2026 Siemens
+
+Plant Simulation provides these types of simulation events.
+SimTalk
+getEventList [SimTalk]
+See also
+GetDisruptionBeginTime [SimTalk]
+GetDisruptionEndTime [SimTalk]
+Event List
+Shows the event types, which the objects in your simulation model schedule during the simulation, and
+which the EventController then processes.
+Remarks
+Plant Simulation provides these types of simulation events:
+Event English Event German Action taking place/state of the object
+* * Designates any type of event.
+Animation Animation A MU is located on a Track, Conveyor, or on a Buffer.
+Battery Batterie The battery of a Transporter is full, empty or on reserve.
+BlockageEnd BlockierEnde The state of a MU changes to unblocked.
+Bump Anstoss The Transporter collides with another MU. You can then take
+appropriate actions in the Collision control.
+CheckMUDistance BEAbstandPrüfen The MU distance at the start of the Conveyor is reached;
+if Enforce MU distance is activated, the MU has reached the
+distance to the part moving in front.
+CheckMUPosition BEPositionPrüfen Checks if the MU has to be stopped after processing the exit
+control on length-oriented objects. This is the case if neither
+the position of the front in the direction of motion nor the
+direction changed.
+CreateMU ErzeugeBE The Source attempts to create MUs.
+DeliverParts TeileAbliefern The Worker picked up parts at a station and carries them to
+the destination object.
+DisruptionBegin StörBeginn The failure of the object starts.
+Event List
+11-1326 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Event English Event German Action taking place/state of the object
+DisruptionEnd StörEnde The failure of the object ends.
+Distance Abstand The Distance Control of the Transporter is called
+EndOfTime ZeitBeendet The PickAndPlace-robot is done loading/unloading.
+The Worker is done loading/unloading.
+The Mixer has finished mixing products
+Converter/AngularConverter is done changing the conveying
+direction of the MU.
+All pose runs of an object arrived at their destination in 3D.
+EndOfTurn EndeDrehen The PickAndPlace-robot, Turnplate, Turntable or Transporter
+rotating on the spot reaches the end position of the rotation.
+EntranceEnd EintrittEnde The MU completely entered a length-oriented object.
+The specified amount of an educt of the Mixer has been
+reached.
+The MU of the Portioner has been completely filled.
+The Worker has reached its target station when he is walking
+freely within the area.
+FinalSpeed EndGeschw The point in time at which the Transporter or the Conveyor
+reach their final speed after accelerating or decelerating.
+GenDuration GenDauer The Duration Control of the Generator is activated.
+GenInterval GenAbstand The Interval Control of the Generator is activated.
+Init Init Initializes the simulation model using the method init before
+executing the next scheduled event.
+InitStat InitStat Resets statistics and starts collecting statistics anew.
+MethCall MethAufr Calls a method that was scheduled with the SimTalk method
+executeIn of the object Method.
+MethWakeup MethAufwecken Continues executing the call chain after the time you entered
+in a wait statement has elapsed.
+Out Aus A MU exits the object.
+OutEnd AusEnde A MU completely exits a length-oriented object (Conveyor,
+Turntable, Track, TwoLaneTrack).
+Event List
+Plant Simulation Help 11-1327
+Unpublished work. © 2026 Siemens
+
+Event English Event German Action taking place/state of the object
+Pause Pause Start of the pause of an object. This event will only be created
+when you paused the object with the method startPauseIn.
+Start of the pause of the ShiftCalendar and the objects it
+controls.
+PauseEnd PauseEnde End of the pause of an object. This event will only be created
+when you paused the object with the method startPause.
+End of the pause of the ShiftCalendar and the objects it
+controls.
+PositionReached PositionErreicht The MU has reached the center of rotation of Turnplate/
+TurntableThe
+The AngularConverter/Converter has reached the point at
+which the conveying direction changesThe
+The Transporter has reached the target.
+PoweringUpDown HochRunterfahren The material flow object powers up or down to reflect a
+change in its energy status.
+Reference Referenz The booking point of the MU exits the object.
+RouteObjectReache
+d
+RoutenObjektErreic
+ht
+The Transporter driving freely within the area has reached a
+Track and is afterward going to be booked on the Track.
+SensorBookPos SensorBuchPos The booking point of the MU activates a sensor.
+SensorEnd SensorEnde The rear of the MU activates a sensor.
+SensorStart SensorBeginn The front of the MU activates a sensor.
+SetupEnd RuestenEnde The set-up time of a MU has expired
+Shift Schicht Schedules the start or the end of the next shift.
+ShiftCalendarStart SchichtkalenderSta
+rt
+Sets the state of the objects controlled by the ShiftCalendar
+according to the state it controls.
+StartActions StarteAktionen Determines if the Entrance Control of the object is activated
+before starting the actions that are performed when a MU
+enters the object.
+The FluidSource starts producing the fluid.
+New material begins to flow into the Mixer after it ran dry
+StartTransporter FahrzeugStarten The Transporter starts driving again after the Start delay
+duration has passed.
+Event List
+11-1328 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Event English Event German Action taking place/state of the object
+TankEmpty TankLeer The Tank is empty.
+The MU of the Portioner has been emptied.
+The mixing container of the Mixer is empty.
+TankFull TankVoll The Tank is full.
+The mixing container of the Mixer is full.
+TimeSequence Zeitleiste The TimeSequence records data.
+TriggerAction TriggerAktion The values of the Trigger change.
+TriggerStart TriggerStart The active time of the Trigger starts.
+TurnAnimation DrehAnimation Animates the rotation of PickAndPlace-robot/Turnplate/
+Turntable.
+UpdateDisplay UpdateDisplay Updates the values of the object Display.
+ZeroSpeed NullGeschw Point in time when the Transporter or the Conveyor reach the
+speed 0 after decelerating and then change the direction of
+motion.
+SimTalk
+getEventList [SimTalk]
+See also
+GetDisruptionBeginTime [SimTalk]
+GetDisruptionEndTime [SimTalk]
+Context Menu of the List of Scheduled Events
+Context Menu of the List of Scheduled Events
+Provides commands pertaining to the list of scheduled events.
+The context menu of the Event Debugger provides the commands listed in the table of contents to the left.
+Context Menu of the List of Scheduled Events
+Plant Simulation Help 11-1329
+Unpublished work. © 2026 Siemens
+
+Show Receiver Stop at Event [context
+menu]
+Open Receiver Create Breakpoint
+from Event
+Show Sender Run to Time [context
+menu]
+Open Sender Time [context menu]
+Context Menu of the List of Scheduled Events
+11-1330 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Receiver
+To select the image of the object that receives the event in the Frame window, select Show Receiver.
+Hold down Shift and select this to zoom so close as if you selected the object or the graphic and selected
+the command Zoom to Objects [context menu].
+Show Receiver
+Plant Simulation Help 11-1331
+Unpublished work. © 2026 Siemens
+
+Open Receiver
+To open the dialog box of the object that receives the event, select Open Receiver.
+Open Receiver
+11-1332 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Sender
+To select the image of the object that sends the event in the Frame window, select Show Sender.
+Hold down Shift and select this to zoom so close as if you selected the object or the graphic and selected
+the command Zoom to Objects [context menu].
+Show Sender
+Plant Simulation Help 11-1333
+Unpublished work. © 2026 Siemens
+
+Open Sender
+To open the object that sends the event in the Frame window, select Open Sender.
+Open Sender
+11-1334 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Stop at Event [context menu]
+To add a breakpoint for the selected event to the list of scheduled events, select Stop at Event.
+Stop at Event [context menu]
+Plant Simulation Help 11-1335
+Unpublished work. © 2026 Siemens
+
+Create Breakpoint from Event
+To create a breakpoint from the selected event, select Create Breakpoint from Event. Type in or select
+missing settings in the dialog Breakpoint.
+Create Breakpoint from Event
+11-1336 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Run to Time [context menu]
+To enter the time of the selected event, rounded down to a tenth of a millisecond into the text box Run to
+Time of the EventDebugger, select Run to Time.
+See also
+Run to Time [text box]
+Run to Time [context menu]
+Plant Simulation Help 11-1337
+Unpublished work. © 2026 Siemens
+
+Time [context menu]
+Shows the point in time at which the selected event is going to be executed.
+Time [context menu]
+11-1338 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Slower/Faster Slider
+To increase the speed of the simulation, drag the slider to the right or press the right arrow key.
+Remarks
+To decrease the speed of the simulation, drag it to the left or press the left arrow key.
+Decreasing the speed enables you to better follow the movements of MUs, as Plant Simulation shows their
+icons for a longer time on the same station.
+This has the same effect as dragging the Simulation Speed Slider on the Home ribbon tab.
+Slower/Faster Slider
+Plant Simulation Help 11-1339
+Unpublished work. © 2026 Siemens
+
+Real-time x [EventController]
+Select the real-time scaling factor. Depending on the simulation control button you click, Plant
+Simulation uses different real-time scaling factors.
+Remarks
+Note
+Normally Plant Simulation does not take the time span between events into account, as it is a discrete
+event simulation system.
+You can type in or select a scaling factor for the different settings. The scaling factor sets the time that
+elapses between two events in real-time. The duration of an event in real-time is the simulation time
+divided by the scaling factor you entered. The resulting duration is an integer value.
+• When you click Start/Stop Simulation, Plant Simulation uses real-time simulation with a scaling factor
+of 3 by default.
+• When you click Start Full Speed Simulation, Plant Simulation ignores the scaling factor. This starts the
+simulation run with the animation of MUs and States 
+  and with full speed.
+• When you click Start Fast Forward Simulation, Plant Simulation ignores the scaling factor. This starts
+the simulation run without the animation of MUs and States 
+  and with maximum speed.
+Real-time x [EventController]
+11-1340 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimTalk
+Realtime [SimTalk]
+RealtimeScale [SimTalk]
+start [SimTalk] - EventController
+See also
+Time-Oriented Simulation and Event-Controlled Simulation
+Real-time x [video] for video recordings
+Tab Settings
+Tab Settings
+Provides various settings for the simulation run.
+Tab Settings
+Plant Simulation Help 11-1341
+Unpublished work. © 2026 Siemens
+
+Start Date [EventController]
+Type in the Date and the Time on which the absolute time during the simulation is based or accept the
+pre-defined date.
+SimTalk
+StartDate [SimTalk] - EventController
+Start Date [EventController]
+11-1342 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+End Time [EventController]
+Type in the End Time at which the simulation will be finished. Type in a relative time, i.e., the period of
+time during which the simulation runs.
+Remarks
+Plant Simulation compares this period with the simulation time and stops the simulation run, when both
+are identical.
+Let us assume that today is July 04, 12 o’clock noon and that the simulation is to run for two days.
+To make the simulation run for two days, type in 2:00:00:00. If you do not want to write this out in
+full, you can also just type 2::: and click Apply to make the program translate this to the full format
+2:00:00:00.
+SimTalk
+EndTime [SimTalk] - EventController
+See also
+Format of Time and Date/Format Conversion
+End Simulation-time for video recordings
+End Time [EventController]
+Plant Simulation Help 11-1343
+Unpublished work. © 2026 Siemens
+
+Statistics [EventController]
+Type in the point in time at which the EventController starts collecting statistics data.
+Remarks
+Plant Simulation resets statistics and deletes all statistics values it collected up to that time and starts
+collecting new statistical data for all material flow objects from this time on.
+This way you can discard data collected during the warm-up phase, which might distort the simulation
+results.
+SimTalk
+StartStat [SimTalk]
+Statistics [EventController]
+11-1344 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Skip Long Event Intervals
+To skip long phases during which no relevant event takes place during real-time simulation, select this
+check box.
+Remarks
+Events of type Animation and UpdateDisplay are considered to be not relevant.
+The simulation fast forwards the gap between events if no relevant event would take place for at least 10
+seconds, while the animation remains active. These 10 seconds are 10 seconds in real-time which you
+would have to wait for. For a real-time scaling factor of 3 this would amount to 30 seconds of simulation
+time. Fast forwarding starts about half a second after the last event and ends about half a second before
+the next event.
+The open windows of the simulation show the Fast Forward Simulation icon during this time. The icon
+looks like this:
+This setting is especially helpful for simulation models in which you experiment with different Shifts.
+SimTalk
+SkipLongEventIntervals [SimTalk]
+Skip Long Event Intervals
+Plant Simulation Help 11-1345
+Unpublished work. © 2026 Siemens
+
+See also
+Event List
+Skip Long Event Intervals
+11-1346 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Summary Report [EventController]
+To show a summary report of the parts which the Drain deleted from the plant, select this check box.
+Remarks
+At the end of the simulation run the report checks all Drain objects within the entire simulation model
+which removed parts from the plant and shows the pertinent values.
+Item
+English Description
+Read-Only
+Attribute
+Item
+German
+Object Shows the names of all Drain objects within the entire
+simulation model that removed parts.
+— Objekt
+Name Shows the names of the part types which the Drain in this
+row removed from the plant.
+— Name
+Mean
+Life Time
+Shows the mean life time (throughput time) of all parts of
+this part type which the Drain in this row removed from the
+plant.
+StatAvgLifeSpan
+[SimTalk] - Drain
+Mittlere
+Durchlauf
+zeit
+Total
+Through
+put
+Shows the total throughput of all parts of this part type
+which the Drain in this row removed from the plant.
+StatDeleted
+[SimTalk] - Drain
+Durchsatz
+Through
+put per
+Hour
+Shows the number of parts that the Drain removed from the
+plant in an hour over all observed times during which the
+Drain was available.
+StatThroughput
+PerHour
+[SimTalk] -
+FluidDrain
+Durchsatz
+pro
+Stunde
+Producti
+on
+Shows the time portion during which the parts spent on a
+resource object of type production.
+— Produktion
+Show Summary Report [EventController]
+Plant Simulation Help 11-1347
+Unpublished work. © 2026 Siemens
+
+Item
+English Description
+Read-Only
+Attribute
+Item
+German
+Transpor
+t
+the time portion during which the parts spent on a resource
+object of type transport.
+— Transport
+Storage Shows the time portion during which the parts spent on a
+resource object of type storage.
+— Lagerung
+Value
+Added
+Shows the time portion during which the parts were
+processed and were located on resource objects of type
+production. This is the time during which the value of the
+parts was increased.
+StatProdWorkin
+gPortion
+[SimTalk] - Drain
+Wertschö
+pfung
+Portion Shows the accumulated values of the columns production
+(green), transport (orange), and storage (red) as bar
+segments.
+— Anteil
+Note
+The summary report is deactivated by default. The Statistics Report also shows the described data.
+You can also show the Drain Statistics Table of a Drain in an HtmlReport, compare Display a Drain.
+SimTalk
+SummaryReport [SimTalk]
+See also
+Show Summary Report [menu command]
+Dialog Box of the Event Debugger
+Dialog Box of the Event Debugger
+The Event Debugger lets you accurately control the execution of simulation events when running your
+simulation with the buttons is not accurate enough. You can, for example, enter a condition when the
+Event Debugger is to Start/Stop the Simulation. You can then follow the execution of the events in the
+Event Debugger step-by-step.
+Remarks
+The Event Debugger is part of the EventController. To open the list of scheduled events, click List 
+  on
+the tab Controls in the EventController. You can also hold down Shift and double-click the icon 
+  of
+the EventController in the Frame.
+Dialog Box of the Event Debugger
+11-1348 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• The column Breakpoint shows an S, for a breakpoint you inserted, by double-clicking a cell in the row.
+Double-click a cell in the row where you would like to insert a single breakpoint. Then the Event
+Debugger stops the simulation immediately before the EventController processes that event. Double-
+click again to remove the breakpoint.
+• The column Type shows the type of event.
+• The column Time shows the point in time the event is going to be executed.
+Note
+The time does not designate the time of day here but the time interval from the start time of the
+EventController.
+• The column Receiver shows the receiving object.
+• The column Sender shows the sending object.
+• The column Insertion Time shows the point in time at which the event was inserted into the
+EventController. This column is hidden by default. Drag the column separator to show the column.
+• The column Parameters shows additional information for certain event types, for example the sensor
+ID (SensorStart), the name of the failure profile (DisruptionBegin) or the parameters passed to a
+Method (MethCall).
+See also
+Work with the Event Debugger
+List of Events
+Dialog Box of the Event Debugger
+Plant Simulation Help 11-1349
+Unpublished work. © 2026 Siemens
+
+Breakpoints Active
+To activate breakpoints, select this check box. Plant Simulation then stops executing the event at a
+breakpoint, which you inserted. You can then examine the status of the simulation run, check the contents
+of variables, etc.
+SimTalk
+BreakpointsActive [SimTalk]
+See also
+Breakpoints [described]
+Breakpoints
+Breakpoints [described]
+To open the dialog Breakpoints, click this button.
+Remarks
+You can:
+• Click 
+  to create a new breakpoint. In the dialog Breakpoint you can then define the
+breakpoint that stops the simulation when a certain event takes place.
+Breakpoints Active
+11-1350 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+• Select an existing breakpoint and click 
+  to edit it.
+• Click 
+  to delete the selected breakpoint from the list.
+See also
+The Dialog Box Breakpoint
+Work with the Event Debugger
+The Dialog Breakpoint
+The Dialog Box Breakpoint
+The dialog box Breakpoint provides settings for defining breakpoints.
+The Dialog Breakpoint
+Plant Simulation Help 11-1351
+Unpublished work. © 2026 Siemens
+
+Receiver
+Click the ellipsis button to open the dialog Select Object and select the object that receives the breakpoint
+in the list.
+Remarks
+You can also type in the absolute Path to the receiver of the breakpoint, for example to the object onto
+which the MU is moved.
+If you do not type in a Receiver, this breakpoint applies to events with any receiver.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+See also
+Select Object
+EventDebugger, Example 1
+Receiver
+11-1352 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Sender
+Click the ellipsis button to open the dialog and select the object that sends the breakpoint in the list in the
+dialog Select Object.
+Remarks
+You can also type in the absolute path to the sender of the breakpoint, for example to the object which
+moves the MU.
+If you do not type in a Sender, this breakpoint applies to events with any sender.
+Note
+F2 opens the dialog of the object, whose name you typed into the text box.
+See also
+Select Object
+EventDebugger, Example 2
+Path
+Sender
+Plant Simulation Help 11-1353
+Unpublished work. © 2026 Siemens
+
+Start Time [breakpoint]
+Type in the Start Time at which the breakpoint will be activated.
+Remarks
+Start Time and Stop Time define the interval during which the breakpoint is active.
+If you do not type in a value for the Start Time and/or the Stop Time, no limits apply to the interval during
+which the breakpoint is active.
+See also
+EventDebugger, Example 3
+Start Time [breakpoint]
+11-1354 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Stop Time
+Type in the Stop Time at which the breakpoint will be deactivated.
+Remarks
+Start Time and Stop Time define the interval during which the breakpoint is active.
+If you do not type in a value for the Start Time and/or the Stop Time, no limits apply to the interval during
+which the breakpoint is active.
+See also
+EventDebugger, Example 3
+Stop Time
+Plant Simulation Help 11-1355
+Unpublished work. © 2026 Siemens
+
+Type [breakpoint]
+Select the type of event for which the breakpoint is active. The asterisk (*) stands for any type of event.
+See also
+List of Events
+EventDebugger Example 4
+Type [breakpoint]
+11-1356 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Condition [breakpoint]
+Type in any Condition you would like to apply to the definition of the breakpoint. Before an event is
+released for execution, the Event Debugger checks the expression you entered.
+Remarks
+This specified expression may be anything that returns a boolean value. If the condition returns true, the
+Event Debugger stops the simulation. If you use a formula for the Condition, you can access the Receiver
+using the anonymous identifier @. You might, for example, enter @.Name = "Wheel" AND @.getNo =
+4 or @.length<100
+The anonymous identifier ? accesses the Sender of the event.
+Or click 
+  and select a Method in the dialog Select Object.
+Note
+The Method Debugger cannot track the method of the condition!
+See also
+Select Object
+EventDebugger Example 4
+Condition [breakpoint]
+Plant Simulation Help 11-1357
+Unpublished work. © 2026 Siemens
+
+Trace File [breakpoint]
+To select an existing file, into which the Event Debugger writes the scheduled events of the objects, click
+the button at the right-hand side.
+Remarks
+Type in the name of the file. If you do not type in a name, the Event Debugger does not create a trace file.
+Or type in the path and the name of the trace file into which the Event Debugger writes the events.
+See also
+EventDebugger, Example 5
+Trace File [breakpoint]
+11-1358 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Run to Time [text box]
+Type in the point in time up to which the simulation runs once you start it.
+Remarks
+Once the point in time is reached, the EventController will stop without executing endSim methods.
+The Context Menu of the List of Scheduled Events also shows the command Run to time.
+Run to Time [text box]
+Plant Simulation Help 11-1359
+Unpublished work. © 2026 Siemens
+
+Trace File [check box]
+To make the Event Debugger write all events it records to the file whose name you type into the text box
+Trace File, select this check box.
+Remarks
+The specified trace file will only be written, when you select the check box Trace File.
+SimTalk
+TraceActive [SimTalk]
+See also
+Trace File [text box]
+Trace File [check box]
+11-1360 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Trace File [text box]
+Type in the name of the file to which the Event Debugger writes all events it records during the simulation
+run. If the file does not exist, the Event Debugger creates it.
+Remarks
+The specified trace file will only be written, when you select the check box Trace File.
+To open the dialog Save As and select an existing file to which the Event Debugger writes all events, click
+this 
+ . You can also set the name with the attribute TraceFile.
+SimTalk
+TraceFile [SimTalk]
+See also
+Trace File [check box]
+Trace File [text box]
+Plant Simulation Help 11-1361
+Unpublished work. © 2026 Siemens
+
+Reset Simulation [EventDebugger]
+To reset your simulation model, click this button.
+Remarks
+The button does the same as the Reset Simulation button in the EventController.
+SimTalk
+reset [SimTalk] - EventController
+See also
+Reset Simulation [EventController]
+initStat [SimTalk] - material flow objects
+IsInitialized [SimTalk]
+ResetCtrl [SimTalk]
+Reset Simulation [EventDebugger]
+11-1362 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start/Stop Simulation [EventDebugger]
+To start the simulation run, click this button. To stop the simulation after the active simulation event has
+been processed, click the button again.
+Remarks
+The button does the same as the Start/Stop Simulation button in the EventController.
+SimTalk
+start [SimTalk] - EventController
+stop [SimTalk] - EventController
+See also
+Start/Stop Simulation [EventController]
+Start/Stop Simulation [EventDebugger]
+Plant Simulation Help 11-1363
+Unpublished work. © 2026 Siemens
+
+Start Full Speed Simulation [EventDebugger]
+To start the simulation run with the animation of MUs and States and with full speed, click this button.
+Remarks
+Start Full Speed Simulation updates a number of values, for example of objects of type Variable or
+Display, etc.
+When you click Start Full Speed Simulation, Plant Simulation ignores the Real Time scaling factor.
+SimTalk
+Realtime [SimTalk]
+RealtimeScale [SimTalk]
+start [SimTalk] - EventController [SimTalk]
+See also
+MUs and States [Home ribbon]
+Real-time x [EventController]
+Start Full Speed Simulation [EventDebugger]
+11-1364 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Start Fast Forward Simulation [EventDebugger]
+To start the simulation run without MUs and States and with maximum speed, click this button. This
+makes the simulation run as fast as possible.
+Remarks
+Start Fast Forward Simulation prevents updating a number of values, for example of objects of type
+Variable or Display
+Instead, you can also click 
+  on the Home Ribbon Tab.
+The button does the same as the Start Fast Forward Simulation button in the EventController.
+SimTalk
+start [SimTalk] - EventController
+See also
+MUs and States [Home ribbon] 
+Start Fast Forward Simulation [EventController]
+Start Fast Forward Simulation [EventDebugger]
+Plant Simulation Help 11-1365
+Unpublished work. © 2026 Siemens
+
+Single Step Simulation [EventDebugger]
+To process the next simulation event in line, to stop the simulation afterward, and to thus proceed through
+your model step-by-step, click this button.
+Remarks
+To debug all methods and formulas, which are executed while the event is being processed, hold down
+Shift while clicking Step. Plant Simulation opens the Method Debugger for all executed controls,
+formulas and for suspended methods, which were woken up. Clicking Debug Next Simulation Step 
+does the same.
+The button does the same as the Single Step Simulation button in the EventController.
+See also
+Single Step Simulation [EventController]
+Single Step Simulation [EventDebugger]
+11-1366 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Debug Next Simulation Step [EventDebugger]
+To open the Method Debugger for all methods and formulas, which are executed while the event is
+processed, click this button.
+Remarks
+This means that the Method Debugger opens for all executed controls, formulas and for suspended
+methods, which were woken up. Holding down Shift while clicking Single Step Simulation 
+accomplishes the same, in the EventDebugger and in the EventController.
+See also
+Single Step Simulation [EventDebugger]
+Debug Next Simulation Step [EventDebugger]
+Plant Simulation Help 11-1367
+Unpublished work. © 2026 Siemens
+
+Step Halts Additionally Before Event
+To stop twice if the next event in the Event List is in the future, select this check box.
+Remarks
+The first Single Step (F10) jumps the simulation time to the event.
+The second Single Step executes the event and stops immediately afterward. If the next event occurs at
+the same simulation time though, Plant Simulation does not stop in addition.
+You can use this setting if you want to investigate the state of the model, for example the exact position of
+parts on a Conveyor, at the time at which the next event will be executed.
+Step Halts Additionally Before Event is cleared by default, meaning that Single Step Animation stops
+once after each event.
+See also
+Event List
+Step Halts Additionally Before Event
+11-1368 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Close [Event Debugger]
+To close the window of the Event Debugger, click this button or click the X in the title bar.
+Close [Event Debugger]
+Plant Simulation Help 11-1369
+Unpublished work. © 2026 Siemens
+
+Navigate Menu
+The commands are described under the Navigate Menu.
+View Menu
+View Menu
+The View Menu provides commands to access its functions.
+Refresh [on View menu]
+Show Summary Report [menu command]
+Show Attributes and Methods [on View menu]
+SimTalk
+updateDialog [SimTalk]
+See also
+View Menu [general description]
+Navigate Menu
+11-1370 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Show Summary Report [menu command]
+Shows a summary report of the parts which the Drain deleted. At the end of the simulation run the Report
+checks all Drain objects within the entire simulation model which removed parts from the plant.
+See also
+Show Summary Report [EventController]
+Tools Menu
+Tools Menu [EventController]
+The Tools Menu provides these menu commands:
+Edit Controls [material flow objects] > Init
+Control [EventController]
+Random Numbers Variant
+Edit Observers [general description] Increment Variant on Reset
+User-defined Attributes [general description] Antithetic Random Numbers
+Show Summary Report [menu command]
+Plant Simulation Help 11-1371
+Unpublished work. © 2026 Siemens
+
+Init Control [EventController]
+Modifies the built-in behavior of the object. The object calls the Init Control one time at the beginning
+of the simulation run during the init phase before the objects are initialized and before init methods are
+executed.
+Remarks
+You can also initialize attributes which affect event generation, for example the availability. Here the Init
+Controls are executed before events are generated. The normal init methods are executed after the initial
+events are computed.
+Select the Path to an Existing Method
+Click the ellipsis button. Navigate to the location of the Method in the dialog Select Object [for controls]
+and click OK. This inserts the name of the Method into the text box of the Control.
+Press F2 in the text box to open the Method. Then type in the source code of the Control.
+Instead of choosing Select Object, you can also select the Method in a Frame, drag it to the text box and
+drop it there.
+Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+• Type a meaningful name into the text box and select Create Control [context menu]. Plant Simulation
+then inserts self.Name_you_typed_in_for_the_control, such as self.A1Ctrl.
+• Select Create Control on the empty text box. Plant Simulation then inserts
+self.OnBuilt_in_name_of_the_control, such as self.OnEntrance.
+Init Control [EventController]
+11-1372 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Type the source code of this control into the Method that opens.
+To edit the source code later on:
+◦ Press F2.
+◦ Or hold down Shift and double-click into the text box.
+◦ Or select Open Object on the context menu.
+◦ Or click the tab User-defined and double-click the name of the Method in the list.
+• To delete this control, delete the user-defined attribute. If you only delete the name from the text box,
+the user-defined attribute is retained.
+SimTalk
+InitCtrl [SimTalk] - EventController
+See also
+Select Object
+Set How Many Workers Are Created During Initialization
+init [SimTalk] - predefined name
+Init Methods and Init Controls
+Call Sequence of the Init Controls
+Example of the Call Sequence
+Call Sequence of Reset and Init Methods
+Init Control [EventController]
+Plant Simulation Help 11-1373
+Unpublished work. © 2026 Siemens
+
+Random Numbers Variant
+Shows and sets the random numbers variant. Different variants generate different random numbers. Select
+the command and type in a different random numbers variant.
+SimTalk
+RandomNumbersVariant [SimTalk]
+See also
+RandomSeed [SimTalk] - material flow objects
+Simulating Random Processes
+Video on YouTube
+https://youtu.be/HKDhTbohV6M?si=aHiNrXBQoamJuMCI&t=292
+Random Numbers Variant
+11-1374 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Increment Variant on Reset
+Sets if different random numbers will be generated after resetting the model or not.
+If you activate the command, it shows a check mark 
+  to the left of the command.
+SimTalk
+IncrementRandomNumbersVariantOnReset [SimTalk]
+See also
+Simulating Random Processes
+Increment Variant on Reset
+Plant Simulation Help 11-1375
+Unpublished work. © 2026 Siemens
+
+Antithetic Random Numbers
+Sets if Plant Simulation uses common random numbers or antithetic random numbers.
+Remarks
+For creating a random number for a distribution, for example for the exponential distribution, Plant
+Simulation uses a uniformly distributed random number U located between 0 and 1. For antithetic random
+numbers it uses 1-U.
+If you activate the command, it shows a check mark 
+  to the left of the command.
+SimTalk
+setAntitheticRandomNumbers [SimTalk]
+Antithetic Random Numbers
+11-1376 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Help Menu
+The commands are described under the Help Menu.
+Methods of the EventController
+_Methods of the EventController
+The EventController provides:
+• The methods listed in the table of contents to the left.
+• The Methods of All Objects.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+Help Menu
+Plant Simulation Help 11-1377
+Unpublished work. © 2026 Siemens
