@@ -1,0 +1,97 @@
+# Read-Only Attributes of the Pipe
+
+## About Expressions and Parameters
+
+- The expression `<Path>` designates the path of the object to which the method applies.
+- The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. For example, `(Parameter:string)` designates a parameter of data type `string`. Instead of a constant value, you can also use a variable of the required type or a method that returns the required data type.
+
+> **Note:** Make sure to enter the parentheses for expressions within parentheses `(…)`. Not entering them may lead to unexpected results and open the Debugger.
+
+- Optional parameters are listed within brackets. For example, `[,Parameter:boolean]` means that you can, but do not have to enter the boolean parameter.
+- If a parameter has a default value, the signature shows the default value after the parameter, e.g. `:= false`.
+- If the method has a return value, the signature shows its data type after the arrow, e.g. `→ boolean`.
+
+## Read-Only Attributes of the Pipe
+
+The Pipe provides:
+- The read-only attributes listed in the table of contents to the left.
+- The **_Read-Only Attributes of All Objects**.
+
+You can query the values of the read-only attributes, but you cannot set them, as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab Statistics.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.
+
+To query the value of a read-only attribute, you might, for example, type:
+
+```simtalk
+print Pipe1.LengthOfPipe
+```
+
+---
+
+## CurrentFlowrate [SimTalk]
+
+Returns the current flow rate of the materials flowing through the Pipe designated by `<Path>`.
+
+- **Type:** Read-only attribute
+- **Syntax:** `<Path>.CurrentFlowrate → real`
+- **Watchable:** The read-only attribute is watchable.
+- **Return Value:** The return value has the data type `real`. It is the amount of liters per second.
+
+**Example:**
+
+```simtalk
+print Pipe1.CurrentFlowrate
+```
+
+**See also:** Current Flow Rate [text box]
+
+---
+
+## CurrentMaterial [SimTalk] - Pipe
+
+Returns the Current Material that currently flows through the Pipe designated by `<Path>`.
+
+**Remarks:** The name is not case-sensitive, just like the names of attributes and methods of the objects are not case-sensitive. To save memory and improve access speed, all places which are using such a case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing. In SimTalk you can compare strings in a case-insensitive manner with the `~=` operator (see Relational Operators).
+
+- **Type:** Read-only attribute
+- **Syntax:** `<Path>.CurrentMaterial → string`
+- **Watchable:** The read-only attribute is watchable.
+- **Return Value:** The return value has the data type `string`.
+
+**Example:**
+
+```simtalk
+print Pipe1.CurrentMaterial
+```
+
+**See also:** Current Material [Pipe], Relational Operators
+
+---
+
+## LengthOfPipe [SimTalk]
+
+Returns the Length of the Pipe designated by `<Path>`.
+
+- **Type:** Read-only attribute
+- **Syntax:** `<Path>.LengthOfPipe → real`
+- **Return Value:** The return value has the data type `real`. It is the length of the Pipe which you inserted into the Frame by clicking the left mouse button to set its first and its last point.
+
+**Example:**
+
+```simtalk
+print Pipe1.LengthOfPipe
+```
+
+---
+
+## Attributes of the Pipe
+
+The Pipe provides:
+- The attributes listed in the table of contents to the left.
+- The **_Attributes of All Objects**.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.

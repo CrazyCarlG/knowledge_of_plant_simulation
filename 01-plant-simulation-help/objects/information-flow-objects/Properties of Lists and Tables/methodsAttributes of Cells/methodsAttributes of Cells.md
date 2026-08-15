@@ -1,0 +1,67 @@
+# Read-only Attributes and Attributes of Cells
+
+Cells in lists and tables provide the read-only attribute `Void` and the attribute `Name`.
+
+Read and write access depend on the object class and are described in the sub-chapters.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. You can:
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the attributes and methods of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the attributes and methods of the selected Instance.
+
+---
+
+## Name [SimTalk] - cells
+
+Sets the name of the sublist or subtable contained in the addressed cell of the list/table designated by `<Path>`.
+
+**Type:** Attribute
+
+**Syntax:**
+```
+<Path-of-the-list[row]>.Name.string
+<Path-of-the-table[column,row]>.Name.string
+```
+
+**Return Value:** The return value has the data type `string`.
+
+**Example:**
+```simtalk
+DataTable.createNestedList(1, 1, "abc")
+print DataTable[1,1].Name  // prints "abc"
+DataTable[1,1].Name := "XY"
+print DataTable[1,1].Name  // prints "XY"
+```
+
+---
+
+## Void [SimTalk] - cells of lists/tables
+
+Returns if specified cell of the list/table designated by `<Path>` is empty (`true`) or not (`false`).
+
+**Type:** Read-only attribute
+
+**Syntax:**
+```
+<Path-of-the-list[row]>.void -> boolean
+<Path-of-the-table[column,row]>.void -> boolean
+```
+
+**Return Value:** The return value has the data type `boolean`.
+
+**Example:**
+```simtalk
+if not DataTable[1,1].void
+   DataTable[1,1] += 1
+end
+```
+
+---
+
+## Read-Only Attributes of Lists and Tables
+
+Lists and tables provide read-only attributes for returning their state.
+
+You can query the values of the read-only attributes, but you cannot set them, as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab **Statistics**.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.

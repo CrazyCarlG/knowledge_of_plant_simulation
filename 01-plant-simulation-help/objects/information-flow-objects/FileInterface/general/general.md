@@ -1,0 +1,125 @@
+# FileInterface — General
+
+## Description
+
+You can create data for a simulation run in text files and import it into Plant Simulation during the simulation run with the **FileInterface**. You can also write protocol files, statistics tables, etc. directly into a text file, without having to take a detour by using tables or lists. You can then visualize or manipulate this data in a spreadsheet program or a word processing application.
+
+## Note
+
+- Plant Simulation can keep **10 files** open at any one time.
+- The FileInterface handles letters, numbers, and special characters. It **cannot process binary data**, such as programs, graphics, etc.
+- One FileInterface manages **one file** at a time.
+- If you deactivate the safety setting `File > Model Settings > General > Prohibit Access to the Computer`, the FileInterface can only change files in the model folder, as these are automatically opened for reading.
+- Write functions of the FileInterface always return `false`. In addition, the FileInterface can only delete files in the model folder and its sub-folders.
+- To show a tooltip with information about the FileInterface, hover with the mouse over it.
+- To change the length of the graphic and the anchor points of the FileInterface, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+## Add the Object to the Simulation Model
+
+To add the object **FileInterface** to your simulation model, click `Manage Class Library > Basic Objects > InformationFlow > FileInterface` on the Home ribbon tab.
+
+Compare the sample models: Click the Window ribbon tab, click `Start Page > Getting Started > Example Models > Small Examples`. Then, select the respective Category, the Topic, and the Example in the dialog *Examples Collection*, and click **Open Model**.
+
+## Dialog Box of the FileInterface
+
+Double-click the icon of the FileInterface to open its dialog box.
+
+### Edit Simulation Properties
+
+There you can change its simulation properties. The shared properties are described under *Dialog Items of the Objects*.
+
+To edit the 3D properties of the object in the 3D model, select the object and press the **spacebar**. Then change the respective settings in the dialog box *Edit 3D Properties*.
+
+### Edit 3D Graphic Properties
+
+To edit the 3D properties of the object in the dialog box *Edit 3D Properties*:
+
+- Click the button **Edit 3D Properties** in the lower left corner of the simulation properties dialog box.
+- Select the object in the 3D model and press the **spacebar**.
+
+## Tab Attributes
+
+The tab **Attributes** provides the settings that the object offers. The settings are listed in the table of contents to the left. The shared properties are described under *Tab Attributes*.
+
+### Filename [FileInterface]
+
+Click the folder icon and select a file in the dialog *Open*.
+
+**Remarks**
+
+You can also type in the name of the text file from which you want to import data or to which you want to export data.
+
+**SimTalk**
+
+`FileName [SimTalk] - FileInterface`
+
+### Encoding [drop-down list]
+
+Select the encoding with which Plant Simulation saves the text file that it writes.
+
+**Remarks**
+
+You can select one of these settings:
+
+- **ANSI** — Is an 8-bit character set that enables you to represent up to 256 characters (0 through 255). The ANSI character set is a superset of the 7-bit ASCII character set.
+- **UTF-8** — Is another encoding of the Unicode character set. Each character is represented by one to three bytes.
+- **UTF-16** — Is another encoding of the Unicode character set.
+- **Unicode** — Is a 16-bit character set that includes almost all of the written languages of the world. Plant Simulation saves Unicode in UTF-16 encoding. Each character is represented by two bytes.
+
+When Plant Simulation reads a file, the attribute `Encoding` contains the encoding of the file. If Plant Simulation cannot recognize an encoding, it returns `ANSI`.
+
+**SimTalk**
+
+`Encoding [SimTalk]`
+
+### Delete File [FileInterface]
+
+To delete the file whose name is contained in the text box **Filename**, click this button.
+
+**SimTalk**
+
+`remove [SimTalk] - FileInterface`
+
+## Tab User-defined
+
+Define your own attributes as described under *Tab User-defined*.
+
+## Navigate Menu
+
+The commands are described under *Navigate Menu*.
+
+## View Menu
+
+The **View Menu** provides commands to access its functions.
+
+- Refresh [on View menu]
+- Show Attributes and Methods [on View menu]
+
+**SimTalk**
+
+`updateDialog [SimTalk]`
+
+## Tools Menu
+
+The **Tools Menu** provides these menu commands:
+
+- Edit Controls
+- Edit Observers
+- Export
+- Import
+
+## Help Menu
+
+The commands are described under *Help Menu*.
+
+## Methods of the FileInterface
+
+The FileInterface provides:
+
+- The methods listed in the table of contents to the left.
+- The *Methods of All Objects*.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window *Show Attributes and Methods* (the figure below illustrates the information using the example of the object *Station*):
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class [general description].
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance [general description].

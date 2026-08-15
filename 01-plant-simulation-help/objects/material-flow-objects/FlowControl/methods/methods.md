@@ -1,0 +1,169 @@
+# Methods of the FlowControl
+
+The FlowControl provides:
+
+- The methods listed in the table of contents.
+- The Methods of All Objects.
+
+As the FlowControl cannot receive any MUs, it does not have the methods which the other material flow objects provide.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.
+
+## Syntax conventions
+
+An example of the syntax line of an individual method:
+
+```
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+```
+
+- `<Path>` designates the path of the object to which the method applies.
+- The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. `(Parameter:string)` designates a parameter of data type string. Instead of a constant value, you can also use a variable of the required type or a method that returns the required data type.
+- Optional parameters are listed within brackets. `[,Parameter:boolean]` means that you can, but do not have to enter the boolean parameter.
+- If a parameter has a default value, the signature shows the default value after the parameter, e.g. `:= false`.
+- If the method has a return value, the signature shows its data type after the arrow, e.g. `→ boolean`.
+
+> **Note:** Make sure to enter the parentheses for expressions within parentheses `(…)`. Not entering them may lead to unexpected results and open the Debugger.
+
+---
+
+## getAttributeList [SimTalk] - FlowControl
+
+Returns the values of the attributes passed to the FlowControl designated by `<Path>` for the setting **Exit Strategy > MU Attribute** and writes them into a list.
+
+- **Type:** Method
+- **Syntax:** `<Path>.getAttributeList(AttributeList:table)`
+- **Parameter:** `AttributeList` of data type `table` designates the name of the list.
+
+**Example:**
+
+```simtalk
+MyFlowControl.getAttributeList(tab)
+```
+
+**See also:** MU Attribute [FlowControl, exit], Data Held in Tabular Form in Attributes [material flow objects]
+
+---
+
+## getEntryList [SimTalk]
+
+Returns the contents of the internal entry list of the FlowControl designated by `<Path>` for the setting **Entry Strategy > Percentage** or **Cyclic Sequence**, and writes it into a list.
+
+- **Type:** Method
+- **Syntax:** `<Path>.getEntryList(EntryList:any) → boolean`
+- **Parameter:** `EntryList` of data type `any` designates the name of the list.
+- **Return Value:** `boolean`
+
+**Examples:**
+
+```simtalk
+var li: list
+MyFlowControl.getEntryList(li)
+MyFlowControl1.setEntryList(li)
+MyFlowControl.getEntryList(DataList)
+```
+
+**See also:** Percentage [FlowControl, entry], Cyclic Sequence [FlowControl, entry]
+
+---
+
+## getExitList [SimTalk]
+
+Returns the contents of the internal exit list of the FlowControl designated by `<Path>` for the setting **Exit Strategy > Percentage** or **Cyclic Sequence**, and writes it to a list.
+
+- **Type:** Method
+- **Syntax:** `<Path>.getExitList(ExitList:any) → boolean`
+- **Parameter:** `ExitList` of data type `any` designates the name of the list.
+- **Return Value:** `boolean`
+
+**Example:**
+
+```simtalk
+MyFlowControl.getExitList(DataList)
+MyFlowControl.setExitList(DataList.copy)
+```
+
+**See also:** Percentage [FlowControl, exit], Cyclic Sequence [FlowControl, entry]
+
+---
+
+## setAttributeList [SimTalk] - FlowControl
+
+Sets the attribute list for the setting **Exit Strategy > MU Attribute** or **MU Name** of the FlowControl designated by `<Path>`.
+
+**Remarks:** You can enter several numbers of the desired successors into the Attribute List for Attribute Value. In the non-blocking case Plant Simulation checks which of the desired successors can receive the MU.
+
+- **Type:** Method
+- **Syntax:** `<Path>.setAttributeList(AttributeList:table)`
+- **Parameter:** `AttributeList` of data type `table` designates the path to a list or a variable of the same data type. Plant Simulation then copies the contents of the passed list to the internal attribute list of the FlowControl.
+
+**Example:**
+
+```simtalk
+MyFlowControl.setAttributeList(tab1)
+```
+
+**See also:** MU Attribute [FlowControl, exit], MU Name, Data Held in Tabular Form in Attributes [material flow objects]
+
+---
+
+## setEntryList [SimTalk]
+
+Sets the entry list of the FlowControl designated by `<Path>` for the setting **Entry Strategy > Percentage** or **Cyclic Sequence**.
+
+- **Type:** Method
+- **Syntax:** `<Path>.setEntryList(EntryList:any)`
+- **Parameter:** `EntryList` of data type `any` designates the path to a list or a variable of the same data type. Plant Simulation then copies the contents of the passed list to the internal entry list of the FlowControl.
+
+**Example:**
+
+```simtalk
+MyFlowControl.setEntryList(DataList)
+MyFlowControl.setEntryList(DataList.copy)
+```
+
+**See also:** Cyclic Sequence [FlowControl, entry], Percentage [FlowControl, entry], Data Held in Tabular Form in Attributes [material flow objects]
+
+---
+
+## setExitList [SimTalk]
+
+Sets the exit list of the FlowControl designated by `<Path>` for the setting **Exit Strategy > Percentage** or **Cyclic Sequence**.
+
+- **Type:** Method
+- **Syntax:** `<Path>.setExitList(ExitList:any)`
+- **Parameter:** `ExitList` of data type `any` designates the path to a list or a variable of the same data type. Plant Simulation then copies the contents of the passed list to the internal exit list of the FlowControl.
+
+**Example:**
+
+```simtalk
+MyFlowControl.setExitList(DataList)
+MyFlowControl.setExitList(DataList.copy)
+```
+
+**See also:** Cyclic Sequence [FlowControl, entry], Percentage [FlowControl, exit], Data Held in Tabular Form in Attributes [material flow objects]
+
+---
+
+## Read-Only Attributes of the FlowControl
+
+The FlowControl provides the _Read-Only Attributes of All Objects.
+
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab Statistics.
+
+**Example:**
+
+```simtalk
+print MyFlowControl.UUID
+```
+
+---
+
+## Attributes of the FlowControl
+
+The FlowControl provides:
+
+- The attributes listed in the table of contents.
+- The Attributes of All Objects.
+
+As the FlowControl cannot receive any MUs, it does not have the attributes that the other material flow objects provide.

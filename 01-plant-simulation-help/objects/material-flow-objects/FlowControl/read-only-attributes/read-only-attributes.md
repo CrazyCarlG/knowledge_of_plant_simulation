@@ -1,0 +1,30 @@
+# Read-only Attributes
+
+A read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab **Statistics**.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. The figure below illustrates the information using the example of the object **Station**.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected **Class** [general description].
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected **Instance** [general description].
+
+To query the value of a read-only attribute, you might, for example, type:
+
+```python
+print MyFlowControl.UUID
+```
+
+## Attributes of the FlowControl
+
+The FlowControl provides:
+
+- The attributes listed in the table of contents to the left.
+- The **Attributes of All Objects**.
+
+As the FlowControl cannot receive any MUs, it does not have the attributes that the other material flow objects provide.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. The figure below illustrates the information using the example of the object **Station**.
+
+---
+
+*11-2610 Plant Simulation Help*
+*Unpublished work. © 2026 Siemens*

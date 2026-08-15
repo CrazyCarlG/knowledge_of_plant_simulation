@@ -54,11 +54,11 @@ DEFAULT_PROMPT_TEMPLATE = (
 )
 
 DEFAULT_COMMAND_TEMPLATE = (
-    'openclaude session {permissions} --attach "{folder}" --prompt "{prompt}"'
+    'openclaude {permissions} --add-dir "{folder}" --print "{prompt}"'
 )
 
-# This default grants broad permissions, including file creation/editing.
-DEFAULT_PERMISSION_FLAGS = "--dangerously-skip-permissions"
+# Safe default for root/sudo environments while still allowing file edits.
+DEFAULT_PERMISSION_FLAGS = "--permission-mode acceptEdits"
 
 
 def parse_args() -> argparse.Namespace:

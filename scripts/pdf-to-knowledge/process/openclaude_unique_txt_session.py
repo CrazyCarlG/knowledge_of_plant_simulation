@@ -15,29 +15,29 @@ Behavior:
 - Input is a folder path.
 - The folder must contain exactly one .txtx file (non-recursive).
 - If 0 or more than 1 .txtx files are found, raise an error.
-- Start an openclaude session with both the folder path and the txtx file as attachments.
+- Grant openclaude tool access to folder, AI agent reads txtx file via tool.
 - Send a prompt that asks openclaude to summarize the txtx into a markdown file.
 
 Default command template:
-    openclaude session {permissions} --attach "{folder}" --attach "{txtx}" --prompt "{prompt}"
+    openclaude {permissions} --add-dir "{folder}" --print --prompt "{prompt}"
 
 You can customize the command template if your openclaude CLI uses different flags.
 
 Usage
 -----
 1) Basic run:
-    python scripts/openclaude_unique_txt_session.py "C:/path/to/folder"
+    python scripts/openclaude_unique_txt_session.py "/path/to/folder"
 
 2) Preview only (do not execute openclaude):
-    python scripts/openclaude_unique_txt_session.py "C:/path/to/folder" --dry-run
+    python scripts/openclaude_unique_txt_session.py "/path/to/folder" --dry-run
 
 3) Override permission flags:
-    python scripts/openclaude_unique_txt_session.py "C:/path/to/folder" \
-      --permissions "--dangerously-skip-permissions"
+    python scripts/openclaude_unique_txt_session.py "/path/to/folder" \
+      --permissions "--yolo"
 
-4) If your openclaude uses different parameter names, customize command template:
-    python scripts/openclaude_unique_txt_session.py "C:/path/to/folder" \
-    --command-template "openclaude session {permissions} --file \"{folder}\" --file \"{txtx}\" --prompt \"{prompt}\""
+4) Custom command template:
+    python scripts/openclaude_unique_txt_session.py "/path/to/folder" \
+    --command-template "openclaude {permissions} --add-dir \"{folder}\" --print --prompt \"{prompt}\""
 
 Rules
 -----
@@ -55,23 +55,25 @@ from pathlib import Path
 
 
 DEFAULT_PROMPT_TEMPLATE = (
-    "阅读txtx，总结为md文件，保留代码样例，英文即可，"
-    "md存放在{folder}内，命名赋值文件夹的名称"
+    "Read this exact file: {txtx}. "
+    "Summarize its content into a markdown file, keep code examples. "
+    "Output markdown file inside {folder}, use folder name as output filename. "
+    "Only work inside this directory, use file read/write tools."
 )
 
 DEFAULT_COMMAND_TEMPLATE = (
-    'openclaude session {permissions} --attach "{folder}" --attach "{txtx}" --prompt "{prompt}"'
+    'openclaude {permissions} --add-dir "{folder}" --print "{prompt}"'
 )
 
-DEFAULT_PERMISSION_FLAGS = "--dangerously-skip-permissions"
+DEFAULT_PERMISSION_FLAGS = "--permission-mode acceptEdits"
 
 
 def parse_args() -> argparse.Namespace:
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(
         description=(
-            "Find the only .txtx file in a folder, then start an openclaude session "
-            "with folder/txtx attachments and a summarization prompt."
+            "Find the only .txtx file in a folder, grant directory access to openclaude, "
+            "AI reads txtx and generate summary markdown file."
         )
     )
     parser.add_argument(

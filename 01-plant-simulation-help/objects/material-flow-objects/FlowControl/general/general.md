@@ -1,0 +1,479 @@
+# FlowControl — General
+
+## Description
+
+The FlowControl does not process the MUs, it only distributes them among the stations that succeed it in the sequence of stations in the simulation model.
+
+Insert the FlowControl between at least two other objects to control the flow of materials between these objects. If need be, you can also combine several FlowControl objects. The number of predecessors and successors is unlimited.
+
+> **Note:** You cannot model cycles, meaning that you may not connect a FlowControl with itself, not even via other FlowControls or Interfaces. For example, you cannot model: `FlowControl1 -> Frame.Interface1 -> Frame.FlowControl2 -> Frame.Interface2 -> FlowControl1`.
+
+To show a tooltip with information about the FlowControl, hover with the mouse over it.
+
+To change the length of the graphic and the anchor points of the FlowControl, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+## Add the Object to the Simulation Model
+
+To add the object FlowControl to your simulation model, click **Manage Class Library > Basic Objects > MaterialFlow > FlowControl** on the Home ribbon tab.
+
+## Compare the sample models
+
+Click the Window ribbon tab, click **Start Page > Getting Started > Example Models > Small Examples**. Then, select the respective Category, the Topic, and the Example in the dialog **Examples Collection**, and click **Open Model**.
+
+## Dialog Box of the FlowControl
+
+Double-click the icon of the FlowControl to open its dialog box.
+
+### Edit Simulation Properties
+
+In the dialog box you can change the simulation properties of the object. The shared properties are described under **Dialog Items of the Objects**.
+
+### Edit Animation Properties
+
+To edit the 3D properties of the object in the dialog box **Edit 3D Properties**:
+
+- Click the button **Edit 3D Properties** in the lower left corner of the simulation properties dialog box.
+- Select the object in the model and press the spacebar.
+
+To manipulate the graphic of the object, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+---
+
+# Tab Exit Strategy
+
+## Tab Exit
+
+Select the strategy for splitting up the flow of materials from the drop-down list **Strategy**.
+
+For some of the Exit Strategies you can also select if the strategy is **Blocking** or **not blocking**.
+
+**SimTalk:** `ExitBehavior`
+
+## Blocking [FlowControl, exit]
+
+Select if the Exit Strategy is blocking or non-blocking.
+
+You can:
+
+- Select **Blocking** to make the FlowControl move the MU on, if the desired successor can receive it.
+- Clear **Blocking** to make the FlowControl only move the MU on, if any of its successors can receive it.
+
+> **Note:** The non-blocking strategy of the Exit Strategy > MU Attribute moves the MU on if any of the desired successors can receive it.
+
+**SimTalk:** `ExitBlocking`
+
+## Strategy [FlowControl, exit]
+
+Select the Strategy according to which the FlowControl distributes the MUs among its successors.
+
+Proceed as follows:
+
+- To move the MUs cyclically on to all successors, select **Cyclic**.
+- To cyclically move the MUs on to the successor according to the sequence of successors, which you typed into a list, select **Cyclic Sequence**.
+- To move the MUs on to the successor, which has been Waiting the longest for a MU, select **Least Recently Used**.
+- To move the MUs on to a successor according to the return value of a Method, select **Method**.
+
+> **Note:** You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula. For this reason Plant Simulation does not show the tab Expressions of the Method Debugger. In addition, you cannot use a `wait`-instruction, a `waituntil`-instruction, or a `stopuntil`-instruction within the Method.
+
+- To move the MUs on to the successor, which has been Waiting the shortest time for a MU, select **Most Recently Used**.
+- To move the MUs on to a successor according to the values of attributes of the MUs, select **MU Attribute**.
+- To move the MUs on to a successor according to their names, select **MU Name**.
+- To move the MUs on to a successor according to a percentage distribution, select **Percentage**.
+- To move the MUs on to a randomly selected successor, select **Random**.
+- To move the MUs on to the successor meeting a certain Property, select **Selection** from the drop-down list. Then, select a Property from the drop-down list **Property**.
+- To move the MUs on to the first available successor, select **Start at Successor 1**.
+- To copy the MUs that enter, and move a copy each to each of the successors, select **To All Successors**.
+- The strategy **Assignment** does not determine the successor to which the FlowControl moves the MU on. Instead, you can change the values of the attributes of the part, when it moves to the one and only successor of the FlowControl. As soon as the MU is moved on to the successor, Plant Simulation calls the method, whose name you typed into the text box Method. Define the assignments to be made in this method.
+
+Depending on the strategy you select, the FlowControl shows additional check boxes, text boxes and buttons.
+
+Click the check box **Inheritance** so that it looks like this. Then, click **Open List** and enter the data into the list, which the exit strategies **Cyclic Sequence**, **MU Attribute**, **MU Name**, and **Percentage** require.
+
+**SimTalk:** `ExitBehavior`
+
+See also: `getExitList`, `setExitList`
+
+## Assignment [FlowControl, strategy]
+
+The strategy Assignment does not determine the successor to which the FlowControl moves the MU on. Instead, you can change the values of the attributes of the MU, when it moves to the one and only successor of the FlowControl.
+
+> **Note:** A FlowControl using the Assignment strategy always moves the MUs on to the successor with the number 1.
+
+As soon as the MU is moved on to the successor, Plant Simulation calls the method, whose name you typed into the text box Method. Define the assignments to be made in this method.
+
+### Example
+
+```simtalk
+@.color := "red"
+@.ProdState := 3
+```
+
+> **Note:** Normally Plant Simulation only calls the method, when it is certain that the successor can receive the MU. If the successor is a FlowControl, changing an attribute of the MU by this method can affect to which successor this succeeding FlowControl will move the MU on. In this case the method will be called for a temporary copy of the MU and the succeeding FlowControl determines its successor using this copy. The original MU remains untouched during this time. If the thus determined successor can receive the MU, the method will be called again for the original MU. In this case you should make sure that you assign the same value to the copy as to the original MU.
+
+**SimTalk:** `ExitBehavior`, `DefaultSuccessor`
+
+## Cyclic [FlowControl, exit]
+
+To move the MUs cyclically on to all successors, select **Cyclic** from the drop-down list.
+
+- Select **Blocking** to make the FlowControl move the MU on to the successor, which follows the successor to which the last MU was moved. If this successor cannot receive the MU, it will be Blocked until the successor can receive it.
+- Clear **Blocking** to make the FlowControl move the MU on to the first successor, which can receive the MU and which follows the successor to which the last MU was moved.
+
+When the FlowControl reaches the last successor, it restarts the search at the beginning.
+
+**SimTalk:** `ExitBehavior`, `ExitBlocking`
+
+## Cyclic Sequence [FlowControl, exit]
+
+To cyclically move the MUs on to the successor according to the sequence of successors, which you typed into a list, select **Cyclic sequence** from the drop-down list.
+
+Turn the **Inheritance** check box off. Then, click **Open List**, and type the number of the succeeding object into the corresponding cell of the list. The FlowControl moves a MU to the successor, whose turn it is next.
+
+- Select **Blocking** to make the FlowControl block the MU until the successor can receive it if the next successor in the sequence cannot receive a MU.
+- Clear **Blocking** to make the FlowControl move the MU on to the next successor, which can receive it, and so on.
+
+Once the FlowControl reaches the end of the sequence, it restarts the search at the beginning.
+
+**SimTalk:** `ExitBehavior`, `ExitBlocking`, `setExitList`, `getExitList`
+
+## Least recently used [FlowControl, exit]
+
+To move the MUs on to the successor, which has been waiting the longest for a MU, select **Least recently used** from the drop-down list.
+
+**SimTalk:** `ExitBehavior`
+
+## Method [FlowControl, exit]
+
+To move the MUs on to a successor according to the return value of a Method, select **Method** from the drop-down list.
+
+> **Note:** You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula. For this reason, you also cannot use a `wait`-instruction, a `waituntil`-instruction, or a `stopuntil`-instruction within the Method. In addition, Plant Simulation does not show the tab Expressions of the Method Debugger.
+
+Type in the name of the Method, whose return value determines the number of the successor to which the FlowControl moves the MU. In the method, you can access the FlowControl with the anonymous identifier `?`. The anonymous identifier `@` points to the MU which is to be moved on.
+
+- Select **Blocking**: Then the method does not have a parameter.
+- Clear **Blocking**: Then the method has a single integer parameter. It tells which number within the total amount of attempts to determine a successor that specific attempt has. In case the method returns the number of a successor to which the MU cannot be moved on, the method is called again. It is called as often as the FlowControl has successors at the most. If the method returns 0, the FlowControl immediately blocks the MU and does not call the method again.
+
+**SimTalk:** `ExitSelectionMethod`
+
+## Most recently used [FlowControl, exit]
+
+To move the MUs on to the successor, which has been waiting the shortest time for a MU, select **Most recently used** from the drop-down list.
+
+The FlowControl always moves the MUs to the same successor, as long as this successor can receive the MUs.
+
+**SimTalk:** `ExitBehavior`
+
+## MU Attribute [FlowControl, exit]
+
+To move the MUs on to a successor according to the values of attributes of the MUs, select **MU Attribute** from the drop-down list.
+
+- Select **Blocking** to make the FlowControl always move the MU to the designated successor. If that successor is not ready to receive it, the MU will be blocked.
+- Clear **Blocking** to make the FlowControl move the MU on when any of its successors can receive it. In this case enter the desired Numbers of the successors into the Attribute List for each Attribute Value.
+
+Turn the **Inheritance** check box off. Then click **Open List** to open a table, into which you can type the names of the user-defined or the built-in attributes, their values, and the numbers of the successors. The FlowControl searches the table from top to bottom until it finds an attribute with the value you entered. It then moves the MU on to that successor.
+
+> **Note:** Create the user-defined attributes for the MUs on the Tab User-defined.
+
+### Default Successor
+
+Type in the number of the default successor. This is the successor to which the FlowControl moves the MUs if none of the MUs has an attribute with the Value you typed into the DataTable.
+
+To not move a part, which does not meet one of the conditions on the table, type in `0`.
+
+To show a message, when a part is to be moved which does not meet any of the conditions in the DataTable, type in a negative number.
+
+### Attribute Type
+
+Select the data type of the attribute from this drop-down list.
+
+**SimTalk:** `setAttributeList`, `getAttributeList`, `AttributeType`, `ExitBlocking`, `ExitBehavior`, `DefaultSuccessor`
+
+## MU Name
+
+To move the MUs on to a successor according to their names, select **MU Name** from the drop-down list.
+
+Turn the **Inheritance** check box off. Then, click **Open List** to open a table into which you can type the Name of the attribute and the number of the Successor. The FlowControl searches the table for the name of the MU to be moved on and then moves the MU on to the successor which is specified in this row.
+
+### Default Successor
+
+Type the number of the default successor into the text box. The default successor is the successor to which the FlowControl moves the MUs if the name of a MU is not contained in the DataTable.
+
+To not move a part, which does not meet one of the conditions on the table, type in `0`.
+
+To show a message, when a part is to be moved which does not meet any of the conditions in the DataTable, type in `-1`.
+
+**SimTalk:** `setAttributeList`, `getAttributeList`, `AttributeType`, `ExitBlocking`, `ExitBehavior`, `DefaultSuccessor`
+
+## Percentage [FlowControl, exit]
+
+To move the MUs on to a successor according to a percentage distribution, select **Percentage** from the drop-down list.
+
+Turn the **Inheritance** check box off. Then, click **Open List** to open a table and type in the percentages. The n-th row on the table defines the n-th successor's portion. The FlowControl moves a MU to the successor for which the difference between the desired value and the actual value is greatest.
+
+> **Note:** When you specify 0 in the table, the predecessor of the FlowControl will not receive a MU.
+
+- Select **Blocking** to make the FlowControl block the MU until the successor determined by the distribution can receive the MU.
+- Clear **Blocking** to make the FlowControl move the MU on to the successor with the second largest difference between the desired value and the actual value, etc.
+
+**SimTalk:** `setExitList`, `getExitList`, `ExitBlocking`, `ExitBehavior`
+
+## Random [FlowControl, exit]
+
+To move the MUs on to a randomly selected successor, select **Random** from the drop-down list.
+
+Then, select a distribution from the drop-down list **Distribution** and type the values into the respective text box. The FlowControl distributes the MUs according to the selected distribution to its successors.
+
+- Select **Blocking** to make the FlowControl only roll the dice once. If the thus determined successor cannot receive the MU, it will be Blocked until the successor can receive it.
+- Clear **Blocking** to make the FlowControl roll the dice until it can determine a successor which can receive the MU or until the Maximum Number of Samples multiplied with the number of successors is reached.
+
+**SimTalk:** `ExitDistribution`
+
+## Selection [FlowControl, exit]
+
+To move the MUs on to the successor meeting a certain property, select **Selection** from the drop-down list.
+
+Then, select a Property from the drop-down list **Property**. For some selection criteria you can also select if the strategy is **Blocking** or **not blocking**.
+
+| Property | The FlowControl moves the part on to the |
+|---|---|
+| Max. contents | successor that currently contains the greatest number of MUs. |
+| Min. contents | successor that currently contains the smallest number of MUs. |
+| Max. proc. time | successor with the longest processing time for this MU. |
+| Min. proc. time | successor with the shortest processing time for this MU. |
+| Max. Set-up time | successor with the longest set-up time for this MU. |
+| Min. Set-up time | successor with the shortest set-up time for this MU. |
+| Max. num. in | successor that received the most MUs. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Min. num. in | successor that received the least number of MUs. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Max. rel. occu. | successor with the highest relative occupancy. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Min. rel. occu. | successor with the lowest relative occupancy. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+
+**SimTalk:** `ExitSelectionProperty`, `ExitBehavior`, `ExitBlocking`
+
+## Start at Successor 1 [FlowControl, exit]
+
+To move the MUs on to the first available successor, select **Start at Successor 1** from the drop-down list.
+
+The FlowControl checks the successors starting with the successor with the number 1. It moves the MU on to successor number 3, for example, if it cannot move it on to successor 1 and 2. As long as the successor with the number 1 can receive MUs, the FlowControl always moves them to it.
+
+**SimTalk:** `ExitBehavior`
+
+## To all successors
+
+To copy the MU that enters, and move a copy each to each of the successors, select **To all successors** from the drop-down list.
+
+The strategy **To all successors** is blocking, i.e., the FlowControl only moves the MUs on when all successors are ready to receive their copy of the MU.
+
+**SimTalk:** `ExitBehavior`
+
+## Next Aimed Successor [FlowControl]
+
+A FlowControl, which you inserted into a Frame, shows its next aimed at successor. This is the successor, which is served next according to the exit strategy.
+
+If you clear **Blocking**, this does not have to be the successor to which the part is actually moved.
+
+---
+
+# Tab Entry Strategy
+
+## Tab Entry
+
+Select the strategy for merging the flow of materials from the drop-down list **Strategy**.
+
+For some of the entry Strategies you can select if the strategy is **Blocking** or **not blocking**.
+
+> **Note:** If a MU can reach a FlowControl via different Connectors, you can only use **First come, first served** as the entry strategy. This can only happen if at least one of the preceding Connectors starts at a FlowControl.
+
+See also: Next Aimed Predecessor.
+
+## Blocking [FlowControl, entry]
+
+Select if the entry strategy is blocking or not blocking by selecting or clearing the check box.
+
+- Select **Blocking** to make the FlowControl only receive MUs from the next designated predecessor. MUs Waiting on other predecessors cannot be received.
+- Clear **Blocking** to make the FlowControl receive MUs from any of its predecessors. The Entry Strategy only takes effect if the Blocking List of the FlowControl contains several MUs and the FlowControl is unblocked because of a successor getting ready to receive a MU.
+
+**SimTalk:** `EntryBlocking`
+
+## Strategy [FlowControl, entry]
+
+Select the strategy according to which the FlowControl receives the MUs from its predecessors.
+
+> **Note:** If a MU can reach a FlowControl via different Connectors, you can only use **First come, first served** as the entry strategy. This can only happen if at least one of the preceding Connectors starts at a FlowControl.
+
+Proceed as follows:
+
+- To cyclically receive the MUs from all predecessors, select **Cyclic**.
+- To cyclically receive the MUs from the predecessor according to the sequence of predecessors, which you typed into the list, select **Cyclic sequence**.
+- To receive the MUs from the predecessor in the order in which they intended to exit, select **First come, first served**.
+- To receive the MUs from the predecessor that has not provided a MU for the longest time, select **Least recently used**.
+- To receive the MUs from the predecessor defined by the return value of the Method, which you typed into the text box Method, select **Method**.
+
+> **Note:** You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula. For this reason Plant Simulation does not show the tab Expressions of the Method Debugger. In addition, you cannot use a `wait`-instruction, a `waituntil`-instruction, or a `stopuntil`-instruction within the Method.
+
+- To receive the MUs from the predecessor, from which the FlowControl received a MU the last time, select **Most recently used**.
+- To receive the MUs from the predecessors according to a percentage distribution, select **Percentage**.
+- To receive the MUs from the predecessors randomly, select **Random**.
+- To receive the MUs from the predecessors according to the state and the material flow balance of the predecessors, select **Selection**. Then, select a Property.
+- To receive the MUs from the first available predecessor, select **Start at Predecessor 1**.
+
+Depending on what you select, the FlowControl shows additional check boxes, text boxes and buttons. Turn the **Inheritance** check box off. Then, click **Open List** and type the data which the selected strategy requires, into the cells of the list.
+
+**SimTalk:** `EntryBehavior`
+
+## Cyclic [FlowControl, entry]
+
+To cyclically receive the MUs from all predecessors, select **Cyclic** from the drop-down list.
+
+- Select **Blocking** to make the FlowControl only receive the MU from the predecessor which immediately follows the predecessor from which it received the last MU.
+- Clear **Blocking** to make the FlowControl only receive the MU from the first predecessor which is ready to move a MU on and which immediately follows the predecessor from which it received the last MU.
+
+Once the FlowControl reaches the end of the list of its predecessors, it restarts the search at the beginning.
+
+**SimTalk:** `EntryBehavior`, `EntryBlocking`
+
+## Cyclic Sequence [FlowControl, entry]
+
+To cyclically receive the MU from the predecessors according to the sequence of predecessors, which you type into a list, select **Cyclic Sequence** from the drop-down list.
+
+Turn the **Inheritance** check box off. Then, click **Open List** to open the entry list and enter the sequence of the preceding objects.
+
+- Select **Blocking** to make the FlowControl only receive MUs from the next predecessor in the sequence. It blocks MUs from other predecessors.
+- Clear **Blocking** to make the FlowControl receive MUs from all predecessors. If the FlowControl Blocked several MUs, it unblocks the MU which is located on the predecessor and which is next in the sequence.
+
+Once the FlowControl reaches the end of the list of its predecessors, it restarts the search at the beginning.
+
+**SimTalk:** `setEntryList`, `getEntryList`, `EntryBehavior`, `EntryBlocking`
+
+## First come, first served
+
+To receive the MUs from the predecessors in the order in which they wanted to exit the predecessors of the FlowControl, select **First come, first served** from the drop-down list.
+
+**SimTalk:** `EntryBehavior`
+
+## Least recently used [FlowControl, entry]
+
+To receive the MUs from the predecessor which did not move on a MU for the longest time, select **Least recently used** from the drop-down list.
+
+**SimTalk:** `EntryBehavior`
+
+## Method [FlowControl, entry]
+
+To receive the MUs from the predecessor defined by the return value of the Method, select **Method** from the drop-down list.
+
+> **Note:** You cannot move or delete MUs in the Method because Plant Simulation calls the Method like a formula. For this reason Plant Simulation does not show the tab Expressions of the Method Debugger. In addition, you cannot use a `wait`-instruction, a `waituntil`-instruction, or a `stopuntil`-instruction within the Method.
+
+Type in the name of the Method, whose return value determines the predecessor from which the FlowControl receives the part. In the method, you can access the FlowControl using the anonymous identifier `?`.
+
+- Select **Blocking**: Then the method does not have a parameter. The method is called each and every time, when a MU wants to move through the FlowControl, except when the part was unblocked immediately before by the FlowControl. In addition, the method is called every time the FlowControl is to unblock a MU, i.e., when the FlowControl itself is unblocked by one of its successors.
+- Clear **Blocking**: Then the method will only be called, when one of several MUs Blocked by the FlowControl is to be unblocked. The return value of the method determines, which MU will be unblocked. The method has a single integer parameter. It tells what number within the total amount of attempts to determine a successor that attempt has. In case the method returns the number of a predecessor, from which the MU cannot be received, the method is called again. It is called as often as the FlowControl has predecessors at the most. If the method returns 0, the FlowControl does not unblock any of the MUs and does not call the method again.
+
+**SimTalk:** `EntrySelectionMethod`
+
+## Most recently used [FlowControl, entry]
+
+To receive the MUs from the predecessor, from which the FlowControl received a MU the last time, select **Most recently used** from the drop-down list.
+
+As long as this predecessor can move MUs on, the FlowControl receives them from this predecessor.
+
+**SimTalk:** `EntryBehavior`
+
+## Percentage [FlowControl, entry]
+
+To receive the MUs from the predecessors according to a percentage distribution, select **Percentage** from the drop-down list.
+
+Turn the **Inheritance** check box off. Then click **Open List** to open a table and type in the percentages. The n-th row on the table defines the n-th successor's portion. The FlowControl only receives a MU from the predecessor, for which the difference between the desired value and the actual value is greatest.
+
+> **Note:** If you type 0 into the table, the successor of the FlowControl will not receive a MU.
+
+- Select **Blocking** to make the FlowControl only receive MUs from the designated predecessor.
+- Clear **Blocking** to make the FlowControl receive MUs from all predecessors. The FlowControl takes the percentage distribution into account, when unblocking MUs.
+
+**SimTalk:** `setEntryList`, `getEntryList`, `EntryBehavior`, `EntryBlocking`
+
+## Random [FlowControl, entry]
+
+For the entry strategy Random, select a distribution from the drop-down list **Random** and type a value into the respective text box.
+
+The FlowControl receives the MUs according to the selected distribution from its predecessors.
+
+- Select **Blocking** to make the FlowControl roll the dice only once and receive a MU from the thus determined predecessor. MUs from other predecessors will be Blocked.
+- Clear **Blocking** to make the FlowControl receive MUs from all predecessors. If several MUs were blocked by the FlowControl and one of those is to be unblocked, it rolls the dice until it determines a predecessor with a blocked MU or until the Maximum Number of Samples multiplied with the number of predecessor is reached.
+
+Select a distribution for receiving the MUs from the predecessors and type the parameters which this distribution requires into the text box.
+
+**SimTalk:** `EntryDistribution`
+
+## Selection [FlowControl, entry]
+
+To receive the MUs from the predecessor according to the state and the material flow balance of the predecessor, select **Selection** from the drop-down list.
+
+Select the property of the predecessor according to which the FlowControl receives the MUs.
+
+| Property | The FlowControl receives the part from the |
+|---|---|
+| Max. contents | predecessor containing the greatest number of MUs. |
+| Min. contents | predecessor containing the smallest number of MUs. |
+| Max. proc. time | predecessor with the longest processing time. |
+| Min. proc. time | predecessor with the shortest processing time. |
+| Max. num. out | predecessor where the highest number of MUs exited. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Min. num. out | predecessor where the lowest number of MUs exited. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Max. rel. occu. | predecessor with the highest relative occupancy. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+| Min. rel. occu. | predecessor with the lowest relative occupancy. This only works correctly, when resource statistics of the successor or of the predecessor is active. |
+
+**SimTalk:** `EntrySelectionProperty`, `EntryBehavior`, `EntryBlocking`
+
+## Start at Predecessor 1
+
+To receive the MUs from the first available predecessor, starting with the predecessor with the number 1, select **Start at Predecessor 1** from the drop-down list.
+
+The FlowControl only receives a MU from predecessor 3, for example, when predecessor 1 and 2 cannot deliver one.
+
+**SimTalk:** `EntryBehavior`
+
+## Next Aimed Predecessor
+
+A FlowControl, which you inserted into a Frame shows its next aimed at predecessor here. This is the predecessor, which is served next according to the entry strategy.
+
+When you deactivate **Blocking**, this does not have to be the predecessor from which the part is actually received.
+
+---
+
+# Tab User-defined
+
+Define your own attributes as described under the **Tab User-defined**.
+
+# Navigate Menu
+
+The commands are described under the **Navigate Menu**.
+
+# View Menu
+
+The View Menu provides commands to access its functions.
+
+- Refresh [on View menu]
+- Show Attributes and Methods [on View menu]
+
+**SimTalk:** `updateDialog`
+
+# Tools Menu
+
+The commands are described under the **Tools Menu**.
+
+# Help Menu
+
+The commands are described under the **Help Menu**.
+
+---
+
+# Methods of the FlowControl
+
+The FlowControl provides:
+
+- The methods listed in the table of contents to the left.
+- The Methods of All Objects.
+
+As the FlowControl cannot receive any MUs, it does not have the methods which the other material flow objects provide.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. The figure below illustrates the information using the example of the object Station.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.

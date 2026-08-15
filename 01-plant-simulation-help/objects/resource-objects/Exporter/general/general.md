@@ -1,0 +1,312 @@
+# Exporter
+
+The **Exporter** object is used for providing and exporting services. It represents a group of people whose individual members you cannot distinguish and whom you cannot address as individuals.
+
+## Description
+
+The Exporter works together with the **Broker** and the **Importers** (see *Tab Importer* and *Sub-tab Failure*) of the Station, ParallelStation, AssemblyStation, and DismantleStation. The Exporter offers services and provides them for Importers.
+
+A single Broker manages the Exporter and assigns it to an Importer. After the Exporter has finished providing its service, it registers as being available with its Broker, which assigns it to other Importers as soon as its services are required.
+
+> **Note:** If the Importer requests several services at the same time, all of these services have to be available at the same time before the Broker assigns them to the station.
+
+Think of the Exporter as a group of people whose individual members you cannot distinguish and whom you cannot address as individuals. To distinguish individual staff members, model them with individual Exporters or Workers. An Exporter with a capacity greater than 1 can simultaneously provide services at several Importers. Use the Exporter if transit times for traveled distances are not important for the simulation.
+
+> **Note:** An Exporter may provide services for several Importers at the same time.
+
+To show a tooltip with information about the Exporter, hover with the mouse over it.
+
+To change the length of the graphic and the anchor points of the Exporter, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+## Add the Object to the Simulation Model
+
+To add the object Exporter to your simulation model, click **Manage Class Library > Basic Objects > Resources > Exporter** on the Home ribbon tab.
+
+Compare the sample models: Click the Window ribbon tab, click **Start Page > Getting Started > Example Models > Small Examples**. Then select the respective Category, Topic, and Example in the dialog *Examples Collection*, and click **Open Model**.
+
+## Dialog Box of the Exporter
+
+Double-click the icon of the Exporter to open its dialog box.
+
+### Edit Simulation Properties
+Change the simulation properties of the object in the dialog box. The shared properties are described under *Dialog Items of the Objects*.
+
+### Edit Animation Properties
+To edit the 3D properties of the object in the dialog box *Edit 3D Properties*:
+- Click the button **Edit 3D Properties** in the lower left corner of the simulation properties dialog box.
+- Select the object in the model and press the spacebar.
+
+To manipulate the graphic of the object, click **Show Manipulators** on the Edit ribbon tab or press **M**.
+
+## Tab Attributes
+
+The tab **Attributes** provides the settings which the object offers. The shared properties are described under the *Tab Attributes*.
+
+### Services
+
+To open a list into which you type the names of the services which the Exporter exports, click this button.
+
+**Remarks**
+- Before you can type in data, click the Inheritance check box so that it looks like this ![checked](checked.png).
+- Type the name of the service into the cell and click **Apply**. The Exporter attempts to export the services in the order in which you type them into the list.
+
+> **Note:** The name is not case-sensitive, just like the names of attributes and methods of the objects are not case-sensitive. To save memory and improve access speed, all places which are using such a case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing. In SimTalk you can compare strings in a case-insensitive manner with the `~=` operator (compare *Relational Operators*).
+
+Plant Simulation inserts these services into the list of offered services of the Broker. To view them, select **View > Offered Services**.
+
+You can use the commands on the *Context Menu of Embedded Lists* to edit the contents of the cells.
+
+**SimTalk:** `Services`, `hasService`
+
+### Fail Services
+
+To interrupt the respective process for the duration of the failure if the Exporter provides services for an importer, select this check box.
+
+**Remarks**
+- If Plant Simulation interrupts processing (for example because of a failure of the Exporter), it deletes the respective Out event and adds it anew at the end of the failure according to the remaining processing time.
+- To not interrupt the respective process of the importer at the beginning of a failure, clear **Fail Services**. The respective event thus persists. During a failure, new requests to the Exporter remain unsatisfied.
+
+**SimTalk:** `FailServices`
+
+### Priority
+
+Type the Priority into the text box with which the Exporter carries out a work order. The Priority is a criterion for the urgency of a request.
+
+**Remarks**
+- The Priority is an integer value. The higher its value, the higher the urgency. Plant Simulation provides an Exporter with Priority 10 before providing an Exporter with Priority 1.
+- Exporters with a higher priority will be brokered earlier by the Broker for identical services than Exporters with a lower priority. The Priority only applies to Exporters who are registered with the same Broker.
+- If several qualified Exporters with the same priority exist, Plant Simulation first brokers the Exporters who already stay on a suitable Workplace at the station. After that, Exporters are brokered who already are at the station but stay on the wrong Workplace. Then Exporters are brokered who are not staying on a Workplace. Finally, those Exporters are brokered who stay on a Workplace that is assigned to another station.
+
+**SimTalk:** `Priority`
+
+### Capacity
+
+Type the Capacity of the Exporter into the text box. The Capacity is a value greater than or equal to zero and designates the maximum number of services it can export.
+
+**Remarks**
+- You can only reduce the capacity if the capacity provided to the importers is not fallen short of.
+- If you increase the capacity, the Broker immediately attempts to find new importers.
+
+**SimTalk:** `Capacity`
+
+### Broker
+
+Select the Broker who assigns the services to the Exporter.
+
+**Remarks**
+- Click the ellipsis button and select the Broker in the dialog *Select Object*.
+- Or type in the path to and the name of the Broker, for example `.Models.Model.MyBroker`.
+- Or select the Broker in a Frame, drag it to the text box and drop it there.
+
+> **Note:** **F2** opens the dialog of the object whose name you typed into the text box.
+
+Plant Simulation enters the Exporter into the list of administered Exporters which this Broker manages. To view them, select **View > Exporters**.
+
+**SimTalk:** `BrokerPath`
+
+## Tab Failures
+
+Define failures as described under the *Tab Failures*.
+
+## Tab Controls
+
+Click the ellipsis button and select a Method in the dialog *Select Object*. Type in the source code of the respective control.
+
+### Select the Path to an Existing Method
+- Click the ellipsis button. Navigate to the location of the Method in the dialog *Select Object* and click **OK**. This inserts the name of the Method into the text box of the Control.
+- Press **F2** in the text box to open the Method. Then type in the source code of the Control.
+- Instead of choosing *Select Object*, you can also select the Method in a Frame, drag it to the text box and drop it there.
+
+### Create a Control That is a Method of the Object
+Proceed as follows to create a control as a user-defined attribute of data type Method:
+- Type a meaningful name into the text box and select **Create Control** on the context menu. Plant Simulation then inserts `self.Name_you_typed_in_for_the_control`, such as `self.A1Ctrl`.
+- Select **Create Control** on the empty text box. Plant Simulation then inserts `self.OnBuilt_in_name_of_the_control`, such as `self.OnEntrance`.
+- Type the source code of this control into the Method that opens.
+
+**To edit the source code later on:**
+- Press **F2**.
+- Or hold down **Shift** and double-click into the text box.
+- Or select **Open Object** on the context menu.
+- Or click the tab **User-defined** and double-click the name of the Method in the list.
+
+**To delete this control**, delete the user-defined attribute. If you only delete the name from the text box, the user-defined attribute is retained.
+
+### Order Control
+
+Modifies the built-in behavior of the object. The Order Control specifies how the Exporter handles the order. The object calls the Order Control whenever the Exporter is assigned to an importer.
+
+The standard order control as a user-defined attribute looks like this:
+
+```simtalk
+param importer: object, type: integer
+```
+
+**Parameters** — The Order Control has two parameters, which define the importer:
+- The parameter `Importer` of data type object designates the importer.
+- The parameter `Type` of data type integer designates its type: `0` designates the failure/remove failure-importer, `1` the set-up-importer, `2` the processing-importer, and `3` the transport-importer.
+
+**SimTalk:** `OrderCtrl`
+
+### Release Control
+
+Modifies the built-in behavior of the object. The object calls the Release Control as soon as an importer releases the Exporter/Worker.
+
+**Remarks**
+- Plant Simulation executes the Release Control as soon as an importer releases the Exporter/Worker. When the control is called, the Exporter/Worker has already left its importer. You yourself have to make sure that the Exporter/Worker is assigned new importers, for example with the method `findNewImporter`. In this case the Exporter/Worker will not automatically register as being available with its Broker.
+
+The standard release control as a user-defined attribute looks like this:
+
+```simtalk
+param importer: object, type: integer
+```
+
+**Parameters** — The Release Control has two parameters, which define the importer:
+- The parameter `Importer` of data type object designates the importer proper.
+- The parameter `Type` of data type integer designates its type: `0` designates the failure/remove failure-importer, `1` the set-up-importer, `2` the processing-importer, and `3` the transport-importer.
+
+**SimTalk:** `ReleaseCtrl`
+
+### Shift Calendar
+
+Select the ShiftCalendar. It contains the data of the shifts in your installation and controls during which shifts the Exporter works in the plant.
+
+**Remarks**
+- Click the ellipsis button and select the ShiftCalendar in the dialog *Select Object*.
+- Instead of clicking the ellipsis button, you can also select the ShiftCalendar in a Frame, drag it to the text box, and drop it there.
+- This automatically enters the object into the list of Objects on the tab **Resources** of the ShiftCalendar.
+
+**SimTalk:** `ShiftCalendarObject`
+
+## Tab Statistics
+
+The tab **Statistics** shows the most important statistical data. The tab shows the values for the services and for the Exporter. For each of these blocks, adding up the individual values results in a value of 100 percent.
+
+> **Note:**
+> - To show the statistics values for the services in a Chart, drag the Exporter over a Chart and drop it there.
+> - To show the statistics values for the Services and for the Exporter in a Chart, hold down **Shift**, drag the Exporter over a Chart and drop it there.
+> - To collect the failure times of the services and of the Exporter, select the check box **Fail Services**.
+> - To only collect the failure times of the Exporter, clear the check box **Fail Services**.
+> - To collect Exporter statistics data, select the check box **Exporter Statistics**.
+> - The Exporter only collects failed times that accrue during the processing and setup time, i.e., times that are located outside of the paused and of the unplanned time.
+> - Waiting times only accrue during the times when the Exporter is available, i.e., when these times are located outside of the paused, the unplanned, and the failed times.
+> - The Exporter stays at the station to which it is brokered while this station is failed, paused, or stopped. Statistics does not count this time as waiting.
+
+### Statistics Items
+
+| Item | Description | Read-only attribute |
+|------|-------------|---------------------|
+| Services — Processing | Portion of the processing time of the services of the overall statistics time, weighted with the capacity. | `StatServicesWorkingPortion` |
+| Services — Setting-up | Portion of set-up time of the services of the overall statistics time, weighted with the capacity. | `StatServicesSetupPortion` |
+| Services — Repairing | Portion of the repairing time of the overall statistics time, weighted with the capacity. | `StatServicesRepairingPortion` |
+| Services — Waiting | Portion of the waiting time of the services for an importer, plus the time the services spent waiting for a part at the importer, weighted with the capacity. | `StatServicesWaitingPortion`, `StatServicesWaitingImpPortion`, `StatServicesWaitingMUPortion` |
+| Services — Failed | Portion of the failed time of the services of the overall statistics time, weighted with the capacity. | `StatServicesFailedPortion` |
+| Exporter — Operational | Portion of the statistics collection period during which the Exporter was operational, weighted with the capacity. | `StatExporterOperationalPortion` |
+| Exporter — Paused | Portion of the statistics collection period during which the Exporter was paused. | `StatExporterPausedPortion` |
+| Exporter — Unplanned | Portion of the statistics collection period during which the Exporter was unplanned. | `StatExporterUnplannedPortion` |
+| Exporter — Failed | Portion of the statistics collection period during which the Exporter was failed. | `StatExporterFailedPortion` |
+| Free Capacity | Capacity that is available at the moment. | `FreeCapacity` |
+| Mediated Capacity | Capacity that is brokered at the moment. | `MediatedCapacity` |
+| Free Capacity (sum) | Sum of the released capacity that the Exporter placed with any importer. | `StatSumFreeCapacity` |
+| Mediated Capacity (sum) | Sum of the capacities that are brokered at the moment. | `StatSumMediatedCapacity` |
+| Minimum Free Capacity | Minimum capacity that is available. Shows -1 if no valid value collected yet. | `StatMinFreeCapacity` |
+| Maximum Free Capacity | Maximum capacity that is available. Shows -1 if no valid value collected yet. | `StatMaxFreeCapacity` |
+| Minimum Mediated Capacity | Minimum occupied capacity. Shows -1 if no valid value collected yet. | `StatMinMediatedCapacity` |
+| Maximum Mediated Capacity | Maximum occupied capacity. Shows -1 if no valid value collected yet. | `StatMaxMediatedCapacity` |
+
+To view Exporter and Worker Statistics in the Statistics Report, select **View > Show Statistics Report** in the dialog of the object. You can also click the right mouse button in the Frame and select **Show Statistics Report**, or press **F6**.
+
+### Exporter Statistics
+
+To collect statistics data of the Exporter, select this check box. To deactivate statistics collection, clear the check box.
+
+**SimTalk:** `ExpStatOn`
+
+## Tab User-defined
+
+Define your own attributes as described under the *Tab User-defined*.
+
+## Navigate Menu
+
+The commands are described under the *Navigate Menu*.
+
+## View Menu
+
+The View Menu provides commands to access its functions:
+- Refresh (on View menu)
+- Show Statistics Report (on View menu)
+- Show Attributes and Methods (on View menu)
+- Importers
+- Exported Services
+- Associated Shift Calendar
+
+### Importers
+
+Opens a table which shows all importers for which the Exporter provides services. The table shows the path to and the names of the Importers and their Type: `0` designates the failure-importer, `1` the set-up-importer, `2` the processing-importer, and `3` the transport-importer.
+
+### Exported Services
+
+Opens a table which shows the names of all services which the Exporter exports at this time.
+
+**Remarks**
+- Double-click the name of a service to open a subtable.
+- The subtable shows the name of the Importer, its Type (`0` failure-importer, `1` set-up-importer, `2` processing-importer, `3` transport-importer) and the Amount of services provided.
+- Instead, you can also right-click the Exporter and select **Show Exported Services** on the context menu in the Frame.
+
+## Tools Menu
+
+The Tools Menu provides these menu commands:
+- **Edit Controls** > **Available Control**
+- **Edit Controls** > **Not Available Control**
+- **Edit Observers**
+
+### Available Control
+
+Modifies the built-in behavior of the object. The object calls the Available Control whenever the Exporter/Worker changes its state to available.
+
+**SimTalk:** `AvailableCtrl`
+
+### Not Available Control
+
+Modifies the built-in behavior of the object. The object calls the Not Available Control whenever the Exporter/Worker changes its state to not available.
+
+**SimTalk:** `NotAvailableCtrl`
+
+## Help Menu
+
+The commands are described under the *Help Menu*.
+
+## States of the Exporter
+
+During the simulation runs, Plant Simulation shows the state of the Exporter as one or more horizontally arranged cubes along the top of the picture of the object in the Frame. These states are designated by different colors.
+
+| State | Color of the Graphic |
+|-------|----------------------|
+| The Exporter is failed. | red |
+| The Exporter exports services. | green |
+| The Exporter is paused. | blue |
+
+## Methods of the Exporter
+
+The Exporter provides:
+- The methods listed in the table of contents to the left.
+- The Methods of All Objects.
+
+---
+
+## Related SimTalk Attributes Summary
+
+| Property | SimTalk Attribute |
+|----------|-------------------|
+| Services | `Services`, `hasService` |
+| Fail Services | `FailServices` |
+| Priority | `Priority` |
+| Capacity | `Capacity` |
+| Broker | `BrokerPath` |
+| Order Control | `OrderCtrl` |
+| Release Control | `ReleaseCtrl` |
+| Shift Calendar | `ShiftCalendarObject` |
+| Exporter Statistics | `ExpStatOn` |
+| Available Control | `AvailableCtrl` |
+| Not Available Control | `NotAvailableCtrl` |
+
+*Source: Plant Simulation Help — Unpublished work. © 2026 Siemens*

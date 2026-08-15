@@ -1,0 +1,111 @@
+# Read-Only Attributes of the Portioner
+
+## Syntax line conventions
+
+An example of the Syntax line of the individual methods might look like this:
+
+```
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+```
+
+- The expression `<Path>` designates the path of the object to which the method applies.
+- The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression `(Parameter:string)`, for example, designates a parameter of data type `string`. Instead of a constant value, you can also use a variable of the required type or a method that returns the required data type.
+
+> **Note**
+> Make sure to enter the parentheses for expressions within parentheses `(…)`. Not entering them may lead to unexpected results and open the Debugger.
+
+- Optional parameters are listed within brackets. The expression `[,Parameter:boolean]`, for example, means that you can, but do not have to enter the boolean parameter.
+- If a parameter has a default value, the signature shows the default value after the parameter, `:= false` in the example above.
+- If the method has a return value, the signature shows its data type after the arrow `->`, `→ boolean` in the example above.
+
+## Overview
+
+The Portioner provides:
+
+- The read-only attributes listed in the table of contents to the left.
+- The _Read-Only Attributes of the Fluid Objects.
+- The _Read-Only Attributes of All Objects.
+
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab Statistics.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show Attributes and Methods. The figure below illustrates the information using the example of the object Station.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.
+
+To query the value of a read-only attribute, you might, for example, type:
+
+```
+print Portioner.CurrentAmount
+```
+
+## CurrentAmount [SimTalk] - Portioner
+
+Returns the Current Amount of the fluid in the container of the Portioner designated by `<Path>`.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Path>.CurrentAmount → real
+```
+
+**Return Value**
+
+The return value has the data type `real`.
+The current amount is measured in liters.
+
+**Example**
+
+```
+print MyPortioner.CurrentAmount
+```
+
+**See also**
+
+- Current Amount [Portioner]
+
+## CurrentMaterial [SimTalk] - Portioner
+
+Returns the Current Material that flows into the Portioner designated by `<Path>`.
+
+**Remarks**
+
+The name is not case-sensitive, just like the names of attributes and methods of the objects are not case-sensitive.
+
+To save memory and improve access speed, all places which are using such a case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.
+
+In SimTalk you can compare strings in a case-insensitive manner with the `~=` operator, compare Relational Operators.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Path>.CurrentMaterial → string
+```
+
+**Return Value**
+
+The return value has the data type `string`.
+
+**Example**
+
+```
+print MyPortioner.CurrentMaterial
+```
+
+**See also**
+
+- Current Material [Portioner]
+- Relational Operators
+- Attributes of the Portioner
+
+## Attributes of the Portioner
+
+The Portioner provides the read-only attributes described above.

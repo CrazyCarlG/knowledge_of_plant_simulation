@@ -1,0 +1,117 @@
+# FileLink — General
+
+## Overview
+
+By default, Plant Simulation enters the entire path to the file into the text boxes **Label** and **Filename** of the FileLink.
+
+Plant Simulation opens a dialog asking whether you would like to embed the file into the Plant Simulation model or not:
+
+- If you click **Yes**, it copies the file into your Plant Simulation model file when you save the model file. When you open the model file the next time, Plant Simulation creates a temporary file which is a copy of the original file. If you are still editing an embedded file in its originating application while you save the Plant Simulation model file, Plant Simulation shows a message.
+- By default, Plant Simulation assigns the name `FileLink`, `FileLink1`, etc.
+
+To show the entire path of the file in the Frame window, select **View > Options > Show Object Labels in the Frame**.
+
+Double-click the icon in the Frame to open the application and the file for editing, provided the originating application is installed on the computer. If the link is invalid, Plant Simulation opens the dialog **FileLink** and shows the path and name of the invalid link in the text box **File Name**.
+
+> The FileInterface can only open the embedded files in the associated application with a double-click, after you clear the check box **File > Model Settings > General > Prohibit Access to the Computer**. The same applies for the method `openFile`.
+>
+> You can, on the other hand, open embedded text files (`.txt`) and embedded `.xps` files by double-clicking them even if **Prohibit Access to the Computer** is selected.
+
+> **Note:** You can create an `.xps` file in Microsoft Word with the command **Save As**. You can then use this xps file as you would a PDF file. Microsoft Windows contains a free viewer for xps files.
+
+You can open the dialog of the FileLink by right-clicking its icon and selecting **Open** on the context menu.
+
+To show a tooltip with information about the FileLink, hover with the mouse over it.
+
+To change the length of the graphic and the anchor points of the FileLink, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+## Add the Object to the Simulation Model
+
+To add the object FileLink to your simulation model, click **Manage Class Library > Basic Objects > InformationFlow > FileLink** on the Home ribbon tab.
+
+## Dialog Box of the FileLink
+
+Double-click the icon of the FileLink to open its dialog box.
+
+There you can change its simulation properties. The shared properties are described under **Dialog Items of the Objects**.
+
+### Edit 3D Graphic Properties
+
+To manipulate the graphic of the object, click **Show Manipulators** on the Edit ribbon tab or press **M** on the keyboard.
+
+To open the dialog box of the FileLink, which is linked to a file, right-click its icon and select **Open** on the context menu.
+
+To open the linked file in the application that is assigned to the respective file type, double-click the icon in the Frame. This assumes that this application is installed on the computer on which you open the file.
+
+## Tab Attributes
+
+The tab **Attributes** provides the settings that the object offers. The shared properties are described under the **Tab Attributes**.
+
+### Filename [FileLink]
+
+Click the folder icon, navigate to the folder where the file is located that you want to add, and select it.
+
+**Remarks:** Plant Simulation shows the path and the name of the linked file in this text box after you dragged a file from the Windows Explorer to the Plant Simulation Frame and dropped it there.
+
+**SimTalk:** `FileName [SimTalk] - FileLink`
+
+### Embed File [check box]
+
+To embed the file, which you dragged onto the Frame and dropped there, into the Plant Simulation model, select this check box.
+
+**Remarks:**
+
+- When you embed the file, this version of the file will become part of the simulation model, meaning Plant Simulation does not care when you move the original file to another location. Changes to the file after embedding it will naturally not be reflected. Embedding may significantly increase the file size of your `.spp` model file.
+- Clear the check box to create a link to the file in the file system of your computer. If you move or delete the file, the link will become invalid, and Plant Simulation will not be able to find the file and open it.
+
+> The FileInterface can only open the embedded files in the associated application with a double-click, after you clear the check box **File > Model Settings > General > Prohibit Access to the Computer**. The same applies for the method `openFile`.
+>
+> You can, on the other hand, open embedded text files (`.txt`) and embedded `.xps` files by double-clicking them even if **Prohibit Access to the Computer** is selected.
+
+> **Note:** You can create an `.xps` file in Microsoft Word with the command **Save As**. You can then use this xps file as you would a PDF file. Microsoft Windows contains a free viewer for xps files.
+
+**SimTalk:**
+
+- `Embed [SimTalk]`
+- `Prohibit Access to the Computer [model settings]`
+- `openFile [SimTalk]`
+
+## Tab User-defined
+
+Define your own attributes as described under the **Tab User-defined**.
+
+## Navigate Menu
+
+The commands are described under the **Navigate Menu**.
+
+## View Menu
+
+The View Menu provides commands to access its functions:
+
+- `Refresh [on View menu]`
+- `Show Attributes and Methods [on View menu]`
+
+**SimTalk:** `updateDialog [SimTalk]`
+
+## Tools Menu
+
+The Tools Menu provides these menu commands:
+
+- **Edit Controls**
+- **Edit Observers**
+
+## Help Menu
+
+The commands are described under the **Help Menu**.
+
+## Methods of the FileLink
+
+The FileLink provides:
+
+- The method `openFile [SimTalk]`.
+- The Methods of All Objects.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**:
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.

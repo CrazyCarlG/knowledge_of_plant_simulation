@@ -1,0 +1,127 @@
+# Methods of the CostAnalyzer
+
+The CostAnalyzer provides:
+
+- The methods listed in the table of contents to the left.
+- The Methods of All Objects.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. The figure below illustrates the information using the example of the object *Station*.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected **Class**.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected **Instance**.
+
+## Understanding the Syntax Line
+
+An example of the Syntax line of the individual methods might look like this:
+
+```
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+```
+
+- The expression `<Path>` designates the path of the object to which the method applies.
+- The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression `(Parameter:string)`, for example, designates a parameter of data type `string`. Instead of a constant value, you can also use a variable of the required type or a method that returns the required data type.
+
+> **Note**
+> Make sure to enter the parentheses for expressions within parentheses `(…)`. Not entering them may lead to unexpected results and open the Debugger.
+
+- Optional parameters are listed within brackets. The expression `[,Parameter:boolean]`, for example, means that you can, but do not have to enter the boolean parameter.
+- If a parameter has a default value, the signature shows the default value after the parameter, `:= false` in the example above.
+- If the method has a return value, the signature shows its data type after the arrow `->`, `→ boolean` in the example above.
+
+## Methods
+
+### getInvestmentCostsTable
+
+Returns the **Investment costs** table which the CostAnalyzer designated by `<Path>` computed.
+
+- **Type:** Method
+- **Syntax:**
+
+```
+<Path>.getInvestmentCostsTable → table
+```
+
+- **Return Value:** The return value has the data type `table`.
+
+**Example:**
+
+```
+CostAnalyzer.getInvestmentCostsTable.openDialog
+// open the table as a dialog
+```
+
+**See also:** [Investment Costs](#), [putInvestmentCostsIntoTable](#putinvestmentcostsintotable), Costs Shown in the Costs Report
+
+---
+
+### getPieceCostsTable
+
+Returns the **Piece costs** table which the CostAnalyzer designated by `<Path>` computed.
+
+- **Type:** Method
+- **Syntax:**
+
+```
+<Path>.getPieceCostsTable → table
+```
+
+- **Return Value:** The return value has the data type `table`.
+
+**Example:**
+
+```
+CostAnalyzer.getPieceCostsTable.openDialog
+// open the table as a dialog
+```
+
+**See also:** Costs Shown in the Costs Report, [Piece Costs](#), [putPieceCostsIntoTable](#putpiececostsintotable)
+
+---
+
+### putInvestmentCostsIntoTable
+
+Writes the **Investment costs**, the **Depreciation period**, and the **Operating costs**, which the CostAnalyzer designated by `<Path>` computed, into the specified DataTable.
+
+- **Type:** Method
+- **Syntax:**
+
+```
+<Path>.putInvestmentCostsIntoTable(DataTable:table)
+```
+
+- **Parameter:** The parameter `DataTable` of data type `table` designates the DataTable into which Plant Simulation writes the investment costs.
+
+**Example:**
+
+```
+CostAnalyzer.putInvestmentCostsIntoTable(MyInvestmentCosts)
+```
+
+**See also:** Costs Shown in the Costs Report, [getInvestmentCostsTable](#getinvestmentcoststable)
+
+---
+
+### putPieceCostsIntoTable
+
+Writes the **Piece costs**, which the CostAnalyzer designated by `<Path>` computed, into the specified DataTable.
+
+- **Type:** Method
+- **Syntax:**
+
+```
+<Path>.putPieceCostsIntoTable(DataTable:table)
+```
+
+- **Parameter:** The parameter `DataTable` of data type `table` designates the DataTable into which Plant Simulation writes the piece costs.
+
+**Example:**
+
+```
+CostAnalyzer.putPieceCostsIntoTable(MyPieceCosts)
+```
+
+**See also:** Costs Shown in the Costs Report, [getPieceCostsTable](#getpiececoststable)
+
+## Read-Only Attributes of the CostAnalyzer
+
+The CostAnalyzer provides the **Read-Only Attributes of All Objects**.

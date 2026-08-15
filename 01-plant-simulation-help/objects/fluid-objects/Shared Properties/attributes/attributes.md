@@ -1,0 +1,183 @@
+# Attributes of the Fluid Objects
+
+All fluid objects have attributes whose value you can set and query. An attribute corresponds to a dialog item, a check box or a command of a drop-down list, etc., on one of the tabs of the object.
+
+The fluid objects provide:
+
+- The attributes listed in the table of contents to the left.
+- The _Attributes of the Importer.
+- The Attributes of All Objects.
+
+The sub-chapters about the objects list additional attributes for these objects.
+
+All fluid objects have predefined attributes controlling their behavior or representing their state. You can set the value of an attribute and you can get its value, either using the check boxes, the text boxes and drop-down lists in the dialog windows or by assigning values to the corresponding attributes.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. You can:
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.
+
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+
+- To set the value of an attribute, you might, for example, type:
+
+```simtalk
+MyMixer.EntranceLocked := true
+```
+
+- To get the value of an attribute, you might, for example, type:
+
+```simtalk
+print MyMixer.EntranceLocked
+posit := MyStation.Cont.XPos
+```
+
+---
+
+## ResWorking [SimTalk] - fluid objects
+
+Returns if the fluid object designated by `<Path>` is Working (`true`) or not (`false`).
+
+- **Type:** Read-only attribute
+- **Syntax:**
+
+```simtalk
+<Path>.ResWorking → boolean
+```
+
+- **Return Value:** The return value has the data type `boolean`.
+
+### Example
+
+```simtalk
+print MyMixer.ResWorking
+```
+
+### See also
+
+- Working [state, material flow objects]
+- Attributes of the Fluid Objects
+
+---
+
+## EntranceLocked [SimTalk] - fluid objects
+
+Locks (`true`) or unlocks (`false`) the entrance of the fluid object designated by `<Path>`.
+
+- **Remarks:** You can also lock or unlock the entrance with the check box **Entrance Locked**.
+- **Type:** Attribute
+- **Syntax:**
+
+```simtalk
+<Path>.EntranceLocked:boolean
+```
+
+- **Assignment Value:** You can assign a value of data type `boolean`.
+
+### Example
+
+```simtalk
+MyMixer.EntranceLocked := true
+```
+
+### SimTalk
+
+- EntranceFree [SimTalk]
+
+### See also
+
+- Entrance Locked [fluid objects]
+
+---
+
+## ExitLocked [SimTalk] - fluid objects
+
+Locks (`true`) or unlocks (`false`) the exit of the fluid object designated by `<Path>`.
+
+- **Remarks:** You can also lock or unlock the exit with the check box **Exit Locked**.
+- **Type:** Attribute
+- **Syntax:**
+
+```simtalk
+<Path>.ExitLocked:boolean
+```
+
+- **Assignment Value:** You can assign a value of data type `boolean`.
+
+### Example
+
+```simtalk
+MyMixer.ExitLocked := true
+```
+
+### See also
+
+- Exit Locked [fluid objects]
+
+---
+
+## RandomSeed [SimTalk] - fluid objects
+
+Sets the seed values which are required for creating the random numbers of the fluid object designated by `<Path>` together with the Random Numbers Variant of the EventController.
+
+- **Remarks:**
+  - When you insert an object into your model, Plant Simulation automatically assigns a random number seed value to this object. You can query the next assigned random seed value with the function `setRandomSeedCounter(0)`. After the object is created, Plant Simulation increases this counter by 1, so that the next object gets a different random seed value.
+  - If you assign the same random number seed value to two objects, these two objects will generate the same sequence of random numbers, for example for Processing Times which use a distribution, etc.
+- **Note:** The seed value affects the random number stream of the fluid object which is used for the Set-up Time and other times. It also affects the random number streams of the failure profiles, and the random number streams of user-defined attributes of data type `RandTime`. Plant Simulation makes sure that all of these random number streams are initialized differently. This means that changing the attribute `RandomSeed` causes the random number stream of the fluid object and also the random number streams of all failure profiles and user-defined attributes to generate a new sequence of random numbers, and all of these streams will generate different sequences of numbers.
+- **Type:** Attribute
+- **Syntax:**
+
+```simtalk
+<Path>.RandomSeed:integer
+```
+
+- **Assignment Value:** You can assign a value of data type `integer`.
+
+### Example
+
+```simtalk
+MyMixer.RandomSeed := 40
+```
+
+### SimTalk
+
+- IncrementRandomNumbersVariantOnReset [SimTalk]
+- setRandomSeedCounter [SimTalk]
+
+### See also
+
+- Simulating Random Processes
+- Random Seed Value
+- Increment Variant on Reset of the EventController
+- Random Numbers Variant of the EventController
+- Data Types [SimTalk]
+
+---
+
+## SetupTime [SimTalk] - fluid objects
+
+Sets the duration of the Set-up Time of the fluid object designated by `<Path>`.
+
+- **Remarks:**
+  - A fluid object has to set up whenever the name of the next material differs from the name of its preceding material.
+  - The set-up time is the time it takes to set the object up for processing a different type of material. An identical name designates that materials are of the same type.
+- **Type:** Attribute
+- **Syntax:**
+
+```simtalk
+<Path>.SetupTime:time
+```
+
+- **Assignment Value:** You can assign a value of data type `time`.
+
+### Example
+
+```simtalk
+MyMixer.SetupTime := 120 // 2 minutes
+```
+
+### See also
+
+- Set-up Time [general description]
+- Times and Distributions
+- Pipe

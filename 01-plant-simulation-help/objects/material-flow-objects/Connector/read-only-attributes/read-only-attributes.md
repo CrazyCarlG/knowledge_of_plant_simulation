@@ -1,0 +1,177 @@
+# Read-Only Attributes of the Connector
+
+## Overview
+
+The Connector provides:
+
+- The read-only attributes listed in the table of contents.
+- The `_Read-Only Attributes of All Objects`.
+- The `Read-Only Attributes of the Material Flow Objects`.
+
+You can query the values of the read-only attributes, but you cannot set them, as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab Statistics.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**. The figure below illustrates the information using the example of the object Station.
+
+You can:
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class [general description].
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance [general description].
+
+To query the value of a read-only attribute, you might, for example, type:
+
+```simtalk
+print Connector.SuccInterface
+```
+
+---
+
+## PredInterface [SimTalk]
+
+Returns the direct predecessor object of the Connector designated by `<Connector-Path>`.
+
+**Remarks**
+
+If the preceding object is a Frame, `PredInterface` returns the Interface object, as opposed to the method `pred`, which returns the Frame.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Connector-Path>.PredInterface → object
+```
+
+**Return Value**
+
+The return value has the data type object.
+
+**Example**
+
+```simtalk
+print Connector2.predinterface
+```
+
+---
+
+## PredLane [SimTalk] - Connector
+
+Returns the lane of a TwoLaneTrack whose end point is connected with the Connector designated by `<Connector-Path>`.
+
+**Remarks**
+
+The predecessor lane is the lane which leads to the Connector in the forward direction.
+
+If the predecessor is not a TwoLaneTrack, `PredLane` returns the predecessor object.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Connector-Path>.PredLane → any
+```
+
+**Return Value**
+
+The return value has the data type any.
+
+**Example**
+
+```simtalk
+print Connector2.PredLane
+```
+
+---
+
+## SuccInterface [SimTalk]
+
+Returns the direct successor object of the Connector designated by `<Connector-Path>`.
+
+**Remarks**
+
+If the succeeding object is a Frame, `SuccInterface` returns the Interface object, as opposed to the method `succ`, which returns the Frame.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Connector-Path>.SuccInterface → object
+```
+
+**Return Value**
+
+The return value has the data type object.
+
+**Example**
+
+```simtalk
+print connector2.SuccInterface
+```
+
+---
+
+## SuccLane [SimTalk] - Connector
+
+Returns the lane of a TwoLaneTrack whose starting point is connected with the Connector designated by `<Connector-Path>`.
+
+**Remarks**
+
+The successor lane is the lane to which the Connector leads in the forward direction.
+
+If the successor is not a TwoLaneTrack, `SuccLane` returns the successor object.
+
+**Type**
+
+Read-only attribute
+
+**Syntax**
+
+```
+<Connector-Path>.SuccLane → any
+```
+
+**Return Value**
+
+The return value has the data type any.
+
+**Example**
+
+```simtalk
+print Connector2.SuccLane
+```
+
+---
+
+## connect Method Reference
+
+> The optional parameter `SideOfConverterEnd` of data type integer is only required when you insert a Connector between two Converters.
+>
+> `SideOfConverterStart` then designates the side of the source Converter. The parameter `SideOfConverterEnd` of data type integer designates the side of the target Converter at which the Connector ends.
+
+**Return Value**
+
+The return value has the data type object: the Connector that has been created.
+
+**Examples**
+
+```simtalk
+.Materialflow.Connector.connect(Station, Store)
+.Materialflow.Connector.connect(Station, Interface3)
+.Materialflow.Connector.connect(T1, T2)
+// connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.A)
+// connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.B)
+// connects the exit of T1 with the exit of T2
+.Materialflow.Connector.connect(T1.B, T2.A)
+// connects the entrance of T1 with the entrance of T2
+.MaterialFlow.Connector.connect("TwoLaneTrack1.B", "TwoLaneTrack2.A")
+// connects lanes of two-laned tracks
+```

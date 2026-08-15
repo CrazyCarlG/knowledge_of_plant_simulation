@@ -1,0 +1,292 @@
+# Methods of the Variable
+
+## Reading the Contents of a Variable
+
+To access the contents of the Variable designated by `<Path>`, use its name.
+
+### Syntax
+
+```
+<Path>
+```
+
+### Example
+
+```
+MyTable[1,1] := MyVariable
+```
+
+## Overview
+
+The object Variable provides the methods listed in the table of contents to the left.
+
+> **Note:** You can only access the methods of the object Variable that refer to the object itself via the reference operator `&`. Without the operator, the method will be applied to the contents of the Variable.
+
+### Example
+
+```
+.MyPlant.&MyVariable.openDialog
+```
+
+### Also compare
+
+- Assigning a Value to a Variable
+- Calling the Contents of a Variable
+- Reading the Contents of a Variable
+- The Methods of All Objects
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.
+
+An example of the Syntax line of the individual methods might look like this:
+
+```
+<Path>.openDialog([CallOpenControl:boolean:=false]) → boolean
+```
+
+- The expression `<Path>` designates the path of the object to which the method applies.
+- The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression `(Parameter:string)`, for example, designates a parameter of data type string. Instead of a constant value, you can also use a variable of the required type or a method that returns the required data type.
+
+> **Note:** Make sure to enter the parentheses for expressions within parentheses `(…)`. Not entering them may lead to unexpected results and open the Debugger.
+
+Optional parameters are listed within brackets. The expression `[,Parameter:boolean]`, for example, means that you can, but do not have to enter the boolean parameter.
+
+If a parameter has a default value, the signature shows the default value after the parameter, `:= false` in the example above.
+
+If the method has a return value, the signature shows its data type after the arrow `->`, `→ boolean` in the example above.
+
+---
+
+## & [SimTalk] - Variable
+
+The `&` operator/reference operator returns the reference of the Variable instead of its contents.
+
+### Remarks
+
+The `&` operator applies to SimTalk 2.0.
+
+### Type
+
+Method/operator
+
+### Syntax
+
+```
+&Variable → object
+<PathToVariable>.&Variable → object
+```
+
+### Return Value
+
+The return value has the data type `object`.
+
+### Example
+
+```
+print &myVariable.location // might return .Models.Model.Frame
+```
+
+### See also
+
+- & [SimTalk] - reference operator
+
+---
+
+## create [SimTalk] - Variable
+
+Creates a data structure without contents for the Variable designated by `<Path>`.
+
+### Remarks
+
+A Variable of data type stack, queue, list and table does not contain the data itself, but references to the respective data structures. Before using a Variable of these types, Plant Simulation has to create the data structure. Only then it can access the actual data. Any existing references will be overwritten.
+
+### Type
+
+Method/operator
+
+### Syntax
+
+```
+<Path>.create
+```
+
+### Example
+
+```
+orderList.create -- creates the Variable with the name orderList
+orderList.insert(1,"A-No. 4712")
+```
+
+---
+
+## getStatisticsTable [SimTalk] - Variable
+
+Returns the statistics table of the Variable designated by the reference operator `<&>`.
+
+### Remarks
+
+If the Variable is of data type string, Plant Simulation always shows the string values in the first column in lower case letters.
+
+### Type
+
+Method
+
+### Syntax
+
+```
+<&>Variable.getStatisticsTable([TargetTable:table]) → any
+```
+
+### Parameter
+
+The optional parameter `TargetTable` of data type table designates the table to which the method `getStatisticsTable` writes the statistics data.
+
+### Return Value
+
+The return value has the data type `any`.
+
+- `true` if statistics collection is activated.
+- `false` if statistics collection is deactivated. Then the table remains unaltered.
+- The table containing the statistics data if statistics collection is activated, if you do not specify the optional parameter.
+- `void` if statistics collection is deactivated.
+
+### Examples
+
+```
+&MyVariable.getStatisticsTable(mystatisticstable)
+// Writes the statistics values to the table named mystatisticstable.
+// The return value is true if statistics collection is activated.
+// It is false if it is deactivated. Then the table remains unaltered.
+
+&MyVariable.getStatisticsTable
+// The return value is the statistics table if statistics
+// collection is activated. It is void if statistics collection is
+// deactivated.
+```
+
+### See also
+
+- Statistics Table [Variable]
+
+---
+
+## increment [SimTalk] - Variable
+
+Adds a value to the Variable designated by the reference operator `<&>`.
+
+### Remarks
+
+The method only applies to numerical data types. It applies to the object Variable and to user-defined attributes.
+
+### Type
+
+Method
+
+### Syntax
+
+```
+<&>Variable.increment
+<&>Variable.increment(Value:integer)
+```
+
+### Parameter
+
+The method `increment` without parameter adds the value 1 to the Variable.
+
+The method `increment(Value)` adds the Value designated by the parameter of data type integer to the Variable.
+
+### Example
+
+```
+x := &MyVariable.increment(-3) // accomplishes the same as
+                               // Variable := Variable - 3 x := Variable
+```
+
+---
+
+## ref [SimTalk] - Variable
+
+The `ref(Path)` operator returns the reference of the Variable designated by `<Path>` instead of its contents.
+
+### Remarks
+
+The `ref` operator applies to SimTalk 1.0.
+
+### Type
+
+Method/operator
+
+### Syntax
+
+```
+ref(Path) → object
+```
+
+### Return Value
+
+The return value has the data type `object`.
+
+### Example
+
+```
+print ref(MyVariable).location
+```
+
+---
+
+## rollDice [SimTalk]
+
+Creates a new random number and saves it to the Variable designated by `<Path>`.
+
+### Remarks
+
+`rollDice` applies to Variables of data type randtime.
+
+### Type
+
+Method
+
+### Syntax
+
+```
+<Path>.rollDice → time
+```
+
+### Return Value
+
+The return value has the data type `time`.
+
+### Example
+
+```
+for var i := 1 to 10
+   variable.rolldice // new random number
+   print variable    // output random numbers
+next
+```
+
+---
+
+## Read-Only Attributes of the Variable
+
+The Variable provides:
+
+- The read-only attribute `asString` [SimTalk] - Variable.
+- The Read-Only Attributes of All Objects.
+
+> **Note:** You can only access the read-only attributes of the object Variable, which refer to the object itself, via the reference operator `&`.
+
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation computes the value for the point-in-time at which you query it. In most cases a read-only attribute corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab Statistics.
+
+To view all of the methods, read-only attributes, and attributes of the object, open the window **Show Attributes and Methods**.
+
+- Select **Show Attributes and Methods** on the context menu of the Class Library to show the methods, read-only attributes, and attributes of the selected Class.
+- Press the **F8** key or click **Show Attributes and Methods** on the Home ribbon tab of the Frame into which you inserted an instance to show the methods, read-only attributes, and attributes of the selected Instance.
+
+To query the value of a read-only attribute, you might, for example, type:
+
+```
+print &MyVariable.AsString
+```
