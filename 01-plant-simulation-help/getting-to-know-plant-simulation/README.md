@@ -48,6 +48,6 @@
 ## 目录说明
 
 - `getting-to-know-plant-simulation.md`：认识 Plant Simulation 章节的 Markdown 版本（本总结的源文件）。
-- 本目录无子文件夹，故无子文件夹 README.md。
+- `folder-model/`：文件夹模型（Folder Model）专题——`.psfm` 目录结构、`saveFolderModel`/`loadModel`、Git 支持。
 
 *来源：Plant Simulation Help — "Getting to Know Plant Simulation"。Unpublished work. © 2026 Siemens.*
