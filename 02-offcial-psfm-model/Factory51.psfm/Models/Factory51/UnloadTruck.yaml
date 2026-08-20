@@ -1,0 +1,42 @@
+InternalClassType: Method
+Coordinate3D: [-45.6495,-12.3142,-0.01]
+Name: UnloadTruck
+Origin: 9f30bc1b-41d7-47fb-8f86-a224b3f18060
+Program: |+1
+ param CurrentTruck:object
+ 
+ TrucksArrived += 1
+ 
+ var forklift := AGVPool.Cont
+ 
+ while not CurrentTruck.Empty
+ 	forklift.Backwards := true
+ 	forklift.setRoute([M_RoadTurn,M_Road])
+ 	forklift.moveFork(0.4)
+ 	waituntil forklift.DestinationWasReached
+ 
+ 	forklift.Backwards := false
+ 	forklift.setRoute([M_Truck])
+ 	forklift.moveFork(1.5)
+ 	waituntil forklift.DestinationWasReached
+ 
+ 	wait 3
+ 	CurrentTruck.Cont.move(forklift)
+ 
+ 	forklift.Backwards := true
+ 	forklift.setRoute([M_Road])
+ 	waituntil forklift.DestinationWasReached
+ 
+ 	forklift.Backwards := false
+ 	waituntil not StoreEntry.Full
+ 	forklift.setRoute([M_RoadTurn,M_StoreEntry])
+ 	forklift.moveFork(0.5)
+ 	waituntil forklift.DestinationWasReached
+ 
+ 	wait forklift.moveFork(0.05)
+ 	forklift.cont.move(StoreEntry)
+ end
+ 
+ CurrentTruck.Stopped := false
+RandomSeed: 1073748308
+UUID: 019f044c-ab8a-730a-8797-32395ebc64f4

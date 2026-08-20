@@ -1,0 +1,23 @@
+InternalClassType: HtmlReport
+Content: |+1
+ [!self, Header, *]
+ # General Information
+ ## Overview
+ * Model file: [=modelFile]
+ * Simulation root: [EventController.Location]
+ * Simulation time: [EventController.SimTime]
+ * End time: [EventController.End]
+ * Generated on: [=sysdate]
+ 
+ ## Model
+ ><[current, *]
+ 
+ # KPIs
+ ## Drain Statistics
+ [.MaterialFlow.Drain*]
+ ## Cost Analysis
+ [CostAnalyzer]
+
+Coordinate3D: [36.1722,-49.0126,0]
+Origin: 1d388fb9-8b54-4908-975b-4d9b22547218
+UUID: 019f044c-ab8a-7306-b7aa-388e2165e42b

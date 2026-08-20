@@ -1,0 +1,28 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,-5,0]
+Name: addProduct
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // add the product and the number of parts to table Content
+ 
+ Param product : string, Quantity : integer
+ 
+ 
+ var stock := Content
+ 
+ var row : integer := stock.getRowNo(Product)
+ 
+ if row<=0 then
+ 	row := Stock.YDim+1
+ 	Stock[0,row] := product
+ 	Stock[1,row] := Quantity
+ 	
+ else
+ 	Stock[1,row] += Quantity
+ end
+RandomSeed: 2250
+UUID: ac37dc57-f42b-4324-b262-6a9bab983864
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

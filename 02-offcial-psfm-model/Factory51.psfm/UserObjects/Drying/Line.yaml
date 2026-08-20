@@ -1,0 +1,14 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Backwards: false
+Coordinate3D: [-2,0,0]
+Length: 4
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073745751
+Speed: 1
+UUID: 019f044c-ab8a-700c-b0c0-c75993e7403e
+3D:
+ $ExtSegments:
+  - 0
+  - [0,4,0]
+InheritEntranceExitLockedOnReset: false

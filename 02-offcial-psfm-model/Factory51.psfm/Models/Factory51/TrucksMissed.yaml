@@ -1,0 +1,15 @@
+InternalClassType: Variable
+Color: 1048704
+Coordinate3D: [-41,-43,1]
+Font: 4
+HasInitValue: true
+InitValue: 0
+Name: TrucksMissed
+Origin: 68fe277b-ec69-4b6f-a15e-c7b69fca78c7
+UUID: 019f044c-ab8a-72db-8b24-649c18b5ddc8
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+$DataType: integer
+Value: 0

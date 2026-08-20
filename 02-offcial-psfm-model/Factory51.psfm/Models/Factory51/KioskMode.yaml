@@ -1,0 +1,84 @@
+InternalClassType: Checkbox
+Coordinate3D: [31.1,-55.5,1]
+Label: "Kiosk Mode"
+Name: KioskMode
+Origin: 0a7a710a-4dc2-41b0-9f38-522020e303e3
+RandomSeed: 1073748558
+UUID: 019f044c-ab8a-72e9-b86d-74e1a7b45c74
+Value: false
+3D:
+ Rotation: [45,1,0,0]
+ Scale: [1.2,1.2,1.2]
+ VisibleGraphicGroups: ["default","false"]
+$CustomAttributes:
+-
+ Name: Init
+ ID: 1
+ DataType: method
+ Value: |+1
+  if not self.~.Value then return end
+  F3DconfigureView([-15.028, -157.895, 60.769], 66.199, -12.708, .Models.Factory51);
+  infobox("Welcome to Tecnomatix Plant Simulation!", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil TrucksArrived > 0
+  F3DconfigureView([-24.432, -59.155, 17.675], 67.918, 15.367, .Models.Factory51);
+  infobox("☞ Material Delivery ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.Line17.NumMU > 0
+  F3DconfigureView([-22.209, -57.796, 18.170], 55.313, -14.427, .Models.Factory51);
+  infobox("☞ Polishing and Milling ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.Line5.NumMU > 0
+  F3DconfigureView([-20.671, -60.316, 11.267], 57.032, -16.719, .Models.Factory51);
+  infobox("☞ Painting ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.Line12.NumMU > 0
+  F3DconfigureView([-5.127, -62.678, 15.571], 59.324, -14.427, .Models.Factory51);
+  infobox("☞ Post Processing ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.Line20.NumMU > 0
+  wait 5
+  F3DconfigureView([-0.150, -55.017, 16.829], 65.626, -15.000, .Models.Factory51);
+  infobox("☞ Quality Control ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.Line18.StatNumOut = 2
+  F3DconfigureView([2.760, -57.546, 16.801], 54.167, -45.940, .Models.Factory51);
+  infobox("☞ Loading of AGVs ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil P1.PickAndPlaceAGV.StatNumOut = 2
+  wait 12
+  F3DconfigureView([27.532, -21.318, 12.399], 64.480, -19.584, .Models.Factory51);
+  infobox("☞ Loading of Palettes ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil Line1.StatNumOut = 1
+  F3DconfigureView([20.186, -11.990, 16.071], 70.210, -76.307, .Models.Factory51);
+  infobox("☞ Palettes entering the High Bay Warehouse ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  Warehouse.WMS.removeProducts("1", "Aubergine0", 20*12)
+  waituntil Line4.NumMU > 2
+  F3DconfigureView([25.088, -44.493, 17.480], 69.637, -53.388, .Models.Factory51);
+  infobox("☞ Shipment ☜", false); wait 8; infobox("", false)
+  
+  if not self.~.Value then return end
+  waituntil Line712.StatNumIn = 8
+  F3DconfigureView([-15.028, -157.895, 60.769], 66.199, -12.708, .Models.Factory51); // Total
+  wait 60
+  
+  if not self.~.Value then return end
+  F3DconfigureView([68.742, -82.980, 19.408], 56.199, -1.708, .Models.Factory51); // Logo
+  wait 20
+  
+  if self.~.Value
+  	EventController.reset
+  	EventController.start
+  end
+ ShowInTooltip: false

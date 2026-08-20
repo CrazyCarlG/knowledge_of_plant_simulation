@@ -1,0 +1,35 @@
+InternalClassType: Conveyor
+Coordinate3D: [41.025,10.805,0]
+EntranceLocked: false
+Length: 4
+Name: Line15
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746519
+Speed: 1
+UUID: 019f044c-ab8a-72ef-8a15-53669c758f51
+Width: 0.5
+3D:
+ BaseHeight: 0.5
+ $ExtSegments:
+  - 0
+  - [179.99999999999986,4,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72ee-9353-ac7f8c17a61a
+ Name: Connector55
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7324-8ed1-94a110e8bfd1
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 1.9
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: false
+ Rear: true
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

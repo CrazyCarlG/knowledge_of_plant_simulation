@@ -1,0 +1,27 @@
+InternalClassType: Buffer
+Capacity: 1
+Coordinate3D: [-40.37,-19.2,-0.01]
+ExitCtrl: "StorageArea.storing"
+Name: StoreEntry
+Origin: 3ed203d7-35be-411a-87c0-e4b9f159c208
+RandomSeed: 1073747548
+UUID: 019f044c-ab8a-72fb-9154-e39d7d2515fe
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [0,0,0.01,0,0,0,-1,~]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.96,0.76,1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.76,1]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,54 @@
+InternalClassType: Conveyor
+Coordinate3D: [40.2,15,0]
+Length: 15.488637671181113
+Name: Line1
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746109
+Speed: 1
+UUID: 019f044c-ab8a-72bf-aaf1-73b821bb9eac
+3D:
+ $ExtSegments:
+  - 0
+  - [0,8,0]
+  - [0,3.8,-0.5]
+  - [0,90,2,-0.3]
+  - [0,0.5,0]
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  // Only load empty palettes
+  if @.Empty
+  	@.Stopped := true
+  	
+  	stopuntil @.Full
+  	wait 1
+  	@.Stopped := false
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-730d-a99e-d58903eb3c62
+ Name: Connector11
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-731f-a13b-133c1f8edff0
+$Predecessors:
+- 019f044c-ab8a-731b-bbbb-90862ce10b4c
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 2.1999999999999993
+ FromEnd: false
+ Control: "self.OnSensor1"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

@@ -1,0 +1,27 @@
+InternalClassType: DataTable
+Coordinate3D: [-14.5,0,0]
+Name: PredefinedRacks
+Origin: b42ffed0-3791-455e-bfc4-f0af2e614549
+UUID: 3b124767-51f9-4b91-aa26-1db35d2acdcc
+3D:
+ Rotation: [0,0,0,-1]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 2
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Width: 28
+  -
+   Index: 2
+   Width: 19
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,3,~,"Product","Rack Lane"]
+ Columns:

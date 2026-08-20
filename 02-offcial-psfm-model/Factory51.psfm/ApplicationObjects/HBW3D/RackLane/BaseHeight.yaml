@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-10,-2,0]
+DataType: length
+Name: BaseHeight
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: 7dcd92e8-3af6-4927-a7b4-f893b4abe703
+$Observers:
+- [Value,"onChanges"]
+Value: 1

@@ -1,0 +1,30 @@
+InternalClassType: Variable
+Alignment: "Left"
+BackgroundColor: 14474460
+ChangePathCtrl:
+Color: 0
+Comment: ""
+ConstructorCtrl:
+Coordinate3D: [1,-1,0]
+CreateIn3D: false
+DataType: boolean
+DecimalPlaces: -1
+DestructorCtrl:
+DragDropCtrl:
+Font: 1
+HasInitValue: false
+InitCtrl:
+IntegerPlaces: -1
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: DialogActive
+OpenCtrl:
+PlausibilityCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowDataType: false
+ShowUnit: true
+StatisticsActive: false
+Transparent: false
+UUID: d34b88e3-85d9-4b15-a11f-94c50a6f3158
+Value: false

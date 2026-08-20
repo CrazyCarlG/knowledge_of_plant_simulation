@@ -1,0 +1,75 @@
+InternalClassType: Method
+Coordinate3D: [-14.5,-12,0]
+Name: removeProducts
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Remove products from store. Look for Pallets which will fit the requested
+ // quantity of products. May be we have to use several pallets to satisfy the request
+ // If the OrderNo is not "0" a custom attribute with name HBW_OrderNo will be created
+ // which gets this order number assigned.
+ //--------------------------------------------------------------------------------
+ param OrderNo: string, product: string, quantity: integer
+ 
+ // check if the requested quantity is at stock
+ var StockRow: integer := Content.getRowNo(Product)
+ if StockRow <= 0 then
+ 	debug -- The requested product could not be found in the warehouse
+ else
+ 	if Content[1, StockRow] < quantity then
+ 		debug -- Not enough parts at stock
+ 	else
+ 		// look for a pallet which fits the requested quantity
+ 		var ProductRow: integer := Inventory.getRowNo(Product)
+ 
+ 		if ProductRow <= 0 then
+ 			debug -- Product not in warehouse
+ 		else
+ 			var done: boolean := false
+ 			var Rest: integer := Quantity
+ 			var PalletList:= Inventory["Pallets", ProductRow]
+ 
+ 			repeat
+ 				// find a pallet with the number of parts close to the requested quantity
+ 				PalletList.setCursor(1,1)
+ 				var found: boolean := PalletList.findCeil({2,1}..{2,*}, Rest)
+ 				if PalletList.CursorY > 0 then
+ 					var PalletRow := PalletList.CursorY
+ 
+ 					// remove the pallet
+ 					var Pallet: object := PalletList["Pallet", PalletRow]
+ 					var numProducts: integer := PalletList["Quantity", PalletRow]
+ 
+ 					var Racklane: object
+ 					var Side: string
+ 					var column, row: integer
+ 
+ 					getPalletLocation(Pallet, Racklane, Side, Column, Row)
+ 
+ 					if Racklane /= void then
+ 						Racklane.appendOrder(Column, Row, side, OrderNo)
+ 
+ 						// remove the quantity in stock
+ 						removeProduct(Product, numProducts)
+ 
+ 						// remove the entry in table Inventory
+ 						PalletList.cutRow(PalletRow)
+ 
+ 						// calculate the rest
+ 						Rest -= numProducts
+ 					else
+ 						debug -- No racklane found for product
+ 						done := true
+ 					end
+ 				else
+ 					debug -- No entry found in table Inventory for product
+ 					done := true
+ 				end
+ 			until Rest<=0 or done
+ 		end
+ 	end
+ end
+RandomSeed: 2256
+UUID: f6cf5fe5-0c31-4784-8ad8-321a554fdba9
+3D:
+ VisibleGraphicGroups: ["default","User"]

@@ -1,0 +1,23 @@
+InternalClassType: Converter
+Coordinate3D: [11,6,0]
+DefaultExit: 1
+Length: 1
+Name: Converter9
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746028
+UUID: 019f044c-ab8a-704e-8dd7-752c75fc4daa
+3D:
+ $ExtSegments:
+  - 0
+  - [0,1,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7117-9335-785e04636418
+ Name: Connector43
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70ab-bc94-db176cbf247c
+$Predecessors:
+- 019f044c-ab8a-70ba-816b-47f4a5ec9008
+InheritEntranceExitLockedOnReset: false
+$Side1: 019f044c-ab8a-70ab-bc94-db176cbf247c
+$Side2: 019f044c-ab8a-70ba-816b-47f4a5ec9008

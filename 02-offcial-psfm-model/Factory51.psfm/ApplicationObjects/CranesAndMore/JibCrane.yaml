@@ -1,0 +1,336 @@
+InternalClassType: Station
+AutomaticProcessing: false
+AutomaticSetup: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,-10,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+DestructorCtrl:
+DragDropCtrl:
+EnergyActive: false
+EntranceCtrl: "self.OnEntrance"
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: JibCrane
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+ProcTime: 0
+PullCtrl: "self.OnPull"
+RandomSeed: 1
+RecoveryTime: 0
+RecoveryTimeMode: "When part enters"
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Production"
+ResStatOn: true
+SelectCtrl:
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+SetupAttrName: ""
+SetupCtrl:
+SetupForType: true
+SetupOnlyWhenEmpty: false
+SetupTime: 0
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: c07392db-113c-47f5-b039-f6c8ea4a8f8c
+3D:
+ AnimationObject: "Arm.Slider.Gripper"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: true
+ MUAnimations:
+ MUSideToAttach: "Top"
+ NameLabelEnabled: false
+ NameLabelPosition: [-1,-0.95,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Vertical"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,3.4]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [1,0,0]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 5
+  JointDeceleration: 5
+  JointLowerLimit: -120
+  JointLowerLimitActive: true
+  JointType: "Revolute Joint"
+  JointUpperLimit: 120
+  JointUpperLimitActive: true
+  JointUseShortestRotationDirection: false
+  JointVelocity: 10
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Arm
+  Position: [0.2,0,2.78]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: 8b481f56-1f1a-4c1f-8590-d1af88653f48
+  VisibleGraphicGroups: ["default"]
+  $Objects:
+  -
+   AniRotationAxis: [0,0,-1]
+   AniRotationCenter: [0,0,0]
+   AniTranslationDirection: [1,0,0]
+   GraphicGroupNames: ["default"]
+   JointAcceleration: 0.2
+   JointDeceleration: 0.2
+   JointLowerLimit: 0
+   JointLowerLimitActive: true
+   JointType: "Prismatic Joint"
+   JointUpperLimitActive: false
+   JointVelocity: 0.5
+   LockedGraphicGroups: []
+   MaterialActive: false
+   Mirror: [false,false,false]
+   MUAnimations:
+   Name: Slider
+   Position: [0.2,0,0]
+   Rotation: [0,0,0,-1]
+   Scale: [1,1,1]
+   SelfAnimations:
+   ShowContent: true
+   UUID: d8e355fb-2987-4c43-b0f7-8302da5a89f2
+   VisibleGraphicGroups: ["default"]
+   $Objects:
+   -
+    AniRotationAxis: [0,0,-1]
+    AniRotationCenter: [0,0,0]
+    AniTranslationDirection: [0,0,1]
+    GraphicGroupNames: ["default"]
+    JointAcceleration: 0.2
+    JointDeceleration: 0.2
+    JointLowerLimitActive: false
+    JointType: "Prismatic Joint"
+    JointUpperLimit: 0
+    JointUpperLimitActive: true
+    JointVelocity: 0.5
+    LockedGraphicGroups: []
+    MaterialActive: false
+    Mirror: [false,false,false]
+    MUAnimations:
+    -
+     Name: "Default"
+     AnchorPoints:
+     - [0,0,0,-90,0,0,-1,~]
+    Name: Gripper
+    Position: [0,0,-0.02]
+    Rotation: [0,0,0,-1]
+    Scale: [1,1,1]
+    SelfAnimations:
+    ShowContent: true
+    UUID: 9471f0ef-64ab-4885-b378-6595db95d174
+    VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - vb29xMTExsbGvb29wsLCxsbGxMTEwsLCxsbGw8PDv7+/xMTExsbGw8PDwcHBxcXFwcHBwsLCxcXFxsbGw8PDwsLCwsLCwcHBv7+/wcHBwsLCv7+/vb29vLy8v7+/vb29v7+/wsLCvLy8urq6xMTExMTEwcHBxcXF
+ - xcXFxMTExcXFwcHBv7+/xcXFxMTExcXFxMTExMTEv7+/xMTEw8PDw8PDwsLCwcHBvr6+vb29vr6+vr6+v7+/wMDAwMDAvLy8wcHBwsLCwsLCw8PDw8PDwMDAwcHBxMTExMTEw8PDxMTEw8PDvr6+xMTExMTExMTE
+ - xcXFxMTExMTEw8PDurq6wsLCwcHBwMDAwMDAwcHBvr6+vb29wcHBwcHBwsLCw8PDw8PDvr6+w8PDxcXFxcXFxMTExcXFwsLCwsLCxcXFxcXFxcXFxMTExMTEwMDAxMTExcXFxcXFxMTExsbGwcHBwMDAxMTEwsLC
+ - wMDAwsLCwcHBwsLCvLy8wMDAw8PDxMTExMTExMTExMTEwMDAxcXFxcXFxcXFxcXFxsbGwcHBwcHBxsbGxcXFxcXFxcXFxcXFwMDAxMTExMTExMTExMTExMTEv7+/vLy8wcHBwMDAwMDAwMDAwMDAurq6v7+/wsLC
+ - xcXFxcXFxcXFxsbGxMTFv7+/xsbGxcXFxsbGxcXFxsbGwsLCxMTExcXFxcXFxcXFxMTExcXFvb29w8PDwsLCw8PDwcHBwcHBvr6+vLy8wcHBwcHBwsLCwsLCwsLCvr6+wsLCxMTExMTExcXFxcXFxMTEv7+/xcXF
+ - xcXFxsbGxsbGxsbGwsC6vb28xMTExcXFxcXFxMTExMTEwsLCvb29wsLCwsLCwcHBwcHBwcHBvb29v7+/w8PDw8PDxMTExMTExcXFwcHBxcXFxcXFxcXFxcXFxcXFxcXFwMDAxcXFxcXFxcXFxcXFx8fHw8PDwcHB
+ - w8PDwsLCw8PDwMDAn52Uvry5vby7wsLCwsLCw8PDw8PDxMTEwcHBxMTExsbGxsbGxsbGxsbGxsbGwMDAxsbGxsbGxsbGxcXFxcXFxMTEwcHBx8fHxcXFxsbGxcXFxsbGw8PDwsLCxcXFxMTEw8PDwsLCwsLCvb29
+ - w8PDxMTExcTExMXGoqapsLzOsrvJyMfGx8fFyMfGx8bFx8bGxsbFw8PCxsbFx8fGxsXFx8bGxsbGxMPDw8PDx8fGxsXFxsbGxsbFxsbFwMC/wsLCwsLCwsLCwsLCwcHBwcHAvLu6wcC/xMPBxMPAxsTBxsTCw8PD
+ - xcXFyMjIycjGrbfHRJXZFJXmTZreuMLQvsTNv8bQwMfPwcXMw8fNvsLIwsbMw8bLxMfMw8bLwsTGxMXHvL7AwsPEw8PEwsLDwsPDxMTExMTEwcHAxsXEx8bFyMfFxsfHxMfKvcLLtb7MsL7SpbnTlrLUnrTQxsbG
+ - wsLCx8fHysrKpKWmAE2DcomlJm6iO4zHR47HS5HJR47HTo7HU5HLUpLNT5XPWJjOXJjOVJXKX5THZ5rNXpXOYZrSaaLXaaDVZqDUcqPTcaLUbZ7Sc6HUd6fZb6PUYZrPUpLLRYzGQ4jBTIi8W4q4aY60jqC3x8fH
+ - wcHBwsLCxcXFnJ2eAEp7cYehboObsrGwu7q5vLy7t7e4ubu9tLi+r7a/pK68orHDkqfBhKHEc5zHWZLIGYPFAH7FAHW6AG+tDGqeMGqXSnOaYX+hcYmmg5eukqGyoKm1rLG3tLe6vLy9vLu7w8LBxsXDxsXDwcHB
+ - xMTExcXFysrKoaKjAE1+eoykRHKcna/GprvVmbXWiKzVeqXUaJ3RWZbNTY/ISYvDUIq+XYy6bJC2fJa0jZ6zmqWzo6qzsbW6ubu+vsDBwsLDxcXExMPCxMPCxsXExcTDxcTDxMTDxMTDwcHAwMDAxcXFxMTExsbG
+ - yMjIw8PDy8rKnZ+gAE5/a4OfAF+WAGyqAG6naIuxfpazj5+znKa0qK62s7a6tre4wMDAxMPCxsTDxsXDxsXDxcXDv769xcTDxcTExcXExcXEw8PDxcTEwMDAxsbGx8fHx8fHx8fHx8fHx8fHwcHBxsbGx8fHx8fH
+ - yMjIw8PDysrKoaKkAE2AFoDFW4Wyb5K7ip25xMK/yMbFx8bFxsbExcTDxcTDwMDAw8PCxcXFxMTExsbGx8fHx8fHw8PDxcXFyMjIx8fHx8fHyMjIyMjIxsbGw8PDyMjIx8fHx8fHx8fHx8fHxsbGwsLCx8fHyMjI
+ - xsbGwcHBxMTDmpydAEl+mKi+wcTIxsbGw8PDv76+x8fHxsbGx8fHx8fHyMjIyMjIw8PDyMjIyMjIyMjIx8fHyMjIx8fHxMTEyMjIx8fHyMjIyMjIyMjIyMjIw8PDx8fHyMjIx8fHyMjIx8fHx8fHwsLCwsLCxMTE
+ - xcXFxcXFxsbFn6CiAEmAsbjCzMvJycnJyMjIv7+/x8fHyMjIyMjIyMjIyMjIycnJxMTEx8fHyMjIyMjIyMjIx8fHyMjIxcXFxsbGyMjIyMjIx8fHxsbGxcXFxMTEv7+/xMTEw8PDxMTEw8PDw8PDxMTEv7+/xsbG
+ - ycnJycnJxsbGl5mbAEyBsbjCy8rJyMjIycnJw8PDxMTEycnJycnJycnJycnJycnJx8fHxMTEyMjIxsbGxsbGxcXFxMTExMTEv7+/w8PDxMTExMTExcXFxcXFxsbGwsLCxcXFyMjIyMjIyMjIyMjIyMjIxsbGxcXF
+ - yMjIycnJycnJlpiaAE6Ds7rDy8vKyMjIyMjIx8fHv7+/x8fHxcXFxMTExMTEw8PDxMTEvr6+w8PDxcXFxMTExsbGxsbGyMjIxsbGxcXFycnJycnJyMjIycnJycnJyMjIw8PDyMjIyMjIyMjIyMjIyMjIyMjIw8PD
+ - yMjIyMjIysrKio2QAFGFsbfAx8fGxMTExMTExcXFvb29xMTExsbGx8fHx8fHycnJycnJx8fHxsbGysrKycnJycnJyMjIycnJyMjIxcXFyMjIycnJx8fHyMjIycnJycnJxcXFxcXFyMjIycnJycnJyMjIyMjIyMjI
+ - xcXFxcXFycnJkpWYAFKFtrzDy8vKysrKycnJycnJxsbGwsLCysrKysrKycnJycnJycnJycnJxMTEycnJycnJyMjIycnJycnJyMjIyMjIxsbGycnJysrKycnJyMjIyMjIx8fHwsLCxsbGxcXFxcXFxMTEw8PDxMTE
+ - ysrKycnJzczMkZOWAFSHuL3EzMzLysrKysrKysrKysrKwcHBycnJycnJysrKysrKycnJysrKx8fHxsbGycnJysrKycnJx8fHx8fHx8fHw8PDxsbGw8PDw8PDxcXFxcXFxMTEw8PDw8PDx8fHyMjIyMjIycnJycnJ
+ - ysrKysrKzc3NkpWYAFSIub7Fy8vKysrKysrKy8vLy8vLwsLCxcXFysrKycnJyMjIx8fHxsbGxsbGwMDAxMTExcXFxMTExMTExsbGx8fHx8fHx8fHycnJyMjIycnJycnJycnJycnJxMTEycnJysrKycnJycnJysrK
+ - yMjIysrKzs7NkJOWAFiKu7/FysrJyMjIyMjIxsbGxcXFxMTEvb29xcXFxsbGxsbGxsbGx8fHyMjIxcXFx8fHysrKy8vLy8vLysrKy8vLy8vLxsbGy8vLy8vLysrKysrKysrKycnJyMjIxcXFycnJysrKysrKycnJ
+ - ycnJxcXFycnJjZCUAFiKt7vBycjIxsbGx8fHyMjIyMjIy8vLwsLCx8fHysrKy8vLysrKysrKysrKycnJxcXFy8vLysrKysrKycnJyMjIysrKyMjIx8fHysrKycnJyMjIy8vLy8vLysrKxsbGycnJysrKycnJycnJ
+ - yMjIycnJzc3NjZGVBFuMuLzBzczMy8vLysrKy8vLy8vLysrKx8fHxMTEysrKy8vLysrKysrKysrKy8vLxcXFycnJysrKysrKy8vLy8vLycnJysrKxsbGyMjIycnJycnJyMjIx8fHxsbGxMTEwcHBxsbGxMTEx8fH
+ - ysrKy8vLzc3Nh4uPI2GQu77Cy8rKysrKysrKy8vLy8vLysrKy8vLw8PDysrKy8vLzMzMysrKy8vLy8vLyMjIxcXFysrKyMjIx8fHx8fHxcXFxcXFxMTEwsLCxsbGx8fHxcXFyMjIycnJycnJxsbGycnJysrKysrK
+ - zc3Ny8vLz87OiY2SIGCPvsDEysrJzMzMy8vLy8vLy8vLy8vLzMzMxMTExcXFycnJyMjIx8fHx8fHxsbGxcXFwsLCxsbGxsbGyMjIycnJyMjIysrKysrKxsbGysrKy8vLysrKy8vLy8vLysrKysrKxsbGysrKysrK
+ - y8vLy8vLzMzMbXeEAGCZq7O+yMfGycnJx8fHyMjIxsbGxsbGx8fHxMTEv7+/yMjIyMjIycnJysrKysrKy8vLysrKx8fHy8vLy8vLy8vLysrKy8vLy8vLyMjIx8fHysrKysrKy8vLzMzMysrKy8vLx8fHx8fHy8vL
+ - x8fHycnIsLS6CElvAGihYYCjwsLDx8fHysrKycnJycnJzMzMzMzMy8vLw8PDysrKy8vLy8vLy8vLy8vLy8vLy8vLxsbGy8vLy8vLysrKysrKy8vLy8vLy8vLxsbGysrKy8vLy8vLzMzMzMzMy8vLysrKxsbGy8vL
+ - y8rKzczLdYqkAD9sB2icAF2UqrK8zczLzMzMy8vLy8vLy8vLzMzMzc3Nx8fHxcXFzMzMzMzMzMzMzMzMy8vLy8vLycnJycnJzMzMy8vLzc3Ny8vLzMzMzMzMx8fHycnJycnJyMjIx8fHxsbGw8PDw8PDwMDAvr6+
+ - y8zMlKvKAF2QA0VqCmKTAFqOZH+dxcbHzczMzMzMy8vLzMzMzMzMzMzMy8vLw8PDzMzMzMzMzMzMzMzMzMzMzMzMy8vLxcXFycnJyMjIxsbGxcXFxcXFxMTEwcHBvr6+xMTExcXFxcXFyMjIysrKysrKy8vLx8fH
+ - xMnRLnu3AGehClWDCWOWCIfQAIraqrrRzszKzMzMzMzMzMzMzc3NzMzMzMzMxMTEx8fHycnJx8fHxcXFw8PDw8PDxMTEwMDAwcHBxsbGx8fHycnJysrKysrKysrKycnJycnJzc3Nzc3NzMzMzMzMy8vLzMzMy8vL
+ - ysrKcKPaAJfxAJftAIXRAJv2MZ/wusLOycjGycnJx8fHxcXFxcXFw8PDxMTEwsLCvb29xsbGx8fHycnJysrKy8vLy8vLzMzMx8fHzc3NzMzMzMzMy8vLy8vLy8vLzMzMx8fHzMzMzMzMzMzMzMzMzMzMy8vLzMzM
+ - xcXEwcTIiKjRWZ3fZKPifKrerLfHxcTCv7+/xsbGx8fHycnJysrKzMzMy8vLzc3NxcXFy8vLzMzMzMzMzc3NzMzMzMzMzc3NyMjIysrKzMzMzMzMzc3NzMzMzMzMzMzMycnJycnJy8vLy8vLzMzMzMzMzMzMzMzM
+ - wcHBx8fGy8nGysnHzczM0M7Lz87Mzc3NyMjIy8vLzs7OzMzMzMzMzc3NzMzMzc3Nx8fHx8fHzc3NzMzMzMzMzMzMzMzMzc3Ny8vLyMjIzMzMzMzMzc3NzMzMzc3Nzc3Nzc3NxsbGy8vLzMzMzc3Ny8vLysrKycnJ
+ - ysrKzMzMzs7Ozc3Nzc3Nzc3NzMzMzc3NysrKycnJzc3NzMzMzc3Nzc3NzMzMzMzMy8vLxMTEzc3Nzc3NzMzMzc3Nzc3Nzc3Nzc3NyMjIzMzMzc3NzMzMy8vLysrKysrKysrKxcXFwsLCycnJyMjIyMjIycnJy8vL
+ - ycnJysrKzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzMzMyMjIzc3NzMzMzc3Nzc3NzMzMzc3Nzs7OxsbGysrKzs7OzMzMzMzMy8vLysrKycnJx8fHxMTEyMjIyMjIyMjIycnJysrKy8vLzMzMxcXFzc3Nzc3Nzc3Nzc3NzMzM
+ - zs7OyMjIzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NycnJzMzMzc3Nzc3NzMzMzMzMysrKycnJxsbGwcHByMjIyMjIycnJysrKysrKy8vLzMzMyMjIzMzMzc3Nzc3Nzc3Nzs7Ozc3Nzc3Ny8vLycnJzc3NzMzMzMzMzc3N
+ - zs7OyMjIzc3Nzs7Ozs7Ozc3NzMzMysrKysrKx8fHxcXFx8fHyMjIycnJy8vLy8vLy8vLzMzMxcXFzMzMzc3Nzc3Nzc3Nzc3Nzc3Nzc3Ny8vLysrKzs7Ozc3NzMzMzc3Nzc3Nzc3Nzc3NxsbGzc3Nzs7Ozs7OzMzM
+ - xcXFw8PDx8fHysrKycnJxsbGysrKzMzMzs7Oy8vLx8fHzs7Oz8/Pzs7Oy8vLzMzMzs7O0NDQycnJx8fHz8/Pzs7Oz8/Py8vLy8vLzc3Nzs7OycnJy8vLzc3Nz8/Pz8/Pzc3Ny8vLzs7OzMzMysrKy8vLzMzMzs7O
+$CustomAttributes:
+-
+ Name: OnPull
+ ID: 422081195
+ DataType: method
+ Value: |+1
+  var mu = ?.FwBlockListEntry1
+  
+  if mu /= void
+  	?.EnforceProcessing = true
+  	var arm     = self.~._3D.getObject("Arm")
+  	var slider  = arm.getObject("Slider")
+  	var gripper = slider.getObject("Gripper")
+  	var poses   = self.~._3D.Poses
+  
+  	// Move Arm
+  	arm.moveToMU(mu)
+  	waituntil poses.EndPoseWasReached
+  
+  	// Move Slider
+  	slider.moveToMU(mu)
+  	waituntil poses.EndPoseWasReached
+  
+  	// Move Gripper
+  	gripper.moveToCoordinate(gripper.getPositionOfObject(mu, [0,0,mu.MUHeight]))
+  	waituntil poses.EndPoseWasReached
+  
+  	mu.move(?,0)
+  	?.EnforceProcessing = false
+  end
+ ShowInTooltip: false
+-
+ Name: OnEntrance
+ ID: 3595346202
+ DataType: method
+ Value: |+1
+  ?.EntranceLocked = true
+  ?.EnforceProcessing = true
+  
+  var part := @
+  var destObj = ?.succ
+  var arm     = self.~._3D.getObject("Arm")
+  var slider  = arm.getObject("Slider")
+  var gripper = slider.getObject("Gripper")
+  var destPos = destObj._3D.getMUAnimationPosition
+  var poses   = self.~._3D.Poses
+  
+  destPos.z += @.MUHeight
+  
+  // Move Gripper to turn height
+  gripper.moveTo(?.TurnHeight)
+  waituntil poses.EndPoseWasReached
+  
+  // Move Arm
+  arm.moveToMUAnimationPosition(part, destObj)
+  waituntil poses.EndPoseWasReached
+  
+  // Move Slider
+  slider.moveToMUAnimationPosition(part, destObj)
+  waituntil poses.EndPoseWasReached
+  
+  // Move Gripper
+  gripper.moveToMUAnimationPosition(part, destObj)
+  waituntil poses.EndPoseWasReached
+  
+  @.move(destObj)
+  
+  // Move Gripper to turn height
+  gripper.moveTo(?.TurnHeight)
+  waituntil poses.EndPoseWasReached
+  
+  // If no MU is in block list we turn to default orientation
+  if ?.FwBlockListEntry1 = void
+  	arm.moveTo(0.0)
+  	waituntil poses.EndPoseWasReached
+  end
+  
+  ?.EnforceProcessing = false
+  ?.EntranceLocked = false
+ ShowInTooltip: false
+-
+ Name: TurnHeight
+ ID: 2730858136
+ DataType: length
+ Value: -0.5
+ ShowInTooltip: false
+$ProcImp:
+ Active: false
+ Services:
+ - [~,["Processing",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ CommonResources: true
+$FailImp:
+ Active: false
+ Services:
+ - [~,["Failure",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+$TransportImp:
+ Active: false
+ Services:
+ - "Transport"
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: true

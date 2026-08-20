@@ -1,0 +1,151 @@
+InternalClassType: Track
+Coordinate3D: [26.9819,-4.3,0]
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: false
+ExitCtrlRear: true
+Length: 20.825985307179597
+Origin: eb7ce655-9157-4e1c-b259-07719da6af27
+RandomSeed: 1073746064
+UUID: 019f044c-ab8a-7053-8d14-8b8acdfab855
+Width: 0.2
+3D:
+ BaseHeight: 0.01
+ ExtConfiguration:
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa6dd,0x292929,0x0,0x0,0,0]
+ $ExtSegments:
+  - 0
+  - [-180,3.2828999999999997,0]
+  - [0,90,2,0]
+  - [0,7.9426000000000112,0]
+  - [0,90,2,0]
+  - [0,3.3173000000000004,0]
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.stopped := true
+  
+  wait _3D.getObject("AGV_Door1").moveTo(2)
+  
+  @.stopped := false
+ ShowInTooltip: false
+-
+ Name: OnSensor2
+ ID: 2
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  _3D.getObject("AGV_Door1").moveTo(0)
+ ShowInTooltip: false
+-
+ Name: OnSensor3
+ ID: 3
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.stopped := true
+  
+  wait _3D.getObject("AGV_Door2").moveTo(2)
+  
+  @.stopped := false
+  
+  PlatesInProduction -= 6
+ ShowInTooltip: false
+-
+ Name: OnSensor4
+ ID: 4
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  _3D.getObject("AGV_Door2").moveTo(0)
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 5
+ DataType: method
+ Value: "TPH := self.~.statNumIn / (EventController.SimTime / 3600)"
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7056-8fd0-e620227d9e08
+ Name: Connector60
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70e0-9449-c030158cbe19
+$Predecessors:
+- 019f044c-ab8a-708d-adff-9579f678e847
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 2
+ $CreatedHere: true
+ PositionAbs: 0.9
+ FromEnd: false
+ Control: "self.OnSensor1"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false
+-
+ Id: 3
+ $CreatedHere: true
+ PositionAbs: 3.9
+ FromEnd: false
+ Control: "self.OnSensor2"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 12.500000000000009
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true
+-
+ Id: 4
+ $CreatedHere: true
+ PositionAbs: 17.799999999999962
+ FromEnd: false
+ Control: "self.OnSensor3"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false
+-
+ Id: 5
+ $CreatedHere: true
+ PositionAbs: 20.600000000000009
+ FromEnd: false
+ Control: "self.OnSensor4"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false

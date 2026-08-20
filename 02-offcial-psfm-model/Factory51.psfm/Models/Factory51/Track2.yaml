@@ -1,0 +1,36 @@
+InternalClassType: Track
+Coordinate3D: [38.933,-32.8097,0]
+Length: 20.838077960769425
+Name: Track2
+Origin: eb7ce655-9157-4e1c-b259-07719da6af27
+RandomSeed: 1073746513
+UUID: 019f044c-ab8a-72ea-a5a9-d352b66852f6
+Width: 0.2
+3D:
+ BaseHeight: 0.01
+ ExtConfiguration:
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa6dd,0x292929,0x0,0x0,0,0]
+ $ExtSegments:
+  - 0
+  - [90.000000000000185,0.59220000000002193,0]
+  - [0,90,2,0]
+  - [0,6.923,0]
+  - [0,-90,2,0]
+  - [0,3.8981000000000257,0]
+  - [0,90,2,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-737e-9575-86163a006b77
+ Name: Connector48
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7342-b238-9c6e72907f3d
+$Predecessors:
+- 019f044c-ab8a-7340-a166-0e9047c914f0
+InheritEntranceExitLockedOnReset: false

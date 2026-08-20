@@ -1,0 +1,117 @@
+InternalClassType: Method
+Coordinate3D: [-15,8,0]
+Label: ""
+Name: InitRackLane
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Constructor method to create the Rack lane
+ //---------------------------------------------------------------------------
+ 
+ // set the width of converter and Line
+ Line.width := ConveyorWidth
+ converter1.width := conveyorWidth
+ converter2.width := conveyorWidth
+ 
+ // set the parameter of Converter1
+ converter1.length := BoxDepth + 2*RackYOffset
+ converter1.speed := ConveyorSpeed
+ 
+ var position := Converter1._3D.Position
+ position.x := 0
+ position.y := 0
+ converter1._3D.Position := position
+ converter1._3D.BaseHeight := BaseHeight
+ 
+ // set the position and length of the connecting line
+ position.x := 0
+ position.y := -Converter1.length
+ line._3D.Position := position
+ line.length := TrackWidth + 2*SafetyDistance - 4*RackYOffset
+ line._3D.BaseHeight := BaseHeight
+ 
+ // set the parameter of Converter2
+ converter2.length := BoxDepth + 2*RackYOffset
+ converter2.speed := ConveyorSpeed
+ 
+ position := Converter2._3D.Position
+ position.x := 0
+ position.y := -Converter1.length - Line.length
+ converter2._3D.Position := position
+ converter2._3D.BaseHeight := BaseHeight
+ 
+ // set the position and parameter of IN
+ IN.length:= ConveyorLength
+ IN.width := BoxDepth + 2*RackYOffset
+ IN.speed := ConveyorSpeed
+ 
+ position := IN._3D.Position
+ position.x := conveyorWidth/2
+ position.y := -BoxDepth/2 - RackYOffset
+ IN._3D.Position := position
+ IN._3D.BaseHeight := BaseHeight
+ 
+ // set the position and parameter of OUT
+ out.length := ConveyorLength
+ out.width := BoxDepth + 2*RackYOffset
+ out.speed := ConveyorSpeed
+ position := out._3D.Position
+ out._3D.BaseHeight := BaseHeight
+ 
+ var oldPosition := position
+ position.x := ConveyorWidth/2 + ConveyorLength
+ position.y := -1.5*BoxDepth - 2*SafetyDistance - TrackWidth + RackYOffset
+ out._3D.Position := position
+ var PositionDiff := [position.x - oldPosition.x, position.y - oldPosition.y, position.z - oldPosition.z]
+ 
+ 
+ // draw left rack and set the store parameter
+ createRack(RackLeft)
+ 
+ // calculate the position of RackLeft
+ // we need to position the center point of the rack
+ 
+ position := RackLeft._3D.Position
+ RackLeft._3D.Position := [IN._3D.Position.x + IN.length, IN._3D.Position.y, position.z + PositionDiff.z]
+ // draw RackRight and set store parameter
+ createRack(RackRight)
+ 
+ // calculate the position of RackRight
+ position := RackRight._3D.Position
+ RackRight._3D.Position := [RackLeft._3D.Position.x, out._3D.Position.y, position.z + PositionDiff.z]
+ 
+ // set the position of the interfaces
+ position := MainEntrance._3D.Position
+ position[1] := 0
+ position[2] := 0
+ position[3] := BaseHeight
+ 
+ MainEntrance._3D.Position := position
+ 
+ position := SideEntrance._3D.Position
+ position[1] := -converter1.width/2
+ position[2] := -converter1.length/2
+ position[3] := BaseHeight
+ 
+ SideEntrance._3D.Position := position
+ 
+ position := converter2._3D.Position
+ position[1] := 0
+ position[2] := position[2] - converter2.length
+ position[3] := BaseHeight
+ 
+ Exit._3D.Position := position
+ 
+ // set the position and parameters of the RSU
+ var RackLength : length := NumberOfColumns*BoxWidth + (NumberOfColumns+1)*Gap
+ var TrackLength := conveyorWidth/2 + ConveyorLength + SafetyDistance + RackLength
+ 
+ RSU_Height:= NumberOfRows * BoxHeight + GroundClearance + FloorThickness * (NumberOfRows+1)
+ RSU.ParametrizeRSU(RSU_Height, TrackWidth, TrackLength, min(BoxWidth, ConveyorLength))
+ RSU.SetSpeeds(RSU_speed, RSU_acceleration, RSU_deceleration, LoadHandler_speed, Carrier_speed)
+ 
+ position := RSU._3D.Position
+ var ConveyorMiddlePosition := RSU._3D.getPositionOfObject(In, In._3D.getMUAnimationPosition(0.5))
+ RSU._3D.Position := [ConveyorMiddlePosition.x + position.x, (IN._3D.Position.y + Out._3D.Position.y)/2, position.z + PositionDiff.z]
+RandomSeed: 2269
+UUID: 98955b69-103a-42d8-9560-65b8d76cca17

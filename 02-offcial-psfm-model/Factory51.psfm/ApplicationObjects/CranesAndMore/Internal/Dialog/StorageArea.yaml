@@ -1,0 +1,823 @@
+InternalClassType: Dialog
+ArgumentForApply: "Apply"
+ArgumentForClose: "Close"
+ArgumentForOpen: "Open"
+CallbackMethod: "self.Callback"
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [2,-2,0]
+CreateIn3D: false
+DestructorCtrl:
+DialogX: -1
+DialogY: -1
+DragDropCtrl:
+InitCtrl:
+Label: ""
+Locked: false
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: StorageArea
+OpenCtrl:
+OpenModal: false
+PlausibilityCtrl:
+RandomSeed: 3954
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowStandardButtons: true
+UUID: 16629cc8-95d0-48ee-9c81-6b3944bb305a
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/v7+/v7+/v7+/v7+/v7+/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/wAA/v7+/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon2"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////////////////////////gICA////////////////////////gICA////////////////////////gICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICAAAAAgICAvr6+AAAA////vr6+gICAAAAAgICAvr6+AAAA////vr6+AAAAgICAvr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+gICA////////////////////////////////////////////////////////////////////////////////gICAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAvr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////AAAA////AAAAAAAA////////vr6+vr6+gICA////////vr6+AAAAAAAAvr6+AAAAAAAAvr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAA////gICAAAAAgICA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAAgICA////AAAAAAAA////////////vr6+vr6+gICA////////vr6+AAAAgICAvr6+AAAAAAAAgICAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////gICAAAAA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICA////////////////////////////////////////vr6+vr6+AAAA////////vr6+AAAAgICAAAAAgICAvr6+AAAAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gICA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+gICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+AAAAgICAAAAAvr6+vr6+AQEBvr6+vr6+////vr6+AQEBAQEBgICAAQEBAAAAvr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // initialize the input fields of the dialog
+  //
+  // Parameters	:
+  // ReturnValues	: none
+  //
+  // Called By	: open interaction of dialog
+  // Calls		:
+  //--------------------------------------------------------------------------------
+  
+  param action : string
+  
+  var dialog : object := self.~
+  var Store : object := dialog.openedBy
+  
+  switch action
+  case "Open"
+  	dialog.initDialog
+  
+  case "OK", "ok", "Apply"
+  	dialog.applyDialog
+  
+  case "Close"
+  	Store.openedDialog := void
+  	dialog.deleteObject
+  
+  // menue items
+  // navigate menu
+  case "openLocation"
+  	Store.~.openDialog
+  
+  case "openOrigin"
+  	if Store.Origin /= void
+  		Store.Origin.openDialog
+  	end
+  
+  case "gotoOrigin"
+  	if Store.origin/= void
+  		Store.origin.openDialog
+  		dialog.close( false )
+  	end
+  
+  case "openClass"
+  	if Store.class /= void
+  		Store.class.openDialog
+  	end
+  
+  case "gotoClass"
+  	if Store.class /= void
+  		Store.class.openDialog
+  		dialog.close( false )
+  	end
+  
+  // view menue
+  case "refresh"
+  	Dialog.dialogInit
+  
+  case "statisticsReport"
+  	// not implemented so far
+  
+  case "contents"
+  	// not implemented so far
+  
+  case "lockoutZone"
+  	// not implemented so far
+  
+  case"calendar"
+  	// not implemented so far
+  
+  
+  // help menue
+  case "helpObject"
+  	// open the help file of the library
+  	.ApplicationObjects.CranesAndMore.MultiPortalCraneDocumentation.show
+  
+  // dialog items
+  // area tab
+  case "AreaLength"
+  	var areaX : length := str_to_num(dialog.getValue("AreaLength_inp"))
+  	var numX : integer := str_to_num(dialog.getValue("NumberStoreX_inp"))
+  	var storeX : length := areaX/numX
+  	dialog.setValue("StoreLength_inp", to_str(storeX))
+  
+  case "AreaWidth"
+  	var areaY : length := str_to_num(dialog.getValue("AreaWidth_inp"))
+  	var numY : integer := str_to_num(dialog.getValue("NumberStoreY_inp"))
+  	var storeY : length := areaY/numY
+  	dialog.setValue("StorageWidth_inp", to_str(storeY))
+  
+  case "StoreLength"
+  	storeX := str_to_num(dialog.getValue("StoreLength_inp"))
+  	numX := str_to_num(dialog.getValue("NumberStoreX_inp"))
+  	areaX := storeX * numX
+  	dialog.setValue("AreaLength_inp", to_str(areaX))
+  
+  case "StoreWidth"
+  	storeY := str_to_num(dialog.getValue("StorageWidth_inp"))
+  	numY := str_to_num(dialog.getValue("NumberStoreY_inp"))
+  	areaY := storeY * numY
+  	dialog.setValue("AreaWidth_inp", to_str(areaY))
+  
+  case "StoreX"
+  	numX := str_to_num(dialog.getValue("NumberStoreX_inp"))
+  	storeX := str_to_num(dialog.getValue("StoreLength_inp"))
+  	areaX := storeX * numX
+  	dialog.setValue("AreaLength_inp", to_str(areaX))
+  
+  case "StoreY"
+  	numY := str_to_num(dialog.getValue("NumberStoreY_inp"))
+  	storeY := str_to_num(dialog.getValue("StorageWidth_inp"))
+  	areaY := storeY * numY
+  	dialog.setValue("AreaWidth_inp", to_str(areaY))
+  
+  case "StoreZ"
+  	// no special action required
+  
+  
+  // controls tab
+  case "StoriingCtrl"
+  	var methString : string := dialog.getValue("StoringCtrl_inp")
+  	var p : integer := strLpos(".", methString)
+  	if p=0 and methString/="" then
+  		// no point in string, just the name of the method
+  		if not Store.~.isNameUnique(methString) then
+  			// method is defined in the surrounding frame
+  			var methObj : object := str_to_obj(to_str(Store, ".~.", methString))
+  		else
+  			// method not defined in frame
+  			methObj := void
+  		end
+  	elseif p=1 then
+  		// absolute path of the method
+  		methObj := str_to_Object(methString)
+  	else
+  		// a relative path to the method
+  		methObj := str_to_obj(to_str(Store, ".", methString))
+  	end
+  
+  	dialog.setCaption("StoringCtrl_inp", makePathRelative(methObj, Store))
+  
+  
+  case"StoringCtrlSel"
+  	methString := openObjectSelectBox("Method", Store)
+  
+  	p := strLpos(".", methString)
+  
+  	if p=0 and methString/="" then
+  		// a relative path to the method
+  		methObj := str_to_obj(to_str(Store, ".~.", methString))
+  	elseif p=1
+  		// absolute path of the method nothing to do
+  		methObj := str_to_Obj(methString)
+  	end
+  
+  	dialog.setCaption("StoringCtrl_inp", makePathRelative(methObj, Store))
+  
+  // removing tab
+  case "AutomaticRemove"
+  	var checked : boolean := dialog.getCheckbox("AutomaticRemove_chk")
+  
+  	dialog.setSensitive("RemoveInterval_txt", checked)
+  	dialog.setSensitive("RemoveInterval_inp", checked)
+  
+  case "RemoveInterval"
+  	var duration : time := str_to_time(dialog.getValue("RemoveInterval_inp"))
+  	dialog.setCaption("RemoveInterval_inp", to_str(duration))
+  
+  
+  // Barred area tab
+  case "BarredArea"
+  	Store.BarredAreas.InheritContents := false
+  	Store.BarredAreas.openDialogBox
+  
+  
+  // Settings Tab
+  case "AssignedCrane"
+  	var objString : string := dialog.getValue("AssignedCrane_inp")
+  	var obj : object := rootfolder.Internal.Methods.checkObject(objString, Store)
+  
+  	dialog.setCaption("AssignedCrane_inp", makePathRelative(obj, Store))
+  
+  case "Entrance"
+  	objString := dialog.getValue("EntranceStation_inp")
+  	obj := rootfolder.Internal.Methods.checkObject(objString, Store)
+  
+  	dialog.setCaption("EntranceStation_inp", makePathRelative(obj, Store))
+  
+  case "Exit"
+  	objString := dialog.getValue("ExitStation_inp")
+  	obj := rootfolder.Internal.Methods.checkObject(objString, Store)
+  
+  	dialog.setCaption("ExitStation_inp", makePathRelative(obj, Store))
+  
+  case "Content"
+  	Store.Content.OpendialogBox
+  
+  case "Layout"
+  	Store.Layout.openDialogBox
+  
+  end
+ ShowInTooltip: false
+-
+ Name: openedBy
+ ID: 2
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: initDialog
+ ID: 3
+ DataType: method
+ Value: |+1
+  // Method Tasks: 
+  // initialize the input fields of the dialog
+  //
+  // Parameters	: 
+  // ReturnValues	: none
+  //
+  // Called By	: open interaction of dialog
+  // Calls		: 
+  //
+  // Author		: Guido Groß
+  // Date			: 30.09.2016
+  //
+  // History:
+  // 16.11.2017	GG	recalculate the space for one MU, may be the area dimension was
+  //					modified interactivly
+  // 15.02.2018	GG	replace AppObject by Store
+  //--------------------------------------------------------------------------------
+  
+  
+  var dialog := self.~
+  var Store := dialog.openedBy
+  
+  var AreaLength : length := Store._3D.Dimensions[1]
+  var AreaWidth : length := Store._3D.Dimensions[2]
+  
+  var l_unit : string := getUnit(AreaLength)
+  
+  dialog.setCaption("Name_inp", Store.name)
+  dialog.setCaption("Label_inp", Store.Label)
+  
+  // Tab Area
+  dialog.setCaption("AreaLength_inp", to_str(AreaLength))
+  dialog.setCaption("AreaLength_unit", l_unit)
+  
+  dialog.setCaption("AreaWidth_inp", to_str(AreaWidth))
+  dialog.setCaption("AreaWidth_unit", l_unit)
+  
+  dialog.setCaption("StoreLength_inp", to_str(AreaLength/Store.XDim))
+  dialog.setCaption("StoreLength_unit", l_unit)
+  dialog.setCaption("StorageWidth_inp", to_str(AreaWidth/Store.YDim))
+  dialog.setCaption("StorageWidth_unit", l_unit)
+  
+  dialog.setCaption("NumberStoreX_inp", to_str(Store.XDim))
+  dialog.setCaption("NumberStoreY_inp", to_str(Store.YDim))
+  dialog.setCaption("NumberStoreZ_inp", to_str(Store.ZDim))
+  
+  // Tab Controls
+  if Store.userStoringMethod=void then
+  	dialog.setCaption("StoringCtrl_inp", "")
+  else
+  	dialog.setCaption("StoringCtrl_inp", makePathRelative(Store.userStoringMethod, Store))
+  end
+  
+  // Tab Remove
+  dialog.setCheckbox("AutomaticRemove_chk", Store.AutoRemoveActive)
+  dialog.setCaption("RemoveInterval_inp", to_str(Store.removeInterval))
+  
+  dialog.setSensitive("RemoveInterval_txt", Store.AutoRemoveActive)
+  dialog.setSensitive("RemoveInterval_inp", Store.AutoRemoveActive)
+  
+  // Tab Barred Area
+  
+  // Tab Settings
+  dialog.setCaption("AssignedCrane_inp", makePathRelative(Store.crane, Store))
+  dialog.setCaption("EntranceStation_inp", makePathRelative(Store.StoreEntrance, Store))
+  dialog.setCaption("ExitStation_inp", makePathRelative(Store.StoreExit, Store))
+ ShowInTooltip: false
+-
+ Name: applyDialog
+ ID: 4
+ DataType: method
+ Value: |+1
+  // Method Tasks: 
+  // get the values of the dialog and assign them to attributes of the application object
+  //
+  // Parameters	: 
+  // ReturnValues	: none
+  //
+  // Called By	: apply interaction of dialog
+  // Calls		: adjustCrane
+  //
+  // Author		: Guido Groß
+  // Date			: 30.009.2016
+  //
+  // History:
+  // 12.02.2018 GG	adjust the size of the assigned crane
+  //--------------------------------------------------------------------------------
+  var dialog := self.~
+  var Store := dialog.openedBy
+  
+  // Tab Area
+  var dim := Store._3D.Dimensions
+  
+  var oldLength : length := dim[1]
+  var oldWidth : length := dim[2]
+  
+  dim[1] := str_to_num(dialog.getValue("AreaLength_inp"))
+  dim[2] := str_to_num(dialog.getValue("AreaWidth_inp"))
+  
+  Store._3D.Dimensions := dim
+  
+  if dim[1]/=oldlength or dim[2]/= oldWidth then
+  	store.adjustCrane
+  end
+  
+  Store.StoreLength := str_to_num(dialog.getValue("StoreLength_inp"))
+  Store.StoreWidth := str_to_num(dialog.getValue("StorageWidth_inp"))
+  
+  Store.XDim := str_to_num(dialog.getValue("NumberStoreX_inp"))
+  Store.YDim := str_to_num(dialog.getValue("NumberStoreY_inp"))
+  Store.ZDim := str_to_num(dialog.getValue("NumberStoreZ_inp"))
+  
+  // Tab Controls
+  var objString : string := dialog.getValue("StoringCtrl_inp")
+  var obj : object := rootfolder.Internal.Methods.checkObject(objString, Store)
+  
+  Store.userStoringMethod := makePathRelative(obj, Store)
+  
+  
+  // Tab Remove
+  Store.AutoRemoveActive := dialog.getCheckbox("AutomaticRemove_chk")
+  
+  Store.removeInterval := str_to_time(dialog.getValue("RemoveInterval_inp"))
+  
+  // Tab Settings
+  objString := dialog.getValue("AssignedCrane_inp")
+  obj := rootfolder.Internal.Methods.checkObject(objString, Store)
+  Store.crane := obj
+  
+  objString := dialog.getValue("EntranceStation_inp")
+  obj := rootfolder.Internal.Methods.checkObject(objString, Store)
+  Store.StoreEntrance := obj
+  
+  objString := dialog.getValue("ExitStation_inp")
+  obj := rootfolder.Internal.Methods.checkObject(objString, Store)
+  Store.StoreExit := obj
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "navigation_mnu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "openLocation"
+  Caption: "Open Location"
+  CallbackArgument: "openLocation"
+ -
+  Type: Menu
+  Name: "openOrigin"
+  Caption: "Open Origin"
+  CallbackArgument: "openOrigin"
+ -
+  Type: Menu
+  Name: "gotoOrigin"
+  Caption: "Go to Origin"
+  CallbackArgument: "gotoOrigin"
+ -
+  Type: Menu
+  Name: "openClass"
+  Caption: "Open Class"
+  CallbackArgument: "openClass"
+ -
+  Type: Menu
+  Name: "gotoClass"
+  Caption: "Go to Class"
+  CallbackArgument: "gotoClass"
+-
+ Type: Menu
+ Name: "view_mnu"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "refresh"
+  Caption: "Refresh"
+  CallbackArgument: "refresh"
+ -
+  Type: Menu
+  Name: "statisticsReport"
+  Caption: "Statistics Report"
+  CallbackArgument: "statistics"
+ -
+  Type: Menu
+  Name: "contents"
+  Caption: "Contents"
+  CallbackArgument: "contents"
+-
+ Type: Menu
+ Name: "help_mnu"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "helpObject"
+  Caption: "Help on Object"
+  CallbackArgument: "helpObject"
+-
+ Type: StaticText
+ Name: "Name_txt"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "Name_inp"
+ Rect: [10,0,0,0]
+ CallbackArgument: "Name"
+ DataType: 1
+ Password: false
+-
+ Type: StaticText
+ Name: "Label_txt"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "Label_inp"
+ Rect: [10,1,0,0]
+ CallbackArgument: "Label"
+ DataType: 1
+ Password: false
+-
+ Type: TabControl
+ Name: "tab"
+ Rect: [0,3,0,11]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Area_tab"
+  Caption: "Area"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "AreaLength_txt"
+   Caption: "Length of area:"
+  -
+   Type: EditText
+   Name: "AreaLength_inp"
+   Rect: [24,0,10,0]
+   CallbackArgument: "AreaLength"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "AreaLength_unit"
+   Caption: "m"
+   Rect: [35,0,0,0]
+  -
+   Type: StaticText
+   Name: "AreaWidth_txt"
+   Caption: "Width of area:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "AreaWidth_inp"
+   Rect: [24,1,10,0]
+   CallbackArgument: "AreaWidth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "AreaWidth_unit"
+   Caption: "m"
+   Rect: [35,1,0,0]
+  -
+   Type: StaticText
+   Name: "StoreLength_txt"
+   Caption: "Length of a storage place:"
+   Rect: [0,3,0,0]
+  -
+   Type: EditText
+   Name: "StoreLength_inp"
+   Rect: [24,3,10,0]
+   CallbackArgument: "StoreLength"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "StoreLength_unit"
+   Caption: "m"
+   Rect: [35,3,0,0]
+  -
+   Type: StaticText
+   Name: "StorageWidth_txt"
+   Caption: "Width of a storage place:"
+   Rect: [0,4,0,0]
+  -
+   Type: EditText
+   Name: "StorageWidth_inp"
+   Rect: [24,4,10,0]
+   CallbackArgument: "StoreWidth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "StorageWidth_unit"
+   Caption: "m"
+   Rect: [35,4,0,0]
+  -
+   Type: StaticText
+   Name: "NumberStoreX_txt"
+   Caption: "Number of storage places X:"
+   Rect: [0,6,0,0]
+  -
+   Type: EditText
+   Name: "NumberStoreX_inp"
+   Rect: [24,6,10,0]
+   CallbackArgument: "StoreX"
+   DataType: 4
+   Password: false
+  -
+   Type: StaticText
+   Name: "NumberStoreY_txt"
+   Caption: "Number of storage places Y:"
+   Rect: [0,7,0,0]
+  -
+   Type: EditText
+   Name: "NumberStoreY_inp"
+   Rect: [24,7,10,0]
+   CallbackArgument: "StoreY"
+   DataType: 4
+   Password: false
+  -
+   Type: StaticText
+   Name: "NumberStoreZ_txt"
+   Caption: "Number of storage places Z:"
+   Rect: [0,8,0,0]
+  -
+   Type: EditText
+   Name: "NumberStoreZ_inp"
+   Rect: [24,8,10,0]
+   CallbackArgument: "StoreZ"
+   DataType: 1
+   Password: false
+ -
+  Type: TabPage
+  Name: "Controls_tab"
+  Caption: "Controls"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "StoringCtrl_txt"
+   Caption: "Method for storing:"
+  -
+   Type: EditText
+   Name: "StoringCtrl_inp"
+   Rect: [24,0,0,0]
+   CallbackArgument: "StoriingCtrl"
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "StoringCtrl_btn"
+   Caption: "..."
+   Rect: [50,0,4,0]
+   CallbackArgument: "StoringCtrlSel"
+ -
+  Type: TabPage
+  Name: "Remove_tab"
+  Caption: "Removing"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "AutomaticRemove_chk"
+   Caption: "Automatic removing"
+   CallbackArgument: "AutomaticRemove"
+  -
+   Type: StaticText
+   Name: "RemoveInterval_txt"
+   Caption: "Interval for removing:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "RemoveInterval_inp"
+   Rect: [24,1,0,0]
+   CallbackArgument: "RemoveInterval"
+   DataType: 10
+   Password: false
+ -
+  Type: TabPage
+  Name: "Barred_tab"
+  Caption: "Barred Area"
+  $Elements:
+  -
+   Type: Button
+   Name: "BarredArea_btn"
+   Caption: "Define Barred Area"
+   Rect: [0,1,30,0]
+   CallbackArgument: "BarredArea"
+ -
+  Type: TabPage
+  Name: "Settings_tab"
+  Caption: "Settings"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "AssignedCrane_txt"
+   Caption: "Assigned crane:"
+  -
+   Type: EditText
+   Name: "AssignedCrane_inp"
+   Rect: [25,0,0,0]
+   CallbackArgument: "AssignedPortal"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "EntranceStation_txt"
+   Caption: "Entrance station:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "EntranceStation_inp"
+   Rect: [25,1,0,0]
+   CallbackArgument: "Enttrance"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "ExitStation_txt"
+   Caption: "Exit station:"
+   Rect: [0,2,0,0]
+  -
+   Type: EditText
+   Name: "ExitStation_inp"
+   Rect: [25,2,0,0]
+   CallbackArgument: "Exit"
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "Content_btn"
+   Caption: "Open Content Table"
+   Rect: [0,3,25,0]
+   CallbackArgument: "Content"
+  -
+   Type: Button
+   Name: "Layout_btn"
+   Caption: "Open Occupancy Table"
+   Rect: [0,4,25,0]
+   CallbackArgument: "Layout"

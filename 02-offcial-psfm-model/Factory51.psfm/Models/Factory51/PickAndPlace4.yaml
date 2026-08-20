@@ -1,0 +1,46 @@
+InternalClassType: PickAndPlace
+BlockingAngle: 0
+Coordinate3D: [32,9.8,0]
+DefaultAngle: 90
+GoToDefaultPosition: true
+LoadingTime: 2
+MUConveyingDirection: "Forwards"
+Name: PickAndPlace4
+OnlyForEmptyBlockinglist: true
+Origin: 39a9d6fe-97d7-44c3-b95d-93a93b9a60a6
+RandomSeed: 1073746493
+TargetObject: "Line14"
+TargetSelection: "Place part at sensor"
+TargetSensorID: 1
+UnloadingTime: 2
+UUID: 019f044c-ab8a-72e7-8f68-afd777e74d58
+3D:
+ RobotArmAnimations:
+ -
+  Indices: ["Track","Line14"]
+  Coordinates:
+  - [0,0.8,1.4881]
+ $Objects:
+ -
+  Origin: 72948595-fa35-48fd-8a5b-e2fea4fc3a62
+  UUID: ba35b994-dc9b-4388-a2f0-af8c74164ceb
+  $Objects:
+  -
+   Origin: 92f9b6f8-dc36-456f-ad56-6c25d19de97e
+   UUID: 3e7c872e-3dd2-48ee-a7be-313838a2b4e6
+   $Objects:
+   -
+    Origin: b30df0fc-5cf8-491d-accb-7ede18c7c9b9
+    UUID: 68882657-b79f-4e52-a7c7-eb477a12db37
+    $Objects:
+    -
+     Origin: 934b2561-5691-4911-aa2c-250048c9cda7
+     UUID: 25a00ddc-0345-40e4-b8c0-6c3d5f5d8577
+InheritEntranceExitLockedOnReset: false
+$Angles:
+- ["Track",87.397437797500189]
+- ["Line14",266.18592516570965]
+$Times:
+- [0,3,3]
+- [0,0,6]
+- [0,6,0]

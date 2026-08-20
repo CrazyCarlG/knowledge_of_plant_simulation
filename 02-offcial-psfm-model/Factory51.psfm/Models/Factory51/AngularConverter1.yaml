@@ -1,0 +1,15 @@
+InternalClassType: AngularConverter
+Coordinate3D: [38.6,20,0]
+Name: AngularConverter1
+Origin: a0ac50ef-a21a-4ac2-aec6-ba9f6b385932
+RandomSeed: 1073746483
+UUID: 019f044c-ab8a-72df-8762-34e80acf5477
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72e0-9b08-ea4f1d4d9159
+ Name: Connector47
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7310-b815-efb715e9a4a9
+$Predecessors:
+- 019f044c-ab8a-7321-abe7-c5b35eff7870
+InheritEntranceExitLockedOnReset: false

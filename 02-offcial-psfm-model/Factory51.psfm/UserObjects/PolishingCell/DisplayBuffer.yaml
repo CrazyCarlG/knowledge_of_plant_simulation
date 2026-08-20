@@ -1,0 +1,21 @@
+InternalClassType: Display
+Active: true
+Comment: "Max="
+Coordinate3D: [-2.5,-0.4,0.5]
+Name: DisplayBuffer
+Origin: 3d49b650-ffcd-4bd0-b41b-70e9095df237
+Path: "Buffer.StatMaxNumMU"
+Sampler: false
+UUID: 019f044c-ab8a-7002-b726-449b2435326b
+3D:
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+$CustomAttributes:
+-
+ Name: Tooltip
+ ID: 1
+ DataType: string
+ Value: "Maximum Buffer Content"
+ ShowInTooltip: false

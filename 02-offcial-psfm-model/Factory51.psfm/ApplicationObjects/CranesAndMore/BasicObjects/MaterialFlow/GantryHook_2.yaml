@@ -1,0 +1,199 @@
+InternalClassType: Transporter
+Acceleration: 1
+AccelerationEnabled: false
+AutomaticRouting: true
+Backwards: false
+BatBasicCons: 0
+BatCapacity: 0
+BatCharge: 0
+BatChargeCtrl:
+BatChargeCurrent: 0
+BatDriveCons: 0
+BatReserve: 0
+BatteryUsed: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+CollisionCtrl:
+ConstructorCtrl:
+Coordinate3D: [2,0,0]
+CreateIn3D: true
+CurveSpeed: -1
+Deceleration: 1
+DefaultCurveRadius: 1
+DestCtrl: "self.OnDestination"
+Destination:
+DestructorCtrl:
+Distance: 1
+DistanceCtrl:
+DragDropCtrl:
+DriveCtrl:
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+IsTractor: false
+Label: ""
+LoadBayType: "Store"
+MoveToFolderCtrl:
+MUHeight: 0.1
+MULength: 1
+MUWidth: 0.1
+Name: GantryHook_2
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RandomSeed: 15
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+ResourceType: "Transport"
+ResStatOn: true
+RotationSpeed: 10
+RouteWeightingAttr: ""
+RoutingCtrl:
+SafetyZones: [1,0,0,0]
+SelectCtrl:
+ShiftcalendarObject:
+Speed: 0.5
+SpeedCtrl:
+StartDelayDuration: 0
+StopAtDestination: false
+UnplannedCtrl:
+UUID: a613fee9-1953-4459-a554-77d624a748dd
+XDim: 1
+YDim: 1
+ZDim: 1
+3D:
+ AnimationObject: "Gripper"
+ GraphicGroupNames: ["default","Stamp"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaAbsoluteCenter: [0,0,1]
+ MUAnimationAreaAbsoluteSize: [1,1]
+ MUAnimationAreaEnabled: false
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ MUSideToAttach: "Front"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ ScaleAutomatically: false
+ ShowContent: true
+ ShowSafetyZones: false
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["Stamp","default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+ $Objects:
+ -
+  AniRotationAxis: [0,1,0]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [1,0,0]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: 0
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 1
+  JointUpperLimitActive: true
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimationAreaAbsoluteCenter: [0,0,1]
+  MUAnimationAreaAbsoluteSize: [1,1]
+  MUAnimationAreaEnabled: false
+  MUAnimationAreaMURotation: [0,0,0,-1]
+  MUAnimationAreaOrientation: "XY plane"
+  MUAnimationAreaShowMUsAsCuboids: false
+  MUAnimations:
+  -
+   Name: "#0#0"
+   AnchorPoints:
+   - [0,0,-0.13,-90,0,0,-1,~]
+  -
+   Name: "#1#0"
+   AnchorPoints:
+   - [0.12,0,0.01,119.99999999999999,-0.577350269189626,-0.577350269189626,0.577350269189626,~]
+  Name: Gripper
+  Position: [-0.0123,-0.0019,-0.4077]
+  Rotation: [0,0,1,0]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: e0c24ee7-0ccb-4eb1-baa9-b7239c186110
+  VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "base"
+ Transparent: true
+ Size: [5,5]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAA
+ - AAAAAAAAAAAAAAAAAAAA
+ - AAAAAAAAAAAAAAAAAAAA
+ - AAAAAAAAAAAAAAAAAAAA
+ - AAAAAAAAAAAAAAAAAAAA
+$CustomAttributes:
+-
+ Name: OnDestination
+ ID: 1
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Hook has reached its position, stop the hook and set flag HookPositionReached
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: DestinationControl
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  var hook := self.~
+  var Loader := Hook.~
+  
+  Hook.stopped := true
+  
+  loader.HookPosReached := true
+ ShowInTooltip: false
+-
+ Name: HeadPosition
+ ID: 2
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: HookType
+ ID: 3
+ DataType: integer
+ Value: 2
+ ShowInTooltip: false

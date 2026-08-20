@@ -1,0 +1,11 @@
+InternalClassType: Workplace
+Coordinate3D: [-18,3.5,0]
+Name: Workplace3
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073745706
+Station: "Milling1"
+UUID: 019f044c-ab8a-7024-b8c9-26dad21528d9
+WorkerStaysHere: true
+3D:
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

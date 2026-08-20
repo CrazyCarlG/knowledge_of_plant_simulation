@@ -1,0 +1,41 @@
+InternalClassType: Folder
+ChangePathCtrl:
+Coordinate3D: [0,0,0]
+DestructorCtrl:
+MoveToFolderCtrl:
+Name: CranesAndMore
+PermitDeleteCtrl:
+RenameCtrl:
+RootFolder: true
+UUID: 48abc0de-9a2f-4333-93b8-016906aa92ba
+3D:
+ BackgroundColor: -1
+Password:
+LibInfo:
+ Name: "Cranes and More"
+ Version: "2504.0015"
+ Description: |+1
+  This example library is a demonstrator which exemplifies how to model a portal crane, a cross-sliding car, and a lift.\r
+  \r
+  ATTENTION: The CranesAndMore library was restructured, so upon updating to this version you will need to adjust models that utilize this library.
+ ProhibitAccess: true
+$Nodes:
+- 018412fb-a99d-404e-8262-80a6b8823d91
+- 9c9baa1e-2c38-4627-ada8-74f42ce94a5d
+- 9ecf41d4-3abc-4684-92a9-703efbb54f5a
+- 445a7bfb-f10c-4135-8789-486dccaafdb5
+- c34958ad-81a5-4325-9114-324efce49a41
+- 6347ca38-c900-4979-872b-0af720eb2490
+- 06eadecd-1248-4df7-a4b9-9a8f8ee8b7e9
+- fac7a9cd-3e96-4702-8fe9-2141f6ac7faf
+- 3dc3df3e-b4f8-4878-b2f1-ca5d25537583
+- c07392db-113c-47f5-b039-f6c8ea4a8f8c
+- 1e07a0dc-06da-41f1-a150-8050fbf4d16a
+- 131e0a21-3e85-4d31-9a38-a1d1405aa76d
+- 6b14516f-09a4-4290-a015-ae9417c82646
+- 772be0ea-9577-4a60-b8a3-a66ff2a43fae
+- 60801978-a0c3-48ce-ad8e-30aef820ad16
+- 2ababbea-f635-4fec-80d9-e20fc004825b
+- 80c2c2b6-b709-401e-b584-b454a9e9016d
+- 03ff8d57-9262-41e8-8bf7-89eb795be5c7
+- d9d46ad9-e5ce-43b5-96ad-6384fc24fafa

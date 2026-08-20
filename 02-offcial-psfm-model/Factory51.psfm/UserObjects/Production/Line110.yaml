@@ -1,0 +1,22 @@
+InternalClassType: Conveyor
+Coordinate3D: [-17.2,11.198,0]
+Length: 1.9707963267948965
+Name: Line110
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746417
+Speed: 1
+UUID: 019f044c-ab8a-707e-8e9a-44d45bad2a30
+3D:
+ $ExtSegments:
+  - 0
+  - [0,90,1,0]
+  - [0,0.4,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7132-b793-24a869d058a1
+ Name: Connector3
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70b7-8b23-5e8b7c2ce943
+$Predecessors:
+- 019f044c-ab8a-70c8-84cd-18affe8017ee
+InheritEntranceExitLockedOnReset: false

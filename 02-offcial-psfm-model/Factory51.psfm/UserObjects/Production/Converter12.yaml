@@ -1,0 +1,47 @@
+InternalClassType: Converter
+Coordinate3D: [16.5,-12.9,0]
+Length: 1
+Name: Converter12
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746324
+Strategy: "Method"
+StrategyCtrl: "self.OnStrategy"
+UUID: 019f044c-ab8a-7073-b525-48995eb17360
+3D:
+ BaseHeight: 2.5
+ $ExtSegments:
+  - 0
+  - [0,1,0]
+$CustomAttributes:
+-
+ Name: OnStrategy
+ ID: 1
+ DataType: method
+ Value: |+1
+  param entranceNo: integer
+  
+  var succ1 := ?.succ(1)
+  var succ2 := ?.succ(2)
+  
+  stopuntil succ1.numMU < 15 or succ2.numMU < 15
+  
+  ?.ExitForMU := when succ2.numMU > succ1.numMU then 0 else 3
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7074-8123-003656081bb1
+ Name: Connector54
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-709e-9a01-a5580c623e16
+-
+ $Succ: 019f044c-ab8a-7050-8123-7f68dda80c9e
+ Name: Connector83
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-709f-b5a8-95cad5308a3c
+ $PredFlipped: true
+$Predecessors:
+- 019f044c-ab8a-70cb-a6de-e1c43ba4a560
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-709e-9a01-a5580c623e16
+$Side2: 019f044c-ab8a-70cb-a6de-e1c43ba4a560
+$Side3: 019f044c-ab8a-709f-b5a8-95cad5308a3c

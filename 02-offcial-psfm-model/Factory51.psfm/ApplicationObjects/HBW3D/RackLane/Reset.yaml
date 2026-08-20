@@ -1,0 +1,21 @@
+InternalClassType: Method
+Coordinate3D: [-18,6,0]
+Label: ""
+Name: Reset
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ OccupancyLeft.delete
+ OccupancyRight.delete
+RandomSeed: 100
+UUID: dbfc35e9-db14-448a-869e-4c79bd0ed065
+3D:
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["default","INIT","Reset"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0.02,-0.01,0.01]
+  HorizontalStatesScale: [0.46,0.5,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

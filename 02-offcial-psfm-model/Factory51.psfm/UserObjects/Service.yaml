@@ -1,0 +1,20 @@
+InternalClassType: Worker
+AutomaticMediation: true
+Coordinate3D: [4,-4,0]
+Name: Service
+Origin: 9c2a965a-02dd-4cce-a2b7-e8051dc755ec
+RandomSeed: 1073746559
+UUID: 05d198c6-160d-4f5f-9338-13a518aff747
+YDim: 1
+3D:
+ MaterialActive: true
+ MaterialAmbientColor: 0
+ MaterialDiffuseColor: 128
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.086
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0
+ MUAnimations:
+InheritEntranceExitLockedOnReset: false
+$Services:
+- ["Repair",~,~]

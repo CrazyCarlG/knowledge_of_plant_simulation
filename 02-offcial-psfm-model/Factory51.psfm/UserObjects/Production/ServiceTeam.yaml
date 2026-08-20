@@ -1,0 +1,11 @@
+InternalClassType: WorkerPool
+Coordinate3D: [-0.8,13,0]
+Name: ServiceTeam
+Origin: 961fe9c5-ab49-4f1f-bf68-07e8160e60f1
+RandomSeed: 1073745892
+UUID: 019f044c-ab8a-7042-9942-cddfe9bb66c5
+3D:
+ Scale: [0.8,0.8,0.8]
+InheritEntranceExitLockedOnReset: false
+$WorkersToCreate:
+- [05d198c6-160d-4f5f-9338-13a518aff747,6,~,-1,-1,"",[]]

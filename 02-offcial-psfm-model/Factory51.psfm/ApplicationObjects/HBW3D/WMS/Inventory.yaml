@@ -1,0 +1,74 @@
+InternalClassType: DataTable
+Coordinate3D: [0.5,-10.5,0]
+Name: Inventory
+Origin: b42ffed0-3791-455e-bfc4-f0af2e614549
+UUID: b52737aa-3601-4b95-9bc9-91ae02e5f442
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnIndexContents: false
+  ColumnWidth: 12
+  DataType: table
+  MaxXDim: 1
+  RowIndex: true
+  ShowDataType: true
+  Prototype:
+   EditorPermissions: 12
+   ListFormat:
+    ColumnIndex: true
+    ColumnWidth: 5
+    DataType: string
+    MaxXDim: 2
+    ShowDataType: true
+    ColumnFormat:
+    -
+     Index: 1
+     DataType: object
+     Width: 16
+    -
+     Index: 2
+     DataType: integer
+     Width: 7
+    RowFormat:
+    -
+     Index: 0
+     Hidden: false
+   ColumnIndex: [string,3,~,"Pallet","Quantity"]
+   Columns:
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 38
+  -
+   Index: 1
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnIndex: true
+     ColumnWidth: 5
+     DataType: string
+     MaxXDim: 2
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      DataType: object
+      Width: 33
+     -
+      Index: 2
+      DataType: integer
+      Width: 7
+     RowFormat:
+     -
+      Index: 0
+      Hidden: false
+    ColumnIndex: [string,3,~,"Pallet","Quantity"]
+    Columns:
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,2,"Product","Pallets"]
+ Columns:

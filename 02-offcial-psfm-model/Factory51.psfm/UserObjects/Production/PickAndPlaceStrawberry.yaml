@@ -1,0 +1,64 @@
+InternalClassType: PickAndPlace
+Coordinate3D: [18.4,-4.25,0]
+DefaultAngle: 90
+GoToDefaultPosition: true
+LoadingTime: 1
+Name: PickAndPlaceStrawberry
+OnlyForEmptyBlockinglist: true
+Origin: 39a9d6fe-97d7-44c3-b95d-93a93b9a60a6
+RandomSeed: 1073746305
+TargetObject: "Line16"
+TargetSelection: "Load part onto MU at sensor"
+TargetSensorID: 1
+UnloadingTime: 1
+UUID: 019f044c-ab8a-706f-863f-0f7cb8c4814f
+3D:
+ ObstacleForWorker: "(None)"
+ RobotArmAnimations:
+ -
+  Indices: ["Line18","Line16"]
+  Coordinates:
+  - [0,-1.3,1.6881]
+  - [-1.5147,-0.2178,1.7]
+ $Objects:
+ -
+  Origin: 72948595-fa35-48fd-8a5b-e2fea4fc3a62
+  UUID: 1304dc98-1960-45db-9c75-1fd124316531
+  $Objects:
+  -
+   Origin: 92f9b6f8-dc36-456f-ad56-6c25d19de97e
+   UUID: 5a4d835a-3e1c-46e9-952d-58b1b4f57c3c
+   $Objects:
+   -
+    Origin: b30df0fc-5cf8-491d-accb-7ede18c7c9b9
+    UUID: 2064ef9e-3642-4403-a59e-a029ecd625a8
+    $Objects:
+    -
+     Origin: 934b2561-5691-4911-aa2c-250048c9cda7
+     UUID: 83f5b898-cff4-40dd-9c20-6f1946a9f456
+$Predecessors:
+- 019f044c-ab8a-70c0-80d1-2fa2e734fc87
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: OperatingTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,4:45.0000000000004]
+ Duration: [Erlang,15,10.606601717798213]
+$FailImp:
+ Active: true
+ Services:
+ - [~,["Repair",1]]
+ BrokerPath: "Broker"
+$Angles:
+- ["Line16",197.59242456218158]
+- ["Line18",90]
+$Times:
+- [0,5.4135858479272807,3]
+- [0,0,6]
+- [0,6,0]

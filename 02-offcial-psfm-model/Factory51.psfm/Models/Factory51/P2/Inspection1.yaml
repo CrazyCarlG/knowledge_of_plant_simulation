@@ -1,0 +1,12 @@
+InternalClassType: Station
+Origin: 019f044c-ab8a-705a-82fa-a013f4836444
+RandomSeed: 1073746120
+UUID: 019f044c-ab8a-749f-908d-f8dac12acc36
+$Successors:
+-
+ $Succ: 019f044c-ab8a-74a6-ae5b-b339454fd030
+ Origin: 019f044c-ab8a-70af-8781-15980ae216d8
+ UUID: 019f044c-ab8a-74f4-b54e-a4e125cb91d5
+$Predecessors:
+- 019f044c-ab8a-750a-888b-fe33cde6bdff
+InheritEntranceExitLockedOnReset: false

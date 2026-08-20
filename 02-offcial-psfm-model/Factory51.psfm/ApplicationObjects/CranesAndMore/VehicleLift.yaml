@@ -1,0 +1,582 @@
+InternalClassType: Track
+BwDestList:
+BwEntranceCtrl:
+BwEntranceCtrlFront: false
+BwEntranceCtrlRear: false
+BwExitCtrl:
+BwExitCtrlFront: false
+BwExitCtrlRear: false
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [1,-13.8571,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+EntranceCtrl: "self.OnEntrance"
+EntranceCtrlFront: false
+EntranceCtrlRear: true
+EntranceLocked: false
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: true
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+FwDestList:
+InitCtrl:
+Label: ""
+Length: 2
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: VehicleLift
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+PullCtrl: "self.OnPull"
+RandomSeed: 1
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+TransferLengthToObject: true
+UnplannedCtrl:
+UUID: 80c2c2b6-b709-401e-b584-b454a9e9016d
+Width: 1
+3D:
+ AnimationObject: "Car"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default","Fence"]
+ InternalClassType: SimulationObject
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: true
+ MUAnimations:
+ MUSideToAttach: "Bottom"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,-0.6,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Graphics"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0x50f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["Fence"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniGravityMode: false
+  AnimationOffset: [0,0,0]
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniSmoothRotation: false
+  AniTranslationDirection: [0,0,1]
+  BaseHeight: 0.01
+  ExtConfiguration:
+  -
+   Name: "Lanes"
+   Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+   Configuration Type: 2
+   Offsets: [0,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0x2d2d2d,0x292929,0x0,0x0,0,13]
+  GraphicGroupNames: ["default"]
+  InternalClassType: AnimatableExtrusionObject
+  JointAcceleration: 2
+  JointDeceleration: 2
+  JointLowerLimitActive: false
+  JointType: "Prismatic Joint"
+  JointUpperLimitActive: false
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Car
+  Position: [0,0,0]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  ShowMaterialFlowDirection: true
+  UUID: 0335fc6c-95c1-47bc-850b-f471d2ab0f6d
+  VisibleGraphicGroups: ["default"]
+  Width: 1
+  $ExtSegments:
+   - 0
+   - [0,2,0]
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Size: [32,32]
+ Pixels:
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////AICgda/C3bKk3bKkAHiX3bKk3bKk3bKkAKbOAICgjMHPAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAHiX0pmHLXOE0pmH0pmH0pmHLXOE7NPL7NPLAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAFNn0pmHLXOE0pmH0pmH0pmHLXGC7NPL7NPLAICg////////////////////////9vb2qqqqqqqq
+ - ////////////////////////////////////////////3bKk3bKkADhG0pmHLXOE0pmH0pmH0pmHLXCA7NPLpYyEAICgqqqqjo6OrKysq6urmpqaqqqqnp6eqKioqamp
+ - ////////////////////////////////////////////3bKk3bKkADhGr3VjLXOEm2JRqW9dr3VjLXCArJOLrJOLAICgqqqqq6urq6urqqqqqqqqqqqqlpaWq6urrKys
+ - ////////////////fn5+qampsLCwq6urpKSkqqqqsLCwp3ttroJ0ADhGr3VjLXOEr3Vjr3Vjr3VjLW5+rJOLrJOLAICgsbGxqqqqs7OziIiIqqqqqqqqq6ursrKyqKio
+ - ra2tqqqqsLCwo6Ojra2tqqqqqqqqpKSklJSUqqqqqqqqqn9xt4x+N1Rdr3VjLXOEtXxqr3VjsXtrLW5+rJOLsZmRAICgsrKyqqqqrq6urq6urKyst7e3qqqqnJycrKys
+ - rq6ura2trq6uqqqqtLS0sLCwsbGxrq6uqqqqqqqqsLCwuY6ArIJ0jndwr3VjLXOEsHZltHtpooeBLWx8k3pysJePAICgsbGxm5ubra2tra2tsrKysLCwtbW1s7Ozr6+v
+ - r6+vo6OjrKyssrKyt7e3qKiosbGxsbGxtLS0o6OjqqqqroJ0r4N1t4t+tHtpLXOEsHZktHtphHp5LW5+s5qSsJePAICgr6+vqqqqqqqqoqKir6+vtbW1jo6Os7OzpaWl
+ - rq6ura2turq6uLi4xcXFvLy8q6urcnJysrKys7OzsrKyp4R6r4N1lmtdr3VjLXCAu4Nxtn1rZ3h7LWd1y7OrzrauUZevr6+vqqqqu7u7zMzMvLy8r6+vrq6ugICArKys
+ - r6+vra2tu7u7wcHBuLi4y8vLy8vLvb29q6urq6urnp6eTYqiuY6Atop8r3VjLWd1r3VjsHZkTY6jLV1pzLSs1Ly0cKq+ycnJxcXFwMDAjo6OrKysq6urrq6urq6urq6u
+ - vr6+wMDAvLy8tLS0kpKSvLy8vb29t7e3ubm5fX19w8PDAICgsoZ4zaKUw4p4LUlPsXhmx499VZqyLV5qt56W07qycqe2t7e3tLS0t7e3uLi4qqqqsrKyt7e3tbW1rKys
+ - t7e3x8fHy8vLrKysw8PDwcHBtLS0tbW1t7e3s7Ozzs7OAICgy6CSxJmLqnBfLWp4u4JwpmxaAICgLVJb0biwzrWtapqmuLi4tbW1s7Ozx8fHx8fHvb29w8PDm5ubt7e3
+ - uLi41dXVq6urgYGBra2tzc3Nqqqqv7+/rq6ux8fHu7u7AICgsIR2sIR2w4t5LXOEx458sXdmAICgLVNc5s3GxKyknK+3rKysycnJra2ty8vLrKysvb29ra2tzs7Oo6Oj
+ - sLCwrq6utra2y8vLx8fHqqqqxsbGsbGxxcXFoKCgx8fHAICgsIR2zaOVt35sLXOEsHZkxIt5AICgLVNcyLCoz7evr7i+sLCwrKyszc3NkpKSu7u7y8vLwcHBvLy8qqqq
+ - 0dHRvr6+vr6+0tLSkJCQurq62dnZvLy8q6ur2dnZkZGRAICgz6SXu5CCtHtpLXOEomhWtnxqAICgLVNcpIuDwKign6Olu7u7u7u7vb29wsLCt7e3qampysrKqqqqwcHB
+ - t7fH1dXVvLy80dHRq6urvb291NTUrKystLS0zMzMxsbGAICgroJ01KmbvYRyLW5+w4p4uX9tAICgLV9s1Ly0sJePurq6zs7OmpqawMDAx8fHxMTE1NTUtLS0wcHByMjI
+ - xsbGycnJzs7O2dnZycnJ09PTlJSUxsbGvb29z8/Prq6uAICgroJ0u4+CtHtpMWRvv4d10pmHAICgLV9swKih1b21z8/PwMDAzs7Oqqqqrq6urKyszs7Oz8/Pzc3N2dnZ
+ - xcXF19fXwMDA3d3dy8vL0tLSzMzMxcXFzs7OsbGxra2tAHeU16yesYV30pmHQUA90pmHtXxqAICgWD837NPLv6eflpaWqqqqwMDAwcHBy8vLycnJzs7OysrK19fXzc3N
+ - zs7Oubm5zs7OwcHB1dXVzMzMu7u7zs7OwMDAzs7Ow8PDADhG2K6gv5SGnnxzUDcvUjkxVTw0AICgfmVdkXhwUzoyvLy8zs7Ov7+/1NTUzMzMxcXFzc3Nvr6+zs7OwcHB
+ - vb29s7Ozu7u7q6ur0NDQzs7Ozs7Ozs7OwcHBz8/Pzs7OADhGhYWFlJSUgmlhTTQsUTgwVDszAICgq1Ir0biwtZ2VyMjIzs7Os7Ozzs7Oy8vLwsLCzs7OSEji0NDQzMzM
+ - zs7Ora2tz8/Pzs7Or6+vz8/PvLy8goLKzs7Ozs7Ourq6GUpX3bKkKioqyGEyq1Irt35tLXOEAICgLT5A7NPL5s7GuLi4gICAx8fH2trazs7OycnJ19fXzs7OvLy8r6+v
+ - 5eXlzs7OysrKuLi409PTzc3Ntra2zs7Ozs7OsbGx29vbzs7O2K2fAICg0rmy07uzu6Ob7NPLAICg5MvDsZiQJ6TCycnNsrKyzs7OuLi4sbGxz8/Pzs7OzMzMpaWlsLCw
+ - zs7Ozs7Ovr6+tbW1zs7Ozs7Ourq6vb29zs7Ozs7Ov7+/urq6zs7Ozc3Nu6ObyLCo6dDI6dHJAICgxsbJ0dHRysrKwMDAy8vLt7e3ysrKu7u7zMzMu7u7xcXFwcHBzs7O
+ - 2NjYzs7Oy8vLtra2wcHBzs7Ourq6ycnJwcHB0NDQzs7OAMz/t7e3vLy8LazLzs7Ox8fHtLS0AICgzs7OxsbGv7+/zc3NAAAAzs7Ozs7Ovb29ycnJzs7OAAAAtra2wsLC
+ - xsbGtLS0z8/Pz8/Pzs7Ozs7Ora2tzMzMzs7Ozs7Ozs7OwMDAgYHz0NDQzs7Oz8/Pzc3NtbW1zs7Ozs7Ozs7Ozs7OtLS0AAAAAAAAzs7OysrKysrKAAAAAAAAzs7Ozs7O
+ - zs7Ozs7Ozs7Ovr6+y8vLubm529vbzs7OzMzMzs7Ozc3Nr6+vsbGxzs7Ozs7Ozs7OwcHBzMzMs7Oz1dXVzs7OzMzMzs7Ozs7OAAAAAAAAzs7OAAAAAAAAw8PDzMzMvr6+
+ - zs7OzMzMzs7Ozs7Oy8vLcXHZsLCw39/fzs7Ozs7Ozs7Ozs7Ozc3Nr6+vkZGR3Nzczs7Ozs7O0tLSzs7Ourq6w8PDwcHB19fXzs7OAAAAAAAAAAAAzs7OyMjItLS03d3d
+ - tra2zs7Oy8vLzs7Ozs7Ozs7Ozs7OxMTEtLS0w8PDz8/P0dHRzs7Ow8PDzs7Otra2zs7Oc3PaxsbGsbGxubm51dXVzs7Ozs7Ozc3Nzs7OAAAAzs7OxsbGrKysh4eHysrK
+ - wMDAra2turq6vb29zc3NkJCQzs7Ora2tzs7OtbW1zs7OsrKyzs7Oubm5zs7Or6+vrq6uhoaG5OTk0tLSzs7Ow8PDzs7O09PTzs7Ov7+/zs7OysrKzs7O0NDQysrKv7+/
+-
+ Name: "ClassLibrary"
+ Size: [32,32]
+ Pixels:
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////AICgda/C3bKk3bKkAHiX3bKk3bKk3bKkAKbOAICgjMHPAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAHiX0pmHLXOE0pmH0pmH0pmHLXOE7NPL7NPLAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAFNn0pmHLXOE0pmH0pmH0pmHLXGC7NPL7NPLAICg////////////////////////9vb2qqqqqqqq
+ - ////////////////////////////////////////////3bKk3bKkADhG0pmHLXOE0pmH0pmH0pmHLXCA7NPLpYyEAICgqqqqjo6OrKysq6urmpqaqqqqnp6eqKioqamp
+ - ////////////////////////////////////////////3bKk3bKkADhGr3VjLXOEm2JRqW9dr3VjLXCArJOLrJOLAICgqqqqq6urq6urqqqqqqqqqqqqlpaWq6urrKys
+ - ////////////////fn5+qampsLCwq6urpKSkqqqqsLCwp3ttroJ0ADhGr3VjLXOEr3Vjr3Vjr3VjLW5+rJOLrJOLAICgsbGxqqqqs7OziIiIqqqqqqqqq6ursrKyqKio
+ - ra2tqqqqsLCwo6Ojra2tqqqqqqqqpKSklJSUqqqqqqqqqn9xt4x+N1Rdr3VjLXOEtXxqr3VjsXtrLW5+rJOLsZmRAICgsrKyqqqqrq6urq6urKyst7e3qqqqnJycrKys
+ - rq6ura2trq6uqqqqtLS0sLCwsbGxrq6uqqqqqqqqsLCwuY6ArIJ0jndwr3VjLXOEsHZltHtpooeBLWx8k3pysJePAICgsbGxm5ubra2tra2tsrKysLCwtbW1s7Ozr6+v
+ - r6+vo6OjrKyssrKyt7e3qKiosbGxsbGxtLS0o6OjqqqqroJ0r4N1t4t+tHtpLXOEsHZktHtphHp5LW5+s5qSsJePAICgr6+vqqqqqqqqoqKir6+vtbW1jo6Os7OzpaWl
+ - rq6ura2turq6uLi4xcXFvLy8q6urcnJysrKys7OzsrKyp4R6r4N1lmtdr3VjLXCAu4Nxtn1rZ3h7LWd1y7OrzrauUZevr6+vqqqqu7u7zMzMvLy8r6+vrq6ugICArKys
+ - r6+vra2tu7u7wcHBuLi4y8vLy8vLvb29q6urq6urnp6eTYqiuY6Atop8r3VjLWd1r3VjsHZkTY6jLV1pzLSs1Ly0cKq+ycnJxcXFwMDAjo6OrKysq6urrq6urq6urq6u
+ - vr6+wMDAvLy8tLS0kpKSvLy8vb29t7e3ubm5fX19w8PDAICgsoZ4zaKUw4p4LUlPsXhmx499VZqyLV5qt56W07qycqe2t7e3tLS0t7e3uLi4qqqqsrKyt7e3tbW1rKys
+ - t7e3x8fHy8vLrKysw8PDwcHBtLS0tbW1t7e3s7Ozzs7OAICgy6CSxJmLqnBfLWp4u4JwpmxaAICgLVJb0biwzrWtapqmuLi4tbW1s7Ozx8fHx8fHvb29w8PDm5ubt7e3
+ - uLi41dXVq6urgYGBra2tzc3Nqqqqv7+/rq6ux8fHu7u7AICgsIR2sIR2w4t5LXOEx458sXdmAICgLVNc5s3GxKyknK+3rKysycnJra2ty8vLrKysvb29ra2tzs7Oo6Oj
+ - sLCwrq6utra2y8vLx8fHqqqqxsbGsbGxxcXFoKCgx8fHAICgsIR2zaOVt35sLXOEsHZkxIt5AICgLVNcyLCoz7evr7i+sLCwrKyszc3NkpKSu7u7y8vLwcHBvLy8qqqq
+ - 0dHRvr6+vr6+0tLSkJCQurq62dnZvLy8q6ur2dnZkZGRAICgz6SXu5CCtHtpLXOEomhWtnxqAICgLVNcpIuDwKign6Olu7u7u7u7vb29wsLCt7e3qampysrKqqqqwcHB
+ - t7fH1dXVvLy80dHRq6urvb291NTUrKystLS0zMzMxsbGAICgroJ01KmbvYRyLW5+w4p4uX9tAICgLV9s1Ly0sJePurq6zs7OmpqawMDAx8fHxMTE1NTUtLS0wcHByMjI
+ - xsbGycnJzs7O2dnZycnJ09PTlJSUxsbGvb29z8/Prq6uAICgroJ0u4+CtHtpMWRvv4d10pmHAICgLV9swKih1b21z8/PwMDAzs7Oqqqqrq6urKyszs7Oz8/Pzc3N2dnZ
+ - xcXF19fXwMDA3d3dy8vL0tLSzMzMxcXFzs7OsbGxra2tAHeU16yesYV30pmHQUA90pmHtXxqAICgWD837NPLv6eflpaWqqqqwMDAwcHBy8vLycnJzs7OysrK19fXzc3N
+ - zs7Oubm5zs7OwcHB1dXVzMzMu7u7zs7OwMDAzs7Ow8PDADhG2K6gv5SGnnxzUDcvUjkxVTw0AICgfmVdkXhwUzoyvLy8zs7Ov7+/1NTUzMzMxcXFzc3Nvr6+zs7OwcHB
+ - vb29s7Ozu7u7q6ur0NDQzs7Ozs7Ozs7OwcHBz8/Pzs7OADhGhYWFlJSUgmlhTTQsUTgwVDszAICgq1Ir0biwtZ2VyMjIzs7Os7Ozzs7Oy8vLwsLCzs7OSEji0NDQzMzM
+ - zs7Ora2tz8/Pzs7Or6+vz8/PvLy8goLKzs7Ozs7Ourq6GUpX3bKkKioqyGEyq1Irt35tLXOEAICgLT5A7NPL5s7GuLi4gICAx8fH2trazs7OycnJ19fXzs7OvLy8r6+v
+ - 5eXlzs7OysrKuLi409PTzc3Ntra2zs7Ozs7OsbGx29vbzs7O2K2fAICg0rmy07uzu6Ob7NPLAICg5MvDsZiQJ6TCycnNsrKyzs7OuLi4sbGxz8/Pzs7OzMzMpaWlsLCw
+ - zs7Ozs7Ovr6+tbW1zs7Ozs7Ourq6vb29zs7Ozs7Ov7+/urq6zs7Ozc3Nu6ObyLCo6dDI6dHJAICgxsbJ0dHRysrKwMDAy8vLt7e3ysrKu7u7zMzMu7u7xcXFwcHBzs7O
+ - 2NjYzs7Oy8vLtra2wcHBzs7Ourq6ycnJwcHB0NDQzs7OAMz/t7e3vLy8LazLzs7Ox8fHtLS0AICgzs7OxsbGv7+/zc3NAAAAzs7Ozs7Ovb29ycnJzs7OAAAAtra2wsLC
+ - xsbGtLS0z8/Pz8/Pzs7Ozs7Ora2tzMzMzs7Ozs7Ozs7OwMDAgYHz0NDQzs7Oz8/Pzc3NtbW1zs7Ozs7Ozs7Ozs7OtLS0AAAAAAAAzs7OysrKysrKAAAAAAAAzs7Ozs7O
+ - zs7Ozs7Ozs7Ovr6+y8vLubm529vbzs7OzMzMzs7Ozc3Nr6+vsbGxzs7Ozs7Ozs7OwcHBzMzMs7Oz1dXVzs7OzMzMzs7Ozs7OAAAAAAAAzs7OAAAAAAAAw8PDzMzMvr6+
+ - zs7OzMzMzs7Ozs7Oy8vLcXHZsLCw39/fzs7Ozs7Ozs7Ozs7Ozc3Nr6+vkZGR3Nzczs7Ozs7O0tLSzs7Ourq6w8PDwcHB19fXzs7OAAAAAAAAAAAAzs7OyMjItLS03d3d
+ - tra2zs7Oy8vLzs7Ozs7Ozs7Ozs7OxMTEtLS0w8PDz8/P0dHRzs7Ow8PDzs7Otra2zs7Oc3PaxsbGsbGxubm51dXVzs7Ozs7Ozc3Nzs7OAAAAzs7OxsbGrKysh4eHysrK
+ - wMDAra2turq6vb29zc3NkJCQzs7Ora2tzs7OtbW1zs7OsrKyzs7Oubm5zs7Or6+vrq6uhoaG5OTk0tLSzs7Ow8PDzs7O09PTzs7Ov7+/zs7OysrKzs7O0NDQysrKv7+/
+$CustomAttributes:
+-
+ Name: AccelerationOn
+ ID: 3660304484
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: CurrentObject
+ ID: 3660305250
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: ""
+ ShowInTooltip: false
+-
+ Name: DampingTime
+ ID: 3660305790
+ DataType: time
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: driveHome
+ ID: 3660306518
+ DataType: method
+ Value: |+1
+  var Lift := self.~
+  
+  Lift.state := "drivetohome"
+  if Lift.HomePosition /= void and Lift.DrivingHome
+  	var position:length[3] := Lift._3D.getPositionOfObject(Lift.HomePosition, Lift.HomePosition._3D.getMUAnimationPosition(0))
+  	var dy := calcDroppedPerpendicularFootPoint([0,0,0], [0,-1,0], position).y
+  	Lift._3D.getObject(1).moveTo(dy)
+  else
+  	Lift._3D.getObject(1).moveTo(0)
+  end
+  waituntil Lift._3D.Poses.EndPoseWasReached
+  Lift.state := "waiting"
+ ShowInTooltip: false
+-
+ Name: DrivingHome
+ ID: 3660321172
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: fenceHeight
+ ID: 3660321806
+ DataType: length
+ Value: 5
+ ShowInTooltip: false
+-
+ Name: FrontMU
+ ID: 3660322286
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: HomePosition
+ ID: 3660323042
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: MaximumDwellTime
+ ID: 3660323600
+ DataType: time
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: NewPart
+ ID: 3660324106
+ DataType: boolean
+ Value: false
+ HasInitValue: true
+ InitValue: false
+ ShowInTooltip: false
+-
+ Name: nextPart
+ ID: 3660324450
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: "void"
+ ShowInTooltip: false
+-
+ Name: OnEntrance
+ ID: 3660325796
+ DataType: method
+ Value: |+1
+  var LiftTrack := self.~
+  if not LiftTrack.full and LiftTrack.MaximumDwellTime > 0
+  	LiftTrack.FrontMU.stopped := true
+  end
+  if LiftTrack.nextPart = @
+  	LiftTrack.nextPart := void
+  end
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 3660329738
+ DataType: method
+ Value: |+1
+  var LiftTrack := self.~
+  var part := @
+  if part.Location = LiftTrack
+  	var destinationObject: Object
+  	// Next destination has to be a (Object with attribute Backwards) conveyor!
+  	if part.AutomaticRouting and part.destination /= void
+  		destinationObject := part.getRouteIntermediateDestination
+  	else
+  		destinationObject := LiftTrack.succ
+  	end
+  
+  	if DestinationObject.InternalClassType /= "Marker"
+  		part.move(destinationObject, 0)
+  	else
+  		@.move
+  	end
+  elseif part.Location /= LiftTrack
+  	if LiftTrack.FrontMU = part
+  		if LiftTrack.cont /= void
+  			LiftTrack.FrontMU := LiftTrack.cont
+  		else
+  			LiftTrack.FrontMU := void
+  		end
+  	end
+  	LiftTrack.ExitLocked := true
+  end
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 3660336138
+ DataType: method
+ Value: "rootfolder.internal.dialog.genDialog"
+ ShowInTooltip: false
+-
+ Name: OnPull
+ ID: 3660337608
+ DataType: method
+ Value: |+1
+  var LiftTrack  := ?
+  var part := @
+  
+  if part = void or part /= LiftTrack.FwBlockListEntry1
+  	return
+  end
+  
+  if LiftTrack.CurrentObject = part.~
+  	LiftTrack.NewPart := true
+  	LiftTrack.processPendingTransfers(part)
+  elseif LiftTrack.empty and LiftTrack.FrontMU = void
+  	LiftTrack.FrontMU := part
+  	LiftTrack.processPendingTransfers(part)
+  else
+  	waituntil LiftTrack.nextPart = void
+  	LiftTrack.nextPart := part
+  	waituntil LiftTrack.state = "waiting"
+  	LiftTrack.processPendingTransfers(part)
+  end
+ ShowInTooltip: false
+-
+ Name: OnSensor
+ ID: 3660343700
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean, BookPos: boolean
+  
+  if self.~.ExitLocked
+  	self.~.Stopped := true
+  end
+ ShowInTooltip: false
+-
+ Name: OpenedDialog
+ ID: 3660351744
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: ParametrizeCar
+ ID: 3660352218
+ DataType: method
+ Value: |+1
+  var lift :=  self.~
+  var Car := lift._3D.getObject("Car")
+  
+  Car.length := lift.Length
+  Car.width := lift.width
+  
+  var LeftFence := lift._3D.getGraphic("Fence", ["Left Fence"])
+  var RightFence := lift._3D.getGraphic("Fence", ["Right Fence"])
+  //Adjusting Length and Height of Fence
+  var fenceArrayLeft := LeftFence.dimensions
+  fenceArrayLeft.x := lift.Length
+  fenceArrayLeft.z := lift.fenceHeight
+  LeftFence.Position.x := lift.Length / 2
+  LeftFence.dimensions := fenceArrayLeft
+  
+  var fenceArrayRight := RightFence.dimensions
+  fenceArrayRight.x := lift.Length
+  fenceArrayRight.z := lift.fenceHeight
+  RightFence.Position.x := lift.Length / 2
+  RightFence.dimensions := fenceArrayRight
+  
+  //Adjusting width of Fence
+  lift._3D.getGraphic("Fence", ["Left Fence"]).Position.y := lift._3D.getObject(1).width/2
+  lift._3D.getGraphic("Fence", ["Right Fence"]).Position.y := -lift._3D.getObject(1).width/2
+ ShowInTooltip: false
+-
+ Name: processPendingTransfers
+ ID: 3660363566
+ DataType: method
+ Value: |+1
+  param part:object
+  
+  var LiftTrack := self.~
+  var LiftCar := LiftTrack._3D.getObject(1)
+  
+  if LiftTrack.FrontMU = void
+  	LiftTrack.FrontMU := part
+  end
+  
+  ?.ExitLocked := true
+  var sourceObject:object := part.~
+  var partPosition:length[3] := LiftTrack._3D.getPositionOfObject(part)
+  
+  if sourceObject /= LiftTrack.CurrentObject
+  	// Move car to the pick position
+  	LiftTrack.state := "driveto"
+  	LiftCar.moveTo(partPosition.z - LiftCar.Baseheight)
+  	waituntil LiftTrack._3D.Poses.EndPoseWasReached
+  	LiftTrack.CurrentObject := sourceObject
+  	LiftTrack.state := "damping"
+  	wait LiftTrack.DampingTime
+  end
+  LiftTrack.state := "loading"
+  
+  
+  if LiftTrack.OccupiedLength + part.length >= LiftTrack.length
+  	debug -- Vehicle should be longer than all parts that it has to transport
+  end
+  
+  waituntil not self.~.Failed
+  
+  part.move(LiftTrack,0)
+  
+  waituntil part.RearLocation = ?
+  
+  if LiftTrack.FrontMU /= void
+  	LiftTrack.FrontMU.stopped := false
+  end
+  
+  
+  if not LiftTrack.Full and LiftTrack.MaximumDwellTime > 0
+  	var MaxWaitTime:time := LiftTrack.MaximumDwellTime
+  	waituntil LiftTrack.NewPart wait MaxWaitTime
+  	// If there are parts coming from the same source we load more parts
+  	if not waitExpired
+  		LiftTrack.NewPart := false
+  		LiftTrack.FrontMU.stopped := false
+  		return
+  	end
+  end
+  
+  ?.EntranceLocked := true
+  
+  
+  waituntil LiftTrack.FrontMU.TargetPosition = -1.0
+  
+  LiftTrack.FrontMU.TargetPosition := LiftTrack.length - (LiftTrack.length - LiftTrack.OccupiedLength)/2
+  
+  LiftTrack.FrontMU.stopped := false
+  
+  
+  while not LiftTrack.Empty
+  	// Check for Deadlock and move car to the drop position
+  	var partInLine := LiftTrack.contentsList[1,1]
+  	var DestinationObject: Object
+  	if partInLine.AutomaticRouting and partInLine.destination /= void
+  		DestinationObject := partInLine.getRouteIntermediateDestination
+  	else
+  		if LiftTrack.succ = void
+  			throwRuntimeError(to_str(self.~)+": No destination for MU defined!")
+  		else
+  			DestinationObject := LiftTrack.succ
+  		end
+  	end
+  
+  	var aniOffset := when DestinationObject.InternalClassType /= "Marker" then
+  	DestinationObject._3d.getMUAnimationPosition(0) else [0,0,0]
+  	var dropPosition:length[3] := LiftTrack._3D.getPositionOfObject(DestinationObject, aniOffset) -- Lift._3D.baseheight
+  
+  	if DestinationObject /= LiftTrack.CurrentObject
+  		LiftTrack.state := "drivefull"
+  		LiftCar.moveTo(dropPosition.z - LiftCar.Baseheight)
+  		waituntil LiftTrack._3D.Poses.EndPoseWasReached
+  		LiftTrack.CurrentObject := DestinationObject
+  		LiftTrack.state := "damping"
+  		wait ?.DampingTime
+  	end
+  	LiftTrack.state := "unloading"
+  
+  	waituntil not self.~.Failed
+  	LiftTrack.ExitLocked := false
+  	LiftTrack.FrontMU.stopped := false
+  
+  	waituntil LiftTrack.ExitLocked
+  
+  end
+  
+  if LiftTrack.FwBlockListEntry1 /= void
+  	LiftTrack.state := "waiting"
+  	LiftTrack.&OnPull.executeNewCallchain(LiftTrack.FwBlockListEntry1, LiftTrack)
+  else
+  	LiftTrack.driveHome
+  end
+  
+  ?.EntranceLocked := false
+ ShowInTooltip: false
+-
+ Name: RailWidth
+ ID: 3660381716
+ DataType: length
+ Value: 0.108
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 3660382260
+ DataType: string
+ Value: "waiting"
+ HasInitValue: true
+ InitValue: "waiting"
+ ShowInTooltip: false
+-
+ Name: TrackLength
+ ID: 3660383158
+ DataType: length
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: waitPosReached
+ ID: 3660383452
+ DataType: method
+ Value: |+1
+  param movementTime:time
+  // If there are no failures configured, then just proceed and wait for the movement time that was specified
+  if not self.~.FailureActive or self.~.Failures <= 0
+  	wait movementTime
+  	return
+  end
+  
+  // Pause the movement during a failure
+  while movementTime > 0
+      stopuntil self.~.Failed wait movementTime
+      if waitExpired then exitloop end
+  	self.~._3D.Poses.pauseMovement
+  	var oldState := self.~.state
+  	self.~.state := "failed"
+  	stopuntil not self.~.Failed
+  	self.~.state := oldState
+      self.~._3D.Poses.continueMovement
+      movementTime := self.~._3D.Poses.getAnimationTime
+  end
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 3660389332
+ DataType: string
+ Value: "VehicleLift"
+ ShowInTooltip: false
+$Failures:
+-
+ Name: Failure
+ ID: 3660461122
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: 0
+ Duration: 0

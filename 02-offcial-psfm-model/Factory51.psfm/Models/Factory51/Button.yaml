@@ -1,0 +1,25 @@
+InternalClassType: Button
+Control: "self.OnClicked"
+Coordinate3D: [37,-53.3,3.8]
+Label: "Start/Stop Simulation"
+ObjectWidth: 6
+Origin: 4f7d3e03-b58b-4bdd-8ad2-d578669fe85d
+RandomSeed: 1073748572
+UUID: 019f044c-ab8a-72d1-b669-685fd4b1aaea
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+ Scale: [2,2,2]
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: |+1
+  if root.EventController.IsRunning
+  	root.EventController.stop
+  else
+  	root.EventController.start
+  end
+ ShowInTooltip: false

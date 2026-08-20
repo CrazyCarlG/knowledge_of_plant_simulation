@@ -1,0 +1,80 @@
+InternalClassType: Conveyor
+Coordinate3D: [-28.8,20,0]
+ExitCtrl: "self.OnExit"
+Length: 51.8
+Name: PaletteLine
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746407
+Speed: 1
+UUID: 019f044c-ab8a-72d8-8247-ea2c9e17e3c5
+3D:
+ ExtConfiguration:
+ -
+  Name: "Legs_1"
+  Extrusion Profile: [[-0.5,-0.05],[-0.4,-0.05],[-0.4,0.05],[-0.5,0.05],[-0.5,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Legs_2"
+  Extrusion Profile: [[0.4,-0.05],[0.5,-0.05],[0.5,0.05],[0.4,0.05],[0.4,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.475,-0.1],[0.475,-0.1],[0.475,0],[-0.475,0],[-0.475,-0.1]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x2d2d2d,0x292929,0x0,0x0,0,12]
+ -
+  Name: "Frame_2"
+  Extrusion Profile: [[0.475,-0.1],[0.5,-0.1],[0.5,0],[0.475,0],[0.475,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Frame_1"
+  Extrusion Profile: [[-0.5,-0.1],[-0.475,-0.1],[-0.475,0],[-0.5,0],[-0.5,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ $ExtSegments:
+  - 0
+  - [0,51.8,0]
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  var succ1:object := ?.succ(1)
+  var succ2:object := ?.succ(2)
+  
+  @.move(when succ1.NumMU < succ2.NumMU then 1 else 2)
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72e1-8efb-7b15b3227eb3
+ Name: Connector12
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7331-a930-50aeeb300aea
+-
+ $Succ: 019f044c-ab8a-72e3-9821-c16c33fe656e
+ Name: Connector17
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7332-bd3f-a0bcfbd3359a
+$Predecessors:
+- 019f044c-ab8a-731d-b754-a2508d1bd062
+- 019f044c-ab8a-7345-9a6a-9410b76f86c1
+InheritEntranceExitLockedOnReset: false

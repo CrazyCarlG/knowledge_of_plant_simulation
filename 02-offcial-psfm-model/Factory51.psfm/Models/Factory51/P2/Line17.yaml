@@ -1,0 +1,19 @@
+InternalClassType: Conveyor
+Length: 15.393504257825146
+Origin: 019f044c-ab8a-7051-84c3-8dcc3f7f0652
+RandomSeed: 1073746057
+UUID: 019f044c-ab8a-7496-86a0-9f8e80ed20dd
+$CustomAttributes:
+-
+ Name: BoxesDeleted
+ ID: 2
+ $DataType: integer
+ Value: 0
+$Successors:
+-
+ $Succ: 019f044c-ab8a-74cb-8e11-e1768a9d436b
+ Origin: 019f044c-ab8a-70bf-ae74-126f2dc763e3
+ UUID: 019f044c-ab8a-7504-8cd8-9c31e85841c0
+$Predecessors:
+- 019f044c-ab8a-74db-9a9c-d3c58570ef68
+InheritEntranceExitLockedOnReset: false

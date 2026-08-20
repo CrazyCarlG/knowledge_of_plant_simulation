@@ -1,0 +1,79 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Chart"
+ChartType: "100% Stacked Columns"
+Coordinate3D: [-23,13.7,1.4]
+DataInColumn: false
+DataSource: "Input Channels"
+Height: 15
+InputChannels:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ ColumnIndex: [string,19,~,"Inspection1","Inspection2","Inspection3","Milling1","Milling2","Milling3","Polishing1.Polishing","Polishing2.Polishing","Polishing3.Polishing","PostProcess1.Step1","PostProcess1.Step2","PostProcess1.Step3","PostProcess2.Step1","PostProcess2.Step2","PostProcess2.Step3","PostProcess3.Step1","PostProcess3.Step2","PostProcess3.Step3"]
+ Columns:
+ - [0,string,9,"Working","Setting-up","Waiting","Blocked","PoweringUpDown","Failed","Stopped","Paused","Unplanned"]
+ - [1,string,9,"Inspection1.StatWorkingPortion","Inspection1.StatSetupPortion","Inspection1.StatWaitingPortion","Inspection1.StatBlockingPortion","Inspection1.StatPoweringUpDownPortion","Inspection1.StatFailPortion","Inspection1.StatStoppedPortion","Inspection1.StatPausingPortion","Inspection1.StatUnplannedPortion"]
+ - [2,string,9,"Inspection2.StatWorkingPortion","Inspection2.StatSetupPortion","Inspection2.StatWaitingPortion","Inspection2.StatBlockingPortion","Inspection2.StatPoweringUpDownPortion","Inspection2.StatFailPortion","Inspection2.StatStoppedPortion","Inspection2.StatPausingPortion","Inspection2.StatUnplannedPortion"]
+ - [3,string,9,"Inspection3.StatWorkingPortion","Inspection3.StatSetupPortion","Inspection3.StatWaitingPortion","Inspection3.StatBlockingPortion","Inspection3.StatPoweringUpDownPortion","Inspection3.StatFailPortion","Inspection3.StatStoppedPortion","Inspection3.StatPausingPortion","Inspection3.StatUnplannedPortion"]
+ - [4,string,9,"Milling1.StatWorkingPortion","Milling1.StatSetupPortion","Milling1.StatWaitingPortion","Milling1.StatBlockingPortion","Milling1.StatPoweringUpDownPortion","Milling1.StatFailPortion","Milling1.StatStoppedPortion","Milling1.StatPausingPortion","Milling1.StatUnplannedPortion"]
+ - [5,string,9,"Milling2.StatWorkingPortion","Milling2.StatSetupPortion","Milling2.StatWaitingPortion","Milling2.StatBlockingPortion","Milling2.StatPoweringUpDownPortion","Milling2.StatFailPortion","Milling2.StatStoppedPortion","Milling2.StatPausingPortion","Milling2.StatUnplannedPortion"]
+ - [6,string,9,"Milling3.StatWorkingPortion","Milling3.StatSetupPortion","Milling3.StatWaitingPortion","Milling3.StatBlockingPortion","Milling3.StatPoweringUpDownPortion","Milling3.StatFailPortion","Milling3.StatStoppedPortion","Milling3.StatPausingPortion","Milling3.StatUnplannedPortion"]
+ - [7,string,9,"Polishing1.Polishing.StatWorkingPortion","Polishing1.Polishing.StatSetupPortion","Polishing1.Polishing.StatWaitingPortion","Polishing1.Polishing.StatBlockingPortion","Polishing1.Polishing.StatPoweringUpDownPortion","Polishing1.Polishing.StatFailPortion","Polishing1.Polishing.StatStoppedPortion","Polishing1.Polishing.StatPausingPortion","Polishing1.Polishing.StatUnplannedPortion"]
+ - [8,string,9,"Polishing2.Polishing.StatWorkingPortion","Polishing2.Polishing.StatSetupPortion","Polishing2.Polishing.StatWaitingPortion","Polishing2.Polishing.StatBlockingPortion","Polishing2.Polishing.StatPoweringUpDownPortion","Polishing2.Polishing.StatFailPortion","Polishing2.Polishing.StatStoppedPortion","Polishing2.Polishing.StatPausingPortion","Polishing2.Polishing.StatUnplannedPortion"]
+ - [9,string,9,"Polishing3.Polishing.StatWorkingPortion","Polishing3.Polishing.StatSetupPortion","Polishing3.Polishing.StatWaitingPortion","Polishing3.Polishing.StatBlockingPortion","Polishing3.Polishing.StatPoweringUpDownPortion","Polishing3.Polishing.StatFailPortion","Polishing3.Polishing.StatStoppedPortion","Polishing3.Polishing.StatPausingPortion","Polishing3.Polishing.StatUnplannedPortion"]
+ - [10,string,9,"PostProcess1.Step1.StatWorkingPortion","PostProcess1.Step1.StatSetupPortion","PostProcess1.Step1.StatWaitingPortion","PostProcess1.Step1.StatBlockingPortion","PostProcess1.Step1.StatPoweringUpDownPortion","PostProcess1.Step1.StatFailPortion","PostProcess1.Step1.StatStoppedPortion","PostProcess1.Step1.StatPausingPortion","PostProcess1.Step1.StatUnplannedPortion"]
+ - [11,string,9,"PostProcess1.Step2.StatWorkingPortion","PostProcess1.Step2.StatSetupPortion","PostProcess1.Step2.StatWaitingPortion","PostProcess1.Step2.StatBlockingPortion","PostProcess1.Step2.StatPoweringUpDownPortion","PostProcess1.Step2.StatFailPortion","PostProcess1.Step2.StatStoppedPortion","PostProcess1.Step2.StatPausingPortion","PostProcess1.Step2.StatUnplannedPortion"]
+ - [12,string,9,"PostProcess1.Step3.StatWorkingPortion","PostProcess1.Step3.StatSetupPortion","PostProcess1.Step3.StatWaitingPortion","PostProcess1.Step3.StatBlockingPortion","PostProcess1.Step3.StatPoweringUpDownPortion","PostProcess1.Step3.StatFailPortion","PostProcess1.Step3.StatStoppedPortion","PostProcess1.Step3.StatPausingPortion","PostProcess1.Step3.StatUnplannedPortion"]
+ - [13,string,9,"PostProcess2.Step1.StatWorkingPortion","PostProcess2.Step1.StatSetupPortion","PostProcess2.Step1.StatWaitingPortion","PostProcess2.Step1.StatBlockingPortion","PostProcess2.Step1.StatPoweringUpDownPortion","PostProcess2.Step1.StatFailPortion","PostProcess2.Step1.StatStoppedPortion","PostProcess2.Step1.StatPausingPortion","PostProcess2.Step1.StatUnplannedPortion"]
+ - [14,string,9,"PostProcess2.Step2.StatWorkingPortion","PostProcess2.Step2.StatSetupPortion","PostProcess2.Step2.StatWaitingPortion","PostProcess2.Step2.StatBlockingPortion","PostProcess2.Step2.StatPoweringUpDownPortion","PostProcess2.Step2.StatFailPortion","PostProcess2.Step2.StatStoppedPortion","PostProcess2.Step2.StatPausingPortion","PostProcess2.Step2.StatUnplannedPortion"]
+ - [15,string,9,"PostProcess2.Step3.StatWorkingPortion","PostProcess2.Step3.StatSetupPortion","PostProcess2.Step3.StatWaitingPortion","PostProcess2.Step3.StatBlockingPortion","PostProcess2.Step3.StatPoweringUpDownPortion","PostProcess2.Step3.StatFailPortion","PostProcess2.Step3.StatStoppedPortion","PostProcess2.Step3.StatPausingPortion","PostProcess2.Step3.StatUnplannedPortion"]
+ - [16,string,9,"PostProcess3.Step1.StatWorkingPortion","PostProcess3.Step1.StatSetupPortion","PostProcess3.Step1.StatWaitingPortion","PostProcess3.Step1.StatBlockingPortion","PostProcess3.Step1.StatPoweringUpDownPortion","PostProcess3.Step1.StatFailPortion","PostProcess3.Step1.StatStoppedPortion","PostProcess3.Step1.StatPausingPortion","PostProcess3.Step1.StatUnplannedPortion"]
+ - [17,string,9,"PostProcess3.Step2.StatWorkingPortion","PostProcess3.Step2.StatSetupPortion","PostProcess3.Step2.StatWaitingPortion","PostProcess3.Step2.StatBlockingPortion","PostProcess3.Step2.StatPoweringUpDownPortion","PostProcess3.Step2.StatFailPortion","PostProcess3.Step2.StatStoppedPortion","PostProcess3.Step2.StatPausingPortion","PostProcess3.Step2.StatUnplannedPortion"]
+ - [18,string,9,"PostProcess3.Step3.StatWorkingPortion","PostProcess3.Step3.StatSetupPortion","PostProcess3.Step3.StatWaitingPortion","PostProcess3.Step3.StatBlockingPortion","PostProcess3.Step3.StatPoweringUpDownPortion","PostProcess3.Step3.StatFailPortion","PostProcess3.Step3.StatStoppedPortion","PostProcess3.Step3.StatPausingPortion","PostProcess3.Step3.StatUnplannedPortion"]
+LegendLocation: "Right"
+Mode: "Sample"
+OpenCtrl:
+Origin: 3eb6fc13-ef68-4012-bbec-b602b339e69d
+Rotation: 0
+StepCurve: false
+Subtitle: ""
+Title: "Resource Statistics"
+UUID: 019f044c-ab8a-7087-9bfa-e0dbf5038055
+XLabel: "Station"
+YLabel: ""
+YScaleMax: 1.02
+YScaleMin: 0
+3D:
+ ExcludeFromShowContentOfLocation: false
+ Rotation: [45,1,0,0]
+$Colors:
+- 0xa0a0a0
+- 0xf4f4f4
+- 0xffffff
+- 0x0
+- [0xf500,5,3]
+- [0x328ebe,5,5]
+- [0xbebebe,5,5]
+- [0xebf5,5,7]
+- [0xff1ebe,5,6]
+- [0xff,5,9]
+- [0xaa9bff,5,8]
+- [0xff0000,5,11]
+- [0xffa040,5,10]
+- [0x969696,0,6]
+- [0x8000,0,8]
+- [0x96c000,0,10]
+- [0x7e7e00,0,98]
+- [0x8080,0,94]
+$StatisticsWizard: [0x7ffff,0x1,0,0,true,false]
+$WindowRect: [50,50,822,586]

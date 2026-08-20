@@ -1,0 +1,1577 @@
+InternalClassType: Transporter
+Acceleration: 1
+AccelerationEnabled: false
+AutomaticRouting: true
+Backwards: false
+BatBasicCons: 0
+BatCapacity: 0
+BatCharge: 0
+BatChargeCtrl:
+BatChargeCurrent: 0
+BatDriveCons: 0
+BatReserve: 0
+BatteryUsed: false
+BookPntHRelative: 0.633333
+BookPntLRelative: 0.5
+BookPntWRelative: 0
+BwEntranceCtrl:
+BwEntranceCtrlFront: false
+BwEntranceCtrlRear: true
+BwExitCtrl:
+BwExitCtrlFront: false
+BwExitCtrlRear: true
+Capacity: -1
+ChangePathCtrl:
+CollisionCtrl:
+ConstructorCtrl:
+Coordinate3D: [1,1,0]
+CreateIn3D: true
+CurveSpeed: -1
+Deceleration: 1
+DefaultCurveRadius: 1
+DestCtrl: "self.OnDestination"
+Destination:
+DestructorCtrl:
+Distance: 1
+DistanceCtrl:
+DragDropCtrl:
+DriveCtrl:
+EntranceCtrl:
+EntranceCtrlFront: true
+EntranceCtrlRear: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+IsTractor: false
+Label: ""
+LoadBayLength: 1
+LoadBayType: "Track"
+MoveToFolderCtrl:
+MUHeight: 0.3
+MULength: 0.18
+MUWidth: 0.11
+Name: GantryLoader
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RandomSeed: 13
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+ResourceType: "Transport"
+ResStatOn: true
+RotationSpeed: 10
+RouteWeightingAttr: ""
+RoutingCtrl:
+SafetyZones: [1,0,0,0]
+SelectCtrl:
+ShiftcalendarObject:
+Speed: 0.5
+SpeedCtrl:
+StartDelayDuration: 0
+StopAtDestination: false
+UnplannedCtrl:
+UUID: eac77717-638b-41a1-932e-c0c1dfa4eb2b
+3D:
+ AnimationObject: ""
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaAbsoluteCenter: [0,0,1]
+ MUAnimationAreaAbsoluteSize: [1,1]
+ MUAnimationAreaEnabled: false
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ -
+  Name: "Track"
+  AnchorPoints:
+  - [0,0.04,0,90,0,0,-1,~]
+  - [0,0.04,-1,90,0,0,-1,~]
+ MUSideToAttach: "Booking Point"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ ScaleAutomatically: false
+ ShowContent: true
+ ShowSafetyZones: false
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "base"
+ Transparent: true
+ Size: [11,20]
+ Pixels:
+ - AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+ - AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/
+ - AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+ - AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/
+-
+ Name: "trolley11"
+ Transparent: true
+ Size: [9,5]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+-
+ Name: "trolley1"
+ Transparent: true
+ Size: [80,5]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+-
+ Name: "trolley111"
+ Transparent: true
+ Size: [27,10]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+-
+ Name: "trolley2"
+ Transparent: true
+ Size: [27,10]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+-
+ Name: "trolley1111"
+ Transparent: true
+ Size: [16,1]
+ Pixels:
+ - AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+$CustomAttributes:
+-
+ Name: LoaderPosReached
+ ID: 1
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: OnDestination
+ ID: 2
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // the trolley has reached its target position, stop the trolley and
+  // set flag TrolleyPosReached
+  //
+  // Parameters	: none
+  // 			  
+  // ReturnValues : none
+  //
+  // Called By	: SensorControl
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 03.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  var Loader : object := self.~
+  
+  Loader.stopped := true
+  Loader.LoaderPosReached := true
+ ShowInTooltip: false
+-
+ Name: Hook
+ ID: 3
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: _moveHook
+ ID: 4
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // move the hook up or down depending on the given high of the hook.
+  // Keep in mind that the position of the hook is defined with respect to the 
+  // animation line of the trolley.
+  // This method is for internal use and therefore we do not check the parameters
+  // and we do not set a new state
+  //
+  // Parameters	: TargetZPos: the hight of the hook
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  param  hook : object, TargetZPos : length 
+  
+  var loader := self.~
+  
+  var currPos : length := hook.frontPos
+  
+  // adjust the target position
+  TargetZPos += hook.Length
+  
+  // set the direction of the movement
+  hook.Backwards := TargetZPos>currPos
+  
+  if TargetZPos~=currPos 
+  	loader.hookPosReached := true
+  else
+  	Hook.TargetPosition := TargetZPos
+  	hook.stopped := false
+  	loader.hookPosReached := false
+  end
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 5
+ DataType: string
+ Value: "idle"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: setState
+ ID: 6
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // set the state to waiting as soon as all parts have reached its position.
+  // set the position of the sensors of the crane
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: moveTo
+  // Calls		: defineState
+  // 
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  
+  var loader : object := self.~
+  var Gantry : object := Loader.~
+  
+  
+  if gantry.loaderType=1 then
+  	// I-Loader
+  	// wait until all parts of the loader has reached its position
+  	var master : object := loader
+  	waituntil loader.loaderPosReached and loader.HookPosreached prio 1
+  	
+  else
+  	// H-Loader
+  	if loader.isTractor then
+  		var loader2 : object := loader.rearMU
+  		master := loader
+  	else
+  		loader2 := loader.frontMu
+  		master := loader2
+  	end
+  	
+  	waituntil loader.LoaderPosReached and Loader.HookPosReached and
+  	loader2.LoaderPosReached and Loader2.HookPosReached
+  	
+  end
+  
+  if master.InternalCommand then
+  	master.state := "ready"
+  else
+  	// set the state of the loader
+  	master.state := "waiting"
+  end
+ ShowInTooltip: false
+-
+ Name: movingDirection
+ ID: 7
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: moveTo
+ ID: 8
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Move the Loader to the defined position. If there is no Z-position defined,
+  // just move the Loader
+  // The parameters are defined in Gantry coordinates
+  //
+  // Parameters	: Y_pos, Z_Pos the new position
+  //			  
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: _moveTo, checkGantryParameter
+  //--------------------------------------------------------------------------------
+  
+  param Y_Pos : length, Z_Pos : length := -1 -> integer
+  
+  
+  var Loader := self.~
+  var Gantry := Loader.~
+  
+  // check the parameter
+  var paramOK : integer := rootfolder.Internal.Methods.checkGantryParameter(Gantry, Y_Pos, Z_Pos)
+  
+  if paramOK=0 then
+  	
+  	if Z_Pos=-1 then
+  		// just move the trolley
+  		Loader._moveTo(Y_Pos)
+  	else
+  		// move trolley and hook
+  		Loader._moveTo(Y_Pos, Z_Pos)
+  	end
+  	
+  else
+  	switch paramOK
+  	// parameter are not ok, an error was already reported
+  	case 1
+  		var message : string := to_str("Invalid target position ", Y_Pos, " of the loader.")
+  		throwRuntimeError(message)
+  	case 2
+  		message := to_str("Invalid height ", Z_Pos, " of loader.")
+  		throwRuntimeError(message)
+  	end
+  end
+  
+  result := paramOK
+ ShowInTooltip: false
+-
+ Name: _moveTo
+ ID: 9
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Move the trolley and the hook to the defined position.
+  // If there is a collision detected, call the collision control
+  // The parameters are defined in Gantry coordinates.
+  //
+  // Parameters	: Y_Pos, Z_Pos the coordinates of the new position
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER, moveToPosition, moveToObject, moveToPositionAbs
+  // Calls		: setState, checkParameter, _moveTo
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  param Y_Pos : length, Z_Pos : length := -1
+  
+  var Loader : object := self.~
+  
+  // depending on the parameter move the trolley and hook
+  Loader._moveLoader(Y_Pos)
+  
+  var hook : object := Loader.cont
+  
+  if Z_Pos>0 then
+  	Loader._moveHook(Z_Pos)
+  else
+  	Loader.HookPosReached := true
+  end
+  
+  if loader.type="H-Loader" then
+  	if loader.isTractor then
+  		var master : object := loader
+  	else
+  		master := loader.frontMu
+  	end
+  else
+  	master := loader
+  end
+  
+  master.state := "moving"
+  master.&setState.executeNewCallChain
+ ShowInTooltip: false
+-
+ Name: _moveLoader
+ ID: 10
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // move the mid of the loader to the given position.
+  // This method is for internal use, therefore we do not check for parameters
+  //
+  // Parameters	: Y_Pos, the new location for the loader, more exact the 
+  //					mid of the loader
+  //			  
+  // ReturnValues : none
+  //
+  // Called By	: portal.moveLoader
+  // Calls		: 
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  param  Y_Pos : length 
+  
+  
+  var Loader : object := self.~
+  
+  if loader.Type="H-Loader" then
+  	if loader.isTractor then
+  		var master : object := loader
+  	else
+  		master := loader.frontMU
+  	end
+  else
+  	master := loader
+  end
+  
+  // get the position of the center of the loader
+  var currPos : length := master.BookPos
+  
+  // calculate the distance to the target position so that the mid of the loader will
+  // stop at the given y position
+  if master=loader then
+  	var TargetDistance : length := Y_Pos - currPos
+  else
+  	TargetDistance := Y_Pos - currPos + (master.BookPos-loader.BookPos)
+  end
+  
+  // set the direction of the movement
+  master.Backwards := TargetDistance<0
+  
+  TargetDistance := abs(TargetDistance)
+  
+  if TargetDistance~= 0 then
+  	master.LoaderPosReached := true
+  else
+  	master.LoaderPosReached := false
+  	master.TargetDistance := TargetDistance
+  	master.stopped := false
+  end
+ ShowInTooltip: false
+-
+ Name: moveHook
+ ID: 11
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // move the hook up or down depending on the given high of the hook.
+  // Keep in mind that the position of the hook is defined with respect to the 
+  // animation line of the trolley.
+  // This method is for internal use and therefore we do not check the parameters and we
+  // do not set a new state
+  //
+  // Parameters	: TargetZPos: the hight of the hook
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  // 25.04.2018	GG	errormessage removed
+  //---------------------------------------------------------------------------------
+  
+  param  TargetZPos : length
+  
+  
+  var loader := self.~
+  
+  if loader.Type="H-Loader" then
+  	if loader.isTractor then
+  		var master : object := loader
+  	else
+  		master := loader.FrontMu
+  	end
+  else
+  	master := loader
+  end
+  
+  var Hook := loader.Hook
+  
+  // move only hook
+  master.state := "moveHook"
+  
+  // check if the new location is valid
+  var unit : string := getUnit(TargetZPos)
+  
+  if TargetZPos<=0 or TargetZPos>loader.LoadBayLength then
+  	// error message
+  	var message : string := to_str("Height of hook ", TargetZPos, " is out of range ", 0, "..", loader.LoadBayLength)
+  	throwRuntimeError(message)
+  	
+  else
+  	// valid position for the hook
+  	loader._moveHook(hook, TargetZPos)
+  end
+  
+  master.&setState.executeNewCallChain
+ ShowInTooltip: false
+-
+ Name: moveToObject
+ ID: 12
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Move the Loader to the location of an object, defined as parameter
+  //
+  // Parameters	: Target, the object where to move
+  //
+  // ReturnValues : 0, if the object could be reached, >0 otherwise
+  //
+  // Called By	: USER
+  // Calls		: checkParameter, _moveTo, setState
+  //---------------------------------------------------------------------------------
+  param Target: object -> integer
+  
+  var Loader: object := self.~
+  var Gantry: object := Loader.~
+  
+  // get the absolute position of the target object
+  var TargetPosition := Gantry._3D.getPositionOfObject(Target)
+  
+  // convert the object position into loader coordinates
+  var position: real := rootfolder.Internal.Methods.getGantryPosition(Gantry, TargetPosition)
+  
+  // move to the target position
+  result := Loader.moveTo(position, -1)
+ ShowInTooltip: false
+-
+ Name: endSequence
+ ID: 13
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Defines the end of a command sequence. First we are waiting until the portal will
+  // be in state waiting, then the state oft the portal will be set to idle.
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 04.01.2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  
+  var Loader	: object:= self.~
+  
+  // may be the portal already is in state idle
+  waituntil Loader.state="waiting" or Loader.state="idle" or loader.state="ready"
+  
+  if Loader.InternalCommand then
+  	loader.InternalCommand := false
+  	loader.state:=loader.OldState
+  else
+  	// no internal command
+  	if loader.Type="H-Loader" then
+  		if loader.isTractor then
+  			var master : object := loader
+  		else
+  			master := loader.frontMU
+  		end
+  	else
+  		// I-Loader
+  		master := loader
+  	end
+  	
+  	master.state := "idle"
+  end
+ ShowInTooltip: false
+-
+ Name: Type
+ ID: 14
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: HookPosReached
+ ID: 15
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: moveHookAbs
+ ID: 16
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // move the hook up or down depending on the given high of the hook.
+  // Keep in mind that the position of the hook is defined with respect to the 
+  // animation line of the trolley.
+  // This method is for internal use and therefore we do not check the parameters and we
+  // do not set a new state
+  //
+  // Parameters	: TargetZPos: the hight of the hook
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 02.01.2017
+  //
+  // History:
+  // 25.04.2018	GG	errormessage removed
+  //---------------------------------------------------------------------------------
+  
+  param  TargetHeight : length
+  
+  var loader := self.~
+  var Hook := loader.hook
+  
+  // calculate the target Z pos of the hook
+  var Gantry := loader.~
+  var TargetZPos : length := Gantry.BaseHeight - TargetHeight
+  
+  // check if the new location is valid
+  if TargetZPos<=0 or TargetZPos>loader.LoadBayLength then
+  	// error message
+  	var message : string := to_str("Height of hook ", TargetZPos, " is out of range ", 0, "..", loader.LoadBayLength)
+  	throwRuntimeError(message)
+  	
+  else
+  	// valid position for the hook
+  	
+  	if loader.Type="H-Loader" then
+  		if loader.isTractor then
+  			var master : object := loader
+  		else
+  			master := loader.frontMU
+  		end
+  	else
+  		master := loader
+  	end
+  	
+  	master.state := "moveHook"
+  
+  	loader._moveHook(hook, TargetZPos)
+  	
+  	master.&setState.executeNewCallChain
+  end
+ ShowInTooltip: false
+-
+ Name: pickMuFrom
+ ID: 17
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Pick an MU from the given Target.
+  // - move hook up if there is a given height of the hook, otherwise move hook up to
+  // 		default height
+  // - move to the Target
+  // - move down to the MU,
+  // - pick the Mu as soon as the MU has been finished
+  //
+  // This is an internal command sequence, so make sure no user command sequence can
+  // interrupt this command
+  //
+  // Parameters	: Target, the object where to pick an MU
+  //
+  // ReturnValues :
+  //
+  // Called By	: USER
+  // Calls		:
+  //---------------------------------------------------------------------------------
+  
+  param Target : object
+  
+  var loader := self.~
+  var Gantry := loader.~
+  
+  var hook := loader.Hook
+  
+  // may be the command is called as part of the user sequence
+  waituntil loader.state="idle"
+  if loader.state="idle" then
+  	loader.state := "waiting"
+  end
+  
+  loader.setInternalSequence
+  
+  if Gantry.loaderType=1 then
+  	// move hook up
+  	Loader.moveHook(Loader.DefaultHookHeight)
+  	if Gantry.LoaderType=2 then
+  		Loader.moveHook(Loader.DefaultHookHeight, 2)
+  	end
+  
+  	waituntil Loader.state="ready"
+  	// move to the object defined in Target
+  	Loader.moveToObject(Target.cont)
+  
+  	waituntil Loader.state="ready"
+  	// now we have to wait until the part located on Target will be finished.
+  	// In case that the Target is a container or vehicle, we will have to wait for it to be processed instead
+  	var part := Target.cont
+  
+  	if Target.internalClassType="Container" or Target.internalClassType="Transporter"
+  		waituntil Target.occupied and part.~.finished prio 1
+  	else
+  		waituntil Target.occupied and part.finished prio 1
+  	end
+  
+  	// now move hook down to the part
+  
+  	var Position := Gantry._3d.getPositionOfObject(part)
+  
+  	if part.MuHeightWithContent>0 then
+  		var ProductHeight : length := part.MuHeightWithConten
+  	else
+  		ProductHeight := part.MuHeight
+  	end
+  
+  	Loader.moveHookAbs(Position[3]+ProductHeight)
+  
+  	waituntil Loader.state="ready"
+  	// pick the part
+  	if Hook.HeadPosition=1 then
+  		part.move(Hook.PE(1,1))
+  	else
+  		part.move(Hook.PE(2,1))
+  	end
+  
+  	waituntil Loader.state="ready"
+  	// move hook up again
+  	Loader.moveHook(Loader.DefaultHookHeight)
+  
+  	waituntil Loader.state="ready"
+  	Loader.endSequence
+  else
+  	// here starts the sequence for H-Loader
+  	var loader2 := loader.rearMu
+  	if loader.Hook.empty then
+  		var EmptyLoader := loader
+  	else
+  		EmptyLoader := loader2
+  	end
+  
+  	// move hook up
+  	EmptyLoader.moveHook(EmptyLoader.DefaultHookHeight)
+  
+  	waituntil Loader.state="ready"
+  	// move to the object defined in Target
+  	var TargetPosition : length[3] := rootfolder.internal.Methods.getTargetPosition(Gantry, Target)
+  	var StopPosition : length := rootfolder.Internal.Methods.getGantryPosition(Gantry, TargetPosition)
+  
+  	EmptyLoader.moveTo(StopPosition)
+  	part := Target.cont
+  	waituntil Loader.state="ready"
+  	// now we have to wait until the part located on Target will be finished.
+  	// In case that the Target is a container or vehicle, we will have to wait for it to be processed instead
+  	if Target.internalClassType="Container" or Target.internalClassType="Transporter"
+  		waituntil Target.occupied and part.~.finished prio 1
+  	else
+  		waituntil Target.occupied and part.finished prio 1
+  	end
+  
+  	// now move hook down to the part
+  	part := Target.cont
+  
+  	Position := Gantry._3d.getPositionOfObject(part)
+  
+  	if part.MuHeightWithContent>0 then
+  		ProductHeight := part.MuHeightWithConten
+  	else
+  		ProductHeight := part.MuHeight
+  	end
+  
+  	EmptyLoader.moveHookAbs(Position[3]+part.MuHeight)
+  
+  	waituntil Loader.state="ready"
+  	// pick the part
+  	part.move(EmptyLoader.Hook)
+  
+  
+  	waituntil Loader.state="ready"
+  	// move hook up again
+  	EmptyLoader.moveHook(Loader.DefaultHookHeight)
+  
+  	waituntil Loader.state="ready"
+  	Loader.endSequence
+  	loader.InternalCommand := false
+  end
+ ShowInTooltip: false
+-
+ Name: _replaceMU
+ ID: 18
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // This method is only valid for I-Loader with capacity=2
+  //
+  // Pick the MU which is located on the given station and place the MU which is
+  // already carried by the loader onto the station.
+  // if there is no MU on the given station, just place the carried MU
+  // if the loader doesn't carry a MU, just pick the MU located on the station
+  //
+  // We assume the loader is already down on the height of the animation point where 
+  // we can pick the MU
+  // We also assume that the MU is finished before the function is called
+  //
+  // Parameters	: station, the station where to replace the MU
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: 
+  //
+  // Author		: Guido Groß
+  // Date			: 09.01.2016
+  //
+  // History:
+  //---------------------------------------------------------------------------------
+  
+  param Target : object
+  
+  
+  var Loader : object := self.~
+  var Gantry := Loader.~.~
+  var hook := Loader.Hook
+  
+  switch loader.Type
+  case "I-Loader"
+  	if Gantry.DoubleGripper then
+  	
+  		var unload : boolean := true			// unload part
+  		if hook.empty then
+  			// none of the gripper is occupied
+  			var MuPos := Hook.Headposition		// don't care
+  			var EmptyPos := Hook.Headposition	// gripper 1 is empty					
+  			unload := false
+  			
+  		elseif hook.PE(1,1).cont=void then
+  			MuPos := 2							// MU is on gripper 2
+  			EmptyPos := 1						// gripper 1 is empty
+  		else
+  			MuPos := 1							// MU is on gripper 1
+  			EmptyPos := 2						// gripper 2 is empty
+  		end
+  	
+  		
+  		// pick the part if there is one
+  		if target.occupied then
+  			
+  			// check if the empty position is looking downwards
+  			if Hook.HeadPosition=EmptyPos then
+  				// nothing to do, the correct gripper is looking downwards
+  				
+  			else
+  				// rotate the gripper
+  				if emptyPos=2 then
+  					// rotate clockwise
+  					var degree : real := 90
+  					Hook.HeadPosition := 2
+  				else
+  					// rotate counter clock wise
+  					degree := 0
+  					Hook.HeadPosition := 1
+  				end
+  				Loader._rotateGripper(Hook, Degree, Loader.RotationTime)
+  
+  			end
+  			
+  			// pick the part
+  			target.cont.move(Loader.hook.PE(EmptyPos,1))
+  				
+  		end		// target occupied
+  		
+  		if unload then
+  			// unload the part
+  			if Hook.HeadPosition=MuPos then
+  				// nothing to do
+  			else
+  				// rotate the gripper
+  				if MUPos=2 then
+  					// rotate clockwise
+  					degree := 90
+  					Hook.HeadPosition := 2
+  				else
+  					// rotate counter clock wise
+  					degree := 0
+  					Hook.HeadPosition := 1
+  				end
+  				
+  				Loader._rotateGripper(Hook, Degree, Loader.RotationTime)
+  				wait(1)
+  			end
+  			
+  			// place the MU onto target
+  			Hook.PE(MuPos,1).move(Target)
+  			wait(1)
+  
+  		end	// unload		
+  	else
+  		// error: command not allowed
+  	end
+  	
+  	
+  case "H-Loader"
+  	
+  end
+ ShowInTooltip: false
+-
+ Name: RotationTime
+ ID: 19
+ DataType: time
+ Value: 3
+ ShowInTooltip: false
+-
+ Name: _rotateGripper
+ ID: 20
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // rotate the gripper of the loader
+  //
+  // Parameters	: Hook, the Hook with the gripper which will be rotated
+  //				  Angle, the rotation angle
+  //				  RotationTime, the time needed for rotation
+  //			  
+  // ReturnValues : none
+  //
+  // Called By	: external
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 10.01.2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  
+  param  Hook : object, Angle : real, RotationTime : time
+  
+  var startAngle := when angle=0 then 90 else 0
+  							   
+  var animations : any := hook._3D.getObject("Gripper").selfAnimations
+  var degreePerSecond : real := abs((startAngle-Angle)/RotationTime)
+  	
+  waituntil not Hook.failed
+  
+  animations.reset
+  animations.scheduleRotation(startAngle, Angle, degreePerSecond)
+  animations.play
+  				
+  wait RotationTime
+ ShowInTooltip: false
+-
+ Name: internalCommand
+ ID: 21
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: DefaultHookHeight
+ ID: 22
+ DataType: length
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: replaceMUAt
+ ID: 23
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Replace an MU at the given Target. The gripper already carries a MU and is in 
+  // upper position
+  // Command sequence:
+  // - move to the Target
+  // - move down to the MU
+  // - pick the Mu as soon as the MU has been finished
+  // - turn the gripper
+  // - place the MU carried
+  // - move hook up to defaultHeight
+  // This is an internal command sequence, so make sure no user command sequence can 
+  // interrupt this command
+  //
+  // Parameters	: Target, the object where to pick an MU
+  //
+  // ReturnValues : 
+  //
+  // Called By	: USER
+  // Calls		: 
+  //---------------------------------------------------------------------------------
+  
+  param Target : object
+  
+  var loader := self.~
+  var hook := loader.cont
+  var Gantry := loader.~
+  var LoaderType : integer := Gantry.LoaderType
+  var front : boolean := true
+  
+  // may be the command is called as part of the user sequence
+  waituntil loader.state="idle" or loader.state="waiting"
+  
+  if loader.state="idle" then
+  	loader.state := "waiting"
+  end
+  	
+  loader.setInternalSequence
+  
+  
+  // calculate the position of the animation point of the target
+  var TargetPosition : length[3] := rootfolder.internal.Methods.getTargetPosition(Gantry, Target)
+  var StopPosition : length := rootfolder.Internal.Methods.getGantryPosition(Gantry, TargetPosition)
+  
+  // define the entry point of the sequence
+  if loaderType=1 then
+  		// move to the object defined in Target
+  		Loader.moveTo(StopPosition)
+  		
+  		waituntil Loader.state="ready"
+  		// determine the gripper which holds the MU
+  		if Hook.PE(1,1).cont=void then
+  			var EmptyPos : integer := 1
+  			var MUPos : integer := 2
+  		else
+  			EmptyPos := 2
+  			MUPos := 1
+  		end
+  		
+  		// turn gripper to the correct position
+  		if Target.occupied then
+  			Loader.turnGripper(EmptyPos)	// turn gripper to the empty side
+  			var ProductHeight : length
+  			if Target.cont.MuHeightWithContent>0 then
+  				ProductHeight := Target.cont.MuHeightWithContent
+  			else
+  				ProductHeight := Target.cont.MuHeight
+  			end
+  			// move gripper down 
+  			Loader.moveHookAbs( TargetPosition[3] + ProductHeight)
+  			waituntil Loader.state="ready"
+  			// pick the part
+  			
+  			if Target.internalClassType="Container" or Target.internalClassType="Transporter"
+  				waituntil Target.finished prio 1
+  			else
+  				waituntil Target.cont.finished prio 1
+  			end
+  			
+  			target.cont.move(Hook.PE(EmptyPos,1))
+  	
+  			waituntil Loader.state="ready"
+  			// move hook up again
+  			Loader.moveHook(Loader.DefaultHookHeight)
+  		
+  			waituntil Loader.state="ready"
+  			Loader.turnGripper(MUPos)
+  			
+  			waituntil Loader.state="ready"
+  			// move hook down again
+  			Loader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  			
+  			waituntil Loader.state="ready"
+  			// unload the part and move hook up again
+  			Hook.Pe(MUPos,1).cont.move(Target)	
+  			Loader.moveHook(Loader.DefaultHookHeight)
+  				
+  			waituntil Loader.state="ready"
+  			Loader.endSequence
+  			
+  		else
+  			loader.turnGripper(MUPos)	// turn gripper to the occupied side
+  			if hook.cont.MuHeightWithContent>0 then
+  				ProductHeight := hook.cont.MuHeightWithContent
+  			else
+  				ProductHeight := hook.cont.MuHeight
+  			end
+  			waituntil Loader.state="ready"
+  			// move hook down again
+  			Loader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  		
+  			waituntil Loader.state="ready"
+  			// unload the part and move hook up again
+  			Hook.Pe(MUPos,1).cont.move(Target)
+  			Loader.moveHook(Loader.DefaultHookHeight)	
+  			waituntil Loader.state="ready"
+  			Loader.endSequence
+  		end
+  		
+  	
+  else
+  		// here starts the sequence for H-Loader
+  		var loader2 := loader.rearMu
+  		
+  		if loader.Hook.empty then
+  			var emptyLoader := loader
+  			var FullLoader := loader2
+  		else
+  			EmptyLoader := loader2
+  			FullLoader := loader
+  		end
+  		
+  		// move to the target object, depending on the loaded hook and depending
+  		// on target is loaded or not position front or rear
+  		if Target.empty then
+  			
+  			FullLoader.moveTo(StopPosition)
+  			waituntil Loader.state="ready"
+  			// position full loader over target
+  		
+  			FullLoader.moveTo(StopPosition)
+  		
+  			waituntil Loader.state="ready"
+  			// move hook of full loader down
+  			if FullLoader.hook.cont.MuHeightWithContent>0 then
+  				ProductHeight := FullLoader.hook.cont.MuHeightWithContent
+  			else
+  				ProductHeight := FullLoader.hook.cont.MuHeight
+  			end
+  			
+  			FullLoader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  		
+  			waituntil Loader.state="ready"
+  			// place the part onto target
+  			FullLoader.Hook.cont.move(target)
+  		
+  			// move hook up again
+  			FullLoader.moveHook(FullLoader.DefaultHookHeight)
+  		
+  			waituntil Loader.state="ready"
+  			loader.endSequence
+  			Loader.InternalCommand := false	
+  		
+  		else
+  			// target not empty
+  			EmptyLoader.moveToObject(Target.cont)
+  			waituntil Loader.state="ready"
+  			// move empty gripper down, target is not empty
+  
+  			if Target.internalClassType="Container" or Target.internalClassType="Transporter"
+  				waituntil Target.finished prio 1
+  			else
+  				waituntil Target.cont.finished prio 1
+  			end
+  			
+  			
+  			if Target.cont.MuHeightWithContent>0 then
+  				ProductHeight := Target.cont.MuHeightWithContent
+  			else
+  				ProductHeight := Target.cont.MuHeight
+  			end
+  			
+  			EmptyLoader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  				
+  			waituntil Loader.state="ready"
+  			// pick the part on target
+  			target.cont.move(EmptyLoader.Hook)
+  			
+  			// move hook up
+  			EmptyLoader.moveHook(EmptyLoader.DefaultHookHeight)
+  			
+  			waituntil Loader.state="ready"
+  			// position full loader over target
+  			
+  			FullLoader.moveTo(StopPosition)
+  			
+  			waituntil Loader.state="ready"
+  			// move hook of full loader down
+  			if FullLoader.hook.cont.MuHeightWithContent>0 then
+  				ProductHeight := FullLoader.hook.cont.MuHeightWithContent
+  			else
+  				ProductHeight := FullLoader.hook.cont.MuHeight
+  			end
+  			
+  			FullLoader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  			
+  			waituntil Loader.state="ready"
+  			// place the part onto target
+  			FullLoader.Hook.cont.move(target)
+  			
+  			// move hook up again
+  			FullLoader.moveHook(FullLoader.DefaultHookHeight)
+  			
+  			waituntil Loader.state="ready"
+  			loader.endSequence
+  			Loader.InternalCommand := false	
+  				
+  		end
+  end
+ ShowInTooltip: false
+-
+ Name: turnGripper
+ ID: 24
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Turn the gripper to the loaded or empty side depending on parameter downSide
+  //
+  // Parameters	: downSide, 1 if the first gripper should face down, 2 if second 
+  //							gripper should face down
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: 
+  //
+  // Author		: Guido Groß
+  // Date			: 17.01.2016
+  //
+  // History:
+  // 25.04.2018	GG	remove errormessage
+  //---------------------------------------------------------------------------------
+  
+  param downSide : integer
+  
+  
+  if downside<1 or downside>2 then
+  	var message : string := to_str("Invalid definition of the head position ", downside, " of the loader.")
+  	throwRuntimeError(message)
+  end
+  
+  var Loader : object := self.~
+  var Gantry : object := Loader.~
+  var hook : object := Loader.Hook
+  
+  var isEmpty : boolean := Hook.empty
+  
+  switch loader.Type
+  case "I-Loader"
+  	if Gantry.Doublegripper then
+  	
+  		if Hook.HeadPosition=downSide then
+  			// nothing to do, the desired head is looking down
+  			var degree : real := -1
+  		else
+  			if downSide=1 then
+  				// Head 1 should look down
+  				degree := 0
+  			else
+  				// downside = 2
+  				degree := 90
+  			end
+  		end	
+  		if degree>=0 then
+  			Loader._rotateGripper(Hook, Degree, Loader.RotationTime)
+  			Hook.HeadPosition := downside
+  		end
+  	else
+  		// not doublegripper
+  		message := "The loader needs a double gripper."
+  		throwRuntimeError(message)
+  		
+  	end
+  
+  
+  case "H-Loader"
+  	message := "Command not allowed for H-Loader."
+  	throwRuntimeError(message)
+  	
+  end
+ ShowInTooltip: false
+-
+ Name: placeMuAt
+ ID: 25
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Place a MU at the given location.
+  // - move hook up if there is a given height of the hook, otherwise move hook up to 
+  // 		default height
+  // - move to the location
+  // - move down to the location to place the MU
+  // - place the Mu as soon as the MU has been finished
+  //
+  // This is an internal command sequence, so make sure no user command sequence can 
+  // interrupt this command
+  //
+  // Parameters	: Location, the object where to pick an MU
+  //				  front, true if the first Loader of a H-Loader will should be used
+  // ReturnValues : 
+  //
+  // Called By	: USER
+  // Calls		: 
+  //---------------------------------------------------------------------------------
+  
+  param Target : object
+  
+  var loader : object := self.~
+  var Gantry : object := loader.~
+  var LoaderType : integer := Gantry.LoaderType
+  
+  var hook : object := loader.Hook
+  
+  // may be the command is called as part of the user sequence
+  waituntil loader.state="idle" or loader.state="waiting"
+  
+  if loader.state="idle" then
+  	loader.state := "waiting"
+  end
+  
+  loader.setInternalSequence
+  
+  var TargetPosition : length[3] := rootfolder.internal.Methods.getTargetPosition(Gantry, Target)
+  var StopPosition : length := rootfolder.Internal.Methods.getGantryPosition(Gantry, TargetPosition)
+  
+  
+  if loaderType=1 then
+  	// move hook up
+  	Loader.moveHook(Loader.DefaultHookHeight)
+  		
+  	waituntil Loader.state="ready"
+  	// move to the object defined in Location
+  	Loader.moveTo(StopPosition)
+  	
+  	waituntil Loader.state="ready"
+  	if Gantry.DoubleGripper then
+  		if hook.PE(1,1).cont=void then
+  			var emptyPos : integer := 1
+  			var MuPos : integer := 2
+  		else
+  			emptyPos := 2
+  			MuPos := 1
+  		end
+  		Loader.turnGripper(MuPos)
+  	end
+  	
+  	waituntil Loader.state="ready"
+  	
+  	// now we have to wait until the location can load a part
+  	waituntil not Target.Full
+  		
+  	// now move hook down to the part
+  	var ProductHeight : length
+  	if Hook.cont.MuHeightWithContent>0 then
+  		ProductHeight := Hook.cont.MuHeightWithContent
+  	else
+  		ProductHeight := Hook.cont.MuHeight
+  	end
+  	
+  	Loader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  	
+  	waituntil Loader.state="ready"
+  	Hook.cont.move(Target)
+  		
+  	// move hook up again
+  	Loader.moveHook(Loader.DefaultHookHeight)
+  		
+  	waituntil Loader.state="ready"
+  	Loader.endSequence
+  		
+  else
+  	//----------------------------------------------------------------------------
+  	// starts the sequence for the H-Loader
+  	
+  	var loader2 := loader.rearMu
+  	
+  	if loader.Hook.empty then
+  		var emptyLoader := loader
+  		var FullLoader := loader2
+  	else
+  		EmptyLoader := loader2
+  		FullLoader := loader
+  	end
+  	
+  	// move to the target object, depending on the loaded Loader
+  	FullLoader.moveTo(StopPosition)
+  	
+  	waituntil Loader.state="ready"
+  	
+  	// now we have to wait until the location can load a part
+  	waituntil not Target.Full
+  		
+  	// now move hook down to the part
+  	if FullLoader.Hook.cont.MuHeightWithContent > 0 then
+  		ProductHeight := FullLoader.Hook.cont.MuHeightWithContent
+  	else
+  		ProductHeight := FullLoader.Hook.cont.MuHeight
+  	end
+  	
+  	FullLoader.moveHookAbs(TargetPosition[3] + ProductHeight)
+  	
+  	waituntil Loader.state="ready"
+  	FullLoader.Hook.cont.move(Target)
+  		
+  	// move hook up again
+  	FullLoader.moveHook(Loader.DefaultHookHeight)
+  		
+  	waituntil Loader.state="ready"
+  	Loader.endSequence
+  	Loader.InternalCommand := false
+  end
+ ShowInTooltip: false
+-
+ Name: transferMU
+ ID: 26
+ DataType: method
+ Value: |+1
+  // Method task:
+  // transfer a MU from source station to target station
+  //
+  // Parameters	: PartToMove: the MU that should be picked up
+  //				  ToStation: the station where to place the MU
+  //
+  // ReturnValues : none
+  //---------------------------------------------------------------------------------
+  
+  param PartToMove, ToStation: object, HookHeight: length := -1
+  
+  var Loader := self.~
+  var Gantry := loader.~
+  
+  // define the height of the Hook
+  if HookHeight=-1 then
+  	HookHeight := Loader.DefaultHookHeight
+  end
+  
+  // wait for the loader to be ready for next command
+  waituntil Loader.state="idle"
+  loader.setInternalSequence
+  
+  // move loader to part
+  Loader.moveToObject(PartToMove)
+  
+  waituntil Loader.state="ready"
+  // move hook down to height of MU
+  var Position : length[3] := Gantry._3D.getPositionOfObject(PartToMove)
+  
+  if PartToMove.MuHeightWithContent > 0 then
+  	var ProductHeight : length:= PartToMove.MuHeightWithContent
+  else
+  	ProductHeight := PartToMove.MuHeight
+  end
+  
+  Loader.moveHookAbs(Position[3] + productHeight)
+  
+  waituntil Loader.state="ready"
+  // load the MU
+  PartToMove.move(Loader.cont)
+  
+  waituntil Loader.state="ready"
+  // move hook up
+  Loader.moveHook(HookHeight)
+  
+  waituntil Loader.state="ready"
+  
+  // move to target station if this station is empty
+  waituntil ToStation.EntranceFree
+  
+  // calculate the target position of the MU
+  var TargetPosition: length[3] := rootfolder.Internal.Methods.getTargetPosition(Gantry, ToStation)
+  var StopPosition: length      := rootfolder.Internal.Methods.getGantryPosition(Gantry, TargetPosition)
+  
+  Loader.moveTo(StopPosition)
+  	
+  waituntil Loader.state="ready"
+  // move hook down to the animation point of the station
+  Loader.moveHookAbs(TargetPosition.z + ProductHeight)
+  
+  waituntil Loader.state="ready"
+  // move MU to ToStation
+  waituntil ToStation.EntranceFree
+  Loader.cont.cont.move(ToStation)
+  
+  waituntil Loader.state="ready"
+  // move hook up again
+  Loader.moveHook(HookHeight)
+  // the work is done
+  Loader.endSequence
+ ShowInTooltip: false
+-
+ Name: setInternalSequence
+ ID: 27
+ DataType: method
+ Value: |+1
+  var Loader : object := self.~
+  Loader.oldState := loader.state
+  
+  Loader.InternalCommand := true
+ ShowInTooltip: false
+-
+ Name: oldState
+ ID: 28
+ DataType: string
+ Value: ""
+ ShowInTooltip: false

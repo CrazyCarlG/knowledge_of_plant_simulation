@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-17,1.5485000000000002,0]
+DataType: length
+Name: TrackWidth
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: bcc029bf-76f2-4837-9f4e-d68d8f41dbfa
+$Observers:
+- [Value,"onChanges"]
+Value: 1.2

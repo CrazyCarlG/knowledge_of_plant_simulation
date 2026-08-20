@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-23,-4.7378999999999989,0]
+DataType: length
+Name: FloorThickness
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: 11c30a08-5cd5-4377-a20e-47f742c4117c
+$Observers:
+- [Value,"onChanges"]
+Value: 0.03

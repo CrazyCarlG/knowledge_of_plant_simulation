@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,0,0]
+Name: reserveBox
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // mark the defined box as reserved
+ //--------------------------------------------------------------------------------
+ param RackLane: object, Side: string, Column, Row: integer -> boolean
+ 
+ var OccupancyTable: object
+ 
+ if Side ~= "left"
+ 	OccupancyTable := Racklane.OccupancyLeft
+ else
+ 	OccupancyTable := Racklane.OccupancyRight
+ end
+ 
+ if OccupancyTable[Column, Row] = 0 then
+ 	OccupancyTable[Column, Row] := 1
+ 	// Decrease number of available places in all registered racklanes
+ 	NumFreePlaces -= 1
+ 	NumOccupiedPlaces += 1
+ 	return true
+ else
+ 	return false // Box is not free
+ end
+RandomSeed: 2252
+UUID: 0a04c57f-4843-4e8a-94fd-6b1b63ac1511
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

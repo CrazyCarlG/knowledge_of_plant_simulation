@@ -1,0 +1,36 @@
+InternalClassType: Conveyor
+Coordinate3D: [23,20,0]
+Length: 19.283185307179586
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746485
+Speed: 1
+UUID: 019f044c-ab8a-72e1-8efb-7b15b3227eb3
+3D:
+ $ExtSegments:
+  - 0
+  - [0,90,2,0]
+  - [0,1,0]
+  - [0,-90,2,0]
+  - [0,12,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72e2-a2d3-65a840fe3ca2
+ Name: Connector13
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-731e-a1d3-a56d929b3257
+$Predecessors:
+- 019f044c-ab8a-7331-a930-50aeeb300aea
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 13.2
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

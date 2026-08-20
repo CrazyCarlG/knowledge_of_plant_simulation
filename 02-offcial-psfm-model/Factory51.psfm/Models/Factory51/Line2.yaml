@@ -1,0 +1,30 @@
+InternalClassType: Conveyor
+Acceleration: 0.5
+AccelerationEnabled: true
+Accumulating: false
+Coordinate3D: [61.5,15.75,0]
+Deceleration: 0.5
+Length: 9.2831853071795862
+MUDistance: 0.5
+MUDistanceType: "Minimum Gap"
+Name: Line2
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073755958
+Speed: 1.5
+UUID: 019f044c-ab8a-730e-97ee-0e4d0948fc05
+3D:
+ BaseHeight: 0.2
+ $ExtSegments:
+  - 0
+  - [179.99999999999997,-90,2,0]
+  - [0,90,2,0]
+  - [0,3,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-730d-a99e-d58903eb3c62
+ Name: Connector18
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7326-b2ef-32b9f012f5db
+$Predecessors:
+- 019f044c-ab8a-7337-8e7e-f06c6934566a
+InheritEntranceExitLockedOnReset: false

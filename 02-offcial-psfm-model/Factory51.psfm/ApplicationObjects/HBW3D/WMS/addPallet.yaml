@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,-10.5,0]
+Name: addPallet
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Add a pallet and remember the products of the pallet. This is necessary to
+ // find later the pallet in the warehouse
+ //--------------------------------------------------------------------------------
+ 
+ Param Pallet: object, Side: string, Column, Row: integer,
+ 	product: string, Quantity: integer
+ 
+ // look for the product in table Inventory
+ var inventoryRow: integer := Inventory.getRowNo(Product)
+ 
+ if inventoryRow <= 0 then
+ 	// product is not in warehouse so far, add a column
+ 	inventoryRow := Inventory.YDim+1
+ 	Inventory["Product", inventoryRow] := product
+ 	Inventory.createNestedList("Pallets", inventoryRow)
+ end
+ 
+ // get the list of pallets
+ var PalletList := Inventory["Pallets", InventoryRow]
+ 
+ PalletList.writeRow(1, PalletList.YDim+1, Pallet, Quantity)
+RandomSeed: 2248
+UUID: 3349d5fb-3597-4779-848e-df9c35e3ea66
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

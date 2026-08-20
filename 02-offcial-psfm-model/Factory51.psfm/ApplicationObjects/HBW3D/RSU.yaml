@@ -1,0 +1,655 @@
+InternalClassType: Station
+AutomaticProcessing: false
+AutomaticSetup: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,-10,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+DestructorCtrl:
+DragDropCtrl:
+EnergyActive: false
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl: "self.OnFail"
+FailureActive: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: RSU
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+ProcTime: 10
+PullCtrl:
+RandomSeed: 1
+RecoveryTime: 0
+RecoveryTimeMode: "When part enters"
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Production"
+ResStatOn: true
+SelectCtrl:
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+SetupAttrName: ""
+SetupCtrl:
+SetupForType: true
+SetupOnlyWhenEmpty: false
+SetupTime: 0
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: c69ac4b0-892b-4df7-9510-1dbb929d13c1
+$TabConfig: 0xfd04
+3D:
+ AnimationObject: "RSU_Unit.LiftTable.Forks"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [0,0,1,0,0,0,1,~]
+ MUSideToAttach: "Center bottom"
+ NameLabelEnabled: false
+ NameLabelPosition: [-1,-0.95,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0.6,0]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [1,0,0]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimitActive: false
+  JointType: "Prismatic Joint"
+  JointUpperLimitActive: false
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: RSU_Unit
+  Position: [0.5,0,0.001]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: ab19ed0c-4fbe-4a50-ae47-579bbf89c95f
+  VisibleGraphicGroups: ["default"]
+  $Objects:
+  -
+   AniRotationAxis: [0,0,-1]
+   AniRotationCenter: [0,0,0]
+   AniTranslationDirection: [0,0,1]
+   GraphicGroupNames: ["default"]
+   JointAcceleration: 0
+   JointDeceleration: 0
+   JointLowerLimitActive: false
+   JointType: "Prismatic Joint"
+   JointUpperLimitActive: false
+   JointVelocity: 2
+   LockedGraphicGroups: []
+   MaterialActive: false
+   Mirror: [false,false,false]
+   MUAnimations:
+   Name: LiftTable
+   Position: [-0.5,0,0.02]
+   Rotation: [0,0,0,-1]
+   Scale: [1,1,1]
+   SelfAnimations:
+   ShowContent: true
+   UUID: c8257d30-3956-4558-be6e-8ad52b4bfd41
+   VisibleGraphicGroups: ["default"]
+   $Objects:
+   -
+    AniRotationAxis: [0,0,-1]
+    AniRotationCenter: [0,0,0]
+    AniTranslationDirection: [0,1,0]
+    GraphicGroupNames: ["default"]
+    JointAcceleration: 0
+    JointDeceleration: 0
+    JointLowerLimitActive: false
+    JointType: "Prismatic Joint"
+    JointUpperLimitActive: false
+    JointVelocity: 2
+    LockedGraphicGroups: []
+    MaterialActive: false
+    Mirror: [false,false,false]
+    MUAnimations:
+    -
+     Name: "Default"
+     AnchorPoints:
+     - [0,0,0.03,0,0,0,-1,~]
+    Name: Forks
+    Position: [0,0,0.01]
+    Rotation: [0,0,0,-1]
+    Scale: [1,1,1]
+    SelfAnimations:
+    ShowContent: true
+    UUID: c6a723eb-4050-48fc-be36-65558de3ff45
+    VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - AAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: Init
+ ID: 1
+ DataType: method
+ Value: |+1
+  var RSU := self.~
+  
+  RSU.state := "waiting"
+  
+  // This loop checks whether there are any items waiting in the OpenPartOrders queue to be unloaded
+  // or if there is a part waiting to be loaded into a Racklane
+  while true
+  	waituntil RSU.OpenPartOrders.Dim>0 or RSU.waitingPart/=void
+  	if not RSU.OpenPartOrders.empty
+  		RSU.transferPart(RSU.OpenPartOrders.pop)
+  	elseif RSU.waitingPart/=void
+  		RSU.transferPart(RSU.waitingPart)
+  		RSU.waitingPart:=void
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: waitPosReached
+ ID: 2
+ DataType: method
+ Value: |+1
+  param movementTime:time
+  // If there are no failures configured for the RSU, then just proceed and wait for the movement time that was specified
+  if not self.~.FailureActive or self.~.Failures <= 0
+  	wait movementTime
+  	return
+  end
+  
+  // Pause the movement during a failure
+  while movementTime > 0
+      stopuntil self.~.Failed wait movementTime
+      if waitExpired then exitloop end
+  	self.~._3D.Poses.pauseMovement
+  	var oldState := self.~.state
+  	self.~.state := "failed"
+  	stopuntil not self.~.Failed
+  	self.~.state := oldState
+      self.~._3D.Poses.continueMovement
+      movementTime := self.~._3D.Poses.getAnimationTime
+  end
+ ShowInTooltip: false
+-
+ Name: ParametrizeRSU
+ ID: 3
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Scales the graphics of the RSU according to the parameters that have been provided. The height parameter is used to scale the beams,
+  // whereas the length is used to scale the tracks of the RSU.
+  // The width parameter is used to scale the width of the main unit of the RSU and the forks and the load table.
+  //
+  // Parameters	: height , width , length_ , loadlength
+  //
+  // Return Values: none
+  //-----------------------------------------------------------
+  param height : length, width : length, length_ : length , loadlength : length
+  
+  var RSU:=self.~
+  var RSUunit := RSU._3D.getObject("RSU_Unit")
+  var LiftTable := RSU._3D.getObject("RSU_Unit").getObject("LiftTable")
+  var Forks := RSU._3D.getObject("RSU_Unit").getObject("LiftTable").getObject("Forks")
+  
+  // Reset graphic inheritance, as further below graphic inheritance will be cut off
+  // by assignments to .Scale and -Position attributes of graphics
+  RSU._3D.InheritGraphics := true
+  RSUunit.InheritGraphics := true
+  LiftTable.InheritGraphics := true
+  Forks.InheritGraphics := true
+  
+  RSU.TrackWidth := width
+  RSU.TrackLength := length_
+  RSU.Height := height
+  
+  // RSU track
+  var LeftRail := RSU._3D.getGraphic("default", ["LeftRail"])
+  var RightRail := RSU._3D.getGraphic("default", ["RightRail"])
+  var CurrentWidth := (abs(LeftRail.Position.y) + abs(RightRail.Position.y))
+  var deltaX := LeftRail.Scale.x - RSU.TrackLength
+  
+  LeftRail.Position.x -= deltaX/2
+  LeftRail.Position.y := RSU.TrackWidth/2
+  RightRail.Position.x -= deltaX/2
+  RightRail.Position.y := -RSU.TrackWidth/2
+  LeftRail.Scale.x := RSU.TrackLength
+  RightRail.Scale.x := RSU.TrackLength
+  
+  // lift table
+  var TableBase := LiftTable.getGraphic("default", ["LiftTableBase"])
+  deltaX := (TableBase.Scale.x - loadlength)/2
+  TableBase.Scale.x := loadlength
+  TableBase.Scale.y := RSU.TrackWidth
+  
+  // left and right forks
+  var LeftFork :=  Forks.getGraphic("default", ["LeftFork"])
+  var RightFork := Forks.getGraphic("default", ["RightFork"])
+  LeftFork.Scale.y := RSU.TrackWidth
+  RightFork.Scale.y := RSU.TrackWidth
+  
+  var loadLengthDiff := (RightFork.Position.x - LeftFork.Position.x) - loadlength/2
+  
+  LeftFork.Position.x += loadLengthDiff/2
+  RightFork.Position.x -= loadLengthDiff/2
+  
+  // motor and batterie unit
+  var Base := RSUunit.getGraphic("default", ["RSUBase"])
+  Base.Position.x -= deltaX
+  var ratio := Base.Scale.y
+  Base.Scale.y := RSU.RSUBaseWidthScale * RSU.TrackWidth
+  ratio := Base.Scale.y/ratio
+  
+  // first beam
+  var LeftBar := RSUunit.getGraphic("default", ["LeftBar"])
+  LeftBar.Position.x -= deltaX
+  LeftBar.Position.y *= ratio
+  LeftBar.Scale.z := RSU.Height
+  
+  // second beam
+  var RightBar := RSUunit.getGraphic("default", ["RightBar"])
+  RightBar.Position.x -= deltaX
+  RightBar.Position.y *= ratio
+  RightBar.Scale.z := LeftBar.Scale.z
+  
+  // Upper bar
+  var UpperBar := RSUunit.getGraphic("default", ["UpperBar"])
+  UpperBar.Position.x := RightBar.Position.x
+  UpperBar.Position.z := RSU.Height
+  UpperBar.Scale.y := (LeftBar.Position.y - RightBar.Position.y) + RSU.RSUBarWidth
+ ShowInTooltip: false
+-
+ Name: TrackWidth
+ ID: 4
+ DataType: length
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: TrackLength
+ ID: 5
+ DataType: length
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: RSUBaseWidthScale
+ ID: 6
+ DataType: real
+ Value: 0.001
+ ShowInTooltip: false
+-
+ Name: RSUBaseHeightScale
+ ID: 7
+ DataType: real
+ Value: 0.0008
+ ShowInTooltip: false
+-
+ Name: RSUBaseLengthScale
+ ID: 8
+ DataType: real
+ Value: 0.0006
+ ShowInTooltip: false
+-
+ Name: Height
+ ID: 9
+ DataType: length
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: transferPart
+ ID: 10
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Transfers a part from its location to its destination
+  //
+  // Parameters	: part
+  //
+  // Return Values: none
+  //-----------------------------------------------------------
+  param part: object
+  var RSU := self.~
+  var rsuUnit   := self.~._3D.getObject(1)
+  var LiftTable := rsuUnit.getObject(1)
+  var Forks     := LiftTable.getObject(1)
+  var destination := part.destination
+  var isDestinationStore := destination.~.InternalClassName = "NW_Store"
+  var target:any
+  
+  // We first check whether a part is supposed to be transfered to a storage place
+  if isDestinationStore
+  	RSU.state:="loading"
+  	var x, y:integer
+  	// Get the position of the storage place
+  	destination.getStoragePlace(x,y)
+  	target := RSU._3D.getPositionOfObject(destination.~, destination.~._3D.getMUAnimationPosition(x,y))
+  else
+  	RSU.state:="unloading"
+  	target := RSU._3D.getPositionOfObject(destination, destination._3D.getMUAnimationPosition(part.MUWidth/2))
+  end
+  
+  
+  var partPosition := RSU._3D.getPositionOfObject(part)
+  // Approach the part to be moved and load it unto the RSU
+  RSU.waitPosReached(max(rsuUnit.moveTo(partPosition.x), LiftTable.moveTo(partPosition.z)))
+  RSU.waitPosReached(Forks.moveTo(partPosition.y))
+  
+  var partLocation := part.~
+  var partLocationClass := partLocation.InternalClassName
+  
+  if partLocationClass="NW_Store"
+  	part.getStoragePlace(x,y)
+  	if part.~ = RackLeft
+  		OccupancyLeft[x, y] := 0
+  	else
+  		OccupancyRight[x, y] := 0
+  	end
+  	part.move(RSU)
+  	// Increase number of available places in all registered racklanes
+  	WMS.NumFreePlaces += 1
+  	WMS.NumOccupiedPlaces -= 1
+  	RSU.waitPosReached(Forks.moveTo(0))
+  elseif  partLocationClass="Line"
+  	partLocation.stopped:=True
+  	part.move(RSU)
+  	RSU.waitPosReached(Forks.moveTo(0))
+  	partLocation.stopped:=False
+  end
+  
+  
+  RSU.waitPosReached(max(rsuUnit.moveTo(target.x), LiftTable.moveTo(target.z)))
+  
+  if isDestinationStore
+  	RSU.waitPosReached(Forks.moveTo(target.y))
+  	part.move(destination)
+  else
+  	waituntil destination.loadable
+  	RSU.waitPosReached(Forks.moveTo(target.y))
+  	part.ConveyingDirection += 2
+  	part.insert(destination, part.MUWidth)
+  	destination.loadable := false
+  end
+  
+  
+  
+  part.destination:=void
+  
+  
+  RSU.state := "DrivingHome"
+  
+  RSU.waitPosReached(Forks.moveTo(RSU.HomePositionY))
+  RSU.waitPosReached(max(rsuUnit.moveTo(RSU.HomePositionX), LiftTable.moveTo(RSU.HomePositionZ)))
+  
+  RSU.state := "Waiting"
+ ShowInTooltip: false
+-
+ Name: OpenPartOrders
+ ID: 11
+ DataType: queue
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 52
+   DataType: object
+   MaxXDim: 1
+   ShowDataType: true
+  Column:
+ ShowInTooltip: false
+-
+ Name: waitingPart
+ ID: 12
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 13
+ DataType: method
+ Value: "self.~.OpenPartOrders.delete"
+ ShowInTooltip: false
+-
+ Name: SetSpeeds
+ ID: 14
+ DataType: method
+ Value: |+1
+  param RSUSpeed: speed, RSUAcceleration: acceleration, RSUDeceleration: acceleration, LiftTableSpeed: speed, ForksSpeed: speed
+  
+  var RSU := self.~
+  var rsuUnit   := self.~._3D.getObject(1)
+  var LiftTable := rsuUnit.getObject(1)
+  var Forks     := LiftTable.getObject(1)
+  
+  rsuUnit.JointVelocity := RSUSpeed
+  rsuUnit.JointAcceleration := RSUAcceleration
+  rsuUnit.JointDeceleration := RSUDeceleration
+  LiftTable.JointVelocity := LiftTableSpeed
+  Forks.JointVelocity := ForksSpeed
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 15
+ DataType: string
+ Value: "waiting"
+ HasInitValue: true
+ InitValue: "waiting"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: HomePositionX
+ ID: 16
+ DataType: real
+ Value: 0
+ HasInitValue: true
+ InitValue: 0
+ ShowInTooltip: false
+-
+ Name: HomePositionY
+ ID: 17
+ DataType: real
+ Value: 0
+ HasInitValue: true
+ InitValue: 0
+ ShowInTooltip: false
+-
+ Name: HomePositionZ
+ ID: 18
+ DataType: real
+ Value: 0
+ HasInitValue: true
+ InitValue: 0
+ ShowInTooltip: false
+-
+ Name: OnFail
+ ID: 19
+ DataType: method
+ Value: |+1
+  --param failureIsStarting: boolean, profileName: string
+  if self.~.state = "Waiting"
+  	var oldState := self.~.state
+  	self.~.state := "failed"
+  	stopuntil not self.~.Failed
+  	self.~.state := oldState
+  end
+ ShowInTooltip: false
+-
+ Name: RSUUpperBarLength
+ ID: 20
+ DataType: length
+ Value: 0.7
+ ShowInTooltip: false
+-
+ Name: RSUBarWidth
+ ID: 21
+ DataType: length
+ Value: 0.1
+ ShowInTooltip: false
+$ProcImp:
+ Active: false
+ Services:
+ - [~,["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ CommonResources: true
+$FailImp:
+ Active: false
+ Services:
+ - [~,["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+$TransportImp:
+ Active: false
+ Services:
+ - "StandardService"
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false

@@ -1,0 +1,20 @@
+InternalClassType: Conveyor
+Coordinate3D: [18.75,13.700000000000001,2.8]
+Length: 4.75
+Name: Line22
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746142
+UUID: 019f044c-ab8a-7060-bda5-efebd9c050b1
+3D:
+ $ExtSegments:
+  - 0
+  - [-179.99999999999972,4.75,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-705a-82fa-a013f4836444
+ Name: Connector67
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70c5-92ee-5a6fa585795d
+$Predecessors:
+- 019f044c-ab8a-7095-b041-c1bbb280a332
+InheritEntranceExitLockedOnReset: false

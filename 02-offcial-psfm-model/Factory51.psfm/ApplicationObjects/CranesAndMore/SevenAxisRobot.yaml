@@ -1,0 +1,820 @@
+InternalClassType: Station
+AutomaticProcessing: false
+AutomaticSetup: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [14,-5,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+DestructorCtrl:
+DragDropCtrl:
+EnergyActive: false
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: SevenAxisRobot
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+ProcTime: 0
+PullCtrl: "self.OnPull"
+RandomSeed: 1073753889
+RecoveryTime: 0
+RecoveryTimeMode: "When part enters"
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Production"
+ResStatOn: true
+SelectCtrl:
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+SetupAttrName: ""
+SetupCtrl:
+SetupForType: true
+SetupOnlyWhenEmpty: false
+SetupTime: 0
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: 9ecf41d4-3abc-4684-92a9-703efbb54f5a
+$TabConfig: 0xff0c
+3D:
+ AnimationObject: "Base.Z.Y1.Y2.Z.Y.Z"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: true
+ MUAnimations:
+ MUSideToAttach: "Top"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,0,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ Poses:
+ -
+  Name: "Default"
+  Entries:
+  - [Base.Z,0]
+  - [Base.Z.Y1,0]
+  - [Base.Z.Y1.Y2,0]
+  - [Base.Z.Y1.Y2.Z,0]
+  - [Base.Z.Y1.Y2.Z.Y,0]
+  - [Base.Z.Y1.Y2.Z.Y.Z,0]
+ -
+  Name: "HomePosition"
+  Entries:
+  - [Base,0]
+  - [Base.Z,0]
+  - [Base.Z.Y1,0]
+  - [Base.Z.Y1.Y2,0]
+  - [Base.Z.Y1.Y2.Z,0]
+  - [Base.Z.Y1.Y2.Z.Y,0]
+  - [Base.Z.Y1.Y2.Z.Y.Z,0]
+ -
+  Name: "dropPositionNegativ"
+  Entries:
+  - [Base.Z,90]
+  - [Base.Z.Y1,0]
+  - [Base.Z.Y1.Y2,0]
+  - [Base.Z.Y1.Y2.Z,0]
+  - [Base.Z.Y1.Y2.Z.Y,0]
+  - [Base.Z.Y1.Y2.Z.Y.Z,0]
+ -
+  Name: "dropPositionPositive"
+  Entries:
+  - [Base.Z,-90]
+  - [Base.Z.Y1,0]
+  - [Base.Z.Y1.Y2,0]
+  - [Base.Z.Y1.Y2.Z,0]
+  - [Base.Z.Y1.Y2.Z.Y,0]
+  - [Base.Z.Y1.Y2.Z.Y.Z,0]
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.5,-0.5,-0.25]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [1,0,0]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0.5
+  JointDeceleration: 0.5
+  JointLowerLimitActive: false
+  JointType: "Prismatic Joint"
+  JointUpperLimitActive: false
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Base
+  Position: [0.02,0.057,0.13]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: ec2e4aa6-92d8-4125-a68c-22e5d6301009
+  VisibleGraphicGroups: ["default"]
+  $Objects:
+  -
+   AniRotationAxis: [0,0,-1]
+   AniRotationCenter: [0,0,0]
+   AniTranslationDirection: [1,0,0]
+   GraphicGroupNames: ["default"]
+   JointAcceleration: 0
+   JointDeceleration: 0
+   JointLowerLimitActive: false
+   JointType: "Revolute Joint"
+   JointUpperLimitActive: false
+   JointUseShortestRotationDirection: false
+   JointVelocity: 10
+   LockedGraphicGroups: []
+   MaterialActive: false
+   Mirror: [false,false,false]
+   MUAnimations:
+   Name: Z
+   Position: [0,0,0.61]
+   Rotation: [0,0,0,-1]
+   Scale: [1,1,1]
+   SelfAnimations:
+   ShowContent: true
+   UUID: 3ca5328e-640d-42a0-aff7-e492cb0b644d
+   VisibleGraphicGroups: ["default"]
+   $Objects:
+   -
+    AniRotationAxis: [0,1,0]
+    AniRotationCenter: [0,0,0]
+    AniTranslationDirection: [1,0,0]
+    GraphicGroupNames: ["default"]
+    JointAcceleration: 0
+    JointDeceleration: 0
+    JointLowerLimitActive: false
+    JointType: "Revolute Joint"
+    JointUpperLimitActive: false
+    JointUseShortestRotationDirection: false
+    JointVelocity: 20
+    LockedGraphicGroups: []
+    MaterialActive: false
+    Mirror: [false,false,false]
+    MUAnimations:
+    Name: Y1
+    Position: [0.4,-0.01,0.43]
+    Rotation: [0,0,1,0]
+    Scale: [1,1,1]
+    SelfAnimations:
+    ShowContent: true
+    UUID: 095e1627-1a1f-45e4-b843-918cd13fecf3
+    VisibleGraphicGroups: ["default"]
+    $Objects:
+    -
+     AniRotationAxis: [0,1,0]
+     AniRotationCenter: [0,0,0]
+     AniTranslationDirection: [1,0,0]
+     GraphicGroupNames: ["default"]
+     JointAcceleration: 0
+     JointDeceleration: 0
+     JointLowerLimitActive: false
+     JointType: "Revolute Joint"
+     JointUpperLimitActive: false
+     JointUseShortestRotationDirection: false
+     JointVelocity: 20
+     LockedGraphicGroups: []
+     MaterialActive: false
+     Mirror: [false,false,false]
+     MUAnimations:
+     -
+      Name: "Default"
+      AnchorPoints:
+      - [1.858,0.306,0.293,0,0,0,1,~]
+     Name: Y2
+     Position: [0,-0.295,0.955]
+     Rotation: [0,0,1,0]
+     Scale: [1,1,1]
+     SelfAnimations:
+     ShowContent: true
+     UUID: ca2b9983-43f7-4178-bc5a-f6efaa7f5cde
+     VisibleGraphicGroups: ["default"]
+     $Objects:
+     -
+      AniRotationAxis: [0,0,-1]
+      AniRotationCenter: [0,0,0]
+      AniTranslationDirection: [1,0,0]
+      GraphicGroupNames: ["default"]
+      JointAcceleration: 0
+      JointDeceleration: 0
+      JointLowerLimitActive: false
+      JointType: "Revolute Joint"
+      JointUpperLimitActive: false
+      JointUseShortestRotationDirection: false
+      JointVelocity: 20
+      LockedGraphicGroups: []
+      MaterialActive: false
+      Mirror: [false,false,false]
+      MUAnimations:
+      Name: Z
+      Position: [0.24,0.3129,0.29]
+      Rotation: [90,0,1,0]
+      Scale: [1,1,1]
+      SelfAnimations:
+      ShowContent: true
+      UUID: f928cebc-9178-4593-8f03-aeb015cbe4cd
+      VisibleGraphicGroups: ["default"]
+      $Objects:
+      -
+       AniRotationAxis: [0,1,0]
+       AniRotationCenter: [0,0,0]
+       AniTranslationDirection: [1,0,0]
+       GraphicGroupNames: ["default"]
+       JointAcceleration: 0
+       JointDeceleration: 0
+       JointLowerLimitActive: false
+       JointType: "Revolute Joint"
+       JointUpperLimitActive: false
+       JointUseShortestRotationDirection: false
+       JointVelocity: 20
+       LockedGraphicGroups: []
+       MaterialActive: false
+       Mirror: [false,false,false]
+       MUAnimations:
+       Name: Y
+       Position: [0,0,1.4]
+       Rotation: [0,0,1,0]
+       Scale: [1,1,1]
+       SelfAnimations:
+       ShowContent: true
+       UUID: b0da4e42-804e-433e-9bc6-4f16e0115443
+       VisibleGraphicGroups: ["default"]
+       $Objects:
+       -
+        AniRotationAxis: [0,0,-1]
+        AniRotationCenter: [0,0,0]
+        AniTranslationDirection: [1,0,0]
+        GraphicGroupNames: ["default"]
+        JointAcceleration: 0
+        JointDeceleration: 0
+        JointLowerLimitActive: false
+        JointType: "Revolute Joint"
+        JointUpperLimitActive: false
+        JointUseShortestRotationDirection: false
+        JointVelocity: 40
+        LockedGraphicGroups: []
+        MaterialActive: false
+        Mirror: [false,false,false]
+        MUAnimations:
+        -
+         Name: "Default"
+         AnchorPoints:
+         - [0,0,0.019,180,1,0,0,~]
+        Name: Z
+        Position: [0,0,0.221]
+        Rotation: [0,0,0,-1]
+        Scale: [1,1,1]
+        SelfAnimations:
+        ShowContent: true
+        UUID: 073b4ef8-868e-48df-8c17-d677c94c0b51
+        VisibleGraphicGroups: ["default"]
+ -
+  AniGravityMode: false
+  AnimationOffset: [0,0,0]
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniSmoothRotation: false
+  AniTranslationDirection: [1,0,0]
+  BaseHeight: 0.1
+  ExtConfiguration:
+  -
+   Name: "Railbars_1"
+   Extrusion Profile: [[-0.5,0],[-0.5,0.01],[-0.4435,0.02],[-0.4435,0.08],[-0.471,0.087],[-0.471,0.102],[-0.464,0.109],[-0.411,0.109],[-0.404,0.102],[-0.404,0.087],[-0.4315,0.08],[-0.4315,0.02],[-0.375,0.01],[-0.375,0],[-0.5,0]]
+   Configuration Type: 1
+   Offsets: [0,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0x5280,0x808080,0x808080,0x0,0,117]
+  -
+   Name: "Railbars_2"
+   Extrusion Profile: [[0.5,0],[0.5,0.01],[0.4435,0.02],[0.4435,0.08],[0.471,0.087],[0.471,0.102],[0.464,0.109],[0.411,0.109],[0.404,0.102],[0.404,0.087],[0.4315,0.08],[0.4315,0.02],[0.375,0.01],[0.375,0],[0.5,0]]
+   Configuration Type: 1
+   Offsets: [0,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0x5280,0x808080,0x808080,0x0,0,117]
+  GraphicGroupNames: ["default"]
+  InternalClassType: AnimatableExtrusionObject
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimitActive: false
+  JointType: "Prismatic Joint"
+  JointUpperLimitActive: false
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Rails
+  Position: [-0.5442,0.06,-0.1]
+  Rotation: [0,0,0,-1]
+  Scale: [2.5,1,1]
+  SelfAnimations:
+  ShowContent: true
+  ShowMaterialFlowDirection: false
+  UUID: 779724fc-d129-45e2-b65a-1767e45ba4fe
+  VisibleGraphicGroups: ["default"]
+  Width: 0.77
+  $ExtSegments:
+   - 0
+   - [0,2,0]
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Size: [32,32]
+ Pixels:
+ - sbGxxcXFycnJubm5wcHBx8fHx8fHtbW10dHRyMjIqqqqx8fHx8fHsbGxvr6+ycnJuLi4zc3Nqqqqurq62trawsLCx8fH39/fwcHBsrKy0dHRwsLCuLi4qqqqtra219fX
+ - 2NjYra2t1tbWtbW1xsbG5ubmwMDA1tbWqqqqrKysvr6+z8/Px8fHra2t0dHRrKys09PT39/fwMDA1NTUnZ2dv7+/0tLS0dHR1dXVqqqqrq6usbGx1dXV1tbWw8PDuLi4
+ - 19fXr6+vs7OzrKys1tbWt7e30dHRtLS01NTUtra21NTUs7Ozqqqqbm5uyMjI4eHhysrK5eXlysrK2NjYwcHB1dXVrq6utLS0uLi40dHRf39/19fXtra219fXt7e33Nzc
+ - v7+/x8fHwMDAzc3N0NDQwMDA1NTUysrK1dXVxsbG09PTt7e32dnZs7Oz2dnZu7u7ysrKwcHBwMDAvb29tbW1uLi4v7+/v7+/t7e3mpqauLi4w8PDlZWVuLi4s7Ozrq6u
+ - 1NTUxcXF2NjYtLS009PT09PT09PT2NjYs7Ozurq6s7Ozs7OzsbGxr6+v2NjYzMzMDg6DEhLjEhLfDg6FVl//09PT2NjYwMDA0tLSs7OzuLi4srKyu7u70NDQqqqq1NTU
+ - tbW12NjY19fXra2t2NjY1NTUsbGxDAwMICAgy8vL19fXycnJ5OTk1NTVVVz/xtz/DQ1jDg6FDg6FDg6FSEic0dHRqqqq1NTU19fXtLS02NjY19fXq6urzMzMdXV1rKys
+ - 1dXVqqqq4ODg19fXxcXF5ubmERERFBQUyd7/EhLmDAwMOD37Dw+XDAxDc3N02NjY09PTrq6u2NjY2NjYx8fH3NzcwMDAubm53t7e2NjYycnJjIyMyMjI09PTk5OT2NjY
+ - wMDA2NjY2NjYw8PDz8/P39/f2NjYDAw/FBQUERGnDAxHExMT0NDQ2NjY0dHRq6ur39/f2NjYpaWlqqqq2NjY2NjYurq6rKys2NjY1dXVq6urtbW12NjY0NDQ0dHRubm5
+ - uLi44uLir6+v2NjY09PTra2t09PT2NjYDw+IDAxNGRkZ2NjY0tLSysrKv7+/sbGx2NjY09PTra2t2NjY2NjY0NDQdnZ209PT2NjY09PTysrKycnJwMDA2NjY19fXra2t
+ - 2NjYzs7Ozs7OtbW1srKy2NjY2NjYDg6FDw+kIiTiFxcX2NjY1NTUxMTEx8fHw8PD2NjY19fXlJSUxsbG2NjY2NjY2NjYy8vLs7Oz2NjYxsbG2NjY0tLSsbGx2NjY2NjY
+ - 2NjYvLy8vb29xcXF2tra2NjYvr6+Dg6FDAxFHyDcHiDbpaWl2NjY1NTUzMzMxMTEysrK2NjYwcHB2NjY1dXVu7u7wMDAvr6+2NjY2NjY2NjYzc3Nr6+v3t7e0NDQ2NjY
+ - 2NjY1tbW0tLStbW1vr6+0tLS2tra2NjYDg6FHiDbDw+TDg6EsbGxzc3N2tra2NjY2NjY2NjY2NjYqampt7e3ubm53d3d0NDQ2NjY2NjY2NjY0tLSfX1929vby8vL2NjY
+ - 3t7e2NjY2NjY2NjY2NjY2NjY19fX09PTycnJCwsvDg6EDg562NjY2NjY2NjY2NjY2NjY19fX19fXyMjIq6ur2dnZ2tra2NjY2NjY2NjY2NjY2NjY19fX19fX0dHRq6ur
+ - 1dXV2NjYmZmZ19fXurq6ycnJxMTEurq6vb29ycnJDQ1fDAxL2NjYysrK2NjYt7e32NjYysrK2NjY2NjY19fX0tLSyMjIwMDAsbGxxcXFu7u72NjYt7e32NjY1tbW2NjY
+ - 2NjYxcXF1tbW1tbW1dXVz8/Purq6u7u7Dg6FDAxLDAw0DAxM0NDQvb291NTU3t7e39/f2NjYy8vL2NjYzMzM2NjY2NjY2NjY2NjYt7e32NjY09PT2NjY2NjY0tLS2NjY
+ - ra2t2NjY2NjY2NjY2NjY0NDQEBDHDg6EDg50DQ1UDAwzDw8Y2NjYrq6u2NjY2NjY2NjY2NjY1NTU2NjY2NjYwMDA2NjY2NjY2NjY2NjYfX192NjY2NjYGl+H2NjY09PT
+ - 2NjY2NjY2NjYEhLpEhLkDg6FEhLgCwtDDg50DQ1SDg6F1NTUxsbGysrKvb29sLCws7OzsLCwtbW1yMjIy8vLt7e3zc3N1NTUx8fH1tbWGlt/GmGK2NjY2NjYrq6u2NjY
+ - ycnJ1dXVEhLkHh//hJH/0uj/doH/IyXrDg6FDg6FEBAQ2NjYqqqq2NjY2NjYwMDA4uLi1tbWsbGxxcXFubm5wcHB0dHRGlZ5GmuZzs7O2NjY2NjYwcHB2NjYGmiVGld5
+ - n5/t3d3dDAxCP0T/FRXGDw+ZDQ1mDAwyEhLl2NjY2NjYycnJ2NjY2NjY2NjY2NjY3d3d1dXVrKysqK2zGlJzGm+f2NjY2NjY2NjYu7u72NjYGnSmGktmGld62NjY29vb
+ - 2NjYjIzwDAwzDg5sCwspExPuExTtICAgDAwMEhLl2NjY2NjY2NjYqqqq2NjY2dnZXYCdGk9tGnit2NjY2NjYqqqq2NjY2NjYGnOlGktmGnmusLCwzc3Nvr6+2NjY2NjY
+ - 2NjY2NjYJyfxEBCqDQ1WDQ1jDg6iDg6FEhLlEhLj2NjYsrKy2NjYO3WdGkxqGnes1tbW2NjY2NjY2NjYubm5GnGhGktmGnmu1tbW1tbW2NjY2NjY2NjYwMDA2NjYwsLC
+ - 2NjY2NjY1tbWDg6nEhLjEhLlEhLlDg5+FBXiExPfGm2bGktnGnmuxcbH2NjY2NjY2NjY2NjYGm+eGktmGnmu2NjY2NjY1dXV1dXV2NjYzs7O09PT09PT09PT2NjY2NjY
+ - 2NjY4eHhDAw/EhLlEhLlDg6FDw+RDw+MDw+JDg6LmZWF2NjY2NjY2NjYwMDcHW6cGktmGnmu2NjY2NjY2NjY1tbWysrK2NjY2NjY2NjY2NjY1tbWt7e32NjY2NjY2NjY
+ - 0NDQ2NjYDAw/DAw/Dg6FDw+QDw+MDw+MmZWFmZWFmZWGV1VMsr7GGlZ3GmiUhZOe2NjYt7e31tbWzc3N2NjY2NjY2NjYf39/19fX2NjY0tLS2NjY2NjYsLCw19fX2NjY
+ - 2NjY2NjYKyolDAw/Dg6FEhLlmZWFmZWFV1VMV1VMGmGKGktmGmuZxcXFvr6+2NjY2NjY2NjY29vb0tLS2NjY2NjYwcHB1tbWv7+/2NjY2NjY2NjY2NjYyMjI1tbWyMjI
+ - z8/P2NjY2NjYKyolmZSFV1VMV1VMGm2cGktmGnmu1dXV2NjY2NjY2NjY09PT2NjYzMzMwsLC2NjY1tbW2NjY2NjY2NjY2NjYzs7O2NjY2NjYtra22NjY0tLS2NjY2NjY
+ - 2NjYwsLC2NjY2NjYGnWpGktmGnmuurq61NTX2NjY4ODg2NjY2NjY2NjY2NjYfX192NjY2NjY2NjY19fXvLy809PT2NjY2NjYtbW12NjY2NjY2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjYzs7O2NjY2NjY2NjY0tLSra2t0NDQ2NjY2NjYysrK2NjY2NjY2NjYu7u72NjY2NjY2NjY5+fn2NjY2NjY2NjY2NjY1dXVvr6+qqqqz8/Pw8PD2NjY2NjY2NjY
+ - 2NjY2NjY2NjYxsbG2NjY19fXvr6+tLS0z8/P2NjY2NjYwsLC2NjY2NjY2NjYv7+/2NjY2NjY2NjYvb292NjY2NjY2NjYoKCg2NjY2NjY2NjYv7+/2NjY2NjY2NjYv7+/
+ - uLi4fX19t7e3sLCwy8vL1NTU1NTUyMjI2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY1tbW2NjY2NjY2NjYtra22NjY2NjY2NjY1NTU2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjY2NjYycnJ2NjY2NjY2NjY2NjY2NjY2NjYuLi42NjY2NjY2NjY1tbW2NjY2NjY4+Pj2NjY19fX2NjYy8vL19fX19fX1tbW0tLS1dXV0dHRt7e3x8fHy8vLxsbG
+ - 2NjY2NjY2NjY2NjY2NjY2NjYubm52NjY2NjY2NjY2NjY2NjY2NjYxsbG2NjY2NjY39/f1dXVzMzMwMDAtLS0yMjI2NjYu7u72NjY2NjY2NjY2NjY2NjY2NjYgoKC2NjY
+-
+ Name: "Operational"
+ Size: [32,32]
+ Pixels:
+ - sbGxxcXFycnJubm5wcHBx8fHx8fHtbW10dHRyMjIqqqqx8fHx8fHsbGxvr6+ycnJuLi4zc3Nqqqqurq62trawsLCx8fH39/fwcHBsrKy0dHRwsLCuLi4qqqqtra219fX
+ - 2NjYra2t1tbWtbW1xsbG5ubmwMDA1tbWqqqqrKysvr6+z8/Px8fHra2t0dHRrKys09PT39/fwMDA1NTUnZ2dv7+/0tLS0dHR1dXVqqqqrq6usbGx1dXV1tbWw8PDuLi4
+ - 19fXr6+vs7OzrKys1tbWt7e30dHRtLS01NTUtra21NTUs7Ozqqqqbm5uyMjI4eHhysrK5eXlysrK2NjYwcHB1dXVrq6utLS0uLi40dHRf39/19fXtra219fXt7e33Nzc
+ - v7+/x8fHwMDAzc3N0NDQwMDA1NTUysrK1dXVxsbG09PTt7e32dnZs7Oz2dnZu7u7ysrKwcHBwMDAvb29tbW1uLi4v7+/v7+/t7e3mpqauLi4w8PDlZWVuLi4s7Ozrq6u
+ - 1NTUxcXF2NjYtLS009PT09PT09PT2NjYs7Ozurq6s7Ozs7OzsbGxr6+v2NjYzMzMDg6DEhLjEhLfDg6FVl//09PT2NjYwMDA0tLSs7OzuLi4srKyu7u70NDQqqqq1NTU
+ - tbW12NjY19fXra2t2NjY1NTUsbGxDAwMICAgy8vL19fXycnJ5OTk1NTVVVz/xtz/DQ1jDg6FDg6FDg6FSEic0dHRqqqq1NTU19fXtLS02NjY19fXq6urzMzMdXV1rKys
+ - 1dXVqqqq4ODg19fXxcXF5ubmERERFBQUyd7/EhLmDAwMOD37Dw+XDAxDc3N02NjY09PTrq6u2NjY2NjYx8fH3NzcwMDAubm53t7e2NjYycnJjIyMyMjI09PTk5OT2NjY
+ - wMDA2NjY2NjYw8PDz8/P39/f2NjYDAw/FBQUERGnDAxHExMT0NDQ2NjY0dHRq6ur39/f2NjYpaWlqqqq2NjY2NjYurq6rKys2NjY1dXVq6urtbW12NjY0NDQ0dHRubm5
+ - uLi44uLir6+v2NjY09PTra2t09PT2NjYDw+IDAxNGRkZ2NjY0tLSysrKv7+/sbGx2NjY09PTra2t2NjY2NjY0NDQdnZ209PT2NjY09PTysrKycnJwMDA2NjY19fXra2t
+ - 2NjYzs7Ozs7OtbW1srKy2NjY2NjYDg6FDw+kIiTiFxcX2NjY1NTUxMTEx8fHw8PD2NjY19fXlJSUxsbG2NjY2NjY2NjYy8vLs7Oz2NjYxsbG2NjY0tLSsbGx2NjY2NjY
+ - 2NjYvLy8vb29xcXF2tra2NjYvr6+Dg6FDAxFHyDcHiDbpaWl2NjY1NTUzMzMxMTEysrK2NjYwcHB2NjY1dXVu7u7wMDAvr6+2NjY2NjY2NjYzc3Nr6+v3t7e0NDQ2NjY
+ - 2NjY1tbW0tLStbW1vr6+0tLS2tra2NjYDg6FHiDbDw+TDg6EsbGxzc3N2tra2NjY2NjY2NjY2NjYqampt7e3ubm53d3d0NDQ2NjY2NjY2NjY0tLSfX1929vby8vL2NjY
+ - 3t7e2NjY2NjY2NjY2NjY2NjY19fX09PTycnJCwsvDg6EDg562NjY2NjY2NjY2NjY2NjY19fX19fXyMjIq6ur2dnZ2tra2NjY2NjY2NjY2NjY2NjY19fX19fX0dHRq6ur
+ - 1dXV2NjYmZmZ19fXurq6ycnJxMTEurq6vb29ycnJDQ1fDAxL2NjYysrK2NjYt7e32NjYysrK2NjY2NjY19fX0tLSyMjIwMDAsbGxxcXFu7u72NjYt7e32NjY1tbW2NjY
+ - 2NjYxcXF1tbW1tbW1dXVz8/Purq6u7u7Dg6FDAxLDAw0DAxM0NDQvb291NTU3t7e39/f2NjYy8vL2NjYzMzM2NjY2NjY2NjY2NjYt7e32NjY09PT2NjY2NjY0tLS2NjY
+ - ra2t2NjY2NjY2NjY2NjY0NDQEBDHDg6EDg50DQ1UDAwzDw8Y2NjYrq6u2NjY2NjY2NjY2NjY1NTU2NjY2NjYwMDA2NjY2NjY2NjY2NjYfX192NjY2NjYGl+H2NjY09PT
+ - 2NjY2NjY2NjYEhLpEhLkDg6FEhLgCwtDDg50DQ1SDg6F1NTUxsbGysrKvb29sLCws7OzsLCwtbW1yMjIy8vLt7e3zc3N1NTUx8fH1tbWGlt/GmGK2NjY2NjYrq6u2NjY
+ - ycnJ1dXVEhLkHh//hJH/0uj/doH/IyXrDg6FDg6FEBAQ2NjYqqqq2NjY2NjYwMDA4uLi1tbWsbGxxcXFubm5wcHB0dHRGlZ5GmuZzs7O2NjY2NjYwcHB2NjYGmiVGld5
+ - n5/t3d3dDAxCP0T/FRXGDw+ZDQ1mDAwyEhLl2NjY2NjYycnJ2NjY2NjY2NjY2NjY3d3d1dXVrKysqK2zGlJzGm+f2NjY2NjY2NjYu7u72NjYGnSmGktmGld62NjY29vb
+ - 2NjYjIzwDAwzDg5sCwspExPuExTtICAgDAwMEhLl2NjY2NjY2NjYqqqq2NjY2dnZXYCdGk9tGnit2NjY2NjYqqqq2NjY2NjYGnOlGktmGnmusLCwzc3Nvr6+2NjY2NjY
+ - 2NjY2NjYJyfxEBCqDQ1WDQ1jDg6iDg6FEhLlEhLj2NjYsrKy2NjYO3WdGkxqGnes1tbW2NjY2NjY2NjYubm5GnGhGktmGnmu1tbW1tbW2NjY2NjY2NjYwMDA2NjYwsLC
+ - 2NjY2NjY1tbWDg6nEhLjEhLlEhLlDg5+FBXiExPfGm2bGktnGnmuxcbH2NjY2NjY2NjY2NjYGm+eGktmGnmu2NjY2NjY1dXV1dXV2NjYzs7O09PT09PT09PT2NjY2NjY
+ - 2NjY4eHhDAw/EhLlEhLlDg6FDw+RDw+MDw+JDg6LmZWF2NjY2NjY2NjYwMDcHW6cGktmGnmu2NjY2NjY2NjY1tbWysrK2NjY2NjY2NjY2NjY1tbWt7e32NjY2NjY2NjY
+ - 0NDQ2NjYDAw/DAw/Dg6FDw+QDw+MDw+MmZWFmZWFmZWGV1VMsr7GGlZ3GmiUhZOe2NjYt7e31tbWzc3N2NjY2NjY2NjYf39/19fX2NjY0tLS2NjY2NjYsLCw19fX2NjY
+ - 2NjY2NjYKyolDAw/Dg6FEhLlmZWFmZWFV1VMV1VMGmGKGktmGmuZxcXFvr6+2NjY2NjY2NjY29vb0tLS2NjY2NjYwcHB1tbWv7+/2NjY2NjY2NjY2NjYyMjI1tbWyMjI
+ - z8/P2NjY2NjYKyolmZSFV1VMV1VMGm2cGktmGnmu1dXV2NjY2NjY2NjY09PT2NjYzMzMwsLC2NjY1tbW2NjY2NjY2NjY2NjYzs7O2NjY2NjYtra22NjY0tLS2NjY2NjY
+ - 2NjYwsLC2NjY2NjYGnWpGktmGnmuurq61NTX2NjY4ODg2NjY2NjY2NjY2NjYfX192NjY2NjY2NjY19fXvLy809PT2NjY2NjYtbW12NjY2NjY2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjYzs7O2NjY2NjY2NjY0tLSra2t0NDQ2NjY2NjYysrK2NjY2NjY2NjYu7u72NjY2NjY2NjY5+fn2NjY2NjY2NjY2NjY1dXVvr6+qqqqz8/Pw8PD2NjY2NjY2NjY
+ - 2NjY2NjY2NjYxsbG2NjY19fXvr6+tLS0z8/P2NjY2NjYwsLC2NjY2NjY2NjYv7+/2NjY2NjY2NjYvb292NjY2NjY2NjYoKCg2NjY2NjY2NjYv7+/2NjY2NjY2NjYv7+/
+ - uLi4fX19t7e3sLCwy8vL1NTU1NTUyMjI2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY1tbW2NjY2NjY2NjYtra22NjY2NjY2NjY1NTU2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjY2NjYycnJ2NjY2NjY2NjY2NjY2NjY2NjYuLi42NjY2NjY2NjY1tbW2NjY2NjY4+Pj2NjY19fX2NjYy8vL19fX19fX1tbW0tLS1dXV0dHRt7e3x8fHy8vLxsbG
+ - 2NjY2NjY2NjY2NjY2NjY2NjYubm52NjY2NjY2NjY2NjY2NjY2NjYxsbG2NjY2NjY39/f1dXVzMzMwMDAtLS0yMjI2NjYu7u72NjY2NjY2NjY2NjY2NjY2NjYgoKC2NjY
+-
+ Name: "ClassLibrary"
+ Size: [32,32]
+ Pixels:
+ - sbGxxcXFycnJubm5wcHBx8fHx8fHtbW10dHRyMjIqqqqx8fHx8fHsbGxvr6+ycnJuLi4zc3Nqqqqurq62trawsLCx8fH39/fwcHBsrKy0dHRwsLCuLi4qqqqtra219fX
+ - 2NjYra2t1tbWtbW1xsbG5ubmwMDA1tbWqqqqrKysvr6+z8/Px8fHra2t0dHRrKys09PT39/fwMDA1NTUnZ2dv7+/0tLS0dHR1dXVqqqqrq6usbGx1dXV1tbWw8PDuLi4
+ - 19fXr6+vs7OzrKys1tbWt7e30dHRtLS01NTUtra21NTUs7Ozqqqqbm5uyMjI4eHhysrK5eXlysrK2NjYwcHB1dXVrq6utLS0uLi40dHRf39/19fXtra219fXt7e33Nzc
+ - v7+/x8fHwMDAzc3N0NDQwMDA1NTUysrK1dXVxsbG09PTt7e32dnZs7Oz2dnZu7u7ysrKwcHBwMDAvb29tbW1uLi4v7+/v7+/t7e3mpqauLi4w8PDlZWVuLi4s7Ozrq6u
+ - 1NTUxcXF2NjYtLS009PT09PT09PT2NjYs7Ozurq6s7Ozs7OzsbGxr6+v2NjYzMzMDg6DEhLjEhLfDg6FVl//09PT2NjYwMDA0tLSs7OzuLi4srKyu7u70NDQqqqq1NTU
+ - tbW12NjY19fXra2t2NjY1NTUsbGxDAwMICAgy8vL19fXycnJ5OTk1NTVVVz/xtz/DQ1jDg6FDg6FDg6FSEic0dHRqqqq1NTU19fXtLS02NjY19fXq6urzMzMdXV1rKys
+ - 1dXVqqqq4ODg19fXxcXF5ubmERERFBQUyd7/EhLmDAwMOD37Dw+XDAxDc3N02NjY09PTrq6u2NjY2NjYx8fH3NzcwMDAubm53t7e2NjYycnJjIyMyMjI09PTk5OT2NjY
+ - wMDA2NjY2NjYw8PDz8/P39/f2NjYDAw/FBQUERGnDAxHExMT0NDQ2NjY0dHRq6ur39/f2NjYpaWlqqqq2NjY2NjYurq6rKys2NjY1dXVq6urtbW12NjY0NDQ0dHRubm5
+ - uLi44uLir6+v2NjY09PTra2t09PT2NjYDw+IDAxNGRkZ2NjY0tLSysrKv7+/sbGx2NjY09PTra2t2NjY2NjY0NDQdnZ209PT2NjY09PTysrKycnJwMDA2NjY19fXra2t
+ - 2NjYzs7Ozs7OtbW1srKy2NjY2NjYDg6FDw+kIiTiFxcX2NjY1NTUxMTEx8fHw8PD2NjY19fXlJSUxsbG2NjY2NjY2NjYy8vLs7Oz2NjYxsbG2NjY0tLSsbGx2NjY2NjY
+ - 2NjYvLy8vb29xcXF2tra2NjYvr6+Dg6FDAxFHyDcHiDbpaWl2NjY1NTUzMzMxMTEysrK2NjYwcHB2NjY1dXVu7u7wMDAvr6+2NjY2NjY2NjYzc3Nr6+v3t7e0NDQ2NjY
+ - 2NjY1tbW0tLStbW1vr6+0tLS2tra2NjYDg6FHiDbDw+TDg6EsbGxzc3N2tra2NjY2NjY2NjY2NjYqampt7e3ubm53d3d0NDQ2NjY2NjY2NjY0tLSfX1929vby8vL2NjY
+ - 3t7e2NjY2NjY2NjY2NjY2NjY19fX09PTycnJCwsvDg6EDg562NjY2NjY2NjY2NjY2NjY19fX19fXyMjIq6ur2dnZ2tra2NjY2NjY2NjY2NjY2NjY19fX19fX0dHRq6ur
+ - 1dXV2NjYmZmZ19fXurq6ycnJxMTEurq6vb29ycnJDQ1fDAxL2NjYysrK2NjYt7e32NjYysrK2NjY2NjY19fX0tLSyMjIwMDAsbGxxcXFu7u72NjYt7e32NjY1tbW2NjY
+ - 2NjYxcXF1tbW1tbW1dXVz8/Purq6u7u7Dg6FDAxLDAw0DAxM0NDQvb291NTU3t7e39/f2NjYy8vL2NjYzMzM2NjY2NjY2NjY2NjYt7e32NjY09PT2NjY2NjY0tLS2NjY
+ - ra2t2NjY2NjY2NjY2NjY0NDQEBDHDg6EDg50DQ1UDAwzDw8Y2NjYrq6u2NjY2NjY2NjY2NjY1NTU2NjY2NjYwMDA2NjY2NjY2NjY2NjYfX192NjY2NjYGl+H2NjY09PT
+ - 2NjY2NjY2NjYEhLpEhLkDg6FEhLgCwtDDg50DQ1SDg6F1NTUxsbGysrKvb29sLCws7OzsLCwtbW1yMjIy8vLt7e3zc3N1NTUx8fH1tbWGlt/GmGK2NjY2NjYrq6u2NjY
+ - ycnJ1dXVEhLkHh//hJH/0uj/doH/IyXrDg6FDg6FEBAQ2NjYqqqq2NjY2NjYwMDA4uLi1tbWsbGxxcXFubm5wcHB0dHRGlZ5GmuZzs7O2NjY2NjYwcHB2NjYGmiVGld5
+ - n5/t3d3dDAxCP0T/FRXGDw+ZDQ1mDAwyEhLl2NjY2NjYycnJ2NjY2NjY2NjY2NjY3d3d1dXVrKysqK2zGlJzGm+f2NjY2NjY2NjYu7u72NjYGnSmGktmGld62NjY29vb
+ - 2NjYjIzwDAwzDg5sCwspExPuExTtICAgDAwMEhLl2NjY2NjY2NjYqqqq2NjY2dnZXYCdGk9tGnit2NjY2NjYqqqq2NjY2NjYGnOlGktmGnmusLCwzc3Nvr6+2NjY2NjY
+ - 2NjY2NjYJyfxEBCqDQ1WDQ1jDg6iDg6FEhLlEhLj2NjYsrKy2NjYO3WdGkxqGnes1tbW2NjY2NjY2NjYubm5GnGhGktmGnmu1tbW1tbW2NjY2NjY2NjYwMDA2NjYwsLC
+ - 2NjY2NjY1tbWDg6nEhLjEhLlEhLlDg5+FBXiExPfGm2bGktnGnmuxcbH2NjY2NjY2NjY2NjYGm+eGktmGnmu2NjY2NjY1dXV1dXV2NjYzs7O09PT09PT09PT2NjY2NjY
+ - 2NjY4eHhDAw/EhLlEhLlDg6FDw+RDw+MDw+JDg6LmZWF2NjY2NjY2NjYwMDcHW6cGktmGnmu2NjY2NjY2NjY1tbWysrK2NjY2NjY2NjY2NjY1tbWt7e32NjY2NjY2NjY
+ - 0NDQ2NjYDAw/DAw/Dg6FDw+QDw+MDw+MmZWFmZWFmZWGV1VMsr7GGlZ3GmiUhZOe2NjYt7e31tbWzc3N2NjY2NjY2NjYf39/19fX2NjY0tLS2NjY2NjYsLCw19fX2NjY
+ - 2NjY2NjYKyolDAw/Dg6FEhLlmZWFmZWFV1VMV1VMGmGKGktmGmuZxcXFvr6+2NjY2NjY2NjY29vb0tLS2NjY2NjYwcHB1tbWv7+/2NjY2NjY2NjY2NjYyMjI1tbWyMjI
+ - z8/P2NjY2NjYKyolmZSFV1VMV1VMGm2cGktmGnmu1dXV2NjY2NjY2NjY09PT2NjYzMzMwsLC2NjY1tbW2NjY2NjY2NjY2NjYzs7O2NjY2NjYtra22NjY0tLS2NjY2NjY
+ - 2NjYwsLC2NjY2NjYGnWpGktmGnmuurq61NTX2NjY4ODg2NjY2NjY2NjY2NjYfX192NjY2NjY2NjY19fXvLy809PT2NjY2NjYtbW12NjY2NjY2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjYzs7O2NjY2NjY2NjY0tLSra2t0NDQ2NjY2NjYysrK2NjY2NjY2NjYu7u72NjY2NjY2NjY5+fn2NjY2NjY2NjY2NjY1dXVvr6+qqqqz8/Pw8PD2NjY2NjY2NjY
+ - 2NjY2NjY2NjYxsbG2NjY19fXvr6+tLS0z8/P2NjY2NjYwsLC2NjY2NjY2NjYv7+/2NjY2NjY2NjYvb292NjY2NjY2NjYoKCg2NjY2NjY2NjYv7+/2NjY2NjY2NjYv7+/
+ - uLi4fX19t7e3sLCwy8vL1NTU1NTUyMjI2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY1tbW2NjY2NjY2NjYtra22NjY2NjY2NjY1NTU2NjY2NjY2NjY2NjY2NjY
+ - 2NjY2NjY2NjYycnJ2NjY2NjY2NjY2NjY2NjY2NjYuLi42NjY2NjY2NjY1tbW2NjY2NjY4+Pj2NjY19fX2NjYy8vL19fX19fX1tbW0tLS1dXV0dHRt7e3x8fHy8vLxsbG
+ - 2NjY2NjY2NjY2NjY2NjY2NjYubm52NjY2NjY2NjY2NjY2NjY2NjYxsbG2NjY2NjY39/f1dXVzMzMwMDAtLS0yMjI2NjYu7u72NjY2NjY2NjY2NjY2NjY2NjYgoKC2NjY
+$CustomAttributes:
+-
+ Name: processPendingTransfers
+ ID: 3252787074
+ DataType: method
+ Value: |+1
+  param part:object
+  var Robot := self.~
+  var Poses := Robot._3D.Poses
+  var RobotBase := Robot._3D.getObject(1)
+  
+  Robot.ExitLocked := true
+  var sourceObject:object := part.~
+  var partPosition:length[3] := Robot._3D.getPositionOfObject(part)
+  // Drive to Source Object
+  if sourceObject /= void
+  	// Move car to the pick position
+  	Robot.state := "driveto"
+  	var dx := calcDroppedPerpendicularFootPoint([0,0,0], [-1,0,0], partPosition).x
+  	// If pickPosition is not perpendicular to the Rails, move to the beginning of the Rails or to the end of them
+  	// Else move to the perpendicular Position relatively to the Part
+  	if dx < 0
+  		RobotBase.moveTo(0)
+  	elseif dx > Robot.RailLength
+  		RobotBase.moveTo(Robot.RailLength)
+  	else
+  		RobotBase.moveTo(dx)
+  	end
+  	waituntil Poses.EndPoseWasReached
+  	Robot.CurrentObject := sourceObject
+  	Robot.state := "damping"
+  	wait Robot.DampingTime
+  end
+  
+  Robot.state := "loading"
+  Poses.moveToMU(part)
+  waituntil Poses.EndPoseWasReached
+  waituntil not self.~.Failed
+  part.move(Robot,0)
+  waituntil part.RearLocation = Robot
+  
+  while not Robot.Empty
+  	//Move Robot to Destination
+  	Robot._3D.Poses.moveTo("Default")
+  	waituntil Poses.EndPoseWasReached
+  	Robot.state := "drivefull"
+  	var DestinationObject: Object
+  	if Robot.cont.Destination = void
+  		if robot.succ = void
+  			throwRuntimeError(to_str(self.~)+": No destination for MU defined!")
+  		else
+  			DestinationObject := robot.succ
+  		end
+  	else
+  		if Robot.cont.AutomaticRouting
+  			DestinationObject := Robot.cont.getRouteIntermediateDestination
+  		else
+  			DestinationObject := Robot.cont.Destination
+  		end
+  	end
+  
+  	var dropPosition:length[3]
+  	if DestinationObject._3D.hasAttribute("BaseHeight")
+  		dropPosition := Robot._3D.getPositionOfObject(DestinationObject, DestinationObject._3D.getMUAnimationPosition(-part.MULength * part.BookPntLRelative))
+  	else
+  		dropPosition := .ApplicationObjects.CranesAndMore.Internal.Methods.getTargetPosition(Robot,DestinationObject)
+  	end
+  
+  	dropPosition[3] := dropPosition[3] + part.MUHeight
+  	// Move car to the drop position
+  	if DestinationObject /= Robot.CurrentObject
+  		dx := calcDroppedPerpendicularFootPoint([0,0,0], [-1,0,0], dropPosition).x
+  		if dx > Robot.RailLength
+  			RobotBase.moveTo(Robot.RailLength - 1.1m)
+  		elseif dx < 0
+  			RobotBase.moveTo(0)
+  		else
+  			RobotBase.moveTo(dx)
+  		end
+  		waituntil Poses.EndPoseWasReached
+  		Robot.CurrentObject := DestinationObject
+  		Robot.state := "damping"
+  		wait ?.DampingTime
+  		// Check whether destination might not receivable
+  		if DestinationObject.full or DestinationObject.failed or DestinationObject.pause
+  			Robot.state := "blocked"
+  			//First condition checks if there is empty space to place MU
+  			waituntil Destinationobject.numMu < DestinationObject.StatMaxNumMu and not DestinationObject.failed and not DestinationObject.pause
+  		end
+  		Robot.state := "unloading"
+  		Poses.moveToMUAnimationPosition(part, DestinationObject)
+  		waituntil Poses.EndPoseWasReached
+  	end
+  	Robot.ExitLocked := false
+  	if not part.move(DestinationObject)
+  		Robot.state := "blocked"
+  		waituntil part.location /= Robot
+  		Robot.state := "unloading"
+  	end
+  
+  	if Robot.Empty
+  		Robot._3D.Poses.moveTo("Default")
+  		waituntil Poses.EndPoseWasReached
+  	end
+  end
+  
+  if Robot.FwBlockListEntry1 /= void
+  	//To trigger OnPull for the next part, status needs to be set to waiting
+  	Robot.state := "waiting"
+  	Robot.&OnPull.executeNewCallchain(Robot.FwBlockListEntry1, Robot) // Process parts waiting in the forward blocking list
+  elseif Robot.HomePosition /= void
+  	var HomePositionRobot:length[3]
+  	if Robot.HomePosition._3D.hasAttribute("BaseHeight")
+  		HomePositionRobot := Robot._3D.getPositionOfObject(Robot.HomePosition, Robot.HomePosition._3D.getMUAnimationPosition(-part.MULength * part.BookPntLRelative))
+  	else
+  		HomePositionRobot := rootFolder.Internal.Methods.getTargetPosition(Robot,Robot.HomePosition)
+  	end
+  	if Robot.HomePosition /= Robot.CurrentObject
+  		dx := calcDroppedPerpendicularFootPoint([0,0,0], [-1,0,0], HomePositionRobot).x
+  		RobotBase.moveTo(dx)
+  		waituntil Poses.EndPoseWasReached
+  		Robot.CurrentObject := DestinationObject
+  		Robot.state := "waiting"
+  	end
+  else
+  	Robot.nextPart := void
+  	Robot.driveHome
+  end
+ ShowInTooltip: false
+-
+ Name: init
+ ID: 3193333712
+ DataType: method
+ Value: "var robot := self.~"
+ ShowInTooltip: false
+-
+ Name: OnPull
+ ID: 2144613936
+ DataType: method
+ Value: |+1
+  var robot  := ?
+  var part := @
+  
+  if part = void or part /= robot.FwBlockListEntry1
+  	return
+  end
+  
+  if robot.Cont = void and robot.NewPart = false
+  	robot.NewPart := true
+  	robot.processPendingTransfers(part)
+  else
+  	waituntil robot.state = "waiting"
+  	robot.nextPart := part
+  	robot.processPendingTransfers(part)
+  end
+ ShowInTooltip: false
+-
+ Name: NewPart
+ ID: 4036750203
+ DataType: boolean
+ Value: false
+ HasInitValue: true
+ InitValue: false
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 2684546682
+ DataType: string
+ Value: "waiting"
+ HasInitValue: true
+ InitValue: "waiting"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: CurrentObject
+ ID: 977311496
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: DampingTime
+ ID: 825911811
+ DataType: time
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 696102760
+ DataType: method
+ Value: "rootfolder.internal.dialog.genDialog"
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 2762634044
+ DataType: string
+ Value: "SevenAxisRobot"
+ ShowInTooltip: false
+-
+ Name: OpenedDialog
+ ID: 2049985624
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: RailLength
+ ID: 1666393906
+ DataType: length
+ Value: 5
+ ShowInTooltip: false
+-
+ Name: ParametrizeRobot
+ ID: 349102847
+ DataType: method
+ Value: |+1
+  var Robot :=  self.~
+  
+  Robot._3D.getObject("Rails").Length := Robot.RailLength / 2.5
+ ShowInTooltip: false
+-
+ Name: Width
+ ID: 2170309572
+ DataType: length
+ Value: 1.02
+ ShowInTooltip: false
+-
+ Name: driveHome
+ ID: 644067357
+ DataType: method
+ Value: |+1
+  var Robot := self.~
+  var Poses := Robot._3D.Poses
+  
+  Robot.state := "drivetohome"
+  Poses.moveTo("HomePosition")
+  waituntil Poses.EndPoseWasReached
+  Robot.state := "waiting"
+ ShowInTooltip: false
+-
+ Name: nextPart
+ ID: 2492857680
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: "void"
+ ShowInTooltip: false
+-
+ Name: MaximumDwellTime
+ ID: 1137851807
+ DataType: time
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: DrivingHome
+ ID: 24113449
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: HomePosition
+ ID: 1781668128
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: Dynamics
+ ID: 733498939
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: setLights
+ ID: 2543352303
+ DataType: method
+ Value: |+1
+  
+  --@Deprecated
+  
+  param state:String
+  var Robot := self.~
+  
+  switch state
+  case "Working"
+  	//reset Lights
+  	Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	//set new Light
+  	Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(0, 255, 0)
+  case "Waiting"
+  	Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 0)
+  case "failed"
+  	Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 0, 0)
+  case "blocked"
+  	Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 0)
+  else
+  	Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  	Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(0, 255, 0)
+  end
+ ShowInTooltip: false
+-
+ Name: resetLights
+ ID: 3611045512
+ DataType: method
+ Value: |+1
+  
+  --@Deprecated
+  
+  var robot := self.~
+  //reset Lights
+  Robot._3D.getGraphic("StateLights", [4]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  Robot._3D.getGraphic("StateLights", [3]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+  Robot._3D.getGraphic("StateLights", [2]).MaterialDiffuseColor := makeRGBValue(255, 255, 233)
+ ShowInTooltip: false
+$ProcImp:
+ Active: false
+ Services:
+ - [~,["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ CommonResources: true
+$FailImp:
+ Active: false
+ Services:
+ - [~,["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+$TransportImp:
+ Active: false
+ Services:
+ - "StandardService"
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false

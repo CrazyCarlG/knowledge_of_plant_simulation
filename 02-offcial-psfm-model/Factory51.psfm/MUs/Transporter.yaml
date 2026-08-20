@@ -1,0 +1,274 @@
+InternalClassType: Transporter
+Acceleration: 1
+AccelerationEnabled: false
+AutomaticRouting: true
+Backwards: false
+BatBasicCons: 0
+BatCapacity: 0
+BatCharge: 0
+BatChargeCtrl:
+BatChargeCurrent: 0
+BatDriveCons: 0
+BatReserve: 0
+BatteryUsed: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+CollisionCtrl:
+ConstructorCtrl:
+Coordinate3D: [-3,-3,0]
+CreateIn3D: true
+CurveSpeed: -1
+Deceleration: 1
+DefaultCurveRadius: 1
+DestCtrl:
+Destination:
+DestructorCtrl:
+Distance: 1
+DistanceCtrl:
+DragDropCtrl:
+DriveCtrl:
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: false
+ExitCtrlOnce: true
+ExitCtrlRear: true
+FailCtrl:
+FailureActive: true
+InitCtrl:
+IsTractor: false
+Label: ""
+LoadBayType: "Store"
+MoveToFolderCtrl:
+MUHeight: 0.4
+MULength: 1.6
+MUWidth: 0.8
+Name: Transporter
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RandomSeed: 2
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+ResourceType: "Transport"
+ResStatOn: true
+RotationSpeed: 10
+RouteWeightingAttr: ""
+RoutingCtrl:
+SafetyZones: [1,0.3,2,0.6]
+SelectCtrl:
+ShiftcalendarObject:
+Speed: 1
+SpeedCtrl:
+StartDelayDuration: 0
+StopAtDestination: false
+UnplannedCtrl:
+UUID: 4a2bf11c-029c-4090-82b3-5701e6d21ae6
+XDim: 3
+YDim: 2
+ZDim: 1
+$BasicObject: true
+3D:
+ AnimationObject: ""
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 13395507
+ MaterialDiffuseColor: 13395507
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.263
+ MaterialSpecularColor: 5855577
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaRelativeCenter: [-0.05,0,1]
+ MUAnimationAreaRelativeSize: [0.75,0.875]
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ -
+  Name: "Track"
+  AnchorPoints:
+  - [-0.68,0,0.4,0,0,0,1,~]
+  - [0.52,0,0.4,0,0,0,1,~]
+ -
+  Name: "Line"
+  AnchorPoints:
+  - [-0.08,0.4,0.4,-90.000210459149713,0,0,1,~]
+  - [-0.08,-0.4,0.4,-90.000210459149713,0,0,1,~]
+ MUSideToAttach: "Bottom"
+ Poses:
+ Rotation: [0,0,0,-1]
+ ScaleAutomatically: true
+ ShowContent: true
+ ShowSafetyZones: false
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Vertical"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0.68,0.26,0.1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0.676,0.26,0.1]
+  VerticalStatesScale: [1,1,0.6]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [31,25]
+ Pixels:
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - AI//AI//AI//AAAAAAAAAAAAAAAAAAAAAI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AAAAAAAAAAAAAAAAAAAAAI//AI//gIAAgIAA
+ - AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//gIAA
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//AA//AI//AI//AI//AI//
+ - AI//AI//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AI//AA//AA//AA//AI//AI//FFyM
+ - AI//AI//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AI//AI//AA//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//AI//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AI//AI//AI//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AI//AI//Mo6+AI//AI//AI//FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//Mo6+Mo6+Mo6+AI//FFyM
+ - AI//AI//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AI//AI//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AI//AI//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AI//AI//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AI//AI//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AI//AI//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//Mo6+Mo6+Mo6+AI//FFyM
+ - AI//AI//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AI//AI//Mo6+AI//AI//AI//FFyM
+ - AI//AI//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AI//AI//AI//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//AI//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AI//AI//AA//AI//AI//AP//AP//
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AI//AA//AA//AA//AI//AI//FFyM
+ - AI//AI//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AI//AI//AA//AI//AI//AI//AI//
+ - AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//gIAA
+ - AI//AI//AI//AAAAAAAAAAAAAAAAAAAAAI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AI//AAAAAAAAAAAAAAAAAAAAAI//AI//gIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+-
+ Name: "Failed"
+ Transparent: true
+ Size: [31,25]
+ Pixels:
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAA//AA//gIAAgIAA
+ - AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//gIAA
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AA//AA//
+ - AA//AA//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AA//AA//AA//AA//AA//AA//FFyM
+ - AA//AA//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AA//AA//Mo6+AA//AA//AA//FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//Mo6+Mo6+Mo6+AA//FFyM
+ - AA//AA//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AA//AA//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AA//AA//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AA//AA//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AA//AA//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AA//AA//Mo6+Mo6+Mo6+Mo6+FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//Mo6+Mo6+Mo6+AA//FFyM
+ - AA//AA//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AA//AA//Mo6+AA//AA//AA//FFyM
+ - AA//AA//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AP//AP//
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AA//FFyM
+ - AA//AA//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AA//AA//AA//AA//
+ - AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//gIAA
+ - AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAA//AA//gIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+-
+ Name: "Pause"
+ Transparent: true
+ Size: [31,25]
+ Pixels:
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - /wAA/wAA/wAAAAAAAAAAAAAAAAAAAAAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAAAAAAAAAAAAAAAAAAAA/wAA/wAAgIAAgIAA
+ - /wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAgIAA
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAAAA///wAA/wAA/wAA/wAA
+ - /wAA/wAAvr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+/wAAAA//AA//AA///wAA/wAAFFyM
+ - /wAA/wAAvr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+/wAA/wAAAA///wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAA/wAA/wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+/wAA/wAA/wAA/wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+/wAA/wAAzpKC/wAA/wAA/wAAFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAAzpKCzpKCzpKC/wAAFFyM
+ - /wAA/wAAvr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+/wAA/wAAzpKCzpKCzpKCzpKCFFyM
+ - /wAA/wAAvr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+/wAA/wAAzpKCzpKCzpKCzpKCFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAAzpKCzpKCzpKCzpKCFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+/wAA/wAAzpKCzpKCzpKCzpKCFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+/wAA/wAAzpKCzpKCzpKCzpKCFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAAzpKCzpKCzpKC/wAAFFyM
+ - /wAA/wAAvr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+/wAA/wAAzpKC/wAA/wAA/wAAFFyM
+ - /wAA/wAAvr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+/wAA/wAA/wAA/wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAA/wAA/wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+/wAA/wAAAA///wAA/wAAAP//AP//
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+/wAAAA//AA//AA///wAA/wAAFFyM
+ - /wAA/wAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/wAA/wAAAA///wAA/wAA/wAA/wAA
+ - /wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAgIAA
+ - /wAA/wAA/wAAAAAAAAAAAAAAAAAAAAAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAAAAAAAAAAAAAAAAAAAA/wAA/wAAgIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [31,25]
+ Pixels:
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - AP//AP//AP//AAAAAAAAAAAAAAAAAAAAAP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AAAAAAAAAAAAAAAAAAAAAP//AP//gIAAgIAA
+ - AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//gIAA
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//AA//AP//AP//AP//AP//
+ - AP//AP//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AP//AA//AA//AA//AP//AP//FFyM
+ - AP//AP//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AP//AP//AA//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AP//AP//RrzcAP//AP//AP//FFyM
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//RrzcRrzcRrzcAP//FFyM
+ - AP//AP//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AP//AP//RrzcRrzcRrzcRrzcFFyM
+ - AP//AP//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AP//AP//RrzcRrzcRrzcRrzcFFyM
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//RrzcRrzcRrzcRrzcFFyM
+ - AP//AP//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AP//AP//RrzcRrzcRrzcRrzcFFyM
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AP//AP//RrzcRrzcRrzcRrzcFFyM
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//RrzcRrzcRrzcAP//FFyM
+ - AP//AP//vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AP//AP//RrzcAP//AP//AP//FFyM
+ - AP//AP//vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AP//AP//AA//AP//AP//AP//AP//
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AP//AA//AA//AA//AP//AP//FFyM
+ - AP//AP//vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AP//AP//AA//AP//AP//AP//AP//
+ - AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//gIAA
+ - AP//AP//AP//AAAAAAAAAAAAAAAAAAAAAP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AAAAAAAAAAAAAAAAAAAAAP//AP//gIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+-
+ Name: "tractor"
+ Transparent: true
+ Size: [31,25]
+ Pixels:
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - AN4AAN4AAN4AAAAAAAAAAAAAAAAAAAAAAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAAAAAAAAAAAAAAAAAAAAAN4AAN4AgIAAgIAA
+ - AN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AgIAA
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AAA//AN4AAN4AAN4AAN4A
+ - AN4AAN4Avr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AN4AAA//AA//AA//AN4AAN4AFFyM
+ - AN4AAN4Avr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AN4AAN4AAA//AN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AAN4AAN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AN4AAN4AAN4AAN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AN4AAN4AMo6+AN4AAN4AAN4AFFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AMo6+Mo6+Mo6+AN4AFFyM
+ - AN4AAN4Avr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AN4AAN4AMo6+Mo6+Mo6+Mo6+FFyM
+ - AN4AAN4Avr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AN4AAN4AMo6+Mo6+Mo6+Mo6+FFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AMo6+Mo6+Mo6+Mo6+FFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AN4AAN4AMo6+Mo6+Mo6+Mo6+FFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AN4AAN4AMo6+Mo6+Mo6+Mo6+FFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AMo6+Mo6+Mo6+AN4AFFyM
+ - AN4AAN4Avr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+AN4AAN4AMo6+AN4AAN4AAN4AFFyM
+ - AN4AAN4Avr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+AN4AAN4AAN4AAN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AAN4AAN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+jIyMvr6+vr6+vr6+vr6+vr6+AN4AAN4AAA//AN4AAN4AAP//AP//
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+vr6+7Ozsvr6+vr6+vr6+vr6+AN4AAA//AA//AA//AN4AAN4AFFyM
+ - AN4AAN4Avr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AN4AAN4AAA//AN4AAN4AAN4AAN4A
+ - AN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AgIAA
+ - AN4AAN4AAN4AAAAAAAAAAAAAAAAAAAAAAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAN4AAAAAAAAAAAAAAAAAAAAAAN4AAN4AgIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAA
+InheritEntranceExitLockedOnReset: false

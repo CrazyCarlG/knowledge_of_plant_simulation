@@ -1,0 +1,59 @@
+InternalClassType: Track
+Coordinate3D: [35.2163,6.6437,0]
+Length: 18.279092653589792
+Name: ChargeTrack1
+Origin: eb7ce655-9157-4e1c-b259-07719da6af27
+RandomSeed: 1073746515
+UUID: 019f044c-ab8a-72ec-aecb-9af5cd02cb66
+Width: 0.2
+3D:
+ BaseHeight: 0.01
+ ExtConfiguration:
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa6dd,0x292929,0x0,0x0,0,0]
+ $ExtSegments:
+  - 0
+  - [90,7.9437,0]
+  - [0,90,2,0]
+  - [0,7.1937999999999995,0]
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.Stopped := true
+  @.BatCharging := true
+  
+  ChargeCount2 += 1
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-749a-82eb-de8479dc4de6
+ Name: Connector53
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7311-82b4-e1929938d361
+$Predecessors:
+- 019f044c-ab8a-733f-934f-6d80074c68cd
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 13.300000000000008
+ FromEnd: false
+ Control: "self.OnSensor1"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false

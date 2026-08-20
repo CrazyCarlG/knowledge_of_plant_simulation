@@ -1,0 +1,14 @@
+InternalClassType: Interface
+Coordinate3D: [0,0,0.2]
+Origin: 5ec2faab-7e86-4641-821f-094dd51fe984
+RandomSeed: 1073751085
+UUID: 019f044c-ab8a-7205-bbfc-c966433cb558
+3D:
+ VisibleGraphicGroups: ["connected"]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-720f-9e20-82c9e82f862d
+ Origin: ae9aecd4-e766-4799-97ba-79ee2246d247
+ UUID: 019f044c-ab8a-7238-a2cc-8eb6f5d42f7a
+$Predecessors:
+- 019f044c-ab8a-7144-9bb2-8df9c0895b6e

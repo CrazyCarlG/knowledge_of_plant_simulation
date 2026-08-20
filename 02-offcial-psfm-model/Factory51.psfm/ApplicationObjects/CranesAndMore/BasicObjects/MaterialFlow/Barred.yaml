@@ -1,0 +1,57 @@
+InternalClassType: Part
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [-2,1,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DragDropCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.01
+MULength: 1
+MUWidth: 1
+Name: Barred
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+RouteWeightingAttr: ""
+SelectCtrl:
+UUID: fe49771f-71a1-48a8-a0bd-0821996b67df
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 2697513
+ MaterialDiffuseColor: 98301
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.2
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0.667
+ Mirror: [false,false,false]
+ Poses:
+ Rotation: [0,0,0,-1]
+ ScaleAutomatically: true
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [1,1]
+ Pixels:
+ - gIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [1,1]
+ Pixels:
+ - gIAA

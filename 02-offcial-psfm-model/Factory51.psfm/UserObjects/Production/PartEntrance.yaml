@@ -1,0 +1,12 @@
+InternalClassType: Interface
+Coordinate3D: [-27,7.3,1]
+ExitStrategyBlocking: true
+Name: PartEntrance
+Origin: 2d7f401e-14dc-4e50-810c-763be5c915a9
+RandomSeed: 1073745664
+UUID: 019f044c-ab8a-701f-8150-c57993dc1dd0
+$Successors:
+-
+ $Succ: 019f044c-ab8a-701e-bed8-9eea1022e8b7
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70dc-8ac5-ee0f92400866

@@ -1,0 +1,27 @@
+InternalClassType: Station
+EntranceLocked: false
+Origin: 019f044c-ab8a-7110-b21c-ce4aab5ef267
+RandomSeed: 1073746706
+UUID: 019f044c-ab8a-7439-95f4-5bc3bee5855f
+3D:
+ $Objects:
+ -
+  Origin: de342ca4-e765-40df-834f-cd61aae273b9
+  UUID: 59d10cf5-8898-49bd-8e31-2786b6722dd5
+ -
+  Origin: aa76918a-4ede-4ce7-ab30-7e7d7e1cc077
+  UUID: f078ed2d-abc8-4801-b4a8-9a5e8d1dd6a4
+ -
+  Origin: ba2f66cd-153c-4c2c-8187-c78c7ae17672
+  UUID: e8fec768-5bda-4546-98e3-2cd142b07374
+ -
+  Origin: 897f07e4-d9be-4d07-855b-4ef90e90d853
+  UUID: 5b940e25-740d-4dac-a536-7d43304d112a
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7435-aa5c-8c2365b22422
+ Origin: 019f044c-ab8a-7116-9174-cdfec60a9ff8
+ UUID: 019f044c-ab8a-743f-92b3-ac51b1af411c
+$Predecessors:
+- 019f044c-ab8a-743c-867a-c5ab0416f166
+InheritEntranceExitLockedOnReset: false

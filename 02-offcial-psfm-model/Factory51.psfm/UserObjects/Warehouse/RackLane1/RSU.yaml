@@ -1,0 +1,60 @@
+InternalClassType: Station
+Coordinate3D: [1.25,-2.0000000000000004,0]
+Origin: ceba40fc-aecb-4a38-99df-7d3b125a0de5
+RandomSeed: 1073750867
+UUID: 019f044c-ab8a-71a8-9613-851a07e23bae
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ $Objects:
+ -
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimitActive: false
+  JointType: "Prismatic Joint"
+  JointUpperLimitActive: false
+  JointVelocity: 1
+  LockedGraphicGroups: []
+  Origin: d7cd90eb-7923-4607-9702-7deb1496db2d
+  UUID: 53196db9-ea78-4125-8ed5-9226198c3f49
+  $Objects:
+  -
+   GraphicGroupNames: ["default"]
+   JointAcceleration: 0
+   JointDeceleration: 0
+   JointLowerLimitActive: false
+   JointType: "Prismatic Joint"
+   JointUpperLimitActive: false
+   JointVelocity: 2
+   LockedGraphicGroups: []
+   Origin: 2bf5f353-7ae4-4162-bd0e-b9ca62379988
+   UUID: c60cc7dd-2d7e-4e60-8164-9a0bb99c2f8a
+   $Objects:
+   -
+    GraphicGroupNames: ["default"]
+    JointAcceleration: 0
+    JointDeceleration: 0
+    JointLowerLimitActive: false
+    JointType: "Prismatic Joint"
+    JointUpperLimitActive: false
+    JointVelocity: 2
+    LockedGraphicGroups: []
+    Origin: b66fe008-126d-4e9e-a42b-ee506e25f6fe
+    UUID: f7b7ccfb-ec20-430a-84c1-1e3a78bb363c
+$CustomAttributes:
+-
+ Name: TrackWidth
+ ID: 4
+ $DataType: length
+ Value: 1.2
+-
+ Name: TrackLength
+ ID: 5
+ $DataType: length
+ Value: 11.54
+-
+ Name: Height
+ ID: 9
+ $DataType: length
+ Value: 6.18

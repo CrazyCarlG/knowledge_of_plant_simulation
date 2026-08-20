@@ -1,0 +1,90 @@
+InternalClassType: Dialog
+Origin: 019f044c-ab8a-71a9-8722-63391d1111ef
+RandomSeed: 1073750949
+UUID: 019f044c-ab8a-75ee-93fd-ab5badfb582b
+$Elements:
+-
+ Type: EditText
+ Name: "Name_inp"
+ Caption: "RackLane"
+-
+ Type: CheckBox
+ Name: "LabelInherit"
+-
+ Type: TabControl
+ Name: "tab_tab"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Rack_tab"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "NumberOfColumnsInherit"
+  -
+   Type: CheckBox
+   Name: "NumberOfRowsInherit"
+  -
+   Type: CheckBox
+   Name: "BoxWidthInherit"
+  -
+   Type: CheckBox
+   Name: "GapInherit"
+  -
+   Type: CheckBox
+   Name: "BoxHeightInherit"
+  -
+   Type: CheckBox
+   Name: "FloorThicknessInherit"
+  -
+   Type: CheckBox
+   Name: "BoxDepthInherit"
+  -
+   Type: EditText
+   Name: "GroundClearance_inp"
+   Caption: "0.6"
+ -
+  Type: TabPage
+  Name: "RSU_tab"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "TrackWidthInherit"
+  -
+   Type: CheckBox
+   Name: "RSU_speedInherit"
+  -
+   Type: CheckBox
+   Name: "RSU_accelerationInherit"
+  -
+   Type: CheckBox
+   Name: "RSU_decelerationInherit"
+  -
+   Type: CheckBox
+   Name: "LoadHandler_speedInherit"
+  -
+   Type: CheckBox
+   Name: "Carrier_speedInherit"
+  -
+   Type: CheckBox
+   Name: "RSU_AvailabilityInherit"
+ -
+  Type: TabPage
+  Name: "Conveyor_tab"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "ConveyorWidthInherit"
+  -
+   Type: CheckBox
+   Name: "ConveyorLengthInherit"
+  -
+   Type: EditText
+   Name: "BaseHeight_inp"
+   Caption: "1"
+  -
+   Type: CheckBox
+   Name: "ConveyorSpeedInherit"
+ -
+  Type: TabPage
+  Name: "statistic_tab"

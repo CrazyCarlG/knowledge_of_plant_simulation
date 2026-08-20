@@ -1,0 +1,92 @@
+InternalClassType: Method
+Coordinate3D: [-6,8,0]
+Name: adoptParametrization
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ //This method expects a Racklane as argument and afterwards adopts all parameters of the passed Racklane to this Racklane which are not the same in both Racklanes
+ param racklane:object
+ 
+ // RSU Parameters
+ 
+ if TrackWidth/=racklane.TrackWidth
+ 	TrackWidth:=racklane.TrackWidth
+ end
+ 
+ if RSU_speed/=racklane.RSU_speed
+ 	RSU_speed:=racklane.RSU_speed
+ end
+ 
+ if RSU_acceleration/=racklane.RSU_acceleration
+ 	RSU_acceleration:=racklane.RSU_acceleration
+ end
+ 
+ if LoadHandler_speed/=racklane.LoadHandler_speed
+ 	LoadHandler_speed:=racklane.LoadHandler_speed
+ end
+ 
+ if Carrier_speed/=racklane.Carrier_speed
+ 	Carrier_speed:=racklane.Carrier_speed
+ end
+ 
+ if RSU_Availability/=racklane.RSU_Availability
+ 	RSU_Availability:=racklane.RSU_Availability
+ end
+ 
+ if RSU_MTTR/=racklane.RSU_MTTR
+ 	RSU_MTTR:=racklane.RSU_MTTR
+ end
+ 
+ // Rack Parameters
+ 
+ if NumberOfColumns/=racklane.NumberOfColumns
+ 	NumberOfColumns:=racklane.NumberOfColumns
+ end
+ 
+ if NumberOfRows/=racklane.NumberOfRows
+ 	NumberOfRows:=racklane.NumberOfRows
+ end
+ 
+ if BoxWidth/=racklane.BoxWidth
+ 	BoxWidth:=racklane.BoxWidth
+ end
+ 
+ if BoxHeight/=racklane.BoxHeight
+ 	BoxHeight:=racklane.BoxHeight
+ end
+ 
+ if BoxDepth/=racklane.BoxDepth
+ 	BoxDepth:=racklane.BoxDepth
+ end
+ 
+ if Gap/=racklane.Gap
+ 	Gap:=racklane.Gap
+ end
+ 
+ if FloorThickness/=racklane.FloorThickness
+ 	FloorThickness:=racklane.FloorThickness
+ end
+ 
+ if GroundClearance/=racklane.GroundClearance
+ 	GroundClearance:=racklane.GroundClearance
+ end
+ 
+ // Conveyor Parameters
+ 
+ if ConveyorWidth/=racklane.ConveyorWidth
+ 	ConveyorWidth:=racklane.ConveyorWidth
+ end
+ 
+ if ConveyorLength/=racklane.ConveyorLength
+ 	ConveyorLength:=racklane.ConveyorLength
+ end
+ 
+ if BaseHeight/=racklane.BaseHeight
+ 	BaseHeight:=racklane.BaseHeight
+ end
+ 
+ 
+ if ConveyorSpeed/=racklane.ConveyorSpeed
+ 	ConveyorSpeed:=racklane.ConveyorSpeed
+ end
+RandomSeed: 2263
+UUID: 4064d599-8546-42a9-b80f-258d3262ce48

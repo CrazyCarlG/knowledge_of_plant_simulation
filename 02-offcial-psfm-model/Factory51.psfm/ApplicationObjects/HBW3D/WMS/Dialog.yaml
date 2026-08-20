@@ -1,0 +1,618 @@
+InternalClassType: Dialog
+Coordinate3D: [12.5,-11,0]
+Label: "WMS"
+Name: Dialog
+Origin: 583d05f7-1ac4-4ae7-a9ef-d4083c7e0049
+RandomSeed: 2241
+UUID: 1cf51dd7-4009-41eb-b505-a787771fa495
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ $DataType: method
+ Value: |+1
+  param action : string
+  
+  var AppObj := self.~.~
+  var dialog := self.~
+  
+  
+  switch action
+  case "Open"
+  	self.~.initDialog
+  
+  case "Apply"
+  	self.~.applyDialog
+  
+  case "Close"
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Navigate menu
+  _____________________________________________________________________________*/
+  case "openLocation"
+  	AppObj.~.openDialog
+  
+  case "openOrigin"
+  	if AppObj.Origin /= void
+  		AppObj.Origin.openDialog
+  	end
+  
+  case "gotoOrigin"
+  	if AppObj.origin/= void
+  		AppObj.origin.openDialog
+  		dialog.close( false )
+  	end
+  
+  case "openClass"
+  	if AppObj.class /= void
+  		AppObj.class.openDialog
+  	end
+  
+  case "gotoClass"
+  	if AppObj.class /= void
+  		AppObj.class.openDialog
+  		dialog.close( false )
+  	end
+  
+  case "OpenObject"
+  	AppObj.openDialog(false)
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  View menu
+  _____________________________________________________________________________*/
+  
+  case "refresh"
+  	Dialog.initDialog
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Help menu
+  _____________________________________________________________________________*/
+  
+  case "helpObject"
+  	.ApplicationObjects.HBW3D.HBW_Documentation.show
+  
+  case "helpVersion"
+  	var lib, vers, libPath, text : string
+  	rootfolder.getLibraryInfo( lib, vers, text, libPath )
+  	text := to_str( "Plant Simulation ", lib, strChr(10), " Version: ", vers, strChr(10))
+  	messageBox( text, 1, 4)
+  
+  
+  //---------------------------------------------------------------------------
+  // name and label
+  case "name"
+  	if location.isNameUnique(dialog.getValue("name_inp")) then
+  		AppObj.name := dialog.getValue("name_inp")
+  	else
+  		dialog.setValue("name_inp", AppObj.name)
+  	end
+  
+  case "label"
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  _____________________________________________________________________________*/
+  case "showContent"
+  	Content.openDialogBox
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  tab control
+  _____________________________________________________________________________*/
+  case "control"
+  	var str := dialog.getValue("Control_inp")
+  	if str/="" then
+  		var obj := str_to_obj(str)
+  		if obj/=void then
+  			dialog.setCaption("control_inp", makePathRelative(obj, current))
+  		else
+  			dialog.setCaption("control_inp", "")
+  		end
+  	end
+  
+  case "ControlSel"
+  	var sensitive : boolean := dialog.getIndex("ControlSel_drop")=3
+  	dialog.setSensitive("Control_txt", sensitive)
+  	dialog.setSensitive("control_inp", sensitive)
+  
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  tab strategy
+  _____________________________________________________________________________*/
+  case "StrategySelect"
+  	var strategyIndex := dialog.getIndex("StrategySelect_drop")
+  	if StrategyIndex=3 then
+  		dialog.setSensitive("Predefined_btn", true)
+  	else
+  		dialog.setSensitive("Predefined_btn", false)
+  	end
+  
+  	if StrategyIndex=4 then
+  		dialog.setSensitive("Ranges_btn", true)
+  	else
+  		dialog.setSensitive("Ranges_btn", false)
+  	end
+  
+  
+  case "Predefined"
+  	PredefinedRacks.InheritContents := false
+  	predefinedRacks.openDialogBox(true)
+  
+  case "ProductRanges"
+  	ProductRanges.InheritContents := false
+  	ProductRanges.openDialogBox(true)
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  tab remove
+  _____________________________________________________________________________*/
+  case "automaticremove"
+  	var checked := dialog.getCheckBox("autoremove_chk")
+  
+  	dialog.setSensitive("RemoveTime_txt", checked)
+  	dialog.setSensitive("RemoveTime_inp", checked)
+  
+  	dialog.setSensitive("RemoveInterval_txt", checked)
+  	dialog.setSensitive("RemoveInterval_inp", checked)
+  	dialog.setSensitive("RemoveAmount_txt", checked)
+  	dialog.setSensitive("RemoveAmount_inp", checked)
+  
+  case "removeTime"
+  	//Make sure time string that was provided is properly formatted and converted, hence the conversion from string to time to string again
+  	var t : time := str_to_time(dialog.getValue("RemoveTime_inp"))
+  	dialog.setCaption("RemoveTime_inp", to_str(t))
+  
+  case "RemoveInterval"
+  	t := str_to_time(dialog.getValue("RemoveInterval_inp"))
+  	dialog.setCaption("RemoveInterval_inp", to_str(t))
+  case "RemoveAmount"
+  	var x := str_to_num(dialog.getValue("RemoveAmount_inp"))
+  	dialog.setCaption("RemoveAmount_inp", to_str(x))
+  
+  else
+  	// unknown dialog element
+  end
+-
+ Name: initDialog
+ ID: 2
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // initialize the dialog
+  //--------------------------------------------------------------------------------
+  
+  
+  var dialog := self.~
+  
+  dialog.setCaption("name_inp", current.name)
+  dialog.setCaption("label_inp", current.label)
+  
+  dialog.setCheckBox("MuCuboid_chk", showMUsAsCuboids)
+  
+  // Strategy tab
+  var l : list
+  l.create
+  var text := "One by one"
+  l.append(text)
+  text := "Random"
+  l.append(text)
+  text := "Predefined racks"
+  l.append(text)
+  text := "XYZ ranges"
+  l.append(text)
+  
+  dialog.setList("StrategySelect_drop", l)
+  dialog.setIndex("StrategySelect_drop", StrategyIndex)
+  
+  if StrategyIndex=3 then
+  	dialog.setSensitive("Predefined_btn", true)
+  else
+  	dialog.setSensitive("Predefined_btn", false)
+  end
+  
+  if StrategyIndex=4 then
+  	dialog.setSensitive("Ranges_btn", true)
+  else
+  	dialog.setSensitive("Ranges_btn", false)
+  end
+  
+  // Removing Tab
+  dialog.setCaption("RemoveTime_inp", to_str(startRemoveTime))
+  dialog.setCaption("RemoveInterval_inp", to_str(RemoveInterval))
+  dialog.setCaption("RemoveAmount_inp", to_str(MaxAmount))
+  
+  dialog.setCheckBox("autoremove_chk", activateAutoRemove)
+  
+  dialog.setSensitive("RemoveTime_txt", activateAutoRemove)
+  dialog.setSensitive("RemoveTime_inp", activateAutoRemove)
+  dialog.setSensitive("RemoveInterval_txt", activateAutoRemove)
+  dialog.setSensitive("RemoveInterval_inp", activateAutoRemove)
+  dialog.setSensitive("RemoveAmount_txt", activateAutoRemove)
+  dialog.setSensitive("RemoveAmount_inp", activateAutoRemove)
+  
+  // Statistics Tab
+  
+  var t : table
+  t.create
+  
+  var filler_string : string := strRCopy(to_str("          ",0),8)
+  dialog.setCaption("driveHome_val", filler_string)
+  dialog.setCaption("loading_val", filler_string)
+  dialog.setCaption("unloading_val", filler_string)
+  dialog.setCaption("waiting_val", filler_string)
+  dialog.setCaption("failed_val", filler_string)
+  dialog.setCaption("utilization_val", filler_string)
+  
+  if RackLanes.Dim>0
+  
+  	var drivingHome := 0
+  	var loading := 0
+  	var unloading := 0
+  	var waiting := 0
+  	var failed := 0
+  	var DurationColumn : integer := 5
+  	var value := 0
+  	for local j := 1 to RackLanes.Dim loop
+  		RackLanes[j].RSU.state.getStatisticsTable(t)
+  		for local i := 1 to t.YDim loop
+  			value := round(t[durationColumn,i], 2)
+  			switch t[1,i]
+  			case "drivinghome"
+  				drivingHome += value
+  			case "loading"
+  				loading += value
+  			case "unloading"
+  				unloading += value
+  			case "waiting"
+  				waiting += value
+  			case "failed"
+  				failed += value
+  			end
+  		next
+  	next
+  
+  	dialog.setCaption("driveHome_val", to_str(round(drivingHome/RackLanes.Dim, 2)))
+  
+  	dialog.setCaption("loading_val", to_str(round(loading/RackLanes.Dim, 2)))
+  
+  	dialog.setCaption("unloading_val", to_str(round(unloading/RackLanes.Dim, 2)))
+  
+  	dialog.setCaption("waiting_val", to_str(round(waiting/RackLanes.Dim, 2)))
+  
+  	dialog.setCaption("failed_val", to_str(round(failed/RackLanes.Dim, 2)))
+  
+  	dialog.setCaption("utilization_val", to_str(round(100*self.~.~.NumOccupiedPlaces/(self.~.~.NumFreePlaces+self.~.~.NumOccupiedPlaces), 2)))
+  
+  end
+ ShowInTooltip: false
+-
+ Name: applyDialog
+ ID: 3
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // transfer the input values of the dialog to attributes of the model
+  
+  
+  var dialog := self.~
+  
+  current.name := dialog.getValue("name_inp")
+  current.label := dialog.getValue("label_inp")
+  
+  ShowMUsAsCuboids := dialog.getCheckBox("MuCuboid_chk")
+  
+  
+  for var i := 1 to RackLanes.dim
+  	var Racklane := RackLanes[i]
+  	if ShowMUsAsCuboids
+  		Racklane.RackLeft._3D.MUAnimationAreaShowMUsAsCuboids := true
+  		Racklane.RackRight._3D.MUAnimationAreaShowMUsAsCuboids := true
+  	else
+  		Racklane.RackLeft._3D.MUAnimationAreaShowMUsAsCuboids := false
+  		Racklane.RackRight._3D.MUAnimationAreaShowMUsAsCuboids := false
+  	end
+  next
+  
+  
+  // tab strategy
+  StrategyIndex := dialog.getIndex("StrategySelect_drop")
+  
+  
+  // tab removing
+  startRemoveTime := str_to_time(dialog.getValue("RemoveTime_inp"))
+  removeInterval := str_to_time(dialog.getValue("RemoveInterval_inp"))
+  MaxAmount := str_to_time(dialog.getValue("RemoveAmount_inp"))
+  activateAutoRemove := dialog.getCheckBox("autoremove_chk")
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 4
+ DataType: method
+ Value: |+1
+  var dialog := self.~
+  var filler_string : string := strRCopy(to_str("          ",0),8)
+  dialog.setCaption("driveHome_val", filler_string)
+  dialog.setCaption("loading_val", filler_string)
+  dialog.setCaption("unloading_val", filler_string)
+  dialog.setCaption("waiting_val", filler_string)
+  dialog.setCaption("failed_val", filler_string)
+  dialog.setCaption("utilization_val", filler_string)
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "navigate_mnu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "openLoc_mnu"
+  Caption: "Open location"
+  CallbackArgument: "openLocation"
+ -
+  Type: Menu
+  Name: "openOrigin_mnu"
+  Caption: "Open Origin"
+  CallbackArgument: "openOrigin"
+ -
+  Type: Menu
+  Name: "gotoOrigin_mnu"
+  Caption: "Go to Origin"
+  CallbackArgument: "gotoOrigin"
+ -
+  Type: Menu
+  Name: "openClass_mnu"
+  Caption: "Open Class"
+  CallbackArgument: "openClass"
+ -
+  Type: Menu
+  Name: "gotoClass_mnu"
+  Caption: "Go to Class"
+  CallbackArgument: "gotoClass"
+ -
+  Type: Menu
+  Name: "openObject_mnu"
+  Caption: "Open Object"
+  CallbackArgument: "OpenObject"
+-
+ Type: Menu
+ Name: "view_mnu"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "refresh_mnu"
+  Caption: "Refresh"
+  CallbackArgument: "refresh"
+ -
+  Type: Menu
+  Name: "showContent"
+  Caption: "Show Content"
+  CallbackArgument: "showContent"
+-
+ Type: Menu
+ Name: "help_mnu"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "helpObject_mnu"
+  Caption: "Help on Object"
+  CallbackArgument: "helpObject"
+ -
+  Type: Menu
+  Name: "helpVersion_mnu"
+  Caption: "Version of Object"
+  CallbackArgument: "helpVersion"
+-
+ Type: StaticText
+ Name: "Name_txt"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "Name_inp"
+ Caption: "WMS"
+ Rect: [10,0,0,0]
+ CallbackArgument: "name"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "MuCuboid_chk"
+ Caption: "Show MUs as Cuboids"
+ Rect: [40,0,0,0]
+ CallbackArgument: "showMUsAsCuboids"
+-
+ Type: StaticText
+ Name: "Label_txt"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "Label_inp"
+ Rect: [10,1,0,0]
+ CallbackArgument: "label"
+ DataType: 1
+ Password: false
+-
+ Type: TabControl
+ Name: "tab_tab"
+ Rect: [0,2,65,8]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Strategy_tab"
+  Caption: "Strategy"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "StrategySelect_txt"
+   Caption: "Storing strategy:"
+  -
+   Type: Drop-Down
+   Name: "StrategySelect_drop"
+   Caption: ["One by one","Random","Predefined racks","XYZ ranges"]
+   Rect: [30,0,0,0]
+   CallbackArgument: "StrategySelect"
+   SelectionIndex: 1
+  -
+   Type: Button
+   Name: "Predefined_btn"
+   Caption: "Predefined Racks"
+   Rect: [5,1,30,0]
+   CallbackArgument: "Predefined"
+   Enable: false
+  -
+   Type: Button
+   Name: "Ranges_btn"
+   Caption: "Product Ranges"
+   Rect: [5,2,30,0]
+   CallbackArgument: "ProductRanges"
+   Enable: false
+ -
+  Type: TabPage
+  Name: "Removing_tab"
+  Caption: "Stock Removal"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "autoremove_chk"
+   Caption: "Automatic stock removal"
+   CallbackArgument: "automaticremove"
+   IsChecked: true
+  -
+   Type: StaticText
+   Name: "RemoveTime_txt"
+   Caption: "Removing starts after:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "RemoveTime_inp"
+   Caption: "20:00.0000"
+   Rect: [25,1,0,0]
+   CallbackArgument: "removeTime"
+   DataType: 10
+   Password: false
+  -
+   Type: StaticText
+   Name: "RemoveInterval_txt"
+   Caption: "Interval between removing:"
+   Rect: [0,2,0,0]
+  -
+   Type: EditText
+   Name: "RemoveInterval_inp"
+   Caption: "5:00.0000"
+   Rect: [25,2,0,0]
+   CallbackArgument: "RemoveInterval"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "RemoveAmount_txt"
+   Caption: "Maximum Stock Removed:"
+   Rect: [0,3,0,0]
+  -
+   Type: EditText
+   Name: "RemoveAmount_inp"
+   Caption: "20"
+   Rect: [25,3,0,0]
+   CallbackArgument: "RemoveAmount"
+   DataType: 4
+   Password: false
+ -
+  Type: TabPage
+  Name: "Statistics_tab"
+  Caption: "Statistics"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "title"
+   Caption: "Cumulative statistics for all Racklanes"
+  -
+   Type: StaticText
+   Name: "driveHome_txt"
+   Caption: "Drive Home:"
+   Rect: [0,1,0,0]
+  -
+   Type: StaticText
+   Name: "driveHome_val"
+   Caption: "       0"
+   Rect: [20,1,0,0]
+  -
+   Type: StaticText
+   Name: "driveHome_unit"
+   Caption: "%"
+   Rect: [27,1,0,0]
+  -
+   Type: StaticText
+   Name: "utilization_txt"
+   Caption: "Rack Space Utilization"
+   Rect: [33,1,0,0]
+  -
+   Type: StaticText
+   Name: "utilization_val"
+   Caption: "       0"
+   Rect: [53,1,0,0]
+  -
+   Type: StaticText
+   Name: "utilization_unit"
+   Caption: "%"
+   Rect: [60,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_txt"
+   Caption: "Loading:"
+   Rect: [0,2,0,0]
+  -
+   Type: StaticText
+   Name: "loading_val"
+   Caption: "       0"
+   Rect: [20,2,0,0]
+  -
+   Type: StaticText
+   Name: "loading_unit"
+   Caption: "%"
+   Rect: [27,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_txt"
+   Caption: "Unloading:"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_val"
+   Caption: "       0"
+   Rect: [20,3,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_unit"
+   Caption: "%"
+   Rect: [27,3,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_txt"
+   Caption: "Waiting:"
+   Rect: [0,4,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_val"
+   Caption: "       0"
+   Rect: [20,4,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_unit"
+   Caption: "%"
+   Rect: [27,4,0,0]
+  -
+   Type: StaticText
+   Name: "failed_txt"
+   Caption: "Failed:"
+   Rect: [0,5,0,0]
+  -
+   Type: StaticText
+   Name: "failed_val"
+   Caption: "       0"
+   Rect: [20,5,0,0]
+  -
+   Type: StaticText
+   Name: "failed_unit"
+   Caption: "%"
+   Rect: [27,5,0,0]

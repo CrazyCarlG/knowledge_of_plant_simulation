@@ -1,0 +1,13 @@
+InternalClassType: Conveyor
+Length: 2
+Origin: 019f044c-ab8a-7117-9335-785e04636418
+RandomSeed: 1073746010
+UUID: 019f044c-ab8a-755c-a926-89953aa148ef
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7564-a9df-8e806a3163e0
+ Origin: 019f044c-ab8a-7122-b191-16dc9c944f5e
+ UUID: 019f044c-ab8a-7567-8d3b-4dce4c4cfe52
+$Predecessors:
+- 019f044c-ab8a-74f0-b3a7-d0912ab9abeb
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,21 @@
+InternalClassType: Button
+Control: "self.OnClicked"
+Coordinate3D: [36.9,-55.2,2]
+Label: "Reset Simulation"
+Name: Button1
+ObjectWidth: 6
+Origin: 4f7d3e03-b58b-4bdd-8ad2-d578669fe85d
+RandomSeed: 1073748571
+UUID: 019f044c-ab8a-72d2-a463-68fcfb42238e
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+ Scale: [2,2,2]
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: "root.EventController.reset"
+ ShowInTooltip: false

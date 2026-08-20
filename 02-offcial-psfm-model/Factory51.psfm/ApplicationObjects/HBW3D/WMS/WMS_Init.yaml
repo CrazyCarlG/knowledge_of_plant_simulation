@@ -1,0 +1,23 @@
+InternalClassType: Method
+Coordinate3D: [6.5,-10,0]
+Name: WMS_Init
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ if activateAutoRemove then
+ 	&autoremove.executeIn(startRemoveTime)
+ end
+ 
+ for var i := 1 to RackLanes.dim
+ 	var Racklane := RackLanes[i]
+ 	if ShowMUsAsCuboids
+ 		Racklane.RackLeft._3D.MUAnimationAreaShowMUsAsCuboids := true
+ 		Racklane.RackRight._3D.MUAnimationAreaShowMUsAsCuboids := true
+ 	else
+ 		Racklane.RackLeft._3D.MUAnimationAreaShowMUsAsCuboids := false
+ 		Racklane.RackRight._3D.MUAnimationAreaShowMUsAsCuboids := false
+ 	end
+ next
+RandomSeed: 2235
+UUID: 4e73fee1-6a97-44d8-8db1-96b1be55e5bf
+3D:
+ VisibleGraphicGroups: ["default","init"]

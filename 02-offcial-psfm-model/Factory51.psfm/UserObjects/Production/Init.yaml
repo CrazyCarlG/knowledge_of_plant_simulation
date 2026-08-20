@@ -1,0 +1,15 @@
+InternalClassType: Method
+Coordinate3D: [17,-17,0]
+Name: Init
+Origin: 9f30bc1b-41d7-47fb-8f86-a224b3f18060
+Program: |+1
+ var startPos:length := 12
+ 
+ for var i := 1 to NumAGVs
+ 	var agv := .UserObjects.MUs.AGV.create(Track, startPos)
+ 	startPos -= agv.Length + 0.1
+ next
+RandomSeed: 1073748008
+UUID: 019f044c-ab8a-708b-9cb3-879837cc85bb
+3D:
+ VisibleGraphicGroups: ["default","init"]

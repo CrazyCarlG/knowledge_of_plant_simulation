@@ -1,0 +1,25 @@
+InternalClassType: Drain
+Coordinate3D: [-50.4,-60.2,0]
+Name: TruckDepartures
+Origin: e19f8c68-c6f7-46e3-ad56-0a2b929319ba
+RandomSeed: 1073746393
+ResStatOn: false
+TypeStatOn: false
+UUID: 019f044c-ab8a-72d4-aa4d-7dedc06e7266
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ ObstacleForWorker: "(None)"
+ Rotation: [90,0,0,-1]
+ StatesForColoring: 0xf0f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,1]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Predecessors:
+- 019f044c-ab8a-733d-86fb-e92413d3e547
+InheritEntranceExitLockedOnReset: false

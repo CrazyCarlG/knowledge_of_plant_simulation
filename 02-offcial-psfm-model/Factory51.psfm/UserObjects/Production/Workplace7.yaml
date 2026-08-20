@@ -1,0 +1,12 @@
+InternalClassType: Workplace
+Coordinate3D: [20.599,5.3851,0]
+Name: Workplace7
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073746343
+Station: "PickAndPlaceAGV"
+UUID: 019f044c-ab8a-7078-a862-3acf0cf5f6d8
+WorkerStaysHere: false
+3D:
+ Rotation: [89.999999999999957,0,0,-1]
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

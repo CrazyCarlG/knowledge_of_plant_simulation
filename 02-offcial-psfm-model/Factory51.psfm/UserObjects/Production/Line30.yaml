@@ -1,0 +1,42 @@
+InternalClassType: Conveyor
+Coordinate3D: [17.5,-12.9,0]
+Length: 23.815783749362993
+Name: Line30
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746327
+Speed: 1
+UUID: 019f044c-ab8a-7074-8123-003656081bb1
+3D:
+ $ExtSegments:
+  - 1.5000000000000002
+  - [0,5,-1.5]
+  - [0,-90,1,0]
+  - [0,3.148,0]
+  - [0,2.6,0.4]
+  - [0,4.652,0]
+  - [0,-90,1,0]
+  - [0,1.6,0]
+  - [0,3.4,-0.4]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7075-90a4-e0244740d7b3
+ Name: Connector84
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70ce-9db5-3fdedf2f9b29
+ $SuccFlipped: true
+$Predecessors:
+- 019f044c-ab8a-709e-9a01-a5580c623e16
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 9.8
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

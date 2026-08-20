@@ -1,0 +1,1380 @@
+InternalClassType: Track
+BwDestList:
+BwEntranceCtrl:
+BwEntranceCtrlFront: false
+BwEntranceCtrlRear: true
+BwExitCtrl:
+BwExitCtrlFront: false
+BwExitCtrlRear: true
+Capacity: -1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl: "self.OnCreate"
+Coordinate3D: [-0.00020000000000000573,27.665,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+EntranceCtrl:
+EntranceCtrlFront: true
+EntranceCtrlRear: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+FwDestList:
+InitCtrl:
+Label: ""
+Length: 5
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: MultiPortalCrane
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+PullCtrl: "self.OnPull"
+RandomSeed: 1
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+TransferLengthToObject: true
+UnplannedCtrl:
+UUID: 018412fb-a99d-404e-8262-80a6b8823d91
+Width: 10
+3D:
+ AniGravityMode: false
+ AnimationObject: ""
+ AnimationOffset: [0,0,0]
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ AniSmoothRotation: false
+ BaseHeight: 0
+ ExcludeFromShowContentOfLocation: false
+ ExtConfiguration:
+ -
+  Name: "Railbars_1"
+  Extrusion Profile: [[-0.55,0],[-0.44200000000000006,0],[-0.44200000000000006,0.01],[-0.491,0.02],[-0.491,0.076],[-0.473,0.077],[-0.46599999999999997,0.082],[-0.46599999999999997,0.103],[-0.473,0.108],[-0.519,0.108],[-0.526,0.103],[-0.526,0.082],[-0.519,0.077],[-0.501,0.076],[-0.501,0.02],[-0.55,0.01],[-0.55,0]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x5280,0x808080,0x808080,0x0,0,117]
+ -
+  Name: "Railbars_2"
+  Extrusion Profile: [[0.442,0],[0.55,0],[0.55,0.01],[0.501,0.02],[0.501,0.076],[0.519,0.077],[0.526,0.082],[0.526,0.103],[0.519,0.108],[0.473,0.108],[0.46599999999999997,0.103],[0.46599999999999997,0.082],[0.473,0.077],[0.491,0.076],[0.491,0.02],[0.442,0.01],[0.442,0]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x5280,0x808080,0x808080,0x0,0,117]
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimations:
+ MUSideToAttach: "Booking Point"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,0,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Graphics"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ ShowMaterialFlowDirection: true
+ ShowSensors: true
+ StatesForColoring: 0x50f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $ExtSegments:
+  - 0
+  - [0,5,0]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAAL//AL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAL//gIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAAL//AL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAAL//gIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAAL//gIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAL//gIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAAL//gIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AAAAAAAAgIAAAL//gIAAgIAAgIAAgIAAAL//gIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AAD/gIAAgIAAAAAAAL//gIAAgIAAgIAAgIAAAL//gIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AAD/gIAAgIAAgIAAgIAAAAAAAAAAgIAAAL//gIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAAD/gIAAgIAAgIAAgIAAgIAAgIAAAAAAAL//gIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAAD/gIAAgIAAgIAAgIAAgIAAgIAAAL//AAD/AAAAAAAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//AAD/gIAAgIAAAAAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAAD/gIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAAAD/gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAL//gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - AAAAAAAAAAAAAAAAAAAAvr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+AAAAAAAAAAAAAAAAAAAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAIz/AIz/gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAIz/gIAAAIz/gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAIz/gIAAgIAAAIz/gIAAgIAAgIAAgIAAAIz/gIAAgIAA
+ - gIAAgIAAgIAAAAAAAIz/AAAAAAAAgIAAAIz/gIAAgIAAgIAAAIz/AIz/gIAAgIAA
+ - gIAAgIAAAAAAAIz/gIAAgIAAgIAAAAAAAL//gIAAgIAAAIz/gIAAAIz/gIAAgIAA
+ - gIAAAAAAgIAAAIz/gIAAgIAAgIAAgIAAgIAAAAAAAIz/gIAAgIAAAIz/gIAAgIAA
+ - AAAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAgIAAAIz/gIAAAAAAAAAAAIz/gIAAgIAA
+ - AAAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAAIz/AAAAgIAA
+ - AAAAAAAAgIAAAIz/gIAAgIAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - gIAAgIAAAAAAAIz/gIAAgIAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAgIAAAAAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAAIz/gIAAgIAAgIAAgIAAAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAIz/gIAAgIAAgIAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAIz/AAAAgIAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: INIT
+ ID: 1
+ DataType: method
+ Value: |+1
+  var crane : object := self.~
+  if crane.class=void then
+  	// init was called in the class library
+  	// nothing to do
+  	crane.portalsCreated := false
+  else
+  	var scale : real := crane.~.scalingfactor
+  
+  	// set the width of the rails
+  	crane.width := crane.RailWidth
+  
+  	if crane.length <= crane.NumberOfPortals * crane.PortalLength
+  		// report an error, may be the rail has to be extended or number of portals
+  		// has to be reduced
+  
+  		debug  -- Distance of rails is smaller than width of portal minus overhang
+  
+  		var PortalCreationOK : boolean := false
+  	else
+  		if crane.deletePortals then
+  			PortalCreationOK := false
+  
+  			for var i := crane.PortalList.YDim downto 1 loop
+  				var portal : object := crane.PortalList[1,i]
+  				if portal/=void then
+  					portal.delete
+  				end
+  				if crane.getAttrNo(to_str("Portal", i)) > 0 then
+  					// just set the attribute void, because you cannot delete the attribute
+  					// in an instance
+  					var index : integer := crane.getAttrNo(to_str("Portal", i))
+  					crane.setAttrValue(index, void)
+  				end
+  				crane.PortalList.cutRow(i)
+  			next
+  		end
+  
+  		// there is enough space to create the portals
+  		var diff : length := crane.length / (crane.NumberOfPortals+1)
+  		// check if the portals are deleted
+  		if crane.PortalList.Ydim = 0 then
+  			// create all portals
+  			if crane.assignedStore /= void then
+  				if crane.NumberOfPortals > 1
+  					debug
+  				end
+  				crane.NumberOfPortals := 1
+  			end
+  
+  			PortalCreationOK := true	// be optimistic
+  
+  			for var i := 1 to crane.NumberOfPortals
+  				if crane.NUmberOfPortals = 1 then
+  					var loc : length := crane.PortalLength
+  				else
+  					loc := diff * i
+  				end
+  
+  				if crane.railwidth > crane.portalWidth - crane.overhang
+  					// report an error message
+  					throwRuntimeError("Distance of rails smaller than width of portal minus overhang")
+  
+  					PortalCreationOK := false
+  				else
+  					// create the portal
+  					portal := crane.createPortal(loc, i)
+  
+  					if crane.getAttrNo(to_str("Portal", i)) <= 0 then
+  						// attribute does not exist
+  						crane.createAttr(to_str("Portal", i), "object")
+  					end
+  
+  					index := crane.getAttrNo(to_str("Portal", i))
+  					crane.setAttrValue(index, portal)
+  
+  					PortalCreationOK := PortalCreationOK and portal /= void
+  
+  					// now, define the trolly for the portal
+  					crane.createTrolley(portal)
+  					// now parametrize the hook for the trolly
+  					crane.parametrizeHook(portal)
+  					// set acceleration and deceleration of portal, trolley and hook
+  					portal.AccelerationEnabled := crane.PortalAccelerationActive
+  					Portal.Acceleration := crane.PortalAcceleration
+  					Portal.Deceleration := crane.PortalDeceleration
+  				end
+  			next
+  		else
+  			// portals are already created, just move the portals to the position where they
+  			// will be created
+  			for var i := 1 to crane.NumberOfPortals
+  				portal := crane.PortalList[1,i]
+  				portal.position := diff * i
+  			next
+  			PortalCreationOK := true
+  		end
+  
+  		// if a store should be used then we have to check the dimensions of the store and the
+  		// crane
+  		if crane.assignedStore/=void and crane.PortalList.YDim>0 then
+  			rootfolder.Internal.Methods.checkStore(Crane)
+  		end
+  
+  		crane.portalsCreated := PortalCreationOK
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: PortalList
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: object
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,2,~,"Portal"]
+  Columns:
+ ShowInTooltip: false
+-
+ Name: useStore
+ ID: 3
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: PortalLength
+ ID: 4
+ DataType: length
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: NumberOfPortals
+ ID: 5
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: RailWidth
+ ID: 6
+ DataType: length
+ Value: 10
+ ShowInTooltip: false
+-
+ Name: PortalWidth
+ ID: 7
+ DataType: length
+ Value: 12
+ ShowInTooltip: false
+-
+ Name: Overhang
+ ID: 8
+ DataType: length
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: createPortal
+ ID: 9
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // create a portal of the crane at the defined location on the rail
+  //
+  // Parameters	:	loc, the position on the rail as length
+  //					index, the row number in table portalList
+  //
+  // ReturnValues: the created portal
+  //
+  // Called By	: INIT
+  // Calls		: none
+  //---------------------------------------------------------------------------------
+  
+  param  loc : length, index : integer  -> object
+  
+  
+  var crane : object := self.~
+  var scale : real := crane.~.scalingfactor
+  
+  // create the portal object at the given location
+  var portal : object := rootfolder.BasicObjects.MaterialFlow.portal.create(crane, loc)
+  
+  // set user accessable attributes
+  portal.MuLength			:= crane.PortalLength
+  Portal.MuWidth			:= crane.PortalWidth
+  Portal.MuHeight			:= crane.PortalHeight
+  Portal.PortalSpeed		:= crane.PortalSpeed
+  Portal.Speed			:= crane.PortalSpeed
+  portal.Overhang			:= crane.Overhang
+  
+  portal.FailureActive	:= false
+  portal.Mttr				:= crane.PortalMTTR
+  portal.Availability		:= crane.PortalAvailability
+  portal.FailureActive	:= true
+  
+  portal.portalPosReached := true
+  portal.loadBayLength	:= crane.portalWidth
+  portal.state			:= "idle"
+  portal.index			:= index
+  portal.stopped			:= true
+  
+  portal.bookPntLRelative := 0.5
+  
+  //Correct the booking point position of the portal in case there exists an overhang on both sides
+  var RightOverhang : length := crane.Overhang
+  var LeftOverhang : length := crane.PortalWidth - crane.RailWidth - RightOverhang
+  Portal.BookPntWRelative := round(0.5 + (RightOverhang - LeftOverhang) / (2*crane.PortalWidth), 4)
+  		
+  portal.leftbound		:= portal.MuLength/2
+  portal.rightBound		:= portal.MuLength/2
+  portal.synchronized		:= false
+  portal.syncPortal		:= void
+  portal.ZMax				:= crane.coordinate3D.z + crane.PortalHeight
+  portal.collisionCtrl	:= crane.UserCollisionCtrl
+  
+  // add portal object in table of portals
+  crane.PortalList["Portal", index] := portal
+  		
+  portal.NumAnimationEvents := 20
+  	
+  		
+  // draw the portal in 3D
+  crane.createPortalGraphics(portal)
+  
+  result := portal
+ ShowInTooltip: false
+-
+ Name: PortalHeight
+ ID: 10
+ DataType: length
+ Value: 5
+ ShowInTooltip: false
+-
+ Name: PortalSpeed
+ ID: 11
+ DataType: speed
+ Value: 0.75
+ ShowInTooltip: false
+-
+ Name: PortalAvailability
+ ID: 12
+ DataType: real
+ Value: 99
+ ShowInTooltip: false
+-
+ Name: PortalMTTR
+ ID: 13
+ DataType: time
+ Value: 10:00
+ ShowInTooltip: false
+-
+ Name: PortalPosReached
+ ID: 14
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: createTrolley
+ ID: 15
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // create a trolley on the given portal
+  //
+  // Parameters	: portal, on which the trolley should be created
+  // ReturnValues : none
+  //
+  // Called By	: INIT
+  //--------------------------------------------------------------------------------
+  
+  param  portal : object --, index : integer  -> object
+  
+  var crane : object := self.~
+  
+  // create the trolley
+  var trolley := portal._3D.getObject("Trolley")
+  
+  trolley.JointVelocity	:= crane.TrolleySpeed
+  
+  if crane.TrolleyAccelerationActive
+  	trolley.JointAcceleration := crane.TrolleyAcceleration
+  	trolley.JointDeceleration := crane.TrolleyDeceleration
+  end
+  
+  var message		: string
+  var coordinate	: real[3]
+  var d_leg : length := crane.d_leg
+  var d_crossbeam : length := crane.d_crossbeam
+  
+  // check the parameter of the trolley
+  var trolleyHeight : length := when crane.trolleyHeight~=0 then 0.2 else crane.trolleyHeight
+  var trolleyLength : length := when crane.trolleyLength~=0 then 2 else crane.trolleyLength
+  var PortalLength : length := when crane.PortalLength~=0 then 1 else crane.PortalLength
+  
+  // define some dimensions
+  var WheelThickness : length := min(min(0.05, trolleyHeight/4), trolleyLength/12)
+  var WheelRadius : length := min(min(d_leg, trolleyHeight/4), trolleyLength/12)
+  
+  var diameter : length := 2 * WheelRadius
+  var Z_Wheel : length := WheelRadius * 0.875	// 7/8 of WheelRadius
+  var PlateThickness : length := min(trolleyHeight/8, WheelRadius)
+  var BBSize := crane._3D.BoundingboxSize
+  
+  // position the trolley properly on the portal
+  Trolley.addGraphicGroup("Trolley", true, true)
+  Trolley.Position := Portal._3D.MUAnimations.Track.getMUAnimationPosition(0)
+  Trolley.Position.y -= trolleyLength/2
+  Trolley.Rotation := 90
+  
+  // set the color we need
+  var TrolleyColor : integer := makeRGBValue(255, 128, 0)
+  var black : integer := makeRGBvalue(0, 0, 0)
+  var grey : integer := makeRGBValue(105, 105, 105)
+  
+  // draw the wheels on left side of the trolley
+  var trolleyGraphicGroup := Trolley.getGraphic("Trolley")
+  var position : real[3] := [-trolleyLength/2 + WheelRadius, -PortalLength/2 + d_leg + WheelThickness, Z_Wheel]
+  rootfolder.Internal.Methods.wheel(trolleyGraphicGroup, Position, WheelRadius, WheelThickness, "left")
+  
+  Position[1] := trolleyLength/2 - WheelRadius
+  rootfolder.Internal.Methods.wheel(trolleyGraphicGroup, Position, WheelRadius, WheelThickness, "left")
+  
+  // draw the wheels on left right of the trolley
+  position := [-trolleyLength/2 + WheelRadius, PortalLength/2 - d_leg -WheelThickness, Z_Wheel]
+  rootfolder.Internal.Methods.wheel(trolleyGraphicGroup, Position, WheelRadius, WheelThickness, "right")
+  
+  Position[1] := trolleyLength/2 - WheelRadius
+  rootfolder.Internal.Methods.wheel(trolleyGraphicGroup, Position, WheelRadius, WheelThickness, "right")
+  
+  // draw protective plate
+  position := [-trolleyLength/2, -PortalLength/2+2*WheelThickness, Diameter-WheelRadius]
+  var dimension : real[3] := [trolleyLength, WheelThickness, WheelRadius]
+  
+  var plate := rootfolder.Internal.Methods.cuboid(trolleyGraphicGroup, position, dimension)
+  plate.MaterialActive        := true
+  plate.MaterialDiffuseColor  := grey
+  plate.MaterialAmbientColor  := grey
+  plate.MaterialSpecularColor := grey
+  plate.MaterialShininess     := 0.2
+  
+  position := [-trolleyLength/2, PortalLength/2-3*WheelThickness, Diameter-WheelRadius]
+  plate := rootfolder.Internal.Methods.cuboid(trolleyGraphicGroup, position, dimension)
+  plate.MaterialActive        := true
+  plate.MaterialDiffuseColor  := grey
+  plate.MaterialAmbientColor  := grey
+  plate.MaterialSpecularColor := grey
+  plate.MaterialShininess     := 0.2
+  
+  // base plate
+  position := [-trolleyLength/2, -PortalLength/2, Diameter]
+  dimension := [trolleyLength, PortalLength, PlateThickness]
+  
+  plate := rootfolder.Internal.Methods.cuboid(trolleyGraphicGroup, position, dimension)
+  plate.MaterialActive        := true
+  plate.MaterialDiffuseColor  := TrolleyColor
+  plate.MaterialAmbientColor  := TrolleyColor
+  plate.MaterialSpecularColor := TrolleyColor
+  plate.MaterialShininess     := 0.2
+  
+  // left block
+  var BlockHeight : length := 3*trolleyHeight/8
+  position := [-trolleyLength/2, -PortalLength/2, diameter + PlateThickness]
+  dimension := [trolleyLength, PortalLength/8, BlockHeight]
+  rootfolder.Internal.Methods.cuboid(trolleyGraphicGroup, Position, dimension)
+  
+  // right block
+  position := [-trolleyLength/2, PortalLength/2-PortalLength/8, Diameter + PlateThickness]
+  rootfolder.Internal.Methods.cuboid(trolleyGraphicGroup, Position, dimension)
+  
+  // left cone
+  var Z1 : length := Diameter + PlateThickness + (BlockHeight / 2)
+  
+  var cylinder := trolleyGraphicGroup.createConeFrustum(WheelRadius, BlockHeight/2, PortalLength/8)
+  cylinder.Position := [0, -PortalLength/2+PortalLength/8, Z1]
+  cylinder.Rotation := [-90, 1,0,0]
+  
+  // right cone
+  cylinder := trolleyGraphicGroup.createConeFrustum(WheelRadius, BlockHeight/2, PortalLength/8)
+  cylinder.Position := [0, PortalLength/2-PortalLength/8, Z1]
+  cylinder.Rotation := [90, 1,0,0]
+  
+  // cylinder
+  cylinder := trolleyGraphicGroup.createConeFrustum(WheelRadius, WheelRadius, PortalLength/2)
+  cylinder.Position := [0, -PortalLength/4, Z1]
+  cylinder.Rotation := [-90, 1,0,0]
+  
+  
+  portal.TrolleyAdjustmentValue := d_crossbeam
+ ShowInTooltip: false
+-
+ Name: UserCollisionCtrl
+ ID: 16
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: UserGraphics
+ ID: 17
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: parametrizeHook
+ ID: 18
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // parametrize the hook for the given portal
+  //
+  // Parameters	: portal, the portal for which we want to parametrize the hook
+  //
+  // ReturnValues : none
+  //
+  // Called By	: INIT
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  
+  param portal : object -- -> object
+  
+  var crane : object := portal.~
+  
+  var hook := portal._3D.getObject("Trolley").getObject("Hook")
+  
+  hook.JointVelocity	:= crane.HookSpeed
+  if crane.HookAccelerationActive
+  	hook.JointAcceleration := crane.HookAcceleration
+  	hook.JointDeceleration := crane.HookDeceleration
+  end
+  // Offset the hook so that its lower edge is aligned with the lower edge of the crossbeam of the crane
+  hook.Position.z := -crane.d_crossbeam
+ ShowInTooltip: false
+-
+ Name: HookSpeed
+ ID: 19
+ DataType: speed
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: PortalAccelerationActive
+ ID: 20
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: TrolleyAccelerationActive
+ ID: 21
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: HookAccelerationActive
+ ID: 22
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: PortalAcceleration
+ ID: 23
+ DataType: acceleration
+ Value: 0.15
+ ShowInTooltip: false
+-
+ Name: PortalDeceleration
+ ID: 24
+ DataType: acceleration
+ Value: 0.15
+ ShowInTooltip: false
+-
+ Name: TrolleyAcceleration
+ ID: 25
+ DataType: acceleration
+ Value: 0.65
+ ShowInTooltip: false
+-
+ Name: TrolleyDeceleration
+ ID: 26
+ DataType: acceleration
+ Value: 0.65
+ ShowInTooltip: false
+-
+ Name: HookAcceleration
+ ID: 27
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: HookDeceleration
+ ID: 28
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: PortalsCreated
+ ID: 29
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: deletePortals
+ ID: 30
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: TrolleySpeed
+ ID: 31
+ DataType: speed
+ Value: 2.5
+ ShowInTooltip: false
+-
+ Name: TrolleyLength
+ ID: 32
+ DataType: length
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: TrolleyHeight
+ ID: 33
+ DataType: length
+ Value: 0.5
+ ShowInTooltip: false
+-
+ Name: HelpOnObject
+ ID: 34
+ DataType: string
+ Value: "rootfolder.MultiPortalCraneDocumentation"
+ ShowInTooltip: false
+-
+ Name: onOpen
+ ID: 35
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // open the dialog window of the portal crane
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  
+  
+  var Crane : object := self.~
+  
+  if (getAsyncKeyState(17) < 0) 
+  	Crane.openDialog(false)
+  else
+  	if Crane.openedDialog=void 
+  		var template : object := rootfolder.Internal.Dialog.extendPath(Crane.ObjType)
+  		template.Label := "Multi-Portal Crane"
+  		
+  		var newDialog : object := template.derive(rootfolder.internal.Dialog)
+  		newDialog.openedBy := self.~
+  		Crane.openedDialog := newDialog
+  		newDialog.Label := "Multi-Portal Crane"
+  		newDialog.open
+  	else
+  		Crane.openedDialog.open
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: openedDialog
+ ID: 36
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 37
+ DataType: string
+ Value: "MultiPortalCrane"
+ ShowInTooltip: false
+-
+ Name: DefaultHookHeight
+ ID: 38
+ DataType: length
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: assignedStore
+ ID: 39
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: d_leg
+ ID: 40
+ DataType: length
+ Value: 0.2
+ ShowInTooltip: false
+-
+ Name: d_crossbeam
+ ID: 41
+ DataType: length
+ Value: 0.5
+ ShowInTooltip: false
+-
+ Name: getPortals
+ ID: 42
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // read the list of portls and copy the portal objects into the given list or table
+  //
+  // Parameters	: tab, the given list or table
+  //
+  // ReturnValues: the list filled with the created portals
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 18.10.2017
+  //
+  //History:
+  //--------------------------------------------------------------------------------
+  
+  param  tab : any 
+  
+  
+  
+  var Crane	: object
+  var i		: integer
+  
+  Crane := self.~
+  
+  
+  // first check if the given tab is a table or table object
+  if isTable(tab) or 
+     (isObject(tab) and tab.internalClassType="DataTable")
+  
+  	
+  	tab.setdataType(1, "object")
+  	tab.columnIndex := true
+  	tab[1,0] := "Portal"
+  	
+  	for i := 1 to Crane.PortalList.YDim 
+  		tab[1,i] := Crane.PortalList["Portal", i]
+  	next
+  elseif isList(tab) or
+  	   (isObject(tab) and tab.internalClassType="DataList")
+  
+  	// check if given tab is a list or list object
+  	waituntil Crane.portalsCreated prio 1
+  	
+  	tab.DataType := "object"
+  	for i := 1 to Crane.PortalList.YDim 
+  		tab.append( Crane.PortalList["Portal", i] )
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: OnCreate
+ ID: 43
+ DataType: method
+ Value: |+1
+  param onCreate3D: boolean
+  
+  var crane := self.~
+  crane.width := crane.Railwidth
+  var Segments : table
+  Crane.getCurveSegments(Segments)
+  if Segments.YDim>2 then
+  	for var i:= Segments.YDim-1 downto 2 loop
+  		Segments.cutRow(i)
+  	next
+  end
+  Crane.setCurveSegments(Segments)
+ ShowInTooltip: false
+-
+ Name: adjustCraneToStore
+ ID: 44
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // base don the dimension of the assigned storage area, the dimension of the crane
+  // will be adjusted.
+  //
+  // Parameters	: non
+  //
+  // ReturnValues : none
+  //
+  // Called By	: StorageArea
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 09.02.2018
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  var crane : object := self.~
+  var store : object := crane.AssignedStore
+  
+  // get the dimension of the store
+  var storeDim := store._3D.Dimensions
+  var StoreLength : length := storeDim[1]
+  var storeWidth : length := storeDim[2]
+  
+  // length of crane should be greater than length of store
+  // plus entrance station plus exit station
+  var craneLength : length := storeLength + 4 + crane.PortalLength
+  if crane.length <= craneLength then
+  	// set the new length of the crane
+  	crane.length := craneLength
+  end
+  
+  // set the position of the crane
+  var CranePosition := crane._3D.Position
+  var storePosition := store._3D.Position		// center of the store
+  var segments : table
+  crane._3D.getExtSegments(segments)
+  var A : real[3] := [segments[7,1], segments[8,1], 0]
+  var B : real[3] := [segments[7,2], segments[8,2], 0]
+  
+  Var U : real[3] := B - A
+  var len : real := SQRT( pow(u[1],2) + pow(u[2],2))
+  U := U / len
+  
+  CranePosition := StorePosition - (Crane.Length/2) * U
+  crane._3D.Position := CranePosition
+  
+  // set the width of the crane and the portals
+  var CraneWidth : length := crane.width
+  if cranewidth <=storeWidth then
+  	cranewidth := storeWidth + Crane.TrolleyLength
+  	var PortalWidth : length := craneWidth + crane.overhang
+  	crane.RailWidth := cranewidth
+  	crane.PortalWidth := portalWidth
+  	
+  	crane.Init
+  end
+ ShowInTooltip: false
+-
+ Name: OnPull
+ ID: 45
+ DataType: method
+ Value: |+1
+  var Crane  := ?
+  var Portal := Crane.Portal1
+  
+  if Crane.fwBlockList.dim > 1 and @ /= void
+  	return
+  end
+  
+  waituntil Portal.state = "idle"
+  
+  var blockList := Crane.fwBlockList
+  
+  for var i := 1 to blockList.dim
+  	var product:object     := blocklist[i]
+  	var destination:object := product.destination
+  
+  	// product has a destination list assigned, crane will move product according to this list
+  	if destination/=void and destination.internalClassType = "DataList"
+  		var destObj:object := destination[1]
+  		for var row := 1 to destination.Dim
+  			if destination[row] = product.Location
+  				if row = destination.Dim
+  					return
+  				elseif row < destination.Dim
+  					destObj := destination[row+1]
+  				end
+  			end
+  		next
+  		destination := destObj
+  	end
+  
+  	//A single destination was assigned, product will be moved t this destination
+  	if destination /= void then
+  			Portal.TransferMu(product, destination)
+  			return
+  	//Crane has a storage assigned, product will be stored in this storage
+  	elseif Crane.assignedStore /= void then
+  		Crane.assignedStore.storeProduct(Product)
+  		return
+  	//There is a single successor conneced to the crane, product will be moved to the connected station
+  	elseif Crane.succ/=void
+  			Portal.TransferMu(product, Crane.succ)
+  			return
+  	else
+  		throwRuntimeError(to_str(self.~)+": No destination for MU defined!")
+  	end
+  next
+  
+  if @/=void
+  debug
+  -- no free destination for objects in the blocking list could be found, please call the method CheckBlockingList of the MultiPortalCrane again to check whether a destination is free
+  -- and comment out this debug statement
+  end
+ ShowInTooltip: false
+-
+ Name: _3D_allowOnlyOneSegment
+ ID: 46
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: CheckBlockingList
+ ID: 47
+ DataType: method
+ Value: "self.~.&onPull.execute(void,self.~)"
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 48
+ DataType: method
+ Value: "self.~.PortalsCreated:=false"
+ ShowInTooltip: false
+-
+ Name: createPortalGraphics
+ ID: 49
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // draw the portal in 3D.
+  // Therefore all vertices and all faces have to be defined
+  // We assume that all parameters of the portal are defined.
+  //
+  // Parameters	: portal, the portal object for which we want to draw the 3D representation
+  //
+  // ReturnValues: none
+  //
+  // Called By	: createPortal
+  // Calls		:
+  //-----------------------------------------------------------------------------------
+  
+  param portal: object
+  
+  
+  var crane : object := portal.~
+  
+  var d_leg : length := crane.d_leg
+  var d_crossbeam : length := crane.d_crossbeam
+  
+  
+  var PortalColor := makeRGBValue(255, 190, 0)
+  var black := makeRGBvalue(0, 0, 0)
+  
+  // delete the old graphic and start drawing the new graphic, we only use one color
+  portal._3D.deleteGraphicGroupContent("default")
+  
+  // check for the graphic group
+  var graphicGroups := Portal._3D.GraphicGroupNames
+  if graphicGroups.find("Portal")>0
+  	Portal._3D.deleteGraphicGroup("Portal")
+  end
+  
+  Portal._3D.addGraphicGroup("Portal", true, true)
+  
+  // define some dimension
+  var RailHeight : length := 0.108
+  
+  var WheelRadius : length := min(d_leg/2, Portal.MuLength/10)
+  var WheelThickness : length := min(d_leg/2, 0.04)
+  var zPosWheel : length := WheelRadius*0.75
+  
+  // wheel right side
+  var portalGraphicGroup := Portal._3D.getGraphic("Portal")
+  var position : real[3] := [-Portal.MuLength/2+2*WheelRadius, -Crane.RailWidth/2-2*WheelThickness, RailHeight+zPosWheel]
+  var wheel1 := rootfolder.Internal.Methods.wheel(portalGraphicGroup, Position, WheelRadius, WheelThickness, "right")
+  
+  Position[1] := Portal.MuLength/2-2*WheelRadius
+  wheel1 := rootfolder.Internal.Methods.wheel(portalGraphicGroup, Position, WheelRadius, WheelThickness, "right")
+  
+  // wheel left side
+  position := [-Portal.MuLength/2+2*WheelRadius, Crane.RailWidth/2+2*WheelThickness, RailHeight+zPosWheel]
+  wheel1 := rootfolder.Internal.Methods.wheel(portalGraphicGroup, Position, WheelRadius, WheelThickness, "left")
+  
+  Position[1] := Portal.MuLength/2-2*WheelRadius
+  wheel1 := rootfolder.Internal.Methods.wheel(portalGraphicGroup, Position, WheelRadius, WheelThickness, "left")
+  
+  // bottom bar on the right side
+  position := [-Portal.MuLength/2, -Crane.RailWidth/2-d_leg/2, RailHeight+zPosWheel]
+  var Dimension : real[3] := [portal.MuLength, d_leg, d_leg]
+  
+  var bar1 := rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  // bottom left bar
+  position[2] := Crane.Railwidth/2-d_leg/2
+  bar1 := rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  // Vertical columns
+  Position :=  [-Portal.MuLength/2, -Crane.RailWidth/2-d_leg/2, RailHeight+zPosWheel]
+  var columnHeight : length := Portal.MuHeight-RailHeight-zPosWheel
+  
+  Dimension := [d_leg, d_leg, columnHeight]
+  
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  position[2] := Crane.Railwidth/2-d_leg/2
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  Position :=  [Portal.MuLength/2-d_leg, -Crane.RailWidth/2-d_leg/2, RailHeight+zPosWheel]
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  position[2] := Crane.Railwidth/2-d_leg/2
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  // upper crossbeam
+  var overhangLeft : length := Portal.MUWidth - Crane.RailWidth - Portal.Overhang
+  
+  Position :=  [-Portal.MuLength/2, -Crane.RailWidth/2 - d_leg/2 - Portal.Overhang, columnHeight+RailHeight+zPosWheel]
+  Dimension := [d_leg, Portal.MuWidth+d_leg, d_crossbeam]
+  
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  Position[1] := Portal.MuLength/2-d_leg
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  // vordere und hintere Querbalken
+  Position :=  [-Portal.MuLength/2, -Crane.RailWidth/2 - d_leg/2 -Portal.Overhang, columnHeight+RailHeight+zPosWheel]
+  Dimension := [Portal.MuLength, d_leg, d_crossbeam]
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  Position[2] := Crane.Railwidth/2 + overhangLeft - d_leg/2
+  bar1 :=  rootfolder.Internal.Methods.cuboid(portalGraphicGroup, position, dimension)
+  bar1.MaterialActive        := true
+  bar1.MaterialDiffuseColor  := PortalColor
+  bar1.MaterialAmbientColor  := PortalColor
+  bar1.MaterialSpecularColor := PortalColor
+  bar1.MaterialShininess     := 0.2
+  
+  
+  // 3d animation path for the Trolly: x = 0, z = h - d = a
+  var t : table
+  t.Create
+  portal._3D.MUAnimations.Track.getTable(t)
+  t[1,1] := 0
+  t[2,1] := Crane.RailWidth/2 + overhangLeft
+  t[3,1] := Portal.MuHeight + d_crossbeam
+  t[4,1] := 90
+  t[5,1] := 0
+  t[6,1] := 0
+  t[7,1] := 1
+  
+  t[1,2] := 0
+  t[2,2] := -Crane.RailWidth/2 - portal.overhang
+  t[3,2] := Portal.MuHeight + d_crossbeam
+  t[4,2] := 90
+  t[5,2] := 0
+  t[6,2] := 0
+  t[7,2] := 1
+  
+  portal._3D.MUAnimations.Track.setTable(t)
+ ShowInTooltip: false
+-
+ Name: checkCraneCoordinates
+ ID: 50
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // check parameters for a given position. If the position is not in the reachable
+  // area of the portal crane the result will be greater than zero, otherwise the
+  // result will be zero
+  //
+  // Parameters	: portal, the portal of the crane which should drive to the position
+  //				  TargetPosition, the crane coordinates to check
+  //				  moveHook, true if we also have to check the hook position
+  //
+  // ReturnValues : 0, parameter ok,
+  //				  1, portal pos out of range
+  //				  2, trolley pos out of range
+  //				  3, hook pos out of range
+  //
+  // Called By	:
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  
+  param  Portal : object, Position : length[3], moveHook : boolean -> integer
+  
+  
+  var crane := self.~
+  
+  result := 0
+  // check the position of the portal
+  //
+  // the x position must be greater than 0+Portal Length/2
+  // and must be less than length of rail-Portal Length/2
+  
+  if Position[1]>=Crane.PortalLength/2 and
+  	Position[1]<=crane.length-Crane.PortalLength/2
+  	-- nothing to do
+  else
+  	result := 1	-- portal position out of range
+  	debug // x position of target object is out of range for the portal
+  end
+  
+  if result=0 then
+  	// check the position of the trolley
+  
+  	// the position of the trolly must be in range of
+  	// TrollyLength/2...PortalWidth-TrollyLength/2
+  
+  	if Position[2]>=crane.TrolleyLength/2  and
+  		Position[2]<=crane.PortalWidth-crane.TrolleyLength/2 then
+  		-- parameter ok
+  	else
+  		result := 2	-- trolley position out of range
+  
+  		var message : string := to_str("Target position ", Position[2], "m for the Trolley is out of its range which is from ", crane.TrolleyLength/2, "m to ", crane.PortalWidth-crane.TrolleyLength/2,"m")
+  		throwRuntimeError(message)
+  
+  	end
+  end
+  
+  if result=0 and moveHook then
+  	// check the position of the hook
+  	// the position must be in range of 0 to HeightOfPortal
+  	if Position[3]<= crane.PortalHeight
+  		-- parameter ok
+  	else
+  		message := to_str("Height of hook ", Position[3], " is above the Crane")
+  		throwRuntimeError(message)
+  		result := 3		-- hook position out of range
+  
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: calculateTargetPosition
+ ID: 51
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Calulates the distance that the portal has to drive along the rails starting from the rail starting point and the distance
+  // that the trolley has to drive on the portal starting from the left overhang
+  //
+  // Parameters	: Portal, the portal for which we calculate the driving distance
+  //				  Position, the position of the target in the crane coordinate system
+  //
+  // ReturnValues : array of distances that have to be traveled by both the portal in x and by the trolley in y direction
+  //
+  // Called By	: external
+  // Calls		: none
+  //---------------------------------------------------------------------------------
+  
+  param  Portal : object, Position : real[3] -> real[3]
+  
+  result.z := Position.z
+  
+  var crane : object := portal.~
+  
+  var OverhangLeft : length := crane.PortalWidth - crane.Width - crane.Overhang
+  
+  // distance from middle of crane rails to overhang left
+  var d1 : length := crane.Width / 2 + OverhangLeft
+  
+  var RailStartPoint:=crane._3D.getMuAnimationPosition(0)
+  var RailEndPoint:=crane._3D.getMuAnimationPosition(1)
+  
+  // Calculate the normalized vector pointing from the left overhang of the portal to the middle line in between the rails
+  var cs := cos(pi/2)
+  var sn := sin(pi/2)
+  var px := RailEndPoint.x * cs - RailEndPoint.y * sn
+  var py := RailEndPoint.x * sn + RailEndPoint.y * cs
+  var scalar := sqrt(px*px + py*py)
+  px *= 1/scalar * d1
+  py *= 1/scalar * d1
+  
+  // calculate the basepoint FP of the object position to a straight line in between the rails
+  var FP := calcDroppedPerpendicularFootPoint(RailStartPoint, RailEndPoint, Position)
+  
+  // Projection has to happen in the same plane, so set z coordinate to be equal
+  FP.z := RailStartPoint.z
+  
+  // Calculate distance that portal has to move from the beginning of the rail to the target obejct
+  result.x := (FP-RailStartPoint).magnitude
+  
+  if result.x < 0
+  	debug // The x position of the target object is out of reach
+  end
+  
+  // Projection has to happen in the same plane, so set z coordinate to be equal
+  Position.z := FP.z
+  // get the distance between target object and FP on the middle line between the rails
+  var V : real[3] := FP - Position
+  
+  // Calculate distance that the trolley has to move beginning from the left overhang to the target object
+  result.y := ([px,py,0] + V).magnitude
+  
+  if result.y < 0
+  	debug // The y position of the target object is out of reach
+  end
+ ShowInTooltip: false
+-
+ Name: SyncPortalDistance
+ ID: 688452345
+ DataType: length
+ Value: 0
+ HasInitValue: true
+ InitValue: 0
+ ShowInTooltip: false

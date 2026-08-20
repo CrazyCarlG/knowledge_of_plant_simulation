@@ -1,0 +1,12 @@
+InternalClassType: Workplace
+Coordinate3D: [20.2,-6.1500000000000012,0]
+Name: Workplace8
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073746346
+Station: "PickAndPlaceStrawberry"
+UUID: 019f044c-ab8a-7079-8a37-10cdfd50b057
+WorkerStaysHere: false
+3D:
+ Rotation: [-135.00000000000014,0,0,-1]
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

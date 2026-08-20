@@ -1,0 +1,12 @@
+InternalClassType: Workplace
+Coordinate3D: [1,12.2,2.8]
+Name: Workplace51
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073746170
+Station: "Inspection3"
+UUID: 019f044c-ab8a-7067-92c7-45a7a8c59d29
+WorkerStaysHere: false
+3D:
+ Rotation: [-90,0,0,-1]
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

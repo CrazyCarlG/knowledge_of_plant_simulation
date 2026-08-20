@@ -1,0 +1,20 @@
+InternalClassType: Converter
+Length: 1
+Origin: 019f044c-ab8a-7047-8e0e-df11fc12fb53
+RandomSeed: 1073745958
+UUID: 019f044c-ab8a-748c-a198-e812d1412b6d
+$Successors:
+-
+ $Succ: 019f044c-ab8a-754b-ba36-3757961b5549
+ Origin: 019f044c-ab8a-70a7-9611-f98e5ee9f148
+ UUID: 019f044c-ab8a-74ec-a3b2-08ca2f3bfaaa
+-
+ $Succ: 019f044c-ab8a-748d-bc0a-df2d50a55793
+ Origin: 019f044c-ab8a-70a8-999d-3d3fba975151
+ UUID: 019f044c-ab8a-74ed-a273-76fd7671a5ed
+$Predecessors:
+- 019f044c-ab8a-74fe-bcb0-c001cc89c1b1
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-74ed-a273-76fd7671a5ed
+$Side1: 019f044c-ab8a-74ec-a3b2-08ca2f3bfaaa
+$Side2: 019f044c-ab8a-74fe-bcb0-c001cc89c1b1

@@ -1,0 +1,20 @@
+InternalClassType: Conveyor
+Coordinate3D: [-16,-4.5,0]
+Length: 1
+Name: Line6
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073745766
+UUID: 019f044c-ab8a-7031-b3f6-4ca4c3eeaeab
+3D:
+ $ExtSegments:
+  - 0
+  - [-180,1,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-70e7-a2a7-46ee61d0a864
+ Name: Connector26
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70d2-84c5-b8e18b7b9feb
+$Predecessors:
+- 019f044c-ab8a-70da-bc91-29407762c495
+InheritEntranceExitLockedOnReset: false

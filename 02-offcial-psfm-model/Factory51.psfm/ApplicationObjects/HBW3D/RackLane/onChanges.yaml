@@ -1,0 +1,14 @@
+InternalClassType: Method
+Coordinate3D: [-5,6,0]
+Name: onChanges
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ param attribute : string, oldValue, newValue : any
+ 
+ if oldValue/=NewValue then
+ 	ParameterChanges := true
+ end
+RandomSeed: 2266
+UUID: 2ba7c0f5-6a70-4493-b5bb-3cbdc6de1703
+3D:
+ Mirror: [false,false,false]

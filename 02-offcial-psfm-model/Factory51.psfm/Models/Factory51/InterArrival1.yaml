@@ -1,0 +1,57 @@
+InternalClassType: Display
+Active: true
+Comment: "Ø Inter Arrival Time ="
+Coordinate3D: [28.3,6.6000000000000014,0.49999999999999956]
+Name: InterArrival1
+Origin: 3d49b650-ffcd-4bd0-b41b-70e9095df237
+Path: ""
+RandomSeed: 1073748563
+Sampler: false
+SmpPeriod: 0
+UUID: 019f044c-ab8a-72dd-be39-39b6de9c9f2b
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+$CustomAttributes:
+-
+ Name: Reset
+ ID: 1
+ DataType: method
+ Value: |+1
+  self.~.TimesSum := 0.0
+  self.~.TimesCount := 0
+  self.~.LastTime := 0.0
+ ShowInTooltip: false
+-
+ Name: LastTime
+ ID: 2
+ DataType: real
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: newArrival
+ ID: 3
+ DataType: method
+ Value: |+1
+  var now := EventController.SimTime
+  
+  self.~.TimesSum   += now - self.~.LastTime
+  self.~.TimesCount += 1
+  
+  self.~.LastTime := now
+  
+  self.~.Value := round(self.~.TimesSum/self.~.TimesCount, 1)
+ ShowInTooltip: false
+-
+ Name: TimesCount
+ ID: 4
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: TimesSum
+ ID: 5
+ DataType: real
+ Value: 0
+ ShowInTooltip: false

@@ -1,0 +1,705 @@
+InternalClassType: Conveyor
+Acceleration: 1
+AccelerationEnabled: false
+Accumulating: true
+AutomaticStop: false
+Backwards: false
+BwEntranceCtrl: "self.OnBwEntrance"
+BwEntranceCtrlFront: true
+BwEntranceCtrlRear: false
+BwExitCtrl: "self.OnBwExit"
+BwExitCtrlFront: true
+BwExitCtrlRear: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [1,-1,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+Deceleration: 1
+DestructorCtrl:
+DragDropCtrl:
+EnergyActive: false
+EnforceMUDistance: false
+EntranceCtrl: "self.OnEntrance"
+EntranceCtrlFront: false
+EntranceCtrlRear: true
+EntranceLocked: false
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: true
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+Label: ""
+Length: 2
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+MUDistance: -1
+MUDistanceType: "Gap"
+Name: CrossSlidingCar
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+PullCtrl: "self.OnPull"
+RandomSeed: 1
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+Speed: 0.5
+SpeedCtrl:
+TransferLengthToObject: true
+UnplannedCtrl:
+UUID: 06eadecd-1248-4df7-a4b9-9a8f8ee8b7e9
+Width: 1
+$TabConfig: 0xfe4c
+3D:
+ AnimationObject: "Car"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default","Rails"]
+ InternalClassType: SimulationObject
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: true
+ MUAnimations:
+ MUSideToAttach: "Bottom"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,-0.5,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Visible graphics"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["Rails"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniGravityMode: false
+  AnimationOffset: [0,0,0]
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniSmoothRotation: false
+  AniTranslationDirection: [0,1,0]
+  BaseHeight: 1
+  ExtConfiguration:
+  -
+   Name: "Legs_1"
+   Extrusion Profile: [[-0.5,-0.05],[-0.4,-0.05],[-0.4,0.05],[-0.5,0.05],[-0.5,-0.05]]
+   Configuration Type: 20
+   Offsets: [-0.1,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0xcc6633,0xcc6633,0x595959,0x0,0,64]
+  -
+   Name: "Legs_2"
+   Extrusion Profile: [[0.4,-0.05],[0.5,-0.05],[0.5,0.05],[0.4,0.05],[0.4,-0.05]]
+   Configuration Type: 20
+   Offsets: [-0.1,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0xcc6633,0xcc6633,0x595959,0x0,0,64]
+  -
+   Name: "LegCrossbars"
+   Extrusion Profile: [[-0.05,-0.05],[0.05,-0.05],[0.05,0.05],[-0.05,0.05],[-0.05,-0.05]]
+   Configuration Type: 10
+   Offsets: [-0.45,0.45]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0xcc6633,0xcc6633,0x595959,0x0,0,64]
+  -
+   Name: "Rollers"
+   Extrusion Profile: [[0.05,-0.05],[0.04330127018922194,-0.025000000000000005],[0.025000000000000008,-0.00669872981077807],[3.0616169978683832e-18,0],[-0.024999999999999991,-0.0066987298107780632],[-0.043301270189221926,-0.024999999999999984],[-0.05,-0.049999999999999975],[-0.043301270189221953,-0.074999999999999969],[-0.025000000000000022,-0.093301270189221935],[-9.1848509936051487e-18,-0.1],[0.025000000000000008,-0.093301270189221935],[0.043301270189221946,-0.074999999999999983],[0.05,-0.05]]
+   Configuration Type: 14
+   Offsets: [-0.475,0.475]
+   Repetition Interval: 0.15000000000000002
+   Graphic Group ID: 0
+   Material: [0x8a8a8a,0x333333,0xdcf5f5,0x0,0,26]
+  -
+   Name: "Frame_2"
+   Extrusion Profile: [[0.44999999999999996,-0.1],[0.49999999999999994,-0.1],[0.49999999999999994,0],[0.44999999999999996,0],[0.44999999999999996,-0.1]]
+   Configuration Type: 0
+   Offsets: [0,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0xcc6633,0xcc6633,0x595959,0x0,0,64]
+  -
+   Name: "Frame_1"
+   Extrusion Profile: [[-0.5,-0.1],[-0.45,-0.1],[-0.45,0],[-0.5,0],[-0.5,-0.1]]
+   Configuration Type: 0
+   Offsets: [0,0]
+   Repetition Interval: 0
+   Graphic Group ID: 0
+   Material: [0xcc6633,0xcc6633,0x595959,0x0,0,64]
+  GraphicGroupNames: ["default"]
+  InternalClassType: AnimatableExtrusionObject
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: 0
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 6
+  JointUpperLimitActive: true
+  JointVelocity: 0.5
+  LockedGraphicGroups: []
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Car
+  Position: [0,0,0]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  ShowMaterialFlowDirection: true
+  UUID: afd58205-e2d1-4f62-b420-ca4d8ca10a40
+  VisibleGraphicGroups: ["default"]
+  Width: 1
+  $ExtSegments:
+   - 0
+   - [0,2,0]
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29APcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29APcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29APcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29APcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAvb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29vb29APcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcApaWlpaWlpaWlAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcAzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEzpSEAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlAPcAAPcAAPcAAPcAAPcAAPcAAPcApaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl
+ - paWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWl
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: DampingTime
+ ID: 1
+ DataType: time
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 2
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  var part := @
+  if part.Location = CSC
+  	var destinationObject: Object
+  	// Next destination has to be a conveyor!
+  	if part.AutomaticRouting
+  		destinationObject := part.getRouteIntermediateDestination
+  	else
+  		destinationObject := part.Destination
+  	end
+  	if destinationObject.Backwards
+  		part.move(destinationObject, destinationObject.length)
+  	else
+  		part.move(destinationObject, 0)
+  	end
+  elseif part.Location /= CSC
+  	if CSC.FrontMU = part
+  		CSC.FrontMU := void
+  	end
+  	CSC.ExitLocked := true
+  end
+ ShowInTooltip: false
+-
+ Name: OnSensor
+ ID: 3
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean, BookPos: boolean
+  
+  if self.~.ExitLocked
+  	self.~.cont.Stopped := true
+  end
+ ShowInTooltip: false
+-
+ Name: processPendingTransfers
+ ID: 4
+ DataType: method
+ Value: |+1
+  param part:object
+  
+  var contents: table
+  
+  var CSC := self.~
+  var Car := CSC._3D.getObject(1)
+  
+  if CSC.FrontMU = void
+  	CSC.FrontMU := part
+  end
+  
+  CSC.ExitLocked := true
+  var sourceObject:object := part.~
+  var partPosition:length[3] := CSC._3D.getPositionOfObject(part)
+  // Drive to Source Object
+  if sourceObject /= CSC.CurrentObject
+  	// Move car to the pick position
+  	CSC.state := "driveto"
+  	Car.moveToMU(part)
+  	waituntil CSC._3D.Poses.EndPoseWasReached
+  	CSC.CurrentObject := sourceObject
+  	CSC.state := "damping"
+  	wait CSC.DampingTime
+  end
+  CSC.state := "loading"
+  CSC.Backwards := partPosition.x > 0
+  
+  var Sensor := CSC.Sensors.ID1
+  
+  if CSC.OccupiedLength + part.length >= CSC.length
+  	debug -- Vehicle should be longer than all parts that it has to transport
+  end
+  
+  // Move part onto CSC depending on its relative position towards CSC
+  if CSC.Backwards
+  	Sensor.Position := 0
+  	part.move(CSC,-1)
+  else
+  	Sensor.Position := CSC.length
+  	part.move(CSC,0)
+  end
+  
+  // Wait until part is fully moved onto CSC
+  waituntil part.RearLocation = CSC
+  
+  if CSC.FrontMU /= void
+  	CSC.FrontMU.stopped := false
+  end
+  
+  
+  if not CSC.Full and CSC.MaximumDwellTime > 0
+  	var MaxWaitTime:time := CSC.MaximumDwellTime
+  	CSC.state := "waiting"
+  	waituntil CSC.NewPart wait MaxWaitTime
+  	// If there are parts coming from the same source we load more parts
+  	if not waitExpired
+  		CSC.NewPart := false
+  		CSC.FrontMU.stopped := false
+  		return
+  	end
+  end
+  
+  ?.EntranceLocked := true
+  
+  
+  if CSC.Backwards
+  	Sensor.Position := (CSC.length - CSC.OccupiedLength)/2
+  	Sensor.Rear := true
+  	Sensor.Front := false
+  else
+  	Sensor.Position := CSC.length - (CSC.length - CSC.OccupiedLength)/2
+  	Sensor.Rear := false
+  	Sensor.Front := true
+  end
+  
+  CSC.FrontMU.stopped := false
+  
+  while not CSC.Empty
+  	// First double check whether the destination of the MU at the front or back should be approached
+  	// so that delivery of parts is feasible
+  	var DestinationObject := CSC.cont.getRouteIntermediateDestination
+  	var dropPosition:length[3] := CSC._3D.getPositionOfObject(DestinationObject, DestinationObject._3D.getMUAnimationPosition(0))
+  	if CSC.NumMU > 1 and dropPosition.x <= 0 then
+  		var LastPartDestination := CSC.contentsList[1,CSC.NumMU].getRouteIntermediateDestination
+  		var LastPartDropPosition :=  CSC._3D.getPositionOfObject(LastPartDestination, LastPartDestination._3D.getMUAnimationPosition(0))
+  		if LastPartDropPosition.x <= 0
+  			DestinationObject := LastPartDestination
+  			dropPosition := LastPartDropPosition
+  		else
+  			debug -- This part can't be moved, because other parts might be blocking the way.
+  		end
+  	end
+  	// Move car to the drop position
+  	if DestinationObject /= CSC.CurrentObject
+  		CSC.state := "damping"
+  		wait ?.DampingTime
+  		CSC.state := "drivefull"
+  		Car.moveToMUAnimationPosition(part, DestinationObject)
+  		waituntil CSC._3D.Poses.EndPoseWasReached
+  		CSC.CurrentObject := DestinationObject
+  		CSC.state := "damping"
+  		wait ?.DampingTime
+  	end
+  	CSC.state := "unloading"
+  	CSC.Backwards := dropPosition.x <= 0
+  
+  	CSC.ExitLocked := false
+  	CSC.cont.stopped := false
+  
+  	waituntil CSC.ExitLocked
+  	// Check if delivery of next part is feasible
+  	if not CSC.Empty
+  		var NextDestination := CSC.cont.getRouteIntermediateDestination
+  		var NextDestinationBackwards := CSC._3D.getPositionOfObject(NextDestination, NextDestination._3D.getMUAnimationPosition(0)).x <= 0
+  		if CSC.Backwards /= NextDestinationBackwards and CSC.NumMU > 1
+  			debug -- This part can't be moved, because other parts might be blocking the way.
+  		end
+  	end
+  end
+  
+  if CSC.FwBlockListEntry1 = void
+  	CSC.driveHome
+  else
+  	CSC.state := "waiting"
+  end
+  
+  ?.EntranceLocked := false
+ ShowInTooltip: false
+-
+ Name: OnBwExit
+ ID: 5
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  var part := @
+  if part.Location = CSC
+  	var destinationObject: Object
+  	// Next destination has to be a conveyor!
+  	if part.AutomaticRouting
+  		destinationObject := part.getRouteIntermediateDestination
+  	else
+  		destinationObject := part.Destination
+  	end
+  	if destinationObject.Backwards
+  		part.move(destinationObject, destinationObject.length)
+  	else
+  		part.move(destinationObject, 0)
+  	end
+  elseif part.Location /= CSC
+  	if CSC.FrontMU = part
+  		CSC.FrontMU := void
+  	end
+  	CSC.ExitLocked := true
+  end
+ ShowInTooltip: false
+-
+ Name: CurrentObject
+ ID: 6
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: ""
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 7
+ DataType: method
+ Value: "rootfolder.internal.dialog.genDialog"
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 8
+ DataType: string
+ Value: "CrossSlidingCar"
+ ShowInTooltip: false
+-
+ Name: OpenedDialog
+ ID: 9
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: AccelerationOn
+ ID: 10
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: ParametrizeCar
+ ID: 11
+ DataType: method
+ Value: |+1
+  var CrossSlidingCar :=  self.~
+  var Car := CrossSlidingCar._3D.getObject("Car")
+  
+  var segments: table
+  segments.create
+  
+  Car.getExtSegments(segments)
+  
+  segments[2,2] := CrossSlidingCar.Length
+  
+  Car.setExtSegments(segments)
+  
+  var LeftRail := CrossSlidingCar._3D.getGraphic("Rails", ["LeftRail"])
+  var RightRail := CrossSlidingCar._3D.getGraphic("Rails", ["RightRail"])
+  var CurrentWidth := abs(RightRail.Position.x-LeftRail.Position.x)
+  var deltaX := CrossSlidingCar.Length - CurrentWidth
+  
+  RightRail.Position.x := CrossSlidingCar.Length - CrossSlidingCar.RailWidth/2
+  
+  RightRail.Scale.y := CrossSlidingCar.TrackLength
+  LeftRail.Scale.y := CrossSlidingCar.TrackLength
+  
+  RightRail.Position.y := - CrossSlidingCar.TrackLength/2 + Car.Width/2
+  LeftRail.Position.y := - CrossSlidingCar.TrackLength/2 + Car.Width/2
+ ShowInTooltip: false
+-
+ Name: TrackLength
+ ID: 12
+ DataType: length
+ Value: 7
+ ShowInTooltip: false
+-
+ Name: driveHome
+ ID: 13
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  var Car := CSC._3D.getObject(1)
+  
+  CSC.state := "drivetohome"
+  if CSC.HomePosition /= void and CSC.DrivingHome
+  	var position:length[3] := CSC._3D.getPositionOfObject(CSC.HomePosition, CSC.HomePosition._3D.getMUAnimationPosition(0))
+  	var dy := calcDroppedPerpendicularFootPoint([0,0,0], [0,-1,0], position).y
+  	Car.moveTo(dy)
+  	CSC.CurrentObject := CSC.HomePosition
+  else
+  	Car.moveTo(0)
+  	CSC.CurrentObject := void
+  end
+  waituntil CSC._3D.Poses.EndPoseWasReached
+  CSC.state := "waiting"
+ ShowInTooltip: false
+-
+ Name: HomePosition
+ ID: 14
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: MaximumDwellTime
+ ID: 15
+ DataType: time
+ Value: 10
+ ShowInTooltip: false
+-
+ Name: RailWidth
+ ID: 16
+ DataType: length
+ Value: 0.108
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 18
+ DataType: string
+ Value: ""
+ HasInitValue: true
+ InitValue: "waiting"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: OnPull
+ ID: 19
+ DataType: method
+ Value: |+1
+  var CSC  := ?
+  var part := @
+  
+  if CSC.state != "waiting" then return end
+  --waituntil CSC.state = "waiting" or CSC.state = "idle"
+  
+  if part = void then
+  	part := CSC.FwBlockListEntry1
+  	if part = void then
+  		return // No part to process
+  	end
+  end
+  
+  if part.destination = void
+  	if CSC.succ = void
+  		throwRuntimeError(to_str(self.~)+": No destination for MU defined!")
+  	else
+  		part.destination := CSC.succ
+  	end
+  end
+  
+  
+  if CSC.CurrentObject = part.~
+  	CSC.NewPart := true
+  	if part /= void
+  		CSC.processPendingTransfers(part)
+  	end
+  elseif CSC.empty and CSC.FrontMU = void
+  	CSC.FrontMU := part
+  	if part /= void
+  		CSC.processPendingTransfers(part)
+  	end
+  else
+  	waituntil CSC.nextPart = void
+  	CSC.nextPart := part
+  	waituntil CSC.state = "waiting"
+  	CSC.NewPart := true
+  	if part /= void
+  		CSC.processPendingTransfers(part)
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: DrivingHome
+ ID: 20
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: NewPart
+ ID: 21
+ DataType: boolean
+ Value: false
+ HasInitValue: true
+ InitValue: false
+ ShowInTooltip: false
+-
+ Name: init
+ ID: 22
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  
+  self.~.Sensors.ID1.Position := CSC.length
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 23
+ DataType: method
+ Value: |+1
+  self.~.backwards := false
+  self.~.EntranceLocked := false
+  
+  self.~.Sensors.ID1.inheritAttribute("Position")
+  self.~.Sensors.ID1.inheritAttribute("Front")
+  self.~.Sensors.ID1.inheritAttribute("Rear")
+ ShowInTooltip: false
+-
+ Name: OnEntrance
+ ID: 24
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  if not CSC.full and CSC.MaximumDwellTime > 0
+  	CSC.FrontMU.stopped := true
+  end
+  if CSC.nextPart = @
+  	CSC.nextPart := void
+  end
+ ShowInTooltip: false
+-
+ Name: OnBwEntrance
+ ID: 25
+ DataType: method
+ Value: |+1
+  var CSC := self.~
+  if not CSC.full and CSC.MaximumDwellTime > 0
+  	CSC.FrontMU.stopped := true
+  end
+  if CSC.nextPart = @
+  	CSC.nextPart := void
+  end
+ ShowInTooltip: false
+-
+ Name: FrontMU
+ ID: 26
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: nextPart
+ ID: 27
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: "void"
+ ShowInTooltip: false
+-
+ Name: BackPart
+ ID: 28
+ DataType: object
+ Value: ""
+ HasInitValue: true
+ InitValue: "void"
+ ShowInTooltip: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 1
+ FromEnd: false
+ Control: "self.OnSensor"
+ Destination: null
+ Front: false
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false
+$TransportImp:
+ Active: false
+ Services:
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false

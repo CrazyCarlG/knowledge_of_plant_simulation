@@ -1,0 +1,71 @@
+InternalClassType: Method
+Coordinate3D: [-10,6,0]
+Name: Predefined
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // search for a free place in the predefined racks
+ //--------------------------------------------------------------------------------
+ 
+ param byRef Racklane: object, byRef Side: string, byRef Column, Row: integer,
+ 	product: string
+ 
+ var frame: object  := current.~
+ var found: boolean := false
+ 
+ // get all predefined racks of the product
+ var PredefinedRacks: string[] := getPredefinedRack(Product)
+ 
+ if PredefinedRacks.dim>0 then
+ 	// predefined rack found
+ 	// check if there is a free place in one of the racks
+ 	var index: integer := 1
+ 	repeat
+ 		Racklane:= frame.extendPath(PredefinedRacks[index])
+ 
+ 		// get the first free place of the left rack
+ 		var rack: object := Racklane.OccupancyLeft
+ 		rack.setCursor(1,1)
+ 		var found_left := rack.find(0)
+ 		if found_left then
+ 			var cLeft: integer := Rack.CursorX
+ 			var rLeft: integer := Rack.CursorY
+ 		end
+ 
+ 		// get the first free place of the right rack
+ 		rack := Racklane.OccupancyRight
+ 		rack.setCursor(1,1)
+ 		var found_right := rack.find(0)
+ 		if found_right then
+ 			var cRight: integer := Rack.CursorX
+ 			var rRight: integer := Rack.CursorY
+ 		end
+ 
+ 		// check for the shortest way to the column
+ 		if cLeft<cRight or (found_left and not found_right) then
+ 			Side   := "left"
+ 			Column := cLeft
+ 			Row    := rLeft
+ 			found  := true
+ 		elseif found_right
+ 			Side   := "right"
+ 			Column := cRight
+ 			Row    := rRight
+ 			found  := true
+ 		end
+ 
+ 		if not found then
+ 			index += 1
+ 		end
+ 
+ 	until found or index>PredefinedRacks.dim
+ end
+ 
+ if not found then
+ 	Racklane := void
+ end
+RandomSeed: 2243
+UUID: 8173cd61-995e-454d-a22e-50c9909c013c
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

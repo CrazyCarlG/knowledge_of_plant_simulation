@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-23,-5.7379,0]
+DataType: length
+Name: GroundClearance
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: 369c9404-a465-4132-9fa2-16403bf72e5c
+$Observers:
+- [Value,"onChanges"]
+Value: 0.6

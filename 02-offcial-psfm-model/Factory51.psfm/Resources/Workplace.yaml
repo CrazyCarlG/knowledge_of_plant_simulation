@@ -1,0 +1,127 @@
+InternalClassType: Workplace
+AtEntrance: true
+AtExit: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [-3,3,0]
+CreateIn3D: true
+DestructorCtrl:
+DistanceInQueue: 1
+DragDropCtrl:
+EntranceCtrl:
+ExitCtrl:
+InitCtrl:
+Label: ""
+LoadCtrl:
+LoadingTime: 0
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: Workplace
+OpenCtrl:
+PickDropAtStore: "Walk to Workplace"
+PlausibilityCtrl:
+RandomSeed: 35
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+Station:
+SupportedServices: []
+UnloadCtrl:
+UnloadingTime: 0
+UUID: b1e894bf-5d4a-4c22-b619-ee52313cb093
+WalkAlongQueuePath: false
+WalkToQueuePathEnd: false
+WorkerStaysHere: true
+$BasicObject: true
+3D:
+ AnimationObject: ""
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default","assigned"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MUAnimationAreaAbsoluteCenter: [0,0,0]
+ MUAnimationAreaAbsoluteSize: [1,1]
+ MUAnimationAreaEnabled: false
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [0,0,0.005,0,0,0,1,~]
+ NameLabelEnabled: false
+ NameLabelPosition: [-0.5,-0.6,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,0.5]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [90,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "assigned"
+ Transparent: true
+ Size: [20,23]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAvb29hISEhISEvb29gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAhISEa2trvb29vb29a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAhISEa2trvb29vb29vb29vb29a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAhISEa2trvb29vb29vb29vb29vb29vb29a2trhISEgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAhISEa2trvb29vb29vb29vb29vb29vb29vb29vb29a2trhISEgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAhISEa2trvb29vb29vb29vb29vb29////////vb29vb29vb29a2trhISEhISEhISEhISEhISE
+ - gIAAhISEa2trvb29vb29vb29vb29vb29////hISEhISE////vb29vb29vb29a2trvb29vb29vb29hISE
+ - gIAAa2trvb29vb29vb29vb29vb29////hISEgIAAgIAAhISE////vb29vb29vb29a2trvb29vb29hISE
+ - hISEa2trvb29a2tra2tra2tra2trvb29vb29hISEgIAAgIAAhISE////vb29////vb29a2trvb29hISE
+ - hISEhISEa2trvb29vb29vb29vb29a2trvb29vb29hISEgIAAgIAAhISE////vb29vb29////vb29hISE
+ - hISEa2trvb29vb29vb29vb29vb29vb29a2trvb29hISEgIAAgIAAgIAAhISE////////vb29vb29hISE
+ - a2tra2trvb29vb29vb29vb29vb29vb29hISEvb29hISEgIAAgIAAgIAAhISEvb29vb29vb29vb29hISE
+ - hISEa2trvb29vb29vb29vb29vb29vb29////vb29hISEgIAAgIAAgIAAhISEa2tra2trvb29vb29hISE
+ - hISEhISEa2trvb29vb29vb29vb29////vb29////hISEgIAAgIAAhISEa2trvb29vb29a2trvb29hISE
+ - hISEa2trvb29////////////////vb29////hISEgIAAgIAAhISEa2trvb29////vb29////vb29hISE
+ - gIAAa2trvb29vb29vb29vb29vb29////hISEgIAAgIAAhISEa2trvb29vb29vb29////vb29vb29hISE
+ - gIAAhISEa2trvb29vb29vb29vb29vb29gIAAgIAAhISEa2trvb29vb29vb29////vb29vb29vb29hISE
+ - gIAAgIAAhISEa2trvb29vb29vb29vb29vb29hISEa2trvb29vb29vb29////hISEhISEhISEhISEhISE
+ - gIAAgIAAgIAAhISEa2trvb29vb29vb29vb29vb29vb29vb29vb29////hISEgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAhISEa2trvb29vb29vb29vb29vb29vb29////hISEgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAhISEa2trvb29vb29vb29vb29////hISEgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAhISEa2trvb29vb29////hISEgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAvb29hISEhISEvb29gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "unassigned"
+ Transparent: true
+ Size: [20,23]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAvb29hISEhISEvb29gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAhISEa2tr////vb29a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAhISEa2tr////////////////a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAhISEa2tr////////////////////////a2trhISEgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAhISEa2tr////////////////////////////////a2trhISEgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAhISEa2tr////////////////////a2tra2tr////////////a2trhISEhISEhISEhISEhISE
+ - gIAAhISEa2tr////////////////////a2trhISEhISEa2tr////////////a2tr////////////hISE
+ - gIAAa2tr////////////////////a2tra2trgIAAgIAAhISEa2tr////////////a2tr////////hISE
+ - hISEa2tr////a2tra2tra2tra2tr////////a2trgIAAgIAAhISEa2tr////vb29////a2tr////hISE
+ - hISE////a2tr////////////////a2tr////vb29hISEgIAAgIAAhISEa2tr////////a2tr////hISE
+ - hISEa2tr////////////////////////a2tr////a2trgIAAgIAAgIAAhISEa2tra2tr////////hISE
+ - a2tra2tr////////////////////////hISE////a2trgIAAgIAAgIAAhISE////////////////hISE
+ - hISEa2tr////////////////////////a2tr////a2trgIAAgIAAgIAAhISEa2tra2tr////////hISE
+ - hISE////a2tr////////////////a2tr////vb29hISEgIAAgIAAhISEa2tr////////a2tr////hISE
+ - hISEa2tr////a2tra2tra2tra2tr////////a2trgIAAgIAAhISEa2tr////vb29////a2tr////hISE
+ - gIAAa2tr////////////////////////a2trgIAAgIAAhISEa2tr////////////a2tr////////hISE
+ - gIAAhISEa2tr////////////////////hISEgIAAhISEa2tr////////////a2tr////////////hISE
+ - gIAAgIAAhISEa2tr////////////////////hISEa2tr////////////a2trhISEhISEhISEhISEhISE
+ - gIAAgIAAgIAAhISEa2tr////////////////////////////////a2trhISEgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAhISEa2tr////////////////////////a2trhISEgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAhISEa2tr////////////////a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAhISEa2tr////vb29a2trhISEgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAvb29hISEhISEvb29gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+InheritEntranceExitLockedOnReset: false

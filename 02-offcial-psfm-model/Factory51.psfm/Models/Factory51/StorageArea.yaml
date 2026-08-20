@@ -1,0 +1,108 @@
+InternalClassType: Store
+Coordinate3D: [-36.2,-19,0]
+Origin: 6347ca38-c900-4979-872b-0af720eb2490
+RandomSeed: 1073747627
+UUID: 019f044c-ab8a-7304-a4e3-3647b1f4557d
+XDim: 4
+YDim: 5
+ZDim: 2
+3D:
+ Dimensions: [6,6,0.001]
+ FloorThickness:
+ Gap:
+ GroundClearance:
+ OriginX: "Center"
+ OriginY: "Center"
+ PostMaterialActive: true
+ PostMaterialAmbientColor: 13395507
+ PostMaterialDiffuseColor: 13395507
+ PostMaterialEmissiveColor: 0
+ PostMaterialShininess: 0.247
+ PostMaterialSpecularColor: 5855577
+ PostMaterialTransparency: 0
+ Rotation: [0,0,0,-1]
+ StorageAreaMaterialActive: true
+ StorageAreaMaterialAmbientColor: 9670004
+ StorageAreaMaterialDiffuseColor: 8946281
+ StorageAreaMaterialEmissiveColor: 0
+ StorageAreaMaterialShininess: 0.247
+ StorageAreaMaterialSpecularColor: 5855577
+ StorageAreaMaterialTransparency: 0
+ StoreType: "Floorspace"
+$CustomAttributes:
+-
+ Name: AutoRemoveActive
+ ID: 2
+ $DataType: boolean
+ Value: false
+-
+ Name: Content
+ ID: 3
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+-
+ Name: Layout
+ ID: 7
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+-
+ Name: removeInterval
+ ID: 11
+ $DataType: time
+ Value: 10:00
+-
+ Name: removingPortal
+ ID: 13
+ $DataType: object
+ Value: ""
+-
+ Name: StoreEntrance
+ ID: 15
+ $DataType: object
+ Value: 019f044c-ab8a-72fb-9154-e39d7d2515fe
+-
+ Name: StoreExit
+ ID: 16
+ $DataType: object
+ Value: 019f044c-ab8a-72fc-ab9b-4d2a057e4e87
+-
+ Name: StoringPortal
+ ID: 18
+ $DataType: object
+ Value: ""
+-
+ Name: crane
+ ID: 19
+ $DataType: object
+ Value: 019f044c-ab8a-7303-b190-055680cd06cd
+-
+ Name: openedDialog
+ ID: 22
+ $DataType: object
+ Value: ""
+-
+ Name: StoreLength
+ ID: 23
+ $DataType: length
+ Value: 1.5
+-
+ Name: StoreWidth
+ ID: 24
+ $DataType: length
+ Value: 1.2
+-
+ Name: userStoringMethod
+ ID: 25
+ $DataType: string
+ Value: ""
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72fc-ab9b-4d2a057e4e87
+ Name: Connector61
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7338-8e38-31924f709679
+InheritEntranceExitLockedOnReset: false

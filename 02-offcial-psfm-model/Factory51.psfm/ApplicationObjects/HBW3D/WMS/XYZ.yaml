@@ -1,0 +1,66 @@
+InternalClassType: Method
+Coordinate3D: [-10,5,0]
+Name: XYZ
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // search for a free place in the warehouse
+ //--------------------------------------------------------------------------------
+ param byRef Racklane: object, byRef Side: string, byRef Column, Row: integer,
+ 	product: string
+ 
+ // get the range for the columns where the product will be stored
+ var Ranges: table  := getProductRanges(product)
+ var frame: object  := current.~
+ var found: boolean := false
+ 
+ if Ranges.YDim > 0 then
+ 	// in this table we will store the first free place of all rack lanes
+ 	var temp: table[object, string, integer, integer]
+ 	temp.create
+ 
+ 	for var i := 1 to Ranges.YDIm loop
+ 		Racklane := frame.extendPath(Ranges[1, i])
+ 
+ 		var leftbound: integer  := Ranges[2, i]
+ 		var rightbound: integer := Ranges[3, i]
+ 
+ 		// get the first free place of the left rack
+ 		var rack: object := Racklane.OccupancyLeft
+ 
+ 		rack.setCursor(1,1)
+ 		if rack.find({leftbound, 1}..{rightbound, *}, 0) then
+ 			temp.writerow(1, temp.YDIm+1, Racklane, "left", Rack.CursorX, Rack.CursorY)
+ 		end
+ 
+ 		//get the frist free place of the right rack
+ 		rack := Racklane.OccupancyRight
+ 
+ 		rack.setCursor(1,1)
+ 		if rack.find({leftbound, 1}..{rightbound, *}, 0) then
+ 			temp.writerow(1, temp.YDIm+1, Racklane, "right", Rack.CursorX, Rack.CursorY)
+ 		end
+ 	next
+ 
+ 	if temp.YDim > 0 then
+ 		// sort for increasing column number
+ 		temp.sort(3, "up")
+ 
+ 		Racklane := temp[1, 1]
+ 		Side     := temp[2, 1]
+ 		Column   := temp[3, 1]
+ 		Row      := temp[4,1]
+ 
+ 		found := true
+ 	else
+ 		found := false // no free place found
+ 	end
+ else
+ 	debug // no range definition found
+ end
+ 
+ if not found then
+ 	Racklane := void
+ end
+RandomSeed: 2238
+UUID: 917544f7-3b47-48e0-b42a-e1e97732f806

@@ -1,0 +1,30 @@
+InternalClassType: Conveyor
+Backwards: false
+Origin: 019f044c-ab8a-7089-89cc-f6c1a4fc04b5
+RandomSeed: 1073761595
+UUID: 019f044c-ab8a-74ce-948f-cf7db8f0a081
+3D:
+ InternalClassType: SimulationObject
+ $Objects:
+ -
+  InternalClassType: AnimatableExtrusionObject
+  Origin: a1cc4fa8-bab0-41be-acca-647f5a4c47bd
+  UUID: 82893d0e-a016-4290-bdc6-bbedab304c0f
+$CustomAttributes:
+-
+ Name: FrontMU
+ ID: 26
+ $DataType: object
+ Value: ""
+-
+ Name: nextPart
+ ID: 1907909387
+ $DataType: object
+ Value: ""
+$Successors:
+-
+ $Succ: 019f044c-ab8a-74a3-9aca-1e26772e4f57
+ Origin: 019f044c-ab8a-70b2-a32f-c89228425695
+ UUID: 019f044c-ab8a-74f7-9306-096ac688ac4d
+$Predecessors:
+- 019f044c-ab8a-7508-bdb4-bd4f9b1cdbe7

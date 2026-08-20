@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [-15,6,0]
+Label: ""
+Name: onDrop
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // one or more objects are dropped onto the rack lane
+ // only objects of type WMS are allowed
+ //
+ // Parameters	: none
+ //
+ // ReturnValues	: none
+ // 
+ // Called By	: user interaction
+ // Calls		: 
+ //--------------------------------------------------------------------------------
+ 
+ param draggedObjects: object[]
+ var obj: object
+ 
+ -- @,?: drop target
+ 
+ for local i := 1 to draggedObjects.dim
+ 	
+ 	obj := draggedObjects[i]
+ 	
+ 	if obj.Class=.ApplicationObjects.HBW3D.WMS then
+ 		
+ 		// set the new WMS
+ 		WMS_new := makePathRelative(draggedObjects[i], location)
+ 	end
+ next
+RandomSeed: 2264
+UUID: a267cfcc-2899-4809-9a3c-e047e48a1562
+3D:
+ Mirror: [false,false,false]

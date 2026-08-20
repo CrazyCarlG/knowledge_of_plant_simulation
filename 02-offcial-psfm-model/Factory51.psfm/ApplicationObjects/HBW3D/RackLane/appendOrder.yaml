@@ -1,0 +1,46 @@
+InternalClassType: Method
+Coordinate3D: [-10,8,0]
+Label: ""
+Name: appendOrder
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // enter an order into ordersTable. If the RSU is in state waiting, activete the RSU
+ //
+ // Parameters	: orderType, the type of the order (put or get)
+ //			  Column, the column where to put or get the pallet
+ //			  Row, the row where to put or get the pallet
+ //			  orderSide, the side (left or right) where to put or get the pallet
+ //
+ // Return Values : none
+ //
+ // Called By	: onExit of IN
+ //--------------------------------------------------------------------------------
+ 
+ param Column, Row: integer, orderSide: string, OrderNo: string := "0"
+ 
+ 
+ var targetRack := when orderSide = "left" then RackLeft else RackRight
+ 
+ var part := targetRack[column, row].cont
+ 
+ -- set the order number of the remove order to the pallet
+ if part.getAttrNo("HBW_OrderNo") <= 0 then
+ 	part.createAttr("HBW_OrderNo", "string")
+ end
+ part.HBW_OrderNo := orderNo
+ 
+ // Reset/delete attributes
+ part.inheritAttribute("AutomaticRouting")
+ if part.getAttrNo("HBW_ProductName") > 0 then
+ 	part.deleteAttr("HBW_ProductName")
+ end
+ if part.getAttrNo("HBW_ProductQuantity") > 0 then
+ 	part.deleteAttr("HBW_ProductQuantity")
+ end
+ 
+ part.destination := Out
+ 
+ RSU.OpenPartOrders.push(part)
+RandomSeed: 2291
+UUID: 26adffa5-36ad-4e03-bbe0-59447730182c

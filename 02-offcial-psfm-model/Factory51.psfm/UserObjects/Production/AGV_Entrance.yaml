@@ -1,0 +1,13 @@
+InternalClassType: Interface
+Coordinate3D: [27.01,-4.3,0]
+ExitStrategyBlocking: true
+Name: AGV_Entrance
+Origin: 2d7f401e-14dc-4e50-810c-763be5c915a9
+RandomSeed: 1073746074
+UUID: 019f044c-ab8a-7055-852a-391c894a7182
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7053-8d14-8b8acdfab855
+ Name: Connector59
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-708d-adff-9579f678e847

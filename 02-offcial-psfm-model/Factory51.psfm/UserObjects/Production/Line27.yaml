@@ -1,0 +1,64 @@
+InternalClassType: Conveyor
+Coordinate3D: [-23,-10.9,0]
+Length: 40.651627552107215
+Name: Line27
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746527
+Speed: 1
+UUID: 019f044c-ab8a-7086-bf15-7b307b36631b
+3D:
+ ExtConfiguration:
+ -
+  Name: "Legs_1"
+  Extrusion Profile: [[-0.5,-0.05],[-0.4,-0.05],[-0.4,0.05],[-0.5,0.05],[-0.5,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "Legs_2"
+  Extrusion Profile: [[0.4,-0.05],[0.5,-0.05],[0.5,0.05],[0.4,0.05],[0.4,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.475,-0.1],[0.475,-0.1],[0.475,0],[-0.475,0],[-0.475,-0.1]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x2d2d2d,0x292929,0x0,0x0,0,11]
+ -
+  Name: "Frame_2"
+  Extrusion Profile: [[0.475,-0.1],[0.5,-0.1],[0.5,0],[0.475,0],[0.475,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "Frame_1"
+  Extrusion Profile: [[-0.5,-0.1],[-0.475,-0.1],[-0.475,0],[-0.5,0],[-0.5,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ $ExtSegments:
+  - 0.8
+  - [90,-90,2,0]
+  - [0,6,0.3]
+  - [0,31.5,0.4]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7073-b525-48995eb17360
+ Name: Connector78
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70cb-a6de-e1c43ba4a560
+$Predecessors:
+- 019f044c-ab8a-70bf-ae74-126f2dc763e3
+InheritEntranceExitLockedOnReset: false

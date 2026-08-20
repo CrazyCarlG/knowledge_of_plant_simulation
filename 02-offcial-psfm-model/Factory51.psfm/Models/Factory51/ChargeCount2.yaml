@@ -1,0 +1,13 @@
+InternalClassType: Variable
+Coordinate3D: [29.7,-4.4,0.5]
+HasInitValue: true
+InitValue: 0
+Name: ChargeCount2
+Origin: 68fe277b-ec69-4b6f-a15e-c7b69fca78c7
+UUID: 019f044c-ab8a-72f6-97ba-8399cf7291af
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+$DataType: integer
+Value: 0

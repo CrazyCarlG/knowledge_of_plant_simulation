@@ -1,0 +1,18 @@
+InternalClassType: Variable
+Color: 0
+Comment: "Number of AGVs per Hour"
+Coordinate3D: [21.5826,8.2386999999999979,0.7]
+DataType: real
+DecimalPlaces: 1
+Font: 1
+HasInitValue: true
+InitValue: 0
+Name: TPH
+Origin: 68fe277b-ec69-4b6f-a15e-c7b69fca78c7
+UUID: 019f044c-ab8a-7084-8c2f-eb89e4bddd9c
+3D:
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+Value: 0

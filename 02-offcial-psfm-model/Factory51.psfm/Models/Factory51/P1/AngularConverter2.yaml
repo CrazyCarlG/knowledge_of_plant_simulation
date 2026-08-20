@@ -1,0 +1,14 @@
+InternalClassType: AngularConverter
+EntryLength: 1
+ExitLength: 2
+Origin: 019f044c-ab8a-7027-978e-92930043bf6b
+RandomSeed: 1073745716
+UUID: 019f044c-ab8a-7350-bcff-df0af8acf308
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7351-bfb8-7a129804268c
+ Origin: 019f044c-ab8a-7090-9d03-d4ec0370827e
+ UUID: 019f044c-ab8a-73b9-85ac-8dc73cd8e7d3
+$Predecessors:
+- 019f044c-ab8a-7400-8b5b-9a7a4ceacad9
+InheritEntranceExitLockedOnReset: false

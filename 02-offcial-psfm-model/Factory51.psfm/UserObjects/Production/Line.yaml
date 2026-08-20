@@ -1,0 +1,47 @@
+InternalClassType: Conveyor
+Accumulating: true
+Coordinate3D: [-27,7.35,0]
+ExitCtrl: "self.OnExit"
+Length: 8.9895926535897921
+MUDistance: 1
+MUDistanceType: "Minimum Gap"
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073745659
+Speed: 1
+UUID: 019f044c-ab8a-701e-bed8-9eea1022e8b7
+3D:
+ $ExtSegments:
+  - -1.1102230246251565e-16
+  - [0,2.9043999999999994,0]
+  - [0,-90,1,0]
+  - [0,1.848,0]
+  - [0,90,1,0]
+  - [0,1.0956000000000001,0]
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  PlatesInProduction += 1
+  
+  if Polishing1.Polishing.Empty
+  	@.move(2)
+  else
+  	@.move(1)
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-706b-ba27-9a440259fbcc
+ Name: Connector1
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70b3-bf1c-f5943f459efc
+-
+ $Succ: 019f044c-ab8a-707d-b26f-c3749a9dadea
+ Name: Connector4
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70b4-90c9-90dbe2fb32be
+$Predecessors:
+- 019f044c-ab8a-70dc-8ac5-ee0f92400866
+InheritEntranceExitLockedOnReset: false

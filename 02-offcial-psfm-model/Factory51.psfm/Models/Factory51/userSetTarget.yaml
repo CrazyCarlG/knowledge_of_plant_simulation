@@ -1,0 +1,8 @@
+InternalClassType: Method
+Coordinate3D: [55,8.2,0]
+Origin: 092c627d-9e00-4821-a6f1-ce10beb7f245
+Program: |+1
+ @.MUHeightWithContent = 0.84
+ Warehouse.WMS.placeIntoStock(@, @.Cont.Cont.Name, 12)
+RandomSeed: 1073748579
+UUID: 019f044c-ab8a-72c1-83fe-ae7ed70fbe4b

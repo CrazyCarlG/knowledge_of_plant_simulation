@@ -1,0 +1,12 @@
+InternalClassType: Track
+Origin: 019f044c-ab8a-7053-8d14-8b8acdfab855
+RandomSeed: 1073746066
+UUID: 019f044c-ab8a-7498-b1e8-6c77cafdf647
+$Successors:
+-
+ $Succ: 019f044c-ab8a-749b-9f71-c03050ae3608
+ Origin: 019f044c-ab8a-70e0-9449-c030158cbe19
+ UUID: 019f044c-ab8a-7525-a1f6-e20dbfd3dbb2
+$Predecessors:
+- 019f044c-ab8a-74d2-94dc-d197ba26d949
+InheritEntranceExitLockedOnReset: false

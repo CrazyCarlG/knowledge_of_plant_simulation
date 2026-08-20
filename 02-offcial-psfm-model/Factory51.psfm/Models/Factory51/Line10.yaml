@@ -1,0 +1,21 @@
+InternalClassType: Conveyor
+Coordinate3D: [-31.2201,-34.60199999999999,0]
+Length: 5.3136926535897935
+Name: Line10
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746401
+UUID: 019f044c-ab8a-72d5-812d-9808772b0c4a
+3D:
+ $ExtSegments:
+  - 0
+  - [-90,0.952,0]
+  - [0,90,2,0]
+  - [0,1.2201,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7348-b3df-c0cece201ce4
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7320-9931-0a0b25a43ba0
+$Predecessors:
+- 019f044c-ab8a-7333-b68d-4e5cbdfcecf4
+InheritEntranceExitLockedOnReset: false

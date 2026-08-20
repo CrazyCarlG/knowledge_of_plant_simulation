@@ -1,0 +1,26 @@
+InternalClassType: Converter
+Coordinate3D: [17,-1,0]
+FreeSpaceFeedIn: 1
+Length: 1
+Name: Converter13
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746330
+Strategy: "Feed in"
+UUID: 019f044c-ab8a-7075-90a4-e0244740d7b3
+3D:
+ $ExtSegments:
+  - 0
+  - [-90,1,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7076-8810-a2724a6155a1
+ Name: Connector85
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70a0-8d4e-6d7cea142b0d
+$Predecessors:
+- 019f044c-ab8a-70ce-9db5-3fdedf2f9b29
+- 019f044c-ab8a-70be-bdfe-35c6525649ff
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-70a0-8d4e-6d7cea142b0d
+$Side1: 019f044c-ab8a-70ce-9db5-3fdedf2f9b29
+$Side2: 019f044c-ab8a-70be-bdfe-35c6525649ff

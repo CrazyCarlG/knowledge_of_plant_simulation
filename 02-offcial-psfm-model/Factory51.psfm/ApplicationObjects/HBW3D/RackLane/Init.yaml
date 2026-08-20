@@ -1,0 +1,76 @@
+InternalClassType: Method
+Coordinate3D: [-18,8,0]
+Label: ""
+Name: Init
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Initialize the RSU rack lane
+ //---------------------------------------------------------------------------
+ 
+ // define the controling WMS
+ var Manager : object := location.extendPath(WMS_new)
+ 
+ if Manager/=void then // check whether WMS that is defined in the Racklane is located in the same frame
+ 	if Manager/=WMS then
+ 		// new WMS manager defined
+ 		if WMS/=void then // in this case a previously defined WMS should be overwritten and the Racklane deleted from this previous WMS
+ 			WMS.deleteRacklane(current)
+ 		end
+ 
+ 		WMS := Manager
+ 	end
+ 
+ 	WMS.addRacklane(current)
+ else
+ 	messageBox(to_str(current, ": No valid WMS defined: ", WMS_new), 1, 1)
+ 	root.eventcontroller.stop
+ 	return
+ end
+ 
+ // calculate the height of the RSU
+ RSU_Height := NumberOfRows * BoxHeight + GroundClearance + FloorThickness * (NumberOfRows+1)
+ 
+ if ParameterChanges then
+ 	InitRackLane
+ 	ParameterChanges := false
+ else
+ 	setConveyorspeed
+ end
+ 
+ // set availability of the RSU
+ RSU.FailureActive := false
+ RSU.Availability := RSU_Availability
+ RSU.MTTR := RSU_MTTR
+ RSU.FailureActive := true
+ var HomePosition := RSU._3D.getPositionOfObject(In, In._3D.getMUAnimationPosition(1))
+ RSU.HomePositionX := HomePosition.x - BoxWidth/2
+ RSU.HomePositionZ := HomePosition.z
+ 
+ // Initialize Occupancy tables
+ OccupancyLeft.delete
+ OccupancyLeft.MaxXDim := NumberOfColumns
+ OccupancyLeft.MaxYDim := NumberOfRows
+ for var col := 1 to NumberOfColumns loop
+ 	for var row := 1 to NumberOfRows loop
+ 		OccupancyLeft[col, row] := 0
+ 	next
+ next
+ 
+ OccupancyRight.delete
+ OccupancyRight.MaxXDim := NumberOfColumns
+ OccupancyRight.MaxYDim := NumberOfRows
+ for var col := 1 to NumberOfColumns loop
+ 	for var row := 1 to NumberOfRows loop
+ 		OccupancyRight[col, row] := 0
+ 	next
+ next
+ 
+ OUT.SensorID(1).Position := BoxWidth + 0.01 -- add one centimeter tolerance
+ 
+ // Send RSU to home position
+ RSU.waitPosReached(max(RSU._3D.getObject(1).moveTo(RSU.HomePositionX), RSU._3D.getObject(1).getObject(1).moveTo(RSU.HomePositionZ)))
+RandomSeed: 2293
+UUID: 89275b5f-1e25-4d47-9669-b7323025817b
+3D:
+ VisibleGraphicGroups: ["default","Init"]

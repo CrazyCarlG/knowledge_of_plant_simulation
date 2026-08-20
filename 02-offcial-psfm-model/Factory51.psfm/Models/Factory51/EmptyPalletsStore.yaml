@@ -1,0 +1,96 @@
+InternalClassType: Store
+Coordinate3D: [-34.7,20,0]
+Name: EmptyPalletsStore
+Origin: 6aef1c2d-5611-4104-8a60-5582de9f3c1e
+RandomSeed: 1073746558
+UUID: 019f044c-ab8a-72f8-8262-d3bbf90befb5
+XDim: 8
+YDim: 5
+ZDim: 10
+3D:
+ Dimensions: [8.5,3.5,0.01]
+ FloorThickness:
+ Gap:
+ GraphicGroupNames: ["default"]
+ GroundClearance:
+ LockedGraphicGroups: []
+ OriginX: "Center"
+ OriginY: "Center"
+ PostMaterialActive: true
+ PostMaterialAmbientColor: 13395507
+ PostMaterialDiffuseColor: 13395507
+ PostMaterialEmissiveColor: 0
+ PostMaterialShininess: 0.247
+ PostMaterialSpecularColor: 5855577
+ PostMaterialTransparency: 0
+ Rotation: [-180,0,0,-1]
+ StorageAreaMaterialActive: true
+ StorageAreaMaterialAmbientColor: 9670004
+ StorageAreaMaterialDiffuseColor: 8946281
+ StorageAreaMaterialEmissiveColor: 0
+ StorageAreaMaterialShininess: 0.247
+ StorageAreaMaterialSpecularColor: 5855577
+ StorageAreaMaterialTransparency: 0
+ StoreType: "Floorspace"
+$CustomAttributes:
+-
+ Name: Init
+ ID: 1
+ DataType: method
+ Value: |+1
+  self.~.Refill := false
+  
+  while not @.Full
+  	self.Location.PaletteType.create(@)
+  end
+  
+  self.Location.&RemoveParts.executeNewCallChain // We create new call chain since RemoveParts runs forever and we want to continue below
+  
+  // Every six hours we get a delivery of palettes.
+  while true
+  	PalDeliveryInterval.rollDice
+  	wait PalDeliveryInterval
+  
+  	stopuntil SmallCrane.Portal1.state="idle"
+  
+  	self.~.Refill := true
+  	for var i := 1 to 300
+  		self.Location.PaletteType.create(@)
+  	next
+  	self.~.Refill := false
+  end
+ ShowInTooltip: false
+-
+ Name: PaletteType
+ ID: 2
+ DataType: object
+ Value: d98bd3d8-2aae-4c21-87a0-674a48c092b5
+ ShowInTooltip: false
+-
+ Name: removeParts
+ ID: 3
+ DataType: method
+ Value: |+1
+  var store:object := self.Location
+  var Portal : object := SmallCrane.Portal1
+  
+  while true
+  	waituntil portal.state="idle" and not store.Empty
+  	wait 1 // Store might be refilled so wait assures that Crane doesn't get an order for a palette which is no longer at top after refill
+  	stopuntil not self.~.Refill
+  	Portal.TransferMU(self.~.Cont, UpperStoreExit)
+  end
+ ShowInTooltip: false
+-
+ Name: Refill
+ ID: 4
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72d8-8247-ea2c9e17e3c5
+ Name: Connector60
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-731d-b754-a2508d1bd062
+InheritEntranceExitLockedOnReset: false

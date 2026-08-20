@@ -1,0 +1,21 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,-6,0]
+Name: removeProduct
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // remove the quantity of the given product from table Content
+ param product: string, Quantity: integer
+ 
+ var row: integer := Content.getRowNo(Product)
+ 
+ if row > 0 then
+ 	Content[1,row] -= Quantity
+ else
+ 	debug --Product not found in table Content
+ end
+RandomSeed: 2249
+UUID: a8ebaceb-914d-4e1f-8960-36e9110505c7
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

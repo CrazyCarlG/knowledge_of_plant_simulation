@@ -1,0 +1,48 @@
+InternalClassType: PickAndPlace
+Coordinate3D: [-32,-20.8,0]
+DefaultAngle: 270
+GoToDefaultPosition: true
+LoadingTime: 1
+Name: PickAndPlaceBottom
+OnlyForEmptyBlockinglist: true
+Origin: 39a9d6fe-97d7-44c3-b95d-93a93b9a60a6
+RandomSeed: 1073747567
+UUID: 019f044c-ab8a-72ff-801c-bed336f57bd8
+3D:
+ RobotArmAnimations:
+ -
+  Indices: ["StoreExit","StoreLineBottom"]
+  Coordinates:
+  - [1,0,1.7]
+ $Objects:
+ -
+  Origin: 72948595-fa35-48fd-8a5b-e2fea4fc3a62
+  UUID: 25421740-9c80-452b-8631-6f30912b6cdb
+  $Objects:
+  -
+   Origin: 92f9b6f8-dc36-456f-ad56-6c25d19de97e
+   UUID: 8a2d64c2-71b9-4966-a8b1-858f968263a0
+   $Objects:
+   -
+    Origin: b30df0fc-5cf8-491d-accb-7ede18c7c9b9
+    UUID: 6de361d2-245e-4dc1-bd11-143a74c22ab7
+    $Objects:
+    -
+     Origin: 934b2561-5691-4911-aa2c-250048c9cda7
+     UUID: 2d52d99d-6a38-40bc-86fb-7fa9d25b88fc
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72fd-9db6-72bea1e18da8
+ Name: Connector63
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7335-a276-e6cf90c7ddb1
+$Predecessors:
+- 019f044c-ab8a-7339-a81b-6644a68f4915
+InheritEntranceExitLockedOnReset: false
+$Angles:
+- ["StoreLineBottom",354.28940686250036]
+- ["StoreExit",268.21008939175391]
+$Times:
+- [0,4,3.0596636869415352]
+- [0,0,2.8693105823582141]
+- [0,6,0]

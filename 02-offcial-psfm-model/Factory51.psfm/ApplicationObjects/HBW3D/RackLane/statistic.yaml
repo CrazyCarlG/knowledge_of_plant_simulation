@@ -1,0 +1,59 @@
+InternalClassType: Method
+Coordinate3D: [0.395,8,0]
+Name: statistic
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // copy all statistic values into the table given as parameter
+ //
+ // Parameters	: tab, the table or an object of type table
+ //
+ // ReturnValues: the filled table
+ //
+ // Called By	: USER
+ // Calls		:
+ //---------------------------------------------------------------------------
+ 
+ param  StatTab : any
+ 
+ if isTable(StatTab) or (isObject(StatTab) and StatTab.InternalClassname="NwList2D")
+ 	var tab : table
+ 	Tab.create
+ 
+ 	// set the datatype of the columns
+ 	StatTab.delete
+ 	StatTab.setdatatype( 1, "string")
+ 	StatTab.setdatatype( 2, "real")
+ 	StatTab.columnIndex := true
+ 
+ 	// write table header
+ 	var s1 := "State"
+ 	var s2 := "% Duration"
+ 	StatTab.writeRow( 1, 0, s1, s2 )
+ 
+ 	RSU.state.getStatisticsTable(tab)
+ 	var DurationColumn : integer := 5
+ 
+ 	for var i := 1 to tab.YDim
+ 		switch tab[1,i]
+ 		case "DrivingHome"
+ 			s1 := "Drive to Home"
+ 
+ 		case "loading"
+ 			s1 := "Loading"
+ 
+ 		case "waiting"
+ 			s1 := "Waiting"
+ 
+ 		case "unloading"
+ 			s1 := "Unloading"
+ 		case "failed"
+ 			s1 := "Failed"
+ 		end
+ 
+ 		StatTab.writeRow( 1, StatTab.YDim+1, s1, tab[ DurationColumn, i ] )
+ 
+ 	next
+ end
+RandomSeed: 2268
+UUID: 13c8a0b0-c091-4dc8-9952-f186c2f6b077

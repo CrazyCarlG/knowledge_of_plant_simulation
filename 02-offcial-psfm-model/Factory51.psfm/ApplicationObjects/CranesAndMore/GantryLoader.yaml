@@ -1,0 +1,1530 @@
+InternalClassType: Track
+BwDestList:
+BwEntranceCtrl:
+BwEntranceCtrlFront: false
+BwEntranceCtrlRear: true
+BwExitCtrl:
+BwExitCtrlFront: false
+BwExitCtrlRear: true
+Capacity: -1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl: "self.OnCreate"
+Coordinate3D: [-0.00020000000000000573,17.425,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+EntranceCtrl:
+EntranceCtrlFront: true
+EntranceCtrlRear: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: false
+FwDestList:
+InitCtrl:
+Label: ""
+Length: 10
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: GantryLoader
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+PullCtrl: "self.OnPull"
+RandomSeed: 1
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+TransferLengthToObject: true
+UnplannedCtrl:
+UUID: c34958ad-81a5-4325-9114-324efce49a41
+Width: 1
+3D:
+ AniGravityMode: false
+ AnimationObject: ""
+ AnimationOffset: [0,0,0]
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ AniSmoothRotation: false
+ BaseHeight: 3
+ ExcludeFromShowContentOfLocation: false
+ ExtConfiguration:
+ -
+  Name: "LegBases"
+  Extrusion Profile: [[0.6,0],[-0.4,0],[-0.4,0.1],[0.6,0.1],[0.6,0]]
+  Configuration Type: 36
+  Offsets: [-0.25,0.25]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "LegBars"
+  Extrusion Profile: [[0.15000000000000002,-0.1],[0.15000000000000002,0.10000000000000002],[0.17,0.10000000000000002],[0.17,0.010000000000000002],[0.53,-0.010000000000000002],[0.53,0.10000000000000002],[0.55,0.10000000000000002],[0.55,-0.1],[0.53,-0.1],[0.53,-0.010000000000000002],[0.17,-0.010000000000000002],[0.17,-0.1],[0.15000000000000002,-0.1]]
+  Configuration Type: 21
+  Offsets: [0,0.1]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "LegMounts"
+  Extrusion Profile: [[0.15000000000000002,0.1],[-0.24999999999999997,0.1],[0.15000000000000002,0.5],[0.15000000000000002,0.1]]
+  Configuration Type: 36
+  Offsets: [0,0.02]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "LegPlate"
+  Extrusion Profile: [[-0.24999999999999997,0.1],[-0.28,0.1],[0.15000000000000002,0.53],[0.15000000000000002,0.5],[-0.24999999999999997,0.1]]
+  Configuration Type: 36
+  Offsets: [-0.1,0.1]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,68]
+ -
+  Name: "Carrier"
+  Extrusion Profile: [[0.5,-0.02],[0.15,-0.02],[0.15,-0.1],[0.05,-0.1],[0.05,0.02],[0.25,0.02],[0.25,0.1],[0.26,0.1],[0.26,0.02],[0.49,0.02],[0.49,0.1],[0.5,0.1],[0.5,-0.02]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x8a8a8a,0x333333,0xdcf5f5,0x0,0,25]
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimations:
+ MUSideToAttach: "Booking Point"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,0,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Graphics"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ ShowMaterialFlowDirection: true
+ ShowSensors: true
+ StatesForColoring: 0x50f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $ExtSegments:
+  - 0
+  - [0,10,0]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [36,36]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/AAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - AAAAAAAAAAAAAAAAAAAAvr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBAQEBAQEBAQEBvr6+AAAAAAAAAAAAAAAAAAAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAA
+ - gIAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAAAD/gIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAAAAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAA
+ - AAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: OnCreate
+ ID: 1
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Method will be called when the crane will be drawn or when the crane will be
+  // duplicated or derived.
+  // Make shure the rail of the crane is just a straight.
+  // Draw the second rail
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: USER interaction
+  // Calls		: drawSecondRail
+  //
+  // Author		: Guido Groß
+  // Date			: 04.01.2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  
+  var Gantry : object := self.~
+  
+  if Gantry.class /= void then
+  
+  	// check if the crane is a straight
+  	var segments : table
+  	Gantry.getCurveSegments(segments)
+  	if segments.YDim>2 then
+  		// there are more than two points defined for the Gantry
+  		// sum up all length definitions
+  		var l : length := segments.sum({2,1}..{2,*})
+  	
+  		// now set the new values, remove curve angles 
+  		segments[2, 2] := l
+  		segments[3, 2] := 0		-- curve angle
+  		segments[4, 2] := 0		-- radius
+  	
+  		// and delete the rest of the lines in segment table 
+  		segments.delete({1,3}..{*,*})
+  	
+  		// now assign the corrected segment table to the rail
+  		Gantry.setCurveSegments(segments)
+  	
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: INIT
+ ID: 2
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // build up a machine feeder
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: Eventcontroller
+  // Calls		: createPortal, createTrolley, createHook
+  //---------------------------------------------------------------------------------
+  
+  
+  var Gantry : object := self.~
+  
+  var FailuresTable : table
+  FailuresTable.create
+  Gantry.Failures.getTable(FailuresTable)
+  FailuresTable.delete
+  
+  
+  // create the loader on the gantry
+  Gantry.LoaderList.delete
+  var delta : length := Gantry.Length / (Gantry.NumberOfLoader+1)
+  
+  for var i := 1 to Gantry.NumberOfLoader loop
+  
+  	if Gantry.LoaderType=1
+  		var Loader : object := Gantry.createILoader(Gantry, i, i*delta)
+  	else
+  		loader := Gantry.createHLoader(Gantry, i, i*delta)
+  	end
+  	
+  	// define the attribute for the loader
+  	if Gantry.getattrNo(to_str("Loader", i))>0 then
+  		// attribute exists
+  	else
+  		Gantry.createAttr(to_str("Loader", i), "object")
+  	end
+  	
+  	var index : integer := Gantry.getAttrNo(to_str("Loader", i))
+  	Gantry.setAttrValue(index, loader)
+  
+  	Loader.DefaultHookHeight := Gantry.DefaultHookHeight
+  	
+  	FailuresTable.delete
+  
+  	if Gantry.LoaderFailureActive then
+  		FailuresTable.writeRow(1, 1, "Loader", true, "Const", "0", "Const", "0", Gantry.LoaderAvailability, to_str(Gantry.LoaderMTTR))
+  		FailuresTable[13, 1] := "OperatingTime"
+  	end
+  	
+  	loader.FailureActive := FailuresTable.YDim>0
+  	loader.Failures.setTable(FailuresTable)
+  
+  	Gantry.LoaderList[1, Gantry.LoaderList.YDim+1] := Loader
+  
+  next
+  
+  // set availability and MTTR of Gantry loader and hook
+  
+  Gantry.Failures.getTable(FailuresTable)
+  FailuresTable.delete
+  
+  if Gantry.GantryFailureActive then
+  	FailuresTable.writeRow(1, 1, "Gantry", true, "Const", "0", "Const", "0", Gantry.GantryAvailability, to_str(Gantry.GantryMTTR))
+  	FailuresTable[13, 1] := "OperatingTime"
+  end
+  
+  Gantry.FailureActive := FailuresTable.YDim>0
+  Gantry.Failures.setTable(FailuresTable)
+  
+  for var i := 1 to Gantry.NumberOfLoader loop
+  	if Gantry.LoaderType=1 then
+  		// I-Loader
+  		loader := Gantry.LoaderList[1,i]
+  		waituntil loader.state="idle"
+  		loader.moveHook(Gantry.DefaultHookHeight)
+  		waituntil loader.state="waiting"
+  		loader.endSequence
+  	else
+  		//H-Loader
+  		var master : object := Gantry.LoaderList[1,i]
+  		waituntil master.state="idle"
+  		master.moveHook(Gantry.DefaultHookHeight)
+  		waituntil master.state="waiting"
+  		master.endSequence
+  		
+  		var slave : object := master.RearMu
+  		waituntil master.state="idle"
+  		slave.moveHook(Gantry.DefaultHookHeight)
+  		waituntil master.state="waiting"
+  		master.endSequence
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: LoaderList
+ ID: 3
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnIndexContents: false
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: object
+    Width: 11
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,2,~,"Loader"]
+  Columns:
+  - [1,object,1,""]
+ ShowInTooltip: false
+-
+ Name: LoaderSpeed
+ ID: 4
+ DataType: speed
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: HookSpeed
+ ID: 5
+ DataType: speed
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: LoaderLength
+ ID: 6
+ DataType: length
+ Value: 0.18
+ ShowInTooltip: false
+-
+ Name: getLoader
+ ID: 7
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // read the list of trolleys and copy the trolley objects into the given list or table
+  //
+  // Parameters	: tab, the given list or table
+  //
+  // ReturnValues : the list filled with the created portals
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 01.02.2010
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  param  tab : any 
+  
+  
+  var Gantry := self.~
+  
+  if isTable(tab) or 
+     (isObject(tab) and tab.internalClassType="NwList2D") then
+  	// parameter is a table or table object
+  	tab.setdataType(1, "object")
+  	tab.columnIndex := true
+  	tab[1,0] := "Loader"
+  	
+  	for var i := 1 to Gantry.LoaderList.YDim 
+  		tab[1,i] := Gantry.LoaderList["Loader", i]
+  	next
+  elseif isList(tab) or
+  	   (isObject(tab) and tab.internalClassType="NwRandom")
+  	// parameter is a list or list object
+  	
+  	tab.DataType := "object"
+  	for var i := 1 to Gantry.LoaderList.YDim 
+  		tab.append(Gantry.LoaderList["Loader", i])
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: state
+ ID: 8
+ DataType: string
+ Value: "waiting"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: createILoader
+ ID: 9
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // create a Loader at the given position of the portal
+  //
+  // Parameters	: portal, the portal on which the Loader will be created
+  //			 	  index, the number of the trolly
+  //				  popsition, the position of the Loader on the portal
+  //
+  // ReturnValues : the created trolly
+  //
+  // Called By	: INIT
+  // Calls		: createDefault3DLoader
+  //--------------------------------------------------------------------------------
+  param  gantry : object, index : integer, position : length  -> object
+  
+  // create the Loader
+  var Loader : object := rootfolder.BasicObjects.MaterialFlow.GantryLoader.create(Gantry, position)
+  
+  // set attributes of the loader
+  Loader.speed				:= gantry.LoaderSpeed
+  loader.AccelerationEnabled	:= Gantry.LoaderAccelerationActive
+  loader.Acceleration			:= Gantry.LoaderAcceleration
+  Loader.Deceleration			:= Gantry.LoaderDeceleration
+  
+  Loader.LoadBayLength	:= gantry.HeightOfLift + gantry.HookLength
+  Loader.stopped			:= true
+  Loader.MuLength			:= gantry.LoaderLength
+  Loader.Type				:= "I-Loader"
+  loader.HookPosReached	:= true
+  
+  Loader.bookPntLRelative := 0.5
+  
+  // define Failures
+  var FailuresTable : table
+  FailuresTable.create
+  loader.Failures.getTable(FailuresTable)
+  FailuresTable.delete
+  
+  if Gantry.LoaderFailureActive then
+  	FailuresTable.writeRow(1, 1, "Loader", true, "Const", "0", "Const", "0", Gantry.LoaderAvailability, to_str(Gantry.LoaderMTTR))
+  	FailuresTable[13, 1] := "OperatingTime"
+  end
+  	
+  loader.FailureActive := FailuresTable.YDim>0
+  loader.Failures.setTable(FailuresTable)
+  
+  // define loader in 3D
+  gantry.createDefault3DLoader(Loader)
+  
+  // create the gripper for the loader
+  Gantry.createHook(Loader)
+  
+  result := Loader
+ ShowInTooltip: false
+-
+ Name: checkNewPosition
+ ID: 10
+ DataType: method
+ Value: |+1
+  /*_______________________________________________________________________________
+  
+  Method Tasks:
+  
+  _________________________________________________________________________________
+  Parameters	: 
+  			  
+  ReturnValues: 
+  
+  Called By	: 
+  Calls		: 
+  
+  Author		: 
+  Date		: 
+  _________________________________________________________________________________
+  History:
+  
+  _________________________________________________________________________________*/
+  param  posX : real  -> boolean
+  
+  result := true
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  	_____________________________________________________________________________*/
+  
+  	/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  		_________________________________________________________________________*/
+  
+  		/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			_____________________________________________________________________*/
+ ShowInTooltip: false
+-
+ Name: checkMotion
+ ID: 11
+ DataType: method
+ Value: |+1
+  /*_______________________________________________________________________________
+  
+  Method Tasks:
+  check if there will be a collision when moving to the new location.
+  If a collision will be detected, the user defined collision detect control will
+  be invoked.
+  _________________________________________________________________________________
+  Parameters	: portal, the portal checking the location
+  			  NewPosition, the new location where the portal wants to move
+  
+  ReturnValues: 0 if the portal can move,
+  			  4 if collision detected
+  
+  Called By	: portal._movePortal
+  Calls		: none
+  
+  Author		: Guido Groß
+  Date		: 09.03.2010
+  _________________________________________________________________________________
+  History:
+  11.03.2010	GG	use bookpops for determing the collision
+  14.05.2010	GG	take moving direction into account, stop on collision detect
+  				result type changed
+  17.10.2012	GG	check moving direction and target position to determine a collision
+  26.06.2014  PS  consider case of equal movingDirections
+  26.02.2016	GG	replace continue by goOn
+  12.12.2016	GG	debugging 
+  _________________________________________________________________________________*/
+  param  portal :object, NewPosition : length  -> integer
+  
+  
+  var crane := self.~
+  var GoOn : boolean := true
+  var collisionDetected : boolean := false
+  var index := portal.index
+  
+  /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  check if the portal is synchronized
+  _____________________________________________________________________________*/
+  if not portal.synchronized 
+  	
+  	var currentPosition := portal.BookPos
+  	
+  	/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  	depending on the side the portal wants to move, take the left or right
+  	bound into account
+  	_________________________________________________________________________*/
+  
+  	if NewPosition > currentPosition  -- move to the right
+  			
+  		/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  		portal wants to move to the right
+  		_____________________________________________________________________*/
+  		var newPos := NewPosition + portal.rightbound
+  		
+  		if index < crane.NumberOfPortals 
+  			
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			there are other portals on the right side of the portal
+  			get portal to the right and its position
+  			_________________________________________________________________*/
+  			var portal2 := crane.PortalList["Portal", index+1]
+  			var portal2Pos := portal2.bookPos - portal2.leftBound
+  		
+  			if portal2.movingDirection /= "right" 
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				portal2 is not moving or is moving to the left
+  				_____________________________________________________________*/
+  				if portal2Pos < newPos 		
+  					collisionDetected := true
+  			
+  				else
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					we have portal2Pos >= NewPosition
+  					_________________________________________________________*/
+  					if portal2.movingDirection="left"  and
+  					    portal2.TargetXPos>0 and portal2.TargetYPos>0 and
+  					    portal2.targetXPos<=newPos 
+  			
+  						collisionDetected := true
+  					end
+  				end
+  			end
+  		else
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			portal is the most right portal - nothing to do
+  			_________________________________________________________________*/
+  		end
+  	
+  	else
+  		/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  		portal wants to move to the left
+  		_____________________________________________________________________*/
+  		newPos := NewPosition - portal.leftbound
+  	
+  		if index > 1 
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			there are other portals on the left side of the portal
+  			get the portal to the left
+  			_____________________________________________________________________*/
+  			portal2 := crane.PortalList["Portal", index-1]
+  			portal2Pos := portal2.bookPos + portal2.rightBound
+  		
+  			if portal2.MovingDirection /= "left" 
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				portal2 is not moving or is moving to the right
+  				_____________________________________________________________*/
+  				if portal2Pos > newPos 
+  			
+  					collisionDetected := true
+  			
+  				else
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					we have portal2Pos >= NewPosition
+  					_________________________________________________________*/
+  					if portal2.MovingDirection = "right"  and
+  					    portal2.TargetXPos>0 and portal2.TargetYPos>0 and
+  					    portal2.TargetXPos>=newPos 
+  						
+  						collisionDetected := true
+  					end
+  				end
+  			end
+  		else
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			portal is the most left portal - nothing to do
+  			_________________________________________________________________*/
+  		end
+  	end -- move to the left
+  else
+  	/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  	portal is synchronized
+  	_________________________________________________________________________*/
+  	if portal.masterPortal 
+  		var masterPortal := portal
+  		
+  		/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  		check new position only for the master portal
+  		_____________________________________________________________________*/
+  		var slavePortal	:= Portal.SyncPortal
+  		var slaveIndex	:= SlavePortal.Index
+  		var slavePosition := SlavePortal.BookPos
+  		
+  		if slaveIndex>index 
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			slave portal is on the right side
+  			_________________________________________________________________*/
+  			
+  			if masterportal.movingDirection="right" 
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				master portal wants to move to the right
+  				_____________________________________________________________*/
+  				
+  				if slaveIndex=crane.NumberOfPortals 
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					slave portal is rightmost portal
+  					_________________________________________________________*/
+  					if slavePortal.TargetXpos+portal.MuLength/2>crane.length 
+  						collisionDetected := true
+  					end
+  				else
+  					portal2 := crane.PortalList["Portal", slavePortal.index+1]
+  					if slavePortal.TargetXpos+slaveportal.rightBound>portal2.bookpos-portal2.leftbound 
+  						collisionDetected := true
+  					end
+  					
+  				end
+  			else
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				master portal wants to move to the left
+  				_____________________________________________________________*/
+  				
+  				if masterPortal.index=1 
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					masterportal is the most left portal
+  					_________________________________________________________*/
+  					if masterportal.TargetXPos<0 
+  						collisionDetected := true
+  					end
+  				else
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					there are portals to the left of masterportal
+  					_________________________________________________________*/
+  					portal2 := crane.PortalList["Portal", masterPortal.index-1]
+  					if masterportal.TargetXPos-masterPortal.leftbound<portal2.bookPos+portal2.rightBound 
+  						collisionDetected  := true
+  					end
+  				end
+  			end
+  		else
+  			/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  			slave portal is on the left side
+  			_________________________________________________________________*/
+  			if masterportal.movingDirection="right" 
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				master portal wants to move to the right
+  				_____________________________________________________________*/
+  				
+  				if masterIndex=crane.NumberOfPortals 
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					master portal is rightmost portal
+  					_________________________________________________________*/
+  					if Masterportal.TargetXPos > crane.length 
+  						collisionDetected := true
+  					end
+  				else
+  					portal2 := crane.PortalList["Portal", masterPortal.index+1]
+  					if masterPortal.TargetXPOs+masterPortal.rightbound>portal2.bookpos-portal2.leftbound 
+  						collisionDetected := true
+  					end
+  				end
+  			else
+  				/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  				master portal wants to move to the left
+  				_____________________________________________________________*/
+  				
+  				if slavePortal.index=1 
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					slavePortal is the most left portal
+  					_________________________________________________________*/
+  					if slavePortal.TargetXPos <0 
+  						collisionDetected := true
+  					end
+  				else
+  					/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  					there are portals to the left of slavePortal
+  					_________________________________________________________*/
+  					portal2 := crane.PortalList["Portal", slavePortal.index-1]
+  					if slavePortal.TargetXPos-slavePortal.leftbound>portal2.bookpos+portal2.rightbound 
+  						collisionDetected := true
+  					end
+  					
+  				end
+  			end
+  		end
+  	else
+  		/*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  		portal is slave portal - nothing to do
+  		_____________________________________________________________________*/
+  	end
+  end
+  			
+  
+  if collisionDetected 
+  	if crane.collisiondetectCtrl/= void  			
+  		/* execute the user defined method, parameter of the method are
+  			the portals which will cause the collision,
+  			Result = TRUE means that the movement is nevertheless started.*/
+  		GoOn := crane.collisiondetectCtrl.execute(portal, portal2)
+  	else
+  
+  		GoOn := false -- collision detect, stop motion
+  	end
+  else
+  	GoOn := true -- nothing to do
+  end
+  		
+  if GoOn 
+  	result := 0
+  else
+  	result := 4	-- collision detected
+  end
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 12
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // open the dialog window of the gantry
+  //
+  // Parameters	: none
+  //
+  // ReturnValues: none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 20.01.2017
+  //
+  // History:
+  // 15.02.2018	GG	use Gantry instead of AppObj
+  // 20.04.2018	GG	remove Localization
+  //--------------------------------------------------------------------------------
+  
+  
+  var Gantry : object := self.~
+  
+  if (getAsyncKeyState(17) < 0) 
+  	Gantry.openDialog(false)
+  else
+  	if Gantry.openedDialog=void 
+  		var template : object := rootfolder.Internal.Dialog.extendPath(Gantry.ObjType)
+  		var newDialog : object := template.derive( rootfolder.internal.Dialog)
+  		newDialog.openedBy := self.~
+  		Gantry.openedDialog := newDialog
+  		newDialog.Label := "Gantry Loader"
+  		newDialog.open
+  	else
+  		Gantry.openedDialog.open
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 13
+ DataType: string
+ Value: "GantryLoader"
+ ShowInTooltip: false
+-
+ Name: openedDialog
+ ID: 14
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: LoaderAvailability
+ ID: 15
+ DataType: real
+ Value: 100
+ ShowInTooltip: false
+-
+ Name: LoaderMttr
+ ID: 16
+ DataType: time
+ Value: 1:00
+ ShowInTooltip: false
+-
+ Name: HookAvailability
+ ID: 17
+ DataType: real
+ Value: 100
+ ShowInTooltip: false
+-
+ Name: HookMTTR
+ ID: 18
+ DataType: time
+ Value: 1:00
+ ShowInTooltip: false
+-
+ Name: createDefault3DPortal
+ ID: 19
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // draw the portal in 3D.
+  // Therefore all vertices and all faces have to be defined
+  // We assume that all parameters of the portal are defined.
+  //
+  // Parameters	: portal, the portal object for which we want to draw the 3D representation
+  //
+  // ReturnValues : 
+  //
+  // Called By	: createPortal
+  // Calls		: 
+  //--------------------------------------------------------------------------------
+  
+  param portal: object
+  
+  
+  var gantry := portal.~
+  portal._3D.Scale := [1, gantry.width, 1]
+ ShowInTooltip: false
+-
+ Name: createDefault3DLoader
+ ID: 20
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Create the trolley in 3D and define the animation line of the trolley
+  //
+  // Parameters	: trolley, the trolley object
+  //
+  // ReturnValues : none
+  //
+  // Called By	: createTrolley
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+    
+  param Loader : object
+  
+  var Gantry := self.~
+  
+  var t : table
+  t.Create
+  
+  Loader._3D.MUAnimations.Track.getTable(t)
+  
+  t[1,1] := 0
+  t[2,1] := 0.01
+  t[3,1] := Gantry.HookLength
+  
+  t[1,2] := 0
+  t[2,2] := 0.01
+  t[3,2] := -Gantry.HeightOfLift
+  
+  Loader._3D.MUAnimations.Track.setTable(t)
+ ShowInTooltip: false
+-
+ Name: HeightOfLift
+ ID: 21
+ DataType: length
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: HookLength
+ ID: 22
+ DataType: length
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: statistic
+ ID: 23
+ DataType: method
+ Value: |+1
+  param  StatTab : any 
+  
+  
+  if isTable(StatTab) or (isObject(StatTab) and StatTab.internalClassType="DataTable") 
+  	
+  	if StatTab.ColumnIndex then
+  		StatTab.delete({0,0}..{*,*})
+  	else
+  		StatTab.delete({1,1}..{*,*})
+  	end
+  	
+  	StatTab.datatype := "real"
+  	StatTab.columnIndex := true
+  	StatTab.rowIndex := true
+  	
+  	StatTab[0, 1] := "Waiting"
+  	StatTab[0, 2] := "Ready"
+  	StatTab[0, 3] := "Idle"
+  	StatTab[0, 4] := "Driving"
+  	StatTab[0, 5] := "Moving hook"
+  	StatTab[0, 6] := "Order occuoied"
+  	StatTab[0, 7] := "Order empty"
+  	StatTab[0, 8] := "Ready"
+  	StatTab[0, 9] := "Home driving"
+  	StatTab[0, 10] := "Failed"
+  	StatTab[0, 11] := "Paused"
+  	StatTab[0, 12] := "Unplanned:"
+  
+  	var Gantry := self.~
+  	
+  	for var i := 1 to Gantry.LoaderList.YDim 
+  	
+  		var Loader := Gantry.LoaderList[1,i]
+  		
+  		if Loader/=void then
+  			
+  			var stat : table
+  			stat.create
+  		
+  			Loader.state.getStatisticsTable(stat)
+  		
+  			StatTab[i, 0] := to_str(Loader.name, ":", Loader.id)
+  			for var j:= 1 to stat.YDim loop
+  				switch stat[1,j]
+  				case "idle"
+  					var row : integer := 3
+  				case "movehook"
+  					row := 5
+  				case "moving"
+  					row := 4
+  				case "waiting"
+  					row := 1
+  				case "ready"
+  					row := 2
+  				end
+  			
+  				StatTab[i, row] := stat[5, j]
+  			
+  			next
+  		
+  			StatTab[i, 6] := loader.statOrderOccPortion * 100
+  			StatTab[i, 7] := Loader.statOrderEmptyPortion * 100
+  			StatTab[i, 8] := Loader.statTspReadyPortion * 100
+  			StatTab[i, 9] := Loader.statHomeDrivingPortion * 100
+  			StatTab[i, 10] := Loader.statTspFailPortion * 100
+  			StatTab[i, 11] := Loader.statTspPausingPortion * 100
+  			StatTab[i, 12] := Loader.statTspUnplannedPortion * 100
+  		else
+  			StatTab[i, 6] := 0
+  			StatTab[i, 7] := 0
+  			StatTab[i, 8] := 0
+  			StatTab[i, 9] := 0
+  			StatTab[i, 10] :=0
+  			StatTab[i, 11] := 0
+  			StatTab[i, 12] := 0
+  		end
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: createHook
+ ID: 24
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // create the hook for the given Loader
+  //
+  // Parameters	: Loader, the Loader for which we want to create the hook
+  //
+  // ReturnValues : none
+  //
+  // Called By	: INIT
+  // Calls		: create3DHook
+  //--------------------------------------------------------------------------------
+  param Loader : object -> object
+  
+  var Gantry : object := Loader.~
+  
+  if Gantry.LoaderType=2 then
+  	var template : object := rootfolder.BasicObjects.MaterialFlow.GantryHook
+  else
+  	if Gantry.DoubleGripper then
+  		template := rootfolder.BasicObjects.MaterialFlow.GantryHook_2
+  	else
+  		template := rootfolder.BasicObjects.MaterialFlow.GantryHook
+  	end
+  end
+  
+  var hook := template.create(Loader, Gantry.HookLength+1)
+  
+  Loader.hook := hook
+  
+  hook.speed					:= Gantry.HookSpeed
+  Hook.AccelerationEnabled	:= Gantry.HookAccelerationActive
+  Hook.Acceleration			:= Gantry.HookAcceleration
+  Hook.Deceleration			:= Gantry.HookDeceleration
+  
+  hook.stopped		:= true
+  Hook.MuLength		:= Gantry.HookLength
+  			
+  var FailuresTable : table
+  FailuresTable.create
+  Hook.Failures.getTable(FailuresTable)
+  FailuresTable.delete
+  
+  if Gantry.HookFailureActive then
+  	FailuresTable.writeRow(1, 1, "Gripper", true, "Const", "0", "Const", "0", Gantry.HookAvailability, to_str(Gantry.HookMTTR))
+  	FailuresTable[13, 1] := "OperatingTime"
+  end
+  	
+  Hook.FailureActive := FailuresTable.YDim>0
+  Hook.Failures.setTable(FailuresTable)
+  
+  if Gantry.DoubleGripper then
+  	Hook.XDim			:= 2
+  else
+  	Hook.XDim			:= 1
+  end
+  
+  gantry.createDefault3DHook(Hook)
+  Hook._3D.MuSideToAttach := "Top"
+  
+  result := hook
+ ShowInTooltip: false
+-
+ Name: initStore
+ ID: 25
+ DataType: method
+ Value: |+1
+  /*_______________________________________________________________________________
+  
+  Method Tasks:
+  a store object is assigned to the crane, initialize the store area
+  _________________________________________________________________________________
+  Parameters	: none
+  			  
+  ReturnValues: none
+  
+  Called By	: INIT
+  Calls		: 
+  
+  Author		: Guido Groß
+  Date		: 14.09.2016
+  _________________________________________________________________________________
+  History:
+  
+  _________________________________________________________________________________*/
+  
+  /* check if entrance and exit are well defined ----------------------------------*/
+  var crane : object := self.~
+  if crane .StoreEntrance/= void and crane.StoreExit/=void then
+  	
+  	/* set the parameter of the entrance object ---------------------------------*/
+  	if crane.StoreEntrance.getAttrNo("Height")<=0 then
+  		crane.StoreEntrance.createAttr("Height", "length")
+  	end
+  	
+  	var boundingBox := crane.StoreEntrance._3D.BoundingBoxSize
+  	crane.StoreEntrance.Height := boundingBox[3]
+  	
+  	if crane.StoreEntrance.ExitCtrl=void then
+  		crane.storeEntrance.ExitCtrl := to_str(crane.name, ".stocking")
+  	end
+  	
+  	if stock.autoremoveActive then
+  		&stock.removeProduct(1200)
+  	end
+  	
+  else
+  	/* --------------------------------------------------------------------------*/
+  	/* entrance or exit object is not defined, report an error ------------------*/
+  	
+  end
+ ShowInTooltip: false
+-
+ Name: LoaderAccelerationActive
+ ID: 26
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: LoaderAcceleration
+ ID: 27
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: LoaderDeceleration
+ ID: 28
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: HookAccelerationActive
+ ID: 29
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: HookAcceleration
+ ID: 30
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: HookDeceleration
+ ID: 31
+ DataType: acceleration
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: NumberOfLoader
+ ID: 32
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: LoaderFailureActive
+ ID: 33
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: HookFailureActive
+ ID: 34
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: LoaderType
+ ID: 35
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: createHLoader
+ ID: 36
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // create a H-Loader at the given position of the portal
+  //
+  // Parameters	: portal, the portal on which the Loader will be created
+  //			 	  index, the number of the loader
+  //				  position, the position of the Loader on the portal
+  //
+  // ReturnValues : the created loader
+  //
+  // Called By	: INIT
+  // Calls		: createDefault3DLoader
+  //--------------------------------------------------------------------------------
+  param  gantry : object, index : integer, position : length  -> object
+  
+  // create the Loader
+  var Loader1 : object := rootfolder.BasicObjects.MaterialFlow.GantryLoader.create(Gantry, position)
+  
+  // set attributes of the loader
+  Loader1.speed				:= gantry.LoaderSpeed
+  Loader1.AccelerationEnabled	:= Gantry.LoaderAccelerationActive
+  Loader1.Acceleration		:= Gantry.LoaderAcceleration
+  Loader1.Deceleration		:= Gantry.LoaderDeceleration
+  Loader1.DefaultHookHeight	:= Gantry.DefaultHookHeight
+  
+  Loader1.LoadBayLength	:= gantry.HeightOfLift + gantry.HookLength
+  Loader1.stopped			:= true
+  Loader1.MuLength		:= gantry.LoaderLength
+  //Loader1.MuWidth			:= gantry.LoaderWidth
+  //Loader1.MuHeight		:= gantry.LoaderHeight
+  Loader1.Type			:= "H-Loader"
+  loader1.HookPosReached	:= true
+  
+  Loader1.bookPntLRelative := 0.5
+  
+  // define Failures
+  var FailuresTable : table
+  FailuresTable.create
+  loader1.Failures.getTable(FailuresTable)
+  FailuresTable.delete
+  
+  if Gantry.LoaderFailureActive then
+  	FailuresTable.writeRow(1, 1, "Loader", true, "Const", "0", "Const", "0", Gantry.LoaderAvailability, to_str(Gantry.LoaderMTTR))
+  	FailuresTable[13, 1] := "OperatingTime"
+  end
+  	
+  loader1.FailureActive := FailuresTable.YDim>0
+  loader1.Failures.setTable(FailuresTable)
+  
+  // create the second Loader
+  var Loader2 : object := rootfolder.BasicObjects.MaterialFlow.GantryLoader.create(Gantry, position-Loader1.length)
+  
+  // set attributes of loader2
+  Loader2.LoadBayLength		:= gantry.HeightOfLift + gantry.HookLength
+  Loader2.MuLength			:= gantry.LoaderLength
+  Loader2.Type				:= "H-Loader"
+  loader2.HookPosReached		:= true
+  Loader2.DefaultHookHeight	:= Gantry.DefaultHookHeight
+  	
+  Loader1.isTractor := true
+  Loader2.isTractor := false
+  
+  // connect both loader
+  Loader2.HitchFront(Loader1)
+  
+  // define loader in 3D
+  gantry.createDefault3DLoader(Loader1)
+  gantry.createDefault3DLoader(Loader2)
+  // create the gripper for the two loader
+  Gantry.createHook(Loader1)
+  Gantry.createHook(Loader2)
+  
+  result := Loader1
+ ShowInTooltip: false
+-
+ Name: DoubleGripper
+ ID: 37
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: RotationTime
+ ID: 38
+ DataType: time
+ Value: 3
+ ShowInTooltip: false
+-
+ Name: GantryAvailability
+ ID: 39
+ DataType: real
+ Value: 100
+ ShowInTooltip: false
+-
+ Name: GantryMTTR
+ ID: 40
+ DataType: time
+ Value: 1:00
+ ShowInTooltip: false
+-
+ Name: GantryFailureActive
+ ID: 41
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: createDefault3DHook
+ ID: 42
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // Create the hook in 3D and define the size of the default graphic
+  //
+  // Parameters	: Hook, the Hook object
+  //
+  // ReturnValues : none
+  //
+  // Called By	: createHook
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 23.01-2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+    
+  param Hook : object
+  
+  var Loader := Hook.~
+  
+  var LengthGripper : length
+  var deltaZ : length
+  
+  if Hook.HookType=1 then
+  	LengthGripper := 0.05
+  	deltaZ := 0
+  else
+  	LengthGripper := 0.2
+  	deltaZ := 0.14
+  end
+  
+  var ZPos : length := Hook.Length/2
+  
+  var StampLength : length := Hook.length - LengthGripper	-- reduce the length of the gripper
+  
+  var HookGraphic := Hook._3D.getGraphic("Stamp", [1])
+  HookGraphic.Scale    := [1, 1, StampLength]
+  HookGraphic.Position := [0, 0, -Hook.Length/2 + LengthGripper]
+  
+  // set the position of the animatable object
+  var Gripper := Hook._3D.getObject("Gripper")
+  var Position := Gripper.POsition
+  Position[3] := -ZPos + deltaZ
+  Gripper.Position := Position
+ ShowInTooltip: false
+-
+ Name: DefaultHookHeight
+ ID: 43
+ DataType: length
+ Value: 0.5
+ ShowInTooltip: false
+-
+ Name: RESET
+ ID: 44
+ DataType: method
+ Value: |+1
+  //
+  // Method Tasks:
+  // delete all tables and temporary variables
+  //
+  // Parameters	: none
+  //
+  // ReturnValues: none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 24.01.2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  
+  var Gantry : object := self.~
+  
+  Gantry.LoaderList.delete
+ ShowInTooltip: false
+-
+ Name: HelpOnObject
+ ID: 45
+ DataType: string
+ Value: "rootfolder.GantryLoaderDocumentation"
+ ShowInTooltip: false
+-
+ Name: OnPull
+ ID: 46
+ DataType: method
+ Value: |+1
+  -- @,?: the object the control was called for
+  
+  var Gantry := self.~
+  var Loader := Gantry.Loader1
+  waituntil loader.state="idle"
+  
+  var blockList := ?.fwBlockList
+  
+  for var i := 1 to blockList.dim
+  	var product:object     := blocklist[i]
+  	var destination:object := product.destination
+  	
+  	// product has a destination list assigned, crane will move product according to this list
+  	if destination/=void and destination.internalClassType = "DataList"
+  		var destObj:object := destination[1]
+  		for var row := 1 to destination.Dim
+  			if destination[row] = product.Location
+  				if row < destination.Dim
+  					destObj := destination[row+1]
+  				end
+  				return
+  			end
+  		next
+  		destination := destObj
+  	end
+  		
+  	//A single destination was assigned, product will be moved to this destination
+  	if destination /= void then
+  		Loader.TransferMu(product, destination)
+  		return
+  	//There is a single successor conneced to the crane, product will be moved to the connected station
+  	elseif Gantry.succ/=void
+  		Loader.TransferMu(product, Gantry.succ)
+  		return
+  	else
+  		throwRuntimeError(to_str(self.~)+": No destination for MU defined!")
+  	end	
+  next
+  
+  
+  
+  
+  if @/=void
+  debug 
+  -- no free destination for objects in the blocking list could be found, please call the method CheckBlockingList of the Gantry Loader again to check whether a destination is free 
+  -- and comment out this debug statement
+  end
+ ShowInTooltip: false
+-
+ Name: _3D_allowOnlyOneSegment
+ ID: 47
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: CheckBlockingList
+ ID: 48
+ DataType: method
+ Value: "self.~.&onPull.execute(void,self.~)"
+ ShowInTooltip: false

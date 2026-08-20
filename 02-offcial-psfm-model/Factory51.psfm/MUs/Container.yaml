@@ -1,0 +1,126 @@
+InternalClassType: Container
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,3,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DistributeCosts: false
+DragDropCtrl:
+EntranceCtrl:
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: false
+ExitCtrlOnce: false
+ExitCtrlRear: false
+FillWholeLayer: false
+InitCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.144
+MULength: 1.2
+MUWidth: 0.8
+Name: Container
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RandomSeed: 3
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+ResourceType: "Transport"
+ResStatOn: true
+RouteWeightingAttr: ""
+SelectCtrl:
+ShiftcalendarObject:
+UUID: a39dd3aa-5fa4-4198-ba7c-6450581fd0d6
+WorkpieceCarrierActive: false
+XDim: 2
+YDim: 2
+ZDim: 1
+$BasicObject: true
+3D:
+ AnimationObject: ""
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 3381708
+ MaterialDiffuseColor: 3381708
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.267
+ MaterialSpecularColor: 5855577
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaRelativeCenter: [0,0,1]
+ MUAnimationAreaRelativeSize: [1,1]
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ MUSideToAttach: "Center bottom"
+ Poses:
+ Rotation: [0,0,0,-1]
+ ScaleAutomatically: true
+ ShowContent: true
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [21,21]
+ Pixels:
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+FFyMFFyMFFyMMo6+AAAAMo6+
+ - Mo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+FFyMFFyMFFyMMo6+Mo6+Mo6+
+ - Mo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+gIAAgIAAgIAAMo6+Mo6+Mo6+
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [21,21]
+ Pixels:
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//FFyMFFyMFFyMAP//AAAAAP//
+ - AP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//FFyMFFyMFFyMAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+InheritEntranceExitLockedOnReset: false

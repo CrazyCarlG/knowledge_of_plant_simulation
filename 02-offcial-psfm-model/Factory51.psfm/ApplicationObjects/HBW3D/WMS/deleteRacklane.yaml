@@ -1,0 +1,20 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,8,0]
+Label: ""
+Name: deleteRacklane
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // remove a rack lane from table Racklanes
+ //--------------------------------------------------------------------------------
+ 
+ Param Racklane : object
+ 
+ Racklanes.setCursor(1)
+ if Racklanes.find(Racklane) then
+ 	Racklanes.remove(Racklanes.Cursor)
+ end
+RandomSeed: 2237
+UUID: 5d301978-126a-4750-8b7e-52cf317fc385
+3D:
+ Mirror: [false,false,false]

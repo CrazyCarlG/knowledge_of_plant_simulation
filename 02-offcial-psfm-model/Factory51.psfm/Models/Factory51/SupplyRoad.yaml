@@ -1,0 +1,54 @@
+InternalClassType: TwoLaneTrack
+Coordinate3D: [-49,-60,-0.09]
+Name: SupplyRoad
+Origin: 25c99d32-0cf6-4a46-b7d5-ed7252f658f3
+RandomSeed: 1073746264
+TrackPitch: 3
+UUID: 019f044c-ab8a-72cf-9900-026483f57b73
+Width: 6
+3D:
+ $ExtSegments:
+  - 0
+  - [-89.9999999999848,83,0]
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 3
+ DataType: method
+ Value: |+1
+  @.TargetPosition := ?.B.SensorID(1).Position
+  
+  waituntil @.TargetPosition = -1
+  
+  UnloadTruck(@)
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72d4-aa4d-7dedc06e7266
+ Name: Connector41
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-733d-86fb-e92413d3e547
+ $PredFlipped: true
+$Predecessors:
+- 019f044c-ab8a-7344-b88c-cc817677658f
+InheritEntranceExitLockedOnReset: false
+$LaneA:
+ Length: 83
+$LaneB:
+ EntranceCtrl: "self.OnEntrance"
+ EntranceCtrlFront: false
+ EntranceCtrlRear: true
+ Length: 83
+ $Sensors:
+ -
+  Id: 1
+  $CreatedHere: true
+  PositionAbs: 61
+  FromEnd: false
+  Control: ""
+  Destination: null
+  Front: true
+  Rear: false
+  BookPosition: false
+  IfDestination: true
+  LightBarrierMode: false

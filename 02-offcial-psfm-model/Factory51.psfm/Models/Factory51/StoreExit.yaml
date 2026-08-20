@@ -1,0 +1,86 @@
+InternalClassType: Buffer
+Capacity: 1
+Coordinate3D: [-32.05,-19,-0.01]
+ExitCtrl: "self.OnExit"
+Name: StoreExit
+Origin: 3ed203d7-35be-411a-87c0-e4b9f159c208
+ProcTime: 2
+RandomSeed: 1073747549
+UUID: 019f044c-ab8a-72fc-ab9b-4d2a057e4e87
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [0,0,0.01,0,0,0,-1,~]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.96,0.76,1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.76,1]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  self.~.&Unload.executeNewCallChain(1, PickAndPlaceTop, @, ?)
+  self.~.&Unload.executeNewCallChain(2, PickAndPlaceBottom, @, ?)
+  
+  stopuntil @.Empty
+  wait 4
+  @.delete
+ ShowInTooltip: false
+-
+ Name: Unload
+ ID: 2
+ DataType: method
+ Value: |+1
+  param ypos:integer, target:object
+  
+  var box:object
+  
+  for var i := 1 to 2
+  	box := @[2, ypos].cont
+  	box.move(target)
+  	stopuntil box.Location /= @
+  																
+  	box := @[1, ypos].cont
+  	box.move(target)
+  	stopuntil box.Location /= @
+  next
+ ShowInTooltip: false
+-
+ Name: Init
+ ID: 3
+ DataType: method
+ Value: |+1
+  while true
+  	stopuntil not StorageArea.Empty and self.~.Empty
+  
+  	StorageArea.&removeProductTo.executeNewCallChain(1, @) // Order one part for the object which has the Init control
+  		
+  	stopuntil self.~.Full
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72ff-801c-bed336f57bd8
+ Name: Connector64
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7339-a81b-6644a68f4915
+-
+ $Succ: 019f044c-ab8a-7300-9758-8c1a20aff3dd
+ Name: Connector65
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-733a-8bda-3c70da597c08
+$Predecessors:
+- 019f044c-ab8a-7338-8e38-31924f709679
+InheritEntranceExitLockedOnReset: false

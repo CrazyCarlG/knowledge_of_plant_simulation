@@ -1,0 +1,12 @@
+InternalClassType: Workplace
+Coordinate3D: [-1.5,-2,0]
+Name: Workplace1
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073745884
+Station: "Step2"
+UUID: 019f044c-ab8a-7010-af9b-0c453714e937
+WorkerStaysHere: false
+3D:
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

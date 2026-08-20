@@ -1,0 +1,13 @@
+InternalClassType: Interface
+Coordinate3D: [-27,1.3,1]
+ExitStrategyBlocking: true
+Name: BoxEntrance
+Origin: 2d7f401e-14dc-4e50-810c-763be5c915a9
+RandomSeed: 1073746060
+UUID: 019f044c-ab8a-7052-84b6-47164415ea3e
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7051-84c3-8dcc3f7f0652
+ Name: Connector57
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7096-8030-a3d8668a4b78

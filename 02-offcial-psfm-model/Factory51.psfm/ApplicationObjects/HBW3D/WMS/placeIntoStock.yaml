@@ -1,0 +1,71 @@
+InternalClassType: Method
+Coordinate3D: [-10.5,-10.5,0]
+Name: placeIntoStock
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // search for a free place in the warehouse, reseve the place and remember the
+ // pending transport
+ //--------------------------------------------------------------------------------
+ 
+ param Pallet: object := void, product: string := "", quantity: integer := 0 -> boolean
+ 
+ if pallet = void then
+ 	pallet := @
+ end
+ 
+ if product = "" then
+ 	// determine the product and the quantity
+ 	if pallet.InternalClassName="Piece" then
+ 		product := pallet.Name
+ 	else
+ 		product := when pallet.empty then pallet.name else pallet.cont.name
+ 	end
+ end
+ 
+ if quantity = 0 then
+ 	if pallet.InternalClassname="Piece" then
+ 		quantity := 1
+ 	else
+ 		quantity := when pallet.empty then 1 else pallet.numMu
+ 	end
+ end
+ 
+ var Racklane: object
+ var Side: string
+ var Column, Row: integer
+ 
+ getFreePlace(Racklane, Side, Column, Row, Product)
+ 
+ if Racklane = void or Column = 0 or Row = 0 then
+ 	return false
+ else
+ 	// free place found, make a reservation for this place
+ 	reserveBox(Racklane, Side, Column, Row)
+ 	// Set the place in the rack returned above as destination for the pallet
+ 	Pallet.AutomaticRouting := false
+ 	if Side ~= "left"
+ 		Pallet.Destination := RackLane.RackLeft[Column,Row]
+ 	else
+ 		Pallet.Destination := RackLane.RackRight[Column,Row]
+ 	end
+ 
+ 	// Assign product name to user-defined attribute HBW_ProductName
+ 	if pallet.getAttrNo("HBW_ProductName") <= 0 then
+ 		pallet.createAttr("HBW_ProductName", "string")
+ 	end
+ 	pallet.HBW_ProductName := product
+ 
+ 	// Assign quantity to user-defined attribute HBW_ProductQuantity
+ 	if quantity > 1
+ 		if pallet.getAttrNo("HBW_ProductQuantity") <= 0 then
+ 			pallet.createAttr("HBW_ProductQuantity", "integer")
+ 		end
+ 		pallet.HBW_ProductQuantity := quantity
+ 	end
+ 	return true
+ end
+RandomSeed: 2257
+UUID: 2ab0ee07-181d-4a55-8822-4eff97fdf03b
+3D:
+ VisibleGraphicGroups: ["default","User"]

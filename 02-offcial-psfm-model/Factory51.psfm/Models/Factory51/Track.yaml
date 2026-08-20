@@ -1,0 +1,86 @@
+InternalClassType: Track
+Coordinate3D: [26.0163,8.6437,0]
+ExitCtrl: "self.OnExit"
+Length: 10.341592653589792
+Origin: eb7ce655-9157-4e1c-b259-07719da6af27
+RandomSeed: 1073746070
+UUID: 019f044c-ab8a-72bc-975e-ff270c7e4a4b
+Width: 0.2
+3D:
+ BaseHeight: 0.01
+ ExtConfiguration:
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa6dd,0x292929,0x0,0x0,0,0]
+ $ExtSegments:
+  - 0
+  - [0,7.2,0]
+  - [0,90,2,0]
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  --Activating the sensor moves the parts from the
+  --container to the specified destination
+  
+  InterArrival1.newArrival
+  
+  @.stopped := true
+  
+  var Destination:object := PickAndPlace4
+  
+  while not @.Empty
+  	var mu: object := @.cont
+  	if not mu.move(Destination)
+  		stopuntil mu.location /= @ and not Destination.isLoading
+  	end
+  end
+  
+  @.stopped := false
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 2
+ DataType: method
+ Value: |+1
+  if @.BatCharge <= @.BatReserve
+  	@.move(2)
+  else
+  	@.move(1)
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72ed-bf80-6adadb14e849
+ Name: Connector51
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-733e-b2a0-ba9d32ce0f10
+-
+ $Succ: 019f044c-ab8a-72ec-aecb-9af5cd02cb66
+ Name: Connector54
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-733f-934f-6d80074c68cd
+$Predecessors:
+- 019f044c-ab8a-7330-aaab-81162e678305
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 6.7
+ FromEnd: false
+ Control: "self.OnSensor1"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

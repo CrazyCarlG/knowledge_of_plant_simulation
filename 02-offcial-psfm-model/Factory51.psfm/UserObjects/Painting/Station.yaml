@@ -1,0 +1,27 @@
+InternalClassType: Station
+Coordinate3D: [7,-4,0]
+Origin: b6fe5447-f96e-4746-898e-a6b015fb9fcc
+RandomSeed: 1073746531
+UUID: 019f044c-ab8a-7008-b52e-fba6aee80e7a
+3D:
+ ExcludeFromShowContentOfLocation: true
+ ObstacleForWorker: "(None)"
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,3:10.00000000000026]
+ Duration: [Erlang,10,7.0710678118654755]
+$ProcImp:
+ BrokerPath: "~.Broker"
+$FailImp:
+ Active: true
+ Services:
+ - [~,["Repair",1]]
+ BrokerPath: "~.Broker"

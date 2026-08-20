@@ -1,0 +1,63 @@
+InternalClassType: Method
+Coordinate3D: [-10,8,0]
+Name: OneByOne
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // fill the rack lanes one by one
+ // Racklane is void if there was no free place found
+ //--------------------------------------------------------------------------------
+ param byRef Racklane: object, byRef Side: string, byRef Column, Row: integer,
+ 	product: string
+ 
+ var found: boolean    := false
+ var finished: boolean := false
+ 
+ // just to make sure all racklanes have same utilization 
+ var index: integer := lastIndex + 1
+ var count: integer := 1
+ 
+ if index > RackLanes.Dim then
+ 	index := 1
+ end
+ 	
+ repeat
+ 	racklane := RackLanes[index]
+ 
+ 	if racklane = void
+ 		continue
+ 	end
+ 	
+ 	// get the first free place of the left rack
+ 	var rack: object := racklane.OccupancyLeft
+ 	
+ 	rack.setCursor(1,1)
+ 	if rack.find(0) then
+ 		Column    := rack.CursorX
+ 		Row       := rack.CursorY
+ 		Side      := "left"
+ 		found     := true
+ 		lastIndex := Index
+ 	else
+ 		// get the first free place of the right rack
+ 		rack := racklane.OccupancyRight
+ 		
+ 		rack.setCursor(1,1)
+ 		if rack.find(0) then
+ 			Column    := rack.CursorX
+ 			Row       := rack.CursorY
+ 			Side      := "right"
+ 			found     := true
+ 			lastIndex := Index
+ 		else
+ 			Racklane := void
+ 		end
+ 	end
+ 	
+ 	index += 1
+ until found or index>RackLanes.Dim
+RandomSeed: 2246
+UUID: b31273e5-af19-4352-953d-e1e802cbae0d
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

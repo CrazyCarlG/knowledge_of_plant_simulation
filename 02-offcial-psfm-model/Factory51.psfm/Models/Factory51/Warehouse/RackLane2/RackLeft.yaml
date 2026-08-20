@@ -1,0 +1,16 @@
+InternalClassType: Store
+Origin: 019f044c-ab8a-71ce-a759-2733a5426d56
+RandomSeed: 1073751026
+UUID: 019f044c-ab8a-7613-b067-96c01899c1f7
+XDim: 10
+YDim: 5
+3D:
+ AutoGraphicsActive: true
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XZ plane"
+ MUAnimationAreaRelativeCenter: [0,0,0.5]
+ MUAnimationAreaRelativeSize: [1,1]
+ MUAnimationAreaShowMUsAsCuboids: false
+ VisibleGraphicGroups: ["default"]
+InheritEntranceExitLockedOnReset: false

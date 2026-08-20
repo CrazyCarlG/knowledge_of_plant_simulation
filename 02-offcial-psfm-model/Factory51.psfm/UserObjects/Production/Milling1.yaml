@@ -1,0 +1,25 @@
+InternalClassType: Station
+Coordinate3D: [-18,2,0]
+Name: Milling1
+Origin: 6c7732fd-91d1-46d8-b554-ff40f9bfcc9b
+RandomSeed: 1073746296
+UUID: 019f044c-ab8a-706c-a307-13db3d3e1b47
+3D:
+ Rotation: [179.99999999999997,0,0,-1]
+ $Objects:
+ -
+  Origin: 1b78c6e9-5d07-41f8-b22c-f29aac89a9da
+  UUID: 2193892b-2c53-4b32-ba49-15507a5fdd5a
+ -
+  Origin: 2cee7071-36a0-4860-8adf-e9b8716368ac
+  UUID: 6f3478e1-c033-4681-9c71-cc4ff73cab42
+ -
+  Origin: 896d0c42-a732-4b50-8fa8-1a0c48f6892b
+  UUID: 082e38f1-1a56-4ef0-965d-e6ec18f45726
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7027-978e-92930043bf6b
+ Name: Connector6
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70d7-9464-ee1f8d02b152
+InheritEntranceExitLockedOnReset: false

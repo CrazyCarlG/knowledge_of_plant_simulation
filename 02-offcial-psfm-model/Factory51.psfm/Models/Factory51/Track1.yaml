@@ -1,0 +1,95 @@
+InternalClassType: Track
+Coordinate3D: [26.0163,-31.3563,0]
+ExitCtrl: "self.OnExit"
+Length: 102.34746326794897
+Name: Track1
+Origin: eb7ce655-9157-4e1c-b259-07719da6af27
+RandomSeed: 1073746071
+UUID: 019f044c-ab8a-72bd-8a07-fe2425115c59
+Width: 0.2
+3D:
+ BaseHeight: 0.01
+ ExtConfiguration:
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.01],[0.5,-0.01],[0.5,0],[-0.5,0],[-0.5,-0.01]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa6dd,0x292929,0x0,0x0,0,0]
+ $ExtSegments:
+  - 0
+  - [0,8.9585999999999988,0]
+  - [0,-90,2,0]
+  - [0,35.986700000000006,0]
+  - [0,90,2,0]
+  - [0,4.1060999999999979,0]
+  - [0,90,2,0]
+  - [0,90,2,0]
+  - [0,2.148,0]
+  - [0,-90,2,0]
+  - [0,35.440099999999994,0]
+$CustomAttributes:
+-
+ Name: OnSensor
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  --Activating the sensor moves the parts from the
+  --container to the specified destination
+  
+  InterArrival2.newArrival
+  
+  @.stopped := true
+  
+  var Destination:object := PickAndPlace5
+  
+  while not @.Empty
+  	var mu: object := @.cont
+  	if not mu.move(Destination)
+  		stopuntil mu.location /= @ and not Destination.isLoading
+  	end
+  end
+  
+  @.stopped := false
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 2
+ DataType: method
+ Value: |+1
+  if @.BatCharge <= @.BatReserve
+  	@.move(2)
+  else
+  	@.move(1)
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72ea-a5a9-d352b66852f6
+ Name: Connector4
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7340-a166-0e9047c914f0
+-
+ $Succ: 019f044c-ab8a-72eb-8ed7-0958abffd4ef
+ Name: Connector49
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7341-b821-81ccf535a7c9
+$Predecessors:
+- 019f044c-ab8a-732f-a7b2-d643e60d4383
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 52.399999999999991
+ FromEnd: false
+ Control: "self.OnSensor"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

@@ -1,0 +1,20 @@
+InternalClassType: Drain
+Coordinate3D: [-1.3,13.7,2.8]
+EntranceCtrl: "self.OnEntrance"
+Name: QualityControlDrain
+Origin: e19f8c68-c6f7-46e3-ad56-0a2b929319ba
+RandomSeed: 1073746157
+TypeStatOn: true
+UUID: 019f044c-ab8a-7065-a072-d0d70f896dae
+3D:
+ Rotation: [179.99999999999997,0,0,-1]
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 1
+ DataType: method
+ Value: "PlatesInProduction -= 1"
+ ShowInTooltip: false
+$Predecessors:
+- 019f044c-ab8a-70b1-a6b2-335916dd3dcb
+InheritEntranceExitLockedOnReset: false

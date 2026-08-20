@@ -1,0 +1,41 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-6,0]
+Name: setAttributes
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ param part:Object
+ 
+ 
+ var product: string := ""
+ var quantity: integer := 0
+ if product = "" then
+ 	// determine the product and the quantity
+ 	if Part.InternalClassName="Piece" then
+ 		product := Part.Name
+ 	else
+ 		product := when Part.empty then Part.name else Part.cont.name
+ 	end
+ end
+ if quantity = 0 then
+ 	if Part.InternalClassname="Piece" then
+ 		quantity := 1
+ 	else
+ 		quantity := when Part.empty then 1 else Part.numMu
+ 	end
+ end
+ 
+ // Assign product name to user-defined attribute HBW_ProductName
+ if Part.getAttrNo("HBW_ProductName") <= 0 then
+ 	Part.createAttr("HBW_ProductName", "string")
+ end
+ Part.HBW_ProductName := product
+ 
+ // Assign quantity to user-defined attribute HBW_ProductQuantity
+ if quantity > 1
+ 	if Part.getAttrNo("HBW_ProductQuantity") <= 0 then
+ 		Part.createAttr("HBW_ProductQuantity", "integer")
+ 	end
+ 	Part.HBW_ProductQuantity := quantity
+ end
+RandomSeed: 1073755589
+UUID: 24552610-911d-447f-a21c-f77b1732d172

@@ -1,0 +1,21 @@
+InternalClassType: Station
+Coordinate3D: [0,1,0]
+Origin: c8502401-8de5-4a58-946d-e28da342ab6e
+RandomSeed: 1073746437
+RecoveryTime: 2
+UUID: 019f044c-ab8a-7004-b177-ded442fd54f8
+3D:
+ Rotation: [90,0,0,-1]
+ $Objects:
+ -
+  Origin: 61f0d3dc-c6d2-4aaa-81a0-7bc993db32bf
+  UUID: 201486ff-2d57-4fc1-bd55-cebaf770fd26
+ -
+  Origin: 2c06d08d-d44c-4411-a4b9-fd6f1589dd94
+  UUID: 57d1c627-8001-4f03-a0fa-4ddae4b725d9
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7000-9363-d9a99603f500
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7005-8f07-8b09164743da
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,15 @@
+InternalClassType: Interface
+Origin: 019f044c-ab8a-713b-861d-2204950d4b4f
+RandomSeed: 1073747698
+UUID: 019f044c-ab8a-7580-b71c-eef70f646442
+3D:
+ VisibleGraphicGroups: ["connected"]
+$Successors:
+-
+ $Location: c4e47bbf-a090-453c-aa91-4abb6b5ddb4d
+ $Succ: 019f044c-ab8a-72c3-b9be-520aa23c707c
+ Name: Connector9
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7346-949e-e5c28d208406
+$Predecessors:
+- 019f044c-ab8a-758c-93dd-26d23dbdbb94

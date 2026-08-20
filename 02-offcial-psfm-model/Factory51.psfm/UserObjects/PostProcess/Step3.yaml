@@ -1,0 +1,40 @@
+InternalClassType: Station
+Coordinate3D: [0,-6,0]
+ExitLocked: false
+Name: Step3
+Origin: 8534d217-dfea-4b5c-93ed-cd5153e5a386
+RandomSeed: 1073746701
+UUID: 019f044c-ab8a-7017-8a89-f7959332d25d
+3D:
+ Rotation: [90,0,0,-1]
+ $Objects:
+ -
+  Origin: cde0b6b3-bc3b-4922-b837-b6006e5ea943
+  UUID: 1ce73d9c-7b27-4bbd-8797-b758da0c6839
+ -
+  Origin: 9dd51347-b18f-4840-a0a8-2fa0c7df05cc
+  UUID: a505064b-ef56-4a12-8e1c-fca7f36d4648
+ -
+  Origin: 1f0666da-c3ca-45c7-b922-ee8064adf7de
+  UUID: cddf1fa9-2dbd-4428-afbc-6da09e48c13e
+ -
+  Origin: 3d227923-bfb3-4429-b75e-5348120baead
+  UUID: d75c253f-6114-417c-b80e-8d394f65b792
+$CustomAttributes:
+-
+ Name: SetAppearance
+ ID: 7
+ $DataType: method
+ Value: "@._3D.VisibleGraphicGroups := [\"Finished\"]"
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7013-afd7-ad4d1fe73d29
+ Name: Connector6
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-701d-90f5-eafbee907a20
+$Predecessors:
+- 019f044c-ab8a-701a-bfcc-86bd77095552
+InheritEntranceExitLockedOnReset: false
+$FailImp:
+ Active: true
+ BrokerPath: "~.Broker"

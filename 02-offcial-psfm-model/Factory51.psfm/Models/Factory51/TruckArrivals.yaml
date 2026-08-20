@@ -1,0 +1,69 @@
+InternalClassType: Source
+Coordinate3D: [-51,23.2,0]
+EntranceCtrl: "self.OnEntrance"
+Interval: [Normal,15:00,4:00,2:00,30:00]
+Name: TruckArrivals
+Origin: f50787f3-d251-4e3e-84b8-0d45a3bb386b
+Path: 2e93f5f1-43f7-4204-8f3e-d5db214ad671
+RandomSeed: 1073746391
+Start: 40
+UUID: 019f044c-ab8a-72d3-9f1c-899886e3587f
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ ObstacleForWorker: "(None)"
+ Rotation: [90,0,0,-1]
+ ShowContent: false
+ StatesForColoring: 0x10f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,1,0.1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0.04,0.96,0.1]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 1
+ DataType: method
+ Value: |+1
+  // Don't allow more than 2 waiting trucks
+  if SupplyRoad.NumMU > 1
+  	TrucksMissed += 1
+  	@.delete
+  	return
+  end
+  
+  // Load Truck with parts
+  for var i := 1 to @.Capacity
+  	var palette := .UserObjects.MUs.Pallet.create(@)
+  
+  	// Create boxes on each palette
+  	for var j := 1 to palette.Capacity
+  		var container := .UserObjects.MUs.Box.create(palette)
+  	
+  		// Create parts in each box
+  		for var k := 1 to container.Capacity
+  			.UserObjects.MUs.Part.create(container)
+  		next
+  	next
+  	
+  	palette.MUHeightWithContent := palette.MUHeight + palette.ZDim*palette.Cont.MUHeight
+  next
+ ShowInTooltip: false
+-
+ Name: Init
+ ID: 2
+ DataType: method
+ Value: "self.~.Path.create(self.~)"
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72cf-9900-026483f57b73
+ Name: Connector40
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7344-b88c-cc817677658f
+ $SuccFlipped: true
+InheritEntranceExitLockedOnReset: false

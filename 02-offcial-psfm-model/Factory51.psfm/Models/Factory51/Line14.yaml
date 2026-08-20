@@ -1,0 +1,114 @@
+InternalClassType: Conveyor
+AutomaticStop: false
+Coordinate3D: [36.025,10.805,0]
+Length: 17.141592653589793
+Name: Line14
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746492
+Speed: 1
+UUID: 019f044c-ab8a-72e6-ac00-88a94979ce68
+Width: 0.5
+3D:
+ BaseHeight: 0.5
+ ExtConfiguration:
+ -
+  Name: "Legs_1"
+  Extrusion Profile: [[-0.5,-0.05],[-0.4,-0.05],[-0.4,0.05],[-0.5,0.05],[-0.5,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Legs_2"
+  Extrusion Profile: [[0.4,-0.05],[0.5,-0.05],[0.5,0.05],[0.4,0.05],[0.4,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.475,-0.1],[0.475,-0.1],[0.475,0],[-0.475,0],[-0.475,-0.1]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x2d2d2d,0x292929,0x0,0x0,0,9]
+ -
+  Name: "Frame_2"
+  Extrusion Profile: [[0.475,-0.1],[0.5,-0.1],[0.5,0],[0.475,0],[0.475,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ -
+  Name: "Frame_1"
+  Extrusion Profile: [[-0.5,-0.1],[-0.475,-0.1],[-0.475,0],[-0.5,0],[-0.5,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,66]
+ $ExtSegments:
+  - 0
+  - [-180,7,0]
+  - [0,90,1,0]
+  - [0,90,1,0]
+  - [0,7,0]
+$CustomAttributes:
+-
+ Name: OnSensor
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  if @.Cont.Name = "Strawberry"
+  	@.move(PickAndPlace)
+  end
+ ShowInTooltip: false
+-
+ Name: OnSensor1
+ ID: 2
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.move(PickAndPlace1)
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72f0-8c4a-f8460dd5d51c
+ Name: Connector56
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7323-be44-f1a31cfce891
+$Predecessors:
+- 019f044c-ab8a-7313-89a4-7724ccf5daec
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 4.1000000000000281
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: false
+ Rear: true
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true
+-
+ Id: 2
+ $CreatedHere: true
+ PositionAbs: 14.099999999999923
+ FromEnd: false
+ Control: "self.OnSensor"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

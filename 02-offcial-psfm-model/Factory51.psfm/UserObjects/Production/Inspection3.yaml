@@ -1,0 +1,49 @@
+InternalClassType: Station
+Coordinate3D: [0.9,13.4,2.8]
+ExitLocked: false
+Name: Inspection3
+Origin: b6fe5447-f96e-4746-898e-a6b015fb9fcc
+ProcTime: 30
+RandomSeed: 1073746154
+UUID: 019f044c-ab8a-7064-873d-7c84b1052698
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [-0.6,0.3,0.85,0,0,0,-1,~]
+ MUSideToAttach: "Booking Point"
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Vertical"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.9,0.6,0.85]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7065-a072-d0d70f896dae
+ Name: Connector72
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70b1-a6b2-335916dd3dcb
+$Predecessors:
+- 019f044c-ab8a-70c7-9998-9d254ad8788c
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,56.666666666666657]
+ Duration: [Erlang,10,7.0710678118654755]
+$FailImp:
+ Active: true
+ BrokerPath: "Broker"

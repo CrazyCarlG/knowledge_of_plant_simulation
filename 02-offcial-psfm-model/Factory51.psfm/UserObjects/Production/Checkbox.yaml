@@ -1,0 +1,25 @@
+InternalClassType: Checkbox
+Control: "self.OnClicked"
+Coordinate3D: [-7,-17,0.7]
+Label: "Lock Building Graphic Group"
+Origin: 0a7a710a-4dc2-41b0-9f38-522020e303e3
+RandomSeed: 1073748009
+UUID: 019f044c-ab8a-708a-a887-acfdd95ace94
+Value: true
+3D:
+ ExcludeFromShowContentOfLocation: true
+ Rotation: [45,1,0,0]
+ VisibleGraphicGroups: ["default","true"]
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: "_3D.getGraphic(\"Building\").Locked = ?.Value"
+ ShowInTooltip: false
+-
+ Name: Tooltip
+ ID: 2
+ DataType: string
+ Value: "Locks/Unlocks the graphic objects inside the building"
+ ShowInTooltip: false

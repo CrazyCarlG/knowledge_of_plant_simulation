@@ -1,0 +1,60 @@
+InternalClassType: Conveyor
+Coordinate3D: [19.75,8.7,0]
+Origin: fac7a9cd-3e96-4702-8fe9-2141f6ac7faf
+RandomSeed: 1073761541
+UUID: 019f044c-ab8a-7089-89cc-f6c1a4fc04b5
+3D:
+ InternalClassType: SimulationObject
+ Rotation: [270,0,0,-1]
+ $Objects:
+ -
+  InternalClassType: AnimatableExtrusionObject
+  Origin: bcd52f61-4d70-42f5-8fb6-9286107f4845
+  UUID: a1cc4fa8-bab0-41be-acca-647f5a4c47bd
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [32,32]
+ Pixels:
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ - ////////////////////////////////////////////AICgda/C3bKk3bKkAHiX3bKk3bKk3bKkAKbOAICgjMHPAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAHiX0pmHLXOE0pmH0pmH0pmHLXOE7NPL7NPLAICg////////////////////////////////////
+ - ////////////////////////////////////////////3bKk3bKkAFNn0pmHLXOE0pmH0pmH0pmHLXGC7NPL7NPLAICg////////////////////////9vb2qqqqqqqq
+ - ////////////////////////////////////////////3bKk3bKkADhG0pmHLXOE0pmH0pmH0pmHLXCA7NPLpYyEAICgqqqqjo6OrKysq6urmpqaqqqqnp6eqKioqamp
+ - ////////////////////////////////////////////3bKk3bKkADhGr3VjLXOEm2JRqW9dr3VjLXCArJOLrJOLAICgqqqqq6urq6urqqqqqqqqqqqqlpaWq6urrKys
+ - ////////////////fn5+qampsLCwq6urpKSkqqqqsLCwp3ttroJ0ADhGr3VjLXOEr3Vjr3Vjr3VjLW5+rJOLrJOLAICgsbGxqqqqs7OziIiIqqqqqqqqq6ursrKyqKio
+ - ra2tqqqqsLCwo6Ojra2tqqqqqqqqpKSklJSUqqqqqqqqqn9xt4x+N1Rdr3VjLXOEtXxqr3VjsXtrLW5+rJOLsZmRAICgsrKyqqqqrq6urq6urKyst7e3qqqqnJycrKys
+ - rq6ura2trq6uqqqqtLS0sLCwsbGxrq6uqqqqqqqqsLCwuY6ArIJ0jndwr3VjLXOEsHZltHtpooeBLWx8k3pysJePAICgsbGxm5ubra2tra2tsrKysLCwtbW1s7Ozr6+v
+ - r6+vo6OjrKyssrKyt7e3qKiosbGxsbGxtLS0o6OjqqqqroJ0r4N1t4t+tHtpLXOEsHZktHtphHp5LW5+s5qSsJePAICgr6+vqqqqqqqqoqKir6+vtbW1jo6Os7OzpaWl
+ - rq6ura2turq6uLi4xcXFvLy8q6urcnJysrKys7OzsrKyp4R6r4N1lmtdr3VjLXCAu4Nxtn1rZ3h7LWd1y7OrzrauUZevr6+vqqqqu7u7zMzMvLy8r6+vrq6ugICArKys
+ - r6+vra2tu7u7wcHBuLi4y8vLy8vLvb29q6urq6urnp6eTYqiuY6Atop8r3VjLWd1r3VjsHZkTY6jLV1pzLSs1Ly0cKq+ycnJxcXFwMDAjo6OrKysq6urrq6urq6urq6u
+ - vr6+wMDAvLy8tLS0kpKSvLy8vb29t7e3ubm5fX19w8PDAICgsoZ4zaKUw4p4LUlPsXhmx499VZqyLV5qt56W07qycqe2t7e3tLS0t7e3uLi4qqqqsrKyt7e3tbW1rKys
+ - t7e3x8fHy8vLrKysw8PDwcHBtLS0tbW1t7e3s7Ozzs7OAICgy6CSxJmLqnBfLWp4u4JwpmxaAICgLVJb0biwzrWtapqmuLi4tbW1s7Ozx8fHx8fHvb29w8PDm5ubt7e3
+ - uLi41dXVq6urgYGBra2tzc3Nqqqqv7+/rq6ux8fHu7u7AICgsIR2sIR2w4t5LXOEx458sXdmAICgLVNc5s3GxKyknK+3rKysycnJra2ty8vLrKysvb29ra2tzs7Oo6Oj
+ - sLCwrq6utra2y8vLx8fHqqqqxsbGsbGxxcXFoKCgx8fHAICgsIR2zaOVt35sLXOEsHZkxIt5AICgLVNcyLCoz7evr7i+sLCwrKyszc3NkpKSu7u7y8vLwcHBvLy8qqqq
+ - 0dHRvr6+vr6+0tLSkJCQurq62dnZvLy8q6ur2dnZkZGRAICgz6SXu5CCtHtpLXOEomhWtnxqAICgLVNcpIuDwKign6Olu7u7u7u7vb29wsLCt7e3qampysrKqqqqwcHB
+ - t7fH1dXVvLy80dHRq6urvb291NTUrKystLS0zMzMxsbGAICgroJ01KmbvYRyLW5+w4p4uX9tAICgLV9s1Ly0sJePurq6zs7OmpqawMDAx8fHxMTE1NTUtLS0wcHByMjI
+ - xsbGycnJzs7O2dnZycnJ09PTlJSUxsbGvb29z8/Prq6uAICgroJ0u4+CtHtpMWRvv4d10pmHAICgLV9swKih1b21z8/PwMDAzs7Oqqqqrq6urKyszs7Oz8/Pzc3N2dnZ
+ - xcXF19fXwMDA3d3dy8vL0tLSzMzMxcXFzs7OsbGxra2tAHeU16yesYV30pmHQUA90pmHtXxqAICgWD837NPLv6eflpaWqqqqwMDAwcHBy8vLycnJzs7OysrK19fXzc3N
+ - zs7Oubm5zs7OwcHB1dXVzMzMu7u7zs7OwMDAzs7Ow8PDADhG2K6gv5SGnnxzUDcvUjkxVTw0AICgfmVdkXhwUzoyvLy8zs7Ov7+/1NTUzMzMxcXFzc3Nvr6+zs7OwcHB
+ - vb29s7Ozu7u7q6ur0NDQzs7Ozs7Ozs7OwcHBz8/Pzs7OADhGhYWFlJSUgmlhTTQsUTgwVDszAICgq1Ir0biwtZ2VyMjIzs7Os7Ozzs7Oy8vLwsLCzs7OSEji0NDQzMzM
+ - zs7Ora2tz8/Pzs7Or6+vz8/PvLy8goLKzs7Ozs7Ourq6GUpX3bKkKioqyGEyq1Irt35tLXOEAICgLT5A7NPL5s7GuLi4gICAx8fH2trazs7OycnJ19fXzs7OvLy8r6+v
+ - 5eXlzs7OysrKuLi409PTzc3Ntra2zs7Ozs7OsbGx29vbzs7O2K2fAICg0rmy07uzu6Ob7NPLAICg5MvDsZiQJ6TCycnNsrKyzs7OuLi4sbGxz8/Pzs7OzMzMpaWlsLCw
+ - zs7Ozs7Ovr6+tbW1zs7Ozs7Ourq6vb29zs7Ozs7Ov7+/urq6zs7Ozc3Nu6ObyLCo6dDI6dHJAICgxsbJ0dHRysrKwMDAy8vLt7e3ysrKu7u7zMzMu7u7xcXFwcHBzs7O
+ - 2NjYzs7Oy8vLtra2wcHBzs7Ourq6ycnJwcHB0NDQzs7OAMz/t7e3vLy8LazLzs7Ox8fHtLS0AICgzs7OxsbGv7+/zc3NkJCQzs7Ozs7Ovb29ycnJzs7Ozs7Otra2wsLC
+ - xsbGtLS0z8/Pz8/Pzs7Ozs7Ora2tzMzMzs7Ozs7Ozs7OwMDAgYHz0NDQzs7Oz8/Pzc3NtbW1zs7Ozs7Ozs7Ozs7OtLS0x8fHzs7Ozs7OysrKysrKxcXFx8fHzs7Ozs7O
+ - zs7Ozs7Ozs7Ovr6+y8vLubm529vbzs7OzMzMzs7Ozc3Nr6+vsbGxzs7Ozs7Ozs7OwcHBzMzMs7Oz1dXVzs7OzMzMzs7Ozs7OrKysuLi4zs7Ozs7Ozs7Ow8PDzMzMvr6+
+ - zs7OzMzMzs7Ozs7Oy8vLcXHZsLCw39/fzs7Ozs7Ozs7Ozs7Ozc3Nr6+vkZGR3Nzczs7Ozs7O0tLSzs7Ourq6w8PDwcHB19fXzs7OysrKzs7Ot7e3zs7OyMjItLS03d3d
+ - tra2zs7Oy8vLzs7Ozs7Ozs7Ozs7OxMTEtLS0w8PDz8/P0dHRzs7Ow8PDzs7Otra2zs7Oc3PaxsbGsbGxubm51dXVzs7Ozs7Ozc3Nzs7O0NDQzs7OxsbGrKysh4eHysrK
+ - wMDAra2turq6vb29zc3NkJCQzs7Ora2tzs7OtbW1zs7OsrKyzs7Oubm5zs7Or6+vrq6uhoaG5OTk0tLSzs7Ow8PDzs7O09PTzs7Ov7+/zs7OysrKzs7O0NDQysrKv7+/
+-
+$Successors:
+-
+ $Succ: 019f044c-ab8a-705e-8ce0-4e9895bb0ef6
+ Name: Connector65
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70b2-a32f-c89228425695
+$Predecessors:
+- 019f044c-ab8a-70c3-b53f-b61e89280829

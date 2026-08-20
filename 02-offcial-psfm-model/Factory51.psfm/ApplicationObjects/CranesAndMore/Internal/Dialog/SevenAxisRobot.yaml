@@ -1,0 +1,1277 @@
+InternalClassType: Dialog
+ArgumentForApply: "Apply"
+ArgumentForClose: "Close"
+ArgumentForOpen: "Open"
+CallbackMethod: "self.Callback"
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,-3,0]
+CreateIn3D: false
+DestructorCtrl:
+DialogX: -1
+DialogY: -1
+DragDropCtrl:
+InitCtrl:
+Label: ""
+Locked: false
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: SevenAxisRobot
+OpenCtrl:
+OpenModal: false
+PlausibilityCtrl:
+RandomSeed: 3958
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowStandardButtons: true
+UUID: 9496f9a5-3c9d-45dd-8169-e784a7854866
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/v7+/v7+/v7+/v7+/v7+/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/wAA/v7+/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon2"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////////////////////////gICA////////////////////////gICA////////////////////////gICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICAAAAAgICAvr6+AAAA////vr6+gICAAAAAgICAvr6+AAAA////vr6+AAAAgICAvr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+gICA////////////////////////////////////////////////////////////////////////////////gICAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAvr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////AAAA////AAAAAAAA////////vr6+vr6+gICA////////vr6+AAAAAAAAvr6+AAAAAAAAvr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAA////gICAAAAAgICA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAAgICA////AAAAAAAA////////////vr6+vr6+gICA////////vr6+AAAAgICAvr6+AAAAAAAAgICAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////gICAAAAA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICA////////////////////////////////////////vr6+vr6+AAAA////////vr6+AAAAgICAAAAAgICAvr6+AAAAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gICA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+gICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+AAAAgICAAAAAvr6+vr6+AQEBvr6+vr6+////vr6+AQEBAQEBgICAAQEBAAAAvr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1388591464
+ DataType: method
+ Value: |+1
+  param action : string
+  
+  var Dialog	: object
+  var AppObj	: object
+  var text	: string
+  
+  dialog := self.~
+  AppObj := dialog.openedBy
+  if AppObj /= void
+  	switch action
+  	case "Open"
+  
+  	case "Apply"
+  		dialog.dialogApply
+  		dialog.setStatisticValues
+  
+  	case "Close"
+  		AppObj.openedDialog := void
+  		Dialog.~.deleteObject
+  
+  	case "openLocation"
+  		AppObj.~.openDialog
+  
+  	case "openOrigin"
+  		if AppObj.Origin /= void
+  			AppObj.Origin.openDialog
+  		end
+  
+  	case "gotoOrigin"
+  		if AppObj.origin/= void
+  			AppObj.origin.openDialog
+  			dialog.close( false )
+  		end
+  
+  	case "openClass"
+  		if AppObj.class /= void
+  			AppObj.class.openDialog
+  		end
+  
+  	case "gotoClass"
+  		if AppObj.class /= void
+  			AppObj.class.openDialog
+  			dialog.close( false )
+  		end
+  
+  	case "refresh"
+  		Dialog.dialogInit
+  
+  	case "helpObject"
+  		.ApplicationObjects.CranesAndMore.SevenAxisRobot_Documentation.show
+  
+  	case "helpVersion"
+  		var lib : string
+  		var vers : string
+  		var libPath : string
+  		rootfolder.getLibraryInfo( lib, vers, text, libPath )
+  		text := to_str( "Plant Simulation ", lib, strChr(10), " Version: ", vers, strChr(10))
+  		messageBox( text, 1, 4)
+  
+  	case "name"
+  		?.setCheckBox("Name_inherit", false)
+  
+  	case "label"
+  		?.setCheckBox("label_inherit", false)
+  
+  	case "RailLength"
+  		?.setCheckBox("RailLength_inherit", false)
+  
+  	case "RobotSpeed"
+  		?.setCheckBox("DynamicsOfRobot_inh", false)
+  
+  	case "RotatingSpeedSecond"
+  		?.setCheckBox("RotatingSpeedSecond_inherit", false)
+  
+  	case "RotatingSpeedThird"
+  		?.setCheckBox("RotatingSpeedThird_inherit", false)
+  
+  	case "RotatingSpeedFourth"
+  		?.setCheckBox("RotatingSpeedFourth_inherit", false)
+  
+  	case "RotatingSpeedFifth"
+  		?.setCheckBox("RotatingSpeedFifth_inherit", false)
+  
+  	case "RotatingSpeedSixth"
+  		?.setCheckBox("RotatingSpeedSixth_inherit", false)
+  
+  	case "RotatingSpeedSeventh"
+  		?.setCheckBox("RotatingSpeedSeventh_inherit", false)
+  
+  	case "Dynamics"
+  		if dialog.getCheckBox("DynamicsOfRobot_inh")
+  			AppObj.dynamics := true
+  		else
+  			AppObj.dynamics := false
+  		end
+  
+  	case "RobotAcceleration"
+  		?.setCheckBox("DynamicsOfRobot_inh", false)
+  
+  	case "RobotDeceleration"
+  		?.setCheckBox("DynamicsOfRobot_inh", false)
+  
+  	case "dwellTime"
+  		?.setCheckBox("MaximumDwellTime_inherit", false)
+  
+  	case "dampingtime"
+  		?.setCheckBox("DampingTime_inherit", false)
+  
+  	case "driveHome"
+  		var flag := dialog.getCheckbox("driveHome_chk")
+  		dialog.setSensitive("Homeposition_txt", flag)
+  		dialog.setSensitive("Homeposition_inp", flag)
+  
+  	case "homeposition"
+  		AppObj.HomePosition = dialog.getValue("Homeposition_inp")
+  
+  	case "side"
+  		AppObj.ObjList.openDialogBox
+  
+  	case "DefineFailures"
+  		AppObj.openDialog
+  
+  	else
+  		messageBox( "Unknown dialog action "+action, 1, 1 )
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: openedBy
+ ID: 1388754826
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: dialogInit
+ ID: 1388757887
+ DataType: method
+ Value: |+1
+  var l : length := 1;		var l_unit := getUnit( l )
+  var s : speed := 1;			var s_unit := getUnit( s )
+  var a : acceleration := 1;	var a_unit := getUnit( a )
+  
+  
+  
+  var dialog := self.~
+  var AppObj := dialog.openedBy
+  //Axes
+  var Base := AppObj._3D.getObject("Base")
+  var Second := Base.getObject("Z")
+  var Third := Second.getObject("Y1")
+  var Fourth := Third.getObject("Y2")
+  var Fifth := Fourth.getObject("Z")
+  var Sixth := Fifth.getObject("Y")
+  var Seventh := Sixth.getObject("Z")
+  
+  var inherit:boolean
+  
+  
+  dialog.setCaption( "name_inp", AppObj.name )
+  AppObj.getAttribute("name", inherit)
+  Dialog.setCheckBox("name_inherit", inherit)
+  
+  Dialog.setCaption( "label_inp", AppObj.label )
+  AppObj.getAttribute("label", inherit)
+  Dialog.setCheckBox("label_inherit", inherit)
+  
+  Dialog.setCaption("RailLength_inp", to_str(AppObj.railLength))
+  Dialog.setCaption("RailLength_unit", l_unit )
+  AppObj.getAttribute("RailLength", inherit)
+  Dialog.setCheckBox("RailLength_inherit", inherit)
+  
+  if AppObj.Origin = void
+  	//If Dialog is oppened in Superclass, DynamicsOfRobot cant inherit
+  	Dialog.setCheckBox("DynamicsOfRobot_inh", AppObj.dynamics)
+  else
+  	//Compare values with superclass, if they match Checkbox isn't set
+  	var origin := AppObj.Origin._3D.getObject("Base")
+  	if Base.JointVelocity = origin.JointVelocity and Base.JointAcceleration = origin.JointAcceleration and Base.JointDeceleration = origin.JointDeceleration
+  		AppObj.dynamics := true
+  		Dialog.setCheckBox("DynamicsOfRobot_inh", AppObj.dynamics)
+  	end
+  end
+  
+  Dialog.setCaption("RobotSpeed_inp", to_str( num_to_speed(Base.JointVelocity)))
+  Dialog.setCaption("RobotSpeed_unit", s_unit )
+  Base.getAttribute("JointVelocity", inherit)
+  
+  
+  Dialog.setCaption( "RobotAcceleration_inp", to_str( num_to_acceleration(Base.JointAcceleration )))
+  Dialog.setCaption( "RobotAcceleration_unit", a_unit )
+  Base.getAttribute("JointAcceleration", inherit)
+  
+  Dialog.setCaption( "RobotDeceleration_inp", to_str( num_to_acceleration(Base.JointDeceleration )))
+  Dialog.setCaption( "RobotDeceleration_unit", a_unit )
+  Base.getAttribute("JointDeceleration", inherit)
+  
+  //Axes
+  Dialog.setCaption("RotatingSpeedSecond_inp", to_str( Second.JointVelocity))
+  Second.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedSecond_inherit", inherit)
+  
+  Dialog.setCaption("RotatingSpeedThird_inp", to_str( Third.JointVelocity))
+  Third.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedThird_inherit", inherit)
+  
+  Dialog.setCaption("RotatingSpeedFourth_inp", to_str( Fourth.JointVelocity))
+  Fourth.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedFourth_inherit", inherit)
+  
+  Dialog.setCaption("RotatingSpeedFifth_inp", to_str( Fifth.JointVelocity))
+  Fifth.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedFifth_inherit", inherit)
+  
+  Dialog.setCaption("RotatingSpeedSixth_inp", to_str( Sixth.JointVelocity))
+  Sixth.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedSixth_inherit", inherit)
+  
+  Dialog.setCaption("RotatingSpeedSeventh_inp", to_str( Seventh.JointVelocity))
+  Seventh.getAttribute("JointVelocity", inherit)
+  dialog.setCheckBox("RotatingSpeedSeventh_inherit", inherit)
+  
+  
+  Dialog.setCaption( "dampingTime_inp", to_str( AppObj.DampingTime ))
+  AppObj.getAttribute("DampingTime", inherit)
+  dialog.setCheckBox("DampingTime_inherit", inherit)
+  
+  Dialog.setCaption( "MaximumDwellTime_inp", to_str( AppObj.MaximumDwellTime ))
+  AppObj.getAttribute("MaximumDwellTime", inherit)
+  dialog.setCheckBox("MaximumDwellTime_inherit", inherit)
+  
+  Dialog.setCheckbox( "driveHome_chk", AppObj.drivingHome)
+  if AppObj.HomePosition=void
+  	Dialog.setCaption( "Homeposition_inp", "")
+  else
+  	Dialog.setCaption( "Homeposition_inp", makePathRelative(AppObj.HomePosition, AppObj.~))-- PS 29.04.2015
+  end
+  
+  Dialog.setSensitive("Homeposition_txt", AppObj.DrivingHome)
+  Dialog.setSensitive("Homeposition_inp", AppObj.DrivingHome)
+  dialog.setStatisticValues
+ ShowInTooltip: false
+-
+ Name: dialogApply
+ ID: 1388891963
+ DataType: method
+ Value: |+1
+  var dialog	: object
+  var AppObj	: object
+  
+  dialog := self.~
+  AppObj := dialog.openedBy
+  var Base := AppObj._3D.getObject("Base")
+  var Second := Base.getObject("Z")
+  var Third := Second.getObject("Y1")
+  var Fourth := Third.getObject("Y2")
+  var Fifth := Fourth.getObject("Z")
+  var Sixth := Fifth.getObject("Y")
+  var Seventh := Sixth.getObject("Z")
+  
+  if AppObj/=void
+  
+  	if ?.getCheckBox("Name_inherit")
+  		AppObj.inheritAttribute("name")
+  		dialog.setCaption("name_inp", AppObj.name)
+  	else
+  		AppObj.Name := dialog.getValue("Name_inp")
+  	end
+  
+  	if ?.getCheckBox("Label_inherit")
+  		AppObj.inheritAttribute("label")
+  		dialog.setCaption("label_inp", AppObj.label)
+  	else
+  		AppObj.label := dialog.getValue("label_inp")
+  	end
+  
+  	if ?.getCheckBox("RailLength_inherit")
+  		AppObj.inheritAttribute("RailLength")
+  		dialog.setCaption("RailLength_inp", to_str(AppObj.RailLength))
+  	else
+  		AppObj.RailLength := str_to_length(dialog.getValue("RailLength_inp"))
+  
+  	end
+  
+  	if ?.getCheckBox("DynamicsOfRobot_inh")
+  		Base.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RobotSpeed_inp", to_str(num_to_speed( Base.JointVelocity)))
+  		Base.inheritAttribute("JointAcceleration")
+  		dialog.setCaption("RobotAcceleration_inp", to_str( num_to_acceleration(Base.JointAcceleration)))
+  		Base.inheritAttribute("JointDeceleration")
+  		dialog.setCaption("RobotDeceleration_inp", to_str( num_to_acceleration(Base.JointDeceleration)))
+  	else
+  		Base.JointVelocity := str_to_speed(dialog.getValue("RobotSpeed_inp"))
+  		Base.JointAcceleration :=  str_to_acceleration(dialog.getValue("RobotAcceleration_inp"))
+  		Base.JointDeceleration :=  str_to_acceleration(dialog.getValue("RobotDeceleration_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedSecond_inherit")
+  		Second.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedSecond_inp", to_str(Second.JointVelocity))
+  	else
+  		Second.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedSecond_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedThird_inherit")
+  		Third.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedThird_inp", to_str(Third.JointVelocity))
+  	else
+  		Third.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedThird_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedFourth_inherit")
+  		Fourth.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedFourth_inp", to_str(Fourth.JointVelocity))
+  	else
+  		Fourth.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedFourth_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedFifth_inherit")
+  		Fifth.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedFifth_inp", to_str(Fifth.JointVelocity))
+  	else
+  		Fifth.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedFifth_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedSixth_inherit")
+  		Sixth.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedSixth_inp", to_str(Sixth.JointVelocity))
+  	else
+  		Sixth.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedSixth_inp"))
+  	end
+  
+  	if ?.getCheckBox("RotatingSpeedSeventh_inherit")
+  		Seventh.inheritAttribute("JointVelocity")
+  		dialog.setCaption("RotatingSpeedSeventh_inp", to_str(Seventh.JointVelocity))
+  	else
+  		Seventh.JointVelocity :=  str_to_num(dialog.getValue("RotatingSpeedSeventh_inp"))
+  	end
+  
+  	if ?.getCheckBox("DampingTime_inherit")
+  		AppObj.inheritAttribute("DampingTime")
+  		dialog.setCaption("dampingTime_inp", to_str(AppObj.DampingTime))
+  	else
+  		AppObj.DampingTime :=  str_to_time(dialog.getValue("dampingTime_inp"))
+  	end
+  
+  	if ?.getCheckBox("MaximumDwellTime_inherit")
+  		AppObj.inheritAttribute("MaximumDwellTime")
+  		dialog.setCaption("MaximumDwellTime_inp", to_str(AppObj.MaximumDwellTime))
+  	else
+  		AppObj.MaximumDwellTime :=  str_to_time(dialog.getValue("MaximumDwellTime_inp"))
+  	end
+  
+  	if ?.getCheckbox("driveHome_chk") and dialog.getValue("Homeposition_inp") /= ""
+  		AppObj.drivingHome := true
+  		var str := dialog.getValue("Homeposition_inp")
+  		if strLpos(".",str)=1   -- absolute path
+  			AppObj.HomePosition := when existsObject(str) then str_to_obj(str) else void
+  		else  -- relative path
+  			AppObj.HomePosition := AppObj.~.extendPath(str)
+  		end
+  	else
+  		AppObj.HomePosition := void
+  	end
+  	AppObj.ParametrizeRobot
+  end
+ ShowInTooltip: false
+-
+ Name: setStatisticValues
+ ID: 1389001957
+ DataType: method
+ Value: |+1
+  var dialog	: object
+  var tab		: table
+  var robot	: object
+  
+  dialog := self.~
+  robot := Dialog.openedBy
+  
+  if robot /= void
+  	tab.create
+  	dialog.setCaption( "failed_val",	to_str( round( robot.statFailPortion*100, 2 )))
+  	dialog.setCaption( "paused_val",		to_str( round( robot.statPausingPortion*100, 2 )))
+  	dialog.setCaption( "unplaned_val",	to_str( round( robot.statUnplannedPortion*100, 2 )))
+  	dialog.setCaption( "relEmpty_val",	to_str( round( robot.StatRelativeEmptyPortion*100, 2 )))
+  	dialog.setCaption( "relOccupation_val",	to_str( round( robot.StatRelativeOccupation*100, 2 )))
+  	dialog.setCaption( "setting-up_val",	to_str( round( robot.StatSetupPortion*100, 2 )))
+  	dialog.setCaption( "stopped_val",	to_str( round( robot.StatStoppedPortion*100, 2 )))
+  	robot.state.getStatisticsTable( tab )
+  	var DurationColumn:= 5
+  	var drivingEmpty := 0
+  	var drivingFull := 0
+  	var loading := 0
+  	var unloading := 0
+  	var blockedSet := false
+  	for var i := 1 to tab.YDim
+  		switch tab[1,i]
+  		case "driveto"
+  			dialog.setCaption( "drivingEmpty_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  			drivingEmpty :=  round( tab[DurationColumn, i ], 2 )
+  
+  		case "loading"
+  			dialog.setCaption( "loading_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  			loading :=  round( tab[DurationColumn, i ], 2 )
+  
+  		case "drivefull"
+  			dialog.setCaption( "drivingLoaded_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  			drivingFull :=  round( tab[DurationColumn, i ], 2 )
+  
+  		case "waiting"
+  			dialog.setCaption( "waiting_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "unloading"
+  			dialog.setCaption( "unloading_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  			unloading :=  round( tab[DurationColumn, i ], 2 )
+  
+  		case "damping"
+  
+  		case "failed"
+  			dialog.setCaption( "failed_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "blocked"
+  			blockedSet := true
+  			dialog.setCaption( "blocked_val",	to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		end
+  	next
+  	if not blockedSet
+  		dialog.setCaption( "blocked_val",	to_str(0))
+  	end
+  	dialog.setCaption( "working_val",	to_str(drivingEmpty + drivingFull + loading + unloading))
+  else
+  	dialog.setCaption( "working_val",	"0" )
+  	dialog.setCaption( "waiting_val",	"0" )
+  	dialog.setCaption( "blocked_val",	"0" )
+  	dialog.setCaption( "failed_val",	"0" )
+  	dialog.setCaption( "pause_val",		"0" )
+  	dialog.setCaption( "unplanned_val",	"0" )
+  
+  	dialog.setCaption( "VehWaiting_val",		"0" )
+  	dialog.setCaption( "VehDriving_val",		"0" )
+  	dialog.setCaption( "VehLoading_val",		"0" )
+  	dialog.setCaption( "VehTransporting_val",	"0" )
+  	dialog.setCaption( "VehUnloading_val",		"0" )
+  	dialog.setCaption( "vehDamping_val",		"0")
+  	dialog.setCaption( "vehdriveHome_val",		"0")
+  	dialog.setCaption( "vehfailed_val",			"0")
+  
+  end
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 1389085983
+ DataType: method
+ Value: |+1
+  var dialog	: object
+  var tab		: table
+  var csc		: object
+  
+  dialog := self.~
+  csc := Dialog.openedBy
+  
+  if csc /= void
+  	tab.create
+  	dialog.setCaption( "working_val",	to_str( round( csc.statWorkingPortion*100, 2 )))
+  	dialog.setCaption( "waiting_val",	to_str( round( csc.statWaitingPortion*100, 2 )))
+  	dialog.setCaption( "blocked_val",	to_str( round( csc.statBlockingPortion*100, 2 )))
+  	dialog.setCaption( "failed_val",	to_str( round( csc.statFailPortion*100, 2 )))
+  	dialog.setCaption( "pause_val",		to_str( round( csc.statPausingPortion*100, 2 )))
+  	dialog.setCaption( "unplanned_val",	to_str( round( csc.statUnplannedPortion*100, 2 )))
+  
+  	dialog.setCaption( "VehWaiting_val", "0" )
+  	dialog.setCaption( "VehDriving_val", "0" )
+  	dialog.setCaption( "VehLoading_val", "0" )
+  	dialog.setCaption( "VehTransporting_val", "0" )
+  	dialog.setCaption( "VehUnloading_val", "0" )
+  	dialog.setCaption( "vehDamping_val", "0")
+  	dialog.setCaption( "vehfailed_val", "0")
+  end
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "navigate_mnu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "openLoc_mnu"
+  Caption: "Open Location"
+  CallbackArgument: "openLocation"
+ -
+  Type: Menu
+  Name: "openOrigin_mnu"
+  Caption: "Open Origin"
+  CallbackArgument: "openOrigin"
+ -
+  Type: Menu
+  Name: "gotoOrigin_mnu"
+  Caption: "Goto Origin"
+  CallbackArgument: "gotoOrigin"
+ -
+  Type: Menu
+  Name: "openClass_mnu"
+  Caption: "Open Class"
+  CallbackArgument: "openClass"
+ -
+  Type: Menu
+  Name: "gotoClass_mnu"
+  Caption: "Goto Class"
+  CallbackArgument: "gotoClass"
+-
+ Type: Menu
+ Name: "view_mnu"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "refresh_mnu"
+  Caption: "Refresh"
+  CallbackArgument: "refresh"
+-
+ Type: Menu
+ Name: "help_mnu"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "helpObject_mnu"
+  Caption: "Help on Object"
+  CallbackArgument: "helpObject"
+ -
+  Type: Menu
+  Name: "helpVersion_mnu"
+  Caption: "Version"
+  CallbackArgument: "helpVersion"
+-
+ Type: StaticText
+ Name: "name_txt"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "name_inp"
+ Caption: "VerfahrwegControls"
+ Rect: [10,0,0,0]
+ CallbackArgument: "name"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "name_inherit"
+ Rect: [35,0,0,0]
+ InheritanceBox: true
+-
+ Type: StaticText
+ Name: "label_txt"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "label_inp"
+ Rect: [10,1,0,0]
+ CallbackArgument: "label"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "label_inherit"
+ Rect: [35,1,0,0]
+ InheritanceBox: true
+-
+ Type: TabControl
+ Name: "tabCtrl"
+ Rect: [0,2,74,17]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Robot_attr_tab"
+  Caption: "Attributes"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "RailLength_txt"
+   Caption: "Rail length:"
+   Rect: [2,0,0,0]
+  -
+   Type: EditText
+   Name: "RailLength_inp"
+   Rect: [13,0,12,0]
+   CallbackArgument: "RailLength"
+   DataType: 9
+   Password: false
+  -
+   Type: CheckBox
+   Name: "RailLength_inherit"
+   Rect: [27,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RailLength_unit"
+   Caption: "m"
+   Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "DynamicsOfRobot"
+   Rect: [0,1,70,5]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "DynamicsOfRobot_txt"
+    Caption: "Dynamics of Robot"
+   -
+    Type: CheckBox
+    Name: "DynamicsOfRobot_inh"
+    Rect: [16,0,0,0]
+    CallbackArgument: "Dynamics"
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RobotSpeed_txt"
+    Caption: "Robot speed:"
+    Rect: [0,1,0,0]
+   -
+    Type: EditText
+    Name: "RobotSpeed_inp"
+    Rect: [20,1,12,0]
+    CallbackArgument: "RobotSpeed"
+    DataType: 9
+    Password: false
+   -
+    Type: StaticText
+    Name: "RobotSpeed_unit"
+    Caption: "m/s"
+    Rect: [33,1,0,0]
+   -
+    Type: StaticText
+    Name: "RobotAcceleration_txt"
+    Caption: "Robot acceleration:"
+    Rect: [0,2,0,0]
+   -
+    Type: EditText
+    Name: "RobotAcceleration_inp"
+    Rect: [20,2,12,0]
+    CallbackArgument: "RobotAcceleration"
+    DataType: 9
+    Password: false
+   -
+    Type: StaticText
+    Name: "RobotAcceleration_unit"
+    Caption: "m/s"
+    Rect: [33,2,0,0]
+   -
+    Type: StaticText
+    Name: "RobotDeceleration_txt"
+    Caption: "Robot deceleration:"
+    Rect: [0,3,0,0]
+   -
+    Type: EditText
+    Name: "RobotDeceleration_inp"
+    Rect: [20,3,12,0]
+    CallbackArgument: "RobotDeceleration"
+    DataType: 9
+    Password: false
+   -
+    Type: StaticText
+    Name: "RobotDeceleration_unit"
+    Caption: "m/s"
+    Rect: [33,3,0,0]
+  -
+   Type: StaticText
+   Name: "dampingTime_txt"
+   Caption: "Damping time:"
+   Rect: [2,7,0,0]
+  -
+   Type: EditText
+   Name: "dampingTime_inp"
+   Rect: [23,7,12,0]
+   CallbackArgument: "dampingtime"
+   DataType: 10
+   Password: false
+  -
+   Type: CheckBox
+   Name: "DampingTime_inherit"
+   Rect: [37,7,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "MaximumDwellTime_txt"
+   Caption: "Maximum dwell time"
+   Rect: [2,8,0,0]
+  -
+   Type: EditText
+   Name: "MaximumDwellTime_inp"
+   Rect: [23,8,12,0]
+   CallbackArgument: "dwellTime"
+   DataType: 10
+   Password: false
+  -
+   Type: CheckBox
+   Name: "MaximumDwellTime_inherit"
+   Rect: [37,8,0,0]
+   InheritanceBox: true
+  -
+   Type: CheckBox
+   Name: "driveHome_chk"
+   Caption: "Take preferred position"
+   Rect: [2,9,0,0]
+   CallbackArgument: "driveHome"
+  -
+   Type: StaticText
+   Name: "Homeposition_txt"
+   Caption: "Preferred position:"
+   Rect: [27,9,0,0]
+  -
+   Type: EditText
+   Name: "Homeposition_inp"
+   Rect: [44,9,24,0]
+   CallbackArgument: "homeposition"
+   DataType: 1
+   Password: false
+ -
+  Type: TabPage
+  Name: "Robot_Axes"
+  Caption: "Axes"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "Second"
+   Caption: "Second"
+   Rect: [0,0,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSecond_txt"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedSecond_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedSecond"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedSecond_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSecond_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "Third"
+   Caption: "Third"
+   Rect: [0,2,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedThird_txt"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedThird_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedThird"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedThird_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedThird_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "Fourth"
+   Caption: "Fourth"
+   Rect: [0,4,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedFourth_txt"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedFourth_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedFourth"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedFourth_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedFourth_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "Fifth"
+   Caption: "Fifth"
+   Rect: [0,6,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedFifth"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedFifth_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedFifth"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedFifth_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedFifth_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "Sixth"
+   Caption: "Sixth"
+   Rect: [0,8,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSixth_txt"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedSixth_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedSixth"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedSixth_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSixth_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+  -
+   Type: GroupBox
+   Name: "Seven"
+   Caption: "Seven"
+   Rect: [0,10,40,2]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSeventh"
+    Caption: "Rotating Speed:"
+   -
+    Type: EditText
+    Name: "RotatingSpeedSeventh_inp"
+    Rect: [16,0,10,0]
+    CallbackArgument: "RotatingSpeedSeventh"
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "RotatingSpeedSeventh_inherit"
+    Rect: [27,0,0,0]
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "RotatingSpeedSeventh_unit"
+    Caption: "°/s"
+    Rect: [31,0,0,0]
+ -
+  Type: TabPage
+  Name: "Robot_Statistics"
+  Caption: "Statistics"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Working_txt"
+   Caption: "Working:"
+   Rect: [0,1,0,0]
+  -
+   Type: StaticText
+   Name: "working_val"
+   Caption: "100.00"
+   Rect: [19,1,0,0]
+  -
+   Type: StaticText
+   Name: "working_unit"
+   Caption: "%"
+   Rect: [26,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_txt"
+   Caption: "Loading:"
+   Rect: [35,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_val"
+   Caption: "100.00"
+   Rect: [46,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_unit"
+   Caption: "%"
+   Rect: [53,1,0,0]
+  -
+   Type: StaticText
+   Name: "Setting-up_txt"
+   Caption: "Setting-up:"
+   Rect: [0,2,0,0]
+  -
+   Type: StaticText
+   Name: "setting-up_val"
+   Caption: "100.00"
+   Rect: [19,2,0,0]
+  -
+   Type: StaticText
+   Name: "setting-up_unit"
+   Caption: "%"
+   Rect: [26,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_txt"
+   Caption: "Unloading:"
+   Rect: [35,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_val"
+   Caption: "100.00"
+   Rect: [46,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_unit"
+   Caption: "%"
+   Rect: [53,2,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_txt"
+   Caption: "Waiting:"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_val"
+   Caption: "100.00"
+   Rect: [19,3,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_unit"
+   Caption: "%"
+   Rect: [26,3,0,0]
+  -
+   Type: StaticText
+   Name: "blocked_txt"
+   Caption: "Blocked:"
+   Rect: [0,4,0,0]
+  -
+   Type: StaticText
+   Name: "blocked_val"
+   Caption: "100.00"
+   Rect: [19,4,0,0]
+  -
+   Type: StaticText
+   Name: "blocked_unit"
+   Caption: "%"
+   Rect: [26,4,0,0]
+  -
+   Type: StaticText
+   Name: "failed_txt"
+   Caption: "Failed:"
+   Rect: [0,5,0,0]
+  -
+   Type: StaticText
+   Name: "failed_val"
+   Caption: "100.00"
+   Rect: [19,5,0,0]
+  -
+   Type: StaticText
+   Name: "failed_unit"
+   Caption: "%"
+   Rect: [26,5,0,0]
+  -
+   Type: StaticText
+   Name: "stopped_txt"
+   Caption: "Stopped:"
+   Rect: [0,6,0,0]
+  -
+   Type: StaticText
+   Name: "stopped_val"
+   Caption: "100.00"
+   Rect: [19,6,0,0]
+  -
+   Type: StaticText
+   Name: "stopped_unit"
+   Caption: "%"
+   Rect: [26,6,0,0]
+  -
+   Type: StaticText
+   Name: "paused_txt"
+   Caption: "Paused:"
+   Rect: [0,7,0,0]
+  -
+   Type: StaticText
+   Name: "paused_val"
+   Caption: "100.00"
+   Rect: [19,7,0,0]
+  -
+   Type: StaticText
+   Name: "paused_unit"
+   Caption: "%"
+   Rect: [26,7,0,0]
+  -
+   Type: StaticText
+   Name: "unplaned_txt"
+   Caption: "Unplaned:"
+   Rect: [0,8,0,0]
+  -
+   Type: StaticText
+   Name: "unplaned_val"
+   Caption: "100.00"
+   Rect: [19,8,0,0]
+  -
+   Type: StaticText
+   Name: "unplaned_unit"
+   Caption: "%"
+   Rect: [26,8,0,0]
+  -
+   Type: StaticText
+   Name: "drivingEmpty_txt"
+   Caption: "Driving empty:"
+   Rect: [0,9,0,0]
+  -
+   Type: StaticText
+   Name: "drivingEmpty_val"
+   Caption: "100.00"
+   Rect: [19,9,0,0]
+  -
+   Type: StaticText
+   Name: "drivingEmpty_unit"
+   Caption: "%"
+   Rect: [26,9,0,0]
+  -
+   Type: StaticText
+   Name: "drivingLoaded_txt"
+   Caption: "Driving loaded:"
+   Rect: [0,10,0,0]
+  -
+   Type: StaticText
+   Name: "drivingLoaded_val"
+   Caption: "100.00"
+   Rect: [19,10,0,0]
+  -
+   Type: StaticText
+   Name: "drivingLoaded_unit"
+   Caption: "%"
+   Rect: [26,10,0,0]
+  -
+   Type: StaticText
+   Name: "relOccupation_txt"
+   Caption: "Rel. Occupation:"
+   Rect: [0,11,0,0]
+  -
+   Type: StaticText
+   Name: "relOccupation_val"
+   Caption: "100.00"
+   Rect: [19,11,0,0]
+  -
+   Type: StaticText
+   Name: "relOccupation_unit"
+   Caption: "%"
+   Rect: [26,11,0,0]
+  -
+   Type: StaticText
+   Name: "relEmpty_txt"
+   Caption: "Rel. Empty:"
+   Rect: [0,12,0,0]
+  -
+   Type: StaticText
+   Name: "relEmpty_val"
+   Caption: "100.00"
+   Rect: [19,12,0,0]
+  -
+   Type: StaticText
+   Name: "relEmpty_unit"
+   Caption: "%"
+   Rect: [26,12,0,0]
+-
+ Type: Button
+ Name: "DefineFailures"
+ Caption: "Define Failures"
+ Rect: [1,18,15,0]
+ CallbackArgument: "DefineFailures"

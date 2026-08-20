@@ -1,0 +1,64 @@
+InternalClassType: PickAndPlace
+Coordinate3D: [20,3,0]
+DefaultAngle: 180
+ExitLocked: false
+GoToDefaultPosition: true
+LoadingTime: 1
+Name: PickAndPlaceAGV
+OnlyForEmptyBlockinglist: true
+Origin: 39a9d6fe-97d7-44c3-b95d-93a93b9a60a6
+RandomSeed: 1073746067
+TargetObject: "Track"
+TargetSelection: "Load part onto MU at sensor"
+TargetSensorID: 1
+UnloadingTime: 1
+UUID: 019f044c-ab8a-7054-be97-e53bed794ef2
+3D:
+ RobotArmAnimations:
+ -
+  Indices: ["Line31","Track"]
+  Coordinates:
+  - [-1.2,-0.1,1.7880999999999998]
+  - [1.7,0,1.4]
+ $Objects:
+ -
+  Origin: 72948595-fa35-48fd-8a5b-e2fea4fc3a62
+  UUID: e93e9472-4bd8-4268-bca2-441315789886
+  $Objects:
+  -
+   Origin: 92f9b6f8-dc36-456f-ad56-6c25d19de97e
+   UUID: 57b5a12a-445a-459b-b9d9-03eabf00d551
+   $Objects:
+   -
+    Origin: b30df0fc-5cf8-491d-accb-7ede18c7c9b9
+    UUID: a211b814-9e9d-4733-b6f6-34efead96c55
+    $Objects:
+    -
+     Origin: 934b2561-5691-4911-aa2c-250048c9cda7
+     UUID: 42207aed-709c-48eb-bed1-468cfc1ca931
+$Predecessors:
+- 019f044c-ab8a-70cf-9f12-ed61ab602318
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: OperatingTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,4:45.0000000000004]
+ Duration: [Erlang,15,10.606601717798213]
+$FailImp:
+ Active: true
+ Services:
+ - [~,["Repair",1]]
+ BrokerPath: "Broker"
+$Angles:
+- ["Track",345.579226872489]
+- ["Line31",174.28940686250041]
+$Times:
+- [0,4,4]
+- [0,0,7]
+- [0,7,0]

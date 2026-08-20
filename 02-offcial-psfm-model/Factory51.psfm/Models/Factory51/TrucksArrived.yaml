@@ -1,0 +1,15 @@
+InternalClassType: Variable
+Color: 12582912
+Coordinate3D: [-41,-40,1]
+Font: 4
+HasInitValue: true
+InitValue: 0
+Name: TrucksArrived
+Origin: 68fe277b-ec69-4b6f-a15e-c7b69fca78c7
+UUID: 019f044c-ab8a-72da-a912-034263170c78
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Rotation: [45,1,0,0]
+$DataType: integer
+Value: 0

@@ -1,0 +1,22 @@
+InternalClassType: AngularConverter
+Coordinate3D: [-23,-8.5,0]
+EntryLength: 3
+ExitLength: 2
+Name: AngularConverter5
+Origin: a0ac50ef-a21a-4ac2-aec6-ba9f6b385932
+RandomSeed: 1073745818
+UUID: 019f044c-ab8a-703b-9d31-7d927b169449
+3D:
+ $ExtSegments:
+  - 0
+  - [90,3,0]
+  - [-90,2,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-703c-be56-59806e31c1aa
+ Name: Connector31
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7093-833e-4dab598f95ca
+$Predecessors:
+- 019f044c-ab8a-70a4-8a98-c17acac4e0a1
+InheritEntranceExitLockedOnReset: false

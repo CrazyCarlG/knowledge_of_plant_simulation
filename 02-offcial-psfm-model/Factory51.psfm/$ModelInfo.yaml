@@ -1,0 +1,48 @@
+ApplicationVersion: "26.6.2.3599"
+ModelFormat: 1
+CompactFormat: false
+UUID: 2af2c4a3-5c47-45a5-a8ef-00e5c43ac45b
+ModelSettings:
+ Language: "English"
+ DateFormat: 1
+ AutoConnect: true
+ InterpStack: 5000
+ InterpChain: 10000
+ InterpSuspended: 5000
+ Epsilon: 1e-08
+ MaxSamples: 10
+ WorkerEdgeMax: 0
+ LoopTimeout: 0
+ UnitLU: 1
+ TimeScale: [1,24,60,60]
+ DayLight: [3,-1,0,2,10,-1,0,3]
+ BaseYear: 2016
+ Units: [1,1,1,0,0]
+ MoneyUnit: €
+ ScreenCoverageThreshold: 5
+ createOptimizedGraphicsForRendering: false
+ FreelyMovingWorkerWidth: 0.8
+ GridConfiguration:
+  AxisColor: 0xf0
+  BasePlateMaterial: [0x80dcdcdc,0x0,0x0,0x0]
+  LineSets:
+  - [0.2,0xd2d2d2,true]
+  - [1,0x919191,true]
+  - [10,0x0,true]
+  GridSnapLineSet: 2
+  SnapMode: 3
+Animation: true
+$CameraMarks:
+- ["HBW",.Models.Factory51,[8.744156763389114,-22.749111899686259,-10.159258469763556],[-1.303751149816968,1.5395229730548829]]
+- ["Production",.Models.Factory51,[8.1819729534232888,22.413726060922336,-72.682440355675908],[-1.0157718232379049,0.30906585039888235]]
+- ["Material Delivery",.Models.Factory51,[26.11951634718999,-3.6237707644353208,-52.943346040790054],[-1.1641248096574226,-0.33670597283901937]]
+- ["Overview",.Models.Factory51,[11.32015493805803,13.214065198252214,-146.25056193391191],[-1.1553981633974504,0.22179938779916578]]
+$Nodes:
+- 29d56c11-7649-4daa-bf2e-7a9bf0133051
+- bdccf029-7eb1-4b5c-bf3c-a741f5fc78ba
+- 16a43e15-bb41-43a9-8b60-3f08eb93c6c1
+- 33f11d93-a8a1-4347-8561-ad9edd07b302
+- 319a9cd8-2490-4a61-bc78-cb1459bd13c5
+- ef4b9d41-37c1-43d4-bb28-f861fb13bd68
+- ae2779af-235d-428e-bfb9-b3d3cb45781c
+- 51584edc-146f-483c-9609-089a98d1fbcd

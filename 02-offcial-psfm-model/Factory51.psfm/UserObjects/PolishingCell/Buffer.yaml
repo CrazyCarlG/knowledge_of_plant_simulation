@@ -1,0 +1,56 @@
+InternalClassType: Buffer
+Coordinate3D: [0,-0.6,0]
+ExitCtrl: "self.OnExit"
+Origin: 3ed203d7-35be-411a-87c0-e4b9f159c208
+RandomSeed: 1073746435
+UUID: 019f044c-ab8a-7000-9363-d9a99603f500
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MUSideToAttach: "Booking Point"
+ Rotation: [90,0,0,-1]
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.26,0.21,1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.26,0.21,1]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  waituntil ~.Milling1.IsAvailable or ~.Milling2.IsAvailable or ~.Milling3.IsAvailable
+  
+  if ~.Milling1.IsAvailable
+  	~.Milling1.IsAvailable := false
+  	@.Destination := ~.Milling1
+  elseif ~.Milling2.IsAvailable
+  	~.Milling2.IsAvailable := false
+  	@.Destination := ~.Milling2
+  elseif ~.Milling3.IsAvailable
+  	~.Milling3.IsAvailable := false
+  	@.Destination := ~.Milling3
+  end
+  
+  @.move
+ ShowInTooltip: false
+$Predecessors:
+- 019f044c-ab8a-7005-8f07-8b09164743da
+InheritEntranceExitLockedOnReset: false
+$TransportImp:
+ Active: true
+ Services:
+ - "StandardService"
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: "~.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0

@@ -1,0 +1,175 @@
+InternalClassType: Track
+Coordinate3D: [-40.3,20.1,0]
+Label: ""
+Length: 12
+Name: SmallCrane
+Origin: 018412fb-a99d-404e-8262-80a6b8823d91
+RandomSeed: 1073747628
+UUID: 019f044c-ab8a-7305-a00c-0217c59572a8
+Width: 5
+3D:
+ $ExtSegments:
+  - 0
+  - [0,12,0]
+$CustomAttributes:
+-
+ Name: PortalList
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ColumnIndex: [string,2,~,"Portal"]
+  Columns:
+  - [1,object,1,""]
+-
+ Name: PortalLength
+ ID: 4
+ $DataType: length
+ Value: 2
+-
+ Name: NumberOfPortals
+ ID: 5
+ $DataType: integer
+ Value: 1
+-
+ Name: RailWidth
+ ID: 6
+ $DataType: length
+ Value: 5
+-
+ Name: PortalWidth
+ ID: 7
+ $DataType: length
+ Value: 7
+-
+ Name: Overhang
+ ID: 8
+ $DataType: length
+ Value: 2
+-
+ Name: PortalHeight
+ ID: 10
+ $DataType: length
+ Value: 3
+-
+ Name: PortalSpeed
+ ID: 11
+ $DataType: speed
+ Value: 0.8
+-
+ Name: PortalAvailability
+ ID: 12
+ $DataType: real
+ Value: 99
+-
+ Name: PortalMTTR
+ ID: 13
+ $DataType: time
+ Value: 10:00
+-
+ Name: UserCollisionCtrl
+ ID: 16
+ $DataType: object
+ Value: ""
+-
+ Name: UserGraphics
+ ID: 17
+ $DataType: boolean
+ Value: false
+-
+ Name: HookSpeed
+ ID: 19
+ $DataType: speed
+ Value: 1
+-
+ Name: PortalAccelerationActive
+ ID: 20
+ $DataType: boolean
+ Value: true
+-
+ Name: TrolleyAccelerationActive
+ ID: 21
+ $DataType: boolean
+ Value: true
+-
+ Name: HookAccelerationActive
+ ID: 22
+ $DataType: boolean
+ Value: true
+-
+ Name: PortalAcceleration
+ ID: 23
+ $DataType: acceleration
+ Value: 0.2
+-
+ Name: PortalDeceleration
+ ID: 24
+ $DataType: acceleration
+ Value: 0.2
+-
+ Name: TrolleyAcceleration
+ ID: 25
+ $DataType: acceleration
+ Value: 0.65
+-
+ Name: TrolleyDeceleration
+ ID: 26
+ $DataType: acceleration
+ Value: 0.65
+-
+ Name: HookAcceleration
+ ID: 27
+ $DataType: acceleration
+ Value: 1
+-
+ Name: HookDeceleration
+ ID: 28
+ $DataType: acceleration
+ Value: 1
+-
+ Name: PortalsCreated
+ ID: 29
+ $DataType: boolean
+ Value: false
+-
+ Name: TrolleySpeed
+ ID: 31
+ $DataType: speed
+ Value: 2.5
+-
+ Name: TrolleyLength
+ ID: 32
+ $DataType: length
+ Value: 1
+-
+ Name: TrolleyHeight
+ ID: 33
+ $DataType: length
+ Value: 0.5
+-
+ Name: openedDialog
+ ID: 36
+ $DataType: object
+ Value: ""
+-
+ Name: DefaultHookHeight
+ ID: 38
+ $DataType: length
+ Value: 0.3
+-
+ Name: d_leg
+ ID: 40
+ $DataType: length
+ Value: 0.2
+-
+ Name: d_crossbeam
+ ID: 41
+ $DataType: length
+ Value: 0.5
+-
+ Name: Portal1
+ ID: 52
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false

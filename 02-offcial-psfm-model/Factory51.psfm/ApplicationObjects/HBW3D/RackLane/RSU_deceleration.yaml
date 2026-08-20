@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-17,-2,0]
+DataType: acceleration
+Name: RSU_deceleration
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: 8e0ff3a9-b6a3-4c81-ab75-bda4751a6938
+$Observers:
+- [Value,"onChanges"]
+Value: 0

@@ -1,0 +1,441 @@
+InternalClassType: Station
+AutomaticProcessing: false
+AutomaticSetup: true
+Capacity: 1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,-10,0]
+CostingActive: true
+CreateIn3D: true
+CycleTime: 0
+DepreciationPeriod: 10
+DestructorCtrl:
+DragDropCtrl:
+EnergyActive: false
+EntranceCtrl: "self.OnEntrance"
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: true
+ExitCtrlOnce: true
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: true
+InitCtrl:
+InvestmentCosts: 26000
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: PostProcessStation
+OpenCtrl:
+OperatingCosts: 1800
+PauseCtrl:
+PlausibilityCtrl:
+ProcTime: 5
+PullCtrl: "self.OnPull"
+RandomSeed: 13
+RecoveryTime: 0
+RecoveryTimeMode: "When part exits"
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Production"
+ResStatOn: true
+SelectCtrl:
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+SetupAttrName: ""
+SetupCtrl:
+SetupForType: true
+SetupOnlyWhenEmpty: false
+SetupTime: 0
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: 8534d217-dfea-4b5c-93ed-cd5153e5a386
+$TabConfig: 0x3ff
+3D:
+ AnimationObject: "Plate"
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: true
+ MUAnimations:
+ -
+  Name: "Default"
+  AnchorPoints:
+  - [0,0,1,0,0,0,1,~]
+ MUSideToAttach: "Center bottom"
+ NameLabelEnabled: false
+ NameLabelPosition: [-1,-0.95,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ Poses:
+ -
+  Name: "EntranceOpen"
+  Entries:
+  - [DoorEntrance,inf]
+ -
+  Name: "EntranceClosed"
+  Entries:
+  - [DoorEntrance,-inf]
+ -
+  Name: "ExitOpen"
+  Entries:
+  - [DoorExit,inf]
+  - [Tool,inf]
+ -
+  Name: "ExitClosed"
+  Entries:
+  - [DoorExit,-inf]
+ -
+  Name: "PlateLeft"
+  Entries:
+  - [Plate,-inf]
+ -
+  Name: "PlateCenter"
+  Entries:
+  - [Plate,0]
+ -
+  Name: "PlateRight"
+  Entries:
+  - [Plate,inf]
+ -
+  Name: "Ready"
+  Entries:
+  - [DoorEntrance,inf]
+  - [DoorExit,-inf]
+  - [Plate,0]
+ -
+  Name: "ToolDown"
+  Entries:
+  - [Tool,-inf]
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Vertical"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+ $Objects:
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [0,0,1]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: -0.37
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 0
+  JointUpperLimitActive: true
+  JointVelocity: 0.2
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: DoorEntrance
+  Position: [-0.94,0.035,1.4]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: cde0b6b3-bc3b-4922-b837-b6006e5ea943
+  VisibleGraphicGroups: ["default"]
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [0,0,1]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: 0
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 0.4
+  JointUpperLimitActive: true
+  JointVelocity: 0.2
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: DoorExit
+  Position: [0.94,0.035,1.03]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: 9dd51347-b18f-4840-a0a8-2fa0c7df05cc
+  VisibleGraphicGroups: ["default"]
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [1,0,0]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: -1.25
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 0.75
+  JointUpperLimitActive: true
+  JointVelocity: 0.5
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  -
+   Name: "Default"
+   AnchorPoints:
+   - [0,0,0.0099999997764825821,0,0,0,-1,~]
+  Name: Plate
+  Position: [0,0,1]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: 1f0666da-c3ca-45c7-b922-ee8064adf7de
+  VisibleGraphicGroups: ["default"]
+ -
+  AniRotationAxis: [0,0,-1]
+  AniRotationCenter: [0,0,0]
+  AniTranslationDirection: [0,0,1]
+  GraphicGroupNames: ["default"]
+  JointAcceleration: 0
+  JointDeceleration: 0
+  JointLowerLimit: -0.35
+  JointLowerLimitActive: true
+  JointType: "Prismatic Joint"
+  JointUpperLimit: 0
+  JointUpperLimitActive: true
+  JointVelocity: 0.1
+  LockedGraphicGroups: []
+  MaterialActive: false
+  Mirror: [false,false,false]
+  MUAnimations:
+  Name: Tool
+  Position: [0.15,0.5,1.5]
+  Rotation: [0,0,0,-1]
+  Scale: [1,1,1]
+  SelfAnimations:
+  ShowContent: true
+  UUID: 3d227923-bfb3-4429-b75e-5348120baead
+  VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - AAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBvr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBAQEBvr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzszpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCzpKCQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEB7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  ?.SetAppearance // Change the visual appearance according to the processing step
+  
+  var Plate        := ?._3D.getObject("Plate")
+  var poses        := ?._3D.Poses
+  
+  poses.moveTo("ExitOpen")
+  waituntil poses.EndPoseWasReached
+  poses.moveTo("PlateRight", abs(Plate.JointUpperLimit/?.Succ.Speed))
+  waituntil poses.EndPoseWasReached
+  
+  @.move
+  poses.moveTo("Ready")
+  waituntil poses.EndPoseWasReached
+  ?.EntranceLocked := false
+ ShowInTooltip: false
+-
+ Name: OnPull
+ ID: 3
+ DataType: method
+ Value: |+1
+  var blockList := ?.fwBlockList
+  var poses     := ?._3D.Poses
+  
+  poses.moveTo("PlateLeft")
+  waituntil poses.EndPoseWasReached
+  
+  ?.unblock(blockList[1])
+ ShowInTooltip: false
+-
+ Name: OnEntrance
+ ID: 4
+ DataType: method
+ Value: |+1
+  ?.EntranceLocked := true
+  var Plate        := ?._3D.getObject("Plate")
+  var poses        := ?._3D.Poses
+  
+  poses.moveTo("PlateCenter", abs(Plate.JointLowerLimit/?.Pred.Speed))
+  waituntil poses.EndPoseWasReached
+  poses.moveTo("EntranceClosed")
+  waituntil poses.EndPoseWasReached
+  
+  ?.startProcessing
+  ?._3D.Poses.moveTo("ToolDown")
+ ShowInTooltip: false
+-
+ Name: Reset
+ ID: 5
+ DataType: method
+ Value: "@.EntranceLocked := false"
+ ShowInTooltip: false
+-
+ Name: SetAppearance
+ ID: 7
+ DataType: method
+ Value: "// Instance contain code which activate the correct graphic group"
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: ProcessingTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,2:15.00000000000003]
+ Duration: [Erlang,15,10.606601717798213]
+$ProcImp:
+ Active: false
+ Services:
+ - [~,["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ CommonResources: true
+$FailImp:
+ Active: false
+ Services:
+ - [~,["Repair",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: "root.Broker"
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+$TransportImp:
+ Active: false
+ Services:
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false

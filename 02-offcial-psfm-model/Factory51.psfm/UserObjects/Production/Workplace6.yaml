@@ -1,0 +1,12 @@
+InternalClassType: Workplace
+Coordinate3D: [20.5,-11.200000000000001,0]
+Name: Workplace6
+Origin: b1e894bf-5d4a-4c22-b619-ee52313cb093
+RandomSeed: 1073746337
+Station: "PickAndPlaceAubergine"
+UUID: 019f044c-ab8a-7077-a29c-890beb272f96
+WorkerStaysHere: false
+3D:
+ Rotation: [-49.99999999999995,0,0,-1]
+ VisibleGraphicGroups: ["assigned"]
+InheritEntranceExitLockedOnReset: false

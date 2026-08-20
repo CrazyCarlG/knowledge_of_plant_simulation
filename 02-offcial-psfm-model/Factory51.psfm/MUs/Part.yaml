@@ -1,0 +1,84 @@
+InternalClassType: Part
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [-3,3,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DragDropCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.1
+MULength: 0.5
+MUWidth: 0.4
+Name: Part
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+RouteWeightingAttr: ""
+SelectCtrl:
+UUID: 08ae4280-e014-45f5-b270-43fc3de7836f
+$BasicObject: true
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ Poses:
+ Rotation: [0,0,0,-1]
+ ScaleAutomatically: true
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAAgIAAgIAA
+ - gIAARrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMgIAA
+ - gIAAgIAAgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAAgIAAgIAA
+ - gIAARrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMgIAA
+ - gIAAgIAAgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAgIAAgIAA

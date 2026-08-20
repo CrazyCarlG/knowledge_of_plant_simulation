@@ -1,0 +1,15 @@
+InternalClassType: Conveyor
+Coordinate3D: [0,-7,0]
+Length: 2
+Name: Line3
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073745909
+Speed: 1
+UUID: 019f044c-ab8a-7013-afd7-ad4d1fe73d29
+3D:
+ $ExtSegments:
+  - 0
+  - [90,2,0]
+$Predecessors:
+- 019f044c-ab8a-701d-90f5-eafbee907a20
+InheritEntranceExitLockedOnReset: false

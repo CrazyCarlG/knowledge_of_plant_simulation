@@ -1,0 +1,26 @@
+InternalClassType: Converter
+Coordinate3D: [0,-2.66,0]
+Length: 1.34
+Name: Converter2
+Origin: 50af1a05-85f4-4027-90a8-9f29413be8ee
+RandomSeed: 1
+Speed: 1
+UUID: 70c7c50b-7679-493e-a784-4d20d3ef2023
+Width: 1
+3D:
+ $ExtSegments:
+  - 0
+  - [90,1.34,0]
+$Successors:
+-
+ $Succ: e387c125-4218-4e95-9c90-f83b17e9dd44
+ Name: Connector5
+ Origin: 8d6b03b6-ea15-4b7f-8804-27d10445086e
+ UUID: 9d1542b8-373c-4075-8476-06ac23669d48
+$Predecessors:
+- a4c618d1-d6d2-428b-ab76-6dd25781fe1d
+- 1d0b4eef-c5fc-4da3-a4e3-519233636a40
+InheritEntranceExitLockedOnReset: false
+$Side0: 9d1542b8-373c-4075-8476-06ac23669d48
+$Side2: a4c618d1-d6d2-428b-ab76-6dd25781fe1d
+$Side3: 1d0b4eef-c5fc-4da3-a4e3-519233636a40

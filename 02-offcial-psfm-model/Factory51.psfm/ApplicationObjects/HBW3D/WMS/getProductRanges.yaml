@@ -1,0 +1,26 @@
+InternalClassType: Method
+Coordinate3D: [-14.5,-5,0]
+Name: getProductRanges
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // get all racklanes and column ranges for the given product
+ //--------------------------------------------------------------------------------
+ 
+ param Product : string -> table[string, integer, integer]
+ 
+ result.create
+ 
+ for var i := 1 to ProductRanges.YDIm loop
+ 	if ProductRanges[1, i]=Product then
+ 		result.writeRow(1, result.YDim+1, 
+ 			ProductRanges["Racklane", i],
+ 			ProductRanges["From", i],
+ 			ProductRanges["To", i])
+ 	end
+ next
+RandomSeed: 2242
+UUID: 1d9365bb-c95e-484f-83a7-f9d46515ce31
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

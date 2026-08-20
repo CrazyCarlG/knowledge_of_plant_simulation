@@ -1,0 +1,16 @@
+InternalClassType: Interface
+Coordinate3D: [0,-4,0.2]
+Origin: e387c125-4218-4e95-9c90-f83b17e9dd44
+RandomSeed: 1073751216
+UUID: 019f044c-ab8a-7245-a27e-b8b827be971b
+3D:
+ VisibleGraphicGroups: ["connected"]
+$Successors:
+-
+ $Location: b587ccc9-72a3-43e2-bbc6-d90a94e30784
+ $Succ: 019f044c-ab8a-7283-b8bb-fc2911e219c6
+ Name: Connector4
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7146-835d-f047e126243e
+$Predecessors:
+- 019f044c-ab8a-7275-b40e-b6a0df0b5a8c

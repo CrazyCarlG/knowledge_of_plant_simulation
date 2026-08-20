@@ -1,0 +1,27 @@
+InternalClassType: Method
+Coordinate3D: [-11,5.9999999999999991,0]
+Label: ""
+Name: setConveyorSpeed
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // set the speed of all conveyors. This is necessary if the racklane is not
+ // initialized by InitRacklane (see INIT method)
+ //
+ // Parameters	: none
+ //
+ // ReturnValues	: none
+ // 
+ // Called By	: processOrder
+ // Calls		: 
+ //--------------------------------------------------------------------------------
+ 
+ Converter1.speed	:= ConveyorSpeed
+ IN.Speed			:= ConveyorSpeed
+ Line.Speed			:= ConveyorSpeed
+ Converter2.Speed	:= ConveyorSpeed
+ OuT.Speed			:= ConveyorSpeed
+RandomSeed: 2265
+UUID: fd696937-a881-4ea9-ada9-79a94f637814
+3D:
+ Mirror: [false,false,false]

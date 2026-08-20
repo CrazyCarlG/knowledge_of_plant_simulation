@@ -1,0 +1,42 @@
+InternalClassType: Converter
+AutomaticStop: false
+Coordinate3D: [17.9,-9,0]
+Length: 1
+Name: Converter11
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746315
+Strategy: "Method"
+StrategyCtrl: "self.OnStrategy"
+UUID: 019f044c-ab8a-7070-b1b2-397a943a0879
+3D:
+ $ExtSegments:
+  - 0
+  - [0,1,0]
+$CustomAttributes:
+-
+ Name: OnStrategy
+ ID: 1
+ DataType: method
+ Value: |+1
+  param entranceNo: integer
+  
+  ?.ExitForMU := when @.name = "Aubergine" then 0 else 3
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7057-a05c-5545e66f16bd
+ Name: Connector61
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-709c-b961-163f04aef9e5
+ $PredFlipped: true
+-
+ $Succ: 019f044c-ab8a-7071-a291-5b5fd86c9035
+ Name: Connector81
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-709d-9cf1-b60b0cac596a
+$Predecessors:
+- 019f044c-ab8a-70c1-8ac4-b566b6e4f0c8
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-709d-9cf1-b60b0cac596a
+$Side2: 019f044c-ab8a-70c1-8ac4-b566b6e4f0c8
+$Side3: 019f044c-ab8a-709c-b961-163f04aef9e5

@@ -1,0 +1,22 @@
+InternalClassType: Conveyor
+Coordinate3D: [54,-28.5,0]
+CostingActive: false
+Length: 3.5
+Name: Line81
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746258
+Speed: 1
+UUID: 019f044c-ab8a-72cb-956e-a01e6e9f1f22
+3D:
+ $ExtSegments:
+  - 0
+  - [90,3.5,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72ca-adba-a0f2775d209e
+ Name: Connector32
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-732c-9d4b-fc962b947533
+$Predecessors:
+- 019f044c-ab8a-7317-b263-1a7db7cdfc13
+InheritEntranceExitLockedOnReset: false

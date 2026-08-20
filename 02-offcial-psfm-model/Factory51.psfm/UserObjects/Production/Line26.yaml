@@ -1,0 +1,39 @@
+InternalClassType: Conveyor
+Coordinate3D: [-21,11.198000000000002,0]
+ExitCtrl: "self.OnExit"
+Length: 3.8
+Name: Line26
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746278
+Speed: 1
+UUID: 019f044c-ab8a-706b-ba27-9a440259fbcc
+3D:
+ $ExtSegments:
+  - 0
+  - [0,3.8,0]
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  if Polishing2.Polishing.Empty
+  	@.move(1)
+  else
+  	@.move(2)
+  end
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-707e-8e9a-44d45bad2a30
+ Name: Connector62
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70c8-84cd-18affe8017ee
+-
+ $Succ: 019f044c-ab8a-707f-b342-86719bae3afd
+ Name: Connector88
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70c9-bcca-054bcf010314
+$Predecessors:
+- 019f044c-ab8a-70b3-bf1c-f5943f459efc
+InheritEntranceExitLockedOnReset: false

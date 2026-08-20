@@ -1,0 +1,21 @@
+InternalClassType: Method
+Coordinate3D: [-4.5,-12,0]
+Name: getPalletLocation
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method task:
+ // search for the given pallet. If found then return the warehouse parameter of
+ // the pallet
+ //--------------------------------------------------------------------------------
+ Param Pallet: object,
+ 	  byRef Racklane: object, byRef Side: string, byRef Column, Row: integer -> boolean
+ 
+ Racklane := Pallet.~.~
+ Side := when Pallet.~.Name = "RackLeft" then "left" else "right"
+ Pallet.getStoragePlace(Column, Row)
+ return Column /= 0 and Row /= 0
+RandomSeed: 2247
+UUID: ee4e7b4f-4cab-48e4-b509-58dbf708bf85
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

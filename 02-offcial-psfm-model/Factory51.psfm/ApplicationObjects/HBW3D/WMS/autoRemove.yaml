@@ -1,0 +1,30 @@
+InternalClassType: Method
+Coordinate3D: [6.5,-5,0]
+Name: autoRemove
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Remove an arbitrary number of an arbitrary product from stock (maximum is MaxAmount).
+ //--------------------------------------------------------------------------------
+ 
+ if Content.YDim>0 then
+ 	// get one of the products
+ 	var row : integer := ceil(z_uniform(87, 0, Content.YDim))
+ 
+ 	var product := Content[0, row]
+ 
+ 	if Content[1,row]>0 then
+ 		// get the number of products to remove from stock
+ 		var quantity : integer := min(round(z_uniform(1, MaxAmount)), Content[1,row])
+ 
+ 		// remove the product
+ 		removeProducts("0", product, quantity)
+ 	end
+ end
+ 
+ self.executeIn(RemoveInterval)
+RandomSeed: 2254
+UUID: 7692e85f-1a8e-4162-b84e-31136727247c
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

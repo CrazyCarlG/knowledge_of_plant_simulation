@@ -1,0 +1,35 @@
+InternalClassType: Method
+Coordinate3D: [-14.5,1,0]
+Name: getPredefinedRack
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // look if there is an entry for the product in table PredefinedRacks. In this case
+ // check if the rack has any free places. If this is true, return the name of the
+ // rack. Otherwise return an empty string.
+ // Keep in mind, there may be more than one entries for the same product in table 
+ // PredefinedRacks
+ //--------------------------------------------------------------------------------
+ 
+ param product : string -> string[]
+ 
+ product := strToLower(product)
+ 
+ for var i := 1 to PredefinedRacks.YDim loop
+ 	if strToLower(PredefinedRacks["Product", i])=product then
+ 		result.append(PredefinedRacks["Rack Lane", i])
+ 	end
+ next
+RandomSeed: 1073755954
+UUID: bb6f6ba2-78e8-429c-b5f0-cd6c7cbc1632
+3D:
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [0.02,-0.01,0.01]
+  HorizontalStatesScale: [0.46,0.5,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

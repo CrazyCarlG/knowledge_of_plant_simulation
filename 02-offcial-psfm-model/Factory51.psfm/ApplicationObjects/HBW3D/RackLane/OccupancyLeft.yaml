@@ -1,0 +1,26 @@
+InternalClassType: DataTable
+Coordinate3D: [4,3,0]
+Name: OccupancyLeft
+Origin: b42ffed0-3791-455e-bfc4-f0af2e614549
+UUID: 8875e0b7-7015-4f3b-8976-6f0f68912c2f
+$Data:
+ Comment: "0=Free, 1= Reserved/Occupied"
+ ShowComment: true
+ ListFormat:
+  ColumnWidth: 3
+  DataType: integer
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+  -
+   Index: 2
+  -
+   Index: 3
+  -
+   Index: 4
+  -
+   Index: 5
+  -
+   Index: 6
+ Columns:

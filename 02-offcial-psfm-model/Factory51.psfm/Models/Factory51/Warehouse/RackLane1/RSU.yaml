@@ -1,0 +1,59 @@
+InternalClassType: Station
+FailureActive: true
+Origin: 019f044c-ab8a-71a8-9613-851a07e23bae
+RandomSeed: 1073750932
+UUID: 019f044c-ab8a-75ed-b33f-8d08065ed083
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ $Objects:
+ -
+  Origin: 53196db9-ea78-4125-8ed5-9226198c3f49
+  UUID: 611ea55f-3a5a-4ca5-915f-c014c2c1b8da
+  $Objects:
+  -
+   Origin: c60cc7dd-2d7e-4e60-8164-9a0bb99c2f8a
+   UUID: b924cafa-cf96-4880-8690-fc6a23be7189
+   $Objects:
+   -
+    Origin: f7b7ccfb-ec20-430a-84c1-1e3a78bb363c
+    UUID: bf376fda-9816-4464-b189-3e323bbda017
+$CustomAttributes:
+-
+ Name: TrackWidth
+ ID: 4
+ $DataType: length
+ Value: 1.2
+-
+ Name: TrackLength
+ ID: 5
+ $DataType: length
+ Value: 11.54
+-
+ Name: Height
+ ID: 9
+ $DataType: length
+ Value: 6.18
+-
+ Name: OpenPartOrders
+ ID: 11
+ $DataType: queue
+ Value:
+  CommonFormat: false
+  Column:
+-
+ Name: waitingPart
+ ID: 12
+ $DataType: object
+ Value: ""
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: 0
+ Duration: 0

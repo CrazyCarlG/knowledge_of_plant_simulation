@@ -1,0 +1,41 @@
+InternalClassType: Conveyor
+Length: 4
+Origin: 019f044c-ab8a-7006-b645-e3df2df005d3
+RandomSeed: 1073745835
+Speed: 2
+UUID: 019f044c-ab8a-70ef-a48c-631aa55805d4
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ $DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.Stopped := true
+  wait ?.PaintTime
+  
+  if @.name = "Aubergine"
+  	@._3D.MaterialSpecularColor := makeRGBValue(107, 0, 128)
+  elseif @.name = "Strawberry"
+  	@._3D.MaterialSpecularColor := makeRGBValue(255, 0, 128)
+  end
+  
+  @._3D.MaterialShininess := 0.2
+  
+  @.Stopped := false
+-
+ Name: PaintTime
+ ID: 2
+ $DataType: time
+ Value: 5
+$Successors:
+-
+ $Location: 3e014d4c-37bd-4aab-92c8-cf08088fbef3
+ $Succ: 019f044c-ab8a-703e-8912-b03ccd5565b8
+ Name: Connector37
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7097-9b28-ab41ed20a972
+$Predecessors:
+- 019f044c-ab8a-70d6-bf5f-cb7005eed03e
+InheritEntranceExitLockedOnReset: false

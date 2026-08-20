@@ -1,0 +1,1820 @@
+InternalClassType: Store
+ChangePathCtrl:
+ConnectCtrl: "self.OnConnect"
+ConstructorCtrl:
+Coordinate3D: [-0.00020000000000000573,7,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+DestructorCtrl:
+DragDropCtrl: "self.OnDragDrop"
+EnergyActive: false
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl:
+FailureActive: false
+FillWholeLayer: false
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: StorageArea
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PlausibilityCtrl:
+PullCtrl:
+RandomSeed: 1
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Storage"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+Supermarket: false
+UnplannedCtrl:
+UUID: 6347ca38-c900-4979-872b-0af720eb2490
+XDim: 20
+YDim: 10
+ZDim: 1
+3D:
+ AnimationObject: ""
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ AutoGraphicsActive: true
+ Dimensions: [20,10,0.001]
+ ExcludeFromShowContentOfLocation: false
+ FloorThickness:
+ Gap:
+ GraphicGroupNames: ["default"]
+ GroundClearance:
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaRelativeCenter: [0,0,1]
+ MUAnimationAreaRelativeSize: [1,1]
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ -
+  Name: "#0#0"
+  AnchorPoints:
+  - [0,0,1.5,0,0,0,1,~]
+ -
+  Name: "#0#1"
+  AnchorPoints:
+  - [0,0,1.8999999761581421,0,0,0,1,~]
+ -
+  Name: "#0#2"
+  AnchorPoints:
+  - [0,0,2.2999999523162842,0,0,0,1,~]
+ -
+  Name: "#1#0"
+  AnchorPoints:
+  - [0,0,2.7000000476837158,0,0,0,1,~]
+ -
+  Name: "#1#1"
+  AnchorPoints:
+  - [0,0,3.0999999046325684,0,0,0,1,~]
+ -
+  Name: "#1#2"
+  AnchorPoints:
+  - [0,0,3.5,0,0,0,1,~]
+ -
+  Name: "#2#0"
+  AnchorPoints:
+  - [0,0,3.9000000953674316,0,0,0,1,~]
+ -
+  Name: "#2#1"
+  AnchorPoints:
+  - [0,0,4.3000001907348633,0,0,0,1,~]
+ -
+  Name: "#2#2"
+  AnchorPoints:
+  - [0,0,4.6999998092651367,0,0,0,1,~]
+ MUSideToAttach: "Booking Point"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,0,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ OriginX: "Center"
+ OriginY: "Center"
+ Poses:
+ PostMaterialActive: true
+ PostMaterialAmbientColor: 13395507
+ PostMaterialDiffuseColor: 13395507
+ PostMaterialEmissiveColor: 0
+ PostMaterialShininess: 0.247
+ PostMaterialSpecularColor: 5855577
+ PostMaterialTransparency: 0
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ StorageAreaMaterialActive: true
+ StorageAreaMaterialAmbientColor: 9670004
+ StorageAreaMaterialDiffuseColor: 8946281
+ StorageAreaMaterialEmissiveColor: 0
+ StorageAreaMaterialShininess: 0.247
+ StorageAreaMaterialSpecularColor: 5855577
+ StorageAreaMaterialTransparency: 0
+ StoreType: "Floorspace"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsiIiIvr6+/v7+/v7+/v7+/v7+/v7+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+/v7+zpKCzpKCzpKCAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsiIiIvr6+/v7+AQEBAQEBAQEBAQEBvr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsiIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsiIiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: AOLType
+ ID: 1
+ DataType: string
+ Value: "Crane"
+ ShowInTooltip: false
+-
+ Name: AutoRemoveActive
+ ID: 2
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: Content
+ ID: 3
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnIndexContents: false
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 3
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Width: 20
+   -
+    Index: 2
+    DataType: integer
+    Width: 8
+   -
+    Index: 3
+    DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnIndex: true
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 3
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       DataType: integer
+      -
+       Index: 2
+       DataType: integer
+      -
+       Index: 3
+       DataType: integer
+      RowFormat:
+      -
+       Index: 0
+       Hidden: false
+     ColumnIndex: [string,4,~,"X","Y","Z"]
+     Columns:
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,4,~,"Product","Quantity","Location"]
+  Columns:
+ ShowInTooltip: false
+-
+ Name: getFreePlace
+ ID: 4
+ DataType: method
+ Value: |+1
+  // Method Tasks: 
+  // select a free place where the product could be stored
+  //
+  // Parameters	: none
+  // ReturnValues : two dimensional array with the coordinates of selected place
+  //
+  // Called By	: external methods for storing
+  // Calls		: user method if defined
+  //--------------------------------------------------------------------------------
+  
+  ->integer[2]
+  
+  var store := self.~
+  var Layout := store.Layout
+  
+  var Zero : integer[2] := [1,1]
+  result := Zero
+  
+  // check for a user defined method
+  var finished : boolean := false
+  
+  if Store.userStoringMethod /= "" then
+  	var meth : object := str_to_obj(Store.userStoringMethod)
+  	result := meth.execute(Layout)
+  	if result/=Zero then
+  		finished := true
+  	end
+  end
+  
+  if not finished then
+  	Layout.setCursor(1,1)
+  	if Layout.find({1,1}..{*,*}, "free") then
+  		result[1] := Layout.CursorX
+  		result[2] := Layout.CursorY
+  		var pile:=store[Layout.CursorX, Layout.CursorY]
+  		var found: boolean:=false
+  		if pile.numMU<store.zDim then
+  			found:=true
+  		else
+  			Layout[Layout.CursorX, Layout.CursorY].name:="full"
+  			self.execute()
+  		end
+  	else
+  		// no free place found
+  		result := Zero 
+  		throwRuntimeError("getfreePlace can only be called if Store is not full")
+  		--Eventcontroller.stop
+  		--rootfolder.Internal.Dialog.StorageFull.open
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: getPlaceOfProduct
+ ID: 5
+ DataType: method
+ Value: |+1
+  param product : string -> integer[3]
+  
+  var Store := self.~
+  var Content := Store.Content
+  result := [0, 0, 0]
+  
+  Content.setCursor(1,1)
+  if Content.find({1,1}..{1,*}, Product) then
+  	// product found
+  	var row : integer := Content.CursorY
+  	var Locations := Content["Location", row]
+  	Locations.sort(1, 2, 3, "up")
+  
+  	var row1 := Locations.YDim
+  	result[1] := Locations["X", row1]
+  	result[2] := Locations["Y", row1]
+  	result[3] := Locations["Z", row1]
+  	
+  	Locations.CutRow(row1)
+  	Content["Quantity", row] -= 1
+  	
+  else
+  	//Product not found
+  end
+ ShowInTooltip: false
+-
+ Name: INIT
+ ID: 6
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Initialize the store object
+  //
+  // Parameters	: 
+  //
+  // ReturnValues : none
+  //
+  // Called By	: Eventcontroller
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  var store := self.~
+  var crane := store.crane
+  
+  // check for the necessary parameters like crane, Entrance and exit
+  if crane = void then
+  	var message : string := to_str("There is no crane assigned to the stoage area ", store.name)
+  	throwRuntimeError(message)
+  end
+  
+  // mark all places of the store as free
+  Store.initLayout
+  
+  // initialize the barred areas
+  Store.InitBarredAreas
+  
+  // set the exit control of the object StoreEntrance
+  if store.StoreEntrance/=void then
+  	if store.StoreEntrance.exitCtrl = void then
+  		store.StoreEntrance.exitCtrl := to_str(store.name, ".storing")
+  	end
+  end
+  
+  // start automatic removing of parts if this is activated
+  if store.AutoremoveActive and Store.RemoveInterval>str_to_time("0.0") then
+  	Store.&autoRemoveProduct.executeIn(Store.RemoveInterval)
+  end
+  
+  waituntil Crane.PortalsCreated
+  
+  Store.RemovingPortal := crane.Portal1
+  Store.StoringPortal := crane.Portal1
+ ShowInTooltip: false
+-
+ Name: Layout
+ ID: 7
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndexContents: false
+   ColumnWidth: 10
+   DataType: table
+   ShowDataType: true
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     MaxXDim: 1
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      Width: 26
+    Columns:
+   ColumnFormat:
+   -
+    Index: 1
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 2
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 3
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 4
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 5
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 6
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 7
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 8
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 9
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+   -
+    Index: 10
+    $DataType: table
+    Prototype:
+     EditorPermissions: 12
+     ListFormat:
+      ColumnWidth: 5
+      DataType: string
+      MaxXDim: 1
+      ShowDataType: true
+      ColumnFormat:
+      -
+       Index: 1
+       Width: 26
+     Columns:
+  Columns:
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 8
+ DataType: string
+ Value: "StorageArea"
+ ShowInTooltip: false
+-
+ Name: occupyPlace
+ ID: 9
+ DataType: method
+ Value: |+1
+  
+  param place : integer[2], Product : string
+  
+  var store := self.~
+  var content := Store.Content
+  //Define x and y Position of a pile
+  var pile := Store.Layout[place.x, place.y]
+  var Z_Position := Pile.YDim+1
+  pile[1, Z_Position] := Product
+  //add MU on top
+  
+  if pile.YDim>= store.ZDim then
+  	Store.Layout[place.x, place.y].setName("occupied")
+  end
+  
+  // update the content of the store
+  Content.setCursor(1,1)
+  if Content.find({1,1}..{1,*}, product) then
+  	// product is already defined
+  	var row : integer := Content.CursorY
+  else
+  	row := Content.YDIm + 1
+  	Content[1, row] := Product
+  	Content.createNestedList(3, row)
+  end
+  
+  // now update the values
+  Content["Quantity", row] += 1
+  
+  var location := Content["Location", row]
+  Location.writeRow(1, location.YDim+1, place.x, place.y, Z_Position)
+ ShowInTooltip: false
+-
+ Name: freePlace
+ ID: 10
+ DataType: method
+ Value: |+1
+  
+  param place : integer[3], product : string
+  
+  
+  var store := self.~
+  var Layout := Store.Layout
+  var Content := Store.content
+  
+  var pile := Layout[place[1], place[2]]
+  
+  pile[1, place[3]] := void
+  
+  if layout[place[1], place[2]].name="occupied" then
+  	layout[place[1], place[2]].setName("free")
+  end
+ ShowInTooltip: false
+-
+ Name: removeInterval
+ ID: 11
+ DataType: time
+ Value: 10:00
+ ShowInTooltip: false
+-
+ Name: autoRemoveProduct
+ ID: 12
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // remove products from store.
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: INIT if AutomaticRemove is active
+  // Calls		: getPlaceOfProduct, moveHook, moveToPositionAbs, moveToObject,
+  //				  moveHookAbs
+  //--------------------------------------------------------------------------------
+  
+  
+  var store := self.~
+  var portal := store.RemovingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle" prio 1
+  
+  var step : integer := 1
+  
+  // determine the product which should be removed
+  if store.content.YDIm=0 then
+  	if store.RemoveInterval > str_to_time("0.0") then
+  		self.executeIn(store.RemoveInterval)
+  	end
+  
+  	return
+  end
+  
+  if store.content.YDIm=1 then
+  	var index : integer := 1
+  else
+  	index := 1+store.z.rolldice*store.content.YDim
+  end
+  
+  // if there is no product available, we are finished
+  if store.content[2, index]<=0 then
+  	self.executeIn(store.RemoveInterval)
+  	return
+  end
+  
+  // determine the location from which we want to remove the product
+  var place := store.getPlaceOfProduct(Store.content[1, index])
+  
+  // calculate the target position in crane coordinates
+  var StorePosition : real[3] := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  var CranePosition : real[3] := crane.calculateTargetPosition(Portal, StorePosition)
+  
+  var product : object := store[place[1], place[2]].cont
+  if product=void then
+  	--debug
+  	return
+  end
+  
+  var productHeight : length
+  if product.MuHeightWithContent>0 then
+  	productHeight := product.MuHeightWithContent
+  else
+  	productHeight := product.MuHeight
+  end
+  
+  // determine the target position of the exit station
+  var TargetPosition := rootfolder.Internal.Methods.getTargetPosition(Crane, store.StoreExit)
+  var TargetCranePosition : real[3] := crane.calculateTargetPosition(Portal, TargetPosition)
+  
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // move to the position of the product
+  portal.movePortalTo(CranePosition)
+  waituntil portal.state="waiting"
+  
+  // move hook down
+  var position := product._3D.Position
+  portal.moveHookAbs(Position[3] + productHeight)
+  waituntil portal.state="waiting"
+  
+  // pick the part
+  Portal._3D.MuSideToAttach := "Top"
+  Product.move(Portal)
+  waituntil not portal.empty
+  store.freePlace(place, product.name)
+  waituntil portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // move portal to the exit location
+  portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  waituntil portal.state="waiting"
+  
+  // move hook down to the object
+  var height : length := TargetPosition[3] + ProductHeight
+  portal.moveHookAbs(height)
+  waituntil portal.state="waiting"
+  
+  // unload the hook
+  portal.cont.move(store.storeExit)
+  waituntil portal.empty and portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // now the sequence is finished
+  portal.endSequence
+  
+  
+  if store.RemoveInterval>str_to_time("0.0") then
+  	self.executeIn(Store.RemoveInterval)
+  end
+ ShowInTooltip: false
+-
+ Name: removingPortal
+ ID: 13
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: RESET
+ ID: 14
+ DataType: method
+ Value: |+1
+  var store := self.~
+  store.Layout.delete
+  store.content.delete
+ ShowInTooltip: false
+-
+ Name: StoreEntrance
+ ID: 15
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: StoreExit
+ ID: 16
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: storing
+ ID: 17
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // pick a part from StoreEntrance, find a free place and place the part there
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: EXTERNAL
+  // Calls		: getFreePlace, moveHook, moveToObject, moveHookAbs,
+  //				  moveToPositionAbs, occupyPlace, endSequence
+  //--------------------------------------------------------------------------------
+  
+  var Store : object := self.~
+  var portal := Store.storingPortal
+  var crane := Portal.~
+  
+  waituntil not Store.Full and portal.state="idle" and Store.StoreEntrance.occupied
+  
+  var step : integer := 1
+  
+  // get the height of the MU on StoreEntrance
+  var Product :object := Store.StoreEntrance.cont
+  if Product.MuHeightWithContent>0 then
+  	var productHeight : length := Product.MuHeightWithContent
+  else
+  	productHeight := Product.MuHeight
+  end
+  
+  // get a free place in the store
+  var place : integer[2] := Store.getFreePlace
+  if place.x>0 and place.y>0 then
+  	// a free place was found for the product, occupy the place
+  	Store.occupyPlace(place, product.name)
+  
+  	// calculate the target position in crane coordinates
+  	var TargetPosition := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  
+  	var upperPart := Store[place[1], place[2]].cont
+  	if upperPart=void then
+  		// no part at  this place
+  		var position : length[3] := [0.0, 0.0, 0.0]
+  		TargetPosition.z := Position.z
+  	else
+  		position := upperPart._3D.Position
+  		if upperPart.MuHeightWithContent>0 then
+  			TargetPosition.z := Position.z + upperPart.MuHeightWithContent
+  		else
+  			TargetPosition.z := Position.z + upperPart.MUHeight
+  		end
+  	end
+  
+  	TargetPosition.z += Store.Coordinate3D.z
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move to the entrance object
+  	portal.moveToObject(Store.StoreEntrance.cont)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down to the object
+  	var height : length := crane.~._3D.getPositionOfObject(Product).z + productHeight
+  	portal.moveHookAbs(height)
+  	waituntil portal.state="waiting"
+  
+  	// pick the product
+  	Portal._3D.MuSideToAttach := "Top"
+  	Product.move(Portal)
+  	waituntil not portal.empty and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move portal to the target position
+  	portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down so that we can place the product onto the floor
+  	portal.moveHookabs(TargetPosition.z + ProductHeight)
+  	waituntil portal.state="waiting"
+  
+  	// release the product
+  	Product.move(Store[place.x, place.y])
+  	waituntil portal.empty and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// now the sequence is finished
+  	portal.endSequence
+  end
+ ShowInTooltip: false
+-
+ Name: StoringPortal
+ ID: 18
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: crane
+ ID: 19
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: OnDragDrop
+ ID: 20
+ DataType: method
+ Value: |+1
+  // Method Tasks: 
+  // activated when user drops an object onto the store object
+  // Check which type of object was dropped and assign the object to the 
+  //
+  // Parameters	: draggedObjects, a list of all dropped objects
+  //
+  // ReturnValues : the object or void
+  //
+  // Called By	: 
+  // Calls		: 
+  //--------------------------------------------------------------------------------
+  
+  param draggedObjects: object[]
+  
+  var store := self.~
+  
+  for local i := 1 to draggedObjects.dim
+  	var obj : object := draggedObjects[i]
+  	
+  	switch obj.internalClassType
+  	case "Source", "Drain", "Station", "ParallelStation", "AssemblyStation", "DismantleStation", "Buffer",
+  		"Sorter", "Conveyor"
+  		
+  		// dropped object is a valid station, check if its entrance or exit object-
+  		if store.crane/=void then
+  			var segments : table
+  			Store.crane.getCurveSegments(segments)
+  			var angle : real := segments[1, 2]
+  		end
+  
+  		rootfolder.Internal.Dialog.dialogActive := true
+  		rootfolder.Internal.Dialog.EntranceExit.open
+  		waituntil not rootfolder.Internal.Dialog.dialogActive
+  		
+  		if rootFolder.Internal.Dialog.isEntrance then
+  			// dropped object is the entrance of the store
+  			store.StoreEntrance := obj
+  			obj.ObjectAngle := angle
+  			
+  			// check if an exit control is defined
+  			if obj.ExitCtrl = void then
+  --				obj.ExitCtrl := to_str(store, ".storing")
+  				obj.ExitCtrl := makePathRelative(to_str(store, ".storing"), store.~)
+  			end
+  			
+  		else
+  			// dropped object is the exit of the store
+  			store.StoreExit := obj
+  			obj.ObjectAngle := angle
+  		end
+  	
+  	else
+  		if not obj.isNameUnique("objType") and obj.objType="MultiPortalCrane" then
+  		// dropped object is a crane get some parameters of the crane
+  		var crane := obj
+  		
+  		store.crane := crane
+  		crane.assignedStore := store
+  		
+  		crane.getCurveSegments(segments)
+  		angle := segments[1, 2]
+  		store.ObjectAngle := angle
+  		
+  		if store.StoreEntrance/=void then
+  			store.StoreEntrance.ObjectAngle := angle
+  		end
+  		
+  		if store.StoreExit/=void then
+  			store.StoreExit.ObjectAngle := angle
+  		end
+  		-- Avoid rescaling and movement of the crane this way, if it is desired that the crane is scaled and adjusted
+  		-- to the storage area, then just uncomment the following line of code
+  		--crane.adjustCraneToStore
+  	end
+  
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 21
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // open the dialog window of the storage area
+  //
+  // Parameters	: none
+  //
+  // ReturnValues: none
+  //
+  // Called By	: USER
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 30.09.2016
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  var Store : object := ?
+  
+  if (getAsyncKeyState(17) < 0) 
+  	// if Ctrl key pressed, just open the object dialog
+  	Store.openDialog(false)
+  	
+  else
+  	// check if the dialog is already open
+  	if Store.openedDialog=void 
+  		
+  		// open the dialog
+  		var template : object := rootfolder.Internal.Dialog.extendPath(Store.ObjType)
+  		var newDialog : object := template.derive(rootfolder.internal.Dialog)
+  		
+  		newDialog.openedBy := self.~
+  		Store.openedDialog := newDialog
+  		newDialog.Label := Store.ObjType
+  		newDialog.open
+  	else
+  		Store.openedDialog.open
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: openedDialog
+ ID: 22
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: StoreLength
+ ID: 23
+ DataType: length
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: StoreWidth
+ ID: 24
+ DataType: length
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: userStoringMethod
+ ID: 25
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: BarredAreas
+ ID: 26
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnIndexContents: false
+   ColumnWidth: 7
+   DataType: string
+   MaxXDim: 4
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: integer
+    Width: 7
+   -
+    Index: 2
+    DataType: integer
+    Width: 7
+   -
+    Index: 3
+    DataType: integer
+    Width: 7
+   -
+    Index: 4
+    DataType: integer
+    Width: 7
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,5,~,"X1","Y1","X2","Y2"]
+  Columns:
+ ShowInTooltip: false
+-
+ Name: initBarredAreas
+ ID: 27
+ DataType: method
+ Value: |+1
+  /*-------------------------------------------------------------------------------
+  Method Tasks: 
+  define the barred areas
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: none
+  
+  Called By	: init
+  Calls		: 
+  
+  Author		: Guido Groß
+  Date		: 04.10.2016
+  
+  _________________________________________________________________________________
+  History:
+  25.04.2018	GG	remove errormessage
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  
+  var Store := self.~
+  var BarredAreas := Store.BarredAreas
+  var template := rootfolder.BasicObjects.MaterialFlow.Barred
+  
+  for var row := 1 to BarredAreas.YDim loop
+  	var x1 : integer := BarredAreas[1,row]
+  	var y1 : integer := BarredAreas[2,row]
+  	var x2 : integer := BarredAreas[3,row]
+  	var y2 : integer := BarredAreas[4,row]
+  	
+  	// check the parameter
+  	var proceed : boolean := true
+  	if x1<0 or x1>Store.XDim then
+  		// x1 value out of range
+  		var message : string := to_str("Barred Area: Coordinate X1 = ", x1, " out of range.")
+  		throwRuntimeError(message)
+  		
+  		proceed := false
+  	end
+  	if y1<0 or y1>Store.YDim then
+  		// Y1 value out of range
+  		message := to_str("Barred Area: Coordinate Y1 = ", y1, " out of range.")
+  		throwRuntimeError(message)
+  		proceed := false
+  	end
+  	if x2<0 or x2>Store.XDim then
+  		// x2 value out of range
+  		message := to_str("Barred Area: Coordinate X2 = ", x2, " out of range.")
+  		throwRuntimeError(message)
+  		proceed := false
+  	end
+  	if y2<0 or y2>Store.YDim then
+  		// Y2 value out of range
+  		message := to_str("Barred Area: Coordinate Y2 = ", y2, " out of range.")
+  		throwRuntimeError(message)
+  		proceed := false
+  	end
+  		
+  	if proceed then
+  		if x2=0 and y2=0 then
+  			// only a single area is barred
+  			Store.Layout[x1, y1].setName("barred")
+  			
+  			var plate : object := template.create(Store[x1, y1])
+  			plate.MuLength := Store.StoreLength
+  			plate.MuWidth := Store.StoreWidth
+  		else
+  			for var i:=x1 to x2 loop
+  				for var j := y1 to y2 loop
+  					Store.Layout[i, j].setName("barred")
+  					
+  					plate := template.create(Store[i,j])
+  					plate.MuLength := Store.StoreLength
+  					plate.MuWidth := Store.StoreWidth
+  					
+  				next
+  			next
+  		end
+  	else
+  		return
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: HelpOnObject
+ ID: 28
+ DataType: string
+ Value: "rootfolder.StorageAreaDocumentation"
+ ShowInTooltip: false
+-
+ Name: InitLayout
+ ID: 29
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // Init table Layout by creating all sub tables and defining all sub tables as free
+  // All cells in the sub table are defined as free.
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: INIT
+  // Calls		: none
+  //
+  // Author		: Guido Groß
+  // Date			: 12.10.2017
+  //
+  // History:
+  //--------------------------------------------------------------------------------
+  
+  var store := self.~
+  var Layout := store.Layout
+  
+  for var i := 1 to store.XDim loop
+  	for var j := 1 to store.YDim loop
+  		layout.createNestedList(i, j)
+  		layout[i,j].setName("free")
+  		
+  //		var pile := layout[i,j]
+  //		for var k := 1 to store.ZDim loop
+  //			pile[1, k] := "free"
+  //		next
+  	next
+  next
+ ShowInTooltip: false
+-
+ Name: storeAtPlace
+ ID: 30
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // store the product on Entrance at the place given as parameter
+  //
+  // Parameters	: place, the place where to store the product
+  //
+  // ReturnValues : none
+  //
+  // Called By	: user
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  
+  param Place : integer[2]
+  
+  
+  var Store : object := self.~
+  var portal := Store.storingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle" and Store.StoreEntrance.occupied
+  
+  var Product : object := Store.StoreEntrance.cont
+  var step : integer := 1
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // move to the entrance object
+  portal.moveToObject(Product)
+  waituntil portal.state="waiting"
+  
+  // move hook down to the object
+  var Position : length[3] := Product._3D.Position
+  
+  if Product.MuHeightWithContent>0 then
+  	var productHeight : length := Product.MuHeightWithContent
+  else
+  	productHeight := Product.MuHeight
+  end
+  
+  var height : length := Position.z + productHeight
+  
+  portal.moveHookAbs(height)
+  waituntil portal.state="waiting"
+  
+  // pick the product
+  Portal._3D.MuSideToAttach := "Top"
+  Product.move(Portal)
+  waituntil not portal.empty and portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // move portal to the target position
+  // calculate the target position in crane coordinates
+  var TargetPosition := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  waituntil portal.state="waiting"
+  
+  // move hook down so that we can place the product onto the floor
+  // occupy the place
+  Store.occupyPlace(place, product.name)
+  
+  var upperPart := Store[place.x, place.y].cont
+  if upperPart=void then
+  	// no part at  this place
+  	var stackHeight : length := 0.0
+  else
+  	position := upperPart._3D.Position
+  	if upperPart.MUHeightWithContent>0 then
+  		stackHeight := Position.z + upperPart.MUHeightWithContent
+  	else
+  		stackHeight := Position.z + upperPart.MUHeight
+  	end
+  end
+  
+  portal.moveHookabs(stackHeight+ProductHeight)
+  waituntil portal.state="waiting"
+  
+  // release the product
+  Product.move(Store[place.x, place.y])
+  waituntil portal.empty and portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // now the sequence is finished
+  portal.endSequence
+ ShowInTooltip: false
+-
+ Name: removeProductFromPlace
+ ID: 31
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // remove a product from store from given place
+  //
+  // Parameters	: product, the name of the product
+  //				  place, the place from which the product should be removed
+  //
+  // ReturnValues : none
+  //
+  // Called By	: INIT if AutomaticRemove is active
+  // Calls		: getPlaceOfProduct, moveHook, moveToPositionAbs, moveToObject,
+  //				  moveHookAbs
+  //--------------------------------------------------------------------------------
+  param Product : string, Place : integer[3]
+  
+  var store := self.~
+  var portal := store.RemovingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle"
+  
+  var step : integer := 1
+  
+  var Content := store.content
+  Content.setCursor(1, 1)
+  if Content.find({1,1}..{1,*}, Product) then
+  	var row : integer := Content.CursorY
+  
+  	var Locations := Content["Location", row]
+  	var row1 : integer := -1
+  
+  	for var i := 1 to Locations.YDim loop
+  		if Locations["X", i]=Place[1] and
+  			Locations["Y", i]=Place[2] and
+  			Locations["Z", i]=Place[3] then
+  
+  			row1 := i
+  			exitLoop
+  
+  		end
+  	next
+  
+  	if row1>0 then
+  		Locations.cutRow(row1)
+  		Content["Quantity", row] -= 1
+  	end
+  
+  	// calculate the target position in crane coordinates
+  	var StorePosition : real[3] := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  
+  	// get the crane coordinates of the place
+  	var CranePosition : real[3] := crane.calculateTargetPosition(Portal, StorePosition)
+  
+  	var Container : object := store[place[1], place[2]].cont
+  	if Container=void then
+  		var message : string := to_str("There is no product at place[", place[1],"/", place[2],"/", place[3],"]")
+  		messagebox(message, 1, 1)
+  		return
+  	end
+  
+  	// determine the target position of the exit station
+  	var TargetPosition := rootfolder.Internal.Methods.getTargetPosition(Crane, store.StoreExit)
+  	var TargetCranePosition : real[3] := crane.calculateTargetPosition(Portal, TargetPosition)
+  
+  	// now we start removing the Container
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move to the position of the product
+  	portal.movePortalTo(CranePosition)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down
+  	var position := Container._3D.Position
+  	if Container.MuHeightWithContent>0 then
+  		var ProductHeight : length := Container.MuHeightWithContent
+  	else
+  		ProductHeight := Container.MuHeight
+  	end
+  
+  	portal.moveHookAbs(Position[3] + ProductHeight)
+  	waituntil portal.state="waiting"
+  
+  	// pick the part
+  	Portal.hook._3D.MuSideToAttach := "Top"
+  	Container.move(Portal.hook)
+  	waituntil portal.hook.full
+  	store.freePlace(place, product)
+  	waituntil portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move portal to the exit location
+  	portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down to the object
+  	portal.moveHookAbs(TargetPosition[3] + ProductHeight)
+  	waituntil portal.state="waiting"
+  
+  	// unload the hook
+  	portal.hook.cont.move(store.storeExit)
+  
+  	waituntil portal.hook.empty and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// now the sequence is finished
+  	portal.endSequence
+  
+  end
+ ShowInTooltip: false
+-
+ Name: OnConnect
+ ID: 32
+ DataType: method
+ Value: |+1
+  param source, destination: object, created: boolean
+  
+  var connector : object := @
+  var store : object := ?
+  
+  if created then
+  	if store=destination then
+  		// the entrance station was connected
+  		Store.StoreEntrance := source
+  	else
+  		// the exit was connected
+  		Store.StoreExit := destination
+  	end
+  else
+  	// the connector was deleted
+  	if store=destination then
+  		Store.StoreEntrance := void
+  	else
+  		// exit station was disconnected
+  		Store.StoreExit := void
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: onEntrance
+ ID: 33
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // pick a part from StoreEntrance, find a free place and place the part there
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: EXTERNAL
+  // Calls		: getFreePlace, moveHook, moveToObject, moveHookAbs,
+  //				  moveToPositionAbs, occupyPlace, endSequence
+  //--------------------------------------------------------------------------------
+  
+  var Store : object := self.~
+  var portal := Store.storingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle" and Store.StoreEntrance.occupied
+  
+  var step : integer := 1
+  
+  // get the height of the MU on StoreEntrance
+  var Product :object := Store.StoreEntrance.cont
+  var productHeight : length := Product.MuHeight
+  
+  // get a free place in the store
+  var place : integer[3] := Store.getFreePlace
+  if place.x>0 and place.y>0 then
+  	// a free place was found for the product, occupy the place
+  	Store.occupyPlace(place, product.name)
+  
+  	// calculate the target position in crane coordinates
+  	var TargetPosition := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  
+  	var upperPart := Store[place.x, place.y].cont
+  	if upperPart=void then
+  		// no part at  this place
+  		var position : length[3] := [0.0, 0.0, 0.0]
+  		TargetPosition.z := position.z
+  	else
+  		position := upperPart._3D.Position
+  		TargetPosition.z := position.z + upperPart.MUHeight
+  	end
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move to the entrance object
+  	portal.moveToObject(Store.StoreEntrance.cont)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down to the object
+  	position := Product._3D.Position
+  	var height : length := position.z + productHeight
+  
+  	portal.moveHookAbs(height)
+  	waituntil portal.state="waiting"
+  
+  	// pick the product
+  	Portal.hook._3D.MuSideToAttach := "Top"
+  	Product.move(Portal.hook)
+  	waituntil portal.hook.full and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move portal to the target position
+  	portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down so that we can place the product onto the floor
+  	portal.moveHookabs(TargetPosition.z+ProductHeight)
+  	waituntil portal.state="waiting"
+  
+  	// release the product
+  	Product.move(Store[place[1], place[2]])
+  	waituntil portal.hook.empty and portal.state="waiting"
+  
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// now the sequence is finished
+  	portal.endSequence
+  
+  end
+ ShowInTooltip: false
+-
+ Name: adjustCrane
+ ID: 34
+ DataType: method
+ Value: |+1
+  var store : object := self.~
+  var Crane : object := store.Crane
+  if crane/=void then
+  	crane.adjustCraneToStore
+  end
+ ShowInTooltip: false
+-
+ Name: removeProductTo
+ ID: 35
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // remove the defined products from store and move them to the given Station.
+  //
+  // Parameters	: Product, the name of the product
+  //				  Quantity, the number of products to remove
+  //				  ToStation, the station where to move the products
+  //
+  // ReturnValues : true, if everything is ok
+  //				  false if something is going wrong
+  //
+  // Called By	: user
+  // Calls		: getPlaceOfProduct, moveHook, moveToPositionAbs, moveToObject,
+  //				  moveHookAbs
+  //--------------------------------------------------------------------------------
+  param Quantity : integer, ToStation : object, Product : string := ""  -> boolean
+  
+  var store := self.~
+  var portal := store.RemovingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle"
+  
+  // determine the product which should be removed
+  if product="" then
+  	var index : integer := 1
+  	Product := store.Content[1,1]
+  	if Product="" then
+  		return
+  	end
+  
+  else
+  	store.content.setCursor(1,1)
+  	If store.content.find({1,1}..{1,*}, Product) then
+  		index := store.Content.CursorY
+  	else
+  		// product not found
+  		return false
+  	end
+  end
+  
+  // check for the reqiested quantity
+  var removeQuantity : integer := min(store.Content["Quantity", index], Quantity)
+  if removeQuantity<=0 then
+  	return false
+  end
+  
+  // determine the target position of the exit station
+  var TargetPosition := rootfolder.Internal.Methods.getTargetPosition(Crane, ToStation)
+  var TargetCranePosition : real[3] := crane.calculateTargetPosition(Portal, TargetPosition)
+  
+  
+  var step : integer := 1
+  var partsRemoved : integer := 0
+  
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  
+  // determine the location from which we want to remove the product
+  var place := store.getPlaceOfProduct(Product)
+  
+  // calculate the target position in world coordinates
+  var StorePosition : real[3] := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  var CranePosition : real[3] := crane.calculateTargetPosition(Portal, StorePosition)
+  
+  var part : object := store[place[1], place[2]].cont
+  if part=void then
+  	return
+  end
+  
+  var pickHeight : length
+  if part.MuHeightWithContent>0 then
+  	pickHeight := part.MuHeightWithContent
+  else
+  	pickHeight := part.MuHeight
+  end
+  waituntil portal.state="waiting"
+  
+  // move to the position of the product
+  portal.movePortalTo(CranePosition)
+  waituntil portal.state="waiting"
+  
+  // move hook down
+  var position := part._3D.Position
+  portal.moveHookAbs(position.z + pickHeight)
+  waituntil portal.state="waiting"
+  
+  // pick the part
+  Portal._3D.MuSideToAttach := "Top"
+  part.move(Portal)
+  waituntil not portal.empty
+  
+  store.freePlace(place, product)
+  waituntil portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // move portal to the exit location
+  portal.moveToCranePosition(TargetPosition.x,TargetPosition.y)
+  waituntil portal.state="waiting"
+  
+  // move hook down to the object
+  portal.moveHookAbs(TargetPosition[3] + pickHeight)
+  waituntil portal.state="waiting"
+  
+  // unload the hook
+  portal.cont.move(ToStation)
+  
+  waituntil portal.empty
+  partsRemoved += 1
+  if partsRemoved<removeQuantity then
+  	step := 0	// step will be incrementd at the end of the case statement
+  end
+  waituntil portal.state="waiting"
+  
+  // move hook up
+  portal.moveHook(crane.DefaultHookHeight)
+  waituntil portal.state="waiting"
+  
+  // now the sequence is finished
+  portal.endSequence
+  
+  return true
+ ShowInTooltip: false
+-
+ Name: z
+ ID: 36
+ DataType: randtime
+ Value: [Uniform,0,1]
+ ShowInTooltip: false
+-
+ Name: storeProduct
+ ID: 37
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // pick a part, find a free place and place the part there
+  //
+  // Parameters	: none
+  //
+  // ReturnValues : none
+  //
+  // Called By	: EXTERNAL
+  // Calls		: getFreePlace, moveHook, moveToObject, moveHookAbs,
+  //				  moveToPositionAbs, occupyPlace, endSequence
+  //--------------------------------------------------------------------------------
+  
+  param PartToMove : object
+  
+  var Store : object := self.~
+  var portal := Store.storingPortal
+  var crane := Portal.~
+  
+  waituntil portal.state="idle"
+  
+  var step : integer := 1
+  
+  // get the height of the MU which should be moved
+  
+  if PartToMove.MuHeightWithContent>0 then
+  	var PartToMoveHeight : length := PartToMove.MuHeightWithContent
+  else
+  	PartToMoveHeight := PartToMove.MuHeight
+  end
+  
+  // get a free place in the store
+  var place : integer[2] := Store.getFreePlace
+  if place.x>0 and place.y>0 then
+  	// a free place was found for the part, occupy the place
+  	Store.occupyPlace(place, PartToMove.name)
+  
+  	// calculate the target position in crane coordinates
+  	var TargetPosition := crane._3D.getPositionOfObject(Store, Store._3D.getMUAnimationPosition(place.x, place.y))
+  
+  	var upperPart := Store[place.x, place.y].cont
+  	if upperPart=void then
+  		// no part at  this place
+  		var position : length[3] := [0.0, 0.0, 0.0]
+  		TargetPosition.z := Position.z
+  	else
+  		position := upperPart._3D.Position
+  		if upperPart.MUHeightWithContent>0 then
+  			TargetPosition.z := Position.z + upperPart.MUHeightWithContent
+  		else
+  			TargetPosition.z := Position.z + upperPart.MUHeight
+  		end
+  	end
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move to the entrance object
+  	portal.moveToObject(PartToMove)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down to the object
+  	Position := PartToMove._3D.Position
+  	var height : length := Position.z + PartToMoveHeight
+  
+  	portal.moveHookAbs(height)
+  	waituntil portal.state="waiting"
+  
+  	// pick the part
+  	Portal._3D.MuSideToAttach := "Top"
+  	PartToMove.move(Portal)
+  	waituntil not portal.empty and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// move portal to the target position
+  	portal.moveToCranePosition(TargetPosition.x, TargetPosition.y)
+  	waituntil portal.state="waiting"
+  
+  	// move hook down so that we can place the part onto the floor
+  	portal.moveHookabs(TargetPosition.z+PartToMoveHeight)
+  	waituntil portal.state="waiting"
+  
+  	// release the part
+  	PartToMove.move(Store[place.x, place.y])
+  	waituntil portal.empty and portal.state="waiting"
+  
+  	// move hook up
+  	portal.moveHook(crane.DefaultHookHeight)
+  	waituntil portal.state="waiting"
+  
+  	// now the sequence is finished
+  	portal.endSequence
+  
+  end
+ ShowInTooltip: false
+$TransportImp:
+ Active: false
+ Services:
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false
+$SupermarketConfiguration:

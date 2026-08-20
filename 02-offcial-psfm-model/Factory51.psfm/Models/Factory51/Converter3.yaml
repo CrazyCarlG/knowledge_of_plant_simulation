@@ -1,0 +1,22 @@
+InternalClassType: Converter
+Coordinate3D: [36.025,12.805,0]
+Name: Converter3
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746520
+UUID: 019f044c-ab8a-72f0-8c4a-f8460dd5d51c
+Width: 0.5
+3D:
+ BaseHeight: 0.5
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72f1-89c9-6d54bbc8e0e5
+ Name: Connector57
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-731c-a41b-ae5592550a6a
+$Predecessors:
+- 019f044c-ab8a-7323-be44-f1a31cfce891
+- 019f044c-ab8a-7325-a78e-c70338612e49
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-731c-a41b-ae5592550a6a
+$Side1: 019f044c-ab8a-7325-a78e-c70338612e49
+$Side2: 019f044c-ab8a-7323-be44-f1a31cfce891

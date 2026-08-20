@@ -1,0 +1,36 @@
+InternalClassType: DataTable
+Coordinate3D: [-14.5,-6,0]
+Name: ProductRanges
+Origin: b42ffed0-3791-455e-bfc4-f0af2e614549
+UUID: aeeb049b-91ed-4d86-9de3-905ff0299af9
+3D:
+ Rotation: [0,0,0,-1]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 4
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Width: 30
+  -
+   Index: 2
+   DataType: string
+   Width: 18
+  -
+   Index: 3
+   DataType: integer
+   Width: 8
+  -
+   Index: 4
+   DataType: integer
+   Width: 7
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,5,~,"Product","Racklane","From","To"]
+ Columns:

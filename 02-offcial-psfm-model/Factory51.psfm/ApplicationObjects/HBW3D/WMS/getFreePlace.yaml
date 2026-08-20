@@ -1,0 +1,31 @@
+InternalClassType: Method
+Coordinate3D: [-14.5,8,0]
+Name: getFreePlace
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // get a free place for the given pallet
+ // depending on current strategy index the corresponding method will be called
+ // Keep in mind, if Racklane is void, no free place was found
+ //--------------------------------------------------------------------------------
+ 
+ param byRef Racklane: object, byRef Side: string, byRef Column, Row: integer,
+ 	product: string := ""
+ 	
+ switch StrategyIndex
+ case 1
+ 	OneByOne(Racklane, Side, Column, Row, product)
+ case 2
+ 	Random(Racklane, Side, Column, Row)
+ case 3
+ 	Predefined(Racklane, Side, Column, Row, product)
+ case 4
+ 	XYZ(Racklane, Side, Column, Row, product)	
+ else
+ 	debug
+ end
+RandomSeed: 2245
+UUID: f839aabd-3ae8-4648-bd3b-e89e68d76c78
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]

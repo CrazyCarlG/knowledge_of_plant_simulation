@@ -1,0 +1,201 @@
+InternalClassType: Frame
+ChangePathCtrl:
+CloseCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+FailCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: WMS
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PermitDeleteCtrl:
+RandomSeed: 2232
+RelabelCtrl:
+RenameCtrl:
+ReplacementMode: "merge"
+SelectCtrl:
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: f2c13264-d911-4421-ab63-cd6cb539a778
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ BackgroundColor: -1
+ CameraAnimations:
+ ExcludeFromShowContentOfLocation: false
+ ExternalGraphicGroups: ["default"]
+ GraphicGroupNames: ["default","deco"]
+ InternalGraphicGroups: ["deco"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ NameLabelEnabled: true
+ NameLabelPosition: [-1.07019996643066,-0.950299978256226,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ PlanningView: true
+ PointCloudPath: ""
+ PointCloudPosition: [0,0,0]
+ PointCloudRotation: [0,0,0,-1]
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowBasePlate: false
+ ShowConnections: false
+ ShowContent: false
+ ShowExternalGraphics: false
+ ShowGrid: true
+ ShowLabels: false
+ ShowMaterialFlowDirections: false
+ ShowNames: true
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+ StatesForColoring: 0xf0f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default","deco"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [32,31]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgvmgOPxpOPxqOPxqOPxqOPxqOPxqOPxqOPxpOvtqOvtrtvzKgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3P3kOvxpM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mWvuC9/77gIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/f/+ffueNP5mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/5nuPzK/v7+gIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3f3lOftrM/9mMv9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9lWvqD+f76gIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAfPufNf5mM/9kM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/5oNf1muPzKgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2v3jOv1pMv9lM/5oM/9mM/9mMv9mNf9lM/9mM/9mMv9mM/9nM/9mM/9mM/9lM/5mWfuC+f/6
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAfvueM/5mM/9mM/9mM/9mM/9mOP1orPzDXvyFjfqogfufNf5lM/9mM/9mM/9mM/9mNP5nu/rM
+ - gIAAgIAAgIAA8/zf2Puf2fqh2fug2fug2fug2fug2fug2fug2vugxPmjOvxrM/9lM/9mM/9mM/9mM/9mN/1p8P70tfnH5/3sqv2/M/5nM/9mM/9mM/9mM/9mM/9mWvqD
+ - gIAAgIAAgIAAu/lXl/4Cmf8Amf8Bmf8Bmf8Bmf8Bmf8Bmf8Bmf8Bjf4LPf5eNP9mM/9mM/9mM/9mM/9mOP1p1/vj2vvlxPjTq/y/M/9lM/9mM/9mM/9nMv9lNf5ma/yP
+ - gIAAgIAA7PzMmvwHmf4Bmv8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amv4CYv41NP9lM/9mM/9mM/9mM/9mNf5ncPqVZfqLWviEXfuIM/5mM/9mM/9mNP9lM/9lNf1nzvzZ
+ - gIAA/v78uvpUmf4Cmf4Cmf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf4Bjv0MO/9dM/9mM/9mM/9mM/9mM/9mMv5mNP5lM/9mNP9lNP9mM/9mM/9mMv9mNP5lbvqR+v78
+ - gIAA7PzNm/wHmf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf4Bm/4BY/03M/9lMf5nNP9lM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/5nOP1ozfzZgIAA
+ - /v78uvpUmf4Cmf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amv4Bl/4Cj/4LPP9eNP5mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mNP5mbfqQgIAAgIAA
+ - 7PzNmvwHmf4Bmf8Amf8Amf8Bmf0EmvwGmvwGmv0Em/sJmP4Bmf8Bmf8Amv8Bmv4BYv41NP5mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9lNP9mNv1ozvzagIAAgIAA
+ - u/pWmf4Bm/4Bmf8Amf8Amf4BovsZ4/u12/mlyPeC6f25mvsGmf4Bmf8Amf8AmP8Aj/8JPf5eM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mM/9mNP9mbPuRgIAAgIAAgIAA
+ - nPoLmf4BmP4Cmf8Amf8Amf4BmvwF6vvH6/jO8/zf1fqXmf4Bmf4Bmf8Amf8AmP8Bl/4CmP1BpP5mpP5mpP5mpP5mpP5mpP5mpP5mpP5mpv5lov1n1/zEgIAAgIAAgIAA
+ - uvlQmP4Bmf4Bmf8Amf8Amv4Bmv4C1PqRzfp/5Py5u/tVmf8Amf8Amf8Amf8Amf8BnvwLxv5dy/5my/5my/5my/5my/5my/5my/5my/5my/5my/5m2vuUgIAAgIAAgIAA
+ - 6vzHmvwGmf4Cmf8Amf8Amf8Bmf4Cm/oJmvwGmvoKmf0Emf8Amf8Amf8Amf8Amf4Bs/w0y/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/1p9P3cgIAAgIAA
+ - /v78uflRmf4Bmf8Amf8Amf4Bmf4CmP8Amf4CmP8Bmf4Bmf8Amf8Amf8Bmf8Bnf0Kxv5bzP5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5m2vuU//79gIAA
+ - gIAA6fzJm/wGmf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Bmf4Bsfwzyf5ny/9ly/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5ly/1p9P3dgIAA
+ - gIAAgIAAuPlRmf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amf8Amv4CnvwKx/5eyf5lyv5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5m2vuU///+
+ - gIAAgIAA6/vImvwHmv4Cmv4Cmv4Cmv4Cmv4Cmv4Cmv4Cmv4Cmv4Cmf4Csv0zy/5ly/5my/5my/5my/5my/5my/xq3PyX2fyNy/1ny/5ny/5my/5my/5my/5my/1p9P3d
+ - gIAAgIAAgIAAuvlTmv4Cmf4BmP8AmP8AmP8AmP8AmP8AmP8AmP8AnfwKyP5fy/5my/5my/5my/5my/5my/5m2PyL8vvb1fmJy/5my/5my/5my/5my/5my/5my/5m2vyS
+ - gIAAgIAAgIAA8vzd2fig2fii2fii2fii2fii2fii2fii2fii2fii2viizPxqyv5my/5my/5my/5my/5my/5mzPxr3/ml9/3hy/xqy/5ky/5my/5my/5my/5ly/5m0/uB
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3fyby/1ny/5my/5my/5my/5my/5l0vx65vm04vuoy/1ny/5my/5my/5my/5my/5my/1o7PzG
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAzP1qy/5my/5my/5my/5my/5ny/5my/5my/1ny/5ly/5ny/5my/5my/5my/5m0/uB/v75
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3fyby/5ly/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5ny/5m7PzHgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAy/xqy/5my/5ny/5my/5my/5my/5my/5my/5my/5my/5my/5my/5l0/yA/f76gIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3fyay/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5ny/5n7PzHgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAy/xqy/5my/5my/5my/5my/5my/5my/5my/5my/5ny/5n0/yA/v75gIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA3fqgy/pty/pty/pty/pty/pty/pty/pty/pty/lvy/pu7PzIgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,40]
+ Pixels:
+ - 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
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA9f7dy/xsy/5my/5my/5my/5my/5my/5my/5ny/5ny/1ny/1py/1oy/5ky/1ny/5my/5my/5my/5oy/5ly/5k2PqQ/v76
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA//782/uYy/5ly/1ny/5my/5my/5my/5my/5ny/9ly/5ny/5my/5ky/5ly/5my/5my/5my/5my/9ly/1oy/xq8vzXgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA9f3dy/try/5my/9ly/5ny/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/1oy/9l2PqR///6gIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2/uWy/5my/5my/5ny/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5ly/1q8vzWgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA9P3czPxry/5my/5ly/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5my/5m2PqQ/v/5gIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2/uYy/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5ly/5my/5my/1o8vzXgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA9P3cy/tsy/5ly/5ny/5ny/5ny/5ny/5ny/5ny/5ny/5ny/5ny/5my/1py/5m2PqQgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v772/mby/hwy/lvy/lvy/lvy/lvy/lvy/lvy/lvy/lvy/lvy/lwy/lwy/h08fzUgIAAgIAAgIAAgIAA
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7/lPuuNv1oNv1oNv1oNv1oN/1pwv3RgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAA5/7tQ/1xM/9mM/9mM/9mM/9mM/9maP2O+/78
+ - gIAAgIAAgIAAgIAAgIAAgIAA/v7+nP20NP5mM/9mM/9mM/9mM/9mM/9mOP5qzv7a
+ - gIAA+/717/3W8P7Y8P7Y8P7Y6P3WSP12M/9mM/9mh/ylpvu8X/yGM/9mM/9mbfyS
+ - //7+zPyAm/4Gm/8Fm/8Fm/8Fl/4KQf9ZM/9mM/9mdvyZnPm0V/2BM/9mNP9lcvyU
+ - 9f7lofwXmf8Amf8Amf8Amf8Amf4Ba/4vM/9mM/9mM/5mNf5nNP9mM/9mOv5q0f3c
+ - 0P2Kmf8Bmf8Amv4Dmv4Dmv4Cmf8Bj/4MPf9cM/9mM/9mM/9mM/9mM/9mbf2Q+//8
+ - qPwnmf8Amf8AwPti1PmXuPxNmf8Bmf8AcP43W/9mW/9mW/9mW/9mW/5mxf3OgIAA
+ - r/w3mf8Bmf4AsPw5zPp/o/0bmf8Amf8Btv1Bx/5mx/5mx/5mx/5mx/5m6f3D///+
+ - 2Pygmv4Dmf8Amf4Bmf4Cmf8Amf8Bof4SyP5gy/5my/5my/5my/5my/5m1f2G/f75
+ - +f7vpvwkmf8Amf8Amf8Amf8Amf4BtP43yv5my/5my/5nzf5ty/5my/5mzP5o8P7S
+ - ///+2fufpPweo/wdo/wdo/wdp/wjyP5fy/5my/5mz/1z4vupy/5oy/5my/5m1v2H
+ - gIAA/v/7+f7u+f7u+f7u+f7u+P3s0/1+y/5my/5mzf1u4PukzP5ny/5my/5m3f2b
+ - gIAAgIAAgIAAgIAAgIAAgIAA///+6f3Ay/5my/5my/5my/5my/5my/5mzf1t9v7j
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAA+v7w0f13y/5my/5my/5my/5my/5m2/2V/v/9
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAA//7+5vy3y/tqy/tqy/tqy/try/ts8v3YgIAA
+$CustomAttributes:
+-
+ Name: OnOpen
+ ID: 1
+ DataType: method
+ Value: |+1
+  
+  dialog.Label := "WMS"
+  
+  dialog.open
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectDEU
+ ID: 2
+ DataType: string
+ Value: "rootfolder.HBW_Documentation"
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectENU
+ ID: 3
+ DataType: string
+ Value: "rootfolder.HBW_Documentation"
+ ShowInTooltip: false

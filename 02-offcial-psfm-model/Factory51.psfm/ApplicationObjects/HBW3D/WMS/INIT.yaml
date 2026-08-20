@@ -1,0 +1,9 @@
+InternalClassType: Method
+Coordinate3D: [6.5,-11,0]
+Name: INIT
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: "&WMS_init.executeIn(0) // Execute WMS_init after all Init methods are executed"
+RandomSeed: 2255
+UUID: a1b2568c-f2d6-4bd2-9702-25c797c65cb1
+3D:
+ VisibleGraphicGroups: ["default","init"]

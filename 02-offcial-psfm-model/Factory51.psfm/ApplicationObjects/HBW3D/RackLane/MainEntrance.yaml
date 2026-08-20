@@ -1,0 +1,19 @@
+InternalClassType: Interface
+Coordinate3D: [0,0,1]
+ExitStrategyBlocking: true
+MaxConnections: 1
+Name: MainEntrance
+Origin: afd3e729-9394-4d90-8812-e0049cb39ed0
+Position: 5
+RandomSeed: 1
+Side: "Top"
+UUID: 5ec2faab-7e86-4641-821f-094dd51fe984
+3D:
+ Rotation: [93.0000000134955,0,0,-1]
+ VisibleGraphicGroups: ["default"]
+$Successors:
+-
+ $Succ: 0b07d133-30b2-4c8d-b08e-1e7fb15c322d
+ Name: Connector
+ Origin: 8d6b03b6-ea15-4b7f-8804-27d10445086e
+ UUID: ae9aecd4-e766-4799-97ba-79ee2246d247

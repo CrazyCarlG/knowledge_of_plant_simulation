@@ -1,0 +1,21 @@
+InternalClassType: Method
+Coordinate3D: [6.5,7,0]
+Name: getRackLane
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // get the name of the rack lane where the pallet should be stored
+ //----------------------------------------------------------------
+ param pallet: object -> object
+ 
+ var destination := pallet.Destination
+ 
+ if destination = void
+ 	return void
+ else
+ 	return destination.~.~	
+ end
+RandomSeed: 2234
+UUID: 4bb2195c-9fb2-4e54-92a5-ca69890f0a30
+3D:
+ Mirror: [false,false,false]

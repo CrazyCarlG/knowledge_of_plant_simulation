@@ -1,0 +1,40 @@
+InternalClassType: Conveyor
+Coordinate3D: [37.025,12.805,0]
+Length: 6
+Name: Line16
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746521
+Speed: 1
+UUID: 019f044c-ab8a-72f1-89c9-6d54bbc8e0e5
+Width: 0.5
+3D:
+ BaseHeight: 0.5
+ $ExtSegments:
+  - 0
+  - [0,6,0]
+$CustomAttributes:
+-
+ Name: OnSensor
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.move(PickAndPlace1)
+ ShowInTooltip: false
+$Predecessors:
+- 019f044c-ab8a-731c-a41b-ae5592550a6a
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 5
+ FromEnd: false
+ Control: "self.OnSensor"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

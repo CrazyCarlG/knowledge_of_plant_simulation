@@ -1,0 +1,41 @@
+InternalClassType: Conveyor
+Accumulating: true
+Coordinate3D: [17,-12.4,0]
+Length: 11.655627699771637
+MUDistance: 1
+MUDistanceType: "Minimum Gap"
+Name: Line16
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746043
+UUID: 019f044c-ab8a-7050-8123-7f68dda80c9e
+3D:
+ ObstacleForWorker: "(None)"
+ $ExtSegments:
+  - 1.5000000000000002
+  - [-90,2.6,0]
+  - [0,2.3,-1]
+  - [0,2.6,-0.5]
+  - [0,2.1,0]
+  - [0,1.8,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7075-90a4-e0244740d7b3
+ Name: Connector5
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70be-bdfe-35c6525649ff
+$Predecessors:
+- 019f044c-ab8a-709f-b5a8-95cad5308a3c
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 8.4000000000000021
+ FromEnd: false
+ Control: ""
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

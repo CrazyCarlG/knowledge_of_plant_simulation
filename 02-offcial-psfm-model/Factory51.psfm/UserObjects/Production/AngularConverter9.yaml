@@ -1,0 +1,22 @@
+InternalClassType: AngularConverter
+Coordinate3D: [19.75,12.7,2.8]
+EntryLength: 1
+ExitLength: 1
+Name: AngularConverter9
+Origin: a0ac50ef-a21a-4ac2-aec6-ba9f6b385932
+RandomSeed: 1073746139
+UUID: 019f044c-ab8a-705f-ba9f-8815b0790a06
+3D:
+ $ExtSegments:
+  - 0
+  - [-90,1,0]
+  - [-90,1,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7060-bda5-efebd9c050b1
+ Name: Connector66
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7095-b041-c1bbb280a332
+$Predecessors:
+- 019f044c-ab8a-70c4-82df-2d96f565924f
+InheritEntranceExitLockedOnReset: false

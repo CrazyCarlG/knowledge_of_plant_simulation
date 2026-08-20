@@ -1,0 +1,32 @@
+InternalClassType: Checkbox
+Control: "self.OnClicked"
+Coordinate3D: [0.5,-13.1,0.6]
+Label: "Show Cuboids"
+Origin: 0a7a710a-4dc2-41b0-9f38-522020e303e3
+RandomSeed: 1073761596
+UUID: 019f044c-ab8a-7148-95ce-f4622abfd9b3
+Value: false
+3D:
+ Rotation: [45,1,0,0]
+ VisibleGraphicGroups: ["default","false"]
+$CustomAttributes:
+-
+ Name: Tooltip
+ ID: 3439040607
+ DataType: string
+ Value: "To improve performance you can visualize the parts in the warehouse by cuboids"
+ ShowInTooltip: false
+-
+ Name: OnClicked
+ ID: 3985591099
+ DataType: method
+ Value: |+1
+  var bShowAsCuboids := ?.Value
+  
+  for var i := 1 to WMS.RackLanes.dim
+  	var Racklane := WMS.RackLanes[i]
+  
+  	Racklane.RackLeft._3D.MUAnimationAreaShowMUsAsCuboids  := bShowAsCuboids
+  	Racklane.RackRight._3D.MUAnimationAreaShowMUsAsCuboids := bShowAsCuboids
+  next
+ ShowInTooltip: false

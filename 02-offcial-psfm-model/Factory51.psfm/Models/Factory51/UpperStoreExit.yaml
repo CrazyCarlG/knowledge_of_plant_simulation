@@ -1,0 +1,25 @@
+InternalClassType: Station
+Coordinate3D: [-29.3,20,0]
+Name: UpperStoreExit
+Origin: b6fe5447-f96e-4746-898e-a6b015fb9fcc
+RandomSeed: 1073747581
+UUID: 019f044c-ab8a-7302-bfb1-bf55b3746880
+3D:
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ StatesForColoring: 0xf7f
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.96,0.96,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72d8-8247-ea2c9e17e3c5
+ Name: Connector67
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7345-9a6a-9410b76f86c1
+InheritEntranceExitLockedOnReset: false

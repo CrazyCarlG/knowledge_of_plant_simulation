@@ -1,0 +1,65 @@
+InternalClassType: Conveyor
+Coordinate3D: [-31,-20.8,0]
+Length: 31.75398163397448
+Name: StoreLineBottom
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073747560
+Speed: 1.5
+UUID: 019f044c-ab8a-72fd-9db6-72bea1e18da8
+3D:
+ $ExtSegments:
+  - 0
+  - [0,2,0]
+  - [0,90,1,0]
+  - [0,2.2,0]
+  - [0,90,1,0]
+  - [0,5,0]
+  - [0,-90,1,0]
+  - [0,9.7,0]
+  - [0,-90,2,0]
+  - [0,5,0]
+$CustomAttributes:
+-
+ Name: OnSensor
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  --Activating the sensor moves the parts from the
+  --container to the specified destination
+  
+  @.stopped := true
+  
+  var Destination:object := PickAndPlace2
+  
+  while not @.Empty
+  	var mu: object := @.cont
+  	if not mu.move(Destination)
+  		stopuntil mu.location /= @ and not Destination.isLoading
+  	end
+  end
+  
+  @.stopped := false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-737b-8e38-f35b55057fe7
+ Name: Connector2
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-733b-9db0-6fea3f746974
+$Predecessors:
+- 019f044c-ab8a-7335-a276-e6cf90c7ddb1
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 28.5
+ FromEnd: false
+ Control: "self.OnSensor"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: true

@@ -1,0 +1,84 @@
+InternalClassType: Part
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [-2,2,0]
+CostingActive: true
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DragDropCtrl:
+Label: ""
+MaterialCostsPerPiece: 3
+MoveToFolderCtrl:
+MUHeight: 0.1
+MULength: 0.5
+MUWidth: 0.4
+Name: Part
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+RouteWeightingAttr: ""
+SelectCtrl:
+UUID: fe01ce2d-4cea-4a37-9ebc-5310e4a1429e
+3D:
+ GraphicGroupNames: ["default","Milled","Polished","CenterHole","CenterHoleChamfer","Finished"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ Poses:
+ Rotation: [0,0,0,-1]
+ ScaleAutomatically: true
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAAgIAAgIAA
+ - gIAARrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+RrzcFFyMMo6+Mo6+Mo6+FFyMgIAA
+ - gIAARrzcFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMgIAA
+ - gIAAgIAAgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAARrzcRrzcgIAAgIAAgIAAgIAAgIAA
+ - gIAARrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - RrzcRrzcRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyMRrzcRrzcRrzcRrzcFFyM
+ - RrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMFFyM
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcAP//AP//AP//RrzcFFyMAP//AP//AP//RrzcFFyMAP//AP//AP//FFyMgIAA
+ - gIAARrzcFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMRrzcFFyMFFyMFFyMFFyMFFyMgIAA
+ - gIAAgIAAgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAFFyMFFyMgIAAgIAAgIAAgIAAgIAA

@@ -1,0 +1,40 @@
+InternalClassType: Converter
+Coordinate3D: [37.025,10.805000000000001,0]
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073746518
+Strategy: "Method"
+StrategyCtrl: "self.OnStrategy"
+UUID: 019f044c-ab8a-72ee-9353-ac7f8c17a61a
+Width: 0.5
+3D:
+ BaseHeight: 0.5
+ $ExtSegments:
+  - 0
+  - [-180,1,0]
+$CustomAttributes:
+-
+ Name: OnStrategy
+ ID: 1
+ DataType: method
+ Value: |+1
+  param entranceNo: integer
+  
+  ?.ExitForMU := when @.Cont.Name = "Strawberry" then 0 else 1 /* number of exit */
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-72e6-ac00-88a94979ce68
+ Name: Connector7
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7313-89a4-7724ccf5daec
+-
+ $Succ: 019f044c-ab8a-72f2-8dd8-14cbdb41bc28
+ Name: Connector58
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7314-a650-23633d46c748
+$Predecessors:
+- 019f044c-ab8a-7324-8ed1-94a110e8bfd1
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-7313-89a4-7724ccf5daec
+$Side1: 019f044c-ab8a-7314-a650-23633d46c748
+$Side2: 019f044c-ab8a-7324-8ed1-94a110e8bfd1

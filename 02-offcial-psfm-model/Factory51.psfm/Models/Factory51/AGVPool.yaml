@@ -1,0 +1,30 @@
+InternalClassType: AGVPool
+AGV: d16091ac-1a07-4b68-9bf2-dfe49a7768b3
+Coordinate3D: [-45.1495,-19.2,-0.01]
+Origin: 531c338a-0925-4c46-b109-34ffa7997723
+RandomSeed: 1073747685
+UUID: 019f044c-ab8a-7308-99db-9705b2758ff4
+3D:
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "(Off)"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: Init
+ ID: 1
+ DataType: method
+ Value: "@.Cont.setRoute([M_StoreEntry])"
+ ShowInTooltip: false
+-
+ Name: CurrentTruck
+ ID: 2
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false

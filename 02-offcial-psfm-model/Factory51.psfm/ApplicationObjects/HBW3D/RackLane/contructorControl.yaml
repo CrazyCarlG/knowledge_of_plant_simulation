@@ -1,0 +1,18 @@
+InternalClassType: Method
+Coordinate3D: [-23,8,0]
+Name: contructorControl
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ //When a Racklane is inserted and connected to another Racklane in the same moment the inserted Racklane takes over the attributes of the Racklane its been connected to. 
+ //Here the preceeding Racklane is always prioritized before the succeeding Racklane
+ if pred/=Void and pred.~.Class=current.Class
+ 	adoptParametrization(pred.~)
+ elseif succ/=Void and succ.~.Class=current.Class
+ 	adoptParametrization(succ.~)
+ elseif pred/=Void and pred.~.Class=current.Class and succ/=Void and succ.~.Class=current.Class
+ 	adoptParametrization(pred.~)
+ end
+ 
+ initRackLane
+RandomSeed: 2262
+UUID: 4f28c18c-106e-415b-ac57-c29278500411

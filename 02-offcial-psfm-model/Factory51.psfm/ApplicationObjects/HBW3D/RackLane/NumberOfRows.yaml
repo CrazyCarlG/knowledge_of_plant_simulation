@@ -1,0 +1,9 @@
+InternalClassType: Variable
+Coordinate3D: [-23,0.49849999999999994,0]
+Name: NumberOfRows
+Origin: eda2032a-7957-419c-add5-f932f1af00ff
+UUID: 75466f2c-41b1-435e-8f9c-3bf8f3c66201
+$Observers:
+- [Value,"onChanges"]
+$DataType: integer
+Value: 5

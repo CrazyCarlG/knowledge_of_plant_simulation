@@ -1,0 +1,1168 @@
+InternalClassType: Dialog
+Coordinate3D: [9.3927,7,0]
+Label: "RackLane"
+Origin: 583d05f7-1ac4-4ae7-a9ef-d4083c7e0049
+RandomSeed: 8964
+ShowStandardButtons: true
+UUID: 68c5e763-4cbe-4593-aff2-168b46f7ab78
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ $DataType: method
+ Value: |+1
+  //
+  //
+  // Method Tasks:
+  // casllback method of the user dialog
+  //
+  // Parameters	: action, an action string depending on the user interaction
+  //
+  // ReturnValues: none
+  //
+  // Called By	: USER interaction
+  // Calls		: none
+  //--------------------------------------------------------------------------------
+  
+  
+  param action : string
+  
+  var AppObj := self.~.~
+  
+  switch action
+  case "Open"
+  	self.~.initDialog
+  
+  case "Apply"
+  	self.~.applyDialog
+  
+  case "Close"
+  	-- TODO: add code for the "Close" action here
+  	--self.~.initDialog
+  //--------------------------------------------------------------------------------
+  // Navigate menu
+  case "openLocation"
+  	AppObj.~.openDialog
+  
+  case "openOrigin"
+  	if AppObj.Origin /= void
+  		AppObj.Origin.openDialog
+  	end
+  
+  case "gotoOrigin"
+  	if AppObj.origin/= void
+  		AppObj.origin.openDialog
+  		dialog.close( false )
+  	end
+  
+  case "openClass"
+  	if AppObj.class /= void
+  		AppObj.class.openDialog
+  	end
+  
+  case "gotoClass"
+  	if AppObj.class /= void
+  		AppObj.class.openDialog
+  		dialog.close( false )
+  	end
+  
+  //--------------------------------------------------------------------------------
+  // View menu
+  case "refresh"
+  	Dialog.initDialog
+  
+  case "statisticsReport"
+  	// not implemented so far
+  
+  case "contents"
+  	// not implemented so far
+  
+  case "lockoutZone"
+  	// not implemented so far
+  
+  case "calendar"
+  	// not implemented so far
+  
+  
+  //--------------------------------------------------------------------------------
+  // Help menu
+  
+  case "helpObject"
+  	.ApplicationObjects.HBW3D.HBW_Documentation.show
+  
+  
+  case "helpVersion"
+  	var lib, vers, libPath, text : string
+  	rootfolder.getLibraryInfo( lib, vers, text, libPath )
+  	text := to_str( "Plant Simulation ", lib, strChr(10), " Version: ", vers, strChr(10))
+  	messageBox( text, 1, 4)
+  
+  //--------------------------------------------------------------------------------
+  // Tab Rack
+  case "WMS"
+  	// nothing to do
+  
+  case "showContent"
+  	showRackContent := dialog.getCheckBox("showContent_chk")
+  	RackLeft._3D.showContent := showRackContent
+  	RackRight._3D.showContent := showRackContent
+  
+  
+  //--------------------------------------------------------------------------------
+  // Tab RSU
+  case "RSU_Availability"
+  	?.setCheckBox("RSU_AvailabilityInherit", false) //Switch off inheritance
+  	var av : real := str_to_num(dialog.getValue("RSU_Availability_inp"))
+  	if av>0 and av<=1 then
+  		av := av * 100
+  	end
+  	dialog.setCaption("RSU_Availability_inp", to_str(av))
+  
+  case "RSU_MTTR"
+  	?.setCheckBox("RSU_MTTRInherit", false) //Switch off inheritance
+  	var t : time := str_to_time(dialog.getValue("RSU_MTTR_inp"))
+  	av := str_to_num(dialog.getValue("RSU_Availability_inp"))
+  	if av = 100
+  		RSU_MTTR := 0
+  		?.setCheckBox("RSU_MTTRInherit", true)
+  	else
+  		RSU_MTTR := t
+  	end
+  	dialog.setCaption("RSU_MTTR_inp", to_str(RSU_MTTR))
+  
+  //--------------------------------------------------------------------------------------
+  //Inheritance Handling, in case a value for an attribute was changed the inheritance is marked as off
+  case "name"
+  	?.setCheckBox("NameInherit", false)
+  case "label"
+  	?.setCheckBox("LabelInherit", false)
+  case "NumberOfColumns"
+  	?.setCheckBox("NumberOfColumnsInherit", false)
+  case "NumberOfRows"
+  	?.setCheckBox("NumberOfRowsInherit", false)
+  case "BoxWidth"
+  	?.setCheckBox("BoxWidthInherit", false)
+  case "BoxHeight"
+  	?.setCheckBox("BoxHeightInherit", false)
+  case "BoxDepth"
+  	?.setCheckBox("BoxDepthInherit", false)
+  case "Gap"
+  	?.setCheckBox("GapInherit", false)
+  case "Thickness"
+  	?.setCheckBox("FloorThicknessInherit", false)
+  case "Clearance"
+  	?.setCheckBox("GroundClearanceInherit", false)
+  case "TrackWidth"
+  	?.setCheckBox("TrackWidthInherit", false)
+  case "RSU_speed"
+  	?.setCheckBox("RSU_speedInherit", false)
+  case "RSU_acceleration"
+  	?.setCheckBox("RSU_accelerationInherit", false)
+  case "RSU_deceleration"
+  	?.setCheckBox("RSU_decelerationInherit", false)
+  case "LoadHandler_speed"
+  	?.setCheckBox("LoadHandler_speedInherit", false)
+  case "Carrier_speed"
+  	?.setCheckBox("Carrier_speedInherit", false)
+  case "ConveyorWidth"
+  	?.setCheckBox("ConveyorWidthInherit", false)
+  case "ConveyorLength"
+  	?.setCheckBox("ConveyorLengthInherit", false)
+  case "BaseHeight"
+  	?.setCheckBox("BaseHeightInherit", false)
+  case "ConveyorSpeed"
+  	?.setCheckBox("ConveyorSpeedInherit", false)
+  end
+-
+ Name: initDialog
+ ID: 2
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // initialize the dialog
+  //
+  // Called By	: callback of dialog
+  //--------------------------------------------------------------------------------
+  
+  var l : length := 1
+  var l_unit : string := getUnit(l)
+  var s : speed := 1
+  var s_unit : string := getUnit(s)
+  var a : acceleration := 1
+  var a_unit : string := getUnit(a)
+  var inherit:boolean
+  
+  dialog.setCaption("Name_inp", current.name)
+  current.getAttribute("name", inherit)
+  dialog.setCheckBox("NameInherit", inherit)
+  
+  dialog.setCaption("label_inp", current.label)
+  current.getAttribute("label", inherit)
+  dialog.setCheckBox("LabelInherit", inherit)
+  
+  dialog.Label := current.name
+  
+  // RSU parameter
+  dialog.setCaption("TrackWidth_inp", to_str(TrackWidth))
+  dialog.setCaption("TrackWidth_unit", l_unit)
+  &TrackWidth.getAttribute("Value", inherit)
+  dialog.setCheckBox("TrackWidthInherit", inherit)
+  
+  dialog.setCaption("RSU_speed_inp", to_str(RSU_speed))
+  dialog.setCaption("RSU_speed_unit", s_unit)
+  &RSU_speed.getAttribute("Value", inherit)
+  dialog.setCheckBox("RSU_speedInherit", inherit)
+  
+  dialog.setCaption("RSU_acceleration_inp", to_str(RSU_acceleration))
+  dialog.setCaption("RSU_acceleration_unit", a_unit)
+  &RSU_acceleration.getAttribute("Value", inherit)
+  dialog.setCheckBox("RSU_accelerationInherit", inherit)
+  
+  dialog.setCaption("RSU_deceleration_inp", to_str(RSU_deceleration))
+  dialog.setCaption("RSU_deceleration_unit", a_unit)
+  &RSU_deceleration.getAttribute("Value", inherit)
+  dialog.setCheckBox("RSU_decelerationInherit", inherit)
+  
+  dialog.setCaption("LoadHandler_speed_inp", to_str(LoadHandler_speed))
+  dialog.setCaption("LoadHandler_speed_unit", s_unit)
+  &LoadHandler_speed.getAttribute("Value", inherit)
+  dialog.setCheckBox("LoadHandler_speedInherit", inherit)
+  
+  dialog.setCaption("Carrier_speed_inp", to_str(Carrier_speed))
+  dialog.setCaption("Carrier_speed_unit", s_unit)
+  &Carrier_speed.getAttribute("Value", inherit)
+  dialog.setCheckBox("Carrier_speedInherit", inherit)
+  
+  dialog.setCaption("RSU_Availability_inp", to_str(RSU_Availability))
+  &RSU_Availability.getAttribute("Value", inherit)
+  dialog.setCheckBox("RSU_AvailabilityInherit", inherit)
+  
+  // Make sure that MTTR has a value of zero if Availability is 100% (no failures)
+  if RSU_Availability=100
+  	&RSU_MTTR.inheritAttribute("Value")
+  end
+  dialog.setCaption("RSU_MTTR_inp", to_str(RSU_MTTR))
+  &RSU_MTTR.getAttribute("Value", inherit)
+  dialog.setCheckBox("RSU_MTTRInherit", inherit)
+  
+  dialog.setCaption("WMS_inp", WMS_new)
+  
+  // Rack parameter
+  dialog.setCaption("NumberOfColumns_inp", to_str(NumberOfColumns))
+  &NumberOfColumns.getAttribute("Value", inherit)
+  dialog.setCheckBox("NumberOfColumnsInherit",inherit)
+  
+  dialog.setCaption("NumberOfRows_inp", to_str(NumberOfRows))
+  &NumberOfRows.getAttribute("Value", inherit)
+  dialog.setCheckBox("NumberOfRowsInherit",inherit )
+  
+  dialog.setCaption("BoxHeight_inp", to_str(BoxHeight))
+  dialog.setCaption("BoxHeight_unit", l_unit)
+  &BoxHeight.getAttribute("Value", inherit)
+  dialog.setCheckBox("BoxHeightInherit", inherit )
+  
+  dialog.setCaption("BoxWidth_inp", to_str(BoxWidth))
+  dialog.setCaption("BoxWidth_unit", l_unit)
+  &BoxWidth.getAttribute("Value", inherit)
+  dialog.setCheckBox("BoxWidthInherit", inherit )
+  
+  dialog.setCaption("BoxDepth_inp", to_str(BoxDepth))
+  dialog.setCaption("BoxDepth_unit", l_unit)
+  &BoxDepth.getAttribute("Value", inherit)
+  dialog.setCheckBox("BoxDepthInherit", inherit)
+  
+  
+  dialog.setCaption("Gap_inp", to_str(Gap))
+  dialog.setCaption("Gap_unit", l_unit)
+  &Gap.getAttribute("Value", inherit)
+  dialog.setCheckBox("GapInherit", inherit)
+  
+  dialog.setCaption("FloorThickness_inp", to_str(FloorThickness))
+  dialog.setCaption("FloorThickness_unit", l_unit)
+  &FloorThickness.getAttribute("Value", inherit)
+  dialog.setCheckBox("FloorThicknessInherit", inherit)
+  
+  dialog.setCaption("GroundClearance_inp", to_str(GroundClearance))
+  dialog.setCaption("GroundClearance_unit", l_unit)
+  &GroundClearance.getAttribute("Value", inherit)
+  dialog.setCheckBox("GroundClearanceInherit", inherit)
+  
+  
+  dialog.setCheckbox("showContent_chk", showRackContent)
+  
+  // Conveyor parameter
+  dialog.setCaption("ConveyorWidth_inp", to_str(ConveyorWidth))
+  dialog.setCaption("ConveyorWidth_unit", l_unit)
+  &ConveyorWidth.getAttribute("Value", inherit)
+  dialog.setCheckBox("ConveyorWidthInherit", inherit)
+  
+  dialog.setCaption("ConveyorLength_inp", to_str(ConveyorLength))
+  dialog.setCaption("ConveyorLength_unit", l_unit)
+   &ConveyorLength.getAttribute("Value", inherit)
+  dialog.setCheckBox("ConveyorLengthInherit",inherit)
+  
+  dialog.setCaption("BaseHeight_inp", to_str(BaseHeight))
+  dialog.setCaption("BaseHeight_unit", l_unit)
+   &BaseHeight.getAttribute("Value", inherit)
+  dialog.setCheckBox("BaseHeightInherit",inherit)
+  
+  dialog.setCaption("ConveyorSpeed_inp", to_str(ConveyorSpeed))
+  dialog.setCaption("ConveyorSpeed_unit", s_unit)
+  &ConveyorSpeed.getAttribute("Value", inherit)
+  dialog.setCheckBox("ConveyorSpeedInherit", inherit)
+  
+  dialog.showStatistic
+  
+  //set empty checkbox for adopt parameters
+  dialog.setCheckBox("adopt_parameter",false)
+ ShowInTooltip: false
+-
+ Name: applyDialog
+ ID: 3
+ DataType: method
+ Value: |+1
+  // Method Tasks:
+  // get the values of the dialog and copy them to the variables of the frame
+  //
+  // Called By	: callback of dialog
+  //--------------------------------------------------------------------------------
+  
+  //check if inheritance was switched on for the name and label AND that user
+  // does not try to switch on the inheritance for the root class
+  if ?.getCheckBox("NameInherit") and ?.~.Origin/=void 
+  	current.inheritAttribute("name") 
+  	dialog.setCaption("Name_inp", current.name)
+  else
+  	current.name := dialog.getValue("Name_inp")
+  end
+  
+  if ?.getCheckBox("LabelInherit") and ?.~.Origin/=void 
+  	current.inheritAttribute("label") 
+  	dialog.setCaption("label_inp", current.label)
+  else
+  	current.label := dialog.getValue("label_inp")
+  end
+  
+  // define the controlling WMS
+  WMS_new := dialog.getValue("WMS_inp")
+  
+  //changes attributes depending on what was defined in the dialog
+  ?.applyAttributes
+  
+  //checks if parameters of this Racklane should be copied to all other connected Racklanes
+  if ?.getCheckBox("adopt_parameter")
+  	?.adoptParameters
+  end
+  
+  ?.initDialog
+ ShowInTooltip: false
+-
+ Name: showStatistic
+ ID: 4
+ DataType: method
+ Value: |+1
+  var dia := self.~
+  
+  var t : table
+  t.create
+  
+  var value : string := strRCopy(to_str("          ",0),8)
+  dia.setCaption("driveHome_val", value)
+  dia.setCaption("loading_val", value)
+  dia.setCaption("unloading_val", value)
+  dia.setCaption("waiting_val", value)
+  dia.setCaption("failed_val", value)
+  
+  RSU.state.getStatisticsTable(t)
+  
+  --var DurationColumn := max(t.getColumnNo( "%_Duration"), t.getColumnNo( "%_Dauer"))
+  var DurationColumn : integer := 5
+  
+  for local i := 1 to t.YDim loop
+  	value := strRCopy(to_str("          ",round(t[durationColumn,i], 2)),8)
+  	switch t[1,i]
+  	case "drivinghome"
+  		dia.setCaption("driveHome_val", value)
+  	case "loading"
+  		dia.setCaption("loading_val", value)
+  	case "unloading"
+  		dia.setCaption("unloading_val", value)
+  	case "waiting"
+  		dia.setCaption("waiting_val", value)
+  	case "failed"
+  		dia.setCaption("failed_val", value)
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: changeAttribute
+ ID: 5
+ DataType: method
+ Value: |+1
+  //This method will change an attribute value depending on whether it should inherit the original value or if a new value should be set
+  param attribute:any
+  
+  if ?.getCheckBox(attribute.name+"Inherit") and ?.~.Origin/=void //check if inheritance was switched on for that attribute AND that user does not try to switch on the inheritance for an attribute of a class
+  	attribute.inheritAttribute("Value") 
+  else
+  	if attribute.DataType = "time"
+  		attribute.value := str_to_time(dialog.getValue(attribute.name+"_inp"))
+  	else
+  		attribute.value := str_to_num(dialog.getValue(attribute.name+"_inp"))
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: applyAttributes
+ ID: 6
+ DataType: method
+ Value: |+1
+  //Changes the values depending on whether a new value was typed into the respective field or inheritance was switched on 
+  
+  // RSU parameter
+  ?.changeAttribute(&TrackWidth)
+  ?.changeAttribute(&RSU_speed)
+  ?.changeAttribute(&RSU_acceleration)
+  ?.changeAttribute(&RSU_deceleration)
+  ?.changeAttribute(&LoadHandler_speed)
+  ?.changeAttribute(&Carrier_speed)
+  ?.changeAttribute(&RSU_Availability)
+  ?.changeAttribute(&RSU_MTTR)
+  
+  ?.changeAttribute(&NumberOfColumns)
+  ?.changeAttribute(&NumberOfRows)
+  ?.changeAttribute(&BoxWidth)
+  ?.changeAttribute(&BoxHeight)
+  ?.changeAttribute(&BoxDepth)
+  
+  ?.changeAttribute(&Gap)
+  ?.changeAttribute(&FloorThickness)
+  ?.changeAttribute(&GroundClearance)
+  
+  // Conveyor parameter
+  ?.changeAttribute(&ConveyorWidth)
+  ?.changeAttribute(&BaseHeight)
+  ?.changeAttribute(&ConveyorLength)
+  ?.changeAttribute(&ConveyorSpeed)
+  
+  //changes are propagated to derived classes and all instances
+  ?.initDerivates
+ ShowInTooltip: false
+-
+ Name: initDerivates
+ ID: 7
+ DataType: method
+ Value: |+1
+  // propagate the changes of attributes to derived classes and all instances
+  if ParameterChanges then
+  	InitRackLane
+  	ParameterChanges := false
+  	for var i := 1 to ?.NumChildren
+  		?.childNo(i).&initDerivates.execute(void,childNo(i).dialog)
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: adoptParameters
+ ID: 8
+ DataType: method
+ Value: |+1
+  //Here the parameters of this Racklane are passed to the surrounding Racklanes
+  
+  var Rack:=current
+  
+  //The parameters of this Racklane are passed to all successors first
+  while Rack.succ/=Void
+  if Rack.succ.~.Class=current.Class
+  	Rack.succ.~.adoptParametrization(Rack)
+  	Rack.succ.~.InitRackLane
+  	Rack:=Rack.succ.~
+  else
+  	exitloop
+  end
+  end
+  
+  Rack:=current
+  
+  //Next the parameters of this Racklane are passed to all predecessors
+  while Rack.pred/=Void
+  if Rack.pred.~.Class=current.Class
+  	Rack.pred.~.adoptParametrization(Rack)
+  	Rack.pred.~.InitRackLane
+  	Rack:=Rack.pred.~
+  else
+  	exitloop
+  end
+  end
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 9
+ DataType: method
+ Value: |+1
+  var dia := self.~
+  var value : string := strRCopy(to_str("          ",0),8)
+  dia.setCaption("driveHome_val", value)
+  dia.setCaption("loading_val", value)
+  dia.setCaption("unloading_val", value)
+  dia.setCaption("waiting_val", value)
+  dia.setCaption("failed_val", value)
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "navigate_mnu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "openLoc_mnu"
+  Caption: "Open Location"
+  CallbackArgument: "openLocation"
+ -
+  Type: Menu
+  Name: "openOrigin_mnu"
+  Caption: "Open Origin"
+  CallbackArgument: "openOrigin"
+ -
+  Type: Menu
+  Name: "gotoOrigin_mnu"
+  Caption: "Go to Origin"
+  CallbackArgument: "gotoOrigin"
+ -
+  Type: Menu
+  Name: "openClass_mnu"
+  Caption: "Open Class"
+  CallbackArgument: "openClass"
+ -
+  Type: Menu
+  Name: "gotoClass_mnu"
+  Caption: "Go to Class"
+  CallbackArgument: "gotoClass"
+-
+ Type: Menu
+ Name: "view_mnu"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "refresh_mnu"
+  Caption: "Refresh"
+  CallbackArgument: "refresh"
+-
+ Type: Menu
+ Name: "help_mnu"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "helpObject_mnu"
+  Caption: "Help on Object"
+  CallbackArgument: "helpObject"
+ -
+  Type: Menu
+  Name: "helpVersion_mnu"
+  Caption: "Version of Object"
+  CallbackArgument: "helpVersion"
+-
+ Type: StaticText
+ Name: "Name_txt"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "Name_inp"
+ Caption: "RackLane"
+ Rect: [10,0,0,0]
+ CallbackArgument: "name"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "NameInherit"
+ Rect: [34,0,0,0]
+ InheritanceBox: true
+-
+ Type: StaticText
+ Name: "Label_txt"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "label_inp"
+ Rect: [10,1,0,0]
+ CallbackArgument: "label"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "LabelInherit"
+ Rect: [34,1,0,0]
+ InheritanceBox: true
+-
+ Type: TabControl
+ Name: "tab_tab"
+ Rect: [0,2,58,12]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Rack_tab"
+  Caption: "Racks"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "NumberOfColumns_txt"
+   Caption: "Number of columns:"
+  -
+   Type: EditText
+   Name: "NumberOfColumns_inp"
+   Caption: "10"
+   Rect: [20,0,10,0]
+   CallbackArgument: "NumberOfColumns"
+   DataType: 4
+   Password: false
+  -
+   Type: CheckBox
+   Name: "NumberOfColumnsInherit"
+   Rect: [30,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "NumberOfRows_txt"
+   Caption: "Number of rows:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "NumberOfRows_inp"
+   Caption: "5"
+   Rect: [20,1,10,0]
+   CallbackArgument: "NumberOfRows"
+   DataType: 4
+   Password: false
+  -
+   Type: CheckBox
+   Name: "NumberOfRowsInherit"
+   Rect: [30,1,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Box_txt"
+   Caption: "Dimension of a storage place"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "BoxWidth_txt"
+   Caption: "Width:"
+   Rect: [0,4,0,0]
+  -
+   Type: EditText
+   Name: "BoxWidth_inp"
+   Caption: "0.9"
+   Rect: [8,4,10,0]
+   CallbackArgument: "BoxWidth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "BoxWidth_unit"
+   Caption: "m"
+   Rect: [19,4,0,0]
+  -
+   Type: CheckBox
+   Name: "BoxWidthInherit"
+   Rect: [21,4,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Gap_txt"
+   Caption: "Gap"
+   Rect: [26,4,0,0]
+  -
+   Type: EditText
+   Name: "Gap_inp"
+   Caption: "0.04"
+   Rect: [36,4,10,0]
+   CallbackArgument: "Gap"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "Gap_unit"
+   Caption: "m"
+   Rect: [47,4,0,0]
+  -
+   Type: CheckBox
+   Name: "GapInherit"
+   Rect: [49,4,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Boxheight_txt"
+   Caption: "Height:"
+   Rect: [0,5,0,0]
+  -
+   Type: EditText
+   Name: "BoxHeight_inp"
+   Caption: "1.2"
+   Rect: [8,5,10,0]
+   CallbackArgument: "BoxHeight"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "BoxHeight_unit"
+   Caption: "m"
+   Rect: [19,5,0,0]
+  -
+   Type: CheckBox
+   Name: "BoxHeightInherit"
+   Rect: [21,5,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "FloorThickness_txt"
+   Caption: "Thickness"
+   Rect: [26,5,0,0]
+  -
+   Type: EditText
+   Name: "FloorThickness_inp"
+   Caption: "0.03"
+   Rect: [36,5,10,0]
+   CallbackArgument: "Thickness"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "FloorThickness_unit"
+   Caption: "m"
+   Rect: [47,5,0,0]
+  -
+   Type: CheckBox
+   Name: "FloorThicknessInherit"
+   Rect: [49,5,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "BoxDepth_txt"
+   Caption: "Depth:"
+   Rect: [0,6,0,0]
+  -
+   Type: EditText
+   Name: "BoxDepth_inp"
+   Caption: "1.3"
+   Rect: [8,6,10,0]
+   CallbackArgument: "BoxDepth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "BoxDepth_unit"
+   Caption: "m"
+   Rect: [19,6,0,0]
+  -
+   Type: CheckBox
+   Name: "BoxDepthInherit"
+   Rect: [21,6,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "GroundClearance_txt"
+   Caption: "Clearance"
+   Rect: [26,6,0,0]
+  -
+   Type: EditText
+   Name: "GroundClearance_inp"
+   Caption: "0.6"
+   Rect: [36,6,10,0]
+   CallbackArgument: "Clearance"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "GroundClearance_unit"
+   Caption: "m"
+   Rect: [47,6,0,0]
+  -
+   Type: CheckBox
+   Name: "GroundClearanceInherit"
+   Rect: [49,6,0,0]
+   InheritanceBox: true
+  -
+   Type: CheckBox
+   Name: "showContent_chk"
+   Caption: "Show content of the racks"
+   Rect: [0,7,0,0]
+   CallbackArgument: "showContent"
+   IsChecked: true
+  -
+   Type: StaticText
+   Name: "WMS_txt"
+   Caption: "Warehouse management system:"
+   Rect: [0,9,0,0]
+  -
+   Type: EditText
+   Name: "WMS_inp"
+   Caption: "WMS"
+   Rect: [30,9,0,0]
+   CallbackArgument: "WMS"
+   DataType: 1
+   Password: false
+ -
+  Type: TabPage
+  Name: "RSU_tab"
+  Caption: "Rack Serving Unit"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "trackWidth_txt"
+   Caption: "Track gauge:"
+  -
+   Type: EditText
+   Name: "TrackWidth_inp"
+   Caption: "1.2"
+   Rect: [28,0,10,0]
+   CallbackArgument: "TrackWidth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "TrackWidth_unit"
+   Caption: "m"
+   Rect: [39,0,0,0]
+  -
+   Type: CheckBox
+   Name: "TrackWidthInherit"
+   Rect: [43,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RSU_speed_txt"
+   Caption: "Speed of RSU:"
+   Rect: [0,2,0,0]
+  -
+   Type: EditText
+   Name: "RSU_speed_inp"
+   Caption: "1"
+   Rect: [28,2,10,0]
+   CallbackArgument: "RSU_speed"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "RSU_speed_unit"
+   Caption: "m/s"
+   Rect: [39,2,0,0]
+  -
+   Type: CheckBox
+   Name: "RSU_speedInherit"
+   Rect: [43,2,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RSU_acceleration_txt"
+   Caption: "Acceleration of RSU"
+   Rect: [0,3,0,0]
+  -
+   Type: EditText
+   Name: "RSU_acceleration_inp"
+   Caption: "0"
+   Rect: [28,3,10,0]
+   CallbackArgument: "RSU_acceleration"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "RSU_acceleration_unit"
+   Caption: "m/s²"
+   Rect: [39,3,0,0]
+  -
+   Type: CheckBox
+   Name: "RSU_accelerationInherit"
+   Rect: [43,3,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RSU_deceleration"
+   Caption: "Deceleration of RSU"
+   Rect: [0,4,0,0]
+  -
+   Type: EditText
+   Name: "RSU_deceleration_inp"
+   Caption: "0"
+   Rect: [28,4,10,0]
+   CallbackArgument: "RSU_deceleration"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "RSU_deceleration_unit"
+   Caption: "m/s²"
+   Rect: [39,4,0,0]
+  -
+   Type: CheckBox
+   Name: "RSU_decelerationInherit"
+   Rect: [43,4,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "LoadHandler_speed_txt"
+   Caption: "Speed of load handler:"
+   Rect: [0,5,0,0]
+  -
+   Type: EditText
+   Name: "LoadHandler_speed_inp"
+   Caption: "2"
+   Rect: [28,5,10,0]
+   CallbackArgument: "LoadHandler_speed"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "LoadHandler_speed_unit"
+   Caption: "m/s"
+   Rect: [39,5,0,0]
+  -
+   Type: CheckBox
+   Name: "LoadHandler_speedInherit"
+   Rect: [43,5,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Carrier_speed_txt"
+   Caption: "Speed of carrier:"
+   Rect: [0,6,0,0]
+  -
+   Type: EditText
+   Name: "Carrier_speed_inp"
+   Caption: "2"
+   Rect: [28,6,10,0]
+   CallbackArgument: "Carrier_speed"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "Carrier_speed_unit"
+   Caption: "m/s"
+   Rect: [39,6,0,0]
+  -
+   Type: CheckBox
+   Name: "Carrier_speedInherit"
+   Rect: [43,6,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RSU_Availability_txt"
+   Caption: "Availability:"
+   Rect: [0,8,0,0]
+  -
+   Type: EditText
+   Name: "RSU_Availability_inp"
+   Caption: "100"
+   Rect: [28,8,10,0]
+   CallbackArgument: "RSU_Availability"
+   DataType: 9
+   Password: false
+  -
+   Type: CheckBox
+   Name: "RSU_AvailabilityInherit"
+   Rect: [39,8,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "RSU_MTTR_txt"
+   Caption: "MTTR:"
+   Rect: [0,9,0,0]
+  -
+   Type: EditText
+   Name: "RSU_MTTR_inp"
+   Caption: "0"
+   Rect: [28,9,10,0]
+   CallbackArgument: "RSU_MTTR"
+   DataType: 10
+   Password: false
+  -
+   Type: CheckBox
+   Name: "RSU_MTTRInherit"
+   Rect: [39,9,0,0]
+   InheritanceBox: true
+   IsChecked: true
+ -
+  Type: TabPage
+  Name: "Conveyor_tab"
+  Caption: "Conveyor"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "ConveyorWidth_txt"
+   Caption: "Width:"
+  -
+   Type: EditText
+   Name: "ConveyorWidth_inp"
+   Caption: "1"
+   Rect: [20,0,10,0]
+   CallbackArgument: "ConveyorWidth"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "ConveyorWidth_unit"
+   Caption: "m"
+   Rect: [31,0,0,0]
+  -
+   Type: CheckBox
+   Name: "ConveyorWidthInherit"
+   Rect: [34,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "ConveyorLength_txt"
+   Caption: "Length:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "ConveyorLength_inp"
+   Caption: "1.5"
+   Rect: [20,1,10,0]
+   CallbackArgument: "ConveyorLength"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "ConveyorLength_unit"
+   Caption: "m"
+   Rect: [31,1,0,0]
+  -
+   Type: CheckBox
+   Name: "ConveyorLengthInherit"
+   Rect: [34,1,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "BaseHeight"
+   Caption: "Height:"
+   Rect: [0,2,0,0]
+  -
+   Type: EditText
+   Name: "BaseHeight_inp"
+   Caption: "1"
+   Rect: [20,2,10,0]
+   CallbackArgument: "BaseHeight"
+   DataType: 1
+   Password: false
+  -
+   Type: StaticText
+   Name: "BaseHeight_unit"
+   Caption: "m"
+   Rect: [31,2,0,0]
+  -
+   Type: CheckBox
+   Name: "BaseHeightInherit"
+   Rect: [34,2,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "ConveyorSpeed_txt"
+   Caption: "Speed:"
+   Rect: [0,3,0,0]
+  -
+   Type: EditText
+   Name: "ConveyorSpeed_inp"
+   Caption: "1"
+   Rect: [20,3,10,0]
+   CallbackArgument: "ConveyorSpeed"
+   DataType: 9
+   Password: false
+  -
+   Type: StaticText
+   Name: "ConveyorSpeed_unit"
+   Caption: "m/s"
+   Rect: [31,3,0,0]
+  -
+   Type: CheckBox
+   Name: "ConveyorSpeedInherit"
+   Rect: [34,3,0,0]
+   InheritanceBox: true
+ -
+  Type: TabPage
+  Name: "statistic_tab"
+  Caption: "Statistics"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "driveHome_txt"
+   Caption: "Drive home:"
+  -
+   Type: StaticText
+   Name: "driveHome_val"
+   Caption: "       0"
+   Rect: [20,0,0,0]
+  -
+   Type: StaticText
+   Name: "driveHome_unit"
+   Caption: "%"
+   Rect: [27,0,0,0]
+  -
+   Type: StaticText
+   Name: "loading_txt"
+   Caption: "Loading:"
+   Rect: [0,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_val"
+   Caption: "       0"
+   Rect: [20,1,0,0]
+  -
+   Type: StaticText
+   Name: "loading_unit"
+   Caption: "%"
+   Rect: [27,1,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_txt"
+   Caption: "Unloading:"
+   Rect: [0,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_val"
+   Caption: "       0"
+   Rect: [20,2,0,0]
+  -
+   Type: StaticText
+   Name: "unloading_unit"
+   Caption: "%"
+   Rect: [27,2,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_txt"
+   Caption: "Waiting:"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_val"
+   Caption: "       0"
+   Rect: [20,3,0,0]
+  -
+   Type: StaticText
+   Name: "waiting_unit"
+   Caption: "%"
+   Rect: [27,3,0,0]
+  -
+   Type: StaticText
+   Name: "failed_txt"
+   Caption: "Failed"
+   Rect: [0,4,0,0]
+  -
+   Type: StaticText
+   Name: "failed_val"
+   Caption: "       0"
+   Rect: [20,4,0,0]
+  -
+   Type: StaticText
+   Name: "failed_unit"
+   Caption: "%"
+   Rect: [27,4,0,0]
+-
+ Type: CheckBox
+ Name: "adopt_parameter"
+ Caption: "Adopt Parameters to Racklanes"
+ Rect: [1,14,0,0]
+ CallbackArgument: "adopt_parameter"

@@ -1,0 +1,31 @@
+InternalClassType: WorkerPool
+Coordinate3D: [-3.2999999999999994,13,0]
+Origin: 961fe9c5-ab49-4f1f-bf68-07e8160e60f1
+RandomSeed: 1073745685
+UUID: 019f044c-ab8a-7020-b98d-5da64f1aa087
+3D:
+ MUAnimations:
+ -
+  Name: "#0#0"
+  AnchorPoints:
+  - [0,0.5,0.005,179.99999999999997,0,0,-1,~]
+ -
+  Name: "#0#1"
+  AnchorPoints:
+  - [0.5,0,0.005,179.99999999999994,0,0,-1,~]
+ -
+  Name: "#0#2"
+  AnchorPoints:
+  - [-0.5,0,0.005,135,0,0,1,~]
+ -
+  Name: "#0#3"
+  AnchorPoints:
+  - [0,-0.5,0.005,-135,0,0,1,~]
+ NameLabelEnabled: false
+ NameLabelPosition: [-1,-1,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Scale: [0.8,0.8,0.8]
+InheritEntranceExitLockedOnReset: false
+$WorkersToCreate:
+- [9c2a965a-02dd-4cce-a2b7-e8051dc755ec,3,~,-1,-1,"",[]]

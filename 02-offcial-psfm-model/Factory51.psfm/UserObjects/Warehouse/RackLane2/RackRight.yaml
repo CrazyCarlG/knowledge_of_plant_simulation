@@ -1,0 +1,32 @@
+InternalClassType: Store
+Coordinate3D: [2,-3.3300000000000005,0]
+Origin: 75a8cbf3-c926-45cd-a3c6-4d4124bde16a
+RandomSeed: 1073750964
+UUID: 019f044c-ab8a-71cf-8bd2-7d127930c76d
+XDim: 10
+YDim: 5
+3D:
+ AutoGraphicsActive: true
+ Dimensions: [0.9,1.3,1.2]
+ FloorThickness: 0.03
+ Gap: 0.04
+ GroundClearance: 0
+ OriginX: "Left"
+ OriginY: "Center"
+ PostMaterialActive: true
+ PostMaterialAmbientColor: 13395507
+ PostMaterialDiffuseColor: 13395507
+ PostMaterialEmissiveColor: 0
+ PostMaterialShininess: 0.247
+ PostMaterialSpecularColor: 5855577
+ PostMaterialTransparency: 0
+ StorageAreaMaterialActive: true
+ StorageAreaMaterialAmbientColor: 9670004
+ StorageAreaMaterialDiffuseColor: 8946281
+ StorageAreaMaterialEmissiveColor: 0
+ StorageAreaMaterialShininess: 0.247
+ StorageAreaMaterialSpecularColor: 5855577
+ StorageAreaMaterialTransparency: 0
+ StoreType: "Rack with square posts (dynamic)"
+ VisibleGraphicGroups: ["default"]
+InheritEntranceExitLockedOnReset: false

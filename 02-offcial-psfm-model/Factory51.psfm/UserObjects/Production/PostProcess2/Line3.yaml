@@ -1,0 +1,15 @@
+InternalClassType: Conveyor
+Length: 2
+Origin: 019f044c-ab8a-7013-afd7-ad4d1fe73d29
+RandomSeed: 1073745930
+UUID: 019f044c-ab8a-710c-beaa-5c617f65ca45
+$Successors:
+-
+ $Location: 3e014d4c-37bd-4aab-92c8-cf08088fbef3
+ $Succ: 019f044c-ab8a-7049-96a6-e161e702ad17
+ Name: Connector47
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70de-ab79-e2025b1542df
+$Predecessors:
+- 019f044c-ab8a-7116-9174-cdfec60a9ff8
+InheritEntranceExitLockedOnReset: false

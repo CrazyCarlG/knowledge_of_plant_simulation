@@ -1,0 +1,21 @@
+InternalClassType: Converter
+Coordinate3D: [-20.5,-0.5,0]
+Length: 1
+Origin: ae1814ce-34e6-442c-af43-5c05e01ab6c9
+RandomSeed: 1073745718
+UUID: 019f044c-ab8a-7028-a178-8f71e5d12abd
+3D:
+ $ExtSegments:
+  - 0
+  - [0,1,0]
+$Successors:
+-
+ $Succ: 019f044c-ab8a-702b-8935-2b1c9de1ec71
+ Name: Connector12
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7098-bbb5-f3d2de3b96b0
+$Predecessors:
+- 019f044c-ab8a-7090-9d03-d4ec0370827e
+InheritEntranceExitLockedOnReset: false
+$Side0: 019f044c-ab8a-7098-bbb5-f3d2de3b96b0
+$Side3: 019f044c-ab8a-7090-9d03-d4ec0370827e

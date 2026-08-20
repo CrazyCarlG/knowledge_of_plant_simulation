@@ -1,0 +1,89 @@
+InternalClassType: Conveyor
+Coordinate3D: [-27,1.3,0]
+EntranceCtrl: "self.OnEntrance"
+Length: 15.393504257825146
+Name: Line17
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073746055
+Speed: 1
+UUID: 019f044c-ab8a-7051-84c3-8dcc3f7f0652
+3D:
+ ExtConfiguration:
+ -
+  Name: "Legs_1"
+  Extrusion Profile: [[-0.5,-0.05],[-0.4,-0.05],[-0.4,0.05],[-0.5,0.05],[-0.5,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,67]
+ -
+  Name: "Legs_2"
+  Extrusion Profile: [[0.4,-0.05],[0.5,-0.05],[0.5,0.05],[0.4,0.05],[0.4,-0.05]]
+  Configuration Type: 22
+  Offsets: [-0.1,0]
+  Repetition Interval: 2
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,67]
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.475,-0.1],[0.475,-0.1],[0.475,0],[-0.475,0],[-0.475,-0.1]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x2d2d2d,0x292929,0x0,0x0,0,10]
+ -
+  Name: "Frame_2"
+  Extrusion Profile: [[0.475,-0.1],[0.5,-0.1],[0.5,0],[0.475,0],[0.475,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,67]
+ -
+  Name: "Frame_1"
+  Extrusion Profile: [[-0.5,-0.1],[-0.475,-0.1],[-0.475,0],[-0.5,0],[-0.5,-0.1]]
+  Configuration Type: 0
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xcc6633,0xcc6633,0x595959,0x0,0,67]
+ $ExtSegments:
+  - 0
+  - [0,2,0]
+  - [0,90,2,0.4]
+  - [0,3,0.4]
+  - [0,7.2,0]
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 1
+ DataType: method
+ Value: |+1
+  if self.~.BoxesDeleted < QualityControlDrain.statNumIn/3
+  	self.~.BoxesDeleted += 1
+  	@.delete
+  end
+ ShowInTooltip: false
+-
+ Name: BoxesDeleted
+ ID: 2
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: Reset
+ ID: 3
+ DataType: method
+ Value: "self.~.BoxesDeleted := 0"
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-7086-bf15-7b307b36631b
+ Name: Connector56
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-70bf-ae74-126f2dc763e3
+$Predecessors:
+- 019f044c-ab8a-7096-8030-a3d8668a4b78
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,54 @@
+InternalClassType: Method
+Coordinate3D: [-14.5,-10.5,0]
+Name: RemovePart
+Origin: d8cc2cd4-bd44-4a10-a5f4-848e366aac3b
+Program: |+1
+ // Method Tasks:
+ // Remove a specific part from store.
+ //--------------------------------------------------------------------------------
+ param part: object
+ 
+ var Column, Row: integer
+ 
+ part.getStoragePlace(Column, Row)
+ 
+ // check if the requested quantity is at stock
+ var StockRow: integer := Content.getRowNo(part.name)
+ 
+ // look for a pallet which fits the requested quantity
+ var ProductRow: integer := Inventory.getRowNo(part.name)
+ 
+ var PalletList:= Inventory["Pallets", ProductRow]
+ 
+ 
+ // find a pallet with the number of parts close to the requested quantity
+ PalletList.setCursor(1,1)
+ var found: boolean := PalletList.findCeil({1,1}..{1,*}, part)
+ 
+ if found
+ 	var PalletRow := PalletList.CursorY
+ 	// remove the pallet
+ 	var Pallet: object := PalletList["Pallet", PalletRow]
+ 	var numProducts: integer := PalletList["Quantity", PalletRow]
+ 
+ 	var Racklane:= part.~.~
+ 	var side:String
+ 	if part.~.name = "RackLeft"
+ 		side:= "left"
+ 	else
+ 		side:= "right"
+ 	end
+ 	Racklane.appendOrder(Column, Row, side)
+ 
+ 	// remove the quantity in stock
+ 	removeProduct(part.name, 1)
+ 
+ 	// remove the entry in table Inventory
+ 	PalletList.cutRow(PalletRow)
+ else
+ 	debug -- it seems like the part has been removed or not registered properly
+ end
+RandomSeed: 1073755541
+UUID: c619cb4c-5084-4204-b38b-d71150dc7bdd
+3D:
+ VisibleGraphicGroups: ["default","User"]

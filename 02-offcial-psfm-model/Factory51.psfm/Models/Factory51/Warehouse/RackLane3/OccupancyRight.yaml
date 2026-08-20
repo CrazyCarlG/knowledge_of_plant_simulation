@@ -1,0 +1,25 @@
+InternalClassType: DataTable
+Origin: 019f044c-ab8a-7223-8780-10c142ba78be
+UUID: 019f044c-ab8a-7668-a61d-a96ef42d62e0
+$Data:
+ ShowComment: true
+ ListFormat:
+  ColumnWidth: 3
+  DataType: integer
+  MaxXDim: 10
+  MaxYDim: 5
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+  -
+   Index: 2
+  -
+   Index: 3
+  -
+   Index: 4
+  -
+   Index: 5
+  -
+   Index: 6
+ Columns:

@@ -1,0 +1,51 @@
+InternalClassType: Source
+Coordinate3D: [62.79999999999999,15.749999999999996,0]
+EntranceCtrl: "self.OnEntrance"
+Number: 120
+Origin: f50787f3-d251-4e3e-84b8-0d45a3bb386b
+Path: d98bd3d8-2aae-4c21-87a0-674a48c092b5
+RandomSeed: 1073746489
+UUID: 019f044c-ab8a-72e4-b4ec-62f735b7a584
+3D:
+ Rotation: [179.99999999999997,0,0,-1]
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 1
+ DataType: method
+ Value: |+1
+  // Create 4 boxes on each palette
+  for var j := 1 to 4
+  	var container := .UserObjects.MUs.Box.create(@)
+  
+  	// Create 4 parts in each box
+  	for var k := 1 to .UserObjects.MUs.Box.Capacity
+  		var part := .UserObjects.MUs.DummyPart.create(container)
+  		
+  		part._3D.VisibleGraphicGroups := ["Finished"]
+  		
+  		var color:integer
+  												
+  		if ?.statNumOut < ?.Number/2
+  			part.Name := "Aubergine0"
+  			color := makeRGBValue(107, 0, 128)
+  		else
+  			part.Name := "Strawberry0"
+  			color := makeRGBValue(255, 0, 128)
+  		end
+  
+  		part._3D.activateMaterialWithColor(color)
+  		part._3D.MaterialSpecularColor := color
+  		part._3D.MaterialShininess := 0.2
+  	next
+  next
+  
+  @.ConveyingDirection := 3
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 019f044c-ab8a-730e-97ee-0e4d0948fc05
+ Name: Connector15
+ Origin: ec2281af-6c30-4676-8625-1cad3524eb5f
+ UUID: 019f044c-ab8a-7337-8e7e-f06c6934566a
+InheritEntranceExitLockedOnReset: false

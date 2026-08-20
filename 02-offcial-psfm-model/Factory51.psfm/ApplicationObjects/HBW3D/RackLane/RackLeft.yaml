@@ -1,0 +1,277 @@
+InternalClassType: Store
+Coordinate3D: [2,-0.65,0]
+EntranceCtrl: "self.OnEntrance"
+ExitCtrlFront: false
+ExitCtrlRear: true
+Name: RackLeft
+Origin: ce6574a1-7a63-4121-a283-68704c7b41f5
+RandomSeed: 1
+ShiftcalendarObject:
+UUID: 98d00804-0f0d-49b8-a113-34b44300a50d
+XDim: 10
+YDim: 5
+$TabConfig: 0xfc10
+3D:
+ AutoGraphicsActive: true
+ Dimensions: [0.904,1.3,1.2]
+ FloorThickness: 0.03
+ Gap: 0.04
+ GraphicGroupNames: ["default","Rack"]
+ GroundClearance: 0.6
+ LockedGraphicGroups: []
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XZ plane"
+ MUAnimationAreaRelativeCenter: [0,0,0.5]
+ MUAnimationAreaRelativeSize: [1,1]
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ -
+  Name: "#0#0"
+  AnchorPoints:
+  - [0.5,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#0#1"
+  AnchorPoints:
+  - [0.5,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#0#2"
+  AnchorPoints:
+  - [0.5,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#0#3"
+  AnchorPoints:
+  - [0.5,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#0#4"
+  AnchorPoints:
+  - [0.5,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#1#0"
+  AnchorPoints:
+  - [1.4500000000000002,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#1#1"
+  AnchorPoints:
+  - [1.4500000000000002,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#1#2"
+  AnchorPoints:
+  - [1.4500000000000002,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#1#3"
+  AnchorPoints:
+  - [1.4500000000000002,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#1#4"
+  AnchorPoints:
+  - [1.4500000000000002,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#2#0"
+  AnchorPoints:
+  - [2.4,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#2#1"
+  AnchorPoints:
+  - [2.4,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#2#2"
+  AnchorPoints:
+  - [2.4,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#2#3"
+  AnchorPoints:
+  - [2.4,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#2#4"
+  AnchorPoints:
+  - [2.4,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#3#0"
+  AnchorPoints:
+  - [3.35,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#3#1"
+  AnchorPoints:
+  - [3.35,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#3#2"
+  AnchorPoints:
+  - [3.35,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#3#3"
+  AnchorPoints:
+  - [3.35,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#3#4"
+  AnchorPoints:
+  - [3.35,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#4#0"
+  AnchorPoints:
+  - [4.3,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#4#1"
+  AnchorPoints:
+  - [4.3,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#4#2"
+  AnchorPoints:
+  - [4.3,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#4#3"
+  AnchorPoints:
+  - [4.3,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#4#4"
+  AnchorPoints:
+  - [4.3,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#5#0"
+  AnchorPoints:
+  - [5.25,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#5#1"
+  AnchorPoints:
+  - [5.25,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#5#2"
+  AnchorPoints:
+  - [5.25,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#5#3"
+  AnchorPoints:
+  - [5.25,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#5#4"
+  AnchorPoints:
+  - [5.25,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#6#0"
+  AnchorPoints:
+  - [6.2,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#6#1"
+  AnchorPoints:
+  - [6.2,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#6#2"
+  AnchorPoints:
+  - [6.2,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#6#3"
+  AnchorPoints:
+  - [6.2,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#6#4"
+  AnchorPoints:
+  - [6.2,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#7#0"
+  AnchorPoints:
+  - [7.15,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#7#1"
+  AnchorPoints:
+  - [7.15,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#7#2"
+  AnchorPoints:
+  - [7.15,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#7#3"
+  AnchorPoints:
+  - [7.15,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#7#4"
+  AnchorPoints:
+  - [7.15,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#8#0"
+  AnchorPoints:
+  - [8.1,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#8#1"
+  AnchorPoints:
+  - [8.1,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#8#2"
+  AnchorPoints:
+  - [8.1,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#8#3"
+  AnchorPoints:
+  - [8.1,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#8#4"
+  AnchorPoints:
+  - [8.1,0.65,5.05,0,0,0,1,0]
+ -
+  Name: "#9#0"
+  AnchorPoints:
+  - [9.05,0.65,0.05,0,0,0,1,0]
+ -
+  Name: "#9#1"
+  AnchorPoints:
+  - [9.05,0.65,1.3,0,0,0,1,0]
+ -
+  Name: "#9#2"
+  AnchorPoints:
+  - [9.05,0.65,2.55,0,0,0,1,0]
+ -
+  Name: "#9#3"
+  AnchorPoints:
+  - [9.05,0.65,3.8,0,0,0,1,0]
+ -
+  Name: "#9#4"
+  AnchorPoints:
+  - [9.05,0.65,5.05,0,0,0,1,0]
+ MUSideToAttach: "Center bottom"
+ OriginX: "Left"
+ OriginY: "Center"
+ PostMaterialActive: true
+ PostMaterialAmbientColor: 13395507
+ PostMaterialDiffuseColor: 13395507
+ PostMaterialEmissiveColor: 0
+ PostMaterialShininess: 0.247
+ PostMaterialSpecularColor: 5855577
+ PostMaterialTransparency: 0
+ StatesForColoring: 0xd7f
+ StatesOrientation: "(Off)"
+ StorageAreaMaterialActive: true
+ StorageAreaMaterialAmbientColor: 9670004
+ StorageAreaMaterialDiffuseColor: 8946281
+ StorageAreaMaterialEmissiveColor: 0
+ StorageAreaMaterialShininess: 0.247
+ StorageAreaMaterialSpecularColor: 5855577
+ StorageAreaMaterialTransparency: 0
+ StoreType: "Rack with square posts (dynamic)"
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: OnEntrance
+ ID: 1
+ DataType: method
+ Value: |+1
+  if WMS /= void then
+  	WMS.TransportFinished(@)
+  end
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false
+$TransportImp:
+ Services:
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0

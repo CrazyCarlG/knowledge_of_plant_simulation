@@ -1,0 +1,1198 @@
+InternalClassType: Dialog
+ArgumentForApply: "Apply"
+ArgumentForClose: "Close"
+ArgumentForOpen: "Open"
+CallbackMethod: "self.Callback"
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [3,-3,0]
+CreateIn3D: false
+DestructorCtrl:
+DialogX: -1
+DialogY: -1
+DragDropCtrl:
+InitCtrl:
+Label: ""
+Locked: false
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: VehicleLift
+OpenCtrl:
+OpenModal: false
+PlausibilityCtrl:
+RandomSeed: 3958
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowStandardButtons: true
+UUID: 8dde3cd8-b0de-4acb-8960-61d4df143b30
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/v7+/v7+/v7+/v7+/v7+/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/wAA/v7+/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAAQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAAiIiIgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+/v7+vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEB/v7+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiIvr6+vr6+vr6+vr6+AQEB/v7+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+vr6+vr6+AQEB/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon2"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAAzpKC/wAA/wAAzpKC/wAAzpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/v7+/v7+/wAA/wAA/v7+////zpKC/v7+/v7+/v7+/v7+zpKC/v7+/v7+zpKC/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/v7+////vr6+/v7+/v7+/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozs/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAA/wAAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////////////////////////gICA////////////////////////gICA////////////////////////gICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICAAAAAgICAvr6+AAAA////vr6+gICAAAAAgICAvr6+AAAA////vr6+AAAAgICAvr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAA////vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+gICA////////////////////////////////////////////////////////////////////////////////gICAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAvr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////AAAA////AAAAAAAA////////vr6+vr6+gICA////////vr6+AAAAAAAAvr6+AAAAAAAAvr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAA////gICAAAAAgICA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+AAAA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAAgICA////AAAAAAAA////////////vr6+vr6+gICA////////vr6+AAAAgICAvr6+AAAAAAAAgICAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////////////////////////////////////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+AAAA////AAAAAAAA////gICAAAAA////////////////vr6+vr6+AAAAAAAAgICAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+gICA////////////////////////////////////////vr6+vr6+AAAA////////vr6+AAAAgICAAAAAgICAvr6+AAAAvr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+gICA////////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+gICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+AAAAgICAAAAAvr6+vr6+AQEBvr6+vr6+////vr6+AQEBAQEBgICAAQEBAAAAvr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+////vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+vr6+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1577947132
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  callback of user dialog
+  _________________________________________________________________________________
+  Parameters	: action, the call back argument
+  ReturnValues: none
+  
+  Called By	: user interaction
+  Calls		:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param action : string
+  
+  var Dialog	: object
+  var AppObj	: object
+  var text	: string
+  
+  dialog := self.~
+  AppObj := dialog.openedBy
+  
+  if AppObj /= void
+  	switch action
+  	case "Open"
+  		dialog.dialogInit
+  
+  	case "Apply"
+  		dialog.dialogApply
+  		dialog.setStatisticValues
+  
+  	case "Close"
+  		AppObj.openedDialog := void
+  		Dialog.~.deleteObject
+  
+  	case "openLocation"
+  		AppObj.~.openDialog
+  
+  	case "openOrigin"
+  		if AppObj.Origin /= void
+  			AppObj.Origin.openDialog
+  		end
+  
+  	case "gotoOrigin"
+  		if AppObj.origin/= void
+  			AppObj.origin.openDialog
+  			dialog.close( false )
+  		end
+  
+  	case "openClass"
+  		if AppObj.class /= void
+  			AppObj.class.openDialog
+  		end
+  
+  	case "gotoClass"
+  		if AppObj.class /= void
+  			AppObj.class.openDialog
+  			dialog.close( false )
+  		end
+  
+  	case "refresh"
+  		Dialog.dialogInit
+  
+  	case "helpObject"
+  		.ApplicationObjects.CranesAndMore.VehicleLiftDocumentation.show
+  
+  	case "helpVersion"
+  		var lib : string
+  		var vers : string
+  		var libPath : string
+  		rootfolder.getLibraryInfo( lib, vers, text, libPath )
+  		text := to_str( "Plant Simulation ", lib, strChr(10), " Version: ", vers, strChr(10))
+  		messageBox( text, 1, 4)
+  
+  //--------------------------------------------------------------------------------
+  // name and label of the object
+  
+  	case "Name"
+  		?.setCheckBox("Name_inherit", false)
+  
+  	case "label"
+  		?.setCheckBox("label_inherit", false)
+  
+  //--------------------------------------------------------------------------------
+  // parameter of the Vehicle_Lift
+  
+  	case "Lift_Length"
+  		?.setCheckBox("Lift_Length_inherit", false)
+  
+  	case "Fence_Height"
+  		?.setCheckBox("Fence_Height_inherit", false)
+  
+  	case "Default_Lift_Height"
+  		?.setCheckBox("Default_Lift_Height_inherit", false)
+  
+  	case "Car_Bay_Width"
+  		?.setCheckBox("Car_Bay_Width_inherit", false)
+  
+  	case "Lift_Speed"
+  		?.setCheckBox("Dynamics_of_the_Lift_inherit", false)
+  
+  	case "Lift_Acceleration"
+  		?.setCheckBox("Dynamics_of_the_Lift_inherit", false)
+  
+  	case "Lift_Deceleration"
+  		?.setCheckBox("Dynamics_of_the_Lift_inherit", false)
+  
+  	case "Capacity"
+  		?.setCheckBox("Capacity_inherit", false)
+  
+  	case "Damping_Time"
+  		?.setCheckBox("Damping_Time_inherit", false)
+  
+  	case "Dwell_Time"
+  		?.setCheckBox("Dwell_Time_inherit", false)
+  
+  
+  	case "Take_preferred_position_Active"
+  		var flag := dialog.getCheckbox("Take_preferred_position_chk")
+  		dialog.setSensitive("Take_preferred_position_txt", flag)
+  		dialog.setSensitive("Take_preferred_position_inp", flag)
+  
+  	case "homeposition"
+  		--Take preferred Position
+  
+  	case "trackLength"
+  
+  	case "side"
+  		AppObj.ObjList.openDialogBox
+  
+  	case "DefineFailures"
+  		AppObj.openDialog
+  
+  	// statistic tab
+  
+  	case "showStatistics"
+  	dialog.StatisticsTab.openDialogBox
+  
+  	else
+  		messageBox( "Unknown dialog action "+action, 1, 1 )
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: openedBy
+ ID: 1577970514
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: dialogInit
+ ID: 1577971328
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  initialize the fields of the dialog
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: open interaction of the dialog
+  Calls		: none
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  
+  var dialog := self.~
+  var AppObj := dialog.openedBy
+  var inherit:boolean
+  
+  var l : length := 1
+  var l_unit := getUnit( l )
+  
+  var s : speed := 1
+  var s_unit := getUnit( s )
+  
+  var a : acceleration := 1
+  var a_unit := getUnit( a )
+  
+  
+  var AnimatableObject := AppObj._3D.getObject("Car")
+  
+  //set Name and label
+  dialog.setCaption( "name_inp", AppObj.name )
+  AppObj.getAttribute("name", inherit)
+  dialog.setCheckBox("Name_inherit", inherit)
+  
+  dialog.setCaption( "label_inp", AppObj.label )
+  AppObj.getAttribute("label", inherit)
+  dialog.setCheckBox("label_inherit", inherit)
+  
+  //set parameters
+  dialog.setCaption( "Lift_Length_inp", to_str(AppObj.length))
+  dialog.setCaption( "Lift_Length_unit", l_unit )
+  AppObj.getAttribute("length", inherit)
+  dialog.setCheckBox("Lift_length_inherit", inherit)
+  
+  dialog.setCaption( "Fence_Height_inp", to_str(AppObj.FenceHeight))
+  dialog.setCaption( "Fence_Height_unit", l_unit )
+  AppObj.getAttribute("FenceHeight", inherit)
+  dialog.setCheckBox("Fence_Height_inherit", inherit)
+  
+  dialog.setCaption( "Default_Lift_Height_inp", to_str(AnimatableObject.BaseHeight))
+  dialog.setCaption( "Default_Lift_Height_unit", l_unit )
+  AnimatableObject.getAttribute("BaseHeight", inherit)
+  dialog.setCheckBox("Default_Lift_Height_inherit", inherit)
+  
+  dialog.setCaption( "Car_Bay_Width_inp", to_str(AppObj.Width))
+  dialog.setCaption( "Car_Bay_Width_unit", l_unit )
+  AppObj.getAttribute("Width", inherit)
+  dialog.setCheckBox("Car_Bay_Width_inherit", inherit)
+  
+  dialog.setCaption( "Lift_Speed_inp", to_str(num_to_speed(AnimatableObject.JointVelocity )))
+  dialog.setCaption( "Lift_Speed_unit", s_unit )
+  AnimatableObject.getAttribute("JointVelocity", inherit)
+  
+  var LiftSpeedInherit := false
+  var AccelerationCheckboxInherit := false
+  AnimatableObject.getAttribute("JointVelocity", LiftSpeedInherit)
+  AppObj.getAttribute("AccelerationOn", AccelerationCheckboxInherit)
+  if LiftSpeedInherit and AccelerationCheckboxInherit
+  	dialog.setCheckBox("Dynamics_of_the_Lift_inherit", true)
+  end
+  
+  dialog.setCaption("Lift_Acceleration_inp", to_str(num_to_acceleration(AnimatableObject.JointAcceleration)))
+  dialog.setCaption("Lift_Acceleration_unit", a_unit)
+  
+  dialog.setCaption("Lift_Deceleration_inp", to_str(num_to_acceleration(AnimatableObject.JointDeceleration)))
+  dialog.setCaption("Lift_Deceleration_unit", a_unit)
+  
+  dialog.setCaption( "Capacity_inp", to_str(AppObj.Capacity ))
+  AppObj.getAttribute("Capacity", inherit)
+  dialog.setCheckBox("Capacity_inherit", inherit)
+  
+  dialog.setCaption( "Damping_Time_inp", to_str( AppObj.DampingTime ))
+  AppObj.getAttribute("DampingTime", inherit)
+  dialog.setCheckBox("Damping_Time_inherit", inherit)
+  
+  dialog.setCaption( "Dwell_Time_inp", to_str( AppObj.MaximumDwellTime ))
+  AppObj.getAttribute("MaximumDwellTime", inherit)
+  dialog.setCheckBox("Dwell_Time_inherit", inherit)
+  
+  Dialog.setCheckbox( "Take_preferred_position_chk", AppObj.DrivingHome)
+  if AppObj.HomePosition=void
+  	Dialog.setCaption( "Take_preferred_position_inp", "")
+  else
+  	Dialog.setCaption( "Take_preferred_position_inp", makePathRelative(AppObj.HomePosition, AppObj.~))
+  end
+  
+  Dialog.setSensitive("Take_preferred_position_txt", AppObj.DrivingHome)
+  Dialog.setSensitive("Take_preferred_position_inp", AppObj.DrivingHome)
+  
+  dialog.setStatisticValues
+ ShowInTooltip: false
+-
+ Name: dialogApply
+ ID: 1577988052
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  here we just have to write the table defining the failures back to the CSC
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: dialog of CSC
+  Calls		:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  here we just have to write the table defining the failures back to the CSC
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: dialog of CSC
+  Calls		:
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var dialog	: object
+  var AppObj	: object
+  
+  dialog := self.~
+  AppObj := dialog.openedBy
+  var AnimatableObject := AppObj._3D.getObject("Car")
+  
+  if AppObj/=void
+  	if ?.getCheckBox("Name_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("name")
+  		dialog.setCaption("Name_inp", AppObj.name)
+  	else
+  		AppObj.Name := dialog.getValue("Name_inp")
+  	end
+  
+  	if ?.getCheckBox("label_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("label")
+  		dialog.setCaption("label_inp", AppObj.label)
+  	else
+  		AppObj.label := dialog.getValue("label_inp")
+  	end
+  
+  	if ?.getCheckBox("Lift_Length_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("length")
+  		dialog.setCaption("Lift_Length_inp", to_str(AppObj.length))
+  	else
+  		AppObj.length := str_to_length(dialog.getValue("Lift_Length_inp"))
+  	end
+  
+  
+  	if ?.getCheckBox("Fence_Height_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("FenceHeight")
+  		dialog.setCaption("Fence_Height_inp", to_str(AppObj.FenceHeight))
+  	else
+  		AppObj.FenceHeight := str_to_length(dialog.getValue("Fence_Height_inp"))
+  	end
+  
+  	if ?.getCheckBox("Default_Lift_Height_inherit") and AppObj.Origin /= void
+  		AnimatableObject.inheritAttribute("BaseHeight")
+  		dialog.setCaption("Default_Lift_Height_inp", to_str(AnimatableObject.BaseHeight))
+  	else
+  		AnimatableObject.BaseHeight := str_to_length(dialog.getValue("Default_Lift_Height_inp"))
+  	end
+  
+  	if ?.getCheckBox("Car_Bay_Width_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("Width")
+  		dialog.setCaption("Car_Bay_Width_inp", to_str(AppObj.Width))
+  	else
+  		AppObj.Width := str_to_length(dialog.getValue("Car_Bay_Width_inp"))
+  	end
+  
+  	if ?.getCheckBox("Dynamics_of_the_Lift_inherit") and AppObj.Origin /= void
+  		AnimatableObject.inheritAttribute("JointVelocity")
+  		dialog.setCaption("Lift_Speed_inp", to_str(num_to_speed( AnimatableObject.JointVelocity)))
+  		AnimatableObject.inheritAttribute("JointAcceleration")
+  		dialog.setCaption("Lift_Acceleration_inp", to_str(num_to_acceleration( AnimatableObject.JointAcceleration)))
+  		AnimatableObject.inheritAttribute("JointDeceleration")
+  		dialog.setCaption("Lift_Deceleration_inp", to_str(num_to_acceleration( AnimatableObject.JointDeceleration)))
+  	else
+  		AnimatableObject.JointVelocity := str_to_speed(dialog.getValue("Lift_Speed_inp"))
+  		AnimatableObject.JointAcceleration := str_to_acceleration(dialog.getValue("Lift_Acceleration_inp"))
+  		AnimatableObject.JointDeceleration := str_to_acceleration(dialog.getValue("Lift_Deceleration_inp"))
+  	end
+  
+  
+  	if ?.getCheckBox("Capacity_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("Capacity")
+  		dialog.setCaption("Capacity_inp", to_str(AppObj.Capacity))
+  	else
+  		AppObj.Capacity := str_to_num(dialog.getValue("Capacity_inp"))
+  	end
+  
+  	if ?.getCheckBox("Damping_Time_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("DampingTime")
+  		dialog.setCaption("Damping_Time_inp", to_str(AppObj.DampingTime))
+  	else
+  		AppObj.DampingTime := str_to_time(dialog.getValue("Damping_Time_inp"))
+  	end
+  
+  	if ?.getCheckBox("Dwell_Time_inherit") and AppObj.Origin /= void
+  		AppObj.inheritAttribute("MaximumDwellTime")
+  		dialog.setCaption("Dwell_Time_inp", to_str(AppObj.MaximumDwellTime))
+  	else
+  		AppObj.MaximumDwellTime := str_to_time(dialog.getValue("Dwell_Time_inp"))
+  	end
+  
+  	AppObj.DrivingHome := dialog.getCheckbox("Take_preferred_position_chk")
+  		var str := dialog.getValue("Take_preferred_position_inp")
+  		if strLpos(".",str)=1 -- absolute path?
+  			AppObj.HomePosition := when existsObject(str) then str_to_obj(str) else void
+  		else -- relative path
+  			AppObj.HomePosition := AppObj.~.extendPath(str)
+  		end
+  AppObj.parametrizeCar
+  end
+ ShowInTooltip: false
+-
+ Name: setStatisticValues
+ ID: 1578009200
+ DataType: method
+ Value: |+1
+  /*_________________________________________________________________________________
+  Method Tasks:
+  set all values of the statistic_tab
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: APPLY button or dialogInit
+  Calls		: none
+  ________________________________________________________________________________*/
+  var dialog	: object
+  var tab		: table
+  var csc		: object
+  
+  dialog := self.~
+  csc := Dialog.openedBy
+  
+  if csc /= void
+  	tab.create
+  	dialog.setCaption( "working_val",	to_str( round( csc.statWorkingPortion*100, 2 )))
+  	dialog.setCaption( "waiting_val",	to_str( round( csc.statWaitingPortion*100, 2 )))
+  	dialog.setCaption( "blocked_val",	to_str( round( csc.statBlockingPortion*100, 2 )))
+  	dialog.setCaption( "failed_val",	to_str( round( csc.statFailPortion*100, 2 )))
+  	dialog.setCaption( "pause_val",		to_str( round( csc.statPausingPortion*100, 2 )))
+  	dialog.setCaption( "unplanned_val",	to_str( round( csc.statUnplannedPortion*100, 2 )))
+  
+  	dialog.setCaption( "VehWaiting_val", "0" )
+  	dialog.setCaption( "VehDriving_val", "0" )
+  	dialog.setCaption( "VehLoading_val", "0" )
+  	dialog.setCaption( "VehTransporting_val", "0" )
+  	dialog.setCaption( "VehUnloading_val", "0" )
+  	dialog.setCaption( "vehDamping_val", "0")
+  	dialog.setCaption( "vehfailed_val", "0")
+  
+  	csc.state.getStatisticsTable( tab )
+  	var DurationColumn:= 5
+  
+  	for var i := 1 to tab.YDim
+  		switch tab[1,i]
+  		case "driveto"
+  			dialog.setCaption( "VehDriving_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "loading"
+  			dialog.setCaption( "VehLoading_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "drivefull"
+  			dialog.setCaption( "VehTransporting_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "waiting"
+  			dialog.setCaption( "VehWaiting_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "unloading"
+  			dialog.setCaption( "VehUnloading_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "damping"
+  			dialog.setCaption( "vehDamping_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  
+  		case "failed"
+  			dialog.setCaption( "vehfailed_val", to_str( round( tab[DurationColumn, i ], 2 ) ))
+  		end
+  	next
+  else
+  	dialog.setCaption( "working_val",	"0" )
+  	dialog.setCaption( "waiting_val",	"0" )
+  	dialog.setCaption( "blocked_val",	"0" )
+  	dialog.setCaption( "failed_val",	"0" )
+  	dialog.setCaption( "pause_val",		"0" )
+  	dialog.setCaption( "unplanned_val",	"0" )
+  
+  	dialog.setCaption( "VehWaiting_val",		"0" )
+  	dialog.setCaption( "VehDriving_val",		"0" )
+  	dialog.setCaption( "VehLoading_val",		"0" )
+  	dialog.setCaption( "VehTransporting_val",	"0" )
+  	dialog.setCaption( "VehUnloading_val",		"0" )
+  	dialog.setCaption( "vehDamping_val",		"0")
+  	dialog.setCaption( "vehdriveHome_val",		"0")
+  	dialog.setCaption( "vehfailed_val",			"0")
+  
+  end
+ ShowInTooltip: false
+-
+ Name: reset
+ ID: 1578023698
+ DataType: method
+ Value: |+1
+  var dialog	: object
+  var tab		: table
+  var csc		: object
+  
+  dialog := self.~
+  csc := Dialog.openedBy
+  
+  if csc /= void
+  	tab.create
+  	dialog.setCaption( "working_val",	to_str( round( csc.statWorkingPortion*100, 2 )))
+  	dialog.setCaption( "waiting_val",	to_str( round( csc.statWaitingPortion*100, 2 )))
+  	dialog.setCaption( "blocked_val",	to_str( round( csc.statBlockingPortion*100, 2 )))
+  	dialog.setCaption( "failed_val",	to_str( round( csc.statFailPortion*100, 2 )))
+  	dialog.setCaption( "pause_val",		to_str( round( csc.statPausingPortion*100, 2 )))
+  	dialog.setCaption( "unplanned_val",	to_str( round( csc.statUnplannedPortion*100, 2 )))
+  
+  	dialog.setCaption( "VehWaiting_val", "0" )
+  	dialog.setCaption( "VehDriving_val", "0" )
+  	dialog.setCaption( "VehLoading_val", "0" )
+  	dialog.setCaption( "VehTransporting_val", "0" )
+  	dialog.setCaption( "VehUnloading_val", "0" )
+  	dialog.setCaption( "vehDamping_val", "0")
+  	dialog.setCaption( "vehfailed_val", "0")
+  end
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "navigate_mnu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "openLoc_mnu"
+  Caption: "Open Location"
+  CallbackArgument: "openLocation"
+ -
+  Type: Menu
+  Name: "openOrigin_mnu"
+  Caption: "Open Origin"
+  CallbackArgument: "openOrigin"
+ -
+  Type: Menu
+  Name: "gotoOrigin_mnu"
+  Caption: "Goto Origin"
+  CallbackArgument: "gotoOrigin"
+ -
+  Type: Menu
+  Name: "openClass_mnu"
+  Caption: "Open Class"
+  CallbackArgument: "openClass"
+ -
+  Type: Menu
+  Name: "gotoClass_mnu"
+  Caption: "Goto Class"
+  CallbackArgument: "gotoClass"
+-
+ Type: Menu
+ Name: "view_mnu"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "refresh_mnu"
+  Caption: "Refresh"
+  CallbackArgument: "refresh"
+-
+ Type: Menu
+ Name: "help_mnu"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "helpObject_mnu"
+  Caption: "Help on Object"
+  CallbackArgument: "helpObject"
+ -
+  Type: Menu
+  Name: "helpVersion_mnu"
+  Caption: "Version"
+  CallbackArgument: "helpVersion"
+-
+ Type: StaticText
+ Name: "Name_txt"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "Name_inp"
+ Caption: "VerfahrwegControls"
+ Rect: [10,0,0,0]
+ CallbackArgument: "Name"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "Name_inherit"
+ Rect: [36,0,0,0]
+ InheritanceBox: true
+-
+ Type: StaticText
+ Name: "label_txt"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "label_inp"
+ Rect: [10,1,0,0]
+ CallbackArgument: "label"
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "label_inherit"
+ Rect: [36,1,0,0]
+ InheritanceBox: true
+-
+ Type: TabControl
+ Name: "tabCtrl"
+ Rect: [0,2,74,17]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "car_attr_tab"
+  Caption: "Attributes"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Lift_Length_txt"
+   Caption: "Lift Length:"
+  -
+   Type: EditText
+   Name: "Lift_Length_inp"
+   Rect: [19,0,12,0]
+   CallbackArgument: "Lift_Length"
+   DataType: 9
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Lift_Length_inherit"
+   Rect: [32,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Lift_Length_unit"
+   Caption: "m"
+   Rect: [35,0,0,0]
+  -
+   Type: StaticText
+   Name: "Fence_Height_txt"
+   Caption: "Fence Height:"
+   Rect: [39,0,0,0]
+  -
+   Type: EditText
+   Name: "Fence_Height_inp"
+   Rect: [53,0,12,0]
+   CallbackArgument: "Fence_Height"
+   DataType: 9
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Fence_Height_inherit"
+   Rect: [66,0,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Fence_Height_unit"
+   Caption: "m"
+   Rect: [69,0,0,0]
+  -
+   Type: StaticText
+   Name: "Default_Lift_Height_txt"
+   Caption: "Default Lift Height:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "Default_Lift_Height_inp"
+   Rect: [19,1,12,0]
+   CallbackArgument: "Default_Lift_Height"
+   DataType: 1
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Default_Lift_Height_inherit"
+   Rect: [32,1,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Default_Lift_Height_unit"
+   Caption: "m"
+   Rect: [35,1,0,0]
+  -
+   Type: StaticText
+   Name: "Car_Bay_Width_txt"
+   Caption: "Car Bay Width:"
+   Rect: [39,1,0,0]
+  -
+   Type: EditText
+   Name: "Car_Bay_Width_inp"
+   Rect: [53,1,12,0]
+   CallbackArgument: "Car_Bay_Width"
+   DataType: 9
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Car_Bay_Width_inherit"
+   Rect: [66,1,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Car_Bay_Width_unit"
+   Caption: "m"
+   Rect: [69,1,0,0]
+  -
+   Type: GroupBox
+   Name: "Dynamics of the Lift"
+   Rect: [0,3,66,6]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "Dynamics_of_the_Lift_txt"
+    Caption: "Dynamics of the Lift:"
+   -
+    Type: CheckBox
+    Name: "Dynamics_of_the_Lift_inherit"
+    Rect: [18,0,0,0]
+    CallbackArgument: "Dynamics"
+    InheritanceBox: true
+   -
+    Type: StaticText
+    Name: "Lift_Speed_txt"
+    Caption: "Lift Speed:"
+    Rect: [0,1,0,0]
+   -
+    Type: EditText
+    Name: "Lift_Speed_inp"
+    Rect: [17,1,12,0]
+    CallbackArgument: "Lift_Speed"
+    DataType: 9
+    Password: false
+   -
+    Type: StaticText
+    Name: "Lift_Speed_unit"
+    Caption: "m/s"
+    Rect: [30,1,0,0]
+   -
+    Type: StaticText
+    Name: "Lift_Acceleration_txt"
+    Caption: "Acceleration:"
+    Rect: [0,2,0,0]
+   -
+    Type: EditText
+    Name: "Lift_Acceleration_inp"
+    Rect: [17,2,12,0]
+    CallbackArgument: "Lift_Acceleration"
+    DataType: 1
+    Password: false
+   -
+    Type: StaticText
+    Name: "Lift_Acceleration_unit"
+    Caption: "m/s2"
+    Rect: [30,2,0,0]
+   -
+    Type: StaticText
+    Name: "Lift_Deceleration_txt"
+    Caption: "Deceleration:"
+    Rect: [0,3,0,0]
+   -
+    Type: EditText
+    Name: "Lift_Deceleration_inp"
+    Rect: [17,3,12,0]
+    CallbackArgument: "Lift_Deceleration"
+    DataType: 9
+    Password: false
+   -
+    Type: StaticText
+    Name: "Lift_Deceleration_unit"
+    Caption: "m/s2"
+    Rect: [30,3,0,0]
+  -
+   Type: StaticText
+   Name: "Capacity_txt"
+   Caption: "Capacity:"
+   Rect: [0,10,0,0]
+  -
+   Type: EditText
+   Name: "Capacity_inp"
+   Rect: [21,10,12,0]
+   CallbackArgument: "Capacity"
+   DataType: 4
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Capacity_inherit"
+   Rect: [34,10,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Damping_Time_txt"
+   Caption: "Damping Time:"
+   Rect: [0,11,0,0]
+  -
+   Type: EditText
+   Name: "Damping_Time_inp"
+   Rect: [21,11,12,0]
+   CallbackArgument: "Damping_Time"
+   DataType: 10
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Damping_Time_inherit"
+   Rect: [34,11,0,0]
+   InheritanceBox: true
+  -
+   Type: StaticText
+   Name: "Dwell_Time_txt"
+   Caption: "Maximum Dwell Time:"
+   Rect: [0,12,0,0]
+  -
+   Type: EditText
+   Name: "Dwell_Time_inp"
+   Rect: [21,12,12,0]
+   CallbackArgument: "Dwell_Time"
+   DataType: 10
+   Password: false
+  -
+   Type: CheckBox
+   Name: "Dwell_Time_inherit"
+   Rect: [34,12,0,0]
+   InheritanceBox: true
+  -
+   Type: CheckBox
+   Name: "Take_preferred_position_chk"
+   Caption: "Take preferred position"
+   Rect: [0,13,0,0]
+   CallbackArgument: "Take_preferred_position_Active"
+  -
+   Type: StaticText
+   Name: "Take_preferred_position_txt"
+   Caption: "Preferred position:"
+   Rect: [25,13,0,0]
+  -
+   Type: EditText
+   Name: "Take_preferred_position_inp"
+   Rect: [42,13,23,0]
+   CallbackArgument: "homeposition"
+   DataType: 1
+   Password: false
+ -
+  Type: TabPage
+  Name: "Stat_tab"
+  Caption: "Statistics"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "track_grp"
+   Caption: "Load Bay"
+   Rect: [0,0,32,8]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "working_txt"
+    Caption: "Working:"
+   -
+    Type: StaticText
+    Name: "working_val"
+    Caption: "100.00"
+    Rect: [20,0,0,0]
+   -
+    Type: StaticText
+    Name: "working_unit"
+    Caption: "%"
+    Rect: [27,0,0,0]
+   -
+    Type: StaticText
+    Name: "waiting_txt"
+    Caption: "Waiting:"
+    Rect: [0,1,0,0]
+   -
+    Type: StaticText
+    Name: "waiting_val"
+    Caption: "100.00"
+    Rect: [20,1,0,0]
+   -
+    Type: StaticText
+    Name: "waiting_unit"
+    Caption: "%"
+    Rect: [27,1,0,0]
+   -
+    Type: StaticText
+    Name: "blocked_txt"
+    Caption: "Blocked:"
+    Rect: [0,2,0,0]
+   -
+    Type: StaticText
+    Name: "blocked_val"
+    Caption: "100.00"
+    Rect: [20,2,0,0]
+   -
+    Type: StaticText
+    Name: "blocked_unit"
+    Caption: "%"
+    Rect: [27,2,0,0]
+   -
+    Type: StaticText
+    Name: "Failed_txt"
+    Caption: "Failed:"
+    Rect: [0,3,0,0]
+   -
+    Type: StaticText
+    Name: "failed_val"
+    Caption: "100.00"
+    Rect: [20,3,0,0]
+   -
+    Type: StaticText
+    Name: "failed_unit"
+    Caption: "%"
+    Rect: [27,3,0,0]
+   -
+    Type: StaticText
+    Name: "pause_txt"
+    Caption: "Paused:"
+    Rect: [0,4,0,0]
+   -
+    Type: StaticText
+    Name: "pause_val"
+    Caption: "100.00"
+    Rect: [20,4,0,0]
+   -
+    Type: StaticText
+    Name: "pause_unit"
+    Caption: "%"
+    Rect: [27,4,0,0]
+   -
+    Type: StaticText
+    Name: "unplanned_txt"
+    Caption: "Unplanned:"
+    Rect: [0,5,0,0]
+   -
+    Type: StaticText
+    Name: "unplanned_val"
+    Caption: "100.00"
+    Rect: [20,5,0,0]
+   -
+    Type: StaticText
+    Name: "unplanned_unit"
+    Caption: "%"
+    Rect: [27,5,0,0]
+  -
+   Type: GroupBox
+   Name: "veh_grp"
+   Caption: "Car"
+   Rect: [34,0,32,8]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "VehWaiting_txt"
+    Caption: "Waiting:"
+   -
+    Type: StaticText
+    Name: "VehWaiting_val"
+    Caption: "100.00"
+    Rect: [20,0,0,0]
+   -
+    Type: StaticText
+    Name: "percent1_unit"
+    Caption: "%"
+    Rect: [27,0,0,0]
+   -
+    Type: StaticText
+    Name: "VehDriving_txt"
+    Caption: "Driving:"
+    Rect: [0,1,0,0]
+   -
+    Type: StaticText
+    Name: "VehDriving_val"
+    Caption: "100.00"
+    Rect: [20,1,0,0]
+   -
+    Type: StaticText
+    Name: "percent2_unit"
+    Caption: "%"
+    Rect: [27,1,0,0]
+   -
+    Type: StaticText
+    Name: "VehLoading_txt"
+    Caption: "Loading:"
+    Rect: [0,2,0,0]
+   -
+    Type: StaticText
+    Name: "VehLoading_val"
+    Caption: "100.00"
+    Rect: [20,2,0,0]
+   -
+    Type: StaticText
+    Name: "percent3_unit"
+    Caption: "%"
+    Rect: [27,2,0,0]
+   -
+    Type: StaticText
+    Name: "VehTransport_txt"
+    Caption: "Transporting:"
+    Rect: [0,3,0,0]
+   -
+    Type: StaticText
+    Name: "VehTransporting_val"
+    Caption: "100.00"
+    Rect: [20,3,0,0]
+   -
+    Type: StaticText
+    Name: "percent4_unit"
+    Caption: "%"
+    Rect: [27,3,0,0]
+   -
+    Type: StaticText
+    Name: "VehUnloading_txt"
+    Caption: "Unload:"
+    Rect: [0,4,0,0]
+   -
+    Type: StaticText
+    Name: "VehUnloading_val"
+    Caption: "100.00"
+    Rect: [20,4,0,0]
+   -
+    Type: StaticText
+    Name: "percent5_unit"
+    Caption: "%"
+    Rect: [27,4,0,0]
+   -
+    Type: StaticText
+    Name: "vehDamping_txt"
+    Caption: "Damping:"
+    Rect: [0,5,0,0]
+   -
+    Type: StaticText
+    Name: "vehDamping_val"
+    Caption: "100.00"
+    Rect: [20,5,0,0]
+   -
+    Type: StaticText
+    Name: "percent6_unit"
+    Caption: "%"
+    Rect: [27,5,0,0]
+   -
+    Type: StaticText
+    Name: "vehfailed_txt"
+    Caption: "Failed:"
+    Rect: [0,6,0,0]
+   -
+    Type: StaticText
+    Name: "vehfailed_val"
+    Caption: "100.00"
+    Rect: [20,6,0,0]
+   -
+    Type: StaticText
+    Name: "percentage8_unit"
+    Caption: "%"
+    Rect: [27,6,0,0]
+-
+ Type: Button
+ Name: "DefineFailures"
+ Caption: "Define Failures"
+ Rect: [1,18,15,0]
+ CallbackArgument: "DefineFailures"

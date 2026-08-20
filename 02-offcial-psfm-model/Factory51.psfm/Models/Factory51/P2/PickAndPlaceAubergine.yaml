@@ -1,0 +1,24 @@
+InternalClassType: PickAndPlace
+Origin: 019f044c-ab8a-7072-b8cc-a6f99c75cd60
+RandomSeed: 1073746323
+UUID: 019f044c-ab8a-74b7-9720-6568ef2e8e38
+3D:
+ $Objects:
+ -
+  Origin: 39f7b6a2-f43a-45a4-9385-4cccb619d355
+  UUID: c6357e74-a94e-4a98-85e1-33464006a035
+  $Objects:
+  -
+   Origin: 91c9744b-604d-4c59-b2b3-82d18089fb67
+   UUID: 3cf9cc9d-5727-47c9-8338-14580ea9e1ed
+   $Objects:
+   -
+    Origin: 297f5912-d107-4157-badc-bb5bea121dd1
+    UUID: f84c8b6d-24e7-44f6-87f3-97c92c6cd11b
+    $Objects:
+    -
+     Origin: 4be0c513-0775-4f2d-b735-3310d9b05ef8
+     UUID: a21ac107-2c3e-4d69-ad36-4c43b4ca152d
+$Predecessors:
+- 019f044c-ab8a-7511-ae4b-2f1d3cd6fd0e
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,61 @@
+InternalClassType: Conveyor
+Accumulating: false
+AutomaticStop: true
+Coordinate3D: [-2,0,0]
+CostingActive: true
+DepreciationPeriod: 12
+InvestmentCosts: 35000
+InvestmentCostsPerLength: 0
+Length: 4
+MUDistance: 1
+MUDistanceType: "Minimum Gap"
+OperatingCosts: 4500
+OperatingCostsPerLength: 0
+Origin: b5918b15-4f59-4f8d-9ea6-caef605f87ca
+RandomSeed: 1073745751
+Speed: 1
+UUID: 019f044c-ab8a-7006-b645-e3df2df005d3
+3D:
+ $ExtSegments:
+  - 0
+  - [0,4,0]
+$CustomAttributes:
+-
+ Name: OnSensor1
+ ID: 1
+ DataType: method
+ Value: |+1
+  param SensorID: integer, Front: boolean
+  
+  @.Stopped := true
+  wait ?.PaintTime
+  @.Stopped := false
+  
+  @.name := ?.~.PaintColor
+  
+  if @.name = "Aubergine"
+  	@._3D.activateMaterialWithColor(makeRGBValue(107, 0, 128))
+  elseif @.name = "Strawberry"
+  	@._3D.activateMaterialWithColor(makeRGBValue(255, 0, 128))
+  end
+ ShowInTooltip: false
+-
+ Name: PaintTime
+ ID: 2
+ DataType: time
+ Value: 10
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 2.1
+ FromEnd: false
+ Control: "self.OnSensor1"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false
