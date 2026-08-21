@@ -1,0 +1,43 @@
+InternalClassType: Method
+Coordinate3D: [-8.05,7,0]
+Name: readAttr
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ /*
+ parameter: proctime,  [2,3], [2]
+ result:    .proctime, [2,3], .read_(2)
+ */
+ param attr:string->string
+ 
+ var k:integer
+ 
+ result := attr
+ k := strLpos("]",attr)
+ if k > 0 
+ 	if strLpos(",",attr)=0  -- 1D List
+ 		result := strOmit(result,k,1)
+ 		k:=strLpos("[",result)
+ 		result := strOmit(result,k,1)
+ 		result := to_str("[",result,"]")
+ 	end
+ else -- like procTime
+ 	result := to_str(".",result)
+ end
+RandomSeed: 295
+UUID: e659d23e-bf39-42cc-b322-17514ab11329
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,29 @@
+InternalClassType: Method
+Coordinate3D: [28.200000000000003,-8.4500000000000011,0]
+Name: isTool
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ -- "Experiment", "GAwizard", "BottleneckAnalyzer"
+ param obj:object->boolean
+ if obj.getAttrNo("objType")>0 and Rootfolder.~ = .Tools
+ 	result := true
+ end
+RandomSeed: 57
+UUID: 8250c8f9-5123-4e22-bfb2-9fba0ea06fd1
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

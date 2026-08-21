@@ -1,0 +1,64 @@
+InternalClassType: Method
+ChangePathCtrl:
+CloseCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: _Icons_
+OpenCtrl:
+PlausibilityCtrl:
+Program: ""
+RandomSeed: 362
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+UUID: 0f081421-8316-48a1-9011-767d19dfcd57
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default","ExitCtrl","EntranceCtrl","init","reset","endSim"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 0
+ MaterialDiffuseColor: 11842740
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-0.15,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [3,3]
+ Pixels:
+ - /wAA/wAA/wAA
+ - /wAA/wAA/wAA
+ - /wAA/wAA/wAA

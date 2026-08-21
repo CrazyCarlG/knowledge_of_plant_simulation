@@ -1,0 +1,21 @@
+InternalClassType: Dialog
+Label: "PalletOptimization"
+Origin: 01a0236c-0546-713d-b374-af5493ef05c0
+RandomSeed: 1073747848
+UUID: 01a0236c-0546-7473-a108-345437e86c29
+$Elements:
+-
+ Type: TabControl
+ Name: "Tabs"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Def_Tab"
+  $Elements:
+  -
+   Type: EditText
+   Name: "Observations_Inp"
+   Caption: "5"
+ -
+  Type: TabPage
+  Name: "Evaluation_tab"

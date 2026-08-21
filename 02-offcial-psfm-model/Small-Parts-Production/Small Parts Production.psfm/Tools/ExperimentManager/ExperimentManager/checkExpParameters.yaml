@@ -1,0 +1,52 @@
+InternalClassType: Method
+Coordinate3D: [8.5784,0.0113,0]
+Name: checkExpParameters
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -> boolean
+ 
+ var col:integer := 2
+ var invalidParameter := false
+ while ExpTable[col,0]/=void  -- scan the column index
+ 	var str: string := ExpTable[col,0]
+ 	var AttrStr:string := ValueDescriptions.getOrig(str)
+ 	var AttrVal:any
+ 	for var row := 1 to ExpTable.yDim
+ 		if ExpTable[col, row]/=void
+ 			AttrVal := ExpTable[col, row]
+ 			var oldVal := readValue(AttrStr)
+ 			if NOT writeValue(AttrStr, AttrVal)
+ 				messageBox("Setting input value for experiment "+row+": '"+AttrStr+" := "+AttrVal+"' was impossible",1,1)
+ 				invalidParameter := true
+ 				exitloop
+ 			end
+ 			writeValue(AttrStr, oldVal)
+ 			forget oldVal
+ 		end
+ 	next
+ 	forget AttrVal
+ 	col += 1
+ end
+ 
+ if invalidParameter
+ 	result := false
+ else
+ 	result := true
+ end
+RandomSeed: 35
+UUID: 67d016ec-0ecd-46d2-bd90-567d6579fe55
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

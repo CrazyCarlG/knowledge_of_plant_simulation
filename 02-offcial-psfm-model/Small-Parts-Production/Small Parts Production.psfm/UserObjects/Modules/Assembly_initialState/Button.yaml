@@ -1,0 +1,20 @@
+InternalClassType: Button
+Control: "self.OnClicked"
+Coordinate3D: [-13.65,6.15,0]
+Label: "Start"
+Origin: 109099cc-349f-4dfa-af40-5e0bc5305ec2
+RandomSeed: 1073746729
+UUID: 01a0236c-0546-706f-a0ef-9c7924a15f22
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	eventController.start;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false

@@ -1,0 +1,38 @@
+InternalClassType: Method
+Coordinate3D: [55,-36,0]
+Name: SingleRunSetParameter
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Called by reset
+ -- This process is started for the simulation of a single observation.
+ evalExpTable(currExpNo) -- set the input values defined in 'ExtTable'
+ 
+ DefSeed4Run(currExpNo, currRunNo)
+ 
+ if strLen(UserConfigMethod) > 0 --_UsingUserMethod
+ 	if strLpos(".",UserConfigMethod) = 1
+ 		str_to_method(UserConfigMethod).execute(currExpNo)
+ 	else
+ 		str_to_method(to_str(~,".",UserConfigMethod)).execute(currExpNo)
+ 	end
+ end
+ 
+ eventController.start --WithoutAnimation
+RandomSeed: 209
+UUID: 4ea31bf0-40a9-4909-932d-ab3b511345a8
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

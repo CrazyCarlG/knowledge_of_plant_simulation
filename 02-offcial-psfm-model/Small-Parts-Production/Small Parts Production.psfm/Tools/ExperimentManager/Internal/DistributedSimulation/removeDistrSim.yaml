@@ -1,0 +1,40 @@
+InternalClassType: Method
+Coordinate3D: [33,-1.85,0]
+Name: removeDistrSim
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- delete all instances of SimulationMachine
+ -- called by: 
+ -- 1. Start distributed simulation
+ -- 2. Testrun button (always a local experiment run with duration 1)
+ -- 3. Reset_ button
+ -- not at the end of distributed simulation (purpose debugging)
+ deleteSuspendedMethods
+ ~.rootfolder.internal.sema := false
+ 
+ var classObj:object := rootfolder.Internal.SimulationMachine
+ for var i := numNodes downto 1 
+ 	var objI:object := node(i)
+ 	if objI.class = classObj 
+ 		objI.deleteObject
+ 	end
+ next
+ 
+ MachinesTable.delete({7,1}..{18,*})	-- delete, starting with handle column
+RandomSeed: 343
+UUID: c4cc9fd7-b4e4-4a7d-97da-311d47aa03cb
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

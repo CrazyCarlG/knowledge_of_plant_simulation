@@ -1,0 +1,1410 @@
+InternalClassType: Dialog
+ArgumentForApply: "Apply"
+ArgumentForClose: "Close"
+ArgumentForOpen: "Open"
+CallbackMethod: "self.Callback"
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [6,-6,0]
+CreateIn3D: true
+DestructorCtrl:
+DialogX: -1
+DialogY: -1
+DragDropCtrl:
+InitCtrl:
+Label: ""
+Locked: false
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: TransferStationDialog
+OpenCtrl:
+OpenModal: false
+PlausibilityCtrl:
+RandomSeed: 6658
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowStandardButtons: true
+UUID: 6160eaff-921b-4365-b67a-d95202997647
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAA////////5ubm////////AAAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA2NjY////////5ubmAAAA5ubm////////2NjYAAAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA////////5ubmAAAAAAAAAAAA5ubm////////AAAAgIAAgIAA
+ - gIAAgIAAAAAA////////vr6+vr6+////AAAA////vr6+vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+////////AAAA////////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+////////////////////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+/v7+zpKCzpKCzpKC////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+vr6+zpKCzpKCzpKCvr6+vr6+////////AAAAgIAA
+ - gIAAgIAAgIAAAAAA/////////v7+zpKCzpKCzpKC////////////AAAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA2NjY/////v7+zpKCzpKCzpKC////////2NjYAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAA////////////////////AAAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  callback of the TransferStationDialog
+  _________________________________________________________________________________
+  Parameters	:
+  ReturnValues: none
+  
+  Called By	:
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  02.05.2005  KM	translate and init dialog before opendialog
+  27.06.2005  KM	AlwaysStopTarget only active for load/reload
+  08.07.2005  KM	Info in Helpmenu opens InfoDialog
+  08.07.2005  KM	Parameter of checkStationClass
+  08.07.2005  KM	UpdateClassLibrary
+  23.08.2005  KM	UpdateClassLibrary disabled
+  31.01.2006  KM	User control for line and track
+  15.02.2006  KM	Nw2Way allowed
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  21.03.2006  KM  don't use PartExitControl or TargetExitControl as UserControl, if
+  station was selected again
+  03.04.2006  KM	Tools-menu with update transferstation
+  18.05.2006  KM  blocksize > 1 only allowed for parallelproc
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  27.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  25.09.2007  KM  Pfad für Tools-Directory und Hilfe
+  26.09.2007  KM  Pfad für Hilfe-kapitel
+  10.10.2007  PS  Localization
+  12.09.2008  KM  opening of Aboutbox changed
+  12.11.2008  KM  Update ClassLibrary removed
+  27.10.2011  KM  About menu removed
+  04.04.2013  KM  setText -> setCaption
+  10.01.2020	PS	Treatment of version 15.2 and newer of the menu "Help on Object"
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param action : string
+  
+  var dialog : object
+  var callingObj : object
+  var checked : boolean
+  var name : string
+  var station : object
+  var oldexitctrl, str : string
+  var type : integer
+  var dlg : object
+  var enable : boolean
+  
+  dialog := self.~
+  callingObj := dialog.openedBy
+  if callingObj = void
+  	return
+  end
+  
+  switch action
+  /* --------------------------------------------------- */
+  case "Apply"
+  	dialog.dialogApply
+  /* --------------------------------------------------- */
+  case "Close"
+  	callingObj.OpenedDialog := void
+  	dialog.deleteObject
+  /* --------------------------------------------------- */
+  -- Menu Navigate
+  case "Location"
+  	callingObj.~.openDialog
+  /* --------------------------------------------------- */
+  -- Menu View
+  case "Refresh"
+  	dialog.dialogInit
+  /* --------------------------------------------------- */
+  -- Menu Help
+  case "Contents"
+  	HTMLHelp("")
+  case "Index"
+  	HTMLHelp("","")
+  case "HelpOnObj"
+  	if ApplicationVersion < 15002000
+  		if UserInterfaceLanguage = 0
+  			HTMLHelp(callingObj.HelpOnObjectDEU)
+  		else
+  			HTMLHelp(callingObj.HelpOnObjectENU)
+  		end
+  	else
+  		HTMLHelp(callingObj.HelpOnObjectENU)
+  	end
+  /* --------------------------------------------------- */
+  -- Tab Attributes
+  case "Load"
+  	dialog.setSensitive("homogeneousTarget", dialog.getCheckbox("Load"))
+  	dialog.setSensitive("alwaysStopTarget", dialog.getCheckbox("Load"))
+  	dialog.setSensitive("stopPartContainer", not dialog.getCheckbox("Load"))
+  	dialog.setSensitive("stopTargetContainer", dialog.getCheckbox("Load"))
+  	dialog.callback("PartObject")
+  	dialog.callback("TargetObject")
+  case "Unload"
+  	dialog.setSensitive("homogeneousTarget", not dialog.getCheckbox("Unload"))
+  	dialog.setSensitive("alwaysStopTarget", not dialog.getCheckbox("Unload"))
+  	dialog.setSensitive("stopPartContainer", dialog.getCheckbox("Unload"))
+  	dialog.setSensitive("stopTargetContainer", not dialog.getCheckbox("Unload"))
+  	dialog.callback("TargetObject")
+  case "Transfer"
+  	dialog.setSensitive("homogeneousTarget", dialog.getCheckbox("Transfer"))
+  	dialog.setSensitive("alwaysStopTarget", dialog.getCheckbox("Transfer"))
+  	dialog.setSensitive("stopPartContainer", dialog.getCheckbox("Transfer"))
+  	dialog.setSensitive("stopTargetContainer", dialog.getCheckbox("Transfer"))
+  	dialog.callback("TargetObject")
+  case "Parttransfer"
+  	dialog.setSensitive("homogeneousTarget", not dialog.getCheckbox("Parttransfer"))
+  	dialog.setSensitive("alwaysStopTarget", not dialog.getCheckbox("Parttransfer"))
+  	dialog.setSensitive("stopPartContainer", not dialog.getCheckbox("Parttransfer"))
+  	dialog.setSensitive("stopTargetContainer", not dialog.getCheckbox("Parttransfer"))
+  	dialog.callback("PartObject")
+  	dialog.callback("TargetObject")
+  
+  case "Pselect"
+  	if (dialog.getCheckbox("Load") or dialog.getCheckbox("Parttransfer")) and
+  		str_to_num(dialog.getValue("blocksize")) > 1
+  		str := "Machine"
+  	else
+  		str := ":MatCarrier"
+  	end
+  	name := openObjectSelectBox(str,callingObj)
+  	if name /= ""
+  		station := dialog.name_to_obj(name)
+  		if callingObj.checkStationClass(station,1)
+  			dialog.setCaption("PartObject",name)
+  			dialog.callback("PartObject")
+  		else
+  			callingObj.errorMessage(17,1)
+  		end
+  	end
+  case "PartObject"
+  	name := dialog.getValue("PartObject")
+  	station := dialog.name_to_obj(name)
+  	type := callingObj.getInternalClassType(station)
+  	if type = 0
+  		oldexitctrl := to_str(station.exitCtrl)
+  		if oldexitctrl ~= makePathRelative(callingObj, station) + ".PartExitControl"
+  
+  		elseif oldexitctrl ~= "VOID"
+  			dialog.setCaption("UserPartExitCtrl", "")
+  		else
+  			str := strCopy(oldexitctrl,1,5)
+  			if str ~= "self."
+  				oldexitctrl := strOmit(oldexitctrl,1,4)
+  				oldexitctrl := strIncl(to_str(station),oldexitctrl,1)
+  			else
+  				oldexitctrl := strIncl(to_str(station.~)+".",oldexitctrl,1)
+  			end
+  			dialog.setCaption("UserPartExitCtrl", makePathRelative(oldexitctrl,callingObj.~))
+  		end
+  	end
+  	dialog.setSensitive("SensorPos1Text",type > 0)
+  	dialog.setSensitive("SensorPos1",type > 0)
+  	dialog.setSensitive("PLanes",type =3)
+  	dialog.setSensitive("PartSensor",type > 1)
+  	dialog.setSensitive("IDP",type > 1)
+  	dialog.setSensitive("ActivateTextP",type > 1)
+  	dialog.setSensitive("ActivateP",type > 1)
+  	enable := dialog.getCheckbox("Unload") or dialog.getCheckbox("Transfer") or
+  	station = void or station.internalClassType = "ParallelStation"
+  	if not enable
+  		dialog.setCaption("blocksize","1")
+  	end
+  	dialog.setSensitive("blocksize",enable)
+  
+  case "Tselect"
+  	name := openObjectSelectBox(":MatCarrier",callingObj)
+  	if name /= ""
+  		station := dialog.name_to_obj(name)
+  		if callingObj.checkStationClass(station,2)
+  			dialog.setCaption("TargetObject",name)
+  			dialog.callback("TargetObject")
+  		else
+  			callingObj.errorMessage(17,1)
+  		end
+  	end
+  case "TargetObject"
+  	name := dialog.getValue("TargetObject")
+  	station := dialog.name_to_obj(name)
+  	type := callingObj.getInternalClassType(station)
+  	if type = 0
+  		if dialog.getCheckbox("Load") or dialog.getCheckbox("Transfer")
+  			oldexitctrl := to_str(station.exitCtrl)
+  			if oldexitctrl ~= makePathRelative(callingObj, station) + ".TargetExitControl"
+  
+  			elseif oldexitctrl ~= "VOID"
+  				dialog.setCaption("UserTargetExitCtrl", "")
+  			else
+  				str := strCopy(oldexitctrl,1,5)
+  				if str ~= "self."
+  					oldexitctrl := strOmit(oldexitctrl,1,4)
+  					oldexitctrl := strIncl(to_str(station),oldexitctrl,1)
+  				else
+  					oldexitctrl := strIncl(to_str(station.~)+".",oldexitctrl,1)
+  				end
+  				dialog.setCaption("UserTargetExitCtrl", makePathRelative(oldexitctrl,callingObj.~))
+  			end
+  		end
+  	end
+  	dialog.setSensitive("SensorPos2Text",type > 0)
+  	dialog.setSensitive("SensorPos2",type > 0)
+  	dialog.setSensitive("TLanes",type =3)
+  	dialog.setSensitive("UserTargetExitCtrlText",type > 0 or (dialog.getCheckbox("Load") or dialog.getCheckbox("Transfer")))
+  	dialog.setSensitive("UserTargetExitCtrl",type > 0 or (dialog.getCheckbox("Load") or dialog.getCheckbox("Transfer")))
+  	dialog.setSensitive("TExitSelect",type > 0 or (dialog.getCheckbox("Load") or dialog.getCheckbox("Transfer")))
+  	dialog.setSensitive("Targetsensor",type > 1)
+  	dialog.setSensitive("IDT",type > 1)
+  	dialog.setSensitive("ActivateTextT",type > 1)
+  	dialog.setSensitive("ActivateT",type > 1)
+  
+  -- Tab Advanced Attributes
+  case "CompleteLoadUnload"
+  	checked := dialog.getCheckbox("Complete")
+  	dialog.setSensitive("Partnumber", not checked)
+  	if checked
+  		dialog.setCaption("Partnumber","-1")
+  	end
+  case "specificUnload"
+  	dialog.setSensitive("OpenUnloadtable", dialog.getCheckbox("specificUnload"))
+  case "OpenUnloadtable"
+  	callingObj.TypeTable.inheritContents := false
+  	callingObj.TypeTable.columnindex := true
+  	callingObj.TypeTable[1,0] := rootfolder.Localization.getText(211)
+  	callingObj.TypeTable[2,0] := rootfolder.Localization.getText(210)
+  	callingObj.TypeTable.openDialogBox
+  
+  -- Tab Advanced
+  case "PExitSelect"
+  	name := openObjectSelectBox("Method",callingObj)
+  	if name /= ""
+  		dialog.setCaption("UserPartExitCtrl",name)
+  	end
+  case "TExitSelect"
+  	name := openObjectSelectBox("Method",callingObj)
+  	if name /= ""
+  		dialog.setCaption("UserTargetExitCtrl",name)
+  	end
+  case "ExitSelect"
+  	name := openObjectSelectBox("Method",callingObj)
+  	if name /= ""
+  		dialog.setCaption("UserCtrl",name)
+  	end
+  case "OpenStation"
+  	callingObj.openDialog
+  	dialog.close(true)
+  
+  -- Tab Statistic
+  case "ShowStatus"
+  	callingObj.Status.getStatisticsTable(callingObj.StatusTable)
+  	callingObj.StatusTable.openDialogBox
+  end
+ ShowInTooltip: false
+-
+ Name: AvailActive
+ ID: 2
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: dialogApply
+ ID: 3
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Sets the parameter of transferStation after ok or apply.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: 
+  Calls		: setParameter, evtl dialogInit
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2005  KM	don't change inheritance if value isn't changed
+  21.06.2005  KM	Time-format
+  23.08.2005  KM	set sensor.Activate always english
+  15.02.2006  KM  Nw2Way allowed
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  10.10.2007  PS Localization
+  26.10.2012  KM  stream no longer used in version 11
+  12.02.2013  KM  stream removed
+  04.04.2013  KM  setText -> setCaption
+  14.01.2016  KM	use always new format of time_to_str (version removed)
+  12.04.2016  KM	use new syntax in executeSilent
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var tab:table[integer,object,length,object,length,time,time,real,time,integer,
+  		integer,integer,boolean,table,boolean,boolean,
+  		string,string,string,string,string,string,string,boolean,boolean]
+  var callingObj,dialog : object
+  var ret : boolean
+  var ti,str : string
+  var r : integer
+  var text : string
+  var name : string
+  var type : integer
+  
+  dialog := self.~
+  callingObj := dialog.openedBy
+  
+  name := dialog.getValue("Name")
+  if callingObj.name /= name 
+  	r := executeSilent("param o:object, ti:string -> integer; o.name := ti; return 1",callingObj, name)
+  	if r /= 1 
+  		dialog.setCaption("Name", callingObj.name)
+  		messageBox(rootfolder.Localization.getText(214)+to_str(callingObj.~),1,13)
+  	end
+  end
+  
+  name := dialog.getValue("Label")
+  if callingObj.label /= name 
+  	callingObj.label := name
+  end
+  
+  callingObj.failed := dialog.getCheckbox("FailedCheck")
+  
+  tab.create
+  
+  --	Tab Attributes
+  if dialog.getCheckbox("Load") 
+  	type := 1
+  elseif dialog.getCheckbox("Unload") 
+  	type := 2
+  elseif dialog.getCheckbox("Transfer") 
+  	type := 3
+  else
+  	type := 4
+  end
+  tab[1,1] := type
+  
+  name := dialog.getValue("PartObject")
+  tab[2,1] := dialog.name_to_obj(name)
+  tab[3,1] := str_to_length(dialog.getValue("SensorPos1"))
+  
+  name := dialog.getValue("TargetObject")
+  tab[4,1] := dialog.name_to_obj(name)
+  tab[5,1] := str_to_length(dialog.getValue("SensorPos2"))
+  
+  --	Tab Times
+  text := callingObj.procTime.Type
+  if text = "Const" or text = "Konst" 
+  	ti := dialog.getValue("WorkingTime")
+  	r := executeSilent("param ti:string -> integer; var t : time := str_to_time(ti); return 1",ti)
+  	if r = 1 
+  		tab[6,1] := str_to_time(ti)
+  	else
+  		tab[6,1] := callingObj.procTime
+  		messageBox(rootfolder.Localization.getText(206),1,13)
+  	end
+  	str := time_to_str(tab[6,1],true)
+  	dialog.setCaption("WorkingTime", str)
+  end
+  text := callingObj.recoveryTime.Type
+  if text = "Const" or text = "Konst" 
+  	ti := dialog.getValue("RecoveryTime")
+  	r := executeSilent("param ti:string -> integer; var t : time := str_to_time(ti); return 1",ti)
+  	if r = 1 
+  		tab[7,1] := str_to_time(ti)
+  	else
+  		tab[7,1] := callingObj.recoveryTime
+  		messageBox(rootfolder.Localization.getText(206),1,13)
+  	end
+  	str := time_to_str(tab[7,1],true)
+  	dialog.setCaption("RecoveryTime", str)
+  end
+  
+  --	Tab Availability
+  if dialog.AvailActive 
+  	tab[8,1] := str_to_num(dialog.getValue("AvailPercent"))
+  	ti := dialog.getValue("MTTR")
+  	r := executeSilent("param ti:string -> integer; var t : time := str_to_time(ti); return 1",ti)
+  	if r = 1 
+  		tab[9,1] := str_to_time(ti)
+  	else
+  		tab[9,1] := callingObj.MTTR
+  		messageBox(rootfolder.Localization.getText(206),1,13)
+  	end
+  	str := time_to_str(tab[9,1],true)
+  	dialog.setCaption("MTTR", str)
+  end
+  
+  -- Tab Advanced Attributes
+  tab[11,1] := str_to_num(dialog.getValue("Partnumber"))
+  tab[12,1] := str_to_num(dialog.getValue("blocksize"))
+  tab[13,1] := dialog.getCheckbox("specificUnload")
+  tab[14,1] := callingObj.TypeTable.copy
+  tab[15,1] := dialog.getCheckbox("homogeneousTarget")
+  tab[16,1] := dialog.getCheckbox("alwaysStopTarget")
+  tab[24,1] := dialog.getCheckbox("stopPartContainer")
+  tab[25,1] := dialog.getCheckbox("stopTargetContainer")
+  	
+  -- Tab Advanced
+  r := dialog.getIndex("ActivateP")
+  tab[17,1] := rootfolder.Localization.MessageTab[2,220+r]	-- always english
+  r := dialog.getIndex("ActivateT")
+  tab[18,1] := rootfolder.Localization.MessageTab[2,220+r]
+  
+  tab[19,1] := dialog.getValue("UserPartExitCtrl")
+  tab[20,1] := dialog.getValue("UserTargetExitCtrl")
+  tab[21,1] := dialog.getValue("UserCtrl")
+  
+  r := dialog.getIndex("PLanes")
+  tab[22,1] := callingObj.laneIntToString(r)
+  
+  r := dialog.getIndex("TLanes")
+  tab[23,1] := callingObj.laneIntToString(r)
+  
+  ret := callingObj.setParameter(tab,0)
+  
+  if not ret 
+  	dialog.dialogInit
+  end
+ ShowInTooltip: false
+-
+ Name: DialogElements
+ ID: 4
+ DataType: table
+ Value:
+  Comment: |+1
+   Index	Index	Index	õˆø\r
+
+  ShowComment: true
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 2
+    Width: 21
+   -
+    Index: 4
+    Width: 36
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,5,~,"dialogelement","german","english","japanese"]
+  Columns:
+  - [1,string,59,"PartText","TargetText","Attributes","Times","Availability","Advanced","Statistics","Complete","PartnumberText","partnumber2","blockText","specificUnload","OpenUnloadtable","homogeneousTarget","alwaysStopTarget","WorkingTimeText","RecoveryTimeText","AvailCheck","Avail","UserCtrlText","Open","ShowStatus","SensorPos1Text","SensorPos2Text","Load","Unload","Transfer","Parttransfer","AttrAdvanced","ActivateTextP","ActivateTextT","Partsensor","Targetsensor","UserTargetExitCtrlText","UserPartExitCtrlText","group","Working","Blocked","Waiting","Failed","WaitingForParts","Paused","WaitingForTarget","Unplanned","FailedCheck","Navigate","Location","View","Refresh","Help","Contents","HelpOnObj","NumIn","NameText","LabelText","actionByFailure","stopPartContainer","stopTargetContainer","MTTR-Text"]
+  - [2,string,59,"Teile von:","Ziel befindet sich auf:","Attribute","Zeiten","Störungen","Weitere Steuerungen","Statistik","allen","Auf-/Abladen von","Blöcken","Blockgröße","Typspezifisch","Tabelle öffnen","Sortenrein beladen","Transportmittel immer anhalten","Bearbeitungszeit:","Erholzeit:","Verfügbarkeit wurde im Grundbaustein deaktiviert.","Verfügbarkeit:","Benutzersteuerung:","Station öffnen","Statistiktabelle","Sensorposition:","Sensorposition:","Beladen","Entladen","Umladen","Versetzen","Weitere Attribute","Aktivieren:","Aktivieren:","Teilesensor:","Zielsensor:","Benutzersteuerung für Ziele:","Benutzersteuerung für Teile:","Stationstyp","Arbeitend:","Blockiert:","Wartend:","Gestört:","Wartend auf Teile:","Pausiert:","Wartend auf Ziel:","Ungeplant:","Gestört","Navigieren","Standort öffnen","Ansicht","Aktualisieren","?","Inhalt","Hilfe für das Objekt","Eingänge:","Name:","Label:","Verhalten bei Störung:","Transportmittel auf der Teilestation anhalten","Transportmittel auf der Zielstation anhalten","MTTR Zeit:"]
+  - [3,string,59,"Parts from:","Target is on:","Attributes","Times","Failures","Advanced Controls","Statistics","all","Load/unload","blocks","Block size","Specific type","Open Table","Homogeneous loading","Always stop container","Processing time:","Recovery time:","Availability is deactived.","Availability:","User-defined control:","Open Station","Statistics Table","Sensor position:","Sensor position:","Load","Unload","Reload","Move","Advanced Attributes","Activate:","Activate:","Part sensor:","Target sensor:","User-defined control for the targets:","User-defined control for the parts:","Station type","Working:","Blocked:","Waiting:","Failed:","Waiting for parts:","Paused:","Waiting for target:","Unplanned:","Failed","Navigate","Open Location","View","Refresh","Help","Contents","Help on Object","Entries:","Name:","Label:","Behavior for failures:","Stop container on part station","Stop container on target station","MTTR time:"]
+  - [4,string,59,"ƒp[ƒc","ƒ^[ƒQƒbƒgæ","‘®«","ŽžŠÔ","ƒAƒxƒCƒ‰ƒrƒŠƒeƒB","Ú×ƒRƒ“ƒgƒ[ƒ‹","“Œvî•ñ","‘S‚Ä","ƒ[ƒh/ƒAƒ“ƒ[ƒh","ƒp[ƒc","ƒuƒƒbƒNƒTƒCƒY","“Á’è‚Ìƒ^ƒCƒv","ƒe[ƒuƒ‹‚ðŠJ‚­","“¯Ží‚Ìƒ[ƒfƒBƒ“ƒO","í‚ÉƒRƒ“ƒeƒi‚ð’âŽ~","‰Ò“­ŽžŠÔ","ƒŠƒJƒoƒŠŽžŠÔ","ƒAƒxƒCƒ‰ƒrƒŠƒeƒB”ñ—LŒø‰».","ƒAƒxƒCƒ‰ƒrƒŠƒeƒB","ƒ†[ƒU’è‹`‚ÌƒRƒ“ƒgƒ[ƒ‹F","ƒXƒe[ƒVƒ‡ƒ“‚ðŠJ‚­","“Œvî•ñƒe[ƒuƒ‹","ƒZƒ“ƒTˆÊ’u","ƒZƒ“ƒTˆÊ’u","ƒ[ƒh","ƒAƒ“ƒ[ƒh","ƒŠƒ[ƒh","ƒ€[ƒu","Ú×‘®«","—LŒø‰»","—LŒø‰»","ƒp[ƒcƒZƒ“ƒTF","ƒ^[ƒQƒbƒgƒZƒ“ƒTF","ƒ†[ƒU’è‹`‚Ìƒ^[ƒQƒbƒgƒRƒ“ƒgƒ[ƒ‹F","ƒ†[ƒU’è‹`‚Ìƒp[ƒcƒRƒ“ƒgƒ[ƒ‹F","ƒXƒe[ƒVƒ‡ƒ“ƒ^ƒCƒv","ì‹Æ’†","ƒuƒƒbƒNó‘Ô","‘Ò‹@’†","ŒÌáó‘Ô","ƒp[ƒc‘Ò‚¿","ƒ|[ƒYó‘Ô","ƒ^[ƒQƒbƒg‘Ò‚¿","–¢Œv‰æ","ŒÌáó‘Ô","ƒiƒrƒQ[ƒg","ã‘w‚ðŠJ‚­","•\\Ž¦","Ä•`‰æ","ƒwƒ‹ƒv","€–Ú","ƒIƒuƒWƒFƒNƒg‚Ìƒwƒ‹ƒv","ƒGƒ“ƒgƒŠF","–¼‘OF","ƒ‰ƒxƒ‹F","ŒÌáŽž‚Ì‹““®","•”•i‚ÌƒXƒe[ƒVƒ‡ƒ“ã‚ÅContainer‚ð’âŽ~","ƒ^[ƒQƒbƒg‚ÌƒXƒe[ƒVƒ‡ƒ“ã‚ÅContainer‚ð’âŽ~","MTTRŽžŠÔF"]
+ ShowInTooltip: false
+-
+ Name: dialogInit
+ ID: 5
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  init of the TransferStationDialog.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: getSensorPosition
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  04.04.2005  KM	init sensorpos with the right unit
+  21.06.2005  KM	Time-format
+  27.06.2005  KM	AlwaysStopTarget only active for load/reload
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed
+  03.03.2006  KM  change of lane not allowed for inherited sensors
+  18.05.2006  KM  blocksize > 1 only allowed for parallelproc
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  26.10.2012  KM  stream no longer used in version 11
+  12.02.2013  KM  stream removed
+  04.04.2013  KM  setText -> setCaption
+  14.01.2016  KM	use always new format of time_to_str (version removed)
+  12.04.2016  KM	use new syntax in executeSilent
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var callingObj : object
+  var dialog : object
+  var text : string
+  var complete : boolean
+  var i,r : integer
+  var act : string
+  var ctrl,str : string
+  var pos1 : length
+  var typeP, typeT : integer
+  var enable : boolean
+  
+  dialog := self.~
+  callingObj := dialog.openedBy
+  if callingObj /= void
+  	dialog.setCaption("Name",callingObj.name)
+  	dialog.setCaption("Label",callingObj.label)
+  
+  	dialog.setCheckbox("FailedCheck",callingObj.failed)
+  	if callingObj.unplanned
+  		dialog.setIndex("ShiftList",2)
+  	elseif callingObj.pause
+  		dialog.setIndex("ShiftList",3)
+  	else
+  		dialog.setIndex("ShiftList",1)
+  	end
+  
+  --		Tab Attributes
+  	dialog.setCheckbox("Load",not callingObj.unloadPartcontainer and callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Unload",callingObj.unloadPartcontainer and not callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Parttransfer",not callingObj.unloadPartcontainer and not callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Transfer",callingObj.unloadPartcontainer and callingObj.TargetIsContainer)
+  
+  	dialog.setCaption("PartObject",to_str(callingObj.PartStation))
+  	dialog.setCaption("UserPartExitCtrl",callingObj.UserPartExitCtrl)
+  
+  	typeP := callingObj.getInternalClassType(callingObj.PartStation)
+  	enable := false
+  	if typeP > 0
+  		if callingObj.checkSensorID(1,makePathRelative(callingObj, callingObj.PartStation))
+  			pos1 := callingObj.getSensorPosition(1)
+  			dialog.setCaption("SensorPos1",to_str(pos1))
+  			if typeP = 3
+  				dialog.setIndex("PLanes",callingObj.PartSensorLane)
+  				enable := not callingObj.getSensorOrigin(1)
+  			end
+  		end
+  	end
+  	dialog.setSensitive("SensorPos1Text",typeP > 0)
+  	dialog.setSensitive("SensorPos1",typeP > 0)
+  	dialog.setSensitive("PLanes",enable)
+  
+  	dialog.setCaption("TargetObject",to_str(callingObj.TargetStation))
+  	dialog.setCaption("UserTargetExitCtrl",callingObj.UserTargetExitCtrl)
+  
+  	typeT := callingObj.getInternalClassType(callingObj.TargetStation)
+  	enable := false
+  	if typeT > 0
+  		if callingObj.checkSensorID(2,makePathRelative(callingObj, callingObj.TargetStation))
+  			pos1 := callingObj.getSensorPosition(2)
+  			dialog.setCaption("SensorPos2",to_str(pos1))
+  			if typeT = 3
+  				dialog.setIndex("TLanes",callingObj.TargetSensorLane)
+  				enable := not callingObj.getSensorOrigin(2)
+  			end
+  		end
+  	end
+  	dialog.setSensitive("SensorPos2Text",typeT > 0)
+  	dialog.setSensitive("SensorPos2",typeT > 0)
+  	dialog.setSensitive("TLanes",enable)
+  	dialog.setSensitive("UserTargetExitCtrlText",typeT > 0 or callingObj.TargetIsContainer)
+  	dialog.setSensitive("UserTargetExitCtrl",typeT > 0 or callingObj.TargetIsContainer)
+  	dialog.setSensitive("TExitSelect",typeT > 0 or callingObj.TargetIsContainer)
+  
+  --		Tab Times
+  	text := callingObj.procTime.Type
+  	if text = "Const" or text = "Konst"
+  		str := time_to_str(callingObj.procTime,true)
+  		dialog.setCaption("WorkingTime", str)
+  	else
+  		text := strIncl(", ",text,strlen(text)+1)
+  		text := strIncl(callingObj.procTime.getAttr,text,strlen(text)+1)
+  		dialog.setCaption("WorkingTime", text)
+  		dialog.setSensitive("WorkingTimeText",false)
+  		dialog.setSensitive("WorkingTime",false)
+  		dialog.setSensitive("WUnit",false)
+  	end
+  	text := callingObj.recoveryTime.Type
+  	if text = "Const" or text = "Konst"
+  		str := time_to_str(callingObj.recoveryTime,true)
+  		dialog.setCaption("RecoveryTime", str)
+  	else
+  		text := strIncl(", ",text,strlen(text)+1)
+  		text := strIncl(callingObj.recoveryTime.getAttr,text,strlen(text)+1)
+  		dialog.setCaption("RecoveryTime", text)
+  		dialog.setSensitive("RecoveryTimeText",false)
+   			dialog.setSensitive("RecoveryTime",false)
+   			dialog.setSensitive("RUnit",false)
+      	end
+  
+  --		Tab Availability
+  	r := executeSilent("param ti:object -> integer; var t : real := ti.availability; return 1",callingObj)
+  	if r = 1
+  		dialog.AvailActive := true
+  		dialog.setCaption("AvailCheck","")
+  		dialog.setCaption("AvailPercent", to_str(callingObj.availability))
+  		str := time_to_str(callingObj.MTTR,true)
+  		dialog.setCaption("MTTR", str)
+  	else
+  		dialog.AvailActive := false
+  		dialog.setSensitive("Avail", false)
+  		dialog.setSensitive("AvailPercent", false)
+  		dialog.setSensitive("Percent", false)
+  		dialog.setSensitive("MTTR-Text", false)
+  		dialog.setSensitive("MTTR", false)
+  		dialog.setSensitive("MTTRunit", false)
+  	end
+  
+  --		Tab Advanced Attributes
+  	dialog.setCaption("Partnumber",to_str(callingObj.Partnumber))
+  	complete := (callingObj.partnumber = -1)
+  	dialog.setCheckbox("Complete",complete)
+  	dialog.setSensitive("Partnumber",not complete)
+  	dialog.setCaption("blocksize",to_str(callingObj.Blocksize))
+  	enable := callingObj.unloadPartcontainer or callingObj.PartStation = void or
+  			  callingObj.PartStation.internalClassType = "ParallelStation"
+  	dialog.setSensitive("blocksize",enable)
+  
+  	dialog.setCheckbox("specificUnload",callingObj.TypeSpecific)
+  	dialog.setSensitive("OpenUnloadtable", callingObj.TypeSpecific)
+  
+  	dialog.setCheckbox("homogeneousTarget",callingObj.HomogeneousTarget)
+  	dialog.setSensitive("homogeneousTarget", callingObj.TargetIsContainer)
+  
+  	dialog.setCheckbox("alwaysStopTarget",callingObj.AlwaysStopTarget)
+  	dialog.setSensitive("alwaysStopTarget", callingObj.TargetIsContainer)
+  
+  	dialog.setCheckbox("stopPartContainer",callingObj.StopPartsForFailure)
+  	dialog.setSensitive("stopPartContainer", callingObj.unloadPartcontainer)
+  
+  	dialog.setCheckbox("stopTargetContainer",callingObj.StopTargetsForFailure)
+  	dialog.setSensitive("stopTargetContainer", callingObj.TargetIsContainer)
+  
+  	-- Tab Advanced
+  	dialog.setCaption("IDP","ID "+to_str(callingObj.PartSensorID))
+  	if typeP > 1
+  		if callingObj.checkSensorID(1,makePathRelative(callingObj, callingObj.PartStation))
+  			r := callingObj.getSensorActivate(1)
+  		else
+  			r := 1
+  		end
+  		dialog.setIndex("ActivateP",r)
+  	end
+  	dialog.setSensitive("PartSensor",typeP > 1)
+  	dialog.setSensitive("IDP",typeP > 1)
+  	dialog.setSensitive("ActivateTextP",typeP > 1)
+  	dialog.setSensitive("ActivateP",typeP > 1)
+  
+  	dialog.setCaption("IDT","ID "+to_str(callingObj.TargetSensorID))
+  	if typeT > 1
+  		if callingObj.checkSensorID(2,makePathRelative(callingObj, callingObj.TargetStation))
+  			r := callingObj.getSensorActivate(2)
+  		else
+  			r := 1
+  		end
+  		dialog.setIndex("ActivateT",r)
+  	end
+  	dialog.setSensitive("Targetsensor",typeT > 1)
+  	dialog.setSensitive("IDT",typeT > 1)
+  	dialog.setSensitive("ActivateTextT",typeT > 1)
+  	dialog.setSensitive("ActivateT",typeT > 1)
+  
+  	ctrl := callingObj.UserCtrl
+  	str := strCopy(ctrl,1,strlen(callingObj.name))
+  	if str ~= callingObj.name
+  		ctrl := strOmit(ctrl,1,strlen(callingObj.name))
+  		ctrl := strIncl("self",ctrl,1)
+  	end
+  	dialog.setCaption("UserCtrl",ctrl)
+  
+  	-- Tab Statistics
+  	dialog.setCaption("StatNumIn",to_str(callingObj.statNumIn))
+  	callingObj.Status.getStatisticsTable(callingObj.StatusTable)
+  	for i := 1 to callingObj.StatusTable.ydim
+  		text := callingObj.StatusTable[1,i]
+  		act := to_str(round(callingObj.StatusTable[5,i],2))+ " %"
+  		switch text
+  		case "waiting"
+  			dialog.setCaption("WaitingPerc",act)
+  		case "waiting_for_parts"
+  			dialog.setCaption("WaitingForPartsPerc",act)
+  		case "waiting_for_target"
+  			dialog.setCaption("WaitingForTargetPerc",act)
+  		case "paused"
+  			dialog.setCaption("PausedPerc",act)
+  		case "unplanned"
+  			dialog.setCaption("UnplannedPerc",act)
+  		case "working"
+  			dialog.setCaption("WorkingPerc",act)
+  		case "blocked"
+  			dialog.setCaption("BlockedPerc",act)
+  		case "failed"
+  			dialog.setCaption("FailedPerc",act)
+  		end
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: name_to_obj
+ ID: 6
+ DataType: method
+ Value: |+1
+  param name : string -> object
+  
+  var absPath : string
+  
+  	absPath := to_str(self.~.openedBy.~)
+  
+  if existsObject(name) 
+  	return str_to_obj(name)
+  else
+  	name := strIncl(".",name,1)
+  	name := strIncl(absPath,name,1)
+  	if existsObject(name) 
+  		return str_to_obj(name)
+  	else
+  		return void
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: openedBy
+ ID: 7
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: dialogTranslate
+ ID: 8
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  translates the TransferStationDialog
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: none
+  
+  Called By	: GenDialog
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  02.05.2005  KM	translate dialog before opendialog
+  15.02.2006  KM  Nw2Way allowed
+  10.10.2007  PS Localization
+  04.04.2013  KM  setText -> setCaption
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var j	 : integer
+  var l    : list
+  var dialog : object
+  
+  dialog := self.~
+  
+  for j := dialog.DialogElements.ydim downto 1 
+  	dialog.setCaption(dialog.DialogElements[1,j], rootfolder.Localization.getText(j+50))
+  next
+  
+  l.create
+  l.insert(1, rootfolder.Localization.getText(2))-- "Always"
+  l.insert(2, rootfolder.Localization.getText(3))-- "Only when Destination"
+  /*PS for j := 1 to dialog.ComboTextActivate.ydim loop
+  		l[j] := dialog.ComboTextActivate[lang+1,j];
+  	next;*/
+  dialog.setList("ActivateP",l)
+  dialog.setList("ActivateT",l)
+  
+  l.delete
+  for j := 1 to 3  -- "Planned", "Unplanned", "Paused"
+  	l.insert(j, rootfolder.Localization.getText(j+23))
+  next
+  /*PS	for j := 1 to dialog.ComboTextShift.ydim loop
+  		l[j] := dialog.ComboTextShift[lang+1,j];
+  	next;*/
+  dialog.setList("ShiftList",l)
+  
+  l.delete
+  -- "Lane A", "Lane B", "Lane A + Lane B", "Lane B + Lane A"
+  for j := 1 to 4 
+  	l.insert(j, rootfolder.Localization.getText(j+5))
+  next
+  /*PS for j := 1 to dialog.ComboTextLanes.ydim loop
+  		l[j] := dialog.ComboTextLanes[lang+1,j];
+  	next;*/
+  dialog.setList("PLanes",l)
+  dialog.setList("TLanes",l)
+  
+  -- of the method
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Location"
+  Caption: "Location"
+  CallbackArgument: "Location"
+-
+ Type: Menu
+ Name: "View"
+ Caption: "View"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Refresh"
+  Caption: "Refresh"
+  CallbackArgument: "Refresh"
+-
+ Type: Menu
+ Name: "Help"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Contents"
+  Caption: "Contents"
+  CallbackArgument: "Contents"
+ -
+  Type: Menu
+  Name: "HelpOnObj"
+  Caption: "HelpOnObj"
+  CallbackArgument: "HelpOnObj"
+-
+ Type: StaticText
+ Name: "NameText"
+ Caption: "Name:"
+-
+ Type: EditText
+ Name: "Name"
+ Rect: [11,0,0,0]
+ DataType: 1
+ Password: false
+-
+ Type: CheckBox
+ Name: "FailedCheck"
+ Caption: "Failed"
+ Rect: [39,0,0,0]
+-
+ Type: StaticText
+ Name: "LabelText"
+ Caption: "Label:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "Label"
+ Rect: [11,1,0,0]
+ DataType: 1
+ Password: false
+-
+ Type: Drop-Down
+ Name: "ShiftList"
+ Rect: [39,1,13,0]
+ Enable: false
+ SelectionIndex: 1
+-
+ Type: TabControl
+ Name: "TabControl"
+ Rect: [0,3,78,8]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Attributes"
+  Caption: "Attributes"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "group"
+   Rect: [0,0,59,3]
+   $Elements:
+   -
+    Type: RadioButton
+    Name: "Load"
+    Caption: "Load"
+    Rect: [5,0,0,0]
+    CallbackArgument: "Load"
+    GroupID: 0
+    IsSelected: true
+   -
+    Type: RadioButton
+    Name: "Unload"
+    Caption: "Unload"
+    Rect: [30,0,0,0]
+    CallbackArgument: "Unload"
+    GroupID: 0
+   -
+    Type: RadioButton
+    Name: "Transfer"
+    Caption: "Transfer"
+    Rect: [5,1,0,0]
+    CallbackArgument: "Transfer"
+    GroupID: 0
+   -
+    Type: RadioButton
+    Name: "Parttransfer"
+    Caption: "Parttransfer"
+    Rect: [30,1,0,0]
+    CallbackArgument: "Parttransfer"
+    GroupID: 0
+  -
+   Type: StaticText
+   Name: "PartText"
+   Caption: "PartText"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "TargetText"
+   Caption: "TargetText"
+   Rect: [38,3,0,0]
+  -
+   Type: EditText
+   Name: "PartObject"
+   Rect: [0,4,23,0]
+   CallbackArgument: "PartObject"
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "Pselect"
+   Caption: " ..."
+   Rect: [24,4,5,0]
+   CallbackArgument: "Pselect"
+  -
+   Type: EditText
+   Name: "TargetObject"
+   Rect: [38,4,23,0]
+   CallbackArgument: "TargetObject"
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "Tselect"
+   Caption: " ..."
+   Rect: [62,4,5,0]
+   CallbackArgument: "Tselect"
+  -
+   Type: StaticText
+   Name: "SensorPos1Text"
+   Caption: "SensorPos1Text"
+   Rect: [0,5,0,0]
+  -
+   Type: EditText
+   Name: "SensorPos1"
+   Rect: [14,5,9,0]
+   DataType: 13
+   Password: false
+  -
+   Type: Drop-Down
+   Name: "PLanes"
+   Rect: [24,5,13,0]
+   SelectionIndex: 1
+  -
+   Type: StaticText
+   Name: "SensorPos2Text"
+   Caption: "SensorPos2Text"
+   Rect: [38,5,0,0]
+  -
+   Type: EditText
+   Name: "SensorPos2"
+   Rect: [52,5,9,0]
+   DataType: 13
+   Password: false
+  -
+   Type: Drop-Down
+   Name: "TLanes"
+   Rect: [62,5,13,0]
+   SelectionIndex: 1
+ -
+  Type: TabPage
+  Name: "Times"
+  Caption: "Times"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "WorkingTimeText"
+   Caption: "WorkingTimeText"
+  -
+   Type: EditText
+   Name: "WorkingTime"
+   Rect: [20,0,23,0]
+   DataType: 10
+   Password: false
+  -
+   Type: StaticText
+   Name: "WUnit"
+   Caption: " DDD:HH:MM:SS.XXXX"
+   Rect: [45,0,0,0]
+  -
+   Type: StaticText
+   Name: "RecoveryTimeText"
+   Caption: "RecoveryTimeText"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "RecoveryTime"
+   Rect: [20,1,23,0]
+   DataType: 10
+   Password: false
+  -
+   Type: StaticText
+   Name: "RUnit"
+   Caption: " DDD:HH:MM:SS.XXXX"
+   Rect: [45,1,0,0]
+ -
+  Type: TabPage
+  Name: "Availability"
+  Caption: "Availability"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Avail"
+   Caption: "Avail"
+  -
+   Type: EditText
+   Name: "AvailPercent"
+   Rect: [20,0,19,0]
+   DataType: 13
+   Password: false
+  -
+   Type: StaticText
+   Name: "Percent"
+   Caption: " %"
+   Rect: [40,0,0,0]
+  -
+   Type: StaticText
+   Name: "MTTR-Text"
+   Caption: "MTTR:"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "MTTR"
+   Rect: [20,1,19,0]
+   DataType: 10
+   Password: false
+  -
+   Type: StaticText
+   Name: "MTTRunit"
+   Caption: " DDD:HH:MM:SS.XXXX"
+   Rect: [40,1,0,0]
+  -
+   Type: StaticText
+   Name: "AvailCheck"
+   Caption: "Availability deactivated."
+   Rect: [0,3,0,0]
+ -
+  Type: TabPage
+  Name: "AttrAdvanced"
+  Caption: "AttrAdvanced"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "PartnumberText"
+   Caption: "PartnumberText"
+  -
+   Type: CheckBox
+   Name: "Complete"
+   Caption: "CompleteLoadUnload"
+   Rect: [25,0,0,0]
+   CallbackArgument: "CompleteLoadUnload"
+  -
+   Type: EditText
+   Name: "Partnumber"
+   Rect: [33,0,7,0]
+   DataType: 5
+   Password: false
+  -
+   Type: StaticText
+   Name: "partnumber2"
+   Caption: "partnumber2"
+   Rect: [42,0,0,0]
+  -
+   Type: StaticText
+   Name: "blockText"
+   Caption: "blockText"
+   Rect: [0,1,0,0]
+  -
+   Type: EditText
+   Name: "blocksize"
+   Rect: [25,1,15,0]
+   DataType: 4
+   Password: false
+  -
+   Type: CheckBox
+   Name: "specificUnload"
+   Caption: "specificUnload"
+   Rect: [0,2,0,0]
+   CallbackArgument: "specificUnload"
+  -
+   Type: Button
+   Name: "OpenUnloadtable"
+   Caption: "OpenUnloadtable"
+   Rect: [25,2,15,0]
+   CallbackArgument: "OpenUnloadtable"
+  -
+   Type: CheckBox
+   Name: "homogeneousTarget"
+   Caption: "homogeneousTarget"
+   Rect: [45,2,0,0]
+  -
+   Type: CheckBox
+   Name: "alwaysStopTarget"
+   Caption: "alwaysStopTarget"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "actionByFailure"
+   Caption: "actionByFailure"
+   Rect: [0,4,0,0]
+  -
+   Type: CheckBox
+   Name: "stopPartContainer"
+   Caption: "stopPartContainer"
+   Rect: [25,4,0,0]
+   CallbackArgument: "stopPartContainer"
+  -
+   Type: CheckBox
+   Name: "stopTargetContainer"
+   Caption: "stopTargetContainer"
+   Rect: [25,5,0,0]
+   CallbackArgument: "stopTargetContainer"
+ -
+  Type: TabPage
+  Name: "Advanced"
+  Caption: "Advanced"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Partsensor"
+   Caption: "Partsensor"
+  -
+   Type: StaticText
+   Name: "IDP"
+   Caption: "ID"
+   Rect: [15,0,0,0]
+  -
+   Type: StaticText
+   Name: "ActivateTextP"
+   Caption: "ActivateTextP"
+   Rect: [35,0,0,0]
+  -
+   Type: Drop-Down
+   Name: "ActivateP"
+   Rect: [48,0,0,0]
+   SelectionIndex: 1
+  -
+   Type: StaticText
+   Name: "Targetsensor"
+   Caption: "Targetsensor"
+   Rect: [0,1,0,0]
+  -
+   Type: StaticText
+   Name: "IDT"
+   Caption: "ID"
+   Rect: [15,1,0,0]
+  -
+   Type: StaticText
+   Name: "ActivateTextT"
+   Caption: "ActivateTextT"
+   Rect: [35,1,0,0]
+  -
+   Type: Drop-Down
+   Name: "ActivateT"
+   Rect: [48,1,0,0]
+   SelectionIndex: 1
+  -
+   Type: StaticText
+   Name: "UserPartExitCtrlText"
+   Caption: "UserPartExitCtrlText"
+   Rect: [0,2,0,0]
+  -
+   Type: EditText
+   Name: "UserPartExitCtrl"
+   Rect: [35,2,31,0]
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "PExitSelect"
+   Caption: " ..."
+   Rect: [67,2,5,0]
+   CallbackArgument: "PExitSelect"
+  -
+   Type: StaticText
+   Name: "UserTargetExitCtrlText"
+   Caption: "UserTargetExitCtrlText"
+   Rect: [0,3,0,0]
+  -
+   Type: EditText
+   Name: "UserTargetExitCtrl"
+   Rect: [35,3,31,0]
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "TExitSelect"
+   Caption: " ..."
+   Rect: [67,3,5,0]
+   CallbackArgument: "TExitSelect"
+  -
+   Type: StaticText
+   Name: "UserCtrlText"
+   Caption: "UserCtrlText"
+   Rect: [0,4,0,0]
+  -
+   Type: EditText
+   Name: "UserCtrl"
+   Rect: [35,4,31,0]
+   DataType: 1
+   Password: false
+  -
+   Type: Button
+   Name: "ExitSelect"
+   Caption: " ..."
+   Rect: [67,4,5,0]
+   CallbackArgument: "ExitSelect"
+  -
+   Type: Button
+   Name: "Open"
+   Caption: "OpenStation"
+   Rect: [35,5,25,0]
+   CallbackArgument: "OpenStation"
+ -
+  Type: TabPage
+  Name: "Statistics"
+  Caption: "Statistics"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Working"
+   Caption: "Working"
+  -
+   Type: StaticText
+   Name: "WorkingPerc"
+   Caption: "0.00 %"
+   Rect: [20,0,0,0]
+  -
+   Type: StaticText
+   Name: "Blocked"
+   Caption: "Blocked"
+   Rect: [40,0,0,0]
+  -
+   Type: StaticText
+   Name: "BlockedPerc"
+   Caption: "0.00 %"
+   Rect: [60,0,0,0]
+  -
+   Type: StaticText
+   Name: "Waiting"
+   Caption: "Waiting"
+   Rect: [0,1,0,0]
+  -
+   Type: StaticText
+   Name: "WaitingPerc"
+   Caption: "0.00 %"
+   Rect: [20,1,0,0]
+  -
+   Type: StaticText
+   Name: "Failed"
+   Caption: "Failed"
+   Rect: [40,1,0,0]
+  -
+   Type: StaticText
+   Name: "FailedPerc"
+   Caption: "0.00 %"
+   Rect: [60,1,0,0]
+  -
+   Type: StaticText
+   Name: "WaitingForParts"
+   Caption: "WaitingForParts"
+   Rect: [0,2,0,0]
+  -
+   Type: StaticText
+   Name: "WaitingForPartsPerc"
+   Caption: "0.00 %"
+   Rect: [20,2,0,0]
+  -
+   Type: StaticText
+   Name: "Paused"
+   Caption: "Paused"
+   Rect: [40,2,0,0]
+  -
+   Type: StaticText
+   Name: "PausedPerc"
+   Caption: "0.00 %"
+   Rect: [60,2,0,0]
+  -
+   Type: StaticText
+   Name: "WaitingForTarget"
+   Caption: "WaitingForTarget"
+   Rect: [0,3,0,0]
+  -
+   Type: StaticText
+   Name: "WaitingForTargetPerc"
+   Caption: "0.00 %"
+   Rect: [20,3,0,0]
+  -
+   Type: StaticText
+   Name: "Unplanned"
+   Caption: "Unplanned"
+   Rect: [40,3,0,0]
+  -
+   Type: StaticText
+   Name: "UnplannedPerc"
+   Caption: "0.00 %"
+   Rect: [60,3,0,0]
+  -
+   Type: StaticText
+   Name: "NumIn"
+   Caption: "NumIn"
+   Rect: [0,5,0,0]
+  -
+   Type: StaticText
+   Name: "StatNumIn"
+   Caption: "0"
+   Rect: [20,5,0,0]
+  -
+   Type: Button
+   Name: "ShowStatus"
+   Caption: "ShowStatus"
+   Rect: [40,5,30,0]
+   CallbackArgument: "ShowStatus"

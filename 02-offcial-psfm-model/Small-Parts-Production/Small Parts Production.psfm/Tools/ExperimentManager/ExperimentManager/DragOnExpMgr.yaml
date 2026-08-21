@@ -1,0 +1,383 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-9.85,0]
+Label: "Set output values, set input values with the Shift key"
+Name: DragOnExpMgr
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Drag & Drop interaction: register Chart objects for the report
+ -- Status bar by drag & drop: Set output values, set input values with the Shift key
+ -- Set output values, set input values with the Shift key
+ /* ?rootfolder.Localization.getText(397) label "Set output values, set input values with the Shift key" */
+ param draggedObjects : object[]
+ if draggedObjects.dim = 0
+ 	return
+ end
+ var dragObj, tabObj:object
+ var j:integer
+ var str:string
+ var attrTab,t,t1:table
+ var Indizes : list[integer]
+ 
+ var selectTab:list[string]
+ selectTab.create
+ 
+ var Charts:object := @.Charts -- Charts and Sankey_diagrams which are showing in the Report
+ for var k := Charts.yDim downto 1
+ 	if Charts[1,k] = void
+ 		Charts.cutRow(k)
+ 	end
+ next
+ 
+ var numCharts:integer
+ for var objNo := 1 to draggedObjects.dim
+ 	dragObj := draggedObjects[objNo]
+ 	switch dragObj.InternalClassType
+ 	case "Chart", "SankeyDiagram"
+ 		numCharts += 1
+ 	case "Frame" -- Tool WorkerChart
+ 		if dragObj.getAttrNo("objType") > 0 AND dragObj.objType = "WorkerChart"
+ 			numCharts += 1
+ 		end
+ 	end
+ next
+ -- dragObj.getAttrNo("objType") > 0 AND dragObj.objType = "WorkerChart"
+ 
+ if numCharts > 0
+ 	for var objNo := 1 to draggedObjects.dim -- draggedObjects is an array of type object
+ 		dragObj := draggedObjects[objNo]
+ 		switch dragObj.InternalClassType
+ 		case "Chart", "SankeyDiagram"
+ 			Charts.setCursor(1,1)
+ 			if Charts.find({1,1}..{1,*},dragObj) -- The chart '$1' is already contained in the HTML_report.
+ 				messageBox(rootfolder.Localization.getMessage(205,dragObj.name,"",""),1,4) -- info
+ 			else
+ 				str := dragObj.label
+ 				if strLen(str) < 1 then str := dragObj.name; end
+ 				Charts.writeRow(0,Charts.yDim + 1,str,dragObj)
+ 			end
+ 		case "Frame"
+ 			Charts.setCursor(1,1)
+ 			if dragObj.getAttrNo("objType") > 0 AND dragObj.objType = "WorkerChart"
+ 				if Charts.find({1,1}..{1,*},dragObj)
+ 					messageBox(rootfolder.Localization.getMessage(205,dragObj.name,"",""),1,4) -- info
+ 				else
+ 					str := dragObj.label
+ 					if strLen(str) < 1 then str := dragObj.name; end
+ 					Charts.writeRow(0,Charts.yDim + 1,str,dragObj)
+ 				end
+ 			end
+ 		end
+ 	next -- chart
+ 
+ 	replaceRootstr(Charts,1)
+ 	Charts.openDialogBox(true) -- open table file
+ 	return
+ 
+ else -- no charts
+ 	if draggedObjects.dim > 1
+ 		return
+ 	else
+ 		dragObj := draggedObjects[1] --print dragObj.internalClassName;
+ 		switch dragObj.InternalClassType
+ 		case "Method","Comment","DataList","DataStack","DataQueue","Display","TimeSequence",
+ 			 "HtmlReport","FileInterface","Dialog","FileLink"
+ 			return
+ 		end
+ 	end
+ end
+ 
+ if getAsyncKeyState(16) >= 0
+ 	tabObj := output -- define an output values
+ 	switch dragObj.InternalClassType
+ 	case "FlowControl","Cycle","Interface","ShiftCalendar","Generator","AttributeExplorer","FileLink","HtmlReport"
+ 		return
+ 	case "Variable"
+ 		str := to_str(dragObj)
+ 		str := insRootStr(str,to_str(dragObj.rootframe))
+ 
+ 		tabObj.setCursor(1,1)
+ 		if tabObj.find({1,1}..{1,*},str)
+ 			-- The variable is already an output value.
+ 			messageBox(rootfolder.Localization.getMessage(367,str,"",""),1,4) -- info
+ 			return
+ 		else
+ 			switch dragObj.dataType -- only numerical values as output values
+ 			case "weight","speed","length","acceleration","real","integer","time","money"
+ 				tabObj[1,tabObj.ydim+1]:= str
+ 			else --An output value of type "dragObj.dataType,"is not allowed.
+ 				messageBox(rootfolder.Localization.getMessage(55,dragObj.dataType,"",""),1,1) -- error
+ 				return
+ 			end
+ 		end
+ 
+ 	case "DataTable"  -- table object as output value
+ 		str := to_str(dragObj)
+ 		str := insRootStr(str,to_str(dragObj.rootframe))
+ 
+ 		tabObj.setCursor(1,1)
+ 		if tabObj.find({1,1}..{1,*},str)
+ 			-- The table file $1 is already an output value.
+ 			messageBox(rootfolder.Localization.getMessage(42,str,"",""),1,4) -- error
+ 			return
+ 		else
+ 			tabObj[1,tabObj.ydim+1]:= str
+ 		end
+ 	else  -- inspect internalClassName
+ 		attrTab.create-- both methods and attributes
+ 		dragObj.putAttributeNamesIntoTable(attrTab,true,true,userInterfaceLanguage)
+ 		j:=1
+ 		t := self.nonrelevantAttributes
+ 		t1 := self.nonrelevantOutput
+ 		repeat
+ 			switch attrTab[2,j]
+ 			case "weight","speed","length","acceleration","real","integer","time" -- only numerical values as output values
+ 				str := attrTab[1,j] -- attribute name
+ 				t.setCursor(1,1)
+ 				t1.setCursor(1,1)
+ 				if t.find({1,1}..{2,*}, str) OR t1.find({1,1}..{2,*}, str) -- nonrelevant attribute and methods
+ 					attrTab.cutRow(j)
+ 				else
+ 					j += 1
+ 				end
+ 			else
+ 				attrTab.cutRow(j)
+ 			end
+ 		until j > attrTab.yDim
+ 
+ 		attrTab.sort(1,"up")
+ 		selectTab.insertList(1,attrTab.copy({1,1}..{1,*}))
+ 		-- Please select one or several result values,
+ 		-- which can statistically be evaluated.
+ 		Indizes := promptlistn(selectTab, rootfolder.Localization.getText(297),rootfolder.Localization.getText(298))
+ 		while Indizes.dim>0
+ 			j:=Indizes.remove(1)
+ 			str := to_str(dragObj,".",attrTab[1,j])
+ 			str := insRootStr(str,to_str(rootframe)) -- dragObj.rootframe
+ 			tabObj.setCursor(1,1)
+ 			if NOT tabObj.find({1,1}..{1,*},str)
+ 				tabObj[1,tabObj.ydim+1]:= str
+ 			end
+ 			--	print str;
+ 		end
+ 
+ 	end -- switch internalClassName for an output value
+ 
+ 	if tabObj.yDim > 0
+ 		outputChanged -- open table 'Output'
+ 	end
+ 	-- end of definition output values
+ else --- ##################################################################
+ 	-- Shift-key pressed: definition of input values
+ 	tabObj := input
+ 	switch dragObj.InternalClassType
+ 	case "Variable"
+ 		str := to_str(dragObj)
+ 		str := insRootStr(str,to_str(dragObj.rootframe))
+ 
+ 		tabObj.setCursor(1,1)
+ 		if tabObj.find({1,1}..{1,*},str)
+ 			-- The value $1 is already an input value.
+ 			messageBox(rootfolder.Localization.getMessage(368,str,"",""),1,4) -- info
+ 			return
+ 		else
+ 			switch dragObj.dataType
+ 			case "weight","speed","length","acceleration","real","integer","time","string","boolean","money"
+ 				tabObj[1,tabObj.ydim+1]:= str
+ 			else -- An input value of type "dragObj.dataType,"is not allowed.
+ 				messageBox(rootfolder.Localization.getMessage(45,dragObj.dataType,"",""),1,1) -- error
+ 				return
+ 			end
+ 		end
+ 
+ 	else -- inspect internalClassName
+ 		attrTab.create-- userdefined attributes, no methods
+ 		dragObj.putAttributeNamesIntoTable(attrTab,true,false,userInterfaceLanguage)
+ 		j := 1
+ 		t := self.nonrelevantAttributes
+ 		repeat
+ 			str := attrTab[2,j]
+ 			t.setCursor(1,1)
+ 			switch attrTab[2,j]
+ 			case  "weight","speed","length","acceleration","real","integer","time","string","boolean"
+ 				if t.find({1,1}..{2,*},attrTab[1,j])  -- nonrelevant attribute
+ 					attrTab.cutRow(j)
+ 				else
+ 					j += 1
+ 				end
+ 			else
+ 				attrTab.cutRow(j) -- datatype is correct
+ 			end
+ 		until j > attrTab.yDim
+ 
+ 		j := 0
+ 		var a:any
+ 		var stmt:string
+ 		for var k := 1 to attrTab.yDim
+ 			-- detection of parameter of statistical distributions
+ 			if attrTab[2,k] = "time"
+ 				stmt := to_str("-> boolean ",dragObj,".", attrTab[1,k],".isType(\\"const\\"); return true")
+ 				if executeSilent(stmt)
+ 					stmt := to_str("-> boolean result := ",dragObj,".", attrTab[1,k],".isType(\\"const\\")")
+ 					if executeSilent(stmt)
+ 						j += 1
+ 						selectTab.append(attrTab[1,k]) -- type ~ "const"
+ 					else -- parameter of statistical distribution
+ 						stmt := to_str("-> string result := ",dragObj,".", attrTab[1,k],".Type")
+ 						switch executeSilent(stmt)
+ 						-- case "Konst","Const"
+ 						case "Gleich","Uniform"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".LowerBound")) -- Start
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".UpperBound")) -- Stop
+ 						case "Dreieck","Triangle"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".c"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".a"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".b"))
+ 						case "Normal", "Lognorm", "Erlang"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Mu"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Sigma"))
+ 						case "Negexp"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Beta"))
+ 						case "Geom"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".p"))
+ 						case "Hypgeo"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".m"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".n"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".p"))
+ 						case "Weibull", "Gamma"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Alpha"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Beta"))
+ 						case "Binomial"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".n"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".p"))
+ 						case "Poisson"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Lambda"))
+ 						case "Beta"
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Alpha1"))
+ 							j += 1
+ 							selectTab.append(to_str(attrTab[1,k],".Alpha2"))
+ 						end
+ 					end -- parameter of statistical distribution
+ 				else
+ 					j += 1
+ 					selectTab.append(attrTab[1,k])  -- type ~ "const"
+ 				end
+ 
+ 			else -- not time,  not a statistical distribution
+ 				j += 1
+ 				selectTab.append(attrTab[1,k])
+ 			end
+ 
+ 			--var stmt:string := to_str("-> boolean ",dragObj,".getSubAttribute(\\"", attrTab[1,k],"\\" \\"Type\\" ;result := true")
+ 		next -- k: row in attrTab
+ 
+ 		if dragObj.InternalClassType ="WorkerPool"   -- WorkerPool.CreationTable(1).Amount as Input value
+ 			if userInterfaceLanguage = 0
+ 				selectTab.append("erzeugungsTabelle(1).Menge")
+ 				selectTab.append("erzeugungsTabelle(1).Schicht")
+ 				selectTab.append("erzeugungsTabelle(1).Geschwindigkeit")
+ 				selectTab.append("erzeugungsTabelle(1).Effizienz")
+ 			else
+ 				selectTab.append("creationTable(1).Amount")
+ 				selectTab.append("creationTable(1).Shift")
+ 				selectTab.append("creationTable(1).Speed")
+ 				selectTab.append("creationTable(1).Efficiency")
+ 			end
+ 		end
+ 
+ 		selectTab.sort(1,"up")
+ 
+ 		-- Please select Model parameter to be set. (german 2 rows text)
+ 		Indizes := promptlistn(selectTab, rootfolder.Localization.getText(288),rootfolder.Localization.getText(289))
+ 		while Indizes.dim>0
+ 			j:=Indizes.remove(1)
+ 			str := to_str(dragObj,".",selectTab[j])
+ 			str := insRootStr(str,to_str(rootframe)) -- dragObj.rootframe
+ 
+ 			tabObj.setCursor(1,1) -- tabObj := Input
+ 			if NOT tabObj.find({1,1}..{1,*},str) -- already an input value?
+ 				tabObj[1,tabObj.ydim+1]:= str
+ 			end
+ 			--	print str;
+ 		end
+ 	end -- inspect internalClassName
+ 
+ 	var useTables:boolean := (tabObj.yDim > 0) -- Input is not empty
+ 	UsingTables := useTables
+ 
+ 	var obj:object := dialog.dialog
+ 	obj.setCheckBox("UseInputValues_CB", useTables)
+ 	obj.setSensitive("DefineInputVariables_but", useTables)
+ 	obj.setSensitive("DefineInputValues_but", useTables)
+ 
+ 	if useTables
+ 		inputChanged-- open table 'Input'
+ 	end
+ 	-- end of definition of input values
+ end
+RandomSeed: 237
+UUID: 2d791630-5801-4d3b-b0d1-dea57a621367
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: nonrelevantAttributes
+ ID: 1
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  Columns:
+  - [1,string,53,"AnimateOnEveryXthPixel","BaseHeight","ChannelID","Color","CreateIn3D","CurrIcon","CurrIconNo","CurrIconTransparent","CurrentAcceleration","CurrentSpeed","CurveActive","EnergyCurrentState","EnergyTargetState","EnergyActive","EntranceCtrlFront","EntranceCtrlRear","ExitCtrlOnce","Failures","IconAngle","IconRotation","MemUsage","MidLine","Name","NumAnimationEvents","NumAttr","NumChildren","NumPred","NumSucc","ObjectAngle","PenColor","PenWidth","RandomSeed","RemainingSetupTime","ResStatOn","RotateAroundRefPoint","RotateMUs","Selected","StatusWithIcons","TimeUntilEntranceOpen","XPos","YPos","ZPos","ZoomX","ZoomY","createIcon","exitCtrlFront","exitCtrlRear","getAttrNo","getPixel","resourceType","setAniLine","setAniPoint","getCurrentAngle"]
+  - [2,string,53,"AnimiereAufJedemXtenPixel","BasisHöhe","KanalID","Farbe","In3DErstellen","BildName","BildNr","BildTransparent","MomentanBeschl","MomentanGeschw","KurveAktiv","EnergieMomentanzustand","EnergieZielzustand","EnergieAktiv","EinStBug","EinStHeck","AusStEinmal","Störungen","BildWinkel","BildDrehung",~,"Mittellinie",~,"AnzahlAnimationsereignisse","AnzahlAttr","AnzahlKinder","AnzahlVg","AnzahlNF","ObjektWinkel","StiftFarbe","StiftBreite","ZufallszahlenStartwert","RestRüstzeit","ResStatAn","DreheUmRefPunkt","DreheBEs","Selektiert","ZustandsanzeigeMitBild","zeitBisEingangOffen",~5,"erzeugeBild","AusStBug","AusStHeck","holeAttrNr","holePixel","Ressourcentyp","setzeAniLinie","setzeAniPunkt","HoleMomentanWinkel"]
+ ShowInTooltip: false
+-
+ Name: nonrelevantOutput
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  Columns:
+  - [1,string,75,"Acceleration","Availability","BackgroundColor","BlockingAngle","Capacity","CycleTime","Deceleration","DefaultAngle","EntryLength","EntrySpeed","ExitLength","ExitSpeed","FailDuration","FailInterval","FailStart","FailStop","Interval","Length","MTTR","MUDistance","MainMU","MovingTime","NumLeavingMU","NumMU","NumMUParts","NumNodes","NumPartsSinceSetup","Number","OccupiedLength","PowerInput","ProcTime","RecoveryTime","RotationPoint","RotationTimePer90Degrees","ScalingFactor","SetupAfterNumParts","SetupTime","Speed","Start","Stop","Time","TimeFactor","TrackPitch","Width","XDim","YDim","ZoomFactor","createSensor","getDisruptionBeginTime","getDisruptionEndTime","numMUsToBeDeleted","numSensors","LoadingTime","UnloadingTime","getRouteLength","Priority","freeCapacity","mediatedCapacity","openCapacity","openRequests","satisfiedRequests","OutflowRate","currentFlowrate","lengthOfPipe","currentInFlowrate","currentOutFlowrate","Volume","currentAmount","currentFillLevel","ProductAmount","AmountPerMU","PredecessorNumber","currentFillingTime","currentEmptyingTime","numMUsToBeDeleted"]
+  - [2,string,75,"Beschleunigung","Verfügbarkeit","HintergrundFarbe","Sperrwinkel","Kapazität","ZyklusZeit","Verzögerung","Standardwinkel","Einfahrlänge","Einfahrgeschwindigkeit","Ausfahrlänge","Ausfahrgeschwindigkeit","FehlerDauer","FehlerAbstand","FehlerStart","FehlerStop","Abstand","Länge",~,"BEAbstand","Hauptteil","Umsetzzeit","AnzahlVerlassendeBEs","AnzahlBEs","AnzahlBEStücke","AnzahlObjekte","AnzahlTeileSeitRüsten","Anzahl","BelegteLänge","Leistungsaufnahme","BearbeitungsZeit","Erholzeit","DrehPunkt","DrehzeitPro90Grad","SkalierungsFaktor","RüstenNachAnzahlTeilen","RüstZeit","Geschwindigkeit",~2,"Zeit","Zeitfaktor","Spurabstand","Breite",~2,"ZoomFaktor","erzeugeSensor","HoleStörBeginnZeit","HoleStörEndeZeit","anzahlzuLöschendeBEs ","AnzahlSensoren","Aufladezeit","Abladezeit","holeRoutenlänge","Priorität","FreieKapazität","VermittelteKapazität","UnbefriedigteKapazität","UnbefriedigteAnfragen","BefriedigteAnfragen","Abflussrate","MomentaneDurchflussrate","LängeDesRohrs","MomentaneZuflussrate","MomentaneAbflussrate","Volumen","MomentaneMenge","MomentanerFüllstand","Produktmenge","MengeProBE","Vorgängernummer","MomentaneFüllzeit","MomentaneLeerzeit","anzahlzuLöschendeBEs"]
+ ShowInTooltip: false

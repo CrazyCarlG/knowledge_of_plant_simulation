@@ -1,0 +1,45 @@
+InternalClassType: Checkbox
+Control: "self.OnChangedValue"
+Coordinate3D: [14,-1,0]
+Label: "Energy saving measures"
+Name: EnergySavingMeasures
+Origin: 17aa1cd4-9d7d-4c70-afc7-02b4766684d4
+RandomSeed: 1073746604
+UUID: 01a0236c-0546-708a-adad-44fe37a7e592
+Value: true
+$CustomAttributes:
+-
+ Name: OnChangedValue
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  	b:boolean;o:object;t:table;
+  do
+  	b := @.value;
+  	t := @.allConveyors;
+  	for local j := 1 to t.yDim loop
+  		o := t[1,j];
+  		o.AutomaticStop := b;
+  	next;
+  end;
+ UsingNewSyntax: false
+ ShowInTooltip: false
+-
+ Name: allConveyors
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: object
+  Columns:
+  - [1,object,18,"PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.F0","F0","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","Line1","Line2"]
+ ShowInTooltip: false

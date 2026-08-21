@@ -1,0 +1,84 @@
+InternalClassType: Method
+Coordinate3D: [20.400000000000002,-34.65,0]
+Name: makeReport
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: endSim after each experiment (EndOfExp_)
+ -- non-distributed simulation
+ 
+ var expNo:integer := currExpNo
+ var ObservationStr:string := to_str(rootfolder.localization.getText(162)," ",currRunNo) -- "Observation 1"
+ 
+ var ChartTable:object := Charts -- Charts and Sankey_diagrams which are showing in the Report
+ var numCharts:integer := ChartTable.yDim
+ var ChartObj:object -- chart object or sankey diagram
+ for var j := 1 to numCharts
+ 	ChartObj := ChartTable[1,j]
+ 	var col:integer := j + numRuns * (currRunNo - 1)
+ 	SVGofCharts[col,0] := to_str("Chart ",j," ",ObservationStr)
+ 	SVGofCharts[0,expNo] := to_str("Exp ",expNo)
+ 
+ 	if Charts4AllObservations OR currRunNo = 1
+ 		switch ChartObj.InternalClassType
+ 		case "Chart"
+ 			SVGofCharts[col, expNo] := to_str("<<",ChartObj.getHTMLcode(ObservationStr,150,100,true),">>")
+ 
+ 		case "SankeyDiagram"
+ 			ChartObj.active := true
+ 			SVGofCharts[col, expNo] := to_str("<<",root.getHTMLcode(ObservationStr),">>")
+ 			ChartObj.active := false
+ 
+ 			--case "NwGanttChart"
+ 			var scaling:real := 0.5
+ 		  -- SVGofCharts[col, expNo] := to_str("<<",ChartObj.getHTMLcode("",scaling),">>")
+ 
+ 			case "Frame"
+ 				if ChartObj.getAttrNo("objType") > 0 AND ChartObj.objType = "WorkerChart"
+ 					SVGofCharts[col, expNo] := to_str("<<",ChartObj.Chart.getHTMLcode(ObservationStr,150,100,true),">>")
+ 				end
+ 		else
+ 
+ 		end
+ 	end
+ next
+ 
+ /*if Charts4AllObservations AND currRunNo > 1
+ 	var TabObj:object := SVGofCharts.tmpTables[1, currRunNo - 1]
+ 	for var j:=1 to Charts.yDim
+ 		ChartObj := Charts[1,j] -- chart object or sankey diagram
+ 		if ChartObj.internalClassName = "NwChart"
+ 			SVGofCharts[j,expNo] := to_str("<<",ChartObj.getHTMLcode(150,100,true),">>") -- column = chart No
+ 		elseif ChartObj.internalClassName = "NwSankey"
+ 			ChartObj.active := true
+ 			SVGofCharts[j,expNo] := to_str("<<",root.getHTMLcode(),">>")
+ 			ChartObj.active := false
+ 		end
+ 	next
+ end*/
+ 
+ switch numCharts
+ case 0
+ 	Recording.append(to_str("Making Report for Experiment ",expNo," containing no special charts and sankey diagrams."))
+ case 1
+ 	Recording.append(to_str("Making Report for Experiment ",expNo," containing one chart or sankey diagrams."))
+ else
+ 	Recording.append(to_str("Making Report for Experiment ",expNo," containing ",ChartTable.yDim," charts and sankey diagrams."))
+ end
+RandomSeed: 196
+UUID: 213ded88-d289-4827-8c30-857b3db75bf1
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

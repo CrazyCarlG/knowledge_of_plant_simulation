@@ -1,0 +1,136 @@
+InternalClassType: DataTable
+ChangePathCtrl:
+CloseCtrl:
+ConstructorCtrl:
+Coordinate3D: [27.35,-27.5,0]
+DestructorCtrl:
+DragDropCtrl:
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: ValueDescriptions
+OpenCtrl:
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+PlausibilityCtrl:
+RandomSeed: 233
+RelabelCtrl:
+RenameCtrl:
+UUID: b955ab6d-01de-44b8-8c63-f78279fd32cb
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: get
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- technical notation > description (alias)
+  param pathStr:string -> string
+  
+  var obj:object := self.~
+  var row:integer := obj.getRowNo(pathStr)
+  
+  if row > 0 
+  	result := obj[1,row]
+  end
+  
+  if strLen(result) < 1 
+  	result := pathStr
+  end
+ ShowInTooltip: false
+-
+ Name: reg
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- called by: InputChanged_, outputChanged_
+  ->boolean
+  var obj:object := ValueDescriptions
+  var numIn :integer := Input.yDim
+  var numOut:integer := Output.yDim
+  var n:integer := numIn + numOut
+  
+  obj.delete({0,1}..{*,*})
+  Input.copyRangeTo({1,1}..{2,*}, obj, 0,1)
+  obj.initialize({2,1}..{2,*},"Input")
+  Output.copyRangeTo({1,1}..{2,*}, obj, 0, numIn + 1)
+  obj.initialize({2,numIn + 1}..{2,*},"Output")
+  
+  for var j := 1 to n
+  	if strLen(obj[1,j])<1
+  		obj[1,j] := obj[0,j] -- use technical notation, if the user did not define a description
+  	end
+  next
+  
+  for var j := 1 to n-1
+  	var descrStr:string := obj[1,j]
+  	var pathStr:string  := obj[0,j]
+  	for var k := j + 1 to n
+  
+  		if pathStr ~= obj[0,k] -- Recognize the technical notation in table_ValueDescription
+  			if obj[2,k] = "Output"
+  				-- The value $1 is already an output value.
+  				messageBox(rootfolder.Localization.getMessage(367,pathStr,"",""),1,4)  -- show as info
+  			else
+  				-- The value $1 is already an input value.
+  				messageBox(rootfolder.Localization.getMessage(368,pathStr,"",""),1,4)  -- show as info
+  			end
+  			return false
+  		end
+  
+  		if descrStr ~= obj[1,k] -- Recognize the Description in table_ValueDescription
+  			-- The descriptions of $1 and $2 are equal: '$3'.
+  			messageBox(rootfolder.Localization.getMessage(369,obj[0,j],obj[0,k],descrStr),1,4) -- show as info
+  			return false
+  		end
+  
+  	next -- k
+  
+  next -- j
+  result := true
+ ShowInTooltip: false
+-
+ Name: getOrig
+ ID: 3
+ DataType: method
+ Value: |+1
+  -- determine the technical notation like "root.singleProc.procTime"
+  param descrStr:string -> string
+  
+  var obj:object := self.~
+  obj.setCursor(1,1)
+  
+  if obj.find({1,1}..{1,*},descrStr) 
+  	result := obj[0,obj.cursorY]
+  elseif obj.getRowNo(descrStr) > 0 -- descrStr is already the technical notation
+  	result := descrStr
+  else
+  	print "Unknown description: '",descrStr,"'"
+  end
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 10
+  DataType: string
+  MaxXDim: 2
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 40
+  -
+   Index: 1
+   Width: 40
+  -
+   Index: 2
+   Width: 16
+ ColumnIndex: [string,3,"Path of the Value","Description","Type of the value"]
+ Columns:

@@ -1,0 +1,41 @@
+InternalClassType: Method
+Coordinate3D: [10.1,-5.5,0]
+Name: removeCharts
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ -- recursive procedure
+ param frame : object
+ 
+ for var i := 1 to frame.NumNodes
+ 	var obj : object := frame.Node(i)
+ 	frame.eraselayer(layer_of_chart)
+ 	frame.eraselayer(layer_of_chart-1)
+         
+ 	if obj.internalClassName = "Network" 
+ 		removeCharts(obj)
+ 	end
+ 	
+ 	if is3Dopen and obj._3D.exists and obj.internalClassName /= "NwArc" AND
+ 		 obj.internalClassName /= "Interface" AND obj.internalClassName /= "NwMarker"
+ 		obj._3D.deleteStatistics -- do not call for Connector and Interface
+ 	end
+ next
+RandomSeed: 74
+UUID: eb237b19-6845-4bef-98dc-ec6d90b59b18
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,42 @@
+InternalClassType: Comment
+BackgroundColor: 14483420
+ChangePathCtrl:
+Color: 0
+ConstructorCtrl:
+Cont: |+1
+ {\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 MS Shell Dlg;}}\r
+ \\viewkind4\\uc1\\pard\\f0\\fs17\\par\r
+ \\par\r
+ }\r
+
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+Font: 2
+InitCtrl:
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: comment
+OpenCtrl:
+PlausibilityCtrl:
+RenameCtrl:
+SaveAsRichedit: true
+SelectCtrl:
+Text: "W"
+Transparent: false
+UUID: 3b41b20a-fe95-43fb-9c0a-4b3d68bfe996
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]

@@ -1,0 +1,41 @@
+InternalClassType: Method
+Coordinate3D: [-1.3,10,0]
+Name: detectEnergyobjects
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- true, if energy is acitve
+ -- with error handler
+ param o:object->boolean
+ return o.EnergyActive
+RandomSeed: 55
+UUID: 5ff36ec5-fd8c-40e3-8bf8-84c9e12d525d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: ErrorHandler
+ ID: 1
+ DataType: method
+ Value: |+1
+  param byref error : string,
+  method_path : string,
+  line_number : integer -> boolean
+  
+  	error := "" -- catch the error
+
+ ShowInTooltip: false

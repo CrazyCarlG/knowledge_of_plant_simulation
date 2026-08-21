@@ -1,0 +1,19 @@
+InternalClassType: Method
+Origin: 01a0236c-0546-71b6-a182-3afd38db789c
+RandomSeed: 1073747644
+UUID: 01a0236c-0546-74b8-9ead-482329a29b9b
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,43 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-27.5,0]
+Name: readValue
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- result := variableStr
+ param varStr:string->any
+ 
+ var varStrNeu:string
+ 
+ if isOutTable(varStr) 
+ 	var obj:object := varStr
+ 	return obj.meanValue
+ end
+ 
+ var a:integer := strLpos("[",varStr)
+ if a>0 AND strLpos(",",varStr)=0  -- 1D-list, use the read_method
+ 	var b:integer := strLpos("]",varStr)
+ 	varStrNeu := to_str(strCopy(varStr,1,a-1),"[", strCopy(varStr,a+1,b-a-1),"]")
+ else
+ 	varStrNeu := varStr
+ end -- 1D-list
+ 
+ var stmt:string := to_str("-> any return ",varStrNeu)
+ result := executeSilent(stmt)
+RandomSeed: 251
+UUID: e345cf44-edd7-48cb-ae54-1b878e613012
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

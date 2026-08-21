@@ -1,0 +1,378 @@
+InternalClassType: DataTable
+CloseCtrl: "self.closeDesignTab"
+Coordinate3D: [45,-26.25,0]
+Name: RandomDesign
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 229
+UUID: f845f170-7fd8-4436-99c3-1a7fccf68ce1
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: closeDesignTab
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- interaction Close of table 'RandomDesign'
+  -- called by: interaction close of the table 'RandomDesign'
+  param bb:boolean
+  
+  self.~.generateDesign(true)
+ ShowInTooltip: false
+-
+ Name: openDesignTab
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- Prepare the table 'RandomlDesign'
+  -- called by: Menu RandomDesign_menu
+  if Input.yDim < 2 
+  	-- For a experimental design at least two input values are needed.
+  	messageBox(rootfolder.Localization.getText(313),1,4) -- info
+  	return
+  end
+  
+  self.~.prepDesignTab(true) -- true calledByDialog
+ ShowInTooltip: false
+-
+ Name: generateDesign
+ ID: 3
+ DataType: method
+ Value: |+1
+  -- Prepare the table 'RandomDesign'
+  -- called by: RandomDesign_menu
+  param calledByInteraction:boolean
+  
+  var desTab:object := RandomDesign
+  if desTab.yDim = 0
+  	return
+  end
+  if calledByInteraction
+  	if strLen(desTab.comment) = 0
+  		return -- "Cancel" pressed
+  	end
+  	desTab.comment := ""
+  	if (NOT OK_input) OR (NOT OK_output)
+  		--The input and output values are not correctly defined.
+  		messageBox(rootfolder.Localization.getText(300),1,1) -- error
+  		return
+  	end
+  end
+  var expTab:object := ExpTable
+  var numInVal:integer := desTab.XdimIndex
+  
+  var	queryStr:string := rootfolder.Localization.getText(310)--"Do you want to generate the experimental design?";
+  var	lostStr:string  := rootfolder.Localization.getText(311)--"Already defined experiments are lost.";
+  
+  var nExp:integer := 1
+  if calledByInteraction
+  	if messageBox(to_str(queryStr,strChr(10),lostStr),48,12)=16 -- 12 => question mark, buttons YES/NO
+  		repeat
+  			var str:string := prompt(rootfolder.Localization.getText(46)) -- Please enter the number of experiments.
+  			nExp := str_to_num(str)
+  		until nExp>0
+  	else -- answer was 'NO'
+  		ExpRunFromRandomDesign := false
+  		return
+  	end
+  	if nExp > 0
+  		desTab.NumOfExperiments := nExp
+  	end
+  else
+  	nExp := desTab.NumOfExperiments
+  end
+  
+  Results.delete
+  Results.delete({0,nExp+1}..{*,*})
+  DetailedResults.delete
+  DetailedResults.delete({0,nExp+1}..{*,*})
+  
+  ExpRunFromRandomDesign := true
+  ExpRunFromGeneralDesign := false
+  Design4FactorialAnalysis := false
+  factorDesignValue := ""
+  Recording.append(to_str("Generate a random experimental design. The experiment table with static settings for ",expTab.ydim," experiments is deleted."))
+  
+  expTab.delete -- After the question the ExpTable is deleted.
+  UsingRules := false
+  UserConfigMethod := ""
+  UserSeedValueMethod := ""
+  
+  var DLGobj:object := Dialog.Dialog
+  DLGobj.setCheckBox("UseInputValues_CB",true)
+  DLGobj.&callback.execute("UseInputValues_CB",DLGobj,DLGobj)
+  UsingTables := true
+  
+  -- generate the EXPERIMENTAL DESIGN (fill the tablefile ExpTable)
+  var dataTypeStr:string
+  var r:real
+  var k2:integer := pow(2,desTab.xDim)
+  var n2:integer := k2
+  var row:integer := 0 -- row in the ExpTable
+  
+  if nExp <= n2 -- too few experiments: n2 = pow(2,desTab.xDim)
+  	for var j := 1 to nExp
+  		for var factorNo := 1 to desTab.xDim
+  			dataTypeStr := desTab.getDataType(factorNo)
+  			switch dataTypeStr
+  			case "boolean"
+  				expTab[factorNo +1, j] := (z_uniform(1,0,1) < 0.5)
+  
+  			case "string"
+  				var m1:integer := 0
+  				repeat
+  					m1 += 1
+  				until strLen(desTab[factorNo, m1 + 1]) = 0
+  				m1 := ceil(m1 * z_uniform(1,0,1))
+  				expTab[factorNo +1, j] := desTab[factorNo, m1]
+  
+  			case "integer"
+  				r := desTab[factorNo, 2] + 1 - desTab[factorNo, 1]
+  				expTab[factorNo +1,j]:= desTab[factorNo,1] + floor(z_uniform(1,0,1) * r)
+  
+  			else
+  				r := desTab[factorNo, 2] - desTab[factorNo, 1]
+  				expTab[factorNo +1, j]:= desTab[factorNo, 1] + z_uniform(1,0,1) * r
+  			end
+  		next -- factorNo
+  	next -- j (row in ExpTable)
+  
+  else -- nExp > n2: enough experiments such that each extreme point occurs in an experiment
+  	for var factorNo:=1 to desTab.xDim --print "Factor: ",Design[factorNo,0];
+  		k2 := k2/2
+  		var b:integer := n2/k2	--print b," blocks of size ",k2;
+  		row := 0
+  		var col:integer := 1
+  		for var j:=1 to b
+  			for var m := 1 to k2
+  				row += 1
+  				expTab[factorNo+1,row] := desTab[factorNo,col]
+  			next
+  			col := 3-col -- switch between row 1 and row 2
+  		next -- j
+  	next -- factorNo
+  
+  	for var n := expTab.ydim + 1 to nExp  -- Now n is the last filled row of the ExpTable
+  		for var k := 1 to numInVal
+  			dataTypeStr := desTab.getDataType(k)
+  			switch dataTypeStr
+  			case "boolean"
+  				expTab[k+1,n] := (z_uniform(1,0,1) < 0.5)
+  				
+  			case "string"
+  				var m:integer := 0
+  				repeat
+  					m += 1
+  				until strLen(desTab[k,m + 1]) = 0
+  				m := ceil(m * z_uniform(1,0,1))
+  				expTab[k+1,n] := desTab[k, m]
+  				
+  			case "integer"
+  				r := desTab[k,2] + 1 - desTab[k,1]
+  				expTab[k+1,n]:= desTab[k,1] + floor(z_uniform(1,0,1) * r)
+  				
+  			else
+  				r := desTab[k,2] - desTab[k,1]
+  				expTab[k+1,n]:= desTab[k,1] + z_uniform(1,0,1) * r
+  			end
+  		next
+  	next -- n
+  
+  end
+  
+  for var j := 1 to nExp
+  	expTab[1,j]:=true -- All generated experiments are active.
+  next
+  /*if expTab.rowIndex_
+  	expTab.rowIndex_ := false -- User-defined experiment-IDs are removed. NEW in 15.2
+  end*/
+  Dialog.closeExpTab
+  
+  if calledByInteraction
+  	expTab.openDialogBox(true) -- show all (newly generated) input values for all experiments
+  end
+  
+  desTab.LastDesign.delete({0,0}..{*,*})
+  desTab.copyFormatTo(desTab.LastDesign)
+  desTab.LastDesign.maxXdim := -1
+  desTab.copyRangeTo({1,1}..{*,*}, desTab.LastDesign,1,1)
+ ShowInTooltip: false
+-
+ Name: prepDesignTab
+ ID: 4
+ DataType: method
+ Value: |+1
+  -- Prepare the table 'RandomDesign'
+  -- using the format of the table 'ExpTable'
+  param calledByDialog:boolean
+  
+  if Input.yDim < 1  -- Model parameters are needed for a random experimental design.
+  	messageBox(Rootfolder.Localization.getText(277),1,4) -- info
+  	return
+  end
+  var ExpTab:object := ExpTable
+  var desTab:object := RandomDesign
+  desTab.maxXdim := -1
+  
+  var j:integer := 1
+  var changeDone:boolean
+  var str:string
+  while ExpTab[j+1,0]/=void
+  	str := ExpTab[j+1,0]
+  	changeDone := changeDone OR (strTrim(desTab[j,0]) /= strTrim(str))
+  	desTab[j,0]:= str
+  	desTab.setDataType(j,ExpTab.getDataType(j+1))
+  	j += 1
+  end
+  
+  desTab.delete({j,0}..{*,*}) -- also delete the column index
+  
+  j -= 1
+  if j > 0
+  	desTab.maxXdim := j
+  end
+  
+  if changeDone
+  	for var k := 1 to j
+  		var colLastDesign:integer := desTab.LastDesign.getColumnNo(desTab[k,0])
+  		if colLastDesign > 0 AND desTab.LastDesign[colLastDesign,1] /= void
+  			desTab.LastDesign.copyRangeTo({colLastDesign,1}..{colLastDesign,*}, desTab,k,1)
+  		else -- set default design values
+  			switch desTab.getDataType(k)
+  			case "string"
+  				desTab[k,1]:= "A"
+  				desTab[k,2]:= "B"
+  			case "boolean"
+  				desTab[k,1]:= true
+  				desTab[k,2]:= false
+  			case "time"
+  				desTab[k,1]:= 60
+  				desTab[k,2]:= 300
+  			case "length"
+  				desTab[k,1]:= str_to_length("1")
+  				desTab[k,2]:= str_to_length("5")
+  			case "speed"
+  				desTab[k,1]:= str_to_speed("1")
+  				desTab[k,2]:= str_to_speed("5")
+  			case "acceleration"
+  				desTab[k,1]:= str_to_acceleration("1")
+  				desTab[k,2]:= str_to_acceleration("5")
+  			case "weight"
+  				desTab[k,1]:= str_to_weight("1")
+  				desTab[k,2]:= str_to_weight("5")
+  
+  			else
+  				desTab[k,1]:= 1
+  				desTab[k,2]:= 5
+  			end
+  		end -- set default design values
+  		desTab[k,3]:=void
+  	next -- k
+  end -- if changeDone
+  /* For the random experimental design you define
+  	the lower and upper level of the ",j," input values.
+  	Please close this table before you continue.
+  	*/
+  str:=to_str(Rootfolder.Localization.getText(308),--  For the random experimental design you define
+  	strChr(13),strChr(10),Rootfolder.Localization.getMessage(309,j,"",""),--  the lower and upper level of the $1 input values.
+  	strChr(13),strChr(10),Rootfolder.Localization.getText(307))-- Please close this table before you continue.
+  
+  desTab[0,0]:=Rootfolder.Localization.getText(301)--" Input value";
+  desTab[0,1]:=Rootfolder.Localization.getText(302)--" Lower level";
+  desTab[0,2]:=Rootfolder.Localization.getText(303)--" Upper level";
+  
+  if calledByDialog
+  	desTab.comment := str
+  	desTab.openDialogBox(true) -- open the table 'Design'
+  	desTab.comment := "" -- detect whether "OK" or "Cancel" was pressed.
+  end
+ ShowInTooltip: false
+-
+ Name: LastDesign
+ ID: 5
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   Alignment: "Right"
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    Width: 9
+   -
+    Index: 1
+    DataType: integer
+    FormatString: "-9"
+    Width: 10
+   -
+    Index: 2
+    DataType: integer
+    FormatString: "-9"
+    Width: 14
+   -
+    Index: 3
+    DataType: integer
+    FormatString: "-9"
+    Width: 19
+   -
+    Index: 4
+    DataType: integer
+    FormatString: "-9"
+    Width: 12
+  ColumnIndex: [string,1," Eingabewert"]
+  Columns:
+  - [0,string,2," Untere Stufe"," Obere Stufe"]
+ ShowInTooltip: false
+-
+ Name: NumOfExperiments
+ ID: 6
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ShowComment: true
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 9
+  -
+   Index: 1
+   DataType: integer
+   FormatString: "-9"
+   Width: 10
+  -
+   Index: 2
+   DataType: integer
+   FormatString: "-9"
+   Width: 14
+  -
+   Index: 3
+   DataType: integer
+   FormatString: "-9"
+   Width: 19
+  -
+   Index: 4
+   DataType: integer
+   FormatString: "-9"
+   Width: 12
+ ColumnIndex: [string,1," Eingabewert"]
+ Columns:
+ - [0,string,2," Untere Stufe"," Obere Stufe"]

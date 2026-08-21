@@ -1,0 +1,17 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-7121-9efc-23dacbe8ccdc
+RandomSeed: 1073747282
+UUID: 01a0236c-0546-72bc-8d06-a720a5631efa
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: |+1
+  This table shows all rules, which you defined.\r
+  Do not make any changes here.
+ ShowComment: true
+ ColumnIndex: [string,10,~,"Prio","Rules name","Condition in Table","Condition in Method","Action in Table","Action in Method","Experiment study on ","Init-Rule","Valid for Experiments"]
+ Columns:

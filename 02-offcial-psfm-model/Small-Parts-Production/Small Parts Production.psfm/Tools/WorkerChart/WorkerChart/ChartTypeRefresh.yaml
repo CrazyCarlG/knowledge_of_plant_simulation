@@ -1,0 +1,52 @@
+InternalClassType: Method
+Coordinate3D: [7,-19,0]
+Name: ChartTypeRefresh
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- handle the action in the dialog
+ switch to_str(Dialog.getIndex("ChartType"))
+ case "1"   -- chart type: bar chart
+ 
+ 	switch to_str(Dialog.getIndex("PointOfView"))
+ 	case "1"  -- view point: worker
+ 		chart.chartType := "Stacked Columns"
+ 		chart.dataInColumn := false
+ 		VarChartType := "Stacked Columns"
+ 		VarPointOfView := "Worker"
+ 	case "2"  -- view point: activity
+ 		chart.chartType := "Columns"
+ 		chart.dataInColumn := true
+ 		VarChartType := "Columns"
+ 		VarPointOfView := "Activity"
+ 	end
+ case "2"  -- chart type: pie chart
+ 	switch to_str(Dialog.getIndex("PointOfView"))
+ 	case "1"  -- view point: worker
+ 		chart.chartType := "Pie"
+ 		chart.dataInColumn := true
+ 		VarChartType := "Pie"
+ 		VarPointOfView := "Worker"
+ 	case "2"  -- view point: activity
+ 		chart.chartType := "Pie"
+ 		chart.dataInColumn := true
+ 		VarChartType := "Pie"
+ 		VarPointOfView := "Activity"
+ 	end
+ end
+RandomSeed: 34
+UUID: 1e730f82-e350-410d-809e-d9bdaf0084c1
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Dialog"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

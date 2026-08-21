@@ -1,0 +1,17 @@
+InternalClassType: AttributeExplorer
+Coordinate3D: [14.5,13.5,0]
+IncludeSubframes: true
+Label: "EnergyParameter"
+Origin: 4d42f082-53ca-4eac-b071-8a1bf822a8d9
+RandomSeed: 1073746605
+UUID: 01a0236c-0546-7089-88d9-6c81727cf26f
+$Attributes:
+- ["PowerInputWorking"]
+- ["PowerInputsettingUp"]
+- ["PowerInputOperational"]
+- ["PowerInputFailed"]
+- ["PowerInputStandby"]
+- ["PowerInputOff"]
+$Query:
+- [null,"EnergyActive","=","true"]
+$ColumnWidths: [15]

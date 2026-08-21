@@ -1,0 +1,58 @@
+InternalClassType: Method
+Coordinate3D: [-2.6500000000000004,4.3,0]
+Name: TestConditionExp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by:_PerformRule
+ param CondTab:table,ExpNo:integer -> boolean
+ 
+ var CompStr:String
+ result := true
+ 
+ var OutValues:object := ~.OutputValues
+ if CondTab.Ydim=0
+ 	return true
+ end
+ for var i:=1 to CondTab.Ydim 
+ 	var LeftStr:string := CondTab.asString(3,i)	-- Object
+ 	if strLen(CondTab[4,i]) > 0  -- Attribute		
+ 		-- attrStr := CondTab[4,i];
+ 		LeftStr := to_str(LeftStr,readAttr(CondTab[4,i]))
+ 	end
+ 	var LeftReal:real := OutValues[LeftStr,ExpNo-1]
+ 	if strLen(to_str(CondTab[7,i])) > 4
+ 	 -- comparison with other object
+ 		var RightStr:string := CondTab.asString(7,i)	-- Object
+ 		if strLen(CondTab[8,i]) > 0  -- Attribut
+ 			--attrStr := CondTab[8,i];
+ 			RightStr := to_str(RightStr,readAttr(CondTab[8,i]))
+ 		end
+ 		var RightReal:real := OutValues[RightStr,ExpNo-1]
+ 	else -- comparison with a number
+ 		RightReal := CondTab[6,i]
+ 	end
+ 	if strLen(CondTab[1,i]) > 0 
+ 		CompStr := to_str(CompStr," ",CondTab[1,i]," ")
+ 	end
+ 	CompStr := to_str(CompStr, CondTab[2,i], LeftReal," ",CondTab[5,i]," ",RightReal," ",CondTab[9,i])
+ Next-- row in Condition (= CondTab)
+ --print CompStr;
+ result := executeSilent(to_str("-> boolean return ",CompStr))
+RandomSeed: 294
+UUID: bfb53cbb-4db7-40a9-9081-878e397bf900
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

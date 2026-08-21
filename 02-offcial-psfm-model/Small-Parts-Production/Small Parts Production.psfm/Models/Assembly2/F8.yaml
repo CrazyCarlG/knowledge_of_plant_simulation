@@ -1,0 +1,29 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+EnergyActive: true
+EnergyPauseEndState: "Previous state"
+EnergyPausePowerUpEarly: true
+EnergyPauseStartState: "No change"
+EnergyUnplannedEndState: "Previous state"
+EnergyUnplannedPowerUpEarly: true
+EnergyUnplannedStartState: "No change"
+ExitLocked: false
+Origin: 01a0236c-0546-7028-86a9-593262e943e6
+PowerInputFailed: 1
+PowerInputOff: 0
+PowerInputOperational: 0
+PowerInputWorking: 1
+RandomSeed: 159
+TransferLengthToObject: false
+TransitionTimeOffToOperational: 0
+TransitionTimeOperationalToOff: 0
+UUID: 01a0236c-0546-735e-b2d4-960bdb6e93d8
+Width: 1
+$Successors:
+-
+ $Succ: 01a0236c-0546-7380-9b14-5eeaffd4296a
+ Origin: 01a0236c-0546-7056-918b-a50cb0e529fd
+ UUID: 01a0236c-0546-738b-9068-e48b22b53a94
+$Predecessors:
+- 01a0236c-0546-735f-9b08-4280aba0bdd0
+InheritEntranceExitLockedOnReset: false

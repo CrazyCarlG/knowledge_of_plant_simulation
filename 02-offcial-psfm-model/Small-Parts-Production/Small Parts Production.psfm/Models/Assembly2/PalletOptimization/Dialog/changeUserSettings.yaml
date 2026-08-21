@@ -1,0 +1,45 @@
+InternalClassType: Method
+Origin: 01a0236c-0546-7140-a1ee-53ea6ce85416
+RandomSeed: 1073747833
+UUID: 01a0236c-0546-7476-a972-32f50c7f01ad
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: setting_Realtime
+ ID: 2
+ $DataType: boolean
+ Value: false
+-
+ Name: setting_RandomNumbersVariant
+ ID: 3
+ $DataType: integer
+ Value: 1
+-
+ Name: setting_simSpeed
+ ID: 4
+ $DataType: integer
+ Value: 100
+-
+ Name: setting_IncrRNVariant
+ ID: 5
+ $DataType: boolean
+ Value: false
+-
+ Name: setting_SummaryReport
+ ID: 6
+ $DataType: boolean
+ Value: false

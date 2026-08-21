@@ -1,0 +1,22 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-710b-857b-ac0e924144ca
+UUID: 01a0236c-0546-72a6-8d3b-2e29d4043026
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 3
+  DataType: string
+  EditorReadOnly: true
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 10
+ Columns:

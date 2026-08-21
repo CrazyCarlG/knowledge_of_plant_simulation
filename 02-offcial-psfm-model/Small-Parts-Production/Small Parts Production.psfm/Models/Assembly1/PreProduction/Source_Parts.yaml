@@ -1,0 +1,21 @@
+InternalClassType: Source
+Origin: 01a0236c-0546-7142-be9b-bd266855f5bf
+RandomSeed: 133
+UUID: 01a0236c-0546-72dd-89c4-d24c61d73f4d
+3D:
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-72e1-99b5-41cbc7fce964
+ Origin: 01a0236c-0546-714d-b949-797f08dd83f5
+ UUID: 01a0236c-0546-72e8-80c3-1a6a7e6885f5
+InheritEntranceExitLockedOnReset: false

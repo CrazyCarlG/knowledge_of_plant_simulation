@@ -1,0 +1,90 @@
+InternalClassType: Method
+Coordinate3D: [36.9,-5,0]
+Name: TreatError
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Prepare statistics for non-distributed simulation in case of an error
+ param localExp, localRun: integer, message:string
+ Recording.append(to_str("ERROR in Experiment ",localExp," Observation ",localRun," ", message))
+ Recording.localErrors += 1
+ --TotalSimulationRuns := TotalSimulationRuns + 1 -- number of observations
+ 
+ if DetailedResults[0,localExp].void
+ 	prepExp(localExp)
+ end
+ 
+ var j:integer
+ if UsingRules
+ 	j := TotalSimulationRuns mod numRuns
+ 	if j=0 then j := numRuns end
+ 	Dialog.Dialog.setCaption("currObs", to_str(j)+"/"+to_str(GetNumberOfObservations))
+ else
+ 	Dialog.Dialog.setCaption("currObs", to_str(TotalSimulationRuns)+"/"+to_str(GetNumberOfObservations*GetNumberOfExperiments))
+ end
+ 
+ var AttrStr: string
+ var colMean:integer
+ for j := 1 to Output.yDim
+ 	AttrStr := Output[1,j]
+ 	var str:string := ValueDescriptions.get(AttrStr)
+ 	colMean := DetailedResults.getColumnNo(str)
+ 	var ObservTab:table
+ 	if isOutTable(AttrStr)  -- OutputTable
+ 		ObservTab := DetailedResults[colMean + 4,localExp]
+ 		ObservTab[2, localRun] := to_str("Error ",message)
+ 		/*var tab:table := ObservTab[1, localRun] -- no values for this observed table
+ 		for var c := 1 to tab.xDim
+ 			switch tab.getDataType(c)
+ 			case "integer","real","length","speed","weight","acceleration","money"
+ 				for var r := 1 to tab.getColumnYDim(c)
+ 					tab[c,r] := void
+ 				next -- row r of column c
+ 			else
+ 			end
+ 		next -- column c*/
+ 
+ 	else -- numerical output value
+ 		if DetailedResults[colMean + 6,localExp].void
+ 			DetailedResults.createNestedList(colMean + 6,localExp)
+ 			ObservTab := DetailedResults[colMean + 6,localExp]
+ 			ObservTab.maxXdim := 2
+ 			ObservTab.setDataType(2,"string")
+ 		end
+ 
+ 		ObservTab := DetailedResults[colMean + 6,localExp] -- insert into subtable
+ 		ObservTab[1, localRun] := void -- no value for this observation
+ 		ObservTab[2, localRun] := to_str("Error ",message)
+ 	end
+ next -- j: output value
+ 
+ if UsingRules
+ 	j:=1 -- output values for rules:
+ 	while strLen(Results4Rules[j,0])>0
+ 		AttrStr := Results4Rules[j,0]
+ 		Results4Rules[j,localRun] := 0
+ 		j += 1
+ 	end
+ end -- if UsingRules
+ 
+ Dialog.showProgressByIcon(localExp,localRun)
+ redraw
+ 
+ DetailedResults.refillDialog
+RandomSeed: 166
+UUID: 1163d92c-73f9-4c51-b3c2-2e4047d9462a
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,60 @@
+InternalClassType: DataTable
+Coordinate3D: [3.4000000000000004,13,0]
+Name: Action
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+PlausibilityCtrl: "closeAction"
+UUID: f34fcdfd-aa8b-4b14-a2c7-a74584d4843c
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: RuleNo
+ ID: 1
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: isOpen
+ ID: 2
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 4
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: object
+   Width: 16
+  -
+   Index: 2
+   Width: 9
+  -
+   Index: 3
+   FontSize: 1
+   FontColor: 0xff
+   Alignment: "Center"
+   DataType: string
+   FormatString: "+;-;+%;-%;="
+   Width: 7
+  -
+   Index: 4
+   DataType: real
+   FormatString: "-15.2"
+   Width: 7
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,5,~,"Object","Attribute","Operator","Value"]
+ Columns:

@@ -1,0 +1,130 @@
+InternalClassType: Method
+Coordinate3D: [5.9,-2.1999999999999993,0]
+Name: analyzeFrame
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ param frame : object-> list[real]
+ var factor_working,factor_setup,factor_wait,factor_block,factor_powering, factor_fail, factor_stopped, factor_pause: real
+ 
+ result.create
+ result.insert(1,0)
+ result.insert(2,0)
+ result.insert(3,0)
+ result.insert(4,0)
+ result.insert(5,0)
+ 
+ var iMax: integer := frame.numNodes
+ 
+ for var i := 1 to iMax 
+ 	var obj : object := frame.node(i)
+ 	var firstObj : boolean
+ 	var factor :real
+ 	var statFile : list[real]
+ 	
+ 	switch obj.internalClassName
+ 	case "Network" 
+ 		if obj.getAttrNo("_BNanalysed") = 0 or obj._BNanalysed  -- if analyse is desired, else next obj
+ 			
+ 			statFile := analyzeFrame(obj)
+ 			if scale_icon > 1 AND statFile.max > 0 
+ 				draw_Scale(obj)
+ 			end
+ 			
+ 			if statFile.dim > 0 then factor := statFile[1] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"work",factor)
+ 				factor_working := factor
+ 			end
+ 
+ 			if statFile.dim > 1 then factor := statFile[2] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"setup",factor)
+ 				factor_setup := factor
+ 			end
+ 
+ 			if statFile.dim > 2 then factor := statFile[3] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"wait",factor)
+ 				factor_wait := factor
+ 			end
+ 
+ 			if statFile.dim > 3 then factor := statFile[4] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"block",factor)
+ 				factor_block := factor
+ 			end
+ 			
+ 			if statFile.dim > 4 then factor := statFile[5] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"PoweringUpDown",factor)
+ 				factor_powering := factor
+ 			end			
+ 
+ 			if statFile.dim > 5 then factor := statFile[6] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"fail",factor)
+ 				factor_fail := factor
+ 			end
+ 			
+ 			if statFile.dim > 6 then factor := statFile[7] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"stop",factor)
+ 				factor_stopped := factor
+ 			end			
+ 			
+ 			if statFile.dim > 7 then factor := statFile[8] else factor := 0 end
+ 			if factor > 0 
+ 				drawBar(obj,"pause",factor)
+ 				factor_pause := factor
+ 			end
+ 			
+ 			-- showing the maximal working portion,
+ 			-- result contains the object with maximal working portion
+ 			if (not firstObj) OR statFile[1] > result[1]
+ 				firstObj	:= true
+ 				result		:= statFile.copy
+ 			end
+ 			
+ 		end -- if analyse is desired
+ 		
+ 		if is3Dopen and obj._3D.exists and (NOT obj._3D.ShowContent) and (NOT isTool(obj))
+ 			-- if all factors = 0 then no graphics are generated
+ 			obj._3D.createStatistics(makearray(factor_working, factor_setup, factor_wait, factor_block, factor_powering, factor_fail, factor_stopped, factor_pause))
+ 		end
+ 		
+ 	case "Method","NwWorkplace","NwWorkerPool","NwData","NwExporter" 
+ 
+ 	else
+ 		if executesilent(to_str("-> boolean ",obj,".StatWorkingPortion; return true"))
+ 		 -- obj has method 'StatWorkingPortion'
+ 			if obj.getAttrNo("_BNanalysed") = 0 or obj._BNanalysed 
+ 				statFile := analyzeObject(obj)
+ 				-- showing the maximal working portion,
+ 				-- result contains the statistics of the object with maximal working portion
+ 				if (not firstObj) OR ( statFile[1] > result[1] ) 
+ 					firstObj	:= true
+ 					result		:= statFile.copy
+ 				end
+ 				
+ 			end -- if analyse is desired
+ 		end -- obj with 'StatWorkingPortion'
+ 	end-- inspect obj.internalClassName
+ 	
+ next -- i: obj
+RandomSeed: 78
+UUID: a8cbe516-61f2-4ae4-be96-455304a09062
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

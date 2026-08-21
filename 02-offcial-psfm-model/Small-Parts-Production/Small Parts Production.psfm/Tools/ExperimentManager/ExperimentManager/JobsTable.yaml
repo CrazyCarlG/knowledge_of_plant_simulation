@@ -1,0 +1,108 @@
+InternalClassType: DataTable
+Coordinate3D: [25.55,-13,0]
+Name: JobsTable
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+UUID: db4fc7b4-ea1d-48a6-ac07-8d75649ef4c4
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: stateColumnNo
+ ID: 1
+ DataType: integer
+ Value: 3
+ ShowInTooltip: false
+-
+ Name: AllJobs4Rules
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   Alignment: "Right"
+   ColumnIndex: true
+   ColumnWidth: 6
+   DataType: integer
+   MaxXDim: 7
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Width: 9
+   -
+    Index: 2
+    Width: 9
+   -
+    Index: 3
+    DataType: string
+    Width: 12
+   -
+    Index: 4
+    DataType: string
+    Width: 20
+   -
+    Index: 5
+    DataType: datetime
+    Width: 20
+   -
+    Index: 6
+    DataType: datetime
+    Width: 20
+   -
+    Index: 7
+    DataType: time
+    Width: 12
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,8,~,"Experiment","Observation","State","Simulation machine (No)","Start","End","Running time "]
+  Columns:
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 6
+  DataType: integer
+  MaxXDim: 7
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Width: 9
+  -
+   Index: 2
+   Width: 9
+  -
+   Index: 3
+   DataType: string
+   Width: 12
+  -
+   Index: 4
+   DataType: string
+   Width: 20
+  -
+   Index: 5
+   DataType: datetime
+   Width: 20
+  -
+   Index: 6
+   DataType: datetime
+   Width: 20
+  -
+   Index: 7
+   DataType: time
+   Width: 12
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,8,~,"Experiment","Observation","State","Simulation machine (No)","Start","End","Running time "]
+ Columns:

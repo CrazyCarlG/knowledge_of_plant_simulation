@@ -1,0 +1,59 @@
+InternalClassType: Method
+Coordinate3D: [7,10,0]
+Name: showStats
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ -- called by: dialog
+ var i : integer
+ 
+ if not ~.analyzed 
+ 	analyzeModel
+ end
+ 
+ if ~.~ = rootfolder 
+ 	return
+ end
+ 
+ var sortCriteria:list[string]
+ sortCriteria.create
+ for i := 1 to 5 
+ 	sortCriteria.insert(i, rootfolder.Localization.getText(i+10))
+ next
+ -- Please select the sort criteria for statistics ranking.
+ i := promptlist1(sortCriteria, rootfolder.Localization.getText(8))
+ 
+ ~.resourceStats.writeRow(1,0,rootfolder.Localization.getText(41),-- resource
+ 	rootfolder.Localization.getText(43),-- working
+ 	rootfolder.Localization.getText(48),-- setup
+ 	rootfolder.Localization.getText(42),-- waiting		
+ 	rootfolder.Localization.getText(44),-- blocked
+     rootfolder.Localization.getText(40),-- PoweringUpDown
+ 	rootfolder.Localization.getText(45),-- disrupted
+ 	rootfolder.Localization.getText(49),-- stopped
+ 	rootfolder.Localization.getText(46),-- pause
+     rootfolder.Localization.getText(47)) -- sortCriteria
+ 
+ if i > 0 
+ 	~.sortStats(i)
+ 	~.resourceStats.showComment := true
+ 	~.resourceStats.openDialog
+ end
+RandomSeed: 73
+UUID: e7a7ca3b-beb4-4a70-8003-da259bc7b9d1
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

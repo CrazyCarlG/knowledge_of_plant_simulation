@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: fe7d0a3f-e4a5-4a78-8e5e-36ddd9c41d65
+UUID: 01a0236c-0546-74ee-abc8-68dc7ecbdb85
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,2,"Experiment","ö"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Exp 4","Exp 5","Exp 6","Exp 7","Exp 8"]

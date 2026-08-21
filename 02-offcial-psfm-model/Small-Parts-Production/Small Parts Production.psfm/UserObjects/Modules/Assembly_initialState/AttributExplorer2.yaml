@@ -1,0 +1,24 @@
+InternalClassType: AttributeExplorer
+Comment: "Manual Stations"
+Coordinate3D: [-9,13.5,0]
+Label: "ManuParameters"
+Name: AttributExplorer2
+Origin: 4d42f082-53ca-4eac-b071-8a1bf822a8d9
+RandomSeed: 1073746726
+UUID: 01a0236c-0546-7072-8855-3bef3533151d
+$Objects:
+- ["MS1"]
+- ["MS2"]
+- ["MS3"]
+- ["MS4"]
+- ["MS5"]
+- ["PreProduction.MS6"]
+$Attributes:
+- ["procTime.type","Cycle time type"]
+- ["procTime.mu","Mean Cycle time"]
+- ["procTime.sigma","Standard deviation"]
+- ["procTime.lowerBound","Lower bound"]
+- ["procTime.upperBound","Upper bound"]
+- ["Availability","Availability"]
+- ["MTTR","Mean time to repair"]
+$ColumnWidths: [15]

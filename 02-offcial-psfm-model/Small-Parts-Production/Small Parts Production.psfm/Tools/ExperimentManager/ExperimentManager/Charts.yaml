@@ -1,0 +1,91 @@
+InternalClassType: DataTable
+Coordinate3D: [32.7,-0.05,0]
+Name: Charts
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+PlausibilityCtrl: "self.PlausCharts"
+RandomSeed: 199
+UUID: be5935c7-215f-4449-8010-581564e8d8b0
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: PlausCharts
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- Plausibility method of the DataTable Charts
+  var ChartTable:object := self.~ -- DataTable Charts
+  var numCharts:integer := max(ChartTable.yDim, ChartTable.YdimIndex)
+  
+  for var j := numCharts downto 1
+  	var chartObj:object := ChartTable[1,j]
+  	if chartObj = void OR (chartObj.InternalClassType /= "Chart" AND chartObj.InternalClassType /= "SankeyDiagram")
+  		ChartTable.cutRow(j)
+  	end
+  next
+  
+  ReplaceRootstr(ChartTable,1)
+ ShowInTooltip: false
+-
+ Name: replace_dot
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- replace_dot
+  param s:string->string
+  
+  var n,k:integer;var ReplaceStr,dotStr:string
+  
+  result := strOmit(s,1,5)
+  dotStr := "."
+  k := strLpos(dotStr,result)
+  if k = 0 then return end
+  n := strLen(result)
+  ReplaceStr := "_"
+  repeat
+  	--result := omit(result,k,1);
+  	result := to_str(strCopy(result,1,k-1),ReplaceStr,strCopy(result,k+1,n))
+  	k := strLpos(".",result)
+  until k = 0
+ ShowInTooltip: false
+-
+ Name: deleteVoidEntries
+ ID: 3
+ DataType: method
+ Value: |+1
+  -- called by: resetReport_(via_resetWizard)
+  var obj:object := self.~
+  for var j := obj.yDim downto 1 
+  	if obj[1,j] = void 
+  		obj.cutRow(j)
+  	end
+  next
+ ShowInTooltip: false
+$Data:
+ Comment: "Showing the results of the first observation of each experiment"
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 20
+  -
+   Index: 1
+   DataType: object
+   Width: 48
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,2,"Label of the Chart","Chart"]
+ Columns:

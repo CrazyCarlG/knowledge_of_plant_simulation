@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: 48b477d9-1a7b-4405-9f97-6301dbfbfa1a
+RandomSeed: 1073747015
+UUID: 01a0236c-0546-7346-852b-9b2046139d50
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ColumnIndex: [string,2,"Energieverbraucher","Energy Consumers"]
+ Columns:

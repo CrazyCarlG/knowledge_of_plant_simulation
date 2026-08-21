@@ -1,0 +1,204 @@
+InternalClassType: DataTable
+ChangePathCtrl:
+CloseCtrl:
+ConstructorCtrl:
+Coordinate3D: [-10,9,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: MessageTab
+OpenCtrl:
+PlausibilityCtrl:
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+UUID: 32c99d19-5cb8-4dbf-8ddf-986f3320b780
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default","Icon1"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 0
+ MaterialDiffuseColor: 11842740
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  FontSize: 1
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Width: 19
+  -
+   Index: 2
+   DataType: string
+   Width: 18
+  -
+   Index: 3
+   FontSize: 1
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 18
+  -
+   Index: 4
+   FontSize: 1
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 14
+  -
+   Index: 5
+   FontSize: 1
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 17
+  -
+   Index: 6
+   Width: 5
+  -
+   Index: 7
+   Width: 6
+  -
+   Index: 8
+   Width: 4
+  RowFormat:
+  -
+   Index: 0
+   FontSize: 2
+   Color: 0x80ffff
+   Hidden: false
+ ColumnIndex: [string,12,~,"DEU","ENU","JPN","CHS","RUS","FRA","ESN","ITA","HUN","PLK","TRK"]
+ Columns:
+ - [1,string,226,"Deutsche Lokalisierung ist verfügbar.","Immer","Nur wenn Ziel",~2,"Spur A","Spur B","Spur A + Spur B","Spur B + Spur A",~2,"Sensorposition:","Beladen","Entladen","Umladen","Versetzen","Aktivieren:","[ ]","Stationstyp","Teilestation","Zielstation",~2,"Geplant","Ungeplant","Pausiert",~24,"Teile von:","Ziel befindet sich auf:","Attribute","Zeiten","Störungen","Weitere Steuerungen","Statistik","allen","Auf-/Abladen von","Blöcken","Blockgröße","Typspezifisch","Tabelle öffnen","Sortenrein beladen","Transportmittel immer anhalten","Bearbeitungszeit:","Erholzeit:","Verfügbarkeit wurde im Grundbaustein deaktiviert.","Verfügbarkeit:","Benutzersteuerung:","Station öffnen","Statistiktabelle","Sensorposition:","Sensorposition:","Beladen","Entladen","Umladen","Versetzen","Weitere Attribute","Aktivieren:","Aktivieren:","Teilesensor:","Zielsensor:","Benutzersteuerung für Ziele:","Benutzersteuerung für Teile:","Stationstyp","Arbeitend:","Blockiert:","Wartend:","Gestört:","Wartend auf Teile:","Pausiert:","Wartend auf Ziel:","Ungeplant:","Gestört","Navigieren","Standort öffnen","Ansicht","Aktualisieren","?","Inhalt","Hilfe für das Objekt","Eingänge:","Name:","Label:","Verhalten bei Störung:","Transportmittel auf der Teilestation anhalten","Transportmittel auf der Zielstation anhalten","MTTR Zeit:",~10,"Umladestation","Lädt Teile auf ein Förderhilfsmittel,","Fahrzeug oder Förderband auf, oder","lädt Teile davon ab oder um.",~77,"Kapazität der Teilequelle ist geringer als Blockgröße.","Aufladen nicht möglich, Transportmittel ist voll.","Gewünschte Teileanzahl noch nicht geladen, Transportmittel ist voll.","Gewünschte Teileanzahl noch nicht erreicht, Teilequelle ist leer.","Abladen nicht möglich, kein Platz auf dem Ziel.","Zeitformat ungültig.","Teilestation nicht definiert.","Zielstation nicht definiert.","Station nicht bereit.","Transportmitteltyp","Teiletyp","Teilestation-Sensor nicht definiert.","Zielstation-Sensor nicht definiert.","Name existiert schon in: ","Teilestation mit LIFO nicht erlaubt.","Zielstation mit LIFO nicht erlaubt.","Stationsklasse nicht erlaubt.","Teilestation-Ausgangssteuerung nicht definiert.","Zielstation-Ausgangssteuerung nicht definiert.","Aktiviere:","Immer","Nur wenn Ziel","Benutzersteuerung nicht definiert.","Möchten Sie die Methode formatieren?","Teile- und Zielstation sind identisch.","Störungsdefinition falsch."]
+ - [2,string,226,"English localization is available.","Always","Only when Destination",~,"ComboTextLanes","Lane A","Lane B","Lane A + Lane B","Lane B + Lane A",~,"elements of DragDropDialog","Sensor position:","Load","Unload","Reload","Move","Activate:","[ ]","Station type","Part station","Target station",~,"ComboTextShift","Planned","Unplanned","Paused",~23,"dialog elements of transferstation","Parts from:","Target is on:","Attributes","Times","Failures","Advanced Controls","Statistics","all","Load/unload","blocks","Block size","Specific type","Open Table","Homogeneous loading","Always stop target/container","Processing time:","Recovery time:","Availability is deactived.","Availability:","User-defined control:","Open Station","Statistics Table","Sensor position:","Sensor position:","Load","Unload","Reload","Move","Advanced Attributes","Activate:","Activate:","Part sensor:","Target sensor:","User-defined control for the targets:","User-defined control for the parts:","Station type","Working:","Blocked:","Waiting:","Failed:","Waiting for parts:","Paused:","Waiting for target:","Unplanned:","Failed","Navigate","Open Location","View","Refresh","Help","Contents","Help on Object","Entries:","Name:","Label:","Behavior for failures:","Stop container on part station","Stop container on target station","MTTR time:",~10,"TransferStation","Loads, unloads or transfers parts","onto or from a Container, Transporter or Conveyor.",~78,"Capacity of partsource is lower than blocksize.","Load not possible, transporter full.","Partnumber not loaded, transporter is full.","Partnumber not reached, partsource is empty.","Unload not possible, no space on target.","Invalid time-format.","Undefined partstation.","Undefined targetstation.","Station not ready.","Container Type","Part Type","Undefined partstation sensor.","Undefined targetstation sensor.","Identifier already exits in the name scope: ","Partstation with LIFO not allowed.","Targetstation with LIFO not allowed.","Class of station not allowed.","Undefined partstation exitcontrol.","Undefined targetstation exitcontrol.","Activate:","Always","Only when Destination","Undefined usercontrol.","Would you like to format the method?","Part and targetstation are equal.","Invalid failures."]
+ - [3,string,226,"Japanese localization is available.","常に","目的地のときのみ",~2,"Aレーン","Bレーン","A + B レーン","B + A レーン",~2,"センサー位置：","ロード","アンロード","トランスファー","ムーブ","有効化：","[ ]","ステーションタイプ","パートステーション","ターゲットステーション",~2,"計画","未計画","ポーズ状態",~24,"パーツ","ターゲット先","属性","時間","アベイラビリティ","詳細コントロール","統計情報","全て","ロード/アンロード","パーツ","ブロックサイズ","特定のタイプ","テーブルを開く","同種のローディング","常にコンテナを停止","稼働時間","リカバリ時間","アベイラビリティ非有効化.","アベイラビリティ","ユーザ定義のコントロール：","ステーションを開く","統計情報テーブル","センサ位置","センサ位置","ロード","アンロード","リロード","ムーブ","詳細属性","有効化","有効化","パーツセンサ：","ターゲットセンサ：","ユーザ定義のターゲットコントロール：","ユーザ定義のパーツコントロール：","ステーションタイプ","作業中","ブロック状態","待機中","故障状態","パーツ待ち","ポーズ状態","ターゲット待ち","未計画","故障状態","ナビゲート","上層を開く","表示","再描画","ヘルプ","項目","オブジェクトのヘルプ","エントリ：","名前：","ラベル：","故障時の挙動","部品のステーション上でContainerを停止","ターゲットのステーション上でContainerを停止","MTTR時間：",~10,"TransferStation","偼Container傗Transporter傗Converyor偺忋傊晹昳傪儘乕僪丄傾儞儘乕僪偟偨傝傑偨偼晹昳傪偦傟傜偵儘乕僪丄傾儞儘乕僪偟偨傝偟傑偡丅丅",~79,"パーツソースの容量がブロックサイズより低いです。","トランスファーがフルのためロードできません。","トランスファーがフルのためパーツナンバーはロードされません。","パーツナンバーに到達していません。パーツソースは空です。","アップロードは不可能です。ターゲットにスペースがありません。","無効な時間フォーマットです。","無効なパーツステーション","無効なターゲットステーション","ステーションが準備されていません。","コンテナタイプ","パーツタイプ","未定義のパーツステーションセンサ","未定義のターゲットステーションセンサ","識別子はすでにこの名前空間に存在します。","パーツステーションではLIFOは許可されていません。","ターゲットステーションではLIFOは許可されていません。","ステーションのクラスは許可されていません。","未定義のパーツステーションの出口コントロール","未定義のターゲットステーションの出口コントロール","有効化：","常に","目的地のとき常に","未定義のユーザコントロール","メソッドをフォーマットしますか？","パーツとターゲットステーションが同じです。","アベイラビリティ"]
+ - [4,string,226,"汉化版可用。","始终","仅当为目标时",~2,"通道 A","通道 B","通道 A + 通道 B","通道 B + 通道 A",~2,"传感器位置:","加载","卸载","重新加载","移动","激活:","[ ]","站类型","零件站","目标站",~2,"已计划","未计划","已暂停",~24,"零件来源:","目标位置:","属性","时间","故障","高级控件","统计信息","全部","加载/卸载","块","块大小","特定类型","打开表","同类加载","始终停止容器","处理时间:","恢复时间:","可用性被停用。","可用性:","用户定义控件:","打开站","统计信息表","传感器位置:","传感器位置:","加载","卸载","重新加载","移动","高级属性","激活:","激活:","零件传感器:","目标传感器:","目标的用户定义控件:","零件的用户定义控件:","站类型","正在工作:","已堵塞:","正在等待:","已失败:","正在等待零件:","已暂停:","正在等待目标:","未规划:","已失败","导航","打开位置","视图","刷新","帮助","目录","关于对象的帮助","条目:","名称:","标签:","故障的行为:","在零件站停止容器","在目标站停止容器","MTTR 时间:",~10,"TransferStation","将零件加载、卸载或传送到容器、小车或传送带，或从容器、小车或传送带对零件进行加载、卸载或传送。",~79,"零件源的容量小于块大小。","无法加载，传输器已满。","零件号未加载，传输器已满。","零件号未达，零件源为空。","无法卸载，目标上无空间。","时间格式无效。","未定义零件站。","未定义目标站。","站未准备就绪。","容器类型","零件类型","未定义零件站传感器。","未定义目标站传感器。","名称范围中已存在标识符:","禁用带有 LIFO 的零件站。","禁用带有 LIFO 的目标站。","禁用站的类。","未定义零件站出口控件。","未定义目标站出口控件。","激活:","始终","仅当为目标时","未定义用户控件。","您要格式化该方法吗？","零件站与目标站对等。","故障数无效。"]
+ - [5,string,226,"Доступна русская локализация","Всегда","Только если цель",~2,"Полоса A","Полоса B","Полоса A + Полоса B","Полоса B + Полоса A",~,"Элементы выпадающего списка","Положение сенсора:","Погрузка","Разгрузка","Перегрузка","Перемещение","Активен:","[ ]","Тип станции","Источник детали","Цель детали",~2,"Рабочее вр.","Нерабочее вр.","Перерыв",~24,"Детали из:","Цель на:","Атрибуты","Времена","Поломки","Доп. управление","Статистика","все","Загрузить/разгрузить","блоков","Размер блока","Определенный тип","Таблица","Однородные детали","Всегда останавливать контейнер","Время обработки:","Время восстановления:","Доступность выключена","Доступность:","Пользователький обработчик:","Открыть станцию","Таблица статистики","Сенсор на:","Сенсор на:","Погрузка","Разгрузка","Перегрузка","Перемещение","Доп. атрибуты","Активировать:","Активировать:","Сенсор источника:","Сенсор цели:","Обработчик для цели:","Обработчик для источника:","Тип станции","Работа:","Блокировка:","Ожидание:","Поломка:","Ждет детали:","Перерыв:","Ожидает цели:","Нераб. время:","Поломка","Навигация","Открыть местоположение","Вид","Обновить","Справка","Содержание","Справка по объекту","Заходов:","Имя:","Метка:","Поведение при поломке:","Останов контейнера на источнике","Останов контейнера на цели","СВР:",~10,"TransferStation","Loads, unloads or transfers parts","onto or from a Container, Transporter or Conveyor.",~78,"Вместимость источника менее размера блока.","Погрузка невозможна, транспорт полон.","Партия не загружена, транспорт полон.","Партия не загружена, источник пуст.","Разгрузка невозможна, нет места на цели.","Неверный формат времени.","Не определён источник.","Не определена цель.","Станция не готова.","Тип контейнера","Тип детали","Не определён сенсор на источнике.","Не определён сенсор на цели.","Идентификатор уже существует в пространстве имён:","Источник типа LIFO не допускается.","Цель типа LIFO не допускается.","Недопустимый класс станции","Обработчик выхода у источника не определён.","Обработчик выхода у цели не определён.","Активировать:","Всегда","Только если цель","Не задан пользовательский обработчик.","Хотите отформатировать метод?","Источник и цель идентичны.","Неверно заданы поломки."]
+ - [9,string,226,"Magyarítás elérhető.","Mindig","Csak a célállomáson",~2,"Sáv A","Sáv B","Sáv A + Sáv B","Sáv B + Sáv A",~2,"Szenzor pozíció:","Felrakodás","Lerakodás","Feltöltés","Átmozgatás","Aktivizálás:","[ ]","Állomás típusa","Alkatrész állomás","Célállomás",~2,"Tervezett","Nem tervezett","Szüneteltetett",~24,"Darabok honnan:","Célállomás:","Attribútumok","Idők","Meghibásodások","További kontrollok","Statisztika","mind","Felrakodás/lerakodás","blokk(ok)","Blokk méret","Adott típus","Táblázat megnyitása","Homogén felrakodás","Konténer mindig álljon meg","Feldolgozási idő:","Javítási idő:","Rendelkezésreállás nem aktív.","Rendelkezésreállás:","Felhasználói kontroll:","Állomás megnyitása","Statisztika táblázat","Szenzor pozíció:","Szenzor pozíció:","Felrakodás","Lerakodás","Feltöltés","Átmozgatás","További jellemzők","Aktivizálás:","Aktivizálás:","Darab szenzor:","Cél szenzor:","Felhasználói kontroll a célra:","Felhasználói kontroll a darabokra:","Állomás típus","Dolgozik:","Blokkolt:","Várakozik:","Hibás:","Darabra várakozik:","Szünet:","Célra várakozik:","Nem tervezett:","Hibás","Navigálás","Hely megnyitása","Nézet","Frissítés","Súgó","Tartalom","Súgó az objektumról","Belépések:","Név:","Címke:","Meghibásodás viselkedés:","Konténer álljon meg az állomásnál, ahonnan a darab jön","Konténer álljon meg a cél állomásnál","MTTR idő:",~10,"TransferStation","Loads, unloads or transfers parts","onto or from a Container, Transporter or Conveyor.",~78,"Az alkatrészforrás kapacitása kisebb, mint a blokkméret.","Felrakodás nem lehetséges, a szállítójármű tele van.","Darabszám nem lett felrakodva, a szállítójármű tele van.","Darabszám nem lehetséges, az alkatrészforrás üres.","Lerakodás nem lehetséges, nincs hely a célállomáson.","Érvénytelen idő formátum.","Nem definiált alkatrész állomás.","Nem definiált célállomás.","Az állomás nem kész.","Konténer ítpus","Alkatész típus","Nem definiált alkatrész állomás szenzor.","Nem definiált célállomás szenzor.","Ilyen nevű objektum már van:","Alkatrész állomás LIFO nem engedélyezett.","Célállomás LIFO nem engedélyezett.","Állomás osztály nem engedélyezett.","Nem definiált alkatrész állomás kilépési kontroll.","Nem definiált célállomás kilépési kontroll.","Aktív:","Mindig","Csak a célállomáson","Nem definiált felhasználói vezérlés.","Kívánja a metódus formázását?","Az alkatrész és a célállomás megegyezik.","Érvénytelen meghibásodások."]

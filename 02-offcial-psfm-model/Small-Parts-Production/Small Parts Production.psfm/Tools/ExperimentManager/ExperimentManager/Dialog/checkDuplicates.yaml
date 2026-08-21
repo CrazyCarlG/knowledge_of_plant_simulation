@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [1,7,0]
+Name: checkDuplicates
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ // Method checks for duplicated experiment names in the Experiment Table
+ -> boolean
+ var experiments := ~.ExpTable
+ 
+ for var l := 1 to experiments.yDim - 1
+ 	if experiments[0,l] /= ""
+ 		var cellValue := experiments[0,l]
+ 		for var j := l+1 to experiments.yDim
+ 			if cellValue ~= experiments[0,j]
+ 				return true
+ 			end
+ 		next
+ 	end
+ next
+ return false
+RandomSeed: 35
+UUID: a6fc81c1-554a-4129-bab4-4019d053e7fb
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

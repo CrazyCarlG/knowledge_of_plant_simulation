@@ -1,0 +1,156 @@
+InternalClassType: Chart
+ChartType: "Stacked Columns"
+Coordinate3D: [21.35,10,0]
+DataInColumn: false
+DataSource: "Input Channels"
+DataTable: "self.UtilizationTable"
+Height: 15
+InputChannels:
+ Comment: ""
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   ReadOnly: false
+   Hidden: false
+   Width: 18
+  RowFormat:
+  -
+   Index: 0
+   ReadOnly: true
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+ Columns:
+Label: "Usage Profiles"
+LegendLocation: "Right"
+Mode: "Sample"
+Name: UsageProfile
+Origin: 4c6eeafc-6b04-4db3-ab2c-f111813f335b
+RandomSeed: 45
+Rotation: 0
+SizeInFrame: [2,2]
+Subtitle: ""
+Title: "Energy Consumption of the Selected Resources"
+UUID: d2d1bdef-d41a-4eab-aaa8-4d7e6141431f
+XLabel: ""
+YLabel: "kWh"
+$IconArray:
+-
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////////vr6+////////////////vr6+////////////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////vr6+////////////////vr6+////////////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////////vr6+////////////////AAubAAubAAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////vr6+////////////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AAubvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////AIAAAIAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////////wAA/wAA/wAA////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+AOAAAOAAAOAAAIAAvr6+AA//AA//AA//AAubvr6+/7AA/7AA/7AA/wAAvr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////////tARktARktARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+AOAAAOAAAOAAAIAAvr6+AA//AA//AA//AAubvr6+/7AA/7AA/7AA/wAAvr6+tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAvr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+fX19vr6+vr6+vr6+fX19vr6+vr6+vr6+fX19vr6+fX19vr6+vr6+fX19vr6+fX19vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+fX19fX19vr6+fX19vr6+vr6+fX19fX19vr6+vr6+fX19fX19vr6+fX19vr6+vr6+fX19vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+DifferentNumberOfIcons: 1
+$CustomAttributes:
+-
+ Name: UtilizationTable
+ ID: 1
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: real
+   FormatString: "-15.2"
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    ReadOnly: false
+    Hidden: false
+    Width: 18
+   RowFormat:
+   -
+    Index: 0
+    Alignment: "Left"
+    Hidden: false
+    DataType: string
+  Columns:
+  - [0,string,11,"Setting-up","Operational","Failed","Standby","Off","Evaluate","","","","",""]
+ ShowInTooltip: false
+-
+ Name: translate
+ ID: 2
+ DataType: method
+ Value: |+1
+  var tab:table
+  
+  tab := UsageProfile.UtilizationTable
+  for var j := 1 to 6 
+  	tab[0,j] := rootfolder.localization.getText(44 + j)
+  next
+  	UsageProfile.UtilizationTable := tab
+
+ ShowInTooltip: false
+$Colors:
+- 0xa0a0a0
+- 0xf4f4f4
+- 0xffffff
+- 0x0
+- [0x6600f500,5,3]
+- [0x66328ebe,5,5]
+- [0x6660e9c9,5,7]
+- [0x660000ff,5,9]
+- [0x66888888,5,11]
+- [0x66333333,5,10]
+- [0xde00af,0,0]
+- [0x1e6ea5,0,2]
+- [0x96ff,0,4]
+- [0x969696,0,6]
+- [0x8000,0,8]
+- [0x96c000,0,10]
+- [0x7e7e00,0,98]
+- [0x8080,0,94]
+$WindowRect: [1133,174,420,380]

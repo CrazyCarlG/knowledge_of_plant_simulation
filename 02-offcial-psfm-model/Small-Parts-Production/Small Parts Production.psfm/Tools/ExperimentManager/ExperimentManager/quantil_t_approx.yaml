@@ -1,0 +1,50 @@
+InternalClassType: Method
+Coordinate3D: [34.45,-30.85,0]
+Name: quantil_t_approx
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ /* Quantil of the t-distribution
+  parameters: alpha between 0 and 1
+              f = number of degree of freedom
+ 
+ Formula of Preizer and Pratt (cf. Hartung)
+ Reference : Dietmar Herrmann: Statistik in C, p. 70
+ */
+ param alpha : real, f : integer -> real
+ 
+ var t: real
+ switch f
+ case 1
+ 	return tan(PI*(alpha-0.5))
+ case 2
+ 	t := 2 * alpha - 1
+ 	result := sqrt(2)*t/sqrt(1-t*t)
+ else -- f > 2
+ 	var a: real := f-(2/3)+1/(10*f)
+ 	var c: real := (f-(5/6))/(a*a)
+ 	var u: real := quantil_norm(alpha)
+ 	t := sqrt(f * exp(c*u*u) - f)
+ 	if alpha > 0.5
+ 		return t
+ 	else
+ 		return -t
+ 	end
+ end
+RandomSeed: 165
+UUID: 151f7029-2cb7-4100-b106-a30c523d85c7
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,125 @@
+InternalClassType: Method
+Coordinate3D: [26.150000000000002,-16.85,0]
+Name: M_ReadResult
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- callback for Distributed simulation
+ param eMPlant: any, job, MachNo: integer->integer
+ 
+ var AttrStr: string
+ var ObservTab:table
+ var j:integer
+ 
+ if job < 1 then return end
+ 
+ TotalSimulationRuns += 1 -- Show the number of performed observations in the dialog.
+ 
+ JobsTable[3,job] := "ready"
+ var row, col: integer
+ row := JobsTable[1,job]
+ col := job mod GetNumberOfObservations
+ if col = 0
+ 	col := GetNumberOfObservations
+ end
+ 
+ ProgressTable.setFontColorCells({col,row}, white)
+ ProgressTable.setBackgroundColorCells({col,row},green)
+ ProgressTable.writeRow(col,row,strChr(10004))
+ ProgressTable.refillDialog
+ 
+ var localExp:integer := JobsTable[1,job]
+ var localRun:integer := JobsTable[2,job]
+ 
+ JobsTable[6,job] := sysdate
+ var dur:time := JobsTable[6,job] - JobsTable[5,job]
+ JobsTable[7,job] := dur
+ 
+ /*var SimMach:string := JobsTable[4,job]
+ var machNo:integer := str_to_num(strOmit(SimMach,1, strRpos("(", SimMach)   ))*/
+ 
+ var MachTab : object := DistributedSimulation.MachinesTable
+ MachTab[15,MachNo] += 1
+ MachTab[16,MachNo] += dur
+ 
+ if DetailedResults[0,localExp].void
+ 	prepExp(localExp)
+ end
+ 
+ if UsingRules
+ 	j := TotalSimulationRuns mod numRuns
+ 	if j=0 then j := numRuns end
+ 	Dialog.Dialog.setCaption("currObs", to_str(j)+"/"+to_str(GetNumberOfObservations))
+ else
+ 	Dialog.Dialog.setCaption("currObs", to_str(TotalSimulationRuns)+"/"+to_str(GetNumberOfObservations*GetNumberOfExperiments))
+ end
+ 
+ var p: string := to_str(self.~)
+ var stmt: string := to_str("-> string return getenv(\\"COMPUTERNAME\\")")
+ var compName: string := eMPlant.executeSimTalk(stmt) -- only used for Recording
+ 
+ var res:any
+ for j := 1 to Output.yDim
+ 	AttrStr := Output[1,j]
+ 	var str: string := ValueDescriptions.get(AttrStr)
+ 	var n:integer := DetailedResults.getColumnNo(str)
+ 
+ 	if isOutTable(AttrStr)  -- read_output table
+ 		var TabObj:object := AttrStr -- str => object
+ 		ObservTab := DetailedResults[n+4,localExp]
+ 
+ 		var t:table := ObservTab[1,localRun]
+ 		readRemoteTable(eMPlant,TabObj, t)
+ 		recording.append(to_str("Output table: ",AttrStr))
+ 
+ 	else -- read_output values
+ 		stmt := to_str("-> any result := ",p,".readValue(\\"",quoteInStr(AttrStr),"\\")")
+ 		res := eMPlant.executeSimTalk(stmt)
+ 		if DetailedResults[n+6,localExp].void
+ 			prepExp(localExp)
+ 		end
+ 		ObservTab := DetailedResults[n+6,localExp]-- insert into subtable
+ 		ObservTab[1,localRun] := res-- insert into subtable
+ 		Recording.append(to_str(compName," Exp ",localExp," Run=",localRun,": Output: ",AttrStr," = ",ObservTab[1,localRun]))
+ 		forget res
+ 	end
+ 
+ next -- j: output value or table
+ 
+ if UsingRules
+ 	j := 1 -- output values for rules:
+ 	while strLen(Results4Rules[j,0])>0
+ 		AttrStr := Results4Rules[j,0]
+ 		stmt := to_str("-> any result := ",p,".readValue(\\"",AttrStr,"\\")")
+ 		res := eMPlant.executeSimTalk(stmt)
+ 		Results4Rules[j,localRun] := res
+ 		Recording.append(to_str(compName," Exp ",localExp,": Output for rules: ",AttrStr," = ",res))
+ 		j += 1
+ 	end
+ end -- if UsingRules
+ 
+ var EvCtrlStr:string := to_str(rootframe,".eventController")
+ eMPlant.ResetSimulation(EvCtrlStr) -- Plant Simulation generates the first events.
+ 
+ Dialog.showProgressByIcon(localExp,localRun)
+ redraw
+ 
+ DetailedResults.refillDialog
+ result := job
+RandomSeed: 271
+UUID: 704460e8-2e5e-4e68-884e-31bbbb3d8a7d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

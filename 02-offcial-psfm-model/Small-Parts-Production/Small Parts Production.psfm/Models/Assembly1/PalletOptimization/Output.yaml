@@ -1,0 +1,18 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70a4-a511-eaece7651053
+RandomSeed: 1073747293
+UUID: 01a0236c-0546-723f-a261-9288628cf786
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Specify the output values for the simulation study."
+ ShowComment: true
+ ColumnIndex: [string,4,~,"Output Values","Description","High Values are Better"]
+ Columns:
+ - [1,string,1,"root.Drain.statDeleted"]
+ - [2,string,1,"Throughput"]
+ - [3,boolean,1,1]

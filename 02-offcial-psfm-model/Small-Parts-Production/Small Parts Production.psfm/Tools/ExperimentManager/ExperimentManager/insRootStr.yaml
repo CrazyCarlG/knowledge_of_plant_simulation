@@ -1,0 +1,57 @@
+InternalClassType: Method
+Coordinate3D: [21.6,-27.55,0]
+Name: insRootStr
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- ExpMgr.: ReplaceRootstr_(OutputChanged_, InputChanged_), DragOnExpMgr, OutputChanged_, Charts.PlausCharts
+ -- GA: Fitness.prepare, Tool.DragOnWizard, Tools.PrepProblDef
+ param obj_str,root_str:string->string
+ 
+ -- removed leading and trailing blanks, tab stops, and carriage returns
+ obj_str := strTrim(obj_str) -- like "~.Station.proctime.beta", ".Models.Frame.Station.statNumIn"
+ if strLen(obj_str)=0
+ 	return obj_str
+ end
+ 
+ if strLpos("root",obj_str) = 1
+ -- already "root" inserted OR entry deleted
+ 	return obj_str
+ else
+ 	if strLpos("*",obj_str) = 1 
+ 		obj_str := strOmit(obj_str,1,1)
+ 	end
+ 
+ 	if strLpos(".",obj_str) = 1 -- absolute path
+ 		if strLpos(root_str,obj_str)=1   -- for instance: obj_str = ".Model.station.procTime"
+ 			var L:integer := StrLen(root_str)
+ 			return to_str("root",strOmit(obj_str,0,L+1))
+ 		else -- for instance: obj_str = ".MUs.Part.statAvgLifeSpan"
+ 			return obj_str
+ 		end
+ 	end
+ 	
+ 	if strLpos("~",obj_str) = 1 -- for instance: obj_str = "~.station.procTime"
+ 	   return to_str("root",strOmit(obj_str,1,1)) -- root.station.procTime
+ 	end
+ 	
+ 	-- for instance: obj_str = "station.procTime"
+ 	return to_str("root.",obj_str)
+ end
+RandomSeed: 235
+UUID: a11312a1-230f-482e-a85c-76815e8b84aa
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

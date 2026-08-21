@@ -1,0 +1,23 @@
+InternalClassType: ParallelStation
+Coordinate3D: [-2,8,0]
+ExitCtrl: "LoadStation.PartExitControl"
+Name: ParallelProc
+Origin: 2b7365bc-533e-4bf7-983d-b467d71f1f46
+RandomSeed: 80
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+UUID: 01a0236c-0546-705e-8fc4-011f1786f03f
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.4,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Predecessors:
+- 01a0236c-0546-705f-a9d5-bde1a7ad773e
+InheritEntranceExitLockedOnReset: false

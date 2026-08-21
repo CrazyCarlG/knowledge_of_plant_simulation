@@ -1,0 +1,26 @@
+InternalClassType: DataTable
+Coordinate3D: [14.100000000000001,-16.05,0]
+Name: myWorkerClasses
+Origin: 89124604-5872-4e98-b37d-0ca8d0b72b42
+UUID: a4a1027d-5775-4816-b0f7-47ad57480e53
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: "All worker classes under consideration"
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: object
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   Color: 0xe5e5e5
+   Hidden: false
+   DataType: object
+ Columns:

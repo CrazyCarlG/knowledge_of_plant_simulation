@@ -1,0 +1,15 @@
+InternalClassType: DataTable
+Origin: 66982b5b-7fd3-4e34-b871-c3988c630090
+UUID: 01a0236c-0546-717d-8cc7-e646acf3602f
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ColumnIndex: [object,4,~,6e8f4c41-8f49-47ea-8cb6-251248867e7d,95f4753e-0e30-4e8e-b7af-20d2fbb1fc10,c017d14c-13df-4a1f-a97e-599bf32fa8e7]
+ Columns:
+ - [1,integer,1,2]
+ - [2,integer,1,8]
+ - [3,integer,1,2]

@@ -1,0 +1,80 @@
+InternalClassType: Frame
+Coordinate3D: [10,13.5,0]
+Label: "Energy Analyzer"
+LockStructure: true
+Name: EnergyAnalyzer
+Origin: 016f6240-8976-4424-9593-a1bb891da450
+RandomSeed: 1073747002
+UUID: 01a0236c-0546-7227-97a2-4098a7700cff
+$CustomAttributes:
+-
+ Name: Consumption
+ ID: 2
+ $DataType: real
+ Value: 0
+-
+ Name: maxPowerConsumption
+ ID: 4
+ $DataType: real
+ Value: 0
+-
+ Name: powerConsumption
+ ID: 5
+ $DataType: real
+ Value: 0
+-
+ Name: ObjectsWithObserver
+ ID: 12
+ $DataType: list
+ Value:
+  CommonFormat: false
+  Column: [object,31,01a0236c-0546-71bc-8b3a-bb01dc0e292b,01a0236c-0546-71bd-9c4c-36726560f6b7,01a0236c-0546-71be-9828-4236052b9b0a,01a0236c-0546-71bf-a021-2fa83c14c894,01a0236c-0546-71c0-a9fb-6ab89ebbd9c5,01a0236c-0546-71c1-b0aa-fc989bd6e8e2,01a0236c-0546-71c2-97d6-900438b688ec,01a0236c-0546-71c3-a2df-7b4b16a49d5a,01a0236c-0546-71c5-a283-a3c90d85b83c,01a0236c-0546-71c6-8072-1579e5ffe341,01a0236c-0546-71dd-a4cf-6073655cc03d,01a0236c-0546-71de-9328-4919a51a688a,01a0236c-0546-71e1-ac34-3f6de86e52c5,01a0236c-0546-71e4-a959-7ed847e3d5d1,01a0236c-0546-71e6-81e7-e8f8486fc37a,01a0236c-0546-71e7-b651-1bcd505878b5,01a0236c-0546-71ea-8eab-cc04286e8b8a,01a0236c-0546-71ed-a28f-931c51a1195a,01a0236c-0546-71ee-8b63-6075c9474c45,01a0236c-0546-71f7-b9ba-7889fbd1e74e,01a0236c-0546-72de-abe3-74ae84a29c92,01a0236c-0546-72df-8d93-a273eeabc326,01a0236c-0546-72e0-9e78-625019169554,01a0236c-0546-72e1-99b5-41cbc7fce964,01a0236c-0546-72e3-b59a-062354640115,01a0236c-0546-72e4-9904-0730f91b52ed,01a0236c-0546-72ed-b6ed-e3fe7c526865,01a0236c-0546-72fc-9f50-64263ec20d4f,01a0236c-0546-7200-9d77-7030d74fbf91,01a0236c-0546-7202-9c01-75a68579cd82,01a0236c-0546-721a-9d5a-d5704b030e07]
+-
+ Name: ConsumptionOperational
+ ID: 14
+ $DataType: real
+ Value: 0
+-
+ Name: PeakTime
+ ID: 17
+ $DataType: time
+ Value: 0
+-
+ Name: DisplayPanel_noMaximum
+ ID: 19
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ColumnIndex: [string,14,~,"Value","X","Y","Type","Alignment","Color","Transparent","Length","Width","Direction","Max. Value","Percentage","Decimal Places"]
+  Columns:
+  - [1,string,6,"Consumption","powerConsumption","Power input [kW]:","Energy [kWh]:","Operational [kWh]:","ConsumptionOperational"]
+  - [2,integer,6,160,160,4,4,10,160]
+  - [3,integer,6,4,36,36,4,20,20]
+  - [4,string,6,"Text","Text","Static Text","Static Text","Static Text","Text"]
+  - [5,string,6,"Right","Right","Left","Left","Left","Right"]
+  - [6,integer,6,0,0,0,0,0,0]
+  - [7,boolean,6,0,0,0,0,0,0]
+  - [12,boolean,6,0,0,~3,0]
+  - [13,integer,6,1,1,~3,1]
+-
+ Name: DisplayPanel_withMaximum
+ ID: 20
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ColumnIndex: [string,14,~,"Value","X","Y","Type","Alignment","Color","Transparent","Length","Width","Direction","Max. Value","Percentage","Decimal Places"]
+  Columns:
+  - [1,string,8,"Consumption","powerConsumption","maxPowerConsumption","Maximum [kW]:","Power input [kW]:","Energy [kWh]:","Operational [kWh]:","ConsumptionOperational"]
+  - [2,integer,8,160,160,160,4,4,4,10,160]
+  - [3,integer,8,4,36,52,52,36,4,20,20]
+  - [4,string,8,"Text","Text","Text","Static Text","Static Text","Static Text","Static Text","Text"]
+  - [5,string,8,"Right","Right","Right","Left","Left","Left","Left","Right"]
+  - [6,integer,8,0,0,0,0,0,0,0,0]
+  - [7,boolean,8,0,0,0,0,0,0,0,0]
+  - [12,boolean,8,0,0,0,~4,0]
+  - [13,integer,8,1,1,1,~4,1]
+-
+ Name: refEnergy
+ ID: 26
+ $DataType: object
+ Value: "Energy"

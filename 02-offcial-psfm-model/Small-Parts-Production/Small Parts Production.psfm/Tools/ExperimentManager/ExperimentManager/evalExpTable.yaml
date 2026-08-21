@@ -1,0 +1,72 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-16.8,0]
+Name: evalExpTable
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- set the input values defined in 'ExtTable'
+ -- called by: distributed and non-distributed simulation
+ param ExpNo:integer->boolean
+ result := true
+ var numPar,numParSuccess: integer
+ var AttrStr, infoStr:string
+ var AttrVal:any
+ Recording.append("Evaluation of the ExpTable")
+ 
+ --var ExpStr:string := ExpTable.getExpID(ExpNo)
+ --if InputValues.getRowNo(ExpStr) = -1 then InputValues[0, InputValues.YDimIndex+1] := ExpStr; end
+ --if_Protocol.getRowNo_(ExpStr) = -1 then    _Protocol[0,    _Protocol.YDimIndex+1] := ExpStr; end
+ 
+ -- delete all MUs in frames since otherwise the capacity of objects can't be resized.
+ root.deleteMovables
+ 
+ var j:integer := 2
+ while ExpTable[j,0]/=void  -- scan the column index
+ 	var str:string := ExpTable[j,0]
+ 	AttrStr := ValueDescriptions.getOrig(str)
+ 	if ExpTable[j, ExpNo]/=void
+ 
+ 		AttrVal := ExpTable[j, ExpNo]
+ 		numPar += 1
+ 		if writeValue(AttrStr, AttrVal)
+ 			numParSuccess += 1
+ 			infoStr := to_str("Tab input: ",AttrStr," := ",AttrVal)
+ 			var colNo:integer := InputValues.getColumnNo(AttrStr)
+ 			if colNo = -1
+ 				colNo := InputValues.XDimIndex + 1
+ 			end
+ 			InputValues[colNo,ExpNo] := AttrVal
+ 		else
+ 			result := false
+ 			infoStr := to_str("Error by Tab input: ",AttrStr," := ",AttrVal)
+ 		end
+ 		forget AttrVal
+ 
+ 	else -- void the 'ExtTable'
+ 		infoStr := to_str("Tab input: ",AttrStr," is not changed. Current value: ",readValue(AttrStr))
+ 	end
+ 	--print infoStr;
+ 	Recording.append(infoStr)
+ 	j += 1
+ end -- next AttrStr from 'ExpTable'
+ 
+ -- numParSuccess numPar of static values were set.
+ --_Protocol[2,ExpNo]
+ Recording.append(rootfolder.Localization.getMessage(119,numParSuccess,numPar,""))
+RandomSeed: 285
+UUID: 94da6096-a699-4562-8d14-599ac6d3fd68
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,85 @@
+InternalClassType: Method
+Coordinate3D: [28.55,-13,0]
+Name: makeJobTable
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by method 'Start', 'M_NewJobId_' (if Rules are used)
+ param ExpNo:integer
+ 
+ var a:any
+ var t:time
+ var j,k,row:integer
+ 
+ JobsTable.delete
+ ProgressTable.delete({0,0}..{*,*})
+ 
+ if UsingRules
+ 	if ExpTable[1, k]
+ 		if ExpTable[0,ExpNo] /= ""
+ 			ProgressTable[0,ExpNo] := ExpTable[0,ExpNo]
+ 		else
+ 			ProgressTable[0,ExpNo] := "Exp "+to_str(ExpNo)
+ 		end
+ 	end
+ 	for j := 1 to numRuns
+ 		JobsTable.writeRow(1,j,     ExpNo, j, "open")
+ 		ProgressTable[j,0] := to_str(j)
+ 		ProgressTable.refillDialog
+ 	next
+ 
+ 	currExpNo := JobsTable[1,1]
+ 
+ else -- no rules
+ 
+ 	if UsingTables
+ 		for k := 1 to ExpTable.yDim
+ 			if ExpTable[1, k]
+ 				if ExpTable[0,k] /= ""
+ 					ProgressTable[0,k] := ExpTable[0,k]
+ 				else
+ 					ProgressTable[0,k] := "Exp "+to_str(k)
+ 				end
+ 			end
+ 			if ExpTable[1, k] AND (NOT DetailedResults.ExperimentExecuted[1,k])  -- if active experiment
+ 				for j := 1 to numRuns
+ 					row := row + 1
+ 					JobsTable.writeRow(1,row,  k, j, "open")
+ 					ProgressTable[j,0] := to_str(j)
+ 					ProgressTable.refillDialog
+ 				next
+ 			end -- if active
+ 		next-- k
+ 	else -- a single experiment
+ 		k := 1
+ 		if ExpTable[1, k]
+ 			if ExpTable[0,k] /= ""
+ 				ProgressTable[0,k] := ExpTable[0,k]
+ 			else
+ 				ProgressTable[0,k] := "Exp "+to_str(k)
+ 			end
+ 		end
+ 		for j := 1 to numRuns
+ 			row := row + 1
+ 			JobsTable.writeRow(1,row, k, j, "open")
+ 			ProgressTable[j,0] := to_str(j)
+ 			ProgressTable.refillDialog
+ 		next
+ 	end
+ end
+RandomSeed: 184
+UUID: 27fff0a4-fca5-48bc-b1d1-021bea544cad
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

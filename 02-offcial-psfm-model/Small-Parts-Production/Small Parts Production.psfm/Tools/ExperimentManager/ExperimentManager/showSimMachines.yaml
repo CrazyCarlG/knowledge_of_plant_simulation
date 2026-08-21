@@ -1,0 +1,33 @@
+InternalClassType: Method
+Coordinate3D: [15,-39.55,0]
+Name: showSimMachines
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: context menu
+ if ?.usingRemote 
+ 	var MachTab:object := ?.dialog.RemoteMachines
+ 	-- Computer, Number of parallel processes, Number of runs, Total simulation time, Mean running time of a simulation
+ 	MachTab.writeRow(0,0,rootfolder.Localization.getText(165),rootfolder.Localization.getText(97),rootfolder.Localization.getText(168),rootfolder.Localization.getText(169),rootfolder.Localization.getText(170))
+ 	MachTab.openDialogBox(true)
+ 	
+ else --No distributed simulation"
+ 	messageBox(rootfolder.Localization.getText(287),1,4) -- info
+ end
+RandomSeed: 239
+UUID: fccc04c6-3c2a-409a-bf13-d87add983da0
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

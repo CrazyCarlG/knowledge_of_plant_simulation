@@ -1,0 +1,15 @@
+InternalClassType: DataTable
+Origin: 24cdaa86-8f75-428d-b61a-bae1ea4783c1
+UUID: 01a0236c-0546-7510-98e7-fac0df7601ad
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,3,"Target value","evaluated by","Technical Notation"]
+ Columns:
+ - [0,string,1,"Throughput"]
+ - [1,string,1,"Tab"]
+ - [2,string,1,"root.Drain.statDeleted"]

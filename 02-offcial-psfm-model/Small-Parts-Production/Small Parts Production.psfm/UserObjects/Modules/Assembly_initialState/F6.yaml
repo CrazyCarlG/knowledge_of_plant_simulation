@@ -1,0 +1,26 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [22.05,-8,0]
+ExitStrategy: "Percentage"
+ExitStrategyPercentageValues: [60,40]
+Length: 2
+Name: F6
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 61
+ResStatOn: true
+UUID: 01a0236c-0546-707f-8990-7b80cd94bfa6
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [180,2,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-7049-a5df-e9350fb02a64
+ Name: Connector2
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7081-b28d-e2c3a5201a84
+$Predecessors:
+- 01a0236c-0546-7080-a586-157bfdd47918
+InheritEntranceExitLockedOnReset: false

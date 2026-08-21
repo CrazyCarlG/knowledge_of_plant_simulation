@@ -1,0 +1,82 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Chart"
+ChartType: "100% Stacked Columns"
+Coordinate3D: [0.75,13.5,0]
+DataInColumn: false
+DataSource: "Input Channels"
+Effect: "3D"
+Height: 15
+InputChannels:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ ColumnIndex: [string,11,~,"AS1","AS2","AS3","AS4","AS5","MS1","MS2","MS3","MS4","MS5"]
+ Columns:
+ - [0,string,8,"Working","Setting-up","Waiting","Blocked","Failed","Stopped","Paused","Unplanned"]
+ - [1,string,8,"AS1.statWorkingPortion","AS1.statSetupPortion","AS1.statWaitingPortion","AS1.statBlockingPortion","AS1.statFailPortion","AS1.statStoppedPortion","AS1.statPausingPortion","AS1.statUnplannedPortion"]
+ - [2,string,8,"AS2.statWorkingPortion","AS2.statSetupPortion","AS2.statWaitingPortion","AS2.statBlockingPortion","AS2.statFailPortion","AS2.statStoppedPortion","AS2.statPausingPortion","AS2.statUnplannedPortion"]
+ - [3,string,8,"AS3.statWorkingPortion","AS3.statSetupPortion","AS3.statWaitingPortion","AS3.statBlockingPortion","AS3.statFailPortion","AS3.statStoppedPortion","AS3.statPausingPortion","AS3.statUnplannedPortion"]
+ - [4,string,8,"AS4.statWorkingPortion","AS4.statSetupPortion","AS4.statWaitingPortion","AS4.statBlockingPortion","AS4.statFailPortion","AS4.statStoppedPortion","AS4.statPausingPortion","AS4.statUnplannedPortion"]
+ - [5,string,8,"AS5.statWorkingPortion","AS5.statSetupPortion","AS5.statWaitingPortion","AS5.statBlockingPortion","AS5.statFailPortion","AS5.statStoppedPortion","AS5.statPausingPortion","AS5.statUnplannedPortion"]
+ - [6,string,8,"MS1.statWorkingPortion","MS1.statSetupPortion","MS1.statWaitingPortion","MS1.statBlockingPortion","MS1.statFailPortion","MS1.statStoppedPortion","MS1.statPausingPortion","MS1.statUnplannedPortion"]
+ - [7,string,8,"MS2.statWorkingPortion","MS2.statSetupPortion","MS2.statWaitingPortion","MS2.statBlockingPortion","MS2.statFailPortion","MS2.statStoppedPortion","MS2.statPausingPortion","MS2.statUnplannedPortion"]
+ - [8,string,8,"MS3.statWorkingPortion","MS3.statSetupPortion","MS3.statWaitingPortion","MS3.statBlockingPortion","MS3.statFailPortion","MS3.statStoppedPortion","MS3.statPausingPortion","MS3.statUnplannedPortion"]
+ - [9,string,8,"MS4.statWorkingPortion","MS4.statSetupPortion","MS4.statWaitingPortion","MS4.statBlockingPortion","MS4.statFailPortion","MS4.statStoppedPortion","MS4.statPausingPortion","MS4.statUnplannedPortion"]
+ - [10,string,8,"MS5.statWorkingPortion","MS5.statSetupPortion","MS5.statWaitingPortion","MS5.statBlockingPortion","MS5.statFailPortion","MS5.statStoppedPortion","MS5.statPausingPortion","MS5.statUnplannedPortion"]
+Label: "Station Utilization"
+LegendLocation: "Right"
+Mode: "Sample"
+OpenCtrl: "self.OnOpen"
+Origin: c838d038-52ec-4a0f-903e-0d5aa2241744
+RandomSeed: 1073746654
+Rotation: 0
+StepCurve: false
+Subtitle: "[MS] = Manual, [AS] = Automatic"
+Title: "Utilization of the stations of Assembly"
+UUID: 01a0236c-0546-707d-adc7-76edaca3e0a2
+XLabel: "Station"
+YScaleMax: 1.02
+YScaleMin: 0
+$CustomAttributes:
+-
+ Name: OnOpen
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	self.~.active := true;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Colors:
+- 0xa0a0a0
+- 0xf4f4f4
+- 0xffffff
+- 0x0
+- [0xf500,5,3]
+- [0x328ebe,5,5]
+- [0xbebebe,5,5]
+- [0xebf5,5,7]
+- [0xff,5,9]
+- [0xaa9bff,5,8]
+- [0xff0000,5,11]
+- [0xffa040,5,10]
+- [0x96ff,0,4]
+- [0x969696,0,6]
+- [0x8000,0,8]
+- [0x96c000,0,10]
+- [0x7e7e00,0,98]
+- [0x8080,0,94]
+$WindowRect: [50,50,726,519]

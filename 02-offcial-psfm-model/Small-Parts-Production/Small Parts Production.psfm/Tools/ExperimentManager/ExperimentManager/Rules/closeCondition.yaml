@@ -1,0 +1,84 @@
+InternalClassType: Method
+Coordinate3D: [-2.6500000000000004,10,0]
+Name: closeCondition
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by interaction plausibility of the table file "condition"
+ if ?.~.~.~ = ?.rootframe   -- ExpMgr is in the root frame
+ 	~.ReplaceRootstr(Condition,3)
+ 	~.ReplaceRootstr(Condition,7)
+ end
+ var RuNo:integer := Condition.RuleNo
+ Rules[3,RuNo].delete
+ 
+ if Condition.Ydim > 0 -- there is a condition
+ 	for var i:=1 to Condition.Ydim
+ 		if Condition[3,i]=void OR (Condition[6,i]=void AND Condition[7,i].void)
+ 		 -- There is a missing item in row
+ 			messageBox(to_str(rootfolder.Localization.getText(376)," ",i),1,1)
+ 			return
+ 		end
+ 		if Condition[6,i].void AND (Condition[7,i].void OR Condition[8,i].void)
+ 				--Use either attribute or value in row
+ 				messageBox(to_str(rootfolder.Localization.getText(377)," ",i),1,1);
+ 				return;
+ 		end
+ 		
+ 		var LeftStr,RightStr:string
+ 		-- object string "LeftStr" into the tablefile "OutputValues"
+ 		LeftStr := Condition.asString(3,i)	-- path: root....
+ 		Condition[4, i] := strTrim(Condition[4, i])
+ 		if NOT Condition[4, i].void  -- attribute
+ 			if strCopy(Condition[4, i],1,1) = "["
+ 				LeftStr += Condition[4,i]
+ 			else
+ 				LeftStr += to_str(".", Condition[4,i])
+ 			end
+ 		end
+ 		if Condition[6,i].void -- right side is an attribute
+ 			-- object string "RightStr" into the tablefile "OutputValues"
+ 			RightStr := Condition.asString(7,i) -- path: root....
+ 			Condition[8, i] := strTrim(Condition[8, i])
+ 			if NOT Condition[8, i].void  -- attribute
+ 				if strCopy(Condition[8, i],1,1) = "["
+ 					RightStr += Condition[8,i]
+ 				else
+ 					RightStr += to_str(".",Condition[8,i])
+ 				end
+ 			end
+ 		end-- right side is an attribute
+ 		
+ 	next -- i: boolean formular
+ 
+ -- build a statement
+ 	var t:table[string,string,object,string,string,real,object,string,string]
+ 	t.create
+ 	t.insertlist(1,1, Condition.copy({1,1}..{*,*}))
+ 	var stmt:string := evalCondition(t)
+ 	var res:any := executeSilent(Stmt)-- please look at the log file
+ 	if isBoolean(res) and res
+ 		Rules[3,RuNo].insertList(1,1, Condition.copy({1,1}..{*,*}))
+ 	else --The condition is not correct.
+ 		messageBox(rootfolder.Localization.getText(378),1,1)
+ 		return
+ 	end
+ end -- if there is a condition
+ 
+ Rules2History
+RandomSeed: 301
+UUID: d6526d18-c080-4224-9e0d-d9d6e03d65b3
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,123 @@
+InternalClassType: Method
+Coordinate3D: [-14,7,0]
+Name: changeUserSettings
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: non-distributed simulation:
+ -- EndOfAllExperiments with "restore", Start (button) with "read_", Reset (button) with "restore"
+ -- val = "read_" read_and store the current settings
+ -- val = "restore" restore the settings before the experiment run
+ 
+ param val:string -- "read_" or "restore"
+ 
+ switch strToLower(val)
+ case "read"  -- method "Start" (twice: stopped or new run)
+ 	self.setting_animMU := animation(false)
+ 
+ 	if NOT ~.simulateWithAnimation
+ 		animation(false)
+ 	end
+ 
+ 	if EventController /=void
+ 		self.setting_Realtime := EventController.Realtime
+ 		self.setting_RandomNumbersVariant := EventController.RandomNumbersVariant
+ 		self.setting_simSpeed := eventController.speed
+ 		self.setting_IncrRNVariant := EventController.IncrementRandomNumbersVariantOnReset
+ 		self.setting_SummaryReport := EventController.SummaryReport
+ 	end
+ 
+ 	EventController.speed := 100
+ 	EventController.Realtime := false
+ 	EventController.IncrementRandomNumbersVariantOnReset := false
+ 	EventController.SummaryReport := false
+ 
+ 	if NOT ~.UsingRemote -- non-distributed simulation
+ 		var stopOnErrors, stopOnFormularErrors: boolean;
+ 		getErrorStop(stopOnErrors, stopOnFormularErrors)
+ 		if stopOnErrors -- Ribbons Debugger > "Ignore Errors" is inacitive
+ 			~.ModelErrorHandling := setErrorHandler(~.&ErrorHandling)
+ 			-- The function setErrorHandler returns the last registered error handling method.
+ 			-- treatment of errors in SimTalk by the global error handling of the remote process.
+ 		end
+ 	end
+ 
+ case "restore"  -- method "Start" (distributed simulation before saving the model)
+   animation(self.setting_animMU)
+ 
+ 	if EventController /=void
+ 		EventController.SummaryReport := self.setting_SummaryReport
+ 		EventController.Realtime := self.setting_Realtime
+ 		eventController.speed := self.setting_simSpeed
+ 		eventController.IncrementRandomNumbersVariantOnReset := self.setting_IncrRNVariant
+ 		if strLen(~.UserSeedValueMethod) = 0
+ 			EventController.RandomNumbersVariant := self.setting_RandomNumbersVariant
+ 		end
+ 	end
+ 
+ 	if NOT ~.UsingRemote -- non-distributed simulation
+ 		getErrorStop(stopOnErrors, stopOnFormularErrors) -- declaration see case "read"
+ 		setErrorHandler(~.&ModelErrorHandling)
+ 		~.ModelErrorHandling := void
+ 	end
+ end
+RandomSeed: 315
+UUID: b41d07ea-d5e7-447c-8f85-b8a10a4ec840
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: setting_Realtime
+ ID: 2
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: setting_RandomNumbersVariant
+ ID: 3
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: setting_simSpeed
+ ID: 4
+ DataType: integer
+ Value: 100
+ ShowInTooltip: false
+-
+ Name: setting_IncrRNVariant
+ ID: 5
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: setting_SummaryReport
+ ID: 6
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: setting_animMU
+ ID: 7
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: setting_animIcon
+ ID: 8
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false

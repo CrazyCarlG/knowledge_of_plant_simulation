@@ -1,0 +1,72 @@
+InternalClassType: Method
+Coordinate3D: [45.5,-18.85,0]
+Name: DS_Aggregate
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Distributed Simulation Interface
+ var ExNo,ObNo, row:integer
+ DS_ObservValues.delete
+ for var j:= 1 to DS_Output.yDim
+ 	var s:string := DS_Output[1,j]
+ 	var a:string[] := splitString(s,";")
+ 	row += 1
+ 	DS_ObservValues[1,row] := str_to_num(a[1])
+ 	DS_ObservValues[2,row] := str_to_num(a[2])
+ 	for var i := 3 to a.dim
+ 		DS_ObservValues.setDataType(i,"real")
+ 	next
+ 	
+ 	for var i := 3 to a.dim
+ 		s := a[i]
+ 		if strLPos(":",s) > 0
+ 			DS_ObservValues.setDataType(i,"time")
+ 			DS_ObservValues[i,row] := str_to_time(s)
+ 		else
+ 			DS_ObservValues[i,row] := str_to_num(s)
+ 		end
+ 	next
+ next
+ 
+ DetailedResults.delete
+ Results.delete({2,Input.yDim + 1}..{*,*})
+ 
+ var obsTab:table
+ var numOut:integer := Output.yDim
+ for var k := 1 to DS_ObservValues.yDim -- sim run
+ 	ExNo := DS_ObservValues[1,k]
+ 	ObNo := DS_ObservValues[2,k]
+ 	for var n := 1 to numOut
+ 		if DetailedResults[7*n,ExNo].void
+ 			DetailedResults.createNestedList( 7*n, ExNo) -- Exp is active
+ 			obsTab := DetailedResults[7*n, ExNo]
+ 			DetailedResults[7*n, ExNo].name := to_str("Ex",ExNo," Out",n)
+ 		else
+ 			obsTab := DetailedResults[7*n, ExNo]
+ 		end
+ 		obsTab[1,ObNo] := DS_ObservValues[n+2,k]
+ 	next -- n output value
+ next -- k sim run
+ 
+ for var j := 1 to ExpTable.yDim
+ 	CalcStatistics4Exp(j)
+ next
+ 
+ prepReport
+RandomSeed: 170
+UUID: 80dc1c81-542c-4559-9d5a-deb5414a5db5
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

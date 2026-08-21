@@ -1,0 +1,17 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70ae-b930-1fb04c8e3853
+RandomSeed: 1073747285
+UUID: 01a0236c-0546-7249-9d19-9e75c0e07f89
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Specify the input values for the simulation study."
+ ShowComment: true
+ ColumnIndex: [string,3,~,"Input Values","Description"]
+ Columns:
+ - [1,string,1,"root.Quantity"]
+ - [2,string,1,"Number of pallets"]

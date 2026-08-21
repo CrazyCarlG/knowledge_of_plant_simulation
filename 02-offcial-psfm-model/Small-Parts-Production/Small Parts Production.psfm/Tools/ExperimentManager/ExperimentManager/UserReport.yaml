@@ -1,0 +1,27 @@
+InternalClassType: HtmlReport
+Content: ""
+Coordinate3D: [6.25,-35.900000000000006,0]
+Name: UserReport
+Origin: afe35984-2024-4174-b233-73aec13cb7a7
+RandomSeed: 201
+UUID: 3157d685-9e17-4680-823a-6e0eed863487
+$CustomAttributes:
+-
+ Name: Informations
+ ID: 3
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    Hidden: false
+  Columns:
+  - [0,string,3,"Name of the project:","Version of the project:","Person in charge:"]
+ ShowInTooltip: false

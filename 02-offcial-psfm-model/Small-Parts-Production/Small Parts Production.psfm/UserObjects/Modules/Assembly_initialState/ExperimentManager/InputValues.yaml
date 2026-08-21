@@ -1,0 +1,29 @@
+InternalClassType: DataTable
+Origin: 3eb48fd5-892b-4539-bebd-a235f6783088
+UUID: 01a0236c-0546-70b2-812c-b00ee3f1cd92
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 10
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 10
+  -
+   Index: 1
+   DataType: integer
+ ColumnIndex: [string,2,"Control value","root.Quantity"]
+ Columns:
+ - [0,string,11,"Exp 01","Exp 02","Exp 03","Exp 04","Exp 05","Exp 06","Exp 07","Exp 08","Exp 09","Exp 10","Exp 11"]

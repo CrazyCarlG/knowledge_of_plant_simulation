@@ -1,0 +1,23 @@
+InternalClassType: Source
+Origin: 01a0236c-0546-7000-a62f-d5fadc3eb64a
+Path: ".MUs.Cap"
+RandomSeed: 78
+ResourceType: "Storage"
+UUID: 01a0236c-0546-7142-be9b-bd266855f5bf
+3D:
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7146-bde9-5ad6a3c43802
+ Origin: 01a0236c-0546-700e-aee6-20db59f775bb
+ UUID: 01a0236c-0546-714d-b949-797f08dd83f5
+InheritEntranceExitLockedOnReset: false

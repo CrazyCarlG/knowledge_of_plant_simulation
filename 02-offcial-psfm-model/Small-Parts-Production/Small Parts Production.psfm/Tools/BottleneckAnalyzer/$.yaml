@@ -1,0 +1,38 @@
+InternalClassType: Folder
+ChangePathCtrl:
+Coordinate3D: [0,0,0]
+DestructorCtrl:
+MoveToFolderCtrl:
+Name: BottleneckAnalyzer
+PermitDeleteCtrl:
+RenameCtrl:
+RootFolder: true
+UUID: 07eb0b0a-00bd-47f6-ba95-5fe029adb5d7
+3D:
+ BackgroundColor: -1
+Password:
+LibInfo:
+ Name: "Bottleneck Analyzer"
+ Version: "2404.0004"
+ Description: |+1
+  Visualizes the standard statistics of the material flow objects\r
+  and sorts the data into a table.\r
+  $German$EngpassAnalyse\r
+  Visualisiert die Standardstatistik der Materialflussobjekte\r
+  und erstellt Statistik-Ranglisten.\r
+  $Japanese$Bottleneck Analyzer\r
+  材料フローオブジェクトの標準統計を可視化して、\r
+  データをテーブル内でソートします。\r
+  $Chinese$瓶颈分析器\r
+  可视化物料流对象的标准统计信息\r
+  并将数据分类成表。\r
+  $Russian$Анализатор узких мест\r
+  Визуализация стандартной статистики объектов материалапотока и сортировка данных в таблице.\r
+  $Hungarian$Szűk keresztmetszet analízis\r
+  Az anyagáram objektumok statisztikájának vizuális megjelenítése és táblázatba rendezése.
+ AlternativePaths: "$German$.Tools.EngpassAnalyse"
+ ProhibitAccess: true
+$Nodes:
+- 53baa230-7fa5-4ce5-93e2-af76aa5c6856
+- ae62c0cc-4593-46ca-a221-5a2bc9f651ac
+- c48f584b-43c2-482f-bc61-58443da4cf97

@@ -1,0 +1,31 @@
+InternalClassType: Dialog
+Label: "Worker chart of  'WorkerPool'"
+Origin: e58a4eb5-32b6-45ef-a8f6-80f4008e0ee7
+UUID: 01a0236c-0546-758c-8778-0d8f06e4315d
+$Elements:
+-
+ Type: EditText
+ Name: "WorkerPool_Inp"
+ Caption: "WorkerPool"
+-
+ Type: TabControl
+ Name: "TabControl"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "TabChart"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "SelectionBox"
+   $Elements:
+   -
+    Type: RadioButton
+    Name: "Pool"
+   -
+    Type: RadioButton
+    Name: "Worker"
+    IsSelected: true
+ -
+  Type: TabPage
+  Name: "TabConfiguration"

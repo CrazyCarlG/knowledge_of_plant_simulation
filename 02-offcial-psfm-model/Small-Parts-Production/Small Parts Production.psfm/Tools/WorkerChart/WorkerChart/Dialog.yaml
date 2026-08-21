@@ -1,0 +1,181 @@
+InternalClassType: Dialog
+CallbackMethod: "Callback"
+Coordinate3D: [33,-19.25,0]
+Label: "Utilization of workers"
+Origin: 45c7a91a-4602-45f6-9696-00b85402d157
+UUID: e58a4eb5-32b6-45ef-a8f6-80f4008e0ee7
+$IconArray:
+-
+-
+-
+-
+-
+$Elements:
+-
+ Type: Menu
+ Name: "nav_menu"
+ Caption: "Navigate"
+ CallbackArgument: "nav_menu"
+ $Elements:
+ -
+  Type: Menu
+  Name: "OpenLoc_Menu"
+  Caption: "Open Location"
+  CallbackArgument: "OpenLoc_Menu"
+ -
+  Type: Menu
+  Name: "OpenWorkerPool_menu"
+  Caption: "WorkerPool"
+  CallbackArgument: "OpenWorkerPool_menu"
+-
+ Type: Menu
+ Name: "Help_Menu"
+ Caption: "Help"
+ CallbackArgument: "Help_Menu"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Contents_Menu"
+  Caption: "Contents"
+  CallbackArgument: "Contents_Menu"
+ -
+  Type: Menu
+  Name: "HelpObject_Menu"
+  Caption: "Help on Object"
+  CallbackArgument: "HelpObject_Menu"
+-
+ Type: StaticText
+ Name: "WorkerPool_C"
+ Caption: "Create charts for this WorkerPool:"
+-
+ Type: EditText
+ Name: "WorkerPool_Inp"
+ Rect: [0,1,38,0]
+ DataType: 1
+ Password: false
+-
+ Type: Button
+ Name: "ViewChart"
+ Caption: "Show Chart"
+ Rect: [40,1,21,0]
+ CallbackArgument: "ButtonViewChart"
+-
+ Type: TabControl
+ Name: "TabControl"
+ Rect: [0,3,62,7]
+ CallbackArgument: "TabControl"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "TabChart"
+  Caption: "Data"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "SelectionBox"
+   Caption: "Group Workers by"
+   Rect: [0,0,26,4]
+   $Elements:
+   -
+    Type: RadioButton
+    Name: "Pool"
+    Caption: "Pool"
+    CallbackArgument: "RadioButtonPool"
+    GroupID: 0
+    IsSelected: true
+   -
+    Type: RadioButton
+    Name: "Group"
+    Caption: "Classes"
+    Rect: [0,1,0,0]
+    CallbackArgument: "RadioButtonGroup"
+    GroupID: 0
+   -
+    Type: RadioButton
+    Name: "Worker"
+    Caption: "Individuals"
+    Rect: [0,2,0,0]
+    CallbackArgument: "RadioButtonWorker"
+    GroupID: 0
+  -
+   Type: GroupBox
+   Name: "SelectionBox2"
+   Caption: "Occupancy with respect to"
+   Rect: [32,0,26,4]
+   $Elements:
+   -
+    Type: RadioButton
+    Name: "radio button working"
+    Caption: "Working time"
+    CallbackArgument: "RadioButtonWorkingTime"
+    GroupID: 1
+   -
+    Type: RadioButton
+    Name: "radio button overall time"
+    Caption: "Overall time"
+    Rect: [0,1,0,0]
+    CallbackArgument: "RadioButtonOverallTime"
+    GroupID: 1
+    IsSelected: true
+ -
+  Type: TabPage
+  Name: "TabConfiguration"
+  Caption: "Configuration"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "BoxData"
+   Caption: "Data configuration"
+   Rect: [0,0,26,5]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "Statistics2Display_C"
+    Caption: "Statistics to display:"
+   -
+    Type: Button
+    Name: "ButtonOpenStatTable"
+    Caption: "Open Table ..."
+    Rect: [0,1,20,0]
+    CallbackArgument: "ButtonOpenStatTable"
+   -
+    Type: StaticText
+    Name: "SampleInterval_C"
+    Caption: "Sample intervals:"
+    Rect: [0,2,0,0]
+   -
+    Type: EditText
+    Name: "TextBoxInterval"
+    Caption: "30.0000"
+    Rect: [0,3,20,0]
+    DataType: 10
+    Password: false
+  -
+   Type: GroupBox
+   Name: "ChartTypeGroup"
+   Caption: "Chart configuration"
+   Rect: [32,0,26,5]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "ChartType_C"
+    Caption: "Type of chart:"
+   -
+    Type: Drop-Down
+    Name: "ChartType"
+    Caption: ["Bar Chart","Pie Chart"]
+    Rect: [0,1,20,0]
+    CallbackArgument: "ChartType"
+    SelectionIndex: 1
+   -
+    Type: StaticText
+    Name: "PointOfView_C"
+    Caption: "Point of view:"
+    Rect: [0,2,0,0]
+   -
+    Type: Drop-Down
+    Name: "PointOfView"
+    Caption: ["Worker","Activity"]
+    Rect: [0,3,20,0]
+    CallbackArgument: "PointOfView"
+    SelectionIndex: 1

@@ -1,0 +1,33 @@
+InternalClassType: DataTable
+Coordinate3D: [-9.65,14,0]
+Name: Translations
+Origin: 9eaccf44-9c66-4a43-83ef-488614ff0662
+UUID: eac9e0c5-6af0-4d21-828f-cb16c668ca1b
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Translation of Index_Menu row 36, Separator_Menu row 38"
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 2
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: integer
+   Width: 11
+ ColumnIndex: [string,3,"dialogelement",~,"Comments"]
+ Columns:
+ - [0,string,18,"analyze_but","ranking_but","header2_com","prod_chk","transp_chk","stor_chk","display_txt","Analyze_txt","Remove_txt","Ranking_txt","remove_but","Analyze","Configuration","Help_men","Contents_Menu","HelpObject_Menu","Navigate_Menu","OpenLoc_Menu"]
+ - [1,integer,18,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,37,62,61]
+ - [2,string,18,"Analyse","Open","Which resource types are viewed?","Production","Transport","Storage","Display:","Model:","All charts:","Ranking table:","Remove","Analyze","Configure","Help","Content","Help on Object","Navigate","Open Location"]

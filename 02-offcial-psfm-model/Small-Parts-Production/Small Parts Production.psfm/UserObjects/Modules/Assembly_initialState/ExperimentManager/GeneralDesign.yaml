@@ -1,0 +1,32 @@
+InternalClassType: DataTable
+Origin: 76dc5e22-d2d1-43fd-9b44-798ecec400f4
+RandomSeed: 1073746907
+UUID: 01a0236c-0546-7098-80a8-ef08cab5bb6d
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: ~
+ ShowComment: true
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 10
+  -
+   Index: 1
+   DataType: integer
+   Width: 14
+ ColumnIndex: [string,2," Input value","Number of pallets"]
+ Columns:
+ - [0,string,3," Lower level"," Upper level"," Increment"]
+ - [1,integer,3,15,35,2]

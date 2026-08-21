@@ -1,0 +1,16 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-7091-a2ad-c4206befb177
+UUID: 01a0236c-0546-73c7-bf59-f1920fa88e01
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ShowComment: true
+ ColumnIndex: [string,4,"Input values","set by","Original Value","Inherited"]
+ Columns:
+ - [0,string,1,"root.Quantity"]
+ - [1,string,1,"Tab"]
+ - [2,string,1,"35"]

@@ -1,0 +1,29 @@
+InternalClassType: Source
+Coordinate3D: [-13.950000207871199,6.6500000990927219,0]
+Interval: 10
+MUSelection: "Constant"
+Number: 5
+Origin: 01a0236c-0546-7013-a6e7-01e9383173cf
+Path: ".MUs.Pallet"
+RandomSeed: 67
+ResourceType: "Storage"
+ShiftcalendarObject: "~.ShiftCalendar"
+TimeOfGeneration: "Number Adjustable"
+UUID: 01a0236c-0546-7156-800a-3d0d804868be
+3D:
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7152-9ee5-3949cd237836
+ Origin: 01a0236c-0546-7014-b629-52f29c31e274
+ UUID: 01a0236c-0546-7157-a8b2-f60d27531340
+InheritEntranceExitLockedOnReset: false

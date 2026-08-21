@@ -1,0 +1,24 @@
+InternalClassType: Station
+Origin: 01a0236c-0546-7145-892e-43babc9f97d3
+RandomSeed: 129
+ShiftcalendarObject:
+UUID: 01a0236c-0546-72e0-9e78-625019169554
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-72f9-8777-af4dc675b591
+ Origin: 01a0236c-0546-715f-9e02-0d6a0260000a
+ UUID: 01a0236c-0546-72fa-b85b-cb89d8ed85d1
+$Predecessors:
+- 01a0236c-0546-72e5-8084-a52330096b61
+InheritEntranceExitLockedOnReset: false

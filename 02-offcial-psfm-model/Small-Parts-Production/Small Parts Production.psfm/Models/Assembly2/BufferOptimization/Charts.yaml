@@ -1,0 +1,15 @@
+InternalClassType: DataTable
+Origin: be5935c7-215f-4449-8010-581564e8d8b0
+RandomSeed: 1073748282
+UUID: 01a0236c-0546-7528-bcf6-1d0722798940
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Showing the results of the first observation of each experiment"
+ ShowComment: true
+ ColumnIndex: [string,2,"Label of the Chart","Chart"]
+ Columns:

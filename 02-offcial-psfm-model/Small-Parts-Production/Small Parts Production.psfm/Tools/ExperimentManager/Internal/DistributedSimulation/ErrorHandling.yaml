@@ -1,0 +1,46 @@
+InternalClassType: Method
+Coordinate3D: [16,-1.85,0]
+Name: ErrorHandling
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Error handler in a simulation machine during a distributed simulation
+ param byref error : string, method_path : string, line_number : integer
+ 
+ var observedError:string := error
+ 
+ /*if ~.ModelErrorHandling /= void -- There is an error handler of the model.
+ 	~.ModelErrorHandling.execute(error, method_path, line_number)
+ 	-- In case of error = "" means that the error was treated by the global error handler of the model.
+ end*/
+ 
+ if line_number = 0
+ 	-- The error was in a formular.
+ 	var stopOnErrors, stopOnFormularErrors: boolean
+ 	getErrorStop(stopOnErrors, stopOnFormularErrors)
+ 	if stopOnFormularErrors
+ 		fireSimTalkMessage(to_str("Unknown error in formular ", makePathRelative(method_path,~.~), ": ",observedError))
+ 	end;
+ 
+ else
+ 	-- The error was in a method.
+ 	fireSimTalkMessage(to_str("Unknown error in method ", makePathRelative(method_path,~.~)," in line ",line_number,": ",observedError))
+ end
+ 
+ error := "" -- catch the error
+RandomSeed: 339
+UUID: 62653c72-a820-4644-b428-d3313ffb2774
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

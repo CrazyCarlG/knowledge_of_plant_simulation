@@ -1,0 +1,48 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [6.5,-3,0]
+ExitCtrl: "self.transfer2CSC"
+Length: 4.5
+Name: F10
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 81
+ResStatOn: true
+UUID: 01a0236c-0546-705c-af59-93ee8aa2682d
+Width: 1
+3D:
+ BaseHeight: 1
+ Mirror: [true,false,false]
+ Rotation: [0,0,0,-1]
+ $ExtSegments:
+  - 0
+  - [180,4.5,0]
+$CustomAttributes:
+-
+ Name: transfer2CSC
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	local CT:object := ?.succ; -- Cross transfer
+  	if CT.ready4Loading then -- custom attribute
+  		local CSC:object := CT.cont; -- cross-sliding car
+  		@.move(CSC); -- load
+  		CT.ready4Loading := false;
+  		CSC.backwards := false;
+  		CSC.stopped := false;
+  	end;
+  
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-701f-a370-8da2238ad50a
+ Name: Connector3
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7084-ae47-97ca5a803de3
+$Predecessors:
+- 01a0236c-0546-705d-beaa-d7b472a265fe
+InheritEntranceExitLockedOnReset: false

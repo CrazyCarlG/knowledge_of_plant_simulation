@@ -1,0 +1,26 @@
+InternalClassType: Station
+Coordinate3D: [21,-8,0]
+Origin: 01a0236c-0546-7049-a5df-e9350fb02a64
+RandomSeed: 143
+ShiftcalendarObject: "ShiftCalendar"
+UUID: 01a0236c-0546-737e-9fbf-43187fd9ec29
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-73bd-91dd-324921271f88
+ Name: Connector2
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-73be-9b5a-35231087f491
+$Predecessors:
+- 01a0236c-0546-73bc-a64d-1026928b19eb
+InheritEntranceExitLockedOnReset: false

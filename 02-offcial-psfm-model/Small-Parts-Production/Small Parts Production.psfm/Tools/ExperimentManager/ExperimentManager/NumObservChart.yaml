@@ -1,0 +1,188 @@
+InternalClassType: Chart
+ChartType: "Spline"
+Coordinate3D: [13.75,-30.85,0]
+DataSource: "Input Channels"
+DataTable: "self.data"
+Label: "Confidence intervals"
+LegendLocation: "Right"
+Name: NumObservChart
+Origin: 4b79392b-3376-4827-b335-1c5a4343e7d4
+RandomSeed: 225
+Subtitle: "of the output value '$1' of the experiment $2."
+Title: "The width of the confidence interval"
+UUID: c31a65d9-5d9e-4673-bd47-33238816d2f2
+XGrid: false
+XGridLines: 25
+XLabel: "Number of Observations (The observed confidence interval is marked.)"
+YGrid: false
+YGridLineInterval: 0
+YLabel: ""
+$CustomAttributes:
+-
+ Name: data
+ ID: 1
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 8
+   DataType: time
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    Hidden: false
+    Width: 11
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+    DataType: integer
+  ColumnIndex: [integer,5,~,3,4,5,6]
+  Columns:
+  - [0,string,3,"Mean value","Left interval bound","Right interval bound"]
+  - [1,time,3,5,1,9]
+  - [2,time,3,5,3,7]
+  - [3,time,3,5,4,6]
+  - [4,time,3,5,4.5,5.5]
+ ShowInTooltip: false
+-
+ Name: show
+ ID: 2
+ DataType: method
+ Value: |+1
+  var ChartObj:object;var selectTab:list[string];var outputValStr,str,s:string;var j,rN,n,nExp,k:integer
+  
+  ChartObj := self.~
+  if ChartObj.active then ChartObj.active := false end
+  
+  if DetailedResults.yDim < 1  -- No experiment run was execute.
+  	messageBox(rootfolder.Localization.getText(112),1,4) -- info
+  	return
+  end
+  
+  -- output value selection for the chart object
+  selectTab.create
+  selectTab.insertList(1, ValueDescriptions.copy({1,1}..{1,*})) -- alias
+  for j := selectTab.dim downto 1 
+  	if (ValueDescriptions[2,j]="Input") OR isOutTable(ValueDescriptions[0,j]) 
+  		selectTab.remove(j)
+  	end
+  next
+  
+  switch selectTab.dim
+  case 1 
+  	str := selectTab[1]
+  	outputValStr := valueDescriptions.getOrig(str)
+  	print "Only the output value'",str," ' (",outputValStr,") is possible for the prediction."
+  	rN := DetailedResults.getColumnNo(str)
+  case 0  -- There is no output value for the prediction.
+  	messageBox(rootfolder.Localization.getText(359),1,4) -- info
+  	return
+  else -- Select one output value from the list below.
+  	j := promptlist1(selectTab, rootfolder.Localization.getText(114))
+  	if j > 0 
+  		str := selectTab[j]
+  		outputValStr := valueDescriptions.getOrig(str)
+  		print "Use the output value'",str,"' (",outputValStr,") for the prediction."
+  		rN := DetailedResults.getColumnNo(str)
+  	else
+  		return -- "Number of observations" without selection
+  	end
+  end
+  	
+  ChartObj.colDetailedResults := rN
+  -- Selection of the experiment
+  SelectExp4NumObs.label := rootfolder.Localization.getText(10)
+  SelectExp4NumObs.open
+ ShowInTooltip: false
+-
+ Name: prepData
+ ID: 3
+ DataType: method
+ Value: |+1
+  var ChartObj:object := self.~
+  var nExp:integer := ChartObj.ExpNo
+  var colDetailedResults:integer := ChartObj.colDetailedResults
+  -- of the output value "alias" of the experiment "nExp"
+  ChartObj.subTitle := rootfolder.Localization.getMessage(346,DetailedResults[colDetailedResults,0],nExp,"")
+  
+  var dataType:string := DetailedResults.getDataType(colDetailedResults)
+  ChartObj.data.dataType := dataType
+  var mu:real    := DetailedResults[colDetailedResults,    nExp]
+  var sigma:real := DetailedResults[colDetailedResults + 1,nExp]
+  var n:integer := NumRuns
+  
+  var t:table := ChartObj.data
+  t.delete({1,0}..{*,*})
+  
+  var k:integer
+  var AnnoTab:table
+  for var j := min(3,n) to 4 * n  -- n = NumRuns
+  	k += 1
+  	t[k,0] := j
+  	if j=n  -- show the observed confidence interval
+  		AnnoTab := ChartObj.Annotations
+  		AnnoTab.delete--       value, from,                 to                 color, style (no text)
+  		AnnoTab.writeRow(1,1, 0,k,DetailedResults[colDetailedResults+4,nExp],DetailedResults[colDetailedResults+5,nExp],1,2)
+  	end
+  	var zValue:real := quantil_t(1 - alpha /2, j - 1) -- approx computed
+  	t[k,1]:= mu
+  	var width:real := zValue * sigma / sqrt(j)
+  	t[k,2]:= mu - width
+  	t[k,3]:= mu + width
+  next
+ ShowInTooltip: false
+-
+ Name: colDetailedResults
+ ID: 4
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: ExpNo
+ ID: 5
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: showPrediction
+ ID: 6
+ DataType: method
+ Value: |+1
+  -- called by: temporary dialog "Number of observations ..."
+  param nExp:integer
+  
+  var ChartObj:object := self.~
+  var rN:integer := NumObservChart.colDetailedResults
+  var sigma:real := DetailedResults[rN+1,nExp]
+  if abs(sigma) < 1e-100 
+  	-- The output values of 'Alias' are approximately equal 0. The consideration is impossible.
+  	messageBox(to_str(rootfolder.Localization.getMessage(348,DetailedResults[rN,0],"",""),strChr(10),rootfolder.Localization.getText(349)),1,1) -- error
+  	return
+  end
+  
+  ChartObj.colDetailedResults := rN-- used by method prepData
+  ChartObj.ExpNo := nExp
+  
+  ChartObj.prepData
+  ChartObj.active := true
+ ShowInTooltip: false
+$Colors:
+- 0x0
+- 0xffffff
+- 0xffffff
+- 0x0
+- [0xff,0,3]
+- [0xff0000,0,5]
+- [0x8000,0,7]
+- [0xe8f8,0,9]
+- [0xffee00,0,11]
+- [0xff00ff,0,0]
+- [0xee00cc,0,1]
+- [0xddff,0,92]
+- [0xff,0,96]
+$WindowRect: [1547,144,414,491]

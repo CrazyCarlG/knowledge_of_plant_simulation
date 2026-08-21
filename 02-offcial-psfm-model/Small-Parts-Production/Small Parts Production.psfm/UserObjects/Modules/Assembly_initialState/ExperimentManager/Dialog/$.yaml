@@ -1,0 +1,29 @@
+InternalClassType: Frame
+Origin: eaaf562c-5fea-42f6-bbfc-22e1d483974b
+RandomSeed: 1073746827
+UUID: 01a0236c-0546-70b7-ac72-a7664ab08318
+3D:
+ PlanningView: true
+ ShowBasePlate: true
+ ShowConnections: true
+ ShowContent: false
+ ShowExternalGraphics: false
+ ShowGrid: false
+ ShowLabels: false
+ ShowMaterialFlowDirections: true
+ ShowNames: true
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+$CustomAttributes:
+-
+ Name: startDateExpRun
+ ID: 1
+ $DataType: datetime
+ Value: 2011-8-17 16:28:14.7090001
+-
+ Name: StudyExecuted
+ ID: 4
+ $DataType: boolean
+ Value: false

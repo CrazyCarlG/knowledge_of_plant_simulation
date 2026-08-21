@@ -1,0 +1,20 @@
+InternalClassType: ParallelStation
+Origin: 01a0236c-0546-705e-8fc4-011f1786f03f
+RandomSeed: 135
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+UUID: 01a0236c-0546-71f9-addf-895c1770c901
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.4,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Predecessors:
+- 01a0236c-0546-71fa-90e7-e0fe8837fdec
+InheritEntranceExitLockedOnReset: false

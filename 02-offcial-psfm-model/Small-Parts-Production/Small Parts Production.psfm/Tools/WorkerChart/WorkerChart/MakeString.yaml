@@ -1,0 +1,46 @@
+InternalClassType: Method
+Coordinate3D: [24,-6.5500000000000007,0]
+Name: MakeString
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- This method adds the cells of a given column to one string
+ -- and replaces "Workers" and "Pools"
+ -- with the given Objects
+ -- called by: refresh
+ param Item : table[string], Worker, Pool : object -> string
+ 
+ var i : Integer; var s, sTemp : string
+ 
+ for i := 1 to Item.yDim 
+ 	if Item[1,i] /= VOID 
+ 		switch Item[1,i]
+ 		case "Worker" 
+ 			s := s+to_str(Worker)
+ 		case "Pool" 
+ 			s:= s+to_str(Pool)
+ 		else
+ 			s := s+Item[1,i]
+ 		end
+ 	end
+ next
+ return s
+
+RandomSeed: 31
+UUID: 098d8fbf-dcb6-4cf3-a954-ebe33b5ed6ad
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

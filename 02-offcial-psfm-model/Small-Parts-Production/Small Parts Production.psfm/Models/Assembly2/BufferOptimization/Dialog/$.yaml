@@ -1,0 +1,35 @@
+InternalClassType: Frame
+LockStructure: true
+Origin: eaaf562c-5fea-42f6-bbfc-22e1d483974b
+RandomSeed: 1073747549
+UUID: 01a0236c-0546-74e3-8132-0d569acebc0a
+3D:
+ PlanningView: true
+ ShowBasePlate: true
+ ShowConnections: true
+ ShowContent: false
+ ShowExternalGraphics: false
+ ShowGrid: false
+ ShowLabels: false
+ ShowMaterialFlowDirections: true
+ ShowNames: true
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+$CustomAttributes:
+-
+ Name: startDateExpRun
+ ID: 1
+ $DataType: datetime
+ Value: 2018-7-31 14:48:12.2019999
+-
+ Name: restoring
+ ID: 3
+ $DataType: boolean
+ Value: false
+-
+ Name: StudyExecuted
+ ID: 4
+ $DataType: boolean
+ Value: false

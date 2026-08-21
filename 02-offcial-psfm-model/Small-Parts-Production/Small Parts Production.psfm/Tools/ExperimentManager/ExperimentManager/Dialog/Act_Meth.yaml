@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [-3,4,0]
+Name: Act_Meth
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ var rName:string := @.activeRuleName
+ var rTab:object := ~.Rules.Rules
+ rTab.setCursor(2,1)
+ rTab.find({2,1}..{2,*},rName)
+ var row:integer := rTab.cursorY
+ if rTab[6,row] /= void 
+ 	rTab[6,row].openDialog
+ end
+
+RandomSeed: 323
+UUID: a6d696ab-a63c-4454-a580-2600e20fdfea
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

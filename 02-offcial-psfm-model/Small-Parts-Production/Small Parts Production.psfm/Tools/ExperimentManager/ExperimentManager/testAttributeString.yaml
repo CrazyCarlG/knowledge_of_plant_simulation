@@ -1,0 +1,49 @@
+InternalClassType: Method
+Coordinate3D: [6.4,-27.5,0]
+Name: testAttributeString
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- formulars are not allowed as output values
+ -- called by: plausibility interaction of 'Values'
+ param attrStr:string->boolean
+ 
+ var varStrNeu:string
+ -- detect formular:
+ var a:integer := strLpos("+",attrStr)+strLpos("-",attrStr)+strLpos("*",attrStr)+strLpos("/",attrStr)
+ if a>0
+ 	return false
+ end
+ if isOutTable(attrStr)
+ 	return true
+ end
+ 
+ a := strLpos("[",attrStr)
+ if a>0 AND strLpos(",",attrStr)=0  -- 1D-list, use the read method
+ 	var b := strLpos("]",attrStr)
+ 	varStrNeu := to_str(strCopy(attrStr,1,a-1),"[", strCopy(attrStr,a+1,b-a-1),"]")
+ else
+ 	varStrNeu := attrStr
+ end -- 1D-list
+ 
+ var stmt:string := to_str("-> boolean ",varStrNeu,"; result := true") --print stmt;
+ 
+ var res:any := executeSilent(stmt)
+ result := isBoolean(res) AND res
+RandomSeed: 278
+UUID: 4218201b-0eba-4091-9a77-7ceecaa99429
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

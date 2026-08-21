@@ -1,0 +1,33 @@
+InternalClassType: Method
+Coordinate3D: [6.95,-13.8,0]
+Name: getNumExp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: resetWizard_
+ ->integer
+ for var j := 1 to ExpTable.yDim
+ 	if ExpTable[1,j]
+ 		result += 1
+ 	end
+ next
+ if UsingRules
+ 	result := max(NumRulesExp, result)
+ end
+RandomSeed: 168
+UUID: 33c2ab32-d6ee-41da-943d-d7e6ec4b43e6
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

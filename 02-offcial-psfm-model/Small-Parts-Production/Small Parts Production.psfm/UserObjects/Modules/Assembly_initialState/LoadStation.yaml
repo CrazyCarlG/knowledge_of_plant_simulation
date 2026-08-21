@@ -1,0 +1,236 @@
+InternalClassType: ParallelStation
+Coordinate3D: [0,8.3,0]
+Label: "LoadStation"
+Name: LoadStation
+Origin: e4aecf63-91e6-4dc3-9b4d-dbac5ba4227d
+ProcTime: 15
+RandomSeed: 101
+RecoveryTime: 0
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+UUID: 01a0236c-0546-702d-a4b6-44c31f6843c7
+XDim: 1
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.4,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: WaitingParts
+ ID: 1
+ $DataType: list
+ Value:
+  CommonFormat: false
+  Column: [object,3,"","",""]
+-
+ Name: PartSensorID
+ ID: 4
+ $DataType: integer
+ Value: 0
+-
+ Name: PartStation
+ ID: 5
+ $DataType: object
+ Value: "ParallelProc"
+-
+ Name: Blocksize
+ ID: 9
+ $DataType: integer
+ Value: 1
+-
+ Name: OpenedDialog
+ ID: 10
+ $DataType: object
+ Value: ""
+-
+ Name: TargetSensorID
+ ID: 14
+ $DataType: integer
+ Value: 1
+-
+ Name: TargetStation
+ ID: 15
+ $DataType: object
+ Value: "F0"
+-
+ Name: WaitingTargets
+ ID: 16
+ $DataType: list
+ Value:
+  CommonFormat: false
+  Column:
+-
+ Name: TargetIsContainer
+ ID: 17
+ $DataType: boolean
+ Value: true
+-
+ Name: unloadPartcontainer
+ ID: 18
+ $DataType: boolean
+ Value: false
+-
+ Name: Partnumber
+ ID: 21
+ $DataType: integer
+ Value: 1
+-
+ Name: MovedBlocks
+ ID: 22
+ $DataType: integer
+ Value: 0
+-
+ Name: HomogeneousTarget
+ ID: 23
+ $DataType: boolean
+ Value: false
+-
+ Name: AlwaysStopTarget
+ ID: 24
+ $DataType: boolean
+ Value: false
+-
+ Name: BlocksizePart
+ ID: 25
+ $DataType: object
+ Value: ""
+-
+ Name: Parttype
+ ID: 29
+ $DataType: string
+ Value: ""
+-
+ Name: ContinueTarget
+ ID: 34
+ $DataType: boolean
+ Value: false
+-
+ Name: Status
+ ID: 36
+ $DataType: string
+ Value: "waiting"
+-
+ Name: StatusTable
+ ID: 40
+ $DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 7
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: string
+    Width: 10
+   -
+    Index: 2
+    Alignment: "Right"
+    DataType: integer
+    Width: 10
+   -
+    Index: 3
+    Alignment: "Right"
+    DataType: time
+    Width: 12
+   -
+    Index: 4
+    Alignment: "Right"
+    DataType: real
+    FormatString: "-15.2"
+    Width: 10
+   -
+    Index: 5
+    Alignment: "Right"
+    DataType: real
+    FormatString: "-15.2"
+    Width: 10
+   -
+    Index: 6
+    Alignment: "Right"
+    DataType: time
+    Width: 12
+   -
+    Index: 7
+    Alignment: "Right"
+    DataType: time
+    Width: 14
+  ColumnIndex: [string,8,~,"Value","Frequency","Duration","%_Frequency","%_Duration","Mean Duration","Standard Deviation"]
+  Columns:
+  - [1,string,1,"waiting_for_target"]
+  - [2,integer,1,1]
+  - [3,time,1,0]
+  - [4,real,1,100]
+  - [5,real,1,0]
+  - [6,time,1,0]
+  - [7,time,1,0]
+-
+ Name: UserPartExitCtrl
+ ID: 46
+ $DataType: string
+ Value: ""
+-
+ Name: UserTargetExitCtrl
+ ID: 47
+ $DataType: string
+ Value: ""
+-
+ Name: UserCtrl
+ ID: 62
+ $DataType: string
+ Value: ""
+-
+ Name: ConfigurationError
+ ID: 65
+ $DataType: boolean
+ Value: false
+-
+ Name: TypeSpecific
+ ID: 75
+ $DataType: boolean
+ Value: false
+-
+ Name: TypeTable
+ ID: 76
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+-
+ Name: Containertype
+ ID: 77
+ $DataType: string
+ Value: ""
+-
+ Name: ReadyTargets
+ ID: 82
+ $DataType: list
+ Value:
+  CommonFormat: false
+  Column:
+-
+ Name: PartSensorLane
+ ID: 88
+ $DataType: integer
+ Value: 1
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ $Name: Failure
+ ID: 1
+ AvailabilityOn: true
+ Interval: 0
+ Duration: 0

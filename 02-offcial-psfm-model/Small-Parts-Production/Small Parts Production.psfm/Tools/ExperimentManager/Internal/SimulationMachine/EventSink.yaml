@@ -1,0 +1,120 @@
+InternalClassType: Method
+Coordinate3D: [16.85,-7.45,0]
+Name: EventSink
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- callback of the remote process
+ -- event treatment: end of simulation,_timeout, messageBox on the remote machine
+ -- ErrorHandler
+ /* Attention: If you use Debugger > StopOnControls or Debugger > StopOnSubRoutines the eventSink_method
+ shows the messages at the end and not at the correct time.
+ */
+ param id:integer, p1:any -- p1 text of message, in general.
+ 
+ if JobId = -1
+ 	return
+ end
+ var EvCtrlStr:string := to_str(rootframe,".eventController")
+ 
+ var row:integer := MachineIndex
+ var machTab:object := ~.MachinesTable
+ if id = 1 	-- Simulation ended (p1 = VOID)
+ 	-- "The simulation was ended as expected and is ready for evaluation."
+ 	machTab.addLogging("The simulation was ended as expected and is ready for evaluation.", JobId, MachineIndex, false)
+ 
+ 	var infoStr:string := "ready for evaluation"	-- job status
+ 	-- if machTab[10,row] = infoStr then return end
+ 	machTab[10,row] := infoStr	-- job status
+ 
+ 	var t:time := sysdate - startDateTime
+ 	/*machTab[16,row] += t -- measure the simulation running time
+ 	machTab[15,row] += 1 -- counter simulation runs*/
+ 
+ 	var eMPlant:any := getInterfaceOfRemoteProcess(eMPlantHandle)
+ 	~.~.M_ReadResult(eMPlant,JobId, row) -- code depends of the wizard (Experimentmanager or GAwizard)
+ 
+ 	eMPlant.StopSimulation -- Plant Simulation does not generate new events.
+ 
+ 	machTab[9,row] := -1
+ 	machTab[10,row] := "idle"
+ 	JobId := -1
+ 	&RunProcess.executeNewCallChain
+ 
+ elseif id = 2
+ 	-- Catch an error by the ErrorHandling on the remote machine.
+ 	-- The message is sent by 'fireSimTalkMessage' and recognized by the string "Unknown error".
+ 
+ 	machTab.addLogging(to_str("'",p1,"' job ",JobId), JobId, MachineIndex, true)
+ 
+ 	if strLpos("Unknown error",to_str(p1)) = 1
+ 		machTab[10,row] := "Cancelled simulation"-- catched by the Global Error Handler
+ 		~.~.Recording.remoteErrors := true -- shows message "An error occurred on a remote computer."
+ 		~.~.Recording.append(to_str(p1))
+ 		~.~.Recording.localErrors += 1
+ 		eMPlant := getInterfaceOfRemoteProcess(eMPlantHandle)
+ 		-- Do not eMPlant.StopSimulation. Plant Simulation does not generate new events.
+ 
+ 		if ~.~.SaveModelOnError -- The custom attribute was set to true.
+ 			var stmt: string := to_str("-> string return getenv(\\"COMPUTERNAME\\")")
+ 			var compName: string := eMPlant.executeSimTalk(stmt) -- only used for Recording
+ 			var path: string := to_str(SHGetKnownFolderPath("{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}"),"\\ErrorModel.spp")
+ 			stmt :=  to_str("-> boolean return saveModel(\\"",path,"\\", false, false)")
+ 			if eMPlant.executeSimTalk(stmt)
+ 				~.~.Recording.append(to_str("Please check \\"ErrorModel.spp\\" on the desktop of the computer \\"",compName,"\\"."))
+ 			end
+ 		end
+ 
+ 		if JobId > 0
+ 			t := sysdate - startDateTime
+ 			machTab[16,row] += t -- measure the simulation running time
+ 			machTab[15,row] += 1 -- counter simulation runs
+ 			~.~.M_TreatError(JobId,to_str(p1))  -- The observation of the JobId is canceled.
+ 		end
+ 		machTab[9,row] := -1
+ 		machTab[10,row] := "idle"
+ 		JobId := -1
+ 
+ 		eMPlant.ResetSimulation(EvCtrlStr) -- Plant Simulation generates the first events.
+ 
+ 		&RunProcess.executeNewCallChain
+ 	else
+ 		var MessStr:string := to_str("Message (id=2): ",p1)
+ 		machTab.addLogging(MessStr, JobId, MachineIndex, true)
+ 		~.~.Recording.append(MessStr)
+ 	end
+ 
+ elseif id = 3 -- simulation continues
+ 	MessStr := to_str("Message (id=3): ",p1)
+ 	machTab.addLogging(MessStr, JobId, MachineIndex, true)
+ 	~.~.Recording.append(MessStr)
+ 	-- Message e.g.: Method in line 34: Debug statement encountered.
+ 
+ else
+ 	MessStr := to_str("Unexpected message (id=",id,"): ",p1)
+ 	machTab.addLogging(MessStr, JobId, MachineIndex, true)
+ 	~.~.Recording.append(MessStr)
+ end
+RandomSeed: 349
+UUID: 51a93aac-a10f-439d-82fe-310644911443
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: ErrorHandler
+ ID: 1
+ DataType: object
+ Value: "ErrorHandler"
+ ShowInTooltip: false

@@ -1,0 +1,43 @@
+InternalClassType: Method
+Coordinate3D: [22.150000000000002,-19.85,0]
+Name: quoteInStr
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by:_M_ReadResult
+ -- read_table cells with are accessed by user defined indices
+ /* test by:
+ 	s := "tab[\\"xy\\",\\"ab\\"]";
+ 	print s;
+ 	print quoteInStr(s);*/
+ param AttrStr:string->string
+ 
+   var s:string;var i,k:integer
+ 
+ s := "\\""
+ result := AttrStr
+ k := strLpos(s,result)
+ if k > 0 
+ 	for i := strLen(result) downto k 
+ 		if s = strCopy(result,i,1) 
+ 			result := to_str(strCopy(result,1,i-1),"\\\\",strOmit(result,1,i-1))
+ 		end
+ 	next
+ end
+RandomSeed: 214
+UUID: f12f8a6e-cda1-4ace-8e61-a02127bd11d7
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,61 @@
+InternalClassType: Method
+Coordinate3D: [20.1,-1.85,0]
+Name: EvaluateSimMachines
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by ExpMgr.EndOfAllExperiments, GAwizard.Termination
+ -- Prepare statistics in table RemMachines = Dialog.RemoteMachines
+ param JobTab, RemMachines, AllRemoteMachines:object -- JobsTable, Dialog.RemoteMachines, Dialog.RemoteTable
+ if ~.UsingRules
+ 	JobTab.delete
+ 	JobTab.AllJobs4Rules.copyContentTo(JobTab)
+ end
+ 
+ RemMachines.delete({0,1}..{*,*});
+ var columnJobTab:integer := JobTab.stateColumnNo;
+ -- Computer, Number of parallel processes, Number of runs, Total simulation time, Mean running time of a simulation
+ for var j := 1 to JobTab.yDim loop
+ 	var CompName:string := JobTab[columnJobTab + 1,j] -- Computername (no)
+ 	if CompName /= ""
+ 		CompName := strCopy(CompName,1,strLpos("(", CompName)-2)
+ 		var compNo:integer := RemMachines.getRowNo(CompName)
+ 		if compNo < 1 then
+ 			compNo := RemMachines.yDim + 1
+ 			RemMachines[0,compNo] := CompName
+ 			AllRemoteMachines.setCursor(1,1)
+ 			if strToUpper(CompName) = strToUpper(getenv("COMPUTERNAME")) 
+ 				CompName := "localhost";
+ 			end;
+ 			if AllRemoteMachines.find({1,1}..{1,*}, CompName) 
+ 				RemMachines[1,compNo] := AllRemoteMachines[2, AllRemoteMachines.cursorY] -- Number of parallel processes
+ 			end		
+ 		end
+ 		RemMachines[2,compNo] := RemMachines[2,compNo] + 1;  -- Number of runs
+ 		RemMachines[3,compNo] := RemMachines[3,compNo] + JobTab[columnJobTab + 4,j] -- Total simulation time
+ 	end -- if CompName /= ""
+ next
+ 
+ for var j := 1 to RemMachines.yDim loop
+ 	var h:integer := RemMachines[2,compNo]
+ 	if h>0 then
+ 		RemMachines[4,j] := RemMachines[3,compNo]/h -- Mean running time of a simulation
+ 	end
+ next;
+RandomSeed: 338
+UUID: bbec4bc6-2aad-44b4-8e46-e1a04b0f52b5
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

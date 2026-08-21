@@ -1,0 +1,157 @@
+InternalClassType: Method
+Coordinate3D: [2.8999999999999986,-6.5,0]
+Name: OutputChanged
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- interaction 'Plausibility' of the table 'output' and called by Reset the wizard (resetWizard_)
+ -- after Drag & Drop
+ var col,k,numOutputValues:integer
+ var str,dataTypeStr,attrStr:string
+ 
+ OK_output := true
+ DetailedResults.delete({0,0}..{*,*})
+ DetailedResults.setAlignmentColumn(0,"center")
+ Results.setAlignmentColumn(0,"center")
+ DetailedResults.translate
+ --DetailedResults.setFontColorCells({0,0}..{1000,0},makeRGBValue(0,0,0));
+ Kind_Output.delete({0,1}..{*,*})
+ 
+ -- delete all "Tab" items
+ for var j := Output.yDim downto 1
+ 	Output[1,j] := strTrim(Output[1,j])
+ 	if strLen(Output[1,j]) < 2
+ 		Output.cutRow(j)
+ 	end
+ next
+ 
+ if Output.yDim=0
+ 	-- Please specify result values as the target of the simulation study.
+ 	messageBox(rootfolder.Localization.getText(224),1,4) -- info
+ 	Output.inheritContents := false
+ 	Output.openDialogBox(true)
+ 	return
+ end
+ 
+ ReplaceRootstr(Output,1)
+ 
+ if NOT ValueDescriptions.reg then OK_output := false; end
+ 
+ for var j:=1 to Output.yDim
+ 	attrStr := Output[1,j]
+ 	var highIsBetter:boolean := Output[3,j]
+ 	str := ValueDescriptions.get(attrStr)
+ 	--
+ 	Input.setCursor(1,1)
+ 	if Input.find({1,1}..{1,*},attrStr)  -- The value $1 is already an input value.
+ 		messageBox(Rootfolder.Localization.getMessage(368,attrStr,"",""),1,4) -- info
+ 		OK_input := false
+ 	end
+ 
+ 	if isOutTable(attrStr)
+ 		if NOT Output[3,j].void -- "High Values are Better" is not reasonable
+ 			Output[3,j] := void
+ 		end
+ 		-- insert a new table into DetailedResults
+ 		k += 1
+ 		DetailedResults.setDataType(k,"table")
+ 		DetailedResults.setCommonFormat(k,false)
+ 		DetailedResults.setAlignmentColumn(k,"center")
+ 		DetailedResults[k,0] := str -- description of the output table
+ 		DetailedResults.setFontSizeColumn(k,2)-- 2:Medium, default is 1:Small
+ 
+ 		for col := 0 to 2  --"Standard Deviation","Minimum","Maximum"
+ 			k += 1
+ 			DetailedResults.setDataType(k,"table")
+ 			DetailedResults.setCommonFormat(k,false)
+ 			DetailedResults.setAlignmentColumn(k,"center")
+ 			DetailedResults.setFontSizeColumn(k,1)-- 2:Medium, default is 1:Small
+ 			str := Rootfolder.Localization.getText(291 + col)-- 291,.., 295
+ 			DetailedResults[k,0] := str
+ 		next
+ 		k += 1
+ 		str := Rootfolder.Localization.getText(296)-- "Observations"
+ 		DetailedResults[k,0] := str
+ 		DetailedResults.setDataType(k,"table")
+ 		DetailedResults.setCommonFormat(k,false)
+ 		--DetailedResults.setDataType(k,"string")
+ 		DetailedResults.setAlignmentColumn(k,"center")
+ 
+ 	else -- numerical output value
+ 		attrStr := insRootstr(attrStr,to_str(root))
+ 		dataTypeStr := recogDataType(attrStr)
+ 		if dataTypeStr ~= "integer" then dataTypeStr := "real";end
+ 		if (dataTypeStr = "Not allowed") OR (dataTypeStr = "boolean") OR (dataTypeStr = "string")
+ 
+ 			-- The operation failed in row $1.
+ 			-- Make sure that the associated object exists.
+ 			-- Also check if the data type is allowed.
+ 			messageBox(to_str(rootfolder.Localization.getMessage(405,j,"",""), strChr(10),rootfolder.Localization.getText(406), strChr(10), rootfolder.Localization.getText(407)),1,1) -- error
+ 			OK_output:= false
+ 		else
+ 			if NOT testAttributeString(attrStr)  -- Error in row:
+ 				messageBox(to_str(Rootfolder.Localization.getText(43)," ",j,strChr(10),attrStr),1,1)
+ 				OK_output := false
+ 			else
+ 				numOutputValues += 1-- local variable: number of output values
+ 				OutputValues[numOutputValues,0] := attrStr -- fill row 0 in 'OutputValues'
+ 				OutputValues.setDataType(attrStr,dataTypeStr)
+ 				Kind_Output.writeRow(0,numOutputValues, attrStr,"Tab", when Output[3,j].void then void else Output[3,j])
+ 				-- insert a new value into DetailedResults
+ 				k += 1
+ 				DetailedResults[k,0] := str -- description of the numerical output value
+ 				DetailedResults.setAlignmentColumn(k,"right")
+ 				DetailedResults.setFontSizeColumn(k,2)
+ 				DetailedResults.setDataType(k,dataTypeStr)
+ 
+ 				--"Standard Deviation","Minimum","Maximum","Left interval bound","Right interval bound"
+ 				for col := 0 to 4
+ 					k += 1
+ 					DetailedResults.setDataType(k,dataTypeStr)
+ 					str := Rootfolder.Localization.getText(291 + col)-- 291,.., 295
+ 					DetailedResults[k,0] := str
+ 					DetailedResults.setFontSizeColumn(k,1)
+ 					DetailedResults.setAlignmentColumn(k,"right")
+ 				next
+ 				k += 1
+ 				str := Rootfolder.Localization.getText(296)-- "Observations"
+ 				DetailedResults[k,0] := str
+ 				DetailedResults.setDataType(k,"string")
+ 				DetailedResults.setDataType(k,"table")
+ 				DetailedResults.setAlignmentColumn(k,"center")
+ 			end-- testAttributeString ok
+ 		end-- dataType ok
+ 	end -- output value
+ next-- j, row in Output
+ 
+ Dialog.Dialog.setSensitive("Variable_Chart_but",(numOutputValues>1)) -- select an output value for the chart
+ -- the chart shows a numerical output value
+ Dialog.Dialog.setSensitive("Chart_but",(numOutputValues>0))
+ 
+ Kind_Output.numberOfOutputValues := numOutputValues
+ 
+ Output.refillDialog
+ if NOT OK_output
+ 	Output.WarningGiven := true
+ 	return
+ end
+ 
+ Results.reg -- delete table Results
+ Results.refillDialog
+RandomSeed: 244
+UUID: 063a35d4-bda6-42b4-88a6-bf49db1d5ae6
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

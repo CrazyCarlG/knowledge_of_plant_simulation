@@ -1,0 +1,22 @@
+InternalClassType: DataList
+Origin: 8b0633bd-a16c-495e-bc56-616c6d45efdc
+UUID: 01a0236c-0546-7092-a381-820abfccef3d
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: remoteErrors
+ ID: 2
+ $DataType: boolean
+ Value: false
+-
+ Name: localErrors
+ ID: 3
+ $DataType: integer
+ Value: 0
+$Data:
+ Column:

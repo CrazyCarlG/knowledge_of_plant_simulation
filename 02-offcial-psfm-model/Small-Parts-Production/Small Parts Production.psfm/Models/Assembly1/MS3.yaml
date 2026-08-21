@@ -1,0 +1,25 @@
+InternalClassType: AssemblyStation
+Origin: 01a0236c-0546-7060-9951-a205ef72d2b7
+RandomSeed: 134
+ShiftcalendarObject: "ShiftCalendar"
+UUID: 01a0236c-0546-71fb-8f31-e4773c93091f
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,0.5,0.15]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-71c1-b0aa-fc989bd6e8e2
+ Origin: 01a0236c-0546-7062-aab7-174d59c60c5e
+ UUID: 01a0236c-0546-71fd-8d3d-c5e3dfc09257
+$Predecessors:
+- 01a0236c-0546-71fc-bbb1-b6790be4c35a
+- 01a0236c-0546-7206-b671-0bc95ec176fa
+InheritEntranceExitLockedOnReset: false

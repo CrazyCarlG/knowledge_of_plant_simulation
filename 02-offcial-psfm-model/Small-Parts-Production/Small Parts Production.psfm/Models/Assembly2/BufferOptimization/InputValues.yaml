@@ -1,0 +1,29 @@
+InternalClassType: DataTable
+Origin: 3eb48fd5-892b-4539-bebd-a235f6783088
+UUID: 01a0236c-0546-74de-83fc-c4d286e1e442
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 10
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 10
+  -
+   Index: 1
+   DataType: integer
+ ColumnIndex: [string,2,"Control value","root.Buffer1.capacity"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Exp 4","Exp 5","Exp 6","Exp 7","Exp 8"]

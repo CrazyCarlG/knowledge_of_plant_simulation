@@ -1,0 +1,26 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70c8-aed2-da8bf2723f14
+RandomSeed: 1073747815
+UUID: 01a0236c-0546-73fe-b2d4-483ce1dece51
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: OutputValue
+ ID: 1
+ $DataType: string
+ Value: "root.Drain.statDeleted"
+-
+ Name: tmpTables
+ ID: 4
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+$Data:
+ ShowComment: true
+ Columns:

@@ -1,0 +1,88 @@
+InternalClassType: Dialog
+ArgumentForApply: "APPLY"
+Coordinate3D: [7.3500000000000005,-5.25,0]
+Label: ""
+Name: dialog
+Origin: 00be09fe-ec99-4568-9511-a89844f9ebd7
+RandomSeed: 341
+UUID: e39fd201-60f6-4443-84d1-17505cc8cf40
+3D:
+ Mirror: [false,false,false]
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- called by: dialog 'Simulation Machine' with 'Computer Name:' and 'Numbr of parallele processes:'.
+  param action:string
+  --print"action: ",action
+  switch action
+  case "APPLY" 
+  	var CompName:string := strTrim(dialog.getValue("CompName_Inp"))
+  	if strLen(CompName) > 0 
+  		var s:string := dialog.getValue("numParallelProc_Inp")
+  		var useAllCores:boolean := (s = "n")
+  		var numProc:integer
+  		if NOT useAllCores 
+  			numProc := str_to_num(s)
+  			if numProc < 1 then
+  				numProc := 1
+  				dialog.setCaption("numParallelProc_Inp","1")
+  			end
+  		end
+  		MainDialog.~.CB_AddAddress(dialog,CompName,numProc,useAllCores)
+  	end
+  case "Open"	
+  end
+ ShowInTooltip: false
+-
+ Name: DialogElements
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 2
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 2
+    DataType: integer
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,3,~,"element","Index"]
+  Columns:
+  - [1,string,2,"CompName_Txt","numParallelProc_Txt"]
+  - [2,integer,2,96,97]
+ ShowInTooltip: false
+$Elements:
+-
+ Type: StaticText
+ Name: "CompName_Txt"
+ Caption: "Computername:"
+-
+ Type: EditText
+ Name: "CompName_inp"
+ Caption: "aa"
+ Rect: [16,0,23,0]
+ DataType: 1
+ Password: false
+-
+ Type: StaticText
+ Name: "numParallelProc_Txt"
+ Caption: "Anzahl der parallelen Prozesse:"
+ Rect: [0,1,0,0]
+-
+ Type: EditText
+ Name: "numParallelProc_Inp"
+ Caption: "1"
+ Rect: [35,1,4,0]
+ DataType: 1
+ Password: false

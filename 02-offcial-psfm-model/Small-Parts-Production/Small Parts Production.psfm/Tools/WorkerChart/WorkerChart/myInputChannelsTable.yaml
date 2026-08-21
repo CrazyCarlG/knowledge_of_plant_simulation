@@ -1,0 +1,28 @@
+InternalClassType: DataTable
+Coordinate3D: [24.150000000000002,-10.450000000000001,0]
+Name: myInputChannelsTable
+Origin: 89124604-5872-4e98-b37d-0ca8d0b72b42
+UUID: b5b81d3c-025c-4190-9f0f-187bf04579db
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ Columns:
+ - [0,string,10,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed","Paused","Unplanned"]

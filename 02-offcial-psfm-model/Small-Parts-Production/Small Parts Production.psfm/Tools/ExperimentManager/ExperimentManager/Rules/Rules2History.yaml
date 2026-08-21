@@ -1,0 +1,122 @@
+InternalClassType: Method
+Coordinate3D: [-8.05,10,0]
+Name: Rules2History
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- fill tables 'OutputValues' and 'InputValues'
+ -- attributes in conditions -> OutputValues
+ -- attributes in actions    -> InputValues
+ -- called by: interaction close of condition and action tables
+ var i,k:integer
+ var obj_str,attr_str:string
+   -- in CONDITIONS
+ var ApplObj:object := ~
+ var TabObj:object := ~.OutputValues
+ TabObj.delete
+ var KindTab:object := ~.Kind_Output
+ deleteItemsOfType(TabObj,"Rule")-- delete all "Rule" items
+ for var ruleNo := 1 to Rules.yDim
+ 	var CondTab:table:= Rules[3,ruleNo]
+ 	for i:=1 to CondTab.yDim
+ 		obj_str := to_str(CondTab.asString(3,i))	-- Object
+ 		if strLen(CondTab[4,i])>0  -- Attribut
+ 			attr_str := CondTab[4,i]
+ 			if strCopy(attr_str,1,1) = "["
+ 				obj_str := to_str(obj_str, attr_str)
+ 			else
+ 				obj_str := to_str(obj_str,".",attr_str)
+ 			end
+ 		end
+ 		if TabObj.getColumnNo(obj_str) = -1  -- OutputValues
+ 			k := 1; while TabObj[k,0]/=void loop k := k+1; end
+ 			TabObj[k,0] := obj_str
+ 		end
+ 		if TabObj.getRowNo(obj_str) = -1
+ 			KindTab.writeRow(0,KindTab.yDim+1, obj_str,"Rule")
+ 		end
+ 		--
+ 		if CondTab[7,i] /= void -- right side is an attribute
+ 			obj_str := to_str(CondTab.asString(7,i))	-- Object
+ 			if strLen(CondTab[8,i])>0  -- Attribut
+ 				attr_str := CondTab[8,i]
+ 				if strCopy(CondTab[8, i],1,1) = "["
+ 					obj_str := to_str(obj_str, attr_str)
+ 				else
+ 					obj_str := to_str(obj_str, ".", attr_str)
+ 				end
+ 			end
+ 			if TabObj.getColumnNo(obj_str) = -1  -- OutputValues
+ 				k := 1; while TabObj[k,0]/=void loop k += 1; end
+ 				TabObj[k,0] := obj_str
+ 			end
+ 			if TabObj.getRowNo(obj_str) = -1
+ 				KindTab.writeRow(0,KindTab.yDim+1, obj_str,"Rule")
+ 			end
+ 		end-- right side is an attribute
+ 	next--i: row in condition table
+ next -- ruleNo in DataTable Rules
+ -- _ReplaceRootstr(TabObj,0);
+ 
+ var obj:object := ~.results4Rules
+ obj.delete({1,0}..{*,0})-- fill row 0
+ i:=0
+ for var j:=1 to KindTab.yDim  -- 'Kind_Output'
+ 	if KindTab[1,j]="Rule"  -- TabObj = OutputValues
+ 		i += 1
+ 		obj[i,0] := KindTab[0,j]
+ 	end
+ next
+ 
+ -- in ACTIONS
+ TabObj := ~.InputValues
+ TabObj.delete
+ KindTab := ~.Kind_Input
+ deleteItemsOfType(TabObj,"Rule") -- delete all "Rule" items
+ 
+ for var ruleNo := 1 to Rules.yDim
+ 	var ActTab:table := Rules[5,ruleNo]
+ 	for i:=1 to ActTab.yDim
+ 		obj_str := to_str(ActTab.asString(1,i)) -- Object
+ 		if strLen(ActTab[2,i])>0  -- Attribut
+ 			attr_str := ActTab[2,i]
+ 			if strCopy(attr_str,1,1) = "["
+ 				obj_str := to_str(obj_str,attr_str)
+ 			else
+ 				obj_str := to_str(obj_str, ".", attr_str)
+ 			end
+ 		end
+ 		if TabObj.getColumnNo(obj_str) = -1  -- OutputValues
+ 			k := 1
+ 			while TabObj[k,0]/=void loop k += 1; end
+ 			TabObj[k,0] := obj_str
+ 			KindTab.writeRow(0,KindTab.yDim+1, obj_str,"Rule")
+ 		end
+ 	next-- i: row in action table
+ next-- rule
+ --
+ obj := ~.ReportRules
+ obj.delete({1,0}..{*,0})
+ for var j := 1 to Rules.yDim
+ 	obj[j,0] := Rules[2,j] -- Rules name
+ next
+ -- no Factorial design
+ ~.factorDesignValue := ""
+ ~.Design4FactorialAnalysis := false
+RandomSeed: 297
+UUID: 3028810d-8684-4e76-96b2-abde69c7243d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

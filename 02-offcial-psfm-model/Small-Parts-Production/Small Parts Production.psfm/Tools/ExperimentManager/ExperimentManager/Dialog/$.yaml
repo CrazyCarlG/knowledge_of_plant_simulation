@@ -1,0 +1,63 @@
+InternalClassType: Frame
+Coordinate3D: [2.5,0,0]
+Name: Dialog
+Origin: 207547c5-de37-4eae-9e1f-e6b8919facc0
+RandomSeed: 306
+ReplacementMode: "exchange"
+UUID: eaaf562c-5fea-42f6-bbfc-22e1d483974b
+3D:
+ ShowContent: false
+$CustomAttributes:
+-
+ Name: startDateExpRun
+ ID: 1
+ DataType: datetime
+ Value: 1970-1-1
+ ShowInTooltip: false
+-
+ Name: showProgressByIcon
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- show the progress by the icons "Icon0",...,"Icon8"
+  param ExpNo,RunNo:integer
+  
+  var totalNum:integer
+  var ApplObj:object := ~
+  
+  if ApplObj.usingRules 
+  	totalNum := max(1, ApplObj.NumRulesExp)
+  elseif ~.usingTables 
+  	totalNum := max(1, ApplObj.ExpTable.yDim)
+  else
+  	totalNum := 1
+  end
+  
+  var j:integer := max(1, ApplObj.numRuns) -- number of observations
+  totalNum := totalNum * j
+  var n:integer := (ExpNo - 1) * j + RunNo
+  
+  var iconNo:integer := floor(8 * n/totalNum) -- round down of a number in [0,8)
+  -- iconNo = 0,...,7
+  -- 8 is shown ones after the last run
+  if -1 < iconNo AND iconNo < 9 
+  	ApplObj.selected := false
+  	var iconStr:string := to_str("icon",iconNo)
+  	ApplObj.CurrIcon := iconStr
+  	if ~._3D.exists
+  		~._3D.VisibleGraphicGroups := makeArray(iconStr)
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: restoring
+ ID: 3
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: StudyExecuted
+ ID: 4
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false

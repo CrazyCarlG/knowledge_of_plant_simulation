@@ -1,0 +1,40 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [-2,-1,0]
+Label: ""
+Length: 11.141592653589793
+Name: F0
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 111
+UUID: 01a0236c-0546-7021-8420-1cbbacc7bc38
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [-90,5,0]
+  - [0,90,2,0]
+  - [0,3,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-7046-af76-45569b40eefd
+ Name: Connector7
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7047-bff1-b763bdb1f88d
+$Predecessors:
+- 01a0236c-0546-702c-bbbb-82e30f76f955
+- 01a0236c-0546-7033-95ec-009d6bc42197
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ PositionAbs: 8.2
+ FromEnd: false
+ Control: "LoadStation.TargetSensorControl"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false

@@ -1,0 +1,57 @@
+InternalClassType: Method
+Coordinate3D: [1.4500000000000002,-2.15,0]
+DestructorCtrl:
+Name: ConnectProcess
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- start the remote process
+ -- this method has NO ErrorHandler, errors should open the debugger
+ -- called by: DistributedSimulation.StartMachine
+ param Test,firstStart:boolean
+ 
+ if emplantHandle > 0
+ 	M_Quit -- with errorhandler
+ end
+ 
+ var MachinesTab:object := ~.MachinesTable
+ MachinesTab[10,MachineIndex] := "Process started" -- job status
+ CreateProcess(Test)
+ 
+ if Test
+ 	var TestMsg:string := MachinesTab[14,MachineIndex]
+ 	if strLen(TestMsg) > 1
+ 		infoBox("",false)
+ 		messageBox(to_str(~.~.rootfolder.Localization.getText(177), ":  ", TestMsg),1,4) -- info: DCOM message
+ 	end
+ 	return
+ else
+ 	MachinesTab.numSimMachine := MachinesTab.numSimMachine - 1
+ 	if MachinesTab.numSimMachine = 0
+ 		infoBox("",false) -- "Starting remote processes ..."
+ 	end
+ end
+ sleep(~.~.DCOM_StartDelay, true) -- suspends the current Plant Simulation process and wait until the started process is ready (got license)
+ MachinesTab[10,MachineIndex] 	:= "Process initialized"	-- job status
+ MachinesTab[7,MachineIndex] 	:= eMPlantHandle			-- dispatch handle
+ if firstStart  -- needed for statistics of the simulation machines
+ 	MachinesTab[15,MachineIndex] := 0 -- counter simulation runs
+ end
+ 
+ &RunProcess.executeNewCallChain
+RandomSeed: 356
+UUID: 83fbb32e-1d0a-4026-9d1b-c09b3670dc83
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

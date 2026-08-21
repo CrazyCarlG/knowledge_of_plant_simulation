@@ -1,0 +1,23 @@
+InternalClassType: Frame
+LockStructure: true
+Origin: 01a0236c-0546-70b7-ac72-a7664ab08318
+RandomSeed: 1073747832
+UUID: 01a0236c-0546-73ed-adca-33fbd67b3bde
+3D:
+ ShowContent: false
+$CustomAttributes:
+-
+ Name: startDateExpRun
+ ID: 1
+ $DataType: datetime
+ Value: 2018-7-31 14:46:20.319
+-
+ Name: restoring
+ ID: 3
+ $DataType: boolean
+ Value: false
+-
+ Name: StudyExecuted
+ ID: 4
+ $DataType: boolean
+ Value: false

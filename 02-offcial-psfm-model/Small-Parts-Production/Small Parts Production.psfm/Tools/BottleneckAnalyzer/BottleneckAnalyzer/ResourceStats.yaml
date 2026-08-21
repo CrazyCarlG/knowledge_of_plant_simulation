@@ -1,0 +1,85 @@
+InternalClassType: DataTable
+Coordinate3D: [26.15,-1,0]
+Name: ResourceStats
+Origin: 9eaccf44-9c66-4a43-83ef-488614ff0662
+UUID: eb8c92c7-8fb4-4b8f-9e45-0c1e67f9c814
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Sorted according to the sum of working time and failure time"
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 10
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: object
+   Width: 20
+  -
+   Index: 2
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 10
+  -
+   Index: 3
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 10
+  -
+   Index: 4
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 10
+  -
+   Index: 5
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 10
+  -
+   Index: 6
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 15
+  -
+   Index: 7
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 10
+  -
+   Index: 8
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 12
+  -
+   Index: 9
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 13
+  -
+   Index: 10
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 12
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+ ColumnIndex: [string,11,~,"resource","working","set-up","waiting","blocked","poweringUpDown","disrupted","stopped","pause","sortCriteria"]
+ Columns:

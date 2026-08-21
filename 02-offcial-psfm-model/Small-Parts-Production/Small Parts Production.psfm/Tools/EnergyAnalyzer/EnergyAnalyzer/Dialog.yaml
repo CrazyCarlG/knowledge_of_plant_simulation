@@ -1,0 +1,393 @@
+InternalClassType: Dialog
+Coordinate3D: [-13,13,0]
+Label: "Energy Analyzer"
+Origin: df9502c2-a459-4f16-9ff1-b0a05c0a5651
+RandomSeed: 53
+ShowStandardButtons: true
+UUID: 2cd81dd3-451e-43a7-864d-3e5d3cc22de1
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ $DataType: method
+ Value: |+1
+  param action : string
+  
+  var b,selectFromAllCustomers:boolean;var str:string
+  
+  switch action
+  case "ChartBut" 
+  	showChart
+   
+  case "Active" 
+  	b := @.getCheckBox("Active")
+  	MonitoringActive := b
+  	prepareObserver(b)
+  	updateConsumption
+  	@.setSensitive("ShowPlotter",b) -- no plotter if no monitoring
+  	
+  	DisplayPanel.active := false
+  	if refEnergy._3D.Exists
+  		refEnergy._3D.VisibleGraphicGroups := makeArray() -- VisibleGraphics
+  	end
+  	
+  	if b 
+  		DisplayPanel.setElements(DisplayPanel_withMaximum)
+  		DisplayPanel.Height := 69
+  		if @.PlotterON 
+  			Plotter.active := true -- the user had opened the plotter
+  		end
+  
+  	else
+  		DisplayPanel.setElements(DisplayPanel_noMaximum)
+  		DisplayPanel.Height := 54
+  		var PlotOn:boolean := @.PlotterON
+  		Plotter.active := false
+  		if PlotOn 
+  			@.PlotterON := true -- the user had opened the plotter
+  		end
+  
+  	end
+  	
+  	b := @.getCheckBox("showDisplayPanel_CB")
+  	DisplayPanel.active := b
+  	if refEnergy._3D.Exists
+  		if b
+  			refEnergy._3D.inheritAttribute("VisibleGraphicGroups")
+  		else
+  			refEnergy._3D.VisibleGraphicGroups := makeArray() -- VisibleGraphics
+  		end
+  	end
+  
+  case "ShowPlotter"  -- "Energy Analysis in '",~.name,"'"
+  	Plotter.label := rootfolder.localization.getMessage(20,~.name,"","")
+  	Plotter.active := true
+  	Dialog.PlotterON := true
+  	
+  case "openTable" 
+  	openTable -- EnergyConsumers 
+  case "ShowVisualization" 
+  	showVisualization -- updateConsumption;_visualize;
+  case "RemoveVisualization" 
+  	delvisualize
+  case "Contents_Menu"
+  	 HTMLHelp("")
+  case "Index_Menu"
+  	HTMLHelp("","")
+  case "HelpObject_Menu"
+  	if ApplicationVersion < 15002000
+  		if UserInterfaceLanguage = 0 
+  			HTMLHelp(HelpOnObjectDEU)
+  		else
+  			HTMLHelp(HelpOnObjectENU) 
+  		end	
+  	else
+  		HTMLHelp(HelpOnObjectENU)
+  	end
+  case "OpenLoc_Menu"
+  	~.openDialog
+   
+  case "Open" 
+   @.setCheckBox("Active", MonitoringActive)
+   @.setCheckBox("showDisplayPanel_CB", DisplayPanel.active)
+   @.setObjectTable -- custom attribute
+   
+   @.setCaption("Layer_inp",to_str(Layer))
+   @.setCaption("Radius_inp",to_str(Radius))
+   
+   @.translateDisplayPanel
+   if @.getCheckBox("Active") 
+  		DisplayPanel.setElements(DisplayPanel_withMaximum)
+  		DisplayPanel.Height := 69
+   else
+  	 	DisplayPanel.setElements(DisplayPanel_noMaximum)
+  		DisplayPanel.Height := 54
+   end
+  
+  case "but_addAll" 
+  	Objects.delete
+  	findConsumers(~)
+  	
+  	--EnergyConsumers.setBackgroundColorCells({0,1}..{*,*},makeRGBValue(255,255,255));
+  	EnergyConsumers.delete({0,1}..{*,*})
+  	
+  	Objects.copyrangeTo({1,1}..{1,*}, EnergyConsumers,0,1)
+  	Frames.reg
+  	dialog.setObjectTable -- custom attribute
+  	
+  case "table_objects" 
+  	ConsumersSelection.delete
+  	ConsumersSelection.rowIndex := false
+  	ConsumersSelection.maxXdim := 1
+  	ConsumersSelection.setAlignmentColumn(1,"left")
+  	ConsumersSelection.setColumnWidth(1,40)
+  	ConsumersSelection.setDataType(1,"string")
+  	Objects.copyrangeTo({1,1}..{1,*}, ConsumersSelection,1,1)
+  
+  	ConsumersSelection.comment := " "
+  	ConsumersSelection.openDialogBox
+  	ConsumersSelection.comment := ""
+  case "showDisplayPanel_CB" 
+  	b := @.getCheckBox("showDisplayPanel_CB")
+  	DisplayPanel.active := b	
+  	if refEnergy._3D.Exists
+  		if b -- inheritAttribute("VisibleGraphicGroups")
+  			refEnergy._3D.inheritAttribute("VisibleGraphicGroups") -- in class: refEnergy._3D.VisibleGraphicGroups = ["default"]
+  		else
+  			refEnergy._3D.VisibleGraphicGroups := makeArray() -- VisibleGraphics
+  		end
+  	end
+  	
+  case "setDefaultColors" 
+  	colors.setdefaultColors
+  	colors.openColors
+  case "defineColors" 
+  	colors.openColors
+  	
+  case "Apply" 
+  	str := @.getValue("Layer_inp")
+  	var n:integer := str_to_num(str)
+  	str := @.getValue("Radius_inp")
+  	var r:integer := str_to_num(str)
+  	if n/= Layer OR r /= Radius 
+  		var vis:boolean := @.VisualizationON
+  		delvisualize-- now attr VisualizationON is false
+  		Layer := n
+  		Radius := r
+  		if vis then visualize; end
+  	end
+  	
+  	-- Sampling Time
+  	/*local str:string := @.getValue("SampleTime_inp");
+  	SampleTime.setTypeAndAttr("const", str );	
+  	if SampleTime < 0 then
+  	SampleTime := 0;
+  	end;
+  	@.setCaption("SampleTime_inp",to_str(SampleTime));*/
+  
+  case "Close" 
+  	
+  end
+-
+ Name: setObjectTable
+ ID: 2
+ DataType: method
+ Value: |+1
+  Objects.maxXdim := 1
+  switch Objects.yDim
+  case 1 
+  	Objects[1,0] := to_str("1 ",rootfolder.Localization.getText(9)) -- "Object"
+  case 0 
+  	Objects[1,0] := to_str(rootfolder.Localization.getText(8)) -- "Objects"	
+  else
+  	Objects[1,0] := to_str(Objects.yDim," ",rootfolder.Localization.getText(8)) -- "Objects"
+  end
+  Dialog.setTable("table_objects",Objects)
+
+ ShowInTooltip: false
+-
+ Name: VisualizationON
+ ID: 3
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: PlotterON
+ ID: 4
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: translateDisplayPanel
+ ID: 5
+ DataType: method
+ Value: |+1
+  var str:string
+  
+  -- translation of the display panel
+   str := rootfolder.Localization.getText(75) -- Energy [kWh]:
+   DisplayPanel_noMaximum[1,4]   := str
+   DisplayPanel_withMaximum[1,6] := str
+   
+   str := rootfolder.Localization.getText(76) -- Operational [kWh]:
+   DisplayPanel_noMaximum[1,5]   := str
+   DisplayPanel_withMaximum[1,7] := str
+   
+   str := rootfolder.Localization.getText(77) -- Power input [kW]:
+   DisplayPanel_noMaximum[1,3]   := str
+   DisplayPanel_withMaximum[1,5] := str
+  
+   str := rootfolder.Localization.getText(78) -- Maximum [kW]:
+   DisplayPanel_withMaximum[1,4] := str
+  
+
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate_Menu"
+ Caption: "Navigate"
+ CallbackArgument: "Navigate_Menu"
+ $Elements:
+ -
+  Type: Menu
+  Name: "OpenLoc_Menu"
+  Caption: "Open Location"
+  CallbackArgument: "OpenLoc_Menu"
+-
+ Type: Menu
+ Name: "ToolsMenu"
+ Caption: "Tools"
+ $Elements:
+ -
+  Type: Menu
+  Name: "setDefaultColors"
+  Caption: "Set Default Colors"
+  CallbackArgument: "setDefaultColors"
+ -
+  Type: Menu
+  Name: "defineColors"
+  Caption: "Set Colors"
+  CallbackArgument: "defineColors"
+-
+ Type: Menu
+ Name: "Help_men"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Contents_Menu"
+  Caption: "Contents"
+  CallbackArgument: "Contents_Menu"
+ -
+  Type: Menu
+  Name: "HelpObject_Menu"
+  Caption: "Help on Object"
+  CallbackArgument: "HelpObject_Menu"
+-
+ Type: TabControl
+ Name: "tabs"
+ Rect: [0,0,50,7]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "evaluate"
+  Caption: "Evaluate"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "openTable_txt"
+   Caption: "Table of all evaluated objects:"
+   Rect: [1,0,0,0]
+  -
+   Type: Button
+   Name: "openTable"
+   Caption: "Open"
+   Rect: [33,0,13,0]
+   CallbackArgument: "openTable"
+  -
+   Type: StaticText
+   Name: "Chart_txt"
+   Caption: "Diagram of the energy consumption:"
+   Rect: [1,1,0,0]
+  -
+   Type: Button
+   Name: "ChartBut"
+   Caption: "Show"
+   Rect: [33,1,13,0]
+   CallbackArgument: "ChartBut"
+  -
+   Type: StaticText
+   Name: "Visualization"
+   Caption: "Visualization:"
+   Rect: [1,2,0,0]
+  -
+   Type: Button
+   Name: "ShowVisualization"
+   Caption: "Show"
+   Rect: [20,2,12,0]
+   CallbackArgument: "ShowVisualization"
+  -
+   Type: Button
+   Name: "RemoveVisualization"
+   Caption: "Hide"
+   Rect: [33,2,13,0]
+   CallbackArgument: "RemoveVisualization"
+  -
+   Type: StaticText
+   Name: "Plotter_txt"
+   Caption: "Plot of the power input:"
+   Rect: [1,4,0,0]
+  -
+   Type: Button
+   Name: "ShowPlotter"
+   Caption: "Show"
+   Rect: [33,4,13,0]
+   CallbackArgument: "ShowPlotter"
+ -
+  Type: TabPage
+  Name: "objects"
+  Caption: "Objects"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "txt_addAll"
+   Caption: "Energy consumers:"
+  -
+   Type: Button
+   Name: "but_addAll"
+   Caption: "Add All"
+   Rect: [30,0,16,0]
+   CallbackArgument: "but_addAll"
+  -
+   Type: ListView
+   Name: "table_objects"
+   Rect: [0,1,46,4]
+   CallbackArgument: "table_objects"
+   Table: 45318a15-8aea-48bb-909b-7ba9d1006f96
+ -
+  Type: TabPage
+  Name: "Settings"
+  Caption: "Settings"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "Active"
+   Caption: "Monitor energy consumption"
+   CallbackArgument: "Active"
+   IsChecked: true
+  -
+   Type: GroupBox
+   Name: "Graphics_Gr"
+   Caption: "Graphics"
+   Rect: [0,1,46,3]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "Layer_txt"
+    Caption: "Graphics in layer:"
+   -
+    Type: EditText
+    Name: "Layer_inp"
+    Caption: "-556"
+    Rect: [30,0,10,0]
+    DataType: 5
+    Password: false
+   -
+    Type: StaticText
+    Name: "Radius_txt"
+    Caption: "Radius:"
+    Rect: [0,1,0,0]
+   -
+    Type: EditText
+    Name: "Radius_inp"
+    Caption: "30"
+    Rect: [30,1,10,0]
+    DataType: 4
+    Password: false
+  -
+   Type: CheckBox
+   Name: "showDisplayPanel_CB"
+   Caption: "Display panel"
+   Rect: [0,4,0,0]
+   CallbackArgument: "showDisplayPanel_CB"

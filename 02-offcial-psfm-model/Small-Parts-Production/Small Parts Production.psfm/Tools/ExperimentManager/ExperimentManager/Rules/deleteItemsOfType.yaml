@@ -1,0 +1,50 @@
+InternalClassType: Method
+Coordinate3D: [-8.05,4.3,0]
+Name: deleteItemsOfType
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param tabObj:object,-- 'InputValues' or 'OutputValues'
+         typeStr:string -- "Tab" or "Rule"
+ 
+ var KindTab:object
+ if tabObj.name = "InputValues"
+ 	KindTab :=  to_str(tabObj.~,".Kind_Input")
+ else
+ 	KindTab :=  to_str(tabObj.~,".Kind_Output")
+ end
+ 
+ var j:integer := 1 -- delete all "Tab" items
+ while tabObj[j,0]/=void  -- 'OutputValues'
+ 	var str:string := tabObj[j,0]
+ 	if KindTab.getRowNo(str) > 0 AND KindTab[1,str] = typeStr
+ 
+ 		tabObj.cutColumn(j)
+ 		KindTab.cutRow(str)
+ 	else
+ 		j += 1
+ 	end
+ end
+ 
+ for j := KindTab.yDim downto 1
+ 	if KindTab[1,j] = typeStr
+ 		KindTab.cutRow(j)
+ 	end
+ next
+RandomSeed: 292
+UUID: c95a1e5c-dbc0-4d4c-9fba-53deab4100b2
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

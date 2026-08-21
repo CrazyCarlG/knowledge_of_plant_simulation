@@ -1,0 +1,38 @@
+InternalClassType: DataTable
+Origin: 48b477d9-1a7b-4405-9f97-6301dbfbfa1a
+RandomSeed: 1073746627
+UUID: 01a0236c-0546-718a-9ffe-b9a240c92741
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: " "
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 20
+  -
+   Index: 1
+   Alignment: "Right"
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 11
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+ ColumnIndex: [string,2,"Energy Consumers","Evaluate"]
+ Columns:
+ - [0,string,31,"AS1","AS2","AS3","AS4","AS5","F0","F1","F10","F11","F2","F3","F4","F5","F6","F7","F8","F9","Line1","Line2","MS1","MS2","MS4","MS5","PreProduction.AS6","PreProduction.AS7","PreProduction.AS8","PreProduction.F0","PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.MS6"]
+ - [1,boolean,31,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1]

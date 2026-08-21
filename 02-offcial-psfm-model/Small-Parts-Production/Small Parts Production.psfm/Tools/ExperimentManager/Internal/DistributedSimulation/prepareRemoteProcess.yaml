@@ -1,0 +1,50 @@
+InternalClassType: Method
+Coordinate3D: [9.1,-1.85,0]
+Name: prepareRemoteProcess
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by CreateProcess after creation of the remote process
+ -- It is running on the simulation machine (as a remote process)
+ var WizObj:object := ~
+ closeAllWindows
+ 
+ if WizObj.RemoteLowerPrio
+ 	SetProcessPriorityToBelowNormal(true)
+ end
+ 
+ if NOT ~.simulateWithAnimation
+ 	animation(false)
+ end
+ closeConsole(true)
+ 
+ var pathStr:string := to_str(WizObj,".state")
+ if existsObject(pathStr)
+ 	str_to_obj(pathStr).value := "ready"
+ end
+ 
+ if eventController /= void
+ 	eventController.SummaryReport := false
+ 	eventController.RealTime := false
+ 	-- set the attribute ExperimentManager of the EventController in the remote simulation models
+ 	eventController.ExperimentManager := WizObj
+ end;
+ 
+ setErrorHandler(&ErrorHandling)
+RandomSeed: 340
+UUID: 62bff205-6db6-4499-bc05-530e8aac0708
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

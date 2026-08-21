@@ -1,0 +1,57 @@
+InternalClassType: Method
+Coordinate3D: [0,11,0]
+Name: DeleteRule
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ var rulesTab:object;var ruleNo,j,k:integer;var str:string;var lst:list[string];var ruleName:string
+ 
+ --- "Do you really want to delete this Rule?"
+ if messagebox(rootfolder.Localization.getText(219),48,12)=16
+ 
+ 	rulesTab := ~.Rules.Rules
+ 	ruleNo := @.getIndex("Ruleselect_Pop")
+ 	ruleName := rulesTab[2,ruleNo]
+ 	rulesTab[4,ruleNo].deleteObject
+ 	rulesTab[6,ruleNo].deleteObject
+ 	rulesTab.cutRow(ruleNo)
+ 	
+ 	lst.create
+ 	if rulesTab.yDim > 0 
+ 		
+ 		lst.insertList(1, rulesTab.copy({2,1}..{2,*}))
+ 		@.activeRuleName:= rulesTab[2,1]
+ 	else
+ 		lst.insert(1, rootfolder.Localization.getText(220))-- "No rule"
+ 	end
+ 	
+ 	@.setList("Ruleselect_Pop",lst)
+ 	@.setIndex("Ruleselect_Pop",1)
+ 	@.setCaption("Valid_Inp",rulesTab[9,1])
+ 	@.RuleSpecified
+ 	
+ 	for j:=1 to rulesTab.ydim 
+ 		k := 10 + 100*(j-1)
+ 		rulesTab[4,j].xPos := k
+ 		rulesTab[6,j].xPos := k
+ 	next
+ end
+ 
+
+RandomSeed: 326
+UUID: aa7ce669-90ba-45dd-bdad-49d38308ba29
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

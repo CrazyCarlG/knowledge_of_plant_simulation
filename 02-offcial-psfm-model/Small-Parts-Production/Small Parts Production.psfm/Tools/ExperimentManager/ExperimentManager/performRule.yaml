@@ -1,0 +1,46 @@
+InternalClassType: Method
+Coordinate3D: [30.85,-39.55,0]
+Name: performRule
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Performing a valid rule
+ -- Called by: evalRules (non-distributed simulation via DefExperiments_)
+ param RuleNo, ExpNo: integer
+ 
+ var RulesTab:object := Rules.Rules
+ var RuleName:string := RulesTab[2,RuleNo]
+ 
+ if RulesTab[4,RuleNo]/= void AND Rules.TestConditionExp(RulesTab[3,RuleNo], ExpNo) AND-- table condition
+     RulesTab[4,RuleNo].execute -- method condition
+ 
+ 	var s:string := to_str("Perform actions of Rule \\"",RuleName,"\\" since its condition is satisfied.")
+ 	Recording.append(s)
+ 	--ReportRules[RuleNo,ExpNo] := rootfolder.Localization.getText(381); -- Condition satisfied
+ 	Rules.DoActionExp(RulesTab[5,RuleNo],ExpNo,RuleName)
+ 	if RulesTab[6,RuleNo] /= void
+ 		RulesTab[6,RuleNo].execute -- method action
+ 	end
+ 
+ else
+ 	s := to_str("Do not perform actions of Rule \\"",RuleName,"\\", since its condition is not satisfied.")
+ 	Recording.append(s)
+ 	ReportRules[RuleNo,ExpNo] := rootfolder.Localization.getText(382) -- Condition not satisfied
+ end
+RandomSeed: 282
+UUID: 59967309-0458-4b9e-8c3c-4077611b732a
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

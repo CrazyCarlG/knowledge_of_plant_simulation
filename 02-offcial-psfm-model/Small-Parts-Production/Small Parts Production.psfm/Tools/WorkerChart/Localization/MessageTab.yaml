@@ -1,0 +1,198 @@
+InternalClassType: DataTable
+ChangePathCtrl:
+CloseCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: MessageTab
+OpenCtrl:
+PlausibilityCtrl:
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+UUID: 828c143c-4487-4b47-b697-a5254da0707b
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default","Icon1"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 0
+ MaterialDiffuseColor: 11842740
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: string
+   Width: 22
+  -
+   Index: 2
+   DataType: string
+   Width: 17
+  -
+   Index: 3
+   DataType: string
+   Width: 8
+  -
+   Index: 4
+   DataType: string
+   Width: 11
+  -
+   Index: 5
+   DataType: string
+   Width: 13
+  -
+   Index: 6
+   DataType: string
+   Width: 4
+  -
+   Index: 7
+   DataType: string
+   Width: 3
+  -
+   Index: 8
+   DataType: string
+   Width: 6
+  -
+   Index: 9
+   DataType: string
+   Width: 20
+  -
+   Index: 10
+   DataType: string
+   Width: 20
+  -
+   Index: 11
+   DataType: string
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ ColumnIndex: [string,10,~,"DEU","ENU","JPN","CHS","RUS","ESN","PLK","TRK","HUN"]
+ Columns:
+ - [1,string,68,"Diagramme für diesen WerkerPool erstellen:","Diagramm anzeigen","Daten","Konfiguration","Werkergruppierung nach","Klassen","Individuen","Belegung bezüglich der","Arbeitszeit","Gesamtzeit","Datenkonfiguration","Anzuzeigende Statistik:","Tabelle öffnen ...","Statistikerfassungsintervalle:","Diagrammkonfiguration","Diagrammtyp:","Standpunkt:","Inhalt","Hilfe für das Objekt","?","Index","Werkerpool","Standort öffnen","Navigieren","Werkerdiagramm von ","Werkerdiagramm","Werkerauslastung","Werkerauslastung",~,"Infos","Das Objekt ist kein WerkerPool.","Drag & Drop einen WerkerPool auf das Ikon des WorkerChart.\n","Es ist einfacher, einen WerkerPool auf das Ikon des WerkerChart zu ziehen.","Eine Simulation läuft. Die Änderungen werden nicht wirksam sein.","Nicht alle Werker werden im WerkerPool sein.",~,"Änderungen sind während der Simulation unmöglich.",~,"Diagramm anzeigen",~,"Rüstend","Arbeitend","Reparierend","Tragend","Unterwegs zum Auftrag","Wartend auf Importer","Wartend auf BEs","Gestört","Pausiert","Ungeplant","Gestört (S)","Balkendiagramm","Kuchendiagramm",~,"Werker","Aktivität",~,"Alle Werker des Pools '$1'","Die Werker des Pools '$1' zusammengefaßt nach Klassen","Mittelwerte der Werker des Pools '$1'",~,"Geben Sie einen gültigen Namen ein:","Umbenennen ...",~,"Es wurden keine Daten erfaßt.","Pool","Workerdiagramm","Visualisiert die Statistik\nder Werker eines Werkerpools."]
+ - [2,string,68,"Create charts for this WorkerPool:","Show Chart","Data","Configuration","Group Workers by","Classes","Individuals","Occupancy with respect to","Working time","Overall time","Data configuration","Statistics to display:","Open Table ...","Sample intervals:","Chart configuration","Type of chart:","Point of view:","Contents","Help on Object","Help","Index","WorkerPool","Open Location","Navigate","Worker chart of ","Worker chart","Utilization of workers","Utilization of workers",~2,"The object is not a WorkerPool.","Drag & Drop a WorkerPool onto the icon of the WorkerChart.","It is easier to drag and drop a WorkerPool onto the icon of the WorkerChart.","Simulation is running. Changes will not apply.","Not all Workers may be in the WorkerPool.",~,"No changes during a simulation run.",~,"View Chart",~,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed","Paused","Unplanned","Failed (S)","Bar Chart","Pie Chart",~,"Worker","Activity",~,"All workers of the pool '$1'","The workers of the pool '$1' summarized by classes","Mean values of the workers of the pool '$1'",~,"Enter a valid name:","Rename ...",~,"No data has been recorded.","Pool","WorkerChart","Visualizes the statistics\nof the workers of a WorkerPool."]
+ - [3,string,68,"このWorkerPoolのチャートを作成:","チャートを表示","データ","設定","グループワーカーの基準:","クラス","個体","次に関する占有:","稼働時間","全体の時間","データ設定","表示する統計:","テーブルを開く...","サンプル間隔:","チャート設定","チャートのタイプ:","視点:","項目","オブジェクトのヘルプ","ヘルプ","索引","WorkerPool","上層を開く","ナビゲート","次のワーカーチャート: ","ワーカーチャート","ワーカーの稼働率",~3,"オブジェクトはWorkerPoolではありません。","WorkerPoolをWorkerChartのアイコンにドラッグアンドドロップします。","WorkerPoolをWorkerChartのアイコンにドラッグアンドドロップする方が簡単です。","シミュレーションは実行中です。変更は適用されません。","すべてのワーカーがWorkerPoolにいるわけではありません。",~,"シミュレーションランの間に変更はありません。",~,"チャートを表示",~,"セットアップ中","作業中","修復中","搬送中","ジョブまで歩く","インポータを待つ","Muを待つ","故障状態","ポーズ状態","未計画","故障状態(S)","バーチャート","パイチャート",~,"ワーカー","アクティビティ",~,"プール'$1'の全ワーカー","プール'$1'のワーカーはクラスによって要約されています。","プール'$1'のワーカーの平均値",~,"有効な名前を入力:","名前の変更...",~,"データは記録されていません。","プール","ワーカーチャート","WorkerPoolのワーカーの\n統計を可視化します。"]
+ - [4,string,68,"创建该工人池的图表:","显示图表","数据","配置","工人分组依据","类","个人","占有率 - 依据","工作时间","总时间","数据配置","要显示的统计信息:","打开表 ...","采样间隔:","图标配置","图表类型:","视点:","内容","对象帮助","帮助","索引","工人池","打开位置","导航","工人图表 - ","工人图表","工人使用率",~3,"对象不是工人池。","将工人池拖放到工人图表的图标上。","将工人池拖放到工人图表的图标上更容易。","正在运行仿真，不会应用更改。","可能并不是所有工人都在工人池中。",~,"仿真运行期间无更改。",~,"查看图表",~,"设置中","工作中","修复中","携带中","步行去工作","等待导入器","等待 MU","失败","已暂停","未计划","失效 (S)","条形图","饼图",~,"工人","活动",~,"池 '$1' 的所有工人","池 '$1' 的工人按类汇总","池 '$1' 工人的平均值",~,"输入有效名称:","重命名 ...",~,"未记录数据。","池","工人图表","可视化工人池中工人\n的统计信息。"]
+ - [5,string,68,"Создать диаграммы этого пула рабочих:","Показать диаграмму","Данные","Конфигурация","Группировать рабочих по","Классам","Отдельным объектам","Занятость по","Рабочему времени","Общему времени","Конфигурация данных","Отображаемая статистика:","Открыть таблицу ...","Интервалы выборок:","Конфигурация диаграммы","Тип диаграммы:","Точка обзора:","Содержание","Справка по объекту","Справка","Указатель","Пул рабочих","Открыть местоположение","Навигация","Диаграмма рабочих для ","Диаграмма рабочих","Использование рабочих",~3,"Объект не является пулом рабочих.","Необходимо перетащить пул рабочих на иконку диаграммы рабочих.","Удобнее перетащить пул рабочих на иконку диаграммы рабочих.","Симуляция запущена. Изменения не будут применены.","Пул рабочих может включать не всех рабочих.",~,"В ходе выполнения симуляции изменения запрещены.",~,"Просмотр диаграммы",~,"Наладка","Работает","Ремонт","Перенос","Перемещение к рабочему месту","Ожидание импортеров","Ожидание ПО","Сбой","Приостановлено","Не запланировано","Сбой (с)","Столбиковая диаграмма","Круговая диаграмма",~,"Рабочий","Вид деятельности",~,"Все рабочие из пула '$1'","Рабочие из пула '$1', сведенные в классы","Средние значения по рабочим из пула '$1'",~,"Ввести верное имя:","Переименовать ...",~,"Данных не записано.","Пул","WorkerChart","Визуализация статичтики\nрабочих WorkerPool."]
+ - [9,string,68,"DolgozóCsoport grafikonja:","Grafikon mutatása","Adat","Konfiguráció","Dolgozók csoportosítása","Osztályok szerint","Egyének szerint","Elfoglaltság a következő alapján","Munkaidő","Teljes idő","Adat konfiguráció","Megjelenítendő statisztika:","Táblázat megnyitása...","Mintavételi intervallum:","Grafikon konfiguráció","Grafikon típusa:","Nézőpont:","Tartalom","Objektum súgó","Súgó","Tárgymutató","DolgozóCsoport","Hely megnyitása","Navigálás","Dolgozó grafikon: ","Dolgozó grafikon","Dolgozók kihasználtsága",~3,"Az objektum nem DolgozóCsoport.","Húzzon és ejtsen egy DolgozóCsoportot a DolgozóGrafikon ikonjára.","Húzzon és ejtsen egy DolgozóCsoportot a DolgozóGrafikon ikonjára.","A szimuláció fut. A változások nem kerülnek alkalmazásra.","Nem minden dolgozó van a DolgozóCsoportban.",~,"Nem történt változás a szimuláció futása során.",~,"Grafikon mutatása",~,"Átállás","Dolgozik","Javítás","Anyagmozgatás","Munkához menés","Szervezőre várakozás","MU-ra várakozás","Hibás","Szünet","Nem tervezett","Hibás (S)","Oszlop diagram","Kördiagram",~,"Dolgozó","Művelet",~,"A(z) '$1' dolgozócsoport minden dolgozója","A(z)l '$1' dolgozócsoport minden dolgozója osztályok szerint összesítve","A(z) '$1' dolgozócsoport dolgozóinak középértéke",~,"Adjon meg érvényes nevet:","Átnevezés...",~,"Nincs rögzített adat.","Csoport","DolgozóGrafikon","Dolgozó csoport statisztika\nvizuális megjelenítése."]

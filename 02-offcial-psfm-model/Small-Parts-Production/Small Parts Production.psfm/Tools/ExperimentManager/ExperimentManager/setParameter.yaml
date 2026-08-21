@@ -1,0 +1,52 @@
+InternalClassType: Method
+Coordinate3D: [33.45,-24.1,0]
+Name: setParameter
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: advanced dialog on tab Validation
+ param ExpNo,ObsNo:integer -> boolean
+ 
+ if UsingTables
+ 	var j:integer := 2
+ 	while ExpTable[j,0]/=void  -- scan the column index
+ 		var str: string := ExpTable[j,0]
+ 		var AttrStr:string := ValueDescriptions.getOrig(str)
+ 		var AttrVal:any
+ 		if ExpTable[j, ExpNo]/=void
+ 			AttrVal := ExpTable[j, ExpNo]
+ 			if NOT writeValue(AttrStr, AttrVal)
+ 				messageBox("Setting input value for experiment "+ExpNo+": '"+AttrStr+" := "+AttrVal+"' was impossible",1,1)
+ 				result := false
+ 				return
+ 			end
+ 		end
+ 		forget AttrVal
+ 		j += 1
+ 	end
+ end -- if UsingTables
+ 
+ if strLen(UserConfigMethod) > 0
+ 	str_to_method(to_str(~,".",UserConfigMethod)).execute(ExpNo) -- for instance, set the number of workers by the method setCreationTable
+ end
+ 
+ DefSeed4Run(ExpNo,ObsNo)
+ 
+ result := true
+RandomSeed: 241
+UUID: 3542efe2-0531-44ae-88c1-db2011696c3b
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

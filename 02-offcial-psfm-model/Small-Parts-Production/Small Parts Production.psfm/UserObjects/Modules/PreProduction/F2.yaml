@@ -1,0 +1,18 @@
+InternalClassType: Conveyor
+Coordinate3D: [-8.0000002384185791,0.69999993145465733,0]
+Length: 8.1415927749089771
+Name: F2
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 51
+UUID: 01a0236c-0546-7008-99f6-1c336670d6fa
+Width: 1.0000000149011612
+3D:
+ BaseHeight: 1.0000000149011612
+ $ExtSegments:
+  - 0
+  - [180,1.0000000149011612,0]
+  - [0,90,2.0000000298023224,0]
+  - [0,4.0000000596046448,0]
+$Predecessors:
+- 01a0236c-0546-7010-80f3-642128d004ab
+InheritEntranceExitLockedOnReset: false

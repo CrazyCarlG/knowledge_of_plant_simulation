@@ -1,0 +1,29 @@
+InternalClassType: Source
+Coordinate3D: [-4,8,0]
+MUSelection: "Sequence Cyclical"
+Name: Source
+Origin: fbfa098c-71b5-49fa-af3c-7d2bb0995986
+Path: "Orders"
+RandomSeed: 112
+ResourceType: "Storage"
+ShiftcalendarObject: "ShiftCalendar"
+TimeOfGeneration: "Interval Adjustable"
+UUID: 01a0236c-0546-7020-bdaf-04d4ed1ad41e
+3D:
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-705e-8fc4-011f1786f03f
+ Name: Connector9
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-705f-a9d5-bde1a7ad773e
+InheritEntranceExitLockedOnReset: false

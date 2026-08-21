@@ -1,0 +1,72 @@
+InternalClassType: Method
+Coordinate3D: [3.4000000000000004,7,0]
+Name: evalAction
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by interaction closed "closeAction"
+ param ActTab:table[object,string,string,real]->string
+ 
+ var obj_str,actStr,attrStr:string
+ var r:real
+ 	
+ -- Build the statement
+ result := "-> boolean "
+ for var i:=1 to ActTab.Ydim 
+    	obj_str := ActTab.asString(1,i)	-- "Object"	
+ 	if strLen(ActTab[2,i])>0  -- "Attribut"
+ 		attrStr := ActTab[2,i]
+ 		if  strLpos("[",attrStr)>0  
+ 			obj_str := to_str(obj_str,attrStr)
+ 		else
+ 			obj_str := to_str(obj_str,".",attrStr)
+ 		end
+ 	else
+ 		-- obj_str is an Variable object
+ 	end
+ 	-- examples for obj_str: SingleProc12.proctime, tab[2,3], lst[6]
+ 	r := ActTab[4,i]
+ 	switch ActTab[3,i] -- "Operator"
+ 	case "=" 
+ 		actStr := to_str(actStr,obj_str,":= ",r,";\\
+ ")
+ 	case "+" 
+ 		actStr := to_str(actStr,obj_str,":=\\
+ ",obj_str,"+",r,";\\
+ ")
+ 	case "-" 
+ 		actStr := to_str(actStr,obj_str,":= \\
+ ",obj_str,"-",r,";\\
+ ")
+ 	case "+%" 
+ 		r := (100 + r)/100
+ 		actStr := to_str(actStr,obj_str,":= \\
+ ",obj_str," * ",r,";\\
+ ")
+ 		
+ 	case "-%" 
+ 		r := (100 - r)/100
+ 		actStr := to_str(actStr,obj_str,":= \\
+ ",obj_str," * ",r,";\\
+ ")
+     end
+  Next-- i row in Action (ActTab)
+ result := to_str(result,actStr,"result := true")
+ print "Action: ",actStr
+RandomSeed: 299
+UUID: 4e95b624-9bea-49eb-8188-c57cdc4ce4d3
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

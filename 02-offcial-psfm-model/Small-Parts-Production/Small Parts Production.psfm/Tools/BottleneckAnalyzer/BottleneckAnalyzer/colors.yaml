@@ -1,0 +1,44 @@
+InternalClassType: Variable
+BackgroundColor: 16777215
+Color: 16711680
+Coordinate3D: [17.5,-3.25,0]
+DataType: table
+Font: 1
+HasInitValue: false
+Name: colors
+Origin: edac6f03-0863-4951-8a5c-542a49414386
+ShowDataType: true
+UUID: 871d2d3a-473a-4ab6-bf6b-d3226f478b82
+Value:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 8
+  DataType: integer
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 13
+  -
+   Index: 5
+   DataType: string
+  RowFormat:
+  -
+   Index: 0
+   ReadOnly: true
+   Alignment: "Center"
+   Hidden: false
+ ColumnIndex: [string,5,~,"RGB","R","G","B"]
+ Columns:
+ - [0,string,8,"work","setup","wait","block","PoweringUpDown","fail","stop","pause"]
+ - [1,integer,8,62720,3313342,12500670,60405,16719550,255,11181055,16711680]
+ - [2,integer,8,0,190,190,245,190,255,255,0]
+ - [3,integer,8,245,142,190,235,30,0,155,0]
+ - [4,integer,8,0,50,190,0,255,0,170,255]
+ - [5,string,8,"green","brown","grey","yellow",~,"red","pink","blue"]
+ - [6,integer,8,4,9,14,19,24,29,34,39]

@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [27.55,-6.5500000000000007,0]
+Name: Transpose
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- This method transposes a tablefile and puts the result into a second tablefile
+ -- called by: refresh
+ param TableIn, TableOut : Object
+ 
+ var x,y : Integer
+ 
+ TableOut.delete
+ for y := 1 to TableIn.yDim 
+ 	for x := 1 to TableIn.xDim 	
+ 		TableOut[y,x] := TableIn[x,y]
+ 	next
+ next
+
+RandomSeed: 32
+UUID: 55f1f8a6-88cf-4bf0-aae3-f7a58b34a42d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

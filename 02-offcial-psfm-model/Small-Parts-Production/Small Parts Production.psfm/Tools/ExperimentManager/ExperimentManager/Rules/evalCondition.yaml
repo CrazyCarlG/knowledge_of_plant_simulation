@@ -1,0 +1,60 @@
+InternalClassType: Method
+Coordinate3D: [-2.6500000000000004,7,0]
+Name: evalCondition
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by interaction closed "closeCondition"
+ -- Bool Op, parenthesis (,obj,attribute, Comparison,Value,object,attribute, parenthesis)
+ param CondTab:table[string, string,      object,string,string,      real, object,string,     string]->string
+ 
+ var LeftStr,RightStr,CompStr,CondStr,attrStr:String
+ var r:real
+ 
+ var OutValues:object := ~.OutputValues
+ result := "-> boolean result := "
+ if 	CondTab.Ydim=0 
+ 	result := result + "TRUE"
+ 	return
+ else -- CondTab contains at least one row
+ 	for var i:=1 to CondTab.Ydim 
+ 		LeftStr := to_str(CondTab[3,i])	-- Object
+ 		if strLen(CondTab[4,i]) > 0  -- Attribute		
+ 			-- attrStr := CondTab[4,i];
+ 			LeftStr := to_str(LeftStr,readAttr(CondTab[4,i]))
+ 		end
+ 		if CondTab[6,i].void 
+ 		 -- Value = void, that is, object	
+ 			RightStr := to_str(CondTab[7,i])	-- Object
+ 			if strLen(CondTab[8,i]) > 0  -- Attribut
+ 				--attrStr := CondTab[8,i];
+ 				RightStr := to_str(RightStr,readAttr(CondTab[8,i]))
+ 				end
+ 		else-- Value /= void
+ 			r := CondTab[6,i]
+ 			RightStr := to_str(r)
+ 		end
+ 		--	result := to_str(result," ",CondTab[1,i]," ",CondTab[2,i],LeftStr);
+ 		CompStr := to_str(" ", CondTab[5,i]," ")-- "<", "=", "~=", ">" "/="
+ 			                         -- AND/OR         (                     <>               )
+ 		CondStr := to_str(CondStr,CondTab[1,i]," ",CondTab[2,i],LeftStr,CompStr,RightStr, CondTab[9,i])
+ 	Next-- row in Condition (=CondTab)
+ end-- CondTab contains at least one row
+ result := to_str(result,CondStr,"; result := true")
+RandomSeed: 298
+UUID: 1928a63d-49f4-4956-84f9-b105418aed7e
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

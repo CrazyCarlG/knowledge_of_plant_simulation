@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70b2-812c-b00ee3f1cd92
+UUID: 01a0236c-0546-724d-9d55-476f926cbbc6
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,2,"Control value","root.Quantity"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Requirement","Exp 5","Exp 6","Exp 7","Exp 8"]

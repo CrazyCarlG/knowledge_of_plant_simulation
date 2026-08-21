@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [22,-4.8500000000000005,0]
+Name: ActivateMachines
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: GAwizard (evaluate))
+ var machTab:object := MachinesTable
+ 
+ for var i := 1 to MachinesTable.ydim 
+ 	var simMachine:object := machTab[17,i]
+ 	if simMachine /= void 
+ 		simMachine.JobId := -1
+ 		simMachine.&RunProcess.executeNewCallChain
+ 	end
+ next
+RandomSeed: 342
+UUID: a355c7e5-ceff-4246-8105-0db218aafe86
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

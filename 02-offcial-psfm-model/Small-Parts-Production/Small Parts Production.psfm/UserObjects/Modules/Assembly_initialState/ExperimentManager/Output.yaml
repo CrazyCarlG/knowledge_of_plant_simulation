@@ -1,0 +1,23 @@
+InternalClassType: DataTable
+Origin: 91d626e2-3d41-4950-84db-f20b4e889310
+RandomSeed: 1073746880
+UUID: 01a0236c-0546-70a4-a511-eaece7651053
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: WarningGiven
+ ID: 1
+ $DataType: boolean
+ Value: false
+$Data:
+ Comment: "Specify the output values for the simulation study."
+ ShowComment: true
+ ColumnIndex: [string,3,~,"Output Values","Description"]
+ Columns:
+ - [1,string,1,"root.Drain.statDeleted"]
+ - [2,string,1,"Throughput"]

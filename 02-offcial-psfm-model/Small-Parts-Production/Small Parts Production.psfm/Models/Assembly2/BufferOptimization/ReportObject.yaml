@@ -1,0 +1,17 @@
+InternalClassType: HtmlReport
+Content: ""
+Label: "Small Parts Production"
+Origin: 06a06a96-a36d-43e8-9726-e7d668524194
+RandomSeed: 1073747487
+UUID: 01a0236c-0546-7513-8e20-72b665aa95af
+$CustomAttributes:
+-
+ Name: Informations
+ ID: 4
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+  - [0,string,3,"Name of the project:","Version of the project:","Person in charge:"]
+  - [1,string,3,"Small Parts Production","Simulation Expert","Simulation Expert"]
+$WindowSize: [1112,654]

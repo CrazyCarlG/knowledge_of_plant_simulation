@@ -1,0 +1,43 @@
+InternalClassType: Method
+Coordinate3D: [6,4,0]
+Name: CB_RemoveAddress
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by Experiments.callback
+ 
+ var sel : integer := ?.getIndex("RemotesList")
+ if sel > 0
+ 	RemoteTable.cutRow(sel)
+ end
+ 
+ var RemoteList:list[string]
+ RemoteList.create
+ 
+ if RemoteTable.yDim < 1
+ 	RemoteList.append("  ")
+ else
+ 	for var j := RemoteTable.ydim downto 1
+ 		RemoteList.insert(1, to_str(RemoteTable[1,j]," (",RemoteTable[2,j],")"))
+ 	next
+ end
+ 
+ ?.setList("RemotesList",RemoteList)
+ ~.DistributedSimulation.updateMachinesTable(RemoteTable)
+RandomSeed: 318
+UUID: af6249c4-f31e-41e3-aa60-34b6fa66cc55
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

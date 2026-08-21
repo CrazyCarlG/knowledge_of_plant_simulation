@@ -1,0 +1,72 @@
+InternalClassType: Station
+Coordinate3D: [1,-8,0]
+ExitCtrl: "self.pickUpCarrier"
+ExitCtrlFront: false
+ExitCtrlRear: true
+Label: "AS5"
+Name: AS5
+Origin: 682dd7c7-6d7b-4233-b7d5-86c4aedbccd2
+PowerInputFailed: 0.5
+PowerInputOperational: 0.7
+PowerInputStandby: 0.3
+PowerInputWorking: 2.5
+RandomSeed: 87
+ShiftcalendarObject: "ShiftCalendar"
+UUID: 01a0236c-0546-704b-8d37-b76606303ae7
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: waitingCarrier
+ ID: 1
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: pickUpCarrier
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- exit control (rear)
+  is
+  do
+  	if ?.waitingCarrier /= void then
+  		local CSC:object := ?.waitingCarrier.~;
+  		?.waitingCarrier.move(?);
+  		?.waitingCarrier := void;
+  		CSC.stopped := false;
+  		CSC.backwards := true;
+  	end;
+  
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-702b-bd15-10a70acc09c5
+ Name: Connector14
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7055-a65d-6a4f66c2ba75
+$Predecessors:
+- 01a0236c-0546-7056-918b-a50cb0e529fd
+- 01a0236c-0546-7086-bc59-f0f890d0170d
+InheritEntranceExitLockedOnReset: false
+$EnergyActive: true
+$Failures:
+-
+ $Name: Failure
+ ID: 1
+ Interval: [Negexp,8:15:00]
+ Duration: [Erlang,5:00,3:32.13203435596424]

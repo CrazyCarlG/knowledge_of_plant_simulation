@@ -1,0 +1,22 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+ExitLocked: false
+Origin: 01a0236c-0546-702a-bc75-b924d41e94bb
+RandomSeed: 158
+TransferLengthToObject: false
+UUID: 01a0236c-0546-7360-9784-d5f706afb246
+Width: 1
+$CustomAttributes:
+-
+ Name: waitingCarrier
+ ID: 1
+ $DataType: object
+ Value: ""
+$Successors:
+-
+ $Succ: 01a0236c-0546-7377-afe6-7df8730d1d52
+ Origin: 01a0236c-0546-704a-a1e0-f25e92ba824a
+ UUID: 01a0236c-0546-737f-b0d8-4372f88a2139
+$Predecessors:
+- 01a0236c-0546-73b3-a9d1-ccbea0b4ad50
+InheritEntranceExitLockedOnReset: false

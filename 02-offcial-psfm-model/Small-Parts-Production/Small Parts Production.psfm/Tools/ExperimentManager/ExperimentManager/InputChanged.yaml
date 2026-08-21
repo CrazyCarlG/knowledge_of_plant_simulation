@@ -1,0 +1,121 @@
+InternalClassType: Method
+Coordinate3D: [2.8999999999999986,-3.1999999999999993,0]
+Name: InputChanged
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- interaction 'Plausibility' of the tables 'input' and 'output' after Drag & Drop
+ var str,attrStr,dataTypeStr:string
+ 
+ var DLGobj:object := Dialog.Dialog
+ OK_input := true
+ InputValues.delete({0,0}..{*,*})
+ Kind_input.delete({0,1}..{*,*})
+ 
+ var tempExpTable:table
+ tempExpTable.create -- save old experiment values in case input values are still valid
+ ExpTable.copyFormatTo(tempExpTable)
+ ExpTable.copyContentTo(tempExpTable)
+ 
+ ExpTable.delete({1,0}..{*,*})
+ DetailedResults.delete({0,1}..{*,*})
+ 
+ str := rootfolder.Localization.getText(107) -- Active
+ ExpTable[1,0] := str -- Active
+ 
+ -- delete all "Tab" items
+ for var j := Input.yDim downto 1
+ 	Input[1,j] := strTrim(Input[1,j])
+ 	if strLen(Input[1,j]) < 1
+ 		Input.cutRow(j)
+ 	end
+ next
+ 
+ ReplaceRootstr(Input,1)
+ 
+ if NOT ValueDescriptions.reg then OK_input := false;end
+ 
+ -- remove (in Input) delete items from ExpTable, save the column 'active' in ExpTable
+ for var j := 1 to Input.yDim
+ 	AttrStr := Input[1,j]
+ 	Output.setCursor(1,1)
+ 	if Output.find({1,1}..{2,*},AttrStr)
+ 		-- The value $1 is already an output value.
+ 		messageBox(Rootfolder.Localization.getMessage(367,AttrStr,"",""),1,1) -- show as error
+ 		OK_input := false
+ 	end
+ next
+ 
+ -- prepare ExpTable by saving the previous values
+ for var j:=1 to Input.yDim
+ 	attrStr := Input[1,j]
+ 	str := ValueDescriptions.get(attrStr)
+ 
+ 	ExpTable[j+1,0] := str
+ 
+ 	dataTypeStr := recogDataType(attrStr) -- test Input value
+ 	if dataTypeStr = "Not allowed"
+ 		-- The operation failed in row $1.
+ 		-- Make sure that the associated object exists.
+ 		-- Also check if the data type is allowed.
+ 		-- show as error
+ 		messageBox(to_str(rootfolder.Localization.getMessage(405,j,"",""), strChr(10),rootfolder.Localization.getText(406), strChr(10),rootfolder.Localization.getText(407)),1,1)
+ 		OK_input := false
+ 	else
+ 		if NOT testAttributeString(attrStr)
+ 			messageBox(to_str(Rootfolder.Localization.getText(43)," ",j,strChr(10),attrStr),1,1) -- Error in row:
+ 			OK_input := false
+ 		else
+ 			if NOT testInputString(attrStr) -- input values must allow an instruction like x := x
+ 				messageBox(to_str(Rootfolder.Localization.getText(43)," ",j,strChr(10),attrStr),1,1) -- Error in row:
+ 				OK_input := false
+ 			else
+ 				ExpTable.setDataType(str,dataTypeStr)
+ 				InputValues[j,0] := attrStr -- fill row 0 in 'InputValues' or 'OutputValues'
+ 				InputValues.setDataType(j,dataTypeStr)
+ 				Kind_Input.writeRow(0,j, attrStr,"Tab")
+ 			end
+ 		end
+ 	end-- add in Input new items
+ 
+ 	var ColNum := tempExpTable.getColumnNo(str) -- if experminets for this input value are available, insert them
+ 	if ColNum /= -1
+ 		tempExpTable.copyRangeTo({ColNum,1}..{ColNum,*}, ExpTable, j+1,1)
+ 	end
+ 
+ 
+ next -- j
+ 
+ Input.refillDialog
+ if NOT OK_input
+ 	Input.WarningGiven := true
+ 	return
+ end
+ 
+ var bb:boolean := UsingTables AND (Input.yDim > 0)
+ DLGobj.setSensitive("DefineInputVariables_but", bb)
+ DLGobj.setSensitive("DefineInputValues_but",    bb)
+ -- save the previous setting in the tables '_Design' and '_GeneralDesign'
+ ExpRunFromGeneralDesign := false
+ ExpRunFromRandomDesign := false
+ Design4FactorialAnalysis := false
+ factorDesignValue := ""
+ Results.reg -- delete table Results
+ Results.refillDialog
+RandomSeed: 245
+UUID: 39ca752e-5bc1-4ef8-832c-cc98ab1c19b6
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

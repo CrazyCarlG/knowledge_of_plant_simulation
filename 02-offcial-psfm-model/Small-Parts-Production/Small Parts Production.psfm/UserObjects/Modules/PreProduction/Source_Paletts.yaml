@@ -1,0 +1,42 @@
+InternalClassType: Source
+Coordinate3D: [-13.000000193715096,10.600000157952309,0]
+Interval: 6:00
+MUSelection: "Constant"
+Name: Source_Paletts
+Number: 5
+Origin: fbfa098c-71b5-49fa-af3c-7d2bb0995986
+Path: ".MUs.Pallet"
+RandomSeed: 47
+TimeOfGeneration: "Number Adjustable"
+UUID: 01a0236c-0546-7013-a6e7-01e9383173cf
+3D:
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: init
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	self.~.number := Quantity;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7011-b597-973acdb1325e
+ Name: Connector12
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7014-b629-52f29c31e274
+InheritEntranceExitLockedOnReset: false

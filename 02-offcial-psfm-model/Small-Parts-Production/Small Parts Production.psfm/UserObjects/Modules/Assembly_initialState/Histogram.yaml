@@ -1,0 +1,61 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Histogram"
+ChartType: "Columns"
+CollectData: true
+Coordinate3D: [5.75,13.5,0]
+DataInColumn: false
+DataSource: "Input Channels"
+Effect: "3D"
+FirstInterval: 0
+Height: 15
+InputChannels:
+ Comment: ~
+ EditorPermissions: 0
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ Columns:
+ - [0,string,9,"C1","C2","C3","C4","C5","C6","C7","C8","C9"]
+ - [1,string,9,"F1.numMU","F2.numMU","F3.numMU","F4.numMU","F5.numMU","F6.numMU","F7.numMU","F8.numMU","F9.numMU"]
+Label: "Buffer Usage"
+LegendLocation: "Right"
+Mode: "Watch"
+Name: Histogram
+NumIntervals: 0
+OpenCtrl: "self.OnOpen"
+Origin: c838d038-52ec-4a0f-903e-0d5aa2241744
+RandomSeed: 1073746914
+Rotation: 0
+StepCurve: false
+StepSize: 1
+Title: "Occupation of the conveyors in Assembly"
+UUID: 01a0236c-0546-7040-a213-f7685b1bc309
+XLabel: "Total amount of parts"
+XScaleMax: -1
+XScaleMin: -1
+YLabel: "Percentage of time"
+YScaleMax: 102
+YScaleMin: 0
+$CustomAttributes:
+-
+ Name: OnOpen
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	self.~.active := true;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$WindowRect: [43,568,914,446]

@@ -1,0 +1,21 @@
+InternalClassType: Buffer
+Origin: 01a0236c-0546-702f-ad73-dff6af41fdd1
+RandomSeed: 154
+UUID: 01a0236c-0546-71ca-9961-7974c7765da6
+3D:
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-71c9-9b0e-13145430a22b
+ Origin: 01a0236c-0546-7030-863e-4df5b0030c1c
+ UUID: 01a0236c-0546-71cb-a2c7-f90b10e97e54
+InheritEntranceExitLockedOnReset: false

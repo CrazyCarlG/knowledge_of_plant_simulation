@@ -1,0 +1,45 @@
+InternalClassType: Variable
+Alignment: "Left"
+BackgroundColor: 16777215
+ChangePathCtrl:
+Color: 0
+Comment: ""
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DataType: integer
+DecimalPlaces: -1
+DestructorCtrl:
+DragDropCtrl:
+Font: 1
+HasInitValue: false
+InitCtrl:
+IntegerPlaces: -1
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: Variable
+OpenCtrl:
+PlausibilityCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowDataType: false
+ShowUnit: true
+StatisticsActive: false
+Transparent: false
+UUID: b64d4182-111f-4f76-a0b9-d5565af61b77
+$BasicObject: true
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+Value: 0

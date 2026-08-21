@@ -1,0 +1,181 @@
+InternalClassType: DataTable
+Coordinate3D: [-4,6,0]
+Label: "Orders"
+Name: Orders
+OpenCtrl: "self.opennice"
+Origin: 0d880c2b-1ab3-4630-bf5b-9bc0fe3e110b
+RandomSeed: 1073746732
+UUID: 01a0236c-0546-705b-9759-954be34a961e
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$CustomAttributes:
+-
+ Name: opennice
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	?.openDialogBox;
+  end;
+  
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 4
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: object
+   Width: 15
+  -
+   Index: 2
+   DataType: integer
+   Width: 8
+  -
+   Index: 3
+   DataType: string
+   Width: 8
+  -
+   Index: 4
+   DataType: table
+   Prototype:
+    Comment: ~
+    CommonFormat: false
+    ListFormat:
+     ColumnIndex: true
+     ColumnWidth: 20
+     DataType: string
+     MaxXDim: 18
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      DataType: string
+      Width: 12
+     -
+      Index: 2
+      DataType: integer
+      Width: 6
+     -
+      Index: 3
+      DataType: boolean
+      FormatString: "AAAAA"
+      Width: 6
+     -
+      Index: 4
+      DataType: string
+      Width: 8
+     -
+      Index: 5
+      DataType: real
+      FormatString: "-15.2"
+      Width: 8
+     -
+      Index: 6
+      DataType: time
+      Width: 12
+     -
+      Index: 7
+      DataType: date
+      Width: 8
+     -
+      Index: 8
+      DataType: datetime
+      Width: 16
+     -
+      Index: 9
+      DataType: object
+      Width: 8
+     -
+      Index: 10
+      DataType: length
+      Width: 8
+     -
+      Index: 11
+      DataType: weight
+      Width: 8
+     -
+      Index: 12
+      DataType: speed
+      FormatString: "-15.2"
+      Width: 8
+     -
+      Index: 13
+      DataType: acceleration
+      FormatString: "-15.2"
+      Width: 8
+     -
+      Index: 14
+      DataType: money
+      Width: 8
+     -
+      Index: 15
+      DataType: table
+      Prototype:
+       Comment: ~
+       CommonFormat: false
+       ListFormat:
+        ColumnWidth: 20
+        DataType: string
+        ShowDataType: true
+       Columns:
+      Width: 6
+     -
+      Index: 16
+      DataType: list
+      Prototype:
+       Comment: ~
+       CommonFormat: false
+       ListFormat:
+        ColumnWidth: 20
+        DataType: string
+        MaxXDim: 1
+        ShowDataType: true
+       Column:
+      Width: 6
+     -
+      Index: 17
+      DataType: stack
+      Prototype:
+       Comment: ~
+       CommonFormat: false
+       ListFormat:
+        ColumnWidth: 20
+        DataType: string
+        MaxXDim: 1
+        ShowDataType: true
+       Column:
+      Width: 6
+     -
+      Index: 18
+      DataType: queue
+      Prototype:
+       Comment: ~
+       CommonFormat: false
+       ListFormat:
+        ColumnWidth: 20
+        DataType: string
+        MaxXDim: 1
+        ShowDataType: true
+       Column:
+      Width: 6
+    ColumnIndex: [string,2,~,"Name of Attribute"]
+    Columns:
+   Width: 13
+ ColumnIndex: [string,5,~,"MU","Number","Name","Attributes"]
+ Columns:
+ - [1,object,4,".MUs.EXA1A",".MUs.EXA1B",".MUs.EXA2A",".MUs.EXA2B"]
+ - [2,integer,4,10,10,10,10]
+ - [3,string,4,"EXA1A","EXA1B","EXA2A","EXA2B"]

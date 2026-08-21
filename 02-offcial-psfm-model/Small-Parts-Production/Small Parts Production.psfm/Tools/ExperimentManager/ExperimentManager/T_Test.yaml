@@ -1,0 +1,86 @@
+InternalClassType: Method
+Coordinate3D: [44.900000000000006,-5,0]
+Name: T_Test
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ /* called by: EndOfAllExperiments, dialog
+ t = statistic for measuring the significance of a difference of means
+ p = small values indicates that the arrays have signifcantly different means.
+ called by: Menu ""Analysis of variance",  EndOfAllExperiments
+ Bernd Allmendinger - PPI-Informatik, PS
+ */
+ param obj:object -> boolean -- obj = DataTable 'pValues'
+ 
+ obj.delete({0,0}..{*,*})
+ var s:string := obj.OutputValue
+ var col:integer := detailedResults.getColumnNo(s)
+ if col < 1  
+ 	s := ValueDescriptions.get(s)
+ 	col := detailedResults.getColumnNo(s)
+ 	if col < 1 then return; end
+ end
+ 
+ var nExp:integer := detailedResults.yDim
+ var k:integer
+ for var j := 1 to nExp 
+ 	if detailedResults[col+1,j]>0  -- random output: standardDeviation > 0
+ 		k += 1 -- only Exp with not constant samples are shown
+ 		s := detailedResults[0,j] -- like "Exp 03"
+ 		if j < nExp then obj[0,k] := s;end
+ 		if j>1 then obj[k-1,0] := s;end
+ 	end
+ next -- j
+ 
+ -- k = number of random experiments for the 'outputStr'
+ result := (k>1)
+ if NOT result then return end
+ var mX,mY,sX,sY,t,vX,vY,p,F_t,df,h:real
+ var n:integer := NumRuns
+ for var j := 1 to obj.XdimIndex
+ 	s := obj[j,0] -- like "Exp 03"
+ 	mX := detailedResults[col,s]-- MeanValue of Exp X
+ 	sX := detailedResults[col+1,s]-- standardDeviation of Exp X
+ 	vX := sX * sX -- variance of Exp X
+ 	for k := 1 to j 
+ 		s := obj[0,k]-- like "Exp 03"
+ 		mY := detailedResults[col,s]-- MeanValue of Exp Y
+ 		sY := detailedResults[col+1,s]-- standardDeviation of Exp X			
+ 		vY := sY * sY -- variance of Exp Y
+ 		t := abs(mX - mY)/ sqrt((vX + vY)/n)-- test statistic 
+ 
+ 		if abs(sX - sY) < 0.1 * max(sX,sY) 
+ 			-- assume equal variance
+ 			df := 2 * (n-1)
+ 		else -- assume different variance (df is a real number, the results are as in Excel)
+ 			df := (n-1) * obj.SQR(vX + vY)/(obj.SQR(vX) + obj.SQR(vY))
+ 		end
+ 		h := sqrt(t * t + df)
+ 		F_t := betai(df/2, df/2, (t + h)/(2 * h))
+ 		p := 2 * (1 - F_t)
+ 		--print "Variance analysis for ",obj[j,0]," and ",obj[0,k]," for output \\"",detailedResults[col,0],"\\"";
+ 		obj[j,k] := to_str(round(p,3))
+ 	next -- k
+ next -- j
+ 
+ if obj.YdimIndex > obj.ydim 
+ 	obj.cutRow(obj.YdimIndex)
+ end
+ obj[0,0]:=""
+RandomSeed: 171
+UUID: d0b1e678-7d5f-4989-880c-329267badc7b
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

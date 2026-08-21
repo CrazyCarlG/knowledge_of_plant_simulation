@@ -1,0 +1,15 @@
+InternalClassType: DataTable
+Origin: c4ac9058-000e-4836-90a4-8e03b84dee56
+UUID: 01a0236c-0546-74e1-9f87-a43f6e157855
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "Overview of all executed experiments and their parametrizations."
+ ShowComment: true
+ ColumnIndex: [string,5,"Experiments","Random Number Seed Values","Static Parameterization","Configuration method","Dynamic Parameterization"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Exp 4","Exp 5","Exp 6","Exp 7","Exp 8"]

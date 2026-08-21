@@ -1,0 +1,24 @@
+InternalClassType: Drain
+Coordinate3D: [-9,-4,0]
+Name: Drain
+Origin: 53827fee-1127-4ffe-bb09-49acbb325f59
+RandomSeed: 100
+ResourceType: "Storage"
+TypeStatOn: true
+UUID: 01a0236c-0546-702e-b053-3b66914c2c38
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf0f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Predecessors:
+- 01a0236c-0546-7030-863e-4df5b0030c1c
+InheritEntranceExitLockedOnReset: false

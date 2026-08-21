@@ -1,0 +1,40 @@
+InternalClassType: Method
+Coordinate3D: [26.1,-1.85,0]
+Name: updateMachinesTable
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: "APPLY" of the dialog
+ -- Start a distributed simulation run, after saving the model
+ param RemoteTableFromDialog:object
+ 
+ var LicType:string := ~.RemoteLicType -- attribute of the Experiment Manager
+ --if LicType ~= "Professional" then LicType:= "_Development"; end
+ 
+ MachinesTable.delete({1,1}..{*,*})
+ var row:integer
+ for var j := 1 to RemoteTableFromDialog.yDim 
+ 	var numProc:integer := RemoteTableFromDialog[2,j]
+ 	for var k := 1 to numProc 
+ 		row := row + 1 --             Comp name                    2 sema of the library  3                        4        5                 6
+ 		MachinesTable.writeRow(1,row, RemoteTableFromDialog[1,j], void,                   to_str(EventController), LicType, ~.QuitAfterTime, ~.RemoteLowerPrio)
+ 		MachinesTable[9,row] := -1 -- jobID
+ 		MachinesTable[19,row] := k
+ 	next -- k
+ next -- j
+RandomSeed: 336
+UUID: 157dabbf-9e5d-4c8d-99c6-d82c2006dbf0
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

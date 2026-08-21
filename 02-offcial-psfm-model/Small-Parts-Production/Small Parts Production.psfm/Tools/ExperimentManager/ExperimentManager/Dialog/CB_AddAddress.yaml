@@ -1,0 +1,48 @@
+InternalClassType: Method
+Coordinate3D: [1.35,4,0]
+Name: CB_AddAddress
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- submethod of Experiments.callback 
+ -- adds a line to the remotes list, before current selected one
+ -- no multiple items
+ -- called by: "DistrSim_CB" in case of (RemoteTable.yDim = 0)
+ param DLG:object,CompName:string,numProc:integer,useAllCores:boolean
+ 
+ var sel : integer := AdvancedSettings.getIndex("RemotesList")
+ if sel>0 AND strLen(AdvancedSettings.getValue("RemotesList")) < 2 
+ 	RemoteTable.cutRow(sel)
+ end
+ 
+ RemoteTable.setCursor(1,1)
+ if RemoteTable.find({1,1}..{1,*},CompName) 
+ 	sel := RemoteTable.cursorY
+ else
+ 	sel := max(1,sel)
+ 	RemoteTable.insertRow(sel)
+ end
+ if useAllCores 
+ 	numProc := getNumberOfCPUCores 
+ end
+ RemoteTable.writeRow(1,sel, CompName, numProc,useAllCores)
+ 
+ RemoteTable.setRemoteInDialog -- makes AdvancedSettings.setList("RemotesList",1D list)
+ ~.DistributedSimulation.updateMachinesTable(RemoteTable)
+RandomSeed: 319
+UUID: 827fc615-7e5b-4139-8cfc-55eb6d0bc0eb
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

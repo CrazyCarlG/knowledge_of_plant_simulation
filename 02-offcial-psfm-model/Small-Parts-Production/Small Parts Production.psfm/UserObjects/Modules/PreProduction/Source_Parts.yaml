@@ -1,0 +1,28 @@
+InternalClassType: Source
+Coordinate3D: [7.1500001065433025,13.700000204145908,0]
+Interval: [Uniform,58,1:01]
+Name: Source_Parts
+Origin: fbfa098c-71b5-49fa-af3c-7d2bb0995986
+Path: ".MUs.Cap"
+RandomSeed: 59
+UUID: 01a0236c-0546-7000-a62f-d5fadc3eb64a
+3D:
+ Mirror: [false,false,false]
+ Rotation: [90,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7005-a3b6-824f895d06e5
+ Name: Connector5
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-700e-aee6-20db59f775bb
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,44 @@
+InternalClassType: Method
+Coordinate3D: [27.35,-30.85,0]
+Name: quantil_norm
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ /* Quantil of the (standard) normal distribution
+ Reference: Dietmar Herrmann: Statistik in C, p. 69
+ Approx. of Hastings, cf. Handbook of Mathematical functions, Dover 1965
+ max error 4.5e-4 = 0.00045
+ */
+ param x : real -> real
+ 
+ var x1: real := x
+ if x < 0.5
+ 	x := 1 - x
+ end
+ 
+ var t : real := sqrt(-2 * log(1-x))
+ var z: real := 2.515517 + t * (0.802853 + 0.010328 * t)
+ var n: real := 1 + t * (1.432788 + t * (0.189269+0.001308 * t))
+ z := t - z/n
+ if x1 < 0.5
+ 	result := -z
+ else
+ 	result := z
+ end
+RandomSeed: 291
+UUID: fde491aa-e6e4-4e25-9e87-241317585363
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,48 @@
+InternalClassType: Method
+Coordinate3D: [9,-6,0]
+Name: DragAndDrop
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- interaction drag & drop
+ param s : string
+ 
+ if root.eventcontroller /= void AND root.eventController.isRunning 
+ 	-- "Simulation is running. Changes will not apply."
+ 	-- "Not all Workers may be in the WorkerPool."
+ 	MessageBox(to_str(
+ 		rootfolder.Localization.getText(34),strChr(10),strChr(13),
+ 		rootfolder.Localization.getText(35)), 1, 13)
+ else
+ 	var ObjToTest : object := str_to_obj(s) -- test the top object: only a workerPool is allowed
+ 
+ 	if not(ObjToTest.internalClassname = "NwWorkerPool") 
+ 		-- "The object is not a WorkerPool."
+ 		MessageBox(rootfolder.Localization.getText(31), 1, 13)
+ 	else
+ 		var DialogValue:string := makePathRelative(ObjToTest, @.~)
+ 		@.Dialog.setCaption("WorkerPool_Inp",DialogValue)
+ 		VarObj := ObjToTest
+ 		
+ 		Open
+ 		GetWorkersFromPool	-- fill the table 'myWorkerTable' with all worker
+ 		Refresh
+ 		chart.Active := true
+ 	end
+ end
+RandomSeed: 39
+UUID: 87fb8026-981a-41d8-8f87-e8929702a5cd
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

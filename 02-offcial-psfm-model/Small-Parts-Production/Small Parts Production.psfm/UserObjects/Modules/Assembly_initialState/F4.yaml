@@ -1,0 +1,26 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [20,6,0]
+Length: 9.1915926535897938
+Name: F4
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 107
+ResStatOn: true
+UUID: 01a0236c-0546-7025-961f-d78d19b461bd
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [0,2.0500000000000003,0]
+  - [0,90,2,0]
+  - [0,4,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-7060-9951-a205ef72d2b7
+ Name: Connector27
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7061-baf0-92a8d74e578f
+$Predecessors:
+- 01a0236c-0546-7045-b12d-37bc1e8b080a
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,233 @@
+InternalClassType: Method
+Coordinate3D: [11.75,-20.05,0]
+Name: EndOfAllExperiments
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- restore previous_state of the model (set the original seed table)
+ -- Called by:  non-distributed simulation and distributed simulation
+ 
+ dialog.changeUserSettings("restore")
+ 
+ EventController.ExperimentManager := void	--  distributed and non-distributed simulation
+ 
+ if Kind_Output.numberOfOutputValues > 0
+ 	Dialog.Dialog.setSensitive("Chart_but", true)
+ end
+ Dialog.Dialog.setSensitive("HTML_but", true)
+ 
+ Dialog.Dialog.setSensitive("Start_But", true)
+ 
+ if Design4FactorialAnalysis AND strLen(FactorDesignValue)>0
+ 	FactorialAnalysis(FactorDesignValue)
+ end
+ 
+ if Restore_Inputvalues  -- check box in the dialog 'Advanced Settings'
+ 	eventController.reset -- calls the method_restoreParam
+ 	Dialog.restoring := true
+ end
+ -- restore the original values of all input values (Col 2 of '_Kind_Input', see_resetWizard)
+ -- set the stored seed table
+ -- also posible by the menu "Restore Input vales"
+ 
+ currIcon := "Default"
+ if _3D.exists
+ 	_3D.VisibleGraphicGroups := makeArray("default", "deco")
+ end
+ 
+ if State/="stopped"
+ 	State := "ready"
+ end
+ 
+ -- output tables
+ if UsingRemote
+ 	var k:integer := 1
+ 	while k <= Results.yDim
+ 		if DetailedResults[1,k] /= void
+ 			calcTableStatistics4Exp(k)
+ 		end
+ 		k += 1
+ 	end
+ 
+ 	DistributedSimulation.EvaluateSimMachines(JobsTable, Dialog.RemoteMachines, Dialog.RemoteTable)
+ end
+ 
+ ReportCreationDate := sysDate	-- shown in the Report as "Generated on:"
+ RunningTime := ReportCreationDate - Dialog.startDateExpRun
+ 
+ Dialog.StudyExecuted := true
+ if (saveHTMLatEnd OR showHTMLatEnd)
+ 	prepReport
+ end
+ 
+ var str,FileName:string -- HTML file and/or Excel file
+ var ExistsDir:boolean := existsFile(reportObject.saveToDirectory)
+ /*if NOT ExistsDir
+     --  messages for Excel is given in row 137 and for HTML is given in row 90
+ 	str := rootfolder.Localization.getText(432) -- "Folder for saving the Excel or HTML file does not exist."
+ 	Recording.append(str); print str
+ end*/
+ 
+ if strLen(ReportObject.Informations[1,1]) > 0
+ 	FileName := to_str(reportObject.saveToDirectory, ReportObject.Informations[1,1]) -- use project name
+ else
+ 	FileName:= modelfile -- the excel or the HTML file has the same name as the model file
+ 	FileName := strCopy(FileName, strRpos("\\\\",FileName)+1,strLen(FileName))
+ 	FileName := strCopy(FileName,1,strLen(FileName)-4)
+ 	FileName := to_str(reportObject.saveToDirectory, FileName)
+ end
+ 
+ if saveHTMLatEnd
+ 	if ExistsDir and isComputerAccessPermitted
+ 		reportObject.save(to_str(FileName,".html"))
+ 		Recording.append(to_str("Save the file \\"",FileName,"\\".html."))
+ 	else
+ 		str := rootfolder.Localization.getText(433) -- The access to the computer is prohibited or the folder for saving the HTML report does not exist.
+ 		Recording.append(str); print str
+ 	end
+ end -- if saveHTMLatEnd
+ 
+ if showHTMLatEnd  -- This attribute can be set via the F8-dialog (menu command 'Show Attributes and Methods').
+ 	reportObject.show -- open the_Report
+ end
+ 
+ if MailAtEnd
+ 	if isComputerAccessPermitted
+ 		sendMail
+ 	else
+ 		str := rootfolder.Localization.getText(431) -- "Since the access to the computer was prohibited, no email could be sent."
+ 		Recording.append(str); print str
+ 	end
+ end -- if MailAtEnd
+ 
+ var obj:object
+ 
+ if saveExcelAtEnd
+ 	if ExistsDir and isComputerAccessPermitted
+ 		-- prepare a new Result tablefile without the results of output tables
+ 		obj := Results.duplicate(current) -- will be deleted
+ 		obj.Coordinate3D := makeArray(16,-12,0.0)
+ 		var j:integer := 1
+ 		while j <= obj.XdimIndex
+ 			var AttrStr:string := ValueDescriptions.getOrig(obj[j,0])
+ 			if isOutTable(AttrStr)  -- do not show entire tables as output
+ 				obj.cutColumn(j)
+ 			else
+ 				if obj.getDataType(j) = "time" -- Excel has not dataType time
+ 					obj.setDataType(j,"string")
+ 				end
+ 				j += 1
+ 			end
+ 		end
+ 
+ 		-- call of                 "sheet1"
+ 		if obj.writeExcelFile(FileName, rootfolder.Localization.getText(390), false) --  no debugger, "sheet1"
+ 			Recording.append(to_str("Save the Excel file \\"",FileName,"\\"."))
+ 		else
+ 			Recording.append(to_str("It was impossible to save the Excel file \\"",FileName,"\\"."))
+ 		end
+ 		obj.deleteObject
+ 	else
+ 		str := rootfolder.localization.getText(434) -- The access to the computer is prohibited or the folder for saving the Excel file does not exist.
+ 		Recording.append(str); print str
+ 	end
+ end -- if saveExcelAtEnd
+ 
+ str := rootfolder.Localization.getMessage(122,runningTime,"","") -- The running time was $1.
+ Recording.append(str); print str
+ 
+ infobox("",false)
+ if showRuntimeAtEnd
+ 	-- The remote processes should keep running for the purpose of debugging.
+ 	-- Now_you can check the remote Plant Simulation processes.
+ 	if UsingRemote
+ 		if Recording.remoteErrors
+ 			MessageBox(to_str(rootfolder.Localization.getText(121),strChr(10), --The experiment run is finished.
+ 		  str,strChr(10), -- The running time was $1.
+ 			rootfolder.Localization.getText(414),strChr(10), -- An error occurred on a remote computer.
+ 			rootfolder.Localization.getMessage(411,to_str(Recording.localErrors),"","")), 1, 1) -- There were $1 errors.
+ 
+ 		else
+ 			messageBox(to_str(rootfolder.Localization.getText(121),strChr(10),str),1,4) -- info: The experiment run is finished. The running time was $1. (variable str)
+ 		end
+ 
+ 	else-- Non-distributed simulation
+ 		if Recording.localErrors > 0
+ 			MessageBox(to_str(rootfolder.Localization.getText(121),strChr(10), -- The experiment run is finished.
+ 				str,strChr(10), -- The running time was $1.
+ 				rootfolder.Localization.getMessage(411,to_str(Recording.localErrors),"","")), 1, 4) -- There were $1 errors.
+ 		else
+ 			MessageBox(to_str(rootfolder.Localization.getText(121),strChr(10),str),1,4) -- The experiment run is finished. The running time was $1. (variable str)
+ 		end
+ 	end
+ end -- if showRuntimeAtEnd
+ 
+ if UsingRemote
+ 	if UsingRules
+ 		Dialog.Dialog.setCaption("CurrExp", to_str(currExpNo)+"/"+to_str(GetNumberOfExperiments))
+ 		Dialog.Dialog.setCaption("CurrObs", to_str(currRunNo)+"/"+to_str(GetNumberOfObservations))
+ 	else
+ 		Dialog.Dialog.setCaption("CurrExp", " ")
+ 		Dialog.Dialog.setCaption("CurrObs", to_str(TotalSimulationRuns)+"/"+to_str(GetNumberOfObservations*GetNumberOfExperiments)) -- Show the number of performed observations in the dialog.
+ 	end
+ else
+ 	Dialog.Dialog.setCaption("CurrExp", to_str(currExpNo)+"/"+to_str(GetNumberOfExperiments))
+ 	Dialog.Dialog.setCaption("CurrObs", to_str(currRunNo)+"/"+to_str(GetNumberOfObservations))
+ end
+ 
+ if UsingRemote -- distributed simulation
+ 	var machTab:object := DistributedSimulation.machinesTable
+ 	for var i := 1 to machTab.yDim
+ 		obj := machTab[17,i]
+ 		if obj /= void  -- if not all registered simualtion machines are started
+ 			obj.JobID := 0
+ 		end
+ 	next
+ 	if eventcontroller /= void
+ 		eventcontroller.reset -- delete_observer
+ 	end
+ 	-- sleep(0.1,false); not necessary, the next step is a reset, which will set the best solution into the model
+ 	terminateRemoteProcesses
+ 
+ 	if save_model  -- save in the folder, which is defined in the dialog
+ 		var infoStr,ModDirLoc:string
+ 		ModDirLoc := to_str(ModelDir,"\\\\",savefile,".spp")
+ 		executeSilent("param modStr:string saveModel(modStr,false,false)",ModDirLoc)
+ 		infoStr := to_str("Save model file: \\"",ModDirLoc,"\\"")
+ 		Recording.append(infoStr)
+ 	end
+ 
+ else -- non-distributed simulation
+ 
+ end
+ 
+ IsRunning := false
+ 
+ if strLen(UserEvalMethod) > 0
+ 	--str_to_method(to_str(~,".",UserEvalMethod)).execute(?.~)
+ 	if strLpos(".",UserEvalMethod) = 1
+ 		str_to_method(UserEvalMethod).execute(?.~)
+ 	else
+ 		str_to_method(to_str(~,".",UserEvalMethod)).execute(?.~)
+ 	end
+ end
+ 
+ -- do not: DistributedSimulation.removeDistrSim_
+ -- eventcontroller.reset;-- similar to a simulation run: no reset at the end
+RandomSeed: 286
+UUID: ce78649e-8b03-4c19-b456-daf247f4b1b9
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

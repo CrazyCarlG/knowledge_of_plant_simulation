@@ -1,0 +1,45 @@
+ApplicationVersion: "26.6.2.3599"
+ModelFormat: 1
+CompactFormat: false
+UUID: f1642be0-7eb2-4520-8797-9bd90660fd74
+ModelSettings:
+ Language: "English"
+ DateFormat: 1
+ AutoConnect: true
+ AccessToComputer: true
+ InterpStack: 5000
+ InterpChain: 5000
+ InterpSuspended: 500
+ Epsilon: 1e-08
+ MaxSamples: 10
+ WorkerEdgeMax: 0
+ LoopTimeout: 7000
+ UnitLU: 1
+ TimeScale: [1,24,60,60]
+ DayLight: [3,-1,0,2,10,-1,0,3]
+ BaseYear: 1970
+ Units: [1,1,1,0,0]
+ MoneyUnit: $
+ ScreenCoverageThreshold: 1
+ createOptimizedGraphicsForRendering: false
+ FreelyMovingWorkerWidth: 0.8
+ GridConfiguration:
+  AxisColor: 0xf0
+  BasePlateMaterial: [0xbfbebebe,0x0,0x0,0x0]
+  LineSets:
+  - [0.1,0xa4a8a8,true]
+  - [1,0x646868,true]
+  - [10,0x0,true]
+  GridSnapLineSet: 2
+  SnapMode: 3
+Animation: true
+$Nodes:
+- d3e0a67e-8892-47de-ac69-b6ead20abb27
+- 6f12fc0e-be3d-4aa5-b26f-d544b1d636d6
+- edeb0234-be66-48ec-b995-d0c15ce61898
+- 76397068-6f20-4b52-a344-a2d12f1c2cad
+- f7b23097-cf66-4ddf-b2e5-7926cc3d11b5
+- fa281ff1-14d9-4537-a21c-c81c9caf1522
+- 7294deba-8068-44fb-a292-05f87931ced0
+- e1e00ce6-860e-4ee9-8367-dcc08d6e9ab4
+- 1963cff8-bccc-4f3d-b9b5-407e2f841c1b

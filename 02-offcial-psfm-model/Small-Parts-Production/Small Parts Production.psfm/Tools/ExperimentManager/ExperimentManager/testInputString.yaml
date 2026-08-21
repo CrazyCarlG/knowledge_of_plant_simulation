@@ -1,0 +1,83 @@
+InternalClassType: Method
+Coordinate3D: [12.1,-27.5,0]
+Name: testInputString
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- input values must allow an instruction like x := x
+ -- called by: plausibility interaction of 'Values'
+ param attrStr:string->boolean
+ 
+ var Inherited, CanInherit:boolean
+ var s,AttrName:string
+ var p:integer
+ var o:object
+ 
+ if strLpos("[",attrStr) = 0 -- no DataTable or 1D-list
+ 	s := attrStr
+ 	while NOT existsObject(s)
+ 		p := strRpos(".",s)
+ 		AttrName := strCopy(s,p+1,strLen(s))
+ 		s := strCopy(s,1,p-1)
+ 	end
+ 	o := s
+ 	-- s := omit(attrStr,1,p) -- like "Capacity", "procTime.beta", "Failures.Failure2.Verfügbarkeit", "Failures.Failure2.interval.Mu"
+ 
+ 	if strLpos("(",AttrName) > 0 -- creationTable(1) or erzeugungsTabelle(1)
+ 		if o.InternalClassType = "WorkerPool"
+ 			o.getCreationTable(void,Inherited) -- Determine the inheritance of the creation table of a WorkerPool
+ 		end
+ 
+ 	else
+ 		if o.InternalClassType = "Variable"
+ 			AttrName := "Value"
+ 		end
+ 		o.getAttribute(AttrName,Inherited,CanInherit) -- detect the inheritance of the attribute
+ 	end
+ 
+ end -- no DataTable or 1D-list
+ 
+ var stmt:string := to_str("-> boolean ",attrStr," := ",attrStr,";result := true") --; print stmt
+ var res:any := executeSilent(stmt) -- switch OFF the inheritance of the attribute
+ result := isBoolean(res) AND res
+ 
+ /*switch tolower( AttrName) -- TODO
+ case "failures","störungen"
+ 	-- root.Process.Failures.Failure2.Verfügbarkeit
+ 	stmt:= to_str("var a:any := root.Process.Failures.Failure2; a.inheritAttribute(\\"Verfügbarkeit\\")")
+ 	executeSilent(stmt) -- switch on the inheritance of an attribute of the second failure profile
+ 
+ 	--a := o.failures.Failure2
+ 	--a.inheritAttribute("Verfügbarkeit")
+ end*/
+ 
+ 
+ if o /= void
+ 	if o.InternalClassType = "WorkerPool"
+ 		if Inherited
+ 			o.setCreationTable(void) -- switch ON the inheritance of the creationtable of a WorkerPool
+ 		end
+ 
+ 	else
+ 		if CanInherit AND Inherited
+ 			o.inheritAttribute(AttrName) -- switch ON the inheritance
+ 		end
+ 	end
+ end
+RandomSeed: 249
+UUID: 4c34c492-4be3-40b4-a59a-c8b94a468551
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,19 @@
+InternalClassType: Frame
+Coordinate3D: [27.55,-8.6,0]
+Name: Logo
+Origin: c1b69ed8-4d88-4da4-9431-076b655dfe75
+UUID: 01a0236c-0546-707e-b0e3-41f2aab83f3f
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-0.05,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ShowContent: false
+ VisibleGraphicGroups: ["Operational"]
+$CustomAttributes:
+-
+ Name: tooltip
+ ID: 1
+ DataType: string
+ Value: "Siemens Industry Sector"
+ ShowInTooltip: false

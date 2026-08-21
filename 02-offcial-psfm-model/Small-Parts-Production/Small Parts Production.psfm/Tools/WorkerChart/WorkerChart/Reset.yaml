@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [13,-6,0]
+Name: Reset
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ Chart.active := false
+ myWorkerTable.delete-- filled by Init
+ 
+ -- reset the chart entries
+ myInputChannelsTable.delete
+ Chart.InputChannels := myInputChannelsTable.copy({0,0}..{*,*})
+ 
+ myWorkingTimeStatisticTable.inheritContents := true
+ myOverallTimeStatisticTable.inheritContents := true
+ myStatisticTable.inheritContents := true
+ myBufferTable.inheritContents := true
+ myWorkingTimeStatisticTable.inheritFormat := true
+ myOverallTimeStatisticTable.inheritFormat := true
+ myStatisticTable.inheritFormat := true
+ myBufferTable.inheritFormat := true
+RandomSeed: 33
+UUID: 73503ebc-ea3f-4355-b5fd-671f16769899
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["reset"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

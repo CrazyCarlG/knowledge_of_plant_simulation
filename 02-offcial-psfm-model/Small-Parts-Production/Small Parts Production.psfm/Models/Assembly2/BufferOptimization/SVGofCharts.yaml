@@ -1,0 +1,40 @@
+InternalClassType: DataTable
+Origin: 08e61019-55f5-4ea0-bd78-211ae2974d16
+RandomSeed: 1073747489
+UUID: 01a0236c-0546-7512-aac1-b8f8d635cc52
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: tmpTables
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ColumnIndex: [string,2,~,"tablefile SVGofChart<No>"]
+  Columns:
+  - [0,string,2,"Observation 2","Observation 3"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnIndexContents: false
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 3
+    FontColor: 0x0
+ Columns:

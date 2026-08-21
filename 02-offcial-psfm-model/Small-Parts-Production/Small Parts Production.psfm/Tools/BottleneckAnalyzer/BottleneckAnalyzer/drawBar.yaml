@@ -1,0 +1,39 @@
+InternalClassType: Method
+Coordinate3D: [14.7,-5.5,0]
+Name: drawBar
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ param obj : object, typeStr:string, factor : real
+ 
+ var ZeropointX,ZeropointY,IconLen,IconHeight:integer
+ 
+ obj.getBoundingBox(ZeropointX,ZeropointY,IconLen,IconHeight)
+ ZeropointX := ZeropointX + IconLen/2 - 20
+ ZeropointY := ZeropointY - 10
+ 		
+ if ZeropointY - 40 < 10 
+ 	ZeropointY := ZeropointY + 70 + IconHeight
+ end
+  var color:integer := colors[1,typeStr]
+ var y_Null:integer := ZeropointY - 1
+  var x_Null:integer := ZeropointX + colors[6,typeStr]
+  
+ -- reduce the width of the bars from 6 to 4, 3
+ obj.~.drawRectangle(layer_of_chart - 1,x_Null,y_Null,3,-round(40*factor),color,-1)
+RandomSeed: 61
+UUID: cf872691-975b-43b3-9531-6d465201ba15
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

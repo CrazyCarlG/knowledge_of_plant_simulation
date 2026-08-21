@@ -1,0 +1,32 @@
+InternalClassType: Station
+Coordinate3D: [1,-8,0]
+Origin: 01a0236c-0546-704b-8d37-b76606303ae7
+RandomSeed: 142
+ShiftcalendarObject:
+UUID: 01a0236c-0546-7380-9b14-5eeaffd4296a
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: waitingCarrier
+ ID: 1
+ $DataType: object
+ Value: ""
+$Successors:
+-
+ $Succ: 01a0236c-0546-7361-a52c-204bafb459e6
+ Origin: 01a0236c-0546-7055-a65d-6a4f66c2ba75
+ UUID: 01a0236c-0546-738a-aae3-c8861e3dcdb7
+$Predecessors:
+- 01a0236c-0546-738b-9068-e48b22b53a94
+- 01a0236c-0546-73b6-baa0-ecbfbf91c6f6
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,42 @@
+InternalClassType: Method
+Coordinate3D: [13,-4.8500000000000005,0]
+Name: M_isComputerAccessPermitted
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: Button 'Test' of the dialog 'Advanced settings' tab 'Distribution'
+ -- resetWizard (check of seetings 'Save report', 'Save results', 'Send e-mail'.)
+ -- NOTE THAT: Don't ask the user to allow the access to the computer.
+ param tip:string -> boolean
+ 
+ if ApplicationVersion >= 23002001
+ 	return askForAccessToTheComputer(tip)
+ else
+ 	if isComputerAccessPermitted
+ 		return true
+ 	else
+ 		var InfoStr := to_str(rootfolder.Localization.getMessage(423,rootFolder.name,"",""),"  ",rootfolder.Localization.getText(451))
+ 		-- The library ExperimentManager demands access to the computer.
+ 		-- Access to the computer is prohibited in the model settings though.
+ 		MessageBox(InfoStr, 1, 3) -- warning with the OK button
+ 		if strLen(tip) > 0
+ 			print "Tip: ",tip
+ 		end
+ 	end
+ end
+RandomSeed: 15
+UUID: 2a3f5d10-bd6a-4ffe-917b-76569f58b4c7
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

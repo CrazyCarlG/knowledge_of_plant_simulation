@@ -1,0 +1,23 @@
+InternalClassType: Chart
+DataSource: "Input Channels"
+InputChannels:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ Columns:
+ - [0,string,9,"F1","F2","F3","F4","F5","F6","F7","F8","F9"]
+ - [1,string,9,"F1.numMU","F2.numMU","F3.numMU","F4.numMU","F5.numMU","F6.numMU","F7.numMU","F8.numMU","F9.numMU"]
+Origin: 01a0236c-0546-7040-a213-f7685b1bc309
+RandomSeed: 1073747327
+Title: "Occupation of the conveyors in Assembly 1"
+UUID: 01a0236c-0546-71db-8122-3a5f9385123e
+$WindowRect: [487,392,914,445]

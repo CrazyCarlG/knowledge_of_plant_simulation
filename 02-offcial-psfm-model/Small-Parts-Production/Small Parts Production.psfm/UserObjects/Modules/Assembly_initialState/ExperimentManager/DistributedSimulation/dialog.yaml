@@ -1,0 +1,13 @@
+InternalClassType: Dialog
+Origin: 6827914a-e3d8-4f63-b190-eb9b4ccacd00
+RandomSeed: 1073746897
+UUID: 01a0236c-0546-711b-b691-6f6219e2b6aa
+$Elements:
+-
+ Type: EditText
+ Name: "CompName_inp"
+ Caption: "aa"
+-
+ Type: EditText
+ Name: "numParallelProc_Inp"
+ Caption: "1"

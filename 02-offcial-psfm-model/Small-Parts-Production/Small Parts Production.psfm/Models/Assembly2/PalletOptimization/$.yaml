@@ -1,0 +1,156 @@
+InternalClassType: Frame
+Coordinate3D: [29,13.450000000000001,0]
+Label: "PalletOptimization"
+LockStructure: true
+Name: PalletOptimization
+Origin: 01a0236c-0546-705a-a05d-da430c21820e
+RandomSeed: 1073747747
+UUID: 01a0236c-0546-738f-8170-dcd9f26f1704
+3D:
+ ShowContent: false
+$CustomAttributes:
+-
+ Name: Alpha
+ ID: 1
+ $DataType: real
+ Value: 0.099999999999999978
+-
+ Name: ConfLevel
+ ID: 2
+ $DataType: real
+ Value: 90
+-
+ Name: CurrRunNo
+ ID: 3
+ $DataType: integer
+ Value: 10
+-
+ Name: ModelDir
+ ID: 6
+ $DataType: string
+ Value: "C:\\TEMP"
+-
+ Name: NumRuns
+ ID: 7
+ $DataType: integer
+ Value: 5
+-
+ Name: Savefile
+ ID: 10
+ $DataType: string
+ Value: "SimulationRun"
+-
+ Name: DistrSimAvailable
+ ID: 12
+ $DataType: boolean
+ Value: true
+-
+ Name: UserSeedValueMethod
+ ID: 14
+ $DataType: string
+ Value: ""
+-
+ Name: UserConfigMethod
+ ID: 17
+ $DataType: string
+ Value: ""
+-
+ Name: RemoteLicType
+ ID: 19
+ $DataType: string
+ Value: "Professional"
+-
+ Name: RemoteLowerPrio
+ ID: 20
+ $DataType: boolean
+ Value: true
+-
+ Name: OK_output
+ ID: 24
+ $DataType: boolean
+ Value: true
+-
+ Name: ShowHTMLatEnd
+ ID: 26
+ $DataType: boolean
+ Value: true
+-
+ Name: MailReceiver
+ ID: 29
+ $DataType: string
+ Value: ""
+-
+ Name: MailServer
+ ID: 30
+ $DataType: string
+ Value: ""
+-
+ Name: MailAtEnd
+ ID: 31
+ $DataType: boolean
+ Value: false
+-
+ Name: Restore_Inputvalues
+ ID: 34
+ $DataType: boolean
+ Value: true
+-
+ Name: CurrentTaskNo
+ ID: 38
+ $DataType: integer
+ Value: 0
+-
+ Name: RemoteLicTypeNo
+ ID: 41
+ $DataType: integer
+ Value: 1
+-
+ Name: RunningTime
+ ID: 42
+ $DataType: time
+ Value: 59.111000061035156
+-
+ Name: ReportCreationDate
+ ID: 43
+ $DataType: datetime
+ Value: 2018-7-31 14:47:19.4300001
+-
+ Name: FirstReset
+ ID: 46
+ $DataType: boolean
+ Value: true
+-
+ Name: ResultsPrecision
+ ID: 47
+ $DataType: integer
+ Value: -1
+-
+ Name: NumExp
+ ID: 49
+ $DataType: integer
+ Value: 8
+-
+ Name: UserEvalMethod
+ ID: 56
+ $DataType: string
+ Value: ""
+-
+ Name: ResetIsInProgress
+ ID: 61
+ $DataType: boolean
+ Value: false
+-
+ Name: IsRunning
+ ID: 65
+ $DataType: boolean
+ Value: false
+-
+ Name: isSimulationMachine
+ ID: 68
+ $DataType: boolean
+ Value: false
+-
+ Name: QuitAfterTime
+ ID: 71
+ $DataType: time
+ Value: 5:00

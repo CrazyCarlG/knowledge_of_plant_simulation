@@ -1,0 +1,38 @@
+InternalClassType: DataTable
+Coordinate3D: [35.550000000000004,-19.400000000000002,0]
+Name: DialogElements
+Origin: 89124604-5872-4e98-b37d-0ca8d0b72b42
+UUID: 2a6765a7-1b7a-4b1b-92eb-e9632cd212b6
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: "Translation of Index_Menu row 21"
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 2
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+  -
+   Index: 1
+   DataType: integer
+   Width: 10
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,3,"dialog element","Message","Comment"]
+ Columns:
+ - [0,string,24,"WorkerPool_C","ViewChart","TabChart","TabConfiguration","SelectionBox","Group","Worker","SelectionBox2","radio button working","radio button overall time","BoxData","Statistics2Display_C","ButtonOpenStatTable","SampleInterval_C","ChartTypeGroup","ChartType_C","PointOfView_C","Contents_Menu","HelpObject_Menu","Help_Menu","OpenWorkerPool_menu","OpenLoc_Menu","nav_menu","Pool"]
+ - [1,integer,24,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22,23,24,66]
+ - [2,string,24,"Create charts of this WorkerPool:","Show Chart","Data","Configuration","Group Workers by","Classes","Individuals","Occupancy with respect to","Working time","Overall time","Data configuration","Statistics to display:","Open Table ...","Sample intervals:","Chart configuration","Type of chart:","Point of view:","Contents","Help on WorkerChart","Help","WorkerPool","Open Location","Navigate","Pool radio button"]

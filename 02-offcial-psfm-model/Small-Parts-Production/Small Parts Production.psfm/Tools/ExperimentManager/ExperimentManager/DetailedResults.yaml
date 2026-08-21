@@ -1,0 +1,379 @@
+InternalClassType: DataTable
+Coordinate3D: [17.2,-6.0499999999999989,0]
+Name: DetailedResults
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 288
+UUID: 5bb15ceb-02d9-4a80-bb7c-3c8b05d5c34c
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: Translate
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- called by: onOpen (encrypted)
+  var oResTab:object := self.~ -- table DetailedResults
+  var Cell_00:string := rootfolder.Localization.getText(153) -- "Experiment"
+  oResTab[0,0]  := Cell_00
+  Results[0,0]  := Cell_00
+  
+  var j:integer := 1 -- translate the column index of table DetailedResults
+  while oResTab[j,1] /= void
+  	var s:string := oResTab[j,0]
+  	var AttrStr:string := ValueDescriptions.getOrig(s)
+  	oResTab[j + 1,0] := rootfolder.Localization.getText(291)-- Standard Deviation
+  	oResTab[j + 2,0] := rootfolder.Localization.getText(292)-- Minimum
+  	oResTab[j + 3,0] := rootfolder.Localization.getText(293)-- Maximum
+  
+  	if isOutTable(AttrStr)
+  		oResTab[j + 4,0] := rootfolder.Localization.getText(296)-- Observations
+  		j += 5
+  	else
+  		oResTab[j + 4,0] := rootfolder.Localization.getText(294)-- Left interval bound
+  		oResTab[j + 5,0] := rootfolder.Localization.getText(295)-- Right interval bound
+  		oResTab[j + 6,0] := rootfolder.Localization.getText(296)-- Observations
+  		j += 7
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: ExperimentExecuted
+ ID: 2
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 7
+   DataType: string
+   MaxXDim: 1
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Alignment: "Center"
+    DataType: boolean
+    FormatString: "AAAAA"
+    Width: 15
+  Columns:
+ ShowInTooltip: false
+-
+ Name: ResultTablesFormatted
+ ID: 3
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: setResultsPrecision
+ ID: 4
+ DataType: method
+ Value: |+1
+  -- observer_of the attribute ResultsPrecision
+  -- changed by the user
+  param Attribut: string, alterWert: any
+  
+  var prec:integer := ResultsPrecision
+  var FormatStr:string
+  if prec < 1 OR prec > 14
+  	FormatStr := ""
+  	ResultsPrecision := -1
+  else
+  	FormatStr := to_str("-15.",prec)
+  end
+  
+  DetailedResults.ResultsFormat := FormatStr -- ResultsFormat is not shown in the F8 dialog (no change is possible by the F8 dialog)
+  
+  setNumberformat(DetailedResults)
+  DetailedResults.refillDialog
+  
+  setNumberformat(Results)
+  Results.refillDialog
+ ShowInTooltip: false
+-
+ Name: ResultsFormat
+ ID: 5
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  EditorReadOnly: true
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+   Width: 8
+  -
+   Index: 1
+   FontSize: 1
+   FontColor: 0x0
+   DataType: string
+   Width: 4
+  -
+   Index: 2
+   DataType: string
+   Width: 15
+  -
+   Index: 3
+   DataType: string
+   Width: 6
+  -
+   Index: 4
+   DataType: string
+   Width: 6
+  -
+   Index: 5
+   DataType: string
+   Width: 16
+  -
+   Index: 6
+   DataType: string
+   Width: 16
+  -
+   Index: 7
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 8
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 9
+   DataType: string
+   Width: 15
+  -
+   Index: 10
+   DataType: string
+   Width: 6
+  -
+   Index: 11
+   DataType: string
+   Width: 6
+  -
+   Index: 12
+   DataType: string
+   Width: 16
+  -
+   Index: 13
+   DataType: string
+   Width: 16
+  -
+   Index: 14
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 15
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 16
+   DataType: string
+   Width: 15
+  -
+   Index: 17
+   DataType: string
+   Width: 6
+  -
+   Index: 18
+   DataType: string
+   Width: 6
+  -
+   Index: 19
+   DataType: string
+   Width: 16
+  -
+   Index: 20
+   DataType: string
+   Width: 16
+  -
+   Index: 21
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 22
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 23
+   DataType: string
+   Width: 15
+  -
+   Index: 24
+   DataType: string
+   Width: 6
+  -
+   Index: 25
+   DataType: string
+   Width: 6
+  -
+   Index: 26
+   DataType: string
+   Width: 16
+  -
+   Index: 27
+   DataType: string
+   Width: 16
+  -
+   Index: 28
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 29
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 30
+   DataType: string
+   Width: 15
+  -
+   Index: 31
+   DataType: string
+   Width: 6
+  -
+   Index: 32
+   DataType: string
+   Width: 6
+  -
+   Index: 33
+   DataType: string
+   Width: 16
+  -
+   Index: 34
+   DataType: string
+   Width: 16
+  -
+   Index: 35
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 36
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 37
+   DataType: string
+   Width: 15
+  -
+   Index: 38
+   DataType: string
+   Width: 6
+  -
+   Index: 39
+   DataType: string
+   Width: 6
+  -
+   Index: 40
+   DataType: string
+   Width: 16
+  -
+   Index: 41
+   DataType: string
+   Width: 16
+  -
+   Index: 42
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 43
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 44
+   DataType: string
+   Width: 15
+  -
+   Index: 45
+   DataType: string
+   Width: 6
+  -
+   Index: 46
+   DataType: string
+   Width: 6
+  -
+   Index: 47
+   DataType: string
+   Width: 16
+  -
+   Index: 48
+   DataType: string
+   Width: 16
+  -
+   Index: 49
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+ ColumnIndex: [string,1,"Experiment"]
+ Columns:

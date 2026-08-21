@@ -1,0 +1,66 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-13.8,0]
+Name: DefExperiments
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Preparing the tables for the next experiment and setting the parameters
+ -- called by: new call chain via _reset (non-distrubted simulation)
+ 
+ var ExpNo:integer := CurrExpNo -- Nwdata
+ 
+ /*if (NOT UsingRules) AND UsingTables AND_numExp > 1
+ 	Dialog.Dialog.setCaption("CurrExp", to_str(currExpNo,"/",numExp_))
+ else -- no_rules and multiple experiments
+ 	Dialog.Dialog.setCaption("CurrExp", to_str(currExpNo))
+ end		*/
+ 
+ Dialog.Dialog.setCaption("CurrExp", to_str(currExpNo)+"/"+to_str(GetNumberOfExperiments))
+ Dialog.Dialog.setCaption("CurrObs", to_str(currRunNo)+"/"+to_str(GetNumberOfObservations))
+ 
+ if DS_
+ 	DS_Experiment  := currExpNo
+ 	DS_Observation := currRunNo
+ end
+ 
+ if UsingTables
+ 	evalExpTable(ExpNo) -- write the numerical values into_InputValues
+ end
+ if strLen(UserConfigMethod) > 0 --_UsingUserMethod
+ 	--_Protocol[3,ExpNo] := rootfolder.localization.getText(366)
+ 	-- str_to_method(to_str(~,".",UserConfigMethod)).execute(ExpNo)
+ 	if strLpos(".",UserConfigMethod) = 1
+ 		str_to_method(UserConfigMethod).execute(ExpNo)
+ 	else
+ 		str_to_method(to_str(~,".",UserConfigMethod)).execute(ExpNo)
+ 	end
+ 	--_UserMethod(ExpNo)
+ end
+ 
+ if UsingRules AND (ExpNo <= NumRulesExp) -- NumRulesExp is defined on tab 'Rules'
+ 	evalRules(ExpNo)
+ end
+ 
+ callEvery(rootframe,"prepareSetting",ExpNo)
+ 
+ firstReset := false
+ eventController.reset
+ 
+ -- eventController.start --WithoutAnimation
+RandomSeed: 303
+UUID: d8f0b01b-7d00-44b5-862c-424a0eb3ebdb
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

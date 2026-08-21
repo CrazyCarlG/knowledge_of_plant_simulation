@@ -1,0 +1,194 @@
+InternalClassType: DataTable
+Coordinate3D: [2.25,-5,0]
+Name: MachinesTable
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 346
+UUID: 6a3fd051-5d3f-4f4d-ac4e-0f4303602927
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: numSimMachine
+ ID: 1
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: addLogging
+ ID: 2
+ DataType: method
+ Value: |+1
+  param Message:string,JobId, MachineNo:integer, isError:boolean
+  -- Time, Method, JobId, MachineNo, Message
+  var MachTab:object := self.~
+  if MachTab[8,MachineNo] /= void
+  	var LogTable:table := MachTab[8,MachineNo]
+  	LogTable.writeRow(1, LogTable.yDim+1, sysdate, ?.name, JobId, MachineNo, Message, isError)
+  end
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnIndexContents: false
+  ColumnWidth: 20
+  DataType: string
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+  -
+   Index: 1
+   Width: 17
+  -
+   Index: 2
+   DataType: string
+   Width: 5
+  -
+   Index: 3
+   Width: 16
+  -
+   Index: 4
+   DataType: string
+   Width: 9
+  -
+   Index: 5
+   DataType: time
+   Width: 12
+  -
+   Index: 6
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 14
+  -
+   Index: 7
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: integer
+   Width: 8
+  -
+   Index: 8
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnIndex: true
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      DataType: datetime
+      Width: 19
+     -
+      Index: 2
+      Width: 17
+     -
+      Index: 3
+      DataType: integer
+      Width: 5
+     -
+      Index: 4
+      DataType: integer
+      Width: 6
+     -
+      Index: 5
+      Width: 60
+     -
+      Index: 6
+      Alignment: "Center"
+      DataType: boolean
+      FormatString: "AAAAA"
+      Width: 6
+     RowFormat:
+     -
+      Index: 0
+      Alignment: "Center"
+      Hidden: false
+    ColumnIndex: [string,7,~,"Time","Method","JobID","MachNo","Message","Is error"]
+    Columns:
+   Width: 10
+  -
+   Index: 9
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: integer
+   FormatString: "-9"
+   Width: 7
+  -
+   Index: 10
+   ReadOnly: false
+   DataType: string
+   Width: 12
+  -
+   Index: 11
+   ReadOnly: false
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 10
+  -
+   Index: 12
+   ReadOnly: false
+   DataType: string
+   Width: 8
+  -
+   Index: 13
+   ReadOnly: false
+   DataType: integer
+   Width: 6
+  -
+   Index: 14
+   ReadOnly: false
+   Width: 7
+  -
+   Index: 15
+   ReadOnly: false
+   DataType: integer
+   Width: 16
+  -
+   Index: 16
+   ReadOnly: false
+   DataType: time
+   Width: 21
+  -
+   Index: 17
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   DataType: object
+   Width: 34
+  -
+   Index: 18
+   DataType: integer
+  -
+   Index: 19
+   ReadOnly: false
+   DataType: integer
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,20,~,"Remote Machine",~,"Starting EventController","LicenceType","Termination after","Priority below normal","Handle","logging","JobId","Process finished","Error Occurred","ErrorMethod","ErrorLine","ErrorString","counter simulation runs","simulation running time","Control frame","Number of crashes","Processor No"]
+ Columns:

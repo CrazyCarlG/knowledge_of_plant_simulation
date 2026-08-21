@@ -1,0 +1,52 @@
+InternalClassType: DataTable
+Coordinate3D: [59,-26,0]
+Name: Effects
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+UUID: 4c1d3628-3da0-4d06-8f51-2e856aa16743
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: |+1
+   Results of the Factorial design for the selected result value:\r
+   e1,... = Main effects: Average change due to moving the factor from the lower to the upper level.\r
+   e12,... = Interaction effects: Average change due to simultaneously moving of 2 factor \r
+   from the lower to the upper level with respect to the opposite change.
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 5
+  -
+   Index: 1
+   Width: 16
+  -
+   Index: 2
+   Width: 14
+  -
+   Index: 3
+   Width: 19
+  -
+   Index: 4
+   Width: 12
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 3
+    FontColor: 0x0
+ Columns:

@@ -1,0 +1,155 @@
+InternalClassType: DataTable
+Coordinate3D: [-1.3,7,0]
+Name: Colors
+Origin: 3ebf8d2b-61b2-4f7b-92c8-b51b39d21535
+PlausibilityCtrl: "self.OnPlausibility"
+RandomSeed: 43
+UUID: cd19ce33-8b78-4eb9-a9b1-cd442b53362e
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$CustomAttributes:
+-
+ Name: openColors
+ ID: 1
+ DataType: method
+ Value: |+1
+  var tab:object
+  
+  tab := self.~
+  tab[1,0] := rootfolder.Localization.getText(57) -- "Color"
+  tab[0,0] := rootfolder.Localization.getText(40)-- "Energy states"
+  
+  for var j := 2 to 5  -- 71, .., 73 (colors, Opacity)
+  	tab[j,0] := rootfolder.Localization.getText(j+69)
+  next
+  for var j := 1 to 6  -- 45, .., 50 (Energy states)
+  	tab[0,j] := rootfolder.Localization.getText(j+44)
+  next
+  tab.opendialog
+
+ ShowInTooltip: false
+-
+ Name: setDefaultColors
+ ID: 2
+ DataType: method
+ Value: |+1
+  var tab:object; var RGBvalue:integer
+  
+  tab := self.~
+  tab.writeRow(2,1, 0, 245, 0, 153) -- Working
+  tab.writeRow(2,2, 190, 142, 50, 153) -- Setting up
+  tab.writeRow(2,3, 201, 233, 96, 153) -- Operational (yellow)
+  tab.writeRow(2,4, 255, 0, 0, 153) -- Failed
+  tab.writeRow(2,5, 136, 136, 136, 153) -- Standby
+  tab.writeRow(2,6, 51,51,51, 153) -- Off
+  
+  for var j := 1 to 6 
+  	UsageProfile.setRGB(j,tab[2,j], tab[3,j], tab[4,j], tab[5,j])
+  	RGBvalue := makeRGBValue(tab[2,j], tab[3,j], tab[4,j])
+  	tab.setBackgroundColorCells({1,j}..{1,j}, RGBvalue)
+  	tab.RGB[1,j] := RGBvalue
+  next
+  
+
+ ShowInTooltip: false
+-
+ Name: OnPlausibility
+ ID: 3
+ DataType: method
+ Value: |+1
+  param column, j : integer -- changed cell
+  
+  if j > 0 
+  	var tab:object := self.~
+  	var n,RGBvalue:integer
+  	
+  	for var col := 2 to 4 
+  		n := tab[col,j]
+  		if n < 0 OR n > 255 
+  			n := 0
+  			tab[col,j] := n
+  		end
+  	next
+  
+  	UsageProfile.setRGB(j, tab[2,j], tab[3,j], tab[4,j], tab[5,j])
+  	RGBvalue := makeRGBValue(tab[2,j], tab[3,j], tab[4,j])
+  	tab.setBackgroundColorCells({1,j}..{1,j}, RGBvalue)
+  	tab.RGB[1,j] := RGBvalue
+  end -- if j < 0 (change in row j)
+
+ ShowInTooltip: false
+-
+ Name: RGB
+ ID: 4
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Alignment: "Right"
+    DataType: integer
+    Width: 14
+  Columns:
+  - [1,integer,6,62720,3313342,6351305,255,8947848,3355443]
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 8
+  DataType: integer
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 14
+  -
+   Index: 4
+   Width: 8
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 1
+    Color: 0xf500
+   -
+    Index: 2
+    Color: 0x328ebe
+   -
+    Index: 3
+    Color: 0x60e9c9
+   -
+    Index: 4
+    Color: 0xff
+   -
+    Index: 5
+    Color: 0x888888
+   -
+    Index: 6
+    Color: 0x333333
+ ColumnIndex: [string,6,"Energy states","Color","Red","Green","Blue","Opacity"]
+ Columns:
+ - [0,string,6,"Working","Setting-up","Operational","Failed","Standby","Off"]
+ - [2,integer,6,0,190,201,255,136,51]
+ - [3,integer,6,245,142,233,0,136,51]
+ - [4,integer,6,0,50,96,0,136,51]
+ - [5,integer,6,153,153,153,153,153,153]

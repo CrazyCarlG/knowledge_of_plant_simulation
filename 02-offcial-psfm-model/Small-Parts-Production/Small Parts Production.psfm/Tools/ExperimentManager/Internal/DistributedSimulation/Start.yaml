@@ -1,0 +1,49 @@
+InternalClassType: Method
+Coordinate3D: [2.25,-1.85,0]
+Name: Start
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ /* starts the simulation machines each in an own callchain
+ Call Chain: Start
+ StartMachine
+ 		Machine.ConnectProcess_(asTest,firstStart)
+ 		Machine.RunProcess_
+ */
+ terminateRemoteProcesses
+ removeDistrSim
+ 
+ var numSimMachines:integer
+ 
+ switch ~.ObjType  -- Starting remote processes
+ case "Experiment"
+ 	numSimMachines := min(MachinesTable.yDim, ~.JobsTable.yDim)
+ case "GAwizard"
+ 	numSimMachines := min(MachinesTable.yDim, 2 * ~.JobsTable.yDim) 
+ 	-- note that the first generation is generated, which is smaller
+ end
+ 
+ MachinesTable.numSimMachine := numSimMachines 
+ -- Number of SimMachine that still need to be started
+ 
+ for var row := 1 to numSimMachines 
+ 	-- StartMachine will be started after this callChain has ended
+ 	-- call them running in parallel
+ 	&StartMachine.executeNewCallChain(row,false,true) -- test, firstStart
+ next
+RandomSeed: 344
+UUID: dcf9e5dc-21c5-4d46-8e2b-e8aae479ccc2
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

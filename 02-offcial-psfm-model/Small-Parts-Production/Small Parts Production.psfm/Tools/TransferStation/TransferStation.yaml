@@ -1,0 +1,5598 @@
+InternalClassType: ParallelStation
+AutomaticSetup: true
+ChangePathCtrl:
+ConnectCtrl: "self.OnConnect"
+ConstructorCtrl:
+Coordinate3D: [-2,2,0]
+CostingActive: false
+CreateIn3D: true
+CycleTime: 0
+DestructorCtrl: "self.OnDelete"
+DragDropCtrl: "self.OnDragDrop"
+EnergyActive: false
+EntranceCtrl:
+EntranceCtrlBeforeActions: false
+EntranceLocked: false
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+ExitLocked: false
+ExitStrategy: "Cyclic"
+ExitStrategyBlocking: false
+FailCtrl: "self.OnFail"
+FailureActive: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: TransferStation
+OpenCtrl: "self.RootFolder.Internal.Dialog.genDialog"
+PauseCtrl: "self.OnPause"
+PlausibilityCtrl:
+ProcTime: 10
+PullCtrl:
+RandomSeed: 42
+RecoveryTime: 0
+RecoveryTimeMode: "When part enters"
+RelabelCtrl:
+RenameCtrl: "self.OnRename"
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+SetupAfterNPartsMode: "Before Next Part"
+SetupAfterNumParts: 0
+SetupAttrName: ""
+SetupCtrl:
+SetupForType: true
+SetupOnlyWhenEmpty: false
+SetupTime: 0
+ShiftcalendarObject:
+StartProcessingWhenFull: false
+UnplannedCtrl: "self.OnUnplanned"
+UUID: e4aecf63-91e6-4dc3-9b4d-dbac5ba4227d
+XDim: 1
+YDim: 1
+3D:
+ AnimationObject: ""
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default","Operational","ConfigurationError"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 13395507
+ MaterialDiffuseColor: 13395507
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.267
+ MaterialSpecularColor: 5855577
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaAbsoluteCenter: [0,0,1]
+ MUAnimationAreaAbsoluteSize: [2,1.4]
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ MUSideToAttach: "Center bottom"
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1.05,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "Bounding box"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Operational"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.4,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAAQEBAQEBAQEBAQEBgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAAQEBAQEBAQEBAQEBgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAAQEBgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAAQEBgIAAgIAAgIAAgIAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAAQEBAQEBAQEBAQEB/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAA/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAvr6+gIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgIAAgIAAgIAAgIAAvr6+AAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAvr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+AQEBAQEBAQEBAQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBvr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+AQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+AQEBAQEBAQEBAQEB/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAQEBAQEBAQEBAQEBvr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBvr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBvr6+vr6+vr6+vr6+vr6+AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAA////////////////////////////////////////////////////////////
+ - gIAA////////////////4eHhAAAAAAAAAAAAAAAAAAAA4eHh////////////////
+ - gIAA////////////AAAAAAAA////////5ubm////////AAAAAAAA////////////
+ - gIAA////////AAAA2NjY////////5ubmAAAA5ubm////////2NjYAAAA////////
+ - gIAA////4eHhAAAA////////5ubmAAAAAAAAAAAA5ubm////////AAAA4eHh////
+ - gIAA////AAAA////////vr6+vr6+////AAAA////vr6+vr6+////////AAAA////
+ - gIAA////AAAA////////vr6+////////AAAA////////vr6+////////AAAA////
+ - gIAA////AAAA////////vr6+////////////////////vr6+////////AAAA////
+ - gIAA////AAAA////////vr6+/v7+zpKCzpKCzpKC////vr6+////////AAAA////
+ - gIAA////AAAA////////vr6+vr6+zpKCzpKCzpKCvr6+vr6+////////AAAA////
+ - gIAA////4eHhAAAA/////////v7+zpKCzpKCzpKC////////////AAAA4eHh////
+ - gIAA////////AAAA2NjY/////v7+zpKCzpKCzpKC////////2NjYAAAA////////
+ - gIAA////////////AAAAAAAA////////////////////AAAAAAAA////////////
+ - gIAA////////////////4eHhAAAAAAAAAAAAAAAAAAAA4eHh////////////////
+ - gIAA////////////////////////////////////////////////////////////
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "ConfigurationError"
+ Transparent: true
+ Size: [41,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AAAAAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAQEBAQEBAQEBAA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AQEBAQEBAQEBAQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA///v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AQEBAA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AQEBAQEBAQEBAQEB/v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAQEBAQEBAQEBAQEBAA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA//AA///v7+zpKCzpKCzpKCzpKCzpKCzpKCzpKCAQEBAA//AA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAA//AA//AA//AA//AA///v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAA//AA//AA//AA//AA//AAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAA//AA//AA//AA//AA//AA//AA//AAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: WaitingParts
+ ID: 1
+ DataType: list
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: object
+   MaxXDim: 1
+   ShowDataType: true
+  Column:
+ ShowInTooltip: false
+-
+ Name: OnDragDrop
+ ID: 2
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  checks the allowed stationtype and opens the DragDropdialog
+  _________________________________________________________________________________
+  Parameters	: dropObject
+  ReturnValues: none
+  
+  Called By	: 
+  Calls		: checkStationClass
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  18.02.2005  KM	no errormessage for MUs
+  02.05.2005  KM	translate dialog before opendialog
+  08.07.2005  KM	Parameter of checkStationClass
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param dropObject:string
+  
+  var dialog : object
+  
+  -- TODO Netzwerk
+  	
+  if not ?.checkStationClass(dropObject,0) 
+  	?.errorMessage(17,1)
+  	return
+  end
+  		
+  dialog := rootFolder.internal.Dialog.DragDropDialog
+  dialog.openedBy := ?
+  dialog.label := dropObject
+  dialog.dropObject := dropObject
+  dialog.dialogTranslate(dialog.DialogElements)
+  dialog.open
+
+ ShowInTooltip: false
+-
+ Name: OnDelete
+ ID: 3
+ DataType: method
+ Value: |+1
+  ?.resetUserStation(1)	-- Partstation
+  ?.resetUserStation(2)	-- Targetstation
+
+ ShowInTooltip: false
+-
+ Name: PartSensorID
+ ID: 4
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: PartStation
+ ID: 5
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: PartSensorControl
+ ID: 6
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  sensor control of the partstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: 
+  Calls		: checkContainer, checkNumberOfPartsWithType, checkType,
+  			  checkReachingBlocksize, exitPartStation, readyForWorking,
+  			  StartMoveInUserMethod
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  03.03.2005  KM	container stops also for incomplete blocks if "unload all"
+  04.03.2005  KM	but at least one part of the right type
+  19.04.2005  KM	homogeneous loading: container must continue for changing type
+  02.12.2005  KM	check ConfigurationError
+  31.01.2006  KM	user control for line and track
+  20.02.2008  KM  call UserControl when part arrives
+  01.04.2016  KM  SimTalk 2.0
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  -- Sensorcontrol on lines and tracks
+  
+  -- allowed are load,
+  --			   unload,
+  --			   transfer from container to container,
+  --			   transfer from station to station
+  var station:object
+  var num : integer
+  var target : object
+  
+  station := self.~
+  
+  if station.ConfigurationError or ? /= station.PartStation 
+  	return
+  end
+  
+  target := station.WaitingTargets[1]
+  if target /= void 
+  	if station.targetFull(target) 
+  		target := station.WaitingTargets[2]
+  	end
+  end
+  
+  if station.unloadPartcontainer 
+  	-- unload, transfer from container to container
+  	if station.checkContainer(@) 
+  		num := station.checkNumberOfPartsWithType(@,target)
+  		if (num < station.Blocksize and station.Partnumber > -1) or
+  			(num = 0 and station.Partnumber <= -1) 
+  			-- not enough parts with the right type on the container: don´t stop
+  			-- TODO protokoll
+  			station.stopObject(@,false)
+  			return
+  		end
+  	else
+  		-- TODO protokoll
+  		station.stopObject(@,false)
+  		return
+  	end
+  	if station.UserPartExitCtrl = "" or not str_to_method(station.UserPartExitCtrl).checkArguments(false) 
+  		station.stopObject(@,true)
+  	else
+  		str_to_method(station.UserPartExitCtrl).execute(false,@,station.PartStation)
+  	end
+  	station.WaitingParts.append(@)
+  else
+  	-- load or transfer from station to station
+  	if not station.checkType(@,target) 
+  		if not station.TypeSpecific and station.HomogeneousTarget 
+  			if station.empty and target /= void and station.WaitingParts.empty 
+  				station.stopObject(target,false)
+  				station.WaitingTargets.remove(1)
+  				station.MovedBlocks := 0
+  				station.Parttype := @.name
+  				station.Containertype := ""
+  				station.ContinueTarget := false
+  			else
+  				station.stopObject(@,true)
+  				return
+  			end
+  		else
+  			station.stopObject(@,false)
+  			return
+  		end
+  	end
+  	
+  	if station.UserPartExitCtrl = "" or not str_to_method(station.UserPartExitCtrl).checkArguments(false) 
+  		station.stopObject(@,true)
+  	else
+  		str_to_method(station.UserPartExitCtrl).execute(false,@,station.PartStation)
+  	end
+  	station.WaitingParts.append(@)
+  	-- TODO blocksize > 1
+  	if not station.checkReachingBlocksize 
+  		return
+  	end
+  	
+  /*		num := station.checkNumberOfPartsWithType(station.PartStation,station.WaitingTargets.read(1));
+  		if num < station.Blocksize then
+  			return;
+  		end;*/
+  end
+  
+  if station.TargetIsContainer and station.WaitingTargets.empty 	
+  	if station.readyForWorking 
+  		station.Status := "waiting_for_target"
+  	end
+  else
+  	if station.waitForReadyStation 
+  		station.StartMoveInUserMethod
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: OnExit
+ ID: 7
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Exit control of the TransferStation. Multiple call for blocksize > 1. Only the out-event
+  for "BlocksizePart" moves all parts on the station to targetstation.
+  _________________________________________________________________________________
+  Parameters	: target: void for the first time the part will leave the station
+  ReturnValues: none
+  
+  Called By	: 
+  Calls		: station.UserCtrl, exitStation
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  04.03.2005  KM	reset BlocksizePart only when all parts have left the station to avoid
+  				multiple wakeups of the method (can happen if no part can leave the station)
+  26.06.2005  KM	use str_to_method
+  23.08.2005  KM	use attribute WaitTime
+  22.03.2006  KM	parts without status "working" are illegal
+  25.08.2006  KM	handle multiple call for example for failed target station
+  27.04.2009  KM  delete content only when there is no BlocksizePart
+  16.02.2010  KM  when MUs on the target line are stopped, use WaitTime
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  20.01.2014  KM	don't delete illegal parts
+  01.04.2016  KM  SimTalk 2.0
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param target : object
+  
+  var station:object
+  
+  station := self.~
+  
+  -- this is not the first call for the part
+  if (target /= void or station.BlocksizePart /= void)  and station.Status = "blocked" 
+  	station.Status := "working"
+  end
+  
+  if station.Status /= "working" and station.BlocksizePart = void 
+  	-- illegal parts from the user
+  	return
+  end
+  	
+  -- Blocksize > 1: there are several out-events
+  -- the out-event of the BlocksizePart moves all parts of the block
+  if station.BlocksizePart /= void and station.BlocksizePart /= @ 
+  	return
+  end
+  
+  -- area for user
+  if station.UserCtrl /= "" and target = void 
+  	str_to_method(station.UserCtrl).execute(2,station.WaitingTargets[1],station)
+  end
+  -- end of area for user
+  
+  -- parts leave the station	
+  station.exitStation
+  
+  if station.empty 
+  	station.BlocksizePart := void
+  end
+ ShowInTooltip: false
+-
+ Name: Init
+ ID: 8
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  Init of the TransferStation. Configuration check.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: some check routines
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  18.02.2005  KM	TransferStation should be empty
+  08.07.2005  KM	Parameter of checkStationClass
+  23.09.2005  KM	init ReadyTargets
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  19.05.2005  KM	blocksize > 1 and load or move only allowed for part station of
+  				type parallelproc
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  21.10.2009  KM  blocksize > 1: check capacity of target
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  var comp : boolean
+  var type : integer
+  
+  station := self.~
+  while station.cont /= void
+  	station.cont.delete
+  end
+  station.CurrIcon := "operational"
+  station.ConfigurationError := false
+  station.Status := "waiting"
+  station.MovedBlocks := 0
+  station.ContinueTarget := false
+  station.BlocksizePart := void
+  station.Parttype := ""
+  station.Containertype := ""
+  station.WaitingParts.delete
+  station.WaitingTargets.delete
+  station.ReadyTargets.delete
+  
+  if station.PartStation = void or not existsobject(to_str(station.PartStation))
+  	station.errorMessage(7,2)
+  	return
+  end
+  
+  if station.TargetStation = void or not existsobject(to_str(station.TargetStation))
+  	station.errorMessage(8,2)
+  	return
+  end
+  
+  type := station.getInternalClassType(station.PartStation)
+  if station.checkStationClass(station.PartStation,1)
+  	if type > 0
+  		if not station.checkSensorID(1,makePathRelative(station,station.PartStation))
+  			station.errorMessage(12,2)
+  			return
+  		end
+  	else
+  		if not station.checkExitCtrl(1)
+  			station.errorMessage(18,2)
+  			return
+  		end
+  	end
+  	if not station.checkUserExitCtrl(1)
+  		station.errorMessage(23,2)
+  		return
+  	end
+  	if station.Blocksize > 1 and not station.unloadPartcontainer and
+  	   station.PartStation.internalClassType /= "ParallelStation"
+  		station.Blocksize := 1
+  	end
+  else
+  	station.errorMessage(17,2)
+  	return
+  end
+  
+  if station.PartStation.internalClassType = "Buffer" and
+      station.PartStation.BufferType = "Stack"  and
+      station.unloadPartcontainer
+  	station.errorMessage(15,2)
+  	return
+  end
+  
+  type := station.getInternalClassType(station.TargetStation)
+  if station.checkStationClass(station.TargetStation,2)
+  	if type > 0
+  		if not station.checkSensorID(2,makePathRelative(station,station.TargetStation))
+  			station.errorMessage(13,2)
+  			return
+  		end
+  		if not station.TargetIsContainer
+  			if not station.checkSensorIDForUnload(makePathRelative(station,station.TargetStation))
+  				station.errorMessage(13,2)
+  				return
+  			end
+  		end
+  	else
+  		comp := station.checkExitCtrl(2)
+  		if (station.TargetIsContainer and not comp) or
+  		   (not station.TargetIsContainer and comp)
+  			station.errorMessage(19,2)
+  			return
+  		end
+  	end
+  	if not station.checkUserExitCtrl(2)
+  		station.errorMessage(23,2)
+  		return
+  	end
+  	if station.Blocksize > 1 and not station.TargetIsContainer and
+  	   station.TargetStation.capacity /= -1 and
+  	   station.TargetStation.capacity < station.Blocksize
+  		station.Blocksize := station.TargetStation.capacity
+  	end
+  else
+  	station.errorMessage(17,2)
+  	return
+  end
+  
+  if station.TargetStation.internalClassType = "Buffer" and
+      station.TargetStation.BufferType = "Stack"  and
+      station.TargetIsContainer
+  	station.errorMessage(16,2)
+  	return
+  end
+  
+  if not station.checkUserExitCtrl(3)
+  	station.errorMessage(23,2)
+  	return
+  end
+  
+  if station.PartStation = station.TargetStation
+  	if type = 0
+  		station.errorMessage(25,2)
+  	else
+  		if (station.PartSensorID = station.TargetSensorID) or
+  		   (station.getSensorPosition(1) =
+  		    station.getSensorPosition(2))
+  			station.errorMessage(25,2)
+  		end
+  	end
+  end
+  
+  if station.PartStation /= void and not station.unloadPartcontainer and
+     station.PartStation.capacity /= -1 and
+     station.PartStation.capacity < station.Blocksize
+  	station.errorMessage(1,2)
+  end
+ ShowInTooltip: false
+-
+ Name: Blocksize
+ ID: 9
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: OpenedDialog
+ ID: 10
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: ObjType
+ ID: 11
+ DataType: string
+ Value: "LoadUnload"
+ ShowInTooltip: false
+-
+ Name: AOLType
+ ID: 12
+ DataType: string
+ Value: "LoadUnload"
+ ShowInTooltip: false
+-
+ Name: TargetSensorControl
+ ID: 13
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sensor control of the targetstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: checkTarget, waitForReadyStation, checkNumberOfPartsWithType
+  			  checkReachingBlocksize, stopObject, readyForWorking,
+  			  StartMoveInUserMethod
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  02.12.2005  KM	check ConfigurationError
+  31.01.2006  KM	user control for line and track
+  20.02.2008  KM  call UserControl when target arrives
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  10.11.2021  KM  when type specific or homogeneous loading parts from a parallelproc
+  				search finished parts on the partstation for the arrived container
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  
+  station := self.~
+  
+  if station.ConfigurationError or ? /= station.TargetStation
+  	return
+  end
+  
+  if not station.TargetIsContainer
+  	if not station.Empty and station.Status = "blocked"
+  		station.BlocksizePart.outin(0)
+  	end
+  	return
+  end
+  
+  if @.internalClassType = "Part"
+  	return
+  end
+  
+  if station.PartStation.internalClassType = "Buffer" and
+     station.PartStation.BufferType = "Stack" and station.WaitingParts.occupied
+  	-- buffer with LIFO and not empty: is there a not finished part above the waiting parts?
+  	if not station.PartStation.cont.finished
+  		station.WaitingParts.delete
+  		return
+  	end
+  end
+  
+  if station.PartStation.internalClassType = "ParallelStation" and station.TargetIsContainer and
+  		not station.unloadPartcontainer and (station.TypeSpecific or station.HomogeneousTarget)
+  	-- type specific or homogeneous loading parts from a parallelproc
+  	-- search finished parts on the partstation for the arrived container
+  	station.WaitingParts.delete
+  	station.Containertype := ""
+  	station.Parttype := ""
+  	station.checkNumberOfPartsWithType(station.PartStation, @)
+  end
+  
+  -- Loadstation/Transferstation
+  if station.checkTarget(@)
+  	if station.UserTargetExitCtrl = "" or not str_to_method(station.UserTargetExitCtrl).checkArguments(false)
+  		station.stopObject(@,true)
+  	else
+  		str_to_method(station.UserTargetExitCtrl).execute(false,@,station.TargetStation)
+  	end
+  	station.WaitingTargets.append(@)
+  
+  	if station.unloadPartcontainer
+  		if station.WaitingParts.empty
+  			if station.readyForWorking
+  				station.Status := "waiting_for_parts"
+  			end
+  			return
+  		end
+  	else
+  		if not station.checkReachingBlocksize
+  			if station.readyForWorking
+  				station.Status := "waiting_for_parts"
+  			end
+  			return
+  		end
+  	end
+  
+  	if station.waitForReadyStation
+  		station.StartMoveInUserMethod
+  	end
+  else
+  	station.stopObject(@,false)
+  end
+ ShowInTooltip: false
+-
+ Name: TargetSensorID
+ ID: 14
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: TargetStation
+ ID: 15
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: WaitingTargets
+ ID: 16
+ DataType: list
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: object
+   MaxXDim: 1
+   ShowDataType: true
+  Column:
+ ShowInTooltip: false
+-
+ Name: TargetIsContainer
+ ID: 17
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: unloadPartcontainer
+ ID: 18
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: stopObject
+ ID: 19
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  stops or moves the parts or targets. Consider the type of object and
+  the location.
+  _________________________________________________________________________________
+  Parameters	: obj: Object which should be stopped or moved
+  			  stop : if true stop the object
+  ReturnValues: none
+  
+  Called By	: finishLoading, movePartToStation, PartExitControl,
+  			  PartSensorcontrol, successfulExit, TargetSensorControl
+  Calls		: exitTargetStation, exitPartStation, getInternalClassType
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed
+  16.02.2006  KM  tugger train
+  25.09.2007  KM  vehicle on line
+  20.02.2008  KM	UserMethod can have an argument
+  03.06.2008  KM  use attribute stopped also for vehicles
+  09.09.2013  KM  for non accumulating lines stop the line itself not the MU
+  01.04.2016  KM  SimTalk 2.0
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param obj : object, stop : boolean
+  
+  var station : object
+  var type : integer
+  var tractor : object
+  
+  station := self.~
+  type := station.getInternalClassType(obj.location)
+  
+  if not stop
+  	-- continue object
+  	if type > 0
+  		-- length oriented
+  		if obj = station.WaitingTargets[1]
+  			-- obj is target
+  			if station.UserTargetExitCtrl = ""
+  				if type = 1 		-- Line
+  					if obj.location.accumulating
+  						obj.stopped := false
+  					else
+  						obj.location.stopped := false
+  					end
+  				elseif obj.internalClassType = "Transporter"
+  					tractor := obj.getTractor
+  					if tractor /= void
+  						tractor.stopped := false
+  					else
+  						obj.stopped := false
+  					end
+  				end
+  			else
+  				if str_to_method(station.UserTargetExitCtrl).checkArguments(true)
+  					str_to_method(station.UserTargetExitCtrl).execute(true,obj,station.TargetStation)
+  				else
+  					str_to_method(station.UserTargetExitCtrl).execute(obj,station.TargetStation)
+  				end
+  			end
+  		else
+  			-- obj is part
+  			if station.UserPartExitCtrl = ""
+  				if type = 1
+  					if obj.location.accumulating
+  						obj.stopped := false
+  					else
+  						obj.location.stopped := false
+  					end
+  				elseif obj.internalClassType = "Transporter"
+  					tractor := obj.getTractor
+  					if tractor /= void
+  						tractor.stopped := false
+  					else
+  						obj.stopped := false
+  					end
+  				end
+  			else
+  				if str_to_method(station.UserPartExitCtrl).checkArguments(true)
+  					str_to_method(station.UserPartExitCtrl).execute(true,obj,station.PartStation)
+  				else
+  					str_to_method(station.UserPartExitCtrl).execute(obj,station.PartStation)
+  				end
+  			end
+  		end
+  	else
+  		-- point oriented
+  		if obj = station.WaitingTargets[1]
+  			station.exitTargetStation(obj)
+  		elseif station.unloadPartcontainer
+  			station.exitPartStation(obj)
+  		end
+  	end
+  else
+  	-- stop object	(not needed on point oriented)
+  	if type = 1
+  		if obj.location.accumulating
+  			obj.stopped := true	-- Line
+  		else
+  			obj.location.stopped := true
+  		end
+  	elseif type > 1 	-- length oriented
+  		if obj.internalClassType = "Transporter"
+  			tractor := obj.getTractor
+  			if tractor /= void
+  				tractor.stopped := true
+  			else
+  				obj.stopped := true
+  			end
+  		end
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: setParameter
+ ID: 20
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Set the parameter of the TransferStation.
+  _________________________________________________________________________________
+  Parameters	: tab, the table holding the parameters
+  			  type, 0 if the method was called by dialog; 1 if the method was called by user
+  ReturnValues: true: ok
+  			  false: Parameters are wrong
+  
+  Called By	: User (setStationParameter)   shouldn't be used
+  			  or dialog (TransferStationDialog.dialogApply)
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  07.02.2005  KM	check of availability and MTTR added
+  23.02.2005  KM	don't change inheritance if value isn't changed
+  19.04.2005  KM	set homogeneousTarget to false for unload and move
+  27.06.2005  KM	use str_to_method
+  08.07.2005  KM	use return-value of setPartStation and setTargetStation
+  15.02.2006  KM  Nw2Way allowed
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  10.10.2007  PS  Localization
+  11.03.2009  KM  set the availability after MTTR to avoid the default value 95%
+  26.08.2010	KM	check targetstation also when there is no partstation
+  12.02.2013  KM  stream removed
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param tab : table, type : integer -> boolean
+  -- type 0: setParameter called from dialog.dialogApply
+  -- type 1: setParameter called from setStationParameter
+  
+  var callingObj,obj : object
+  var ret : boolean
+  var ret1 : boolean
+  var i,b : integer
+  var pos1 : length
+  var av : real
+  var iCN : string
+  var ptext,str : string
+  var t : time
+  var newBool : boolean
+  var newctrl : string
+  
+  ret := true
+  callingObj := self.~
+  
+  -- TODO: Änderungen während der Simulation ??
+  	
+  --	Tab Attribute
+  
+  newBool := (tab[1,1] = 2 or tab[1,1] = 3)
+  if callingObj.unloadPartcontainer /= newBool 
+  	callingObj.unloadPartcontainer := newBool
+  end
+  newBool := (tab[1,1] = 1 or tab[1,1] = 3)
+  if callingObj.TargetIsContainer /= newBool 
+  	callingObj.TargetIsContainer := newBool
+  end
+  
+  ret := callingObj.setPartStation(tab[2,1],tab[3,1],tab[17,1],tab[19,1],tab[22,1])
+  ret1 := callingObj.setTargetStation(tab[4,1],tab[5,1],tab[18,1],tab[20,1],tab[23,1])
+  ret := ret and ret1
+  
+  -- Tab Times
+  if tab[6,1] /= void and callingObj.procTime /= tab[6,1] 
+  	callingObj.procTime := tab[6,1]
+  end
+  if tab[7,1] /= void and callingObj.recoveryTime /= tab[7,1] 
+  	callingObj.recoveryTime := tab[7,1]
+  end
+  
+  --	Tab Availability
+  if tab[8,1] /= void 
+  	av := tab[8,1]
+  	if av > 100.0 
+  		av := 100.0
+  		ret := false
+  	end
+  	
+  	t := tab[9,1]
+  	
+  	if (av = 100 and t > 0) or (av < 100 and t = 0) 
+  		if type = 0 
+  			messageBox(to_str(callingObj)+": "+rootfolder.Localization.getText(226),1,13)
+  		end
+  		ret := false
+  	end
+  	
+  	if callingObj.MTTR /= t 
+  		callingObj.MTTR := t
+  	end
+  	
+  	if callingObj.availability /= av 
+  		callingObj.availability := av
+  	end
+  end
+  
+  -- Tab Advanced Attributes
+  b := tab[11,1]
+  if b < 1 and b /= -1 
+  	b := -1
+  	ret := false
+  end
+  if callingObj.Partnumber /= b 
+  	callingObj.Partnumber := b
+  end
+  
+  callingObj.setBlocksize(tab[12,1])
+  
+  if callingObj.TypeSpecific /= tab[13,1] 
+  	callingObj.TypeSpecific := tab[13,1]
+  end
+  callingObj.TypeTable.insertList(1,1,tab[14,1])
+  
+  if callingObj.PartStation /= void and
+     not callingObj.unloadPartcontainer and callingObj.PartStation.capacity /= -1 and
+     callingObj.PartStation.capacity < callingObj.Blocksize 
+  	callingObj.errorMessage(1,type+1)
+  	ret := false
+  end
+  
+  if callingObj.TargetIsContainer 
+  	if callingObj.HomogeneousTarget /= tab[15,1] 
+  		callingObj.HomogeneousTarget := tab[15,1]
+  	end
+  else
+  	callingObj.HomogeneousTarget := false
+  end
+  
+  if callingObj.AlwaysStopTarget /= tab[16,1] 
+  	callingObj.AlwaysStopTarget := tab[16,1]
+  end
+  	
+  if callingObj.StopPartsForFailure /= tab[24,1] 
+  	callingObj.StopPartsForFailure := tab[24,1]
+  end
+  	
+  if callingObj.StopTargetsForFailure /= tab[25,1] 
+  	callingObj.StopTargetsForFailure := tab[25,1]
+  end
+  	
+  -- Tab Advanced Controls
+  newctrl := tab[21,1]
+  if newctrl /= "" 
+  	ptext := newctrl
+  	str := strCopy(ptext,1,5)
+  	if str ~= "self." 
+  		ptext := strOmit(ptext,1,4)
+  		newctrl := strIncl(callingObj.name,ptext,1)
+  	end
+  	
+  	if existsMethod(newctrl) and callingObj.UserCtrl /= newctrl 
+  		callingObj.UserCtrl := newctrl
+  		if type = 0 
+  			i := messageBox(rootfolder.Localization.getText(224),48,12)
+  			if i = 16 
+  				ptext := callingObj.&userCtrlMethodTemplate.program
+  				str_to_method(callingObj.UserCtrl).program := ptext
+  			end
+  		end
+  	end
+  else
+  	if callingObj.UserCtrl /= "" 
+  		callingObj.UserCtrl := ""
+  	end
+  end
+  
+  result := ret
+ ShowInTooltip: false
+-
+ Name: Partnumber
+ ID: 21
+ DataType: integer
+ Value: -1
+ ShowInTooltip: false
+-
+ Name: MovedBlocks
+ ID: 22
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: HomogeneousTarget
+ ID: 23
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: AlwaysStopTarget
+ ID: 24
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: BlocksizePart
+ ID: 25
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: movePartToStation
+ ID: 26
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  Starts the move of the right parts from the partstation to the transferStation
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: StartMoveInUserMethod
+  Calls		: stopObject, parttypeToStation
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.09.2005  KM	stopObject(station.WaitingTargets[1],... buggy because stopObject
+  				uses WaitingTargets
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  01.04.2016  KM  SimTalk 2.0
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station:object
+  var num : integer
+  var part : object
+  var i : integer
+  var t : table
+  
+  station := self.~
+  part :=	station.WaitingParts[1]
+  if station.unloadPartcontainer
+  	-- unload or transfer from container to container
+  	-- Unload: no starting of WaitingPart
+  	t.create
+  	part.contentsList(t)
+  	if part.internalClassType = "Transporter" and
+     		part.LoadbayType /= "Store" and part.LoadbayType /= "Lager"
+  		for i := t.XDim downto 2
+  			t.cutColumn(i)
+  		next
+  	end
+  
+  	num := station.parttypeToStation(t)
+  	if num = 0
+  		-- there are no parts with the right type
+  		if station.TypeSpecific
+  			station.stopObject(station.WaitingParts.remove(1),false)
+  			station.Containertype := ""
+  		else
+  			station.stopObject(station.WaitingTargets[1],false)
+  			station.WaitingTargets.remove(1)
+  			station.Parttype := ""
+  		end
+  	end
+  else
+  	-- load or transfer from station to station
+  	station.stopObject(part,false)		-- for parts on line and track
+  	-- TODO Blocksize > 1 funktioniert bisher nur für parallelprocs
+  	t.create
+  	t.MaxXDim := 1
+  	t.setDataType(1,"object")
+  	t.insertList(1,1,station.WaitingParts.copy)
+  	num := station.parttypeToStation(t)
+  	if num = 0
+  		if station.WaitingTargets.occupied
+  --			if station.PartStation.full and station.WaitingTargets.occupied then
+  			-- there are no parts with the right type
+  			station.stopObject(station.WaitingTargets[1],false)
+  			station.WaitingTargets.remove(1)
+  			station.Parttype := ""
+  			station.Containertype := ""
+  		end
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: parttypeToStation
+ ID: 27
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  moves the parts with the right type from the partstation to the transferStation
+  _________________________________________________________________________________
+  Parameters	: table with the waiting parts
+  ReturnValues: number of moved parts
+  
+  Called By	: movePartToStation
+  Calls		: checkType,checkLength
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  01.04.2016  KM  SimTalk 2.0
+  19.01.2018  KM  handle stacks on vehicle or container
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param container : table -> integer
+  
+  var i,j,k,num : integer
+  var station, p : object
+  var recTimeType,recTime : string
+  
+  station := self.~
+  recTimeType := station.recoveryTime.Type
+  recTime := station.recoveryTime.getAttr
+  i := 1
+  num := 0
+  repeat
+  	var datatype : string := container.getDataType(i)
+  	j := 1
+  	repeat
+  		var zDim : integer
+  		var subtable : boolean
+  		if datatype = "table" and container[i,j] /= void
+  			zDim := container[i,j].yDim
+  			subtable := true
+  		else
+  			zDim := 1
+  			subtable := false
+  		end
+  		
+  		k := 1
+  		repeat
+  			if subtable
+  				p := container[i,j][1,k]
+  			else
+  				p := container[i,j]
+  			end
+  			if p /= void 
+  				if station.checkType(p,station.WaitingTargets[1]) 
+  					if station.checkLength(p,station.WaitingTargets[1]) 
+  						if p.move(station) 
+  							station.recoveryTime := 0
+  							station.Status := "working"
+  							if num = 0 
+  							-- Blocksize > 1: there are several out-events
+  							-- the out-event of the BlocksizePart moves all parts of the block
+  								station.BlocksizePart := p
+  							end
+  							num := num + 1
+  							if not station.unloadPartcontainer 
+  								station.WaitingParts.remove(1)
+  							end
+  						else
+  							-- mustn´t happen
+  							station.errorMessage(9,1)
+  						end
+  					end
+  				else
+  					if not station.unloadPartcontainer and not station.AlwaysStopTarget 
+  						print "wrong parttype"	-- exit part on placetype stations ??
+  					end
+  				end
+  			end
+  			k := k + 1
+  		until num = station.Blocksize or k > zDim
+  		j := j + 1
+  	until num = station.Blocksize or j > container.YDim
+  	i := i + 1
+  until num = station.Blocksize or i > container.XDim
+  station.recoveryTime.setTypeAndAttr(recTimeType,recTime)
+  return num
+ ShowInTooltip: false
+-
+ Name: checkNumberOfPartsWithType
+ ID: 28
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks type of parts on the partstation or on the container on the partstation and
+  counts the number of parts with the right type
+  _________________________________________________________________________________
+  Parameters	: container: PartStation or container which will be unloaded
+  			  target: target of load or reload (may be NULL)
+  ReturnValues: number of parts with the right type
+  
+  Called By	: checkTarget, PartExitControl, PartSensorControl, successfulExit
+  Calls		: checkType, exitPartStation, getSensorPosition
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  19.04.2005  KM	check type of parts on line or track
+  15.02.2006  KM  Nw2Way allowed
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  10.11.2014  KM  don't insert the same MU twice in waitingParts (Buffer of type stack)
+  19.01.2018  KM  handle stacks on vehicle or container
+  12.11.2021  KM  for parallelproc without startprocessingWhenFull sort the
+  				finished parts according finishedTime
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param container,target : object -> integer
+  
+  var i,j,k,xdim,ydim : integer
+  var station,p,part : object
+  var t : table
+  var num : integer
+  
+  station := self.~
+  num := 0
+  
+  if container.internalClassType = "ParallelStation" and station.TargetIsContainer and
+  		not station.unloadPartcontainer and (station.TypeSpecific or station.HomogeneousTarget)
+  	-- type specific or homogeneous loading parts from a parallelproc
+  	-- search finished parts on the partstation for the target
+  	if target = void
+  		return 0
+  	end
+  
+  	if not container.startProcessingWhenFull
+  		container.contentsList(t)
+  		xdim := t.XDim
+  		ydim := t.YDim
+  
+  		var t1 : table[object,time]
+  		t1.create
+  		var idim : integer := 1
+  		for var ix := 1 to xDim
+  			for var iy := 1 to yDim
+  				p := t[ix,iy]
+  				if p /= void and p.finished
+  					t1[1,idim] := p
+  					t1[2,idim] := p.FinishedTime
+  					idim := idim + 1
+  				end
+  			next
+  		next
+  		t1.sort(2, "up")
+  
+  		for var iy := 1 to t1.YDim
+  			p := t1[1,iy]
+  			if station.checkType(p,target)
+  				num := num +1
+  				station.WaitingParts.append(p)
+  				if num = station.Blocksize
+  					return num
+  				end
+  			end
+  		next
+  		return num
+  	end
+  end
+  
+  t := station.getContentsList(container,station.PartSensorLane)	-- buffer austrittsbereites ganz hinten
+  xdim := t.XDim
+  ydim := t.YDim
+  
+  if xdim < 1 or ydim < 1
+  	return 0
+  end
+  
+  if station.PartSensorID /= 0 and station.PartStation = container
+  	var spos : length
+  	spos := station.getSensorPosition(1)
+  	-- delete MUs from contentsList, which already have passed the sensor
+  	i := 1
+  	while i <= t.YDim
+  		if t[2,i] >= spos
+  			t.cutRow(i)
+  		else
+  			i := ydim+1
+  		end
+  	end
+  	if t.YDim < 1 or t[3,1] < spos  -- all MUs have passed the sensor or the "first" MU has not reached the sensor
+  		return 0
+  	end
+  	xdim := 1		-- austrittsbereites ganz vorne
+  	ydim := 1		-- TODO search MUs for blocksize
+  end
+  
+  if container.internalClassType = "Transporter" and
+     container.LoadbayType /= "Store" and container.LoadbayType /= "Lager"
+  	xdim := 1
+  end
+  
+  i := xdim
+  repeat
+  	var datatype : string := t.getDataType(i)
+  	j := ydim
+  	repeat
+  		var subtable : boolean
+  		if datatype = "table" and t[i,j] /= void
+  			k := t[i,j].yDim
+  			subtable := true
+  		else
+  			k := 1
+  			subtable := false
+  		end
+  
+  		repeat
+  			if subtable
+  				p := t[i,j][1,k]
+  			else
+  				p := t[i,j]
+  			end
+  
+  			if p /= void and (station.PartSensorID /= 0 or station.PartStation /= container or p.finished)
+  				if station.checkType(p,target)
+  					num := num + 1
+  					if station.PartStation = container
+  						if station.PartStation.internalClassType = "Buffer" and station.PartStation.BufferType = "Stack"
+  							station.WaitingParts.setCursor(1)
+  							if not station.WaitingParts.find(@)
+  								station.WaitingParts.insert(1,@)
+  							end
+  						else
+  							station.WaitingParts.append(p)
+  						end
+  					end
+  				else
+  					if station.PartSensorID = 0 and station.PartStation = container
+  						station.exitPartStation(p)
+  					end
+  				end
+  			end
+  			k := k - 1
+  		until num = station.Blocksize or k < 1
+  		j := j - 1
+  	until num = station.Blocksize or j < 1
+  	i := i - 1
+  until num = station.Blocksize or i < 1
+  return num
+ ShowInTooltip: false
+-
+ Name: Parttype
+ ID: 29
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: checkType
+ ID: 30
+ DataType: method
+ Value: |+1
+  param p,t : object -> boolean		-- p always /= void
+  
+  var station : object
+  var i,j : integer
+  var str,sstr,tstr,tsstr : string
+  var found : boolean
+  
+  station := self.~
+  if station.TypeSpecific 
+  	-- search the part in the TypeTable
+  	i := 1
+  	found := false
+  	while i <= station.TypeTable.YDim and not found 
+  		if station.TypeTable[1,i] = p.name 
+  			found := true
+  		else
+  			i := i +1
+  		end
+  	end
+  	if (not found) 
+  		return false
+  	end
+  	
+  	if t /= void 
+  		if station.Containertype = "" 
+  			str := station.TypeTable[2,i]	-- containertype, may be empty
+  		else
+  			str := station.Containertype
+  		end
+  		found := false
+  		repeat
+  			i := strLpos(",",str)
+  			if (i > 0) 
+  				sstr := strCopy(str,1,i-1)
+  				str := strOmit(str,1,i)
+  			else
+  				sstr := str
+  			end
+  			if (sstr = "" or sstr = t.name) 
+  				found := true
+  			end
+  			
+  		until i <= 0 or found
+  		
+  		if (not found) 
+  			return false
+  		end
+  		station.Containertype := ""
+  	else
+  		-- there is not yet a target; don´t stop parts for different targettype
+  		if not station.HomogeneousTarget 
+  			if station.Containertype = "" 
+  				-- the first part; store the possible targettype
+  				station.Containertype := station.TypeTable[2,i]
+  				return true
+  			else
+  				tstr := station.TypeTable[2,i]	-- targettype of the part p
+  				str := station.Containertype	-- targettype of previous part
+  				repeat
+  					i := strLpos(",",tstr)
+  					if (i > 0) 
+  						tsstr := strCopy(tstr,1,i-1)
+  						tstr := strOmit(tstr,1,i)
+  					else
+  						tsstr := tstr
+  					end
+  					
+  					repeat
+  						j := strLpos(",",str)
+  						if (j > 0) 
+  							sstr := strCopy(str,1,j-1)
+  							str := strOmit(str,1,j)
+  						else
+  							sstr := str
+  						end
+  						if (sstr = "" or tsstr = "" or sstr = tsstr) 
+  							return true
+  						end
+  						
+  					until j <= 0
+  				until i <= 0
+  				
+  				return false
+  			end
+  		end
+  	end
+  end
+  		
+  if station.TargetIsContainer and station.HomogeneousTarget 
+  	if station.Parttype = "" 
+  		station.Parttype := p.name
+  	end
+  	if (p.name = station.Parttype) 
+  		return true
+  	else
+  		return false
+  	end
+  else
+  	return true
+  end
+ ShowInTooltip: false
+-
+ Name: getParameterTable
+ ID: 31
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Returns the parameter of the TransferStation.
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: 
+  
+  Called By	: User
+  Calls		: getInternalClassType, checkSensorID,
+  			  getSensorPosition, getSensorActivate, laneIntToString
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  10.10.2007  PS  Localization
+  11.10.2007  KM  return value activate only german or english
+  03.02.2011  KM  use UserInterfaceLanguage
+  12.02.2013  KM  stream removed
+  12.04.2016  KM	use new syntax in executeSilent
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param tablename : string
+  
+  var station : object
+  var restab : object
+  var ressubtab : table
+  var r : integer
+  var type : string
+  var sensorpos1 : length
+  var sensorpos2 : length
+  var sensoractivate1 : string
+  var sensoractivate2 : string
+  var sttype : integer
+  var iCN : string
+  var iC : integer
+  var act : integer
+  var lang : integer
+  var lane1,lane2 : string
+  
+  if not existsObject(tablename) 
+  	return
+  end
+  
+  station := self.~
+  
+  restab := tablename
+  restab.delete
+  restab.columnWidth := 10
+  restab.MaxXDim := 23
+  restab.setDataType(14,"table")
+  restab.setDataType(13,15,16,"boolean")
+  restab.setDataType(1,10,11,12,"integer")
+  restab.setDataType(8,"real")
+  restab.setDataType(6,7,9,"time")
+  restab.setDataType(2,4,"object")
+  restab.setDataType(3,5,"length")
+  restab.setDataType(17,18,19,20,21,22,23,"string")
+  
+  sttype := 4
+  if station.unloadPartcontainer and station.TargetIsContainer 
+  	sttype := 3
+  elseif station.unloadPartcontainer 
+  	sttype := 2
+  elseif station.TargetIsContainer 
+  	sttype := 1
+  end
+  
+  lang := UserInterfaceLanguage + 1
+  if lang > 2 
+  	lang := 2
+  end
+  iC := station.getInternalClassType(station.PartStation)
+  sensorpos1 := 0.0
+  sensoractivate1 := ""
+  lane1 := ""
+  if (iC > 0) and station.checkSensorID(1,makePathRelative(station,station.PartStation)) 
+  	sensorpos1 := station.getSensorPosition(1)
+  	if iC > 1 
+  		act := station.getSensorActivate(1)
+  		sensoractivate1 := rootfolder.Localization.messageTab[lang,220+act]
+  	end
+  	if iC = 3 
+  		lane1 := station.laneIntToString(station.PartSensorLane)
+  	end
+  end
+  iC := station.getInternalClassType(station.TargetStation)
+  sensorpos2 := 0.0
+  sensoractivate2 := ""
+  lane2 := ""
+  if (iC > 0) and station.checkSensorID(2,makePathRelative(station,station.TargetStation)) 
+  	sensorpos2 := station.getSensorPosition(2)
+  	if iC > 1 
+  		act := station.getSensorActivate(2)
+  		sensoractivate2 := rootfolder.Localization.messageTab[lang,220+act]
+  	end
+  	if iC = 3 
+  		lane2 := station.laneIntToString(station.TargetSensorLane)
+  	end
+  end
+  	
+  restab.writeRow(1,1,sttype,
+  	station.PartStation,sensorpos1,station.TargetStation,sensorpos2)
+  
+  type := station.procTime.Type
+  if type = "Const" or type = "Konst" 
+  	restab[6,1] := station.procTime
+  else
+  	restab[6,1] := void
+  end
+  
+  type := station.recoveryTime.Type
+  if type = "Const" or type = "Konst" 
+  	restab[7,1] := station.recoveryTime
+  else
+  	restab[7,1] := void
+  end
+  
+  r := executeSilent("param ti:object -> integer; var t : real := ti.availability; return 1",station)
+  if r = 1 
+  	restab.writeRow(8,1,station.availability,station.MTTR,void)
+  else
+  	restab.writeRow(8,1,void,void,void)
+  end
+  
+  restab.writeRow(11,1,station.Partnumber,station.Blocksize,
+  	station.TypeSpecific,void,station.HomogeneousTarget,
+  	station.AlwaysStopTarget,
+  	sensoractivate1,sensoractivate2,station.UserPartExitCtrl,station.UserTargetExitCtrl,
+  	station.UserCtrl,lane1,lane2)
+  
+  restab.createNestedList(14,1)
+  ressubtab := restab[14,1]
+  ressubtab.MaxXDim := 2
+  ressubtab.insertList(1,1,station.TypeTable.copy)
+ ShowInTooltip: false
+-
+ Name: setStationParameter
+ ID: 32
+ DataType: method
+ Value: |+1
+  param tab : table -> integer
+  
+  var ret : boolean
+  
+  ret := self.~.setParameter(tab,1)
+  
+  if ret 
+  	result := 0
+  else
+  	result := 1
+  end
+  
+
+ ShowInTooltip: false
+-
+ Name: finishLoading
+ ID: 33
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Ends the loading of a target.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: User
+  Calls		: stopObject
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.09.2005  KM	stopObject(station.WaitingTargets[1],... buggy because stopObject
+  				uses WaitingTargets
+  01.04.2016  KM  SimTalk 2.0
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  
+  station := self.~
+  
+  if station.WaitingTargets.empty 
+  	return
+  end
+  
+  if station.empty 
+  	station.stopObject(station.WaitingTargets[1],false)
+  	station.WaitingTargets.remove(1)
+  	station.MovedBlocks := 0
+  	station.Parttype := ""
+  	station.Containertype := ""
+  else
+  	station.ContinueTarget := true
+  end
+ ShowInTooltip: false
+-
+ Name: ContinueTarget
+ ID: 34
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: StartMoveInUserMethod
+ ID: 35
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Will be called if parts and target are ready. First it calls the UserControl, then
+  the parts will be moved to the transferStation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: PartExitControl, PartSensorControl, TargetExitControl, TargetSensorControl,
+  			  successfulExit
+  Calls		: movePartToStation
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2005  KM	use str_to_method
+  01.04.2016  KM  SimTalk 2.0
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  
+  station := self.~
+  
+  if station.ConfigurationError 
+  	return
+  end
+  
+  -- area for user
+  if station.UserCtrl /= "" 
+  	str_to_method(station.UserCtrl).execute(1,station.WaitingTargets[1],station)
+  end
+  -- end of area for user
+  
+  -- start of load/unload/transfer: ------- don't touch -----
+  station.movePartToStation
+ ShowInTooltip: false
+-
+ Name: Status
+ ID: 36
+ DataType: string
+ Value: "Waiting"
+ ShowInTooltip: false
+ StatisticsActive: true
+-
+ Name: successfulExit
+ ID: 37
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  Called after one sucessful load/unload. It will be checked if the next transfer can be started.
+  Empty Container (unload) or full container (load) continue.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	: exitStation
+  Calls		: checkNumberOfPartsWithType, checkReachingBlocksize, StartMoveInUserMethod
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  19.04.2005  KM	homogeneous loading: container must continue for changing type
+  23.09.2005  KM	stopObject(station.WaitingTargets[1],... buggy because stopObject
+  				uses WaitingTargets
+  07.11.2011  KM  set the right status
+  01.04.2016  KM  SimTalk 2.0
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  var target  : object
+  var p : object
+  var num : integer
+  var found : boolean
+  var oldname : string
+  
+  station := self.~
+  
+  if not station.resWorking
+  	station.Status := "waiting"
+  end
+  
+  if station.TargetIsContainer 		-- LoadStation/Transfer to container
+  	station.MovedBlocks := station.MovedBlocks + 1
+  
+  	if station.unloadPartcontainer
+  		-- transfer to container
+  		p := station.WaitingParts[1]
+  		-- consider partnumber only for loading; complete unload
+  --			if station.Partnumber > -1 and (station.MovedBlocks < station.Partnumber) and p.empty then
+  --				station.errorMessage(4,2);
+  --			end;
+  		if (p.empty or station.checkNumberOfPartsWithType(p,station.WaitingTargets[1]) = 0)
+  			station.stopObject(station.WaitingParts.remove(1),false)
+  		end
+  	else
+  		-- Loadstation
+  		if station.PartStation.internalClassType = "Buffer" and
+  		   station.PartStation.BufferType = "Stack" and station.WaitingParts.occupied
+  			-- buffer with LIFO and not empty: is there a not finished part above the waiting parts?
+  			if not station.PartStation.cont.finished
+  				station.WaitingParts.delete
+  			end
+  		end
+  	end
+  
+  	target := station.WaitingTargets[1]
+  	if station.Partnumber > -1 and (station.MovedBlocks < station.Partnumber) and station.targetFull(target)
+  		station.errorMessage(3,2)
+  	end
+  
+  	-- don't init ContinueTarget to false here
+  	if station.targetFull(target) or (station.MovedBlocks = station.Partnumber)
+  		station.ContinueTarget := true
+  	elseif not station.TypeSpecific and station.HomogeneousTarget and not station.unloadPartcontainer
+  		if station.WaitingParts.empty and station.readyPartStation
+  			station.ContinueTarget := true
+  		end
+  	end
+  
+  	if station.ContinueTarget
+  		station.stopObject(target,false)
+  		station.WaitingTargets.remove(1)
+  		station.MovedBlocks := 0
+  		station.Parttype := ""
+  		station.Containertype := ""
+  		station.ContinueTarget := false
+  
+  		if station.unloadPartcontainer
+  			-- transfer to container
+  			if station.WaitingParts.empty
+  				return
+  			end
+  			found := false
+  			oldname := target.name
+  			while station.WaitingTargets.occupied and not found
+  				target := station.WaitingTargets[1]
+  				if oldname /= target.name
+  					p := station.WaitingParts[1]
+  					num := station.checkNumberOfPartsWithType(p,target)
+  					if num < station.Blocksize 		-- must be full block ???
+  						station.stopObject(target,false)
+  						station.WaitingTargets.remove(1)
+  					else
+  						found := true
+  					end
+  				else
+  					found := true
+  				end
+  			end
+  		else
+  			-- Loadstation
+  			if station.HomogeneousTarget or
+  				(station.TypeSpecific and
+  			   	(station.WaitingTargets.empty or target.name /= station.WaitingTargets[1].name))
+  	   			-- no waiting target or type has changed
+  				if station.WaitingParts.occupied
+  					p := station.WaitingParts[1]
+  					station.WaitingParts.delete
+  					station.stopObject(p,false)	-- for line and tracks
+  				end
+  				station.checkNumberOfPartsWithType(station.PartStation,station.WaitingTargets[1])
+  				if station.WaitingParts.occupied
+  					-- stop the first part before the sensor
+  					station.stopObject(station.WaitingParts[1],true)	-- for line and tracks
+  				end
+  			end
+  		end
+  	end
+  
+  	if station.unloadPartcontainer
+  		if station.WaitingParts.empty
+  			return
+  		end
+  	else
+  		if not station.checkReachingBlocksize
+  			return
+  		end
+  	end
+  	if station.WaitingTargets.empty
+  		return
+  	end
+  else	-- UnloadStation or transfer from station to station
+  	if station.unloadPartcontainer
+  		-- UnloadStation
+  		station.MovedBlocks := station.MovedBlocks + 1
+  		p := station.WaitingParts[1]
+  		if station.Partnumber > -1 and (station.MovedBlocks < station.Partnumber) and p.empty
+  			station.errorMessage(4,2)
+  		end
+  		if (station.Partnumber <= -1 and (p.empty or station.checkNumberOfPartsWithType(p,station.WaitingTargets[1]) = 0)) or
+  		   station.MovedBlocks = station.Partnumber
+  			station.stopObject(station.WaitingParts.remove(1),false)
+  			station.MovedBlocks := 0
+  			if station.WaitingParts.empty
+  				return
+  			end
+  		end
+  	else
+  		-- transfer to station
+  		if station.PartStation.internalClassType = "Buffer" and
+  		   station.PartStation.BufferType = "Stack" and station.WaitingParts.occupied
+  			-- buffer with LIFO and not empty: is there a not finished part above the waiting parts?
+  			if not station.PartStation.cont.finished
+  				station.WaitingParts.delete
+  				return
+  			end
+  		end
+  
+  		if not station.checkReachingBlocksize
+  			return
+  		end
+  	end
+  end
+  
+  if station.waitForReadyStation
+  	station.StartMoveInUserMethod
+  end
+ ShowInTooltip: false
+-
+ Name: exitStation
+ ID: 38
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  moves parts from TransferStation to targetstation (unload or move) or
+  to target on targetstation (load or reload)
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues:
+  
+  Called By	: OnExit
+  Calls		: getSensorPosition, successfulExit
+  
+  Author		: Karola Mock, Siemens PLM Software
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  15.02.2006  KM  Nw2Way allowed
+  18.05.2006  KM  error message in console if transfer fails
+  25.08.2006  KM	no multiple call for example for failed target station
+  10.10.2007  PS  Localization
+  27.04.2009  KM  unload of a block to a line should be possible
+  21.10.2009  KM  transfer of a block: wait for enough free capacity
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  09.09.2010	KM	consider capacity -1
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  11.03.2013	KM	consider capacity and entranceLocked for length oriented targetstation;
+  				set BlocksizePart when not all parts can be moved
+  09.04.2013	KM	move part to lane B on Nw2Way;
+  22.07.2013	KM	superfluous error message removed (when part can not leave transferstation);
+  09.09.2013	KM	consider failure, pause and stopped for length oriented targetstation;
+  01.04.2016  KM  SimTalk 2.0
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station:object
+  var ipos : length
+  var i : integer
+  var transferOK : boolean
+  var transferFailed : boolean
+  var target : object
+  var part : object
+  var partlength : length
+  var lane : integer
+  
+  station := self.~
+  
+  transferOK := true
+  if station.TargetIsContainer 		-- LoadStation/Transfer to container
+  	target := station.WaitingTargets[1]
+  	if target.internalClassType /= "Transporter" or
+     		target.LoadbayType = "Store" or target.LoadbayType = "Lager"
+  		for i := 1 to station.numMU
+  			if not station.cont.move(target)
+  				print to_str(station)+": "+rootfolder.Localization.getText(205)
+  				-- protokoll
+  				transferOK := false
+  				station.Status := "blocked"
+  			end
+  		next
+  	else
+  		-- vehicle with loadBayLength
+  		for i := 1 to station.numMU
+  			ipos := target.loadBayLength - target.occupiedLength
+  			if not station.cont.insert(target,ipos)
+  				print to_str(station)+": "+rootfolder.Localization.getText(205)
+  				-- mustn' happen
+  				transferOK := false
+  				station.Status := "blocked"
+  			end
+  		next
+  	end
+  else	-- UnloadStation or transfer from station to station
+  	if station.TargetStation.capacity /= -1
+  		waituntil station.TargetStation.capacity-station.TargetStation.numMU >= station.numMU prio 1
+  	end
+  	if station.TargetSensorID = 0
+  		for i := 1 to station.numMU
+  			if not station.cont.move(station.TargetStation)
+  				transferOK := false
+  				station.Status := "blocked"
+  			end
+  		next
+  	else
+  		-- length oriented target station
+  		waituntil not station.TargetStation.failed prio 1
+  		waituntil not station.TargetStation.pause prio 1
+  		waituntil not station.TargetStation.stopped prio 1
+  
+  		if station.TargetStation.internalClassType ~= "TwoLaneTrack"
+  			lane := station.TargetSensorLane
+  			if lane = 1 or lane = 3
+  				waituntil not station.TargetStation.A.entranceLocked prio 1
+  			else
+  				waituntil not station.TargetStation.B.entranceLocked prio 1
+  			end
+  		else
+  			waituntil not station.TargetStation.entranceLocked prio 1
+  		end
+  		ipos := station.getSensorPosition(2)
+  		for i := 1 to station.numMU
+  			transferFailed := false
+  			part := station.cont
+  			partlength := part.length
+  			if station.TargetStation.internalClassType ~= "TwoLaneTrack"
+  				if lane = 1 or lane = 3
+  					if ipos = 0
+  						if not part.transfer(station.TargetStation.A,ipos)
+  							transferFailed := true
+  						end
+  					else
+  						if not part.insert(station.TargetStation.A,ipos)
+  							transferFailed := true
+  						end
+  					end
+  				else
+  					if ipos = 0
+  						if not part.transfer(station.TargetStation.B,ipos)
+  							transferFailed := true
+  						end
+  					else
+  						if not part.insert(station.TargetStation.B,ipos)
+  							transferFailed := true
+  						end
+  					end
+  				end
+  			else
+  				if ipos = 0
+  					if not part.transfer(station.TargetStation,ipos)
+  						transferFailed := true
+  					end
+  				else
+  					if not part.insert(station.TargetStation,ipos)
+  						transferFailed := true
+  					end
+  				end
+  			end
+  			ipos := ipos - partlength
+  			if transferFailed
+  				transferOK := false
+  				station.Status := "blocked"
+  			end
+  		next
+  	end
+  end
+  
+  if transferOK
+  	station.successfulExit
+  else
+  	station.BlocksizePart := station.cont
+  end
+ ShowInTooltip: false
+-
+ Name: readyForWorking
+ ID: 39
+ DataType: method
+ Value: |+1
+  -> boolean
+  var station : object
+  
+  station := self.~
+  
+  if station.empty and (not station.pause) and 
+  	(not station.failed) 	
+  	return true
+  else
+  	return false
+  end
+
+ ShowInTooltip: false
+-
+ Name: StatusTable
+ ID: 40
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 7
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: string
+    Width: 10
+   -
+    Index: 2
+    Alignment: "Right"
+    DataType: integer
+    Width: 10
+   -
+    Index: 3
+    Alignment: "Right"
+    DataType: time
+    Width: 12
+   -
+    Index: 4
+    Alignment: "Right"
+    DataType: real
+    FormatString: "-15.2"
+    Width: 10
+   -
+    Index: 5
+    Alignment: "Right"
+    DataType: real
+    FormatString: "-15.2"
+    Width: 10
+   -
+    Index: 6
+    Alignment: "Right"
+    DataType: time
+    Width: 12
+   -
+    Index: 7
+    Alignment: "Right"
+    DataType: time
+    Width: 14
+  ColumnIndex: [string,8,~,"Value","Frequency","Duration","Frequency [%]","Duration [%]","Mean Duration","Standard Deviation"]
+  Columns:
+  - [1,string,1,"waiting"]
+  - [2,integer,1,1]
+  - [3,time,1,0]
+  - [4,real,1,100]
+  - [5,real,1,0]
+  - [6,time,1,0]
+  - [7,time,1,0]
+ ShowInTooltip: false
+-
+ Name: checkTarget
+ ID: 41
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks target on the targetstation:
+  1. if AlwaysStopTarget is set, stop the target
+  2. only stop the target if it has enough capacity and the right parts are ready
+  _________________________________________________________________________________
+  Parameters	: target: target of load or reload
+  ReturnValues: true, if Target should be stopped
+  
+  Called By	: TargetExitControl, TargetSensorControl
+  Calls		: checkNumberOfPartsWithType, checkType
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  24.02.2006  KM  don't stop target with capacity 0
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  01.04.2016  KM  SimTalk 2.0
+  19.01.2018  KM  handle stacks on vehicle or container
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param target : object -> boolean
+  
+  var station,p : object
+  var freecap : integer
+  var neededcap : integer
+  var freelength : length
+  var neededlength : length
+  var i,j,k,n,xdim : integer
+  var t : table
+  
+  station := self.~
+  
+  if (station.pause or station.failed) and not station.StopTargetsForFailure
+  	return false
+  end
+  
+  if station.AlwaysStopTarget and target.capacity /= 0
+  	return true
+  end
+  
+  if station.WaitingParts.empty
+  	return false
+  else
+  	if station.unloadPartcontainer
+  		-- transfer from container to container
+  		i := station.checkNumberOfPartsWithType(station.WaitingParts[1],target)
+  		if i = 0
+  			return false
+  		end
+  	else
+  		-- load parts
+  		if station.WaitingParts.dim < station.Blocksize
+  			return false
+  		end
+  		n := 0
+  		for i := 1 to station.WaitingParts.dim
+  			if station.checkType(station.WaitingParts[i],target)
+  				n := n + 1
+  			end
+  		next
+  		if n < station.Blocksize
+  			return false
+  		else
+  			if n < station.WaitingParts.dim
+  				i := station.WaitingParts.dim
+  				repeat
+  					if not station.checkType(station.WaitingParts[i],target)
+  						station.WaitingParts.remove(i)
+  						-- TODO should parts exit station ??
+  					end
+  					i := i - 1
+  				until i <= 0
+  			end
+  		end
+  	end
+  end
+  
+  if target.internalClassType = "Transporter" and
+     target.LoadbayType /= "Store" and target.LoadbayType /= "Lager"
+  	-- vehicle with loadbaylength
+  	freelength := target.loadBayLength - target.occupiedLength
+  	neededlength := 0.0
+  	if station.unloadPartcontainer
+  		-- reload
+  		t.create
+  		p := station.WaitingParts[1]
+  		p.contentsList(t)
+  		if p.internalClassType = "Transporter" and
+     			p.LoadbayType /= "Store" and p.LoadbayType /= "Lager"
+  			xdim := 1
+  		else
+  			xdim := t.XDim
+  		end
+  		i := 1
+  		n := 0
+  		repeat
+  			var datatype : string := t.getDataType(i)
+  			j := 1
+  			repeat
+  				var zDim : integer
+  				var subtable : boolean
+  				if datatype = "table" and t[i,j] /= void
+  					zDim := t[i,j].yDim
+  					subtable := true
+  				else
+  					zDim := 1
+  					subtable := false
+  				end
+  
+  				k := 1
+  				repeat
+  					if subtable
+  						p := t[i,j][1,k]
+  					else
+  						p := t[i,j]
+  					end
+  
+  					if p /= void and station.checkType(p,target)
+  						n := n + 1
+  						neededlength := neededlength + p.length
+  					end
+  					k := k + 1
+  				until n = station.Blocksize or k > zDim
+  				j := j + 1
+  			until n = station.Blocksize or j > t.YDim
+  			i := i + 1
+  		until n = station.Blocksize or i > xdim
+  	else
+  		-- load
+  		for i := 1 to station.Blocksize
+  			neededlength := neededlength + station.WaitingParts[i].length
+  		next
+  	end
+  	if neededlength > freelength
+  		return false
+  		-- TODO what's with the cut Waitingparts (see above)
+  	end
+  end
+  
+  if target.capacity = -1
+  	return true
+  else
+  	freecap := (target.capacity-target.numMU)
+  	if station.Partnumber <= -1
+  		neededcap := station.Blocksize
+  	else
+  		neededcap := station.Partnumber * station.Blocksize
+  	end
+  	if (freecap >= neededcap)
+  		return true
+  	else
+  		return false
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: checkSensorID
+ ID: 42
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  checks whether the sensorID exists and has the right control
+  _________________________________________________________________________________
+  Parameters	: type = 1, sensor on partstation; type = 2, sensor on targetstation
+  			  name, path of the transferstation
+  ReturnValues: true if correct sensor
+  
+  Called By	: setPartStation, setTargetStation, dialogInit, getPartStation,
+  			  getTargetStation, Init, resetUserStation, OnRename
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 23.02.2005
+  
+  _________________________________________________________________________________
+  History:
+  
+  15.02.2006  KM  Nw2Way allowed
+  22.03.2006  KM	wrong check of targetsensor without sensorcontrol
+  13.07.2018  KM  Attributname "Ctrl" durch neuen Namen "Control" ersetzt
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, name : string -> boolean
+  
+  var station : object
+  var sensorstation : object
+  var ctrl : string
+  var iC : integer
+  var lane,newlane,id : integer
+  var sctrl,sctrl2 : string
+  var a,b : boolean
+  var laneAttr : string
+  
+  station := self.~
+  if type = 1 
+  	sensorstation := station.PartStation
+  	lane := station.PartSensorLane
+  	laneAttr := "PartSensorLane"
+  	id := station.PartSensorID
+  	ctrl := name + ".PartSensorControl"
+  else
+  	sensorstation := station.TargetStation
+  	lane := station.TargetSensorLane
+  	laneAttr := "TargetSensorLane"
+  	id := station.TargetSensorID
+  	ctrl := name + ".TargetSensorControl"
+  end
+  iC := station.getInternalClassType(sensorstation)
+  if iC = 3 
+  	-- Nw2Way
+  	if sensorstation.A.existsSensorID(id) 
+  		sctrl := to_str(sensorstation.A.sensorID(id).Control)
+  		if sctrl ~= ctrl or (type = 2 and sctrl = "VOID") 
+  			a := true
+  		else
+  			a := false
+  		end
+  	else
+  		a := false
+  	end
+  	if sensorstation.B.existsSensorID(id) 
+  		sctrl := to_str(sensorstation.B.sensorID(id).Control)
+  		if sctrl ~= ctrl or (type = 2 and sctrl = "VOID") 
+  			b := true
+  		else
+  			b := false
+  		end
+  	else
+  		b := false
+  	end
+  	if a or b 
+  		if a and b 
+  			if lane = 1 or lane = 3 
+  				newlane := 3
+  			else
+  				newlane := 4
+  			end
+  		elseif a 
+  			newlane := 1
+  		else
+  			newlane := 2
+  		end
+  		if newlane /= lane 
+  			station.setAttribute(laneAttr, newlane)
+  		end
+  		return true
+  	else
+  		return false
+  	end
+  else
+  	if sensorstation.existsSensorID(id) 
+  		sctrl := to_str(sensorstation.sensorID(id).Control)
+  		if sctrl ~= ctrl or (type = 2 and sctrl = "VOID") 
+  			return true
+  		else
+  			return false
+  		end
+  	else
+  		return false
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: OnConnect
+ ID: 43
+ DataType: method
+ Value: |+1
+  param source, destination: object,
+  created: boolean
+  --source=Quelle der Verbindung
+  --destination=Ziel der Verbindung
+  --created=Verbindung hergestellt/gelöscht
+  
+  -- @: the connector
+  -- ?: the object the control was called for
+  
+  if created 	--Verbindung wurde hergestellt
+  	@.deleteObject
+  end
+
+ ShowInTooltip: false
+-
+ Name: PartExitControl
+ ID: 44
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  exit control of the partstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: checkContainer, checkNumberOfPartsWithType, checkType,
+  			  checkReachingBlocksize, exitPartStation, readyForWorking,
+  			  StartMoveInUserMethod
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  03.03.2005  KM	container stops also for incomplete blocks if "unload all"
+  04.03.2005  KM	but at least one part of the right type
+  19.04.2005  KM	homogeneous loading: container must continue for changing type
+  02.12.2005  KM	check ConfigurationError
+  20.02.2008  KM  call UserControl when part arrives
+  10.11.2014  KM  don't insert the same MU twice in waitingParts (Buffer of type stack)
+  01.04.2016  KM  SimTalk 2.0
+  10.11.2021  KM  for type specific or homogeneous loading from a ParallelStation do
+  				nothing when there is no target
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  var num : integer
+  var target : object
+  var done,incomplete : boolean
+  
+  station := self.~
+  
+  if station.ConfigurationError or ? /= station.PartStation
+  	return
+  end
+  
+  target := station.WaitingTargets[1]
+  if target /= void
+  	if station.targetFull(target)
+  		target := station.WaitingTargets[2]
+  	end
+  end
+  
+  if station.unloadPartcontainer
+  	-- unload or transfer from container to container
+  	if station.checkContainer(@)
+  		num := station.checkNumberOfPartsWithType(@,target)
+  		if (num < station.Blocksize and station.Partnumber > -1) or
+  			(num = 0 and station.Partnumber <= -1)
+  			-- TODO protokoll
+  			station.exitPartStation(@)
+  			return
+  		end
+  		if station.UserPartExitCtrl /= "" and str_to_method(station.UserPartExitCtrl).checkArguments(false)
+  			str_to_method(station.UserPartExitCtrl).execute(false,@,station.PartStation)
+  		end
+  		station.WaitingParts.append(@)
+  	else
+  		station.exitPartStation(@)
+  		-- TODO protokoll
+  		return
+  	end
+  else
+  	-- load or transfer from station to station
+  	if target = void and station.PartStation.internalClassType = "ParallelStation" and station.TargetIsContainer and
+  						(station.TypeSpecific or station.HomogeneousTarget)
+  		if station.UserPartExitCtrl /= "" and str_to_method(station.UserPartExitCtrl).checkArguments(false)
+  			str_to_method(station.UserPartExitCtrl).execute(false,@,station.PartStation)
+  		end
+  		return
+  	end
+  	incomplete := false
+  	if not station.checkType(@,target)
+  		done := station.exitPartStation(@)
+  		if (not done) and not station.TypeSpecific and station.HomogeneousTarget
+  			-- change of parttype
+  			if station.empty and target /= void and station.WaitingParts.empty
+  				station.stopObject(target,false)
+  				station.WaitingTargets.remove(1)
+  				station.MovedBlocks := 0
+  				station.Parttype := @.name
+  				station.Containertype := ""
+  				station.ContinueTarget := false
+  			else
+  				-- load an incomplete block
+  				if station.WaitingParts.dim < station.Blocksize
+  					incomplete := true
+  				end
+  			end
+  		else
+  			return
+  		end
+  	end
+  
+  	if not incomplete
+  		if station.UserPartExitCtrl /= "" and str_to_method(station.UserPartExitCtrl).checkArguments(false)
+  			str_to_method(station.UserPartExitCtrl).execute(false,@,station.PartStation)
+  		end
+  		if station.PartStation.internalClassType = "Buffer" and station.PartStation.BufferType = "Stack"
+  			station.WaitingParts.setCursor(1)
+  			if not station.WaitingParts.find(@)
+  				station.WaitingParts.insert(1,@)
+  			end
+  		else
+  			station.WaitingParts.append(@)
+  		end
+  		if not station.checkReachingBlocksize
+  			return
+  		end
+  	end
+  end
+  
+  if station.TargetIsContainer and station.WaitingTargets.empty
+  	if station.readyForWorking
+  		station.Status := "waiting_for_target"
+  	end
+  else
+  	if station.waitForReadyStation
+  		station.StartMoveInUserMethod
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: TargetExitControl
+ ID: 45
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  exit control of the targetstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: checkTarget, waitForReadyStation, checkNumberOfPartsWithType
+  			  checkReachingBlocksize, exitTargetStation, readyForWorking,
+  			  StartMoveInUserMethod
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.09.2005  KM	consider ReadyTargets to avoid loading a target twice
+  02.12.2005  KM	check ConfigurationError
+  20.02.2008  KM  call UserControl when target arrives
+  01.04.2016  KM  SimTalk 2.0
+  10.11.2021  KM  when type specific or homogeneous loading parts from a parallelproc
+  				search finished parts on the partstation for the arrived container
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var station : object
+  var i : integer
+  
+  station := self.~
+  
+  if station.ConfigurationError or ? /= station.TargetStation
+  	return
+  end
+  
+  if @.internalClassType = "Part" or not station.TargetIsContainer
+  	station.exitTargetStation(@)
+  	return
+  end
+  
+  -- don't try to load a target twice
+  for i := 1 to station.ReadyTargets.dim
+  	if @ = station.ReadyTargets[i]
+  		station.exitTargetStation(@)
+  		return
+  	end
+  next
+  
+  if station.PartStation.internalClassType = "Buffer" and
+     station.PartStation.BufferType = "Stack" and station.WaitingParts.occupied
+  	-- buffer with LIFO and not empty: is there a not finished part above the waiting parts?
+  	if not station.PartStation.cont.finished
+  		station.WaitingParts.delete
+  		return
+  	end
+  end
+  
+  if station.WaitingTargets.empty and station.PartStation.internalClassType = "ParallelStation" and station.TargetIsContainer and
+  		not station.unloadPartcontainer and (station.TypeSpecific or station.HomogeneousTarget)
+  	-- type specific or homogeneous loading parts from a parallelproc
+  	-- search finished parts on the partstation for the arrived container
+  	station.WaitingParts.delete
+  	station.Containertype := ""
+  	station.Parttype := ""
+  	station.checkNumberOfPartsWithType(station.PartStation, @)
+  end
+  
+  -- load or transfer from container to container
+  if not station.checkTarget(@)
+  	station.exitTargetStation(@)
+  	return
+  end
+  
+  if station.UserTargetExitCtrl /= "" and str_to_method(station.UserTargetExitCtrl).checkArguments(false)
+  	str_to_method(station.UserTargetExitCtrl).execute(false,@,station.TargetStation)
+  end
+  station.WaitingTargets.append(@)
+  
+  if station.unloadPartcontainer
+  	if station.WaitingParts.empty
+  		if station.readyForWorking
+  			station.Status := "waiting_for_parts"
+  		end
+  		return
+  	end
+  else
+  	if not station.checkReachingBlocksize
+  		if station.readyForWorking
+  			station.Status := "waiting_for_parts"
+  		end
+  		return
+  	end
+  end
+  
+  if station.waitForReadyStation
+  	station.StartMoveInUserMethod
+  end
+ ShowInTooltip: false
+-
+ Name: UserPartExitCtrl
+ ID: 46
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: UserTargetExitCtrl
+ ID: 47
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: exitPartStation
+ ID: 48
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  move the part from the partstation or call the UserExitControl.
+  _________________________________________________________________________________
+  Parameters	: part : part, which should leave the station
+  ReturnValues: true when the part has left the station or if there is a UserExitcontrol
+  
+  Called By	: checkNumberOfPartsWithType, PartExitControl, PartSensorControl,
+  			  stopObject
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  15.04.2005  KM	return value added
+  27.06.2005  KM	use str_to_method
+  20.02.2008  KM	UserMethod can have an argument
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param part : object -> boolean
+  
+  var station : object
+  
+  station := self.~
+  if station.UserPartExitCtrl = "" 
+  	return part.move
+  else
+  	if str_to_method(station.UserPartExitCtrl).checkArguments(true)
+  		str_to_method(station.UserPartExitCtrl).execute(true,part,station.PartStation)
+  	else
+  		str_to_method(station.UserPartExitCtrl).execute(part,station.PartStation)
+  	end
+  	return true
+  end
+
+ ShowInTooltip: false
+-
+ Name: exitTargetStation
+ ID: 49
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  move the part from the targetstation or call the UserExitControl.
+  _________________________________________________________________________________
+  Parameters	: target: target, which should leave the station
+  ReturnValues: none
+  
+  Called By	: TargetExitControl, stopObject
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  27.06.2005  KM	use str_to_method
+  23.09.2005  KM	set ReadyTargets if target can not leave
+  20.02.2008  KM	UserMethod can have an argument
+  01.04.2016  KM  SimTalk 2.0
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param target : object
+  
+  var station : object
+  var i : integer
+  
+  station := self.~
+  if station.UserTargetExitCtrl = "" 
+  	target.move
+  else
+  	if str_to_method(station.UserTargetExitCtrl).checkArguments(true)
+  		str_to_method(station.UserTargetExitCtrl).execute(true,target,station.TargetStation)
+  	else
+  		str_to_method(station.UserTargetExitCtrl).execute(target,station.TargetStation)
+  	end
+  end
+  
+  -- save ReadyTarget in case the continue of the target was not possible
+  if target.location = station.TargetStation 
+  	station.ReadyTargets.append(target)
+  else
+  	for i := 1 to station.ReadyTargets.dim 
+  		if target = station.ReadyTargets[i] 
+  			station.ReadyTargets.remove(i)
+  			exitloop
+  		end
+  	next
+  end
+ ShowInTooltip: false
+-
+ Name: checkContainer
+ ID: 50
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks whether the container should stop.
+  _________________________________________________________________________________
+  Parameters	: container
+  ReturnValues: true: container should stop
+  			  false: container will continue
+  
+  Called By	: PartExitControl and PartSensorControl
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  03.03.2005  KM	container stops also for incomplete blocks if "unload all"
+  21.08.2006  KM  checkboxes for behavior of parts and targets for failure
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param container : object -> boolean
+  ------------------------------------------------------------------------------
+  -- called from PartExitControl and PartSensorControl when "Unload" or "Reload"
+  -- Partnumber=-1: at least one part
+  -- Partnumber given:"Unload": at least (Partnumber*Blocksize) parts
+  --					"Reload": at least one part (unload all, Partnumber for the target)
+  ------------------------------------------------------------------------------
+  
+  var station : object
+  
+  station := self.~
+  
+  if (station.pause or station.failed) and not station.StopPartsForFailure
+  	return false
+  end
+  
+  if container.internalClassType = "Part" or container.numMU = 0
+  	return false
+  end
+  
+  if station.Partnumber <= -1 or station.TargetIsContainer
+  	return true
+  end
+  
+  if container.numMU < station.Partnumber*station.Blocksize
+  	return false
+  else
+  	return true
+  end
+ ShowInTooltip: false
+-
+ Name: checkReachingBlocksize
+ ID: 51
+ DataType: method
+ Value: |+1
+  -> boolean
+  var station : object
+  
+  station := self.~
+  
+  if station.WaitingParts.dim < station.Blocksize 
+  	return false
+  else
+  	return true
+  end
+
+ ShowInTooltip: false
+-
+ Name: targetFull
+ ID: 52
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks whether the target is full;the parts on the station (just loading) were counted too
+  _________________________________________________________________________________
+  Parameters	: target: target of load or reload
+  ReturnValues: true, if Target is full
+  
+  Called By	: PartExitControl, PartSensorControl, successfulExit
+  Calls		:
+  
+  Author		: Karola Mock, Siemens PLM Software
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2006  KM	vehicles mit lineloadbay: also check capacity
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  09.09.2010	KM	consider capacity -1
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param target : object -> boolean
+  
+  var station : object
+  var mulength : length
+  var l : length
+  var t : table
+  var i,j : integer
+  
+  station := self.~
+  if target.internalClassType /= "Transporter" or
+     target.LoadbayType = "Store" or target.LoadbayType = "Lager"
+  	if (target.capacity = -1 or
+  	   	target.capacity-(target.numMU+station.numMU) >= station.Blocksize)
+  		return false
+  	else
+  		return true
+  	end
+  else
+  	-- lineloadbay
+  	if target.capacity /= -1
+  		if (target.capacity-(target.numMU+station.numMU) < station.Blocksize)
+  			return true
+  		end
+  	end
+  
+  	if target.numMU > 0
+  		mulength := target.occupiedLength / target.numMU
+  	else
+  		mulength := 0
+  	end
+  
+  	l := target.occupiedLength
+  	t.create
+  	station.contentsList(t)
+  	for i := 1 to t.XDim
+  		for j := 1 to t.YDim
+  			if t[i,j] /= void
+  				l := l + t[i,j].length
+  			end
+  		next
+  	next
+  
+  	if (target.loadBayLength-l >= station.Blocksize*mulength)
+  		return false
+  	else
+  		return true
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: checkStationClass
+ ID: 53
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks whether the class is allowed for partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type: 0: partstation or targetstation
+  					1: check partstation
+  					2: check targetstation
+  ReturnValues: true if class is allowed
+  
+  Called By	: Init, OnDragDrop, setPartStation, setTargetStation,
+  			  TransferStationDialog.callback
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  08.07.2005  KM	Source allowed for partstation, drain for targetstation
+  15.02.2006  KM	Nw2Way allowed
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  19.05.2006  KM  NwDismantle allowed and NwAssembler as part station allowed
+  12.11.2008  KM  Drain only allowed for unload or parttransfer
+  12.02.2009  KM  Store allowed as targetstation for unload or parttransfer
+  12.11.2015  KM  DePortioner allowed as targetstation for unload or parttransfer and Portioner allowed as partStation
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param obj : object, type : integer -> boolean
+  -- checks the allowed class of partstation or targetstation
+  
+  var iCN : string
+  var i : integer
+  
+  iCN := obj.internalClassType
+  if iCN = "Conveyor" or iCN = "Track" or iCN = "TwoLaneTrack" or
+     iCN = "Station" or iCN = "DismantleStation" or
+     iCN = "PlaceBuffer" or iCN = "Buffer" /*or iCN = "Sorter" */
+  	return true
+  elseif iCN = "ParallelStation"
+  	-- not allowed : Transferstation
+  	i := obj.getAttrNo("AOLType")
+  	if i=0 or obj.getAttrValue(i) /= "LoadUnload"
+  		return true
+  	else
+  		return false
+  	end
+  elseif iCN = "Source" or iCN = "AssemblyStation" or iCN = "Portioner"
+  	if type /= 2
+  		return true
+  	else
+  		return false
+  	end
+  else
+  	if (iCN = "Drain" or iCN = "Store" or iCN = "DePortioner") and type /= 1 and not self.~.TargetIsContainer
+  		return true
+  	else
+  		return false
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: checkExitCtrl
+ ID: 54
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  checks whether the exit control has the right control
+  _________________________________________________________________________________
+  Parameters	: type = 1 for Partstation, type = 2 for TargetStation
+  ReturnValues: true if ok
+  
+  Called By	: Init, resetUserStation, setStationType
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer-> boolean
+  
+  var station : object
+  var exitctrl : string
+  var exitctrlstation : object
+  
+  station := self.~
+  if type = 1 
+  	exitctrlstation := station.PartStation
+  	exitctrl := makePathRelative(station,exitctrlstation) + ".PartExitControl"
+  else
+  	exitctrlstation := station.TargetStation
+  	exitctrl := makePathRelative(station,exitctrlstation) + ".TargetExitControl"
+  end
+  
+  if to_str(exitctrlstation.exitCtrl) ~= exitctrl 
+  	return true
+  else
+  	return false
+  end
+
+ ShowInTooltip: false
+-
+ Name: errorMessage
+ ID: 55
+ DataType: method
+ Value: |+1
+  param nr : integer, type : integer
+  
+  var station : object
+  var text : string
+  
+  station := self.~
+  station.ConfigurationError := true
+  text := to_str(station)+": "+rootfolder.Localization.getText(200+nr)
+  if type = 1 
+  	messageBox(text,1,13)
+  else
+  	print text
+  	station.CurrIcon := "ConfigurationError"
+  end
+
+ ShowInTooltip: false
+-
+ Name: OnRename
+ ID: 56
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  renames sensorctrl and destination of the sensor or exitctrl on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: none
+  
+  Called By	: System
+  Calls		: getInternalClassType, checkSensorID, setSensorCtrl, getSensorActivate,
+  			  setSensorDestination
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  02.11.2006  KM  part station or target station may be void
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param oldName, newName: string, manually: boolean
+  
+  var type : integer
+  var oldRelName, newRelName : string
+  var ipos : integer
+  
+  -- @,?: the object the control was called for
+  if (?.PartStation /= void) 
+  	type := ?.getInternalClassType(?.PartStation)
+  	newRelName := makePathRelative(?,?.PartStation)
+  	ipos := strRpos(newName, newRelName)
+  	oldRelName := strCopy(newRelName,1,ipos-1) + oldName
+  	if (type > 0) 
+  		if ?.checkSensorID(1,oldRelName) 
+  			?.setSensorCtrl(1,newRelName+".PartSensorControl")
+  			if type > 1 and ?.getSensorActivate(1) = 2 
+  				?.setSensorDestination(1,?)
+  			end
+  		end
+  	elseif type = 0 
+  		if to_str(?.PartStation.exitCtrl) ~= (oldRelName + ".PartExitControl") 
+  			?.PartStation.exitCtrl := newRelName+".PartExitControl"
+  		end
+  	end
+  end
+  
+  if (?.TargetStation /= void) 
+  	type := ?.getInternalClassType(?.TargetStation)
+  	newRelName := makePathRelative(?,?.TargetStation)
+  	ipos := strRpos(newName, newRelName)
+  	oldRelName := strCopy(newRelName,1,ipos-1) + oldName
+  	if (type > 0) 
+  		if ?.checkSensorID(2,oldRelName) 
+  			?.setSensorCtrl(2,newRelName+".TargetSensorControl")
+  			
+  			if type > 1 and ?.getSensorActivate(2) = 2 
+  				?.setSensorDestination(2,?)
+  			end
+  		end
+  	elseif type = 0 
+  		if to_str(?.TargetStation.exitCtrl) ~= (oldRelName + ".TargetExitControl") 
+  			?.TargetStation.exitCtrl := newRelName+".TargetExitControl"
+  		end
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: resetUserStation
+ ID: 57
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  resets sensor or exitctrl of partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type = 1, sensor on partstation; type = 2, sensor on targetstation
+  ReturnValues: none
+  
+  Called By	: setPartStation, setTargetStation, OnDelete
+  Calls		: checkSensorID, checkExitCtrl, getInternalClassType, deleteSensor
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2005  KM	if deleteSensor is not possible (inherited), deactivate it
+  15.02.2006  KM  Nw2Way allowed
+  27.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer
+  
+  var callingObj : object
+  var ctrl,stationAttr : string
+  var UserexitCtrlAttr,userexitctrl : string
+  var station: object
+  var str : string
+  var sttype : integer
+  
+  callingObj := self.~
+  
+  if type = 1 
+  	stationAttr := "PartStation"
+  	UserexitCtrlAttr := "UserPartExitCtrl"
+  elseif type = 2 
+  	stationAttr := "TargetStation"
+  	UserexitCtrlAttr := "UserTargetExitCtrl"
+  else
+  	return
+  end
+  
+  station := callingObj.getAttribute(stationAttr)
+  
+  if (station /= void) 
+  	sttype := callingObj.getInternalClassType(station)
+  	if sttype > 0 
+  		if callingObj.checkSensorID(type,makePathRelative(callingObj, station)) 
+  			callingObj.deleteSensor(type)
+  		end
+  	else
+  		if callingObj.checkExitCtrl(type) 
+  			userexitctrl := callingObj.getAttribute(UserexitCtrlAttr)
+  			if userexitctrl = "" 
+  				station.exitCtrl := ""
+  			else
+  				if existsObject(userexitctrl) 
+  					station.exitCtrl := makePathRelative(str_to_obj(userexitctrl),station)
+  				else
+  					-- usermethod is a custom attribute
+  					ctrl := userexitctrl
+  					str := makePathRelative(station)
+  					if strLpos(str,userexitctrl) = 1 
+  						ctrl := strOmit(ctrl,1,strlen(str))
+  						ctrl := strIncl("self",ctrl,1)
+  					end
+  					station.exitCtrl := ctrl
+  				end
+  			end
+  		end
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: OnFail
+ ID: 58
+ DataType: method
+ Value: |+1
+  var station : object
+  
+  station := self.~
+  if station.failed 
+  	if not station.unplanned and not station.pause 
+  		station.Status := "failed"
+  	end
+  else
+  	if station.unplanned 
+  		station.Status := "unplanned"
+  	elseif station.pause 
+  		station.Status := "paused"
+  	elseif station.resWorking 
+  		station.Status := "working"
+  	elseif station.resBlocked 
+  		station.Status := "blocked"
+  	else
+  		-- TODO blocksize
+  		if station.WaitingParts.occupied and station.TargetIsContainer and station.WaitingTargets.empty 	
+  			station.Status := "waiting_for_target"
+  		elseif station.WaitingTargets.occupied and station.WaitingParts.empty 
+  			station.Status := "waiting_for_parts"
+  		else
+  			station.Status := "waiting"
+  		end
+  	end
+  end
+
+ ShowInTooltip: false
+-
+ Name: OnPause
+ ID: 59
+ DataType: method
+ Value: |+1
+  var station : object
+  
+  station := self.~
+  if station.pause 
+  	if not station.unplanned 
+  		station.Status := "paused"
+  	end
+  else
+  	if station.unplanned 
+  		station.Status := "unplanned"
+  	elseif station.failed 
+  		station.Status := "failed"
+  	elseif station.resWorking 
+  		station.Status := "working"
+  	elseif station.resBlocked 
+  		station.Status := "blocked"
+  	else
+  		-- TODO blocksize
+  		if station.WaitingParts.occupied and station.TargetIsContainer and station.WaitingTargets.empty 	
+  			station.Status := "waiting_for_target"
+  		elseif station.WaitingTargets.occupied and station.WaitingParts.empty 
+  			station.Status := "waiting_for_parts"
+  		else
+  			station.Status := "waiting"
+  		end
+  	end
+  end
+
+ ShowInTooltip: false
+-
+ Name: OnUnplanned
+ ID: 60
+ DataType: method
+ Value: |+1
+  var station : object
+  
+  station := self.~
+  if station.unplanned 
+  	station.Status := "unplanned"
+  else
+  	if station.pause 
+  		station.Status := "paused"
+  	elseif station.failed 
+  		station.Status := "failed"
+  	elseif station.resWorking 
+  		station.Status := "working"
+  	elseif station.resBlocked 
+  		station.Status := "blocked"
+  	else
+  		-- TODO blocksize
+  		if station.WaitingParts.occupied and station.TargetIsContainer and station.WaitingTargets.empty 	
+  			station.Status := "waiting_for_target"
+  		elseif station.WaitingTargets.occupied and station.WaitingParts.empty 
+  			station.Status := "waiting_for_parts"
+  		else
+  			station.Status := "waiting"
+  		end
+  	end
+  end
+
+ ShowInTooltip: false
+-
+ Name: waitForReadyStation
+ ID: 61
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  waits for a ready transferstation.
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: true when station is ready
+  
+  Called By	: successfulExit, PartSensorControl, PartExitControl,
+  			  TargetExitControl, TargetSensorControl
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  07.11.2011  KM  check timeUntilEntranceOpen again after wait
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  -> boolean
+  var station : object
+  var t : real
+  
+  station := self.~
+  
+  if station.empty 
+  
+  	waituntil station.empty and (not station.pause) and 
+  	(not station.failed) prio 1
+  	
+  	t := station.timeUntilEntranceOpen
+  	if t > 0.0 
+  		wait t
+  		t := station.timeUntilEntranceOpen
+  		if t > 0.0 
+  			return
+  		end
+  	end
+  
+  	waituntil station.empty and (not station.pause) and 
+  	(not station.failed) prio 1
+  	
+  	return true
+  else
+  	return false
+  end
+
+ ShowInTooltip: false
+-
+ Name: UserCtrl
+ ID: 62
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: checkUserExitCtrl
+ ID: 63
+ DataType: method
+ Value: |+1
+  param type : integer-> boolean
+  
+  var station,obj : object
+  var exitctrl,ctrl,str : string
+  var i : integer
+  
+  station := self.~
+  if type = 1 
+  	exitctrl := station.UserPartExitCtrl
+  elseif type = 2 
+  	exitctrl := station.UserTargetExitCtrl
+  else
+  	exitctrl := station.UserCtrl
+  end
+  
+  if exitctrl = "" 
+  	return true
+  end
+  	
+  if not existsObject(exitctrl) 
+  	-- usermethod is a custom attribute ?
+  	ctrl := exitctrl
+  	i := strRpos(".",ctrl)
+  	str := strCopy(exitctrl,1,i-1)
+  	
+  	if existsObject(str) 
+  		obj := str_to_obj(str)
+  	else
+  		return false
+  	end
+  	
+  	ctrl := strOmit(ctrl,1,i)
+  	if obj.getAttrNo(ctrl) = 0 
+  		return false
+  	end
+  end
+  
+  return true
+ ShowInTooltip: false
+-
+ Name: userCtrlMethodTemplate
+ ID: 64
+ DataType: method
+ Value: |+1
+  param i : integer
+  -- @ : waiting Target
+  -- ? : TransferStation
+  
+  if i = 1 
+  	-- before starting the transfer to the TransferStation
+  	-- parts/target are ready
+  elseif i = 2 
+  	-- before parts leaving the TransferStation	
+  end
+
+ ShowInTooltip: false
+-
+ Name: ConfigurationError
+ ID: 65
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: errorHandler
+ ID: 66
+ DataType: method
+ Value: |+1
+  param byref error : string,
+  method_path : string,
+  line_number : integer
+  
+  -- forward an error to the calling method
+  if UserInterfaceLanguage < 1 
+  	error := "Unbehandelter Fehler in '" + method_path + "':" + strChr(10) + error
+  else
+  	error := "Unhandled error in '" + method_path + "':" + strChr(10) + error
+  end
+  -- of method
+ ShowInTooltip: false
+-
+ Name: setPartStation
+ ID: 67
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  Sets the PartStation with sensor or exitctrl.
+  _________________________________________________________________________________
+  Parameters	: obj, the partstation
+  			  pos1, position of the sensor (if line or way)
+  			  act, activate always the sensor (if way)
+  			  ctrl, user exit control ( if not line and not way)
+  ReturnValues: true if ok
+  
+  Called By	: setParameter or by User
+  Calls		: resetUserStation, checkStationClass, createSensor, getSensorPosition
+  			  setSensorPosition, getSensorActivate, laneStringToInt
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2005  KM	don't change inheritance if value isn't changed
+  14.04.2005  KM	UserPartExitCtrl could not be defined
+  27.06.2005  KM	don't change inheritance if value isn't changed (Activate);
+  08.07.2005  KM	Parameter of checkStationClass
+  23.08.2005  KM	set "Activate" to "Always" if act is invalid
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed, additional parameter for lane
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  19.05.2005  KM	blocksize > 1 and load or move only allowed for part station of
+  				type parallelproc
+  26.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  26.08.2010	KM	exitCtrl must be front triggered
+  05.10.2016	KM	exitCtrl must be triggered not only once
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param obj : object, pos1 : length, act : string, ctrl : string, lane : string -> boolean
+  
+  var callingObj : object
+  var station : object
+  var newctrl : string
+  var oldpos : length
+  var activate : integer
+  var eq : boolean
+  var type : integer
+  var newlane : integer
+  var callingObjRelName : string
+  var b : boolean
+  
+  callingObj := self.~
+  
+  if obj /= void and existsObject(to_str(obj))
+  	station := makePathRelative(obj)
+  	callingObjRelName := makePathRelative(callingObj, station)
+  else
+  	station := void
+  	callingObjRelName := ""
+  end
+  
+  type := callingObj.getInternalClassType(obj)
+  
+  if callingObj.PartStation = station
+  	if station = void
+  		return false
+  	end
+  	-- same partstation: check sensor or exitctrl
+  	if type > 0
+  		if callingObj.checkSensorID(1,callingObjRelName)
+  			if type = 3
+  				newlane := callingObj.laneStringToInt(lane)
+  				if newlane /= callingObj.PartSensorLane
+  					callingObj.setSensorLane(1,newlane)
+  					callingObj.PartSensorLane := newlane
+  				end
+  			end
+  			oldpos := callingObj.getSensorPosition(1)
+  			if pos1 /= oldpos
+  				callingObj.setSensorPosition(1,pos1)
+  			end
+  			if type > 1
+  				activate := callingObj.getSensorActivate(1)
+  				eq := false
+  				switch act
+  				case "Immer","Always"
+  					if activate = 1
+  						eq := true
+  					end
+  				case "Nur wenn Ziel","Only when Destination"
+  					if activate = 2
+  						eq := true
+  					end
+  				else
+  					act := "Always"
+  				end
+  				if not eq
+  					callingObj.setSensorActivate(1,act)
+  				end
+  			end
+  		else
+  			callingObj.PartSensorLane := callingObj.laneStringToInt(lane)
+    			callingObj.PartSensorID := callingObj.createSensor(1,pos1,act,callingObj.PartSensorLane)
+     		end
+  	else
+  		newctrl := callingObjRelName + ".PartExitControl"
+  		if to_str(callingObj.PartStation.exitCtrl) /= newctrl
+  			callingObj.PartStation.exitCtrl := newctrl
+  		end
+  		b := callingObj.PartStation.exitCtrlFront
+  		if not b
+  			callingObj.PartStation.exitCtrlFront := true
+  		end
+  		b := callingObj.PartStation.exitCtrlRear
+  		if b
+  			callingObj.PartStation.exitCtrlRear := false
+  		end
+  		b := callingObj.PartStation.exitCtrlOnce
+  		if b
+  			callingObj.PartStation.exitCtrlOnce := false
+  		end
+  	end
+  	if callingObj.UserPartExitCtrl /= ctrl
+  		if ctrl = "" or existsMethod(ctrl)
+  			callingObj.UserPartExitCtrl := ctrl
+  		end
+  	end
+  else
+  	-- partstation has changed
+  	callingObj.resetUserStation(1)		-- reset old partstation
+  	callingObj.PartSensorID := 0
+  	callingObj.PartSensorLane := 1
+  	callingObj.UserPartExitCtrl := ""
+  	callingObj.PartStation := void
+  
+  	if station /= void
+  		if callingObj.checkStationClass(obj,1)
+  			callingObj.PartStation := makePathRelative(obj)
+  			if type > 0
+  				callingObj.PartSensorLane := callingObj.laneStringToInt(lane)
+  				callingObj.PartSensorID := callingObj.createSensor(1,pos1,act,callingObj.PartSensorLane)
+  			else
+  				callingObj.PartStation.exitCtrl := callingObjRelName + ".PartExitControl"
+  				b := callingObj.PartStation.exitCtrlFront
+  				if not b
+  					callingObj.PartStation.exitCtrlFront := true
+  				end
+  				b := callingObj.PartStation.exitCtrlRear
+  				if b
+  					callingObj.PartStation.exitCtrlRear := false
+  				end
+  			end
+  			if existsMethod(ctrl)
+  				callingObj.UserPartExitCtrl := ctrl
+  			end
+  			if not callingObj.unloadPartcontainer and
+  			   callingObj.PartStation.internalClassType /= "ParallelStation"
+  				callingObj.Blocksize := 1
+  			end
+  		else
+  			return false
+  		end
+  	else
+  		return false
+  	end
+  end
+  return true
+ ShowInTooltip: false
+-
+ Name: setTargetStation
+ ID: 68
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Sets the TargetStation with sensor or exitctrl.
+  _________________________________________________________________________________
+  Parameters	: obj, the TargetStation
+  			  pos1, position of the sensor (if line or way)
+  			  act, activate always the sensor (if way)
+  			  ctrl, user exit control ( if not line and not way)
+  ReturnValues: true if ok
+  
+  Called By	: setParameter or by User
+  Calls		: resetUserStation, checkStationClass, createSensor, getSensorPosition
+  			  setSensorPosition, getSensorActivate, setSensorCtrl, laneStringToInt
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2005  KM	don't change inheritance if value isn't changed
+  14.04.2005  KM	reset exitctrl of targetstation for unload or move
+  27.06.2005  KM	don't change inheritance if value isn't changed (Activate);
+  08.07.2005  KM	Parameter of checkStationClass
+  23.08.2005  KM	set "Activate" to "Always" if act is invalid
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed, additional parameter for lane
+  21.03.2006  KM  Parameter of checkStationClass, don't allow TransferStation
+  27.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  12.11.2008  KM  Drain only allowed for unload or parttransfer
+  26.08.2010	KM	exitCtrl must be front triggered
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  05.10.2016	KM	exitCtrl must be triggered not only once
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param obj : object, pos1 : length, act : string, ctrl : string, lane : string -> boolean
+  
+  var callingObj : object
+  var station : object
+  var newctrl,str : string
+  var oldpos : length
+  var activate : integer
+  var eq : boolean
+  var type : integer
+  var newlane : integer
+  var callingObjRelName : string
+  var b : boolean
+  
+  callingObj := self.~
+  
+  if obj /= void and existsObject(to_str(obj)) and callingObj.checkStationClass(obj,2) 
+  	station := makePathRelative(obj)
+  	callingObjRelName := makePathRelative(callingObj, station)
+  else
+  	station := void
+  	callingObjRelName := ""
+  end
+  
+  type := callingObj.getInternalClassType(obj)
+  
+  if callingObj.TargetStation = station 
+  	if station = void 
+  		return false
+  	end
+  	-- same TargetStation: check sensor or exitctrl
+  	if type > 0 
+  		if callingObj.checkSensorID(2,callingObjRelName) 
+  			callingObj.setSensorCtrl(2,callingObjRelName+".TargetSensorControl")
+  			if type = 3 
+  				newlane := callingObj.laneStringToInt(lane)
+  				if newlane /= callingObj.TargetSensorLane 
+  					callingObj.setSensorLane(2,newlane)
+  					callingObj.TargetSensorLane := newlane
+  				end
+  			end
+  			oldpos := callingObj.getSensorPosition(2)
+  			if pos1 /= oldpos 
+  				callingObj.setSensorPosition(2,pos1)
+  			end
+  			if type > 1 
+  				activate := callingObj.getSensorActivate(2)
+  				eq := false
+  				switch act
+  				case "Immer","Always" 
+  					if activate = 1 
+  						eq := true
+  					end
+  				case "Nur wenn Ziel","Only when Destination" 
+  					if activate = 2 
+  						eq := true
+  					end
+  				else
+  					act := "Always"
+  				end
+  				if not eq 
+  					callingObj.setSensorActivate(2,act)
+  				end
+  			end
+  		else
+  			callingObj.TargetSensorLane := callingObj.laneStringToInt(lane)
+  			callingObj.TargetSensorID := callingObj.createSensor(2,pos1,act,callingObj.TargetSensorLane)
+  		end
+  		if callingObj.UserTargetExitCtrl /= ctrl 
+  			if ctrl = "" or existsMethod(ctrl) 
+  				callingObj.UserTargetExitCtrl := ctrl
+  			end
+  		end
+  	elseif callingObj.TargetIsContainer 
+  		newctrl := callingObjRelName + ".TargetExitControl"
+  		if to_str(callingObj.TargetStation.exitCtrl) /= newctrl 
+  			callingObj.TargetStation.exitCtrl := newctrl
+  		end
+  		b := callingObj.TargetStation.exitCtrlFront
+  		if not b 
+  			callingObj.TargetStation.exitCtrlFront := true
+  		end
+  		b := callingObj.TargetStation.exitCtrlRear
+  		if b 
+  			callingObj.TargetStation.exitCtrlRear := false
+  		end
+  		b := callingObj.TargetStation.exitCtrlOnce
+  		if b
+  			callingObj.TargetStation.exitCtrlOnce := false
+  		end
+  		if callingObj.UserTargetExitCtrl /= ctrl 
+  			if ctrl = "" or existsMethod(ctrl) 
+  				callingObj.UserTargetExitCtrl := ctrl
+  			end
+  		end
+  	elseif not callingObj.TargetIsContainer 
+  		newctrl := callingObjRelName + ".TargetExitControl"
+  		if to_str(callingObj.TargetStation.exitCtrl) ~= newctrl 
+  			if existsMethod(callingObj.UserTargetExitCtrl) 
+  				if existsObject(callingObj.UserTargetExitCtrl) 
+  					callingObj.TargetStation.exitCtrl := makePathRelative(str_to_obj(callingObj.UserTargetExitCtrl),callingObj.TargetStation)
+  				else
+  					-- usermethod is a custom attribute
+  					newctrl := callingObj.UserTargetExitCtrl
+  					str := makePathRelative(callingObj.TargetStation)
+  					if strLpos(str,newctrl) = 1 
+  						newctrl := strOmit(newctrl,1,strlen(str))
+  						newctrl := strIncl("self",newctrl,1)
+  					end
+  					callingObj.TargetStation.exitCtrl := newctrl
+  				end
+  			else
+  				callingObj.TargetStation.exitCtrl := ""
+  			end
+  		end
+  		callingObj.UserTargetExitCtrl := ""
+  	end
+  else
+  	-- TargetStation has changed
+  	callingObj.resetUserStation(2)		-- reset old TargetStation
+  	callingObj.TargetSensorID := 0
+  	callingObj.TargetSensorLane := 1
+  	callingObj.UserTargetExitCtrl := ""
+  	callingObj.TargetStation := void
+  	
+  	if station /= void 
+  		callingObj.TargetStation := makePathRelative(obj)
+  		if type > 0 
+  			callingObj.TargetSensorLane := callingObj.laneStringToInt(lane)
+  			callingObj.TargetSensorID := callingObj.createSensor(2,pos1,act,callingObj.TargetSensorLane)
+  			if existsMethod(ctrl) 
+  				callingObj.UserTargetExitCtrl := ctrl
+  			end
+  		elseif callingObj.TargetIsContainer 
+  			callingObj.TargetStation.exitCtrl := callingObjRelName + ".TargetExitControl"
+  			b := callingObj.TargetStation.exitCtrlFront
+  			if not b 
+  				callingObj.TargetStation.exitCtrlFront := true
+  			end
+  			b := callingObj.TargetStation.exitCtrlRear
+  			if b 
+  				callingObj.TargetStation.exitCtrlRear := false
+  			end
+  			b := callingObj.TargetStation.exitCtrlOnce
+  			if b
+  				callingObj.TargetStation.exitCtrlOnce := false
+  			end
+  			if existsMethod(ctrl) 
+  				callingObj.UserTargetExitCtrl := ctrl
+  			end
+  		end
+  	else
+  		return false
+  	end
+  end
+  return true
+ ShowInTooltip: false
+-
+ Name: setStationtype
+ ID: 69
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the type of the TransferStation..
+  _________________________________________________________________________________
+  Parameters	: type:"Load","Beladen","Unload","Entladen","Reload","Umladen","Move",
+  			  "Versetzen"
+  ReturnValues: none
+  
+  Called By	: user
+  Calls		: getInternalClassType, checkUserExitCtrl, checkSensorID, setSensorCtrl,
+  			  checkExitCtrl
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.08.2005  KM	handling of line-oriented targetstation
+  19.05.2005  KM	blocksize > 1 and load or move only allowed for part station of
+  				type parallelproc
+  27.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  12.11.2008  KM  Drain only allowed for unload or parttransfer
+  26.08.2010	KM	exitCtrl must be front triggered
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  12.11.2015  KM  DePortioner allowed as targetstation for unload or parttransfer and Portioner allowed as partStation
+  05.10.2016	KM	exitCtrl must be triggered not only once
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : string
+  
+  var callingObj : object
+  var oldTargetIsContainer : boolean
+  var ctrl : string
+  var userexitctrl,oldexitctrl : string
+  var str : string
+  var sttype : integer
+  var callingObjRelName : string
+  var b : boolean
+  
+  callingObj := self.~
+  
+  if callingObj.TargetStation /= void and (type ~= "Load" or type ~= "Beladen" or type ~= "Reload" or type ~= "Umladen")
+  	if callingObj.TargetStation.internalClassType = "Drain" or callingObj.TargetStation.internalClassType = "Store" or
+  	     callingObj.TargetStation.internalClassType = "DePortioner"
+  		return
+  	end
+  end
+  
+  oldTargetIsContainer := callingObj.TargetIsContainer
+  
+  callingObj.unloadPartcontainer := false
+  callingObj.TargetIsContainer := false
+  
+  if type ~= "Load" or type ~= "Beladen"
+  	callingObj.TargetIsContainer := true
+  elseif type ~= "Unload" or type ~= "Entladen"
+  	callingObj.unloadPartcontainer := true
+  elseif type ~= "Reload" or type ~= "Umladen"
+  	callingObj.unloadPartcontainer := true
+  	callingObj.TargetIsContainer := true
+  end
+  
+  if not callingObj.unloadPartcontainer and callingObj.PartStation /= void and
+     callingObj.PartStation.internalClassType /= "ParallelStation"
+  	callingObj.Blocksize := 1
+  end
+  
+  if callingObj.TargetStation = void
+  	return
+  end
+  
+  sttype := callingObj.getInternalClassType(callingObj.TargetStation)
+  callingObjRelName := makePathRelative(callingObj, callingObj.TargetStation)
+  
+  if callingObj.TargetIsContainer and not oldTargetIsContainer
+  	if sttype = 0
+  		oldexitctrl := to_str(callingObj.TargetStation.exitCtrl)
+  		if oldexitctrl ~= "VOID"
+  			callingObj.UserTargetExitCtrl := ""
+  		else
+  			str := strCopy(oldexitctrl,1,5)
+  			if str ~= "self."
+  				oldexitctrl := strOmit(oldexitctrl,1,4)
+  				oldexitctrl := strIncl(to_str(callingObj.TargetStation),oldexitctrl,1)
+  			else
+  				oldexitctrl := strIncl(to_str(callingObj.TargetStation.~)+".",oldexitctrl,1)
+  			end
+  			callingObj.UserTargetExitCtrl := makePathRelative(oldexitctrl,callingObj.~)
+  		end
+  		callingObj.TargetStation.exitCtrl := callingObjRelName + ".TargetExitControl"
+  		b := callingObj.TargetStation.exitCtrlFront
+  		if not b
+  			callingObj.TargetStation.exitCtrlFront := true
+  		end
+  		b := callingObj.TargetStation.exitCtrlRear
+  		if b
+  			callingObj.TargetStation.exitCtrlRear := false
+  		end
+  		b := callingObj.TargetStation.exitCtrlOnce
+  		if b
+  			callingObj.TargetStation.exitCtrlOnce := false
+  		end
+  		if not callingObj.checkUserExitCtrl(2)
+  			callingObj.UserTargetExitCtrl := ""
+  		end
+  	else
+  		if callingObj.checkSensorID(2,callingObjRelName)
+  			callingObj.setSensorCtrl(2,callingObjRelName+".TargetSensorControl")
+  		end
+  	end
+  elseif not callingObj.TargetIsContainer and oldTargetIsContainer
+  	if sttype = 0
+  		if callingObj.checkExitCtrl(2)
+  			userexitctrl := callingObj.UserTargetExitCtrl
+  			if userexitctrl = ""
+  				callingObj.TargetStation.exitCtrl := ""
+  			else
+  				if existsObject(userexitctrl)
+  					callingObj.TargetStation.exitCtrl := makePathRelative(str_to_obj(userexitctrl),callingObj.TargetStation)
+  				else
+  					-- usermethod is a custom attribute
+  					ctrl := userexitctrl
+  					str := makePathRelative(callingObj.TargetStation)
+  					if strLpos(str,ctrl) = 1
+  						ctrl := strOmit(ctrl,1,strlen(str))
+  						ctrl := strIncl("self",ctrl,1)
+  					end
+  					callingObj.TargetStation.exitCtrl := ctrl
+  				end
+  			end
+  			callingObj.UserTargetExitCtrl := ""
+  		end
+  	else
+  		if callingObj.checkSensorID(2,callingObjRelName)
+  			callingObj.setSensorCtrl(2,callingObjRelName+".TargetSensorControl")
+  		end
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: setBlocksize
+ ID: 70
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  Sets the blocksize of the TransferStation.
+  _________________________________________________________________________________
+  Parameters	: b, the blocksize
+  ReturnValues: none
+  
+  Called By	: setParameter
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  23.02.2005  KM	don't change inheritance if value isn't changed
+  19.05.2005  KM	blocksize > 1 and load or move only allowed for part station of
+  				type parallelproc
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param b : integer
+  
+  var callingObj : object
+  
+  callingObj := self.~
+  
+  if b < 1
+  	b := 1
+  elseif b > 1 and not callingObj.unloadPartcontainer and callingObj.PartStation /= void and
+  			  callingObj.PartStation.internalClassType /= "ParallelStation"
+  	b := 1
+  end
+  if callingObj.Blocksize /= b
+  	callingObj.Blocksize := b
+  	callingObj.XDim := b
+  end
+ ShowInTooltip: false
+-
+ Name: getBlocksize
+ ID: 71
+ DataType: method
+ Value: |+1
+  -> integer
+  return self.~.Blocksize
+
+ ShowInTooltip: false
+-
+ Name: getStationtype
+ ID: 72
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  returns the type of the TransferStation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValue : the type of the TransferStation
+  
+  Called By	: user
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  10.10.2007  PS  Localization
+  11.10.2007  KM  return value only german or english
+  03.02.2011  KM  use UserInterfaceLanguage
+  25.02.2015  KM  wrong stationtype because of wrong number in messagetab
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  -> string
+  var callingObj : object
+  var lang : integer
+  
+  callingObj := self.~
+  lang := UserInterfaceLanguage + 1
+  if lang > 2 
+  	lang := 2
+  end
+  
+  if callingObj.unloadPartcontainer 
+  	if callingObj.TargetIsContainer 
+  		return rootfolder.Localization.messageTab[lang,77]
+  	else
+  		return rootfolder.Localization.messageTab[lang,76]
+  	end
+  else
+  	if callingObj.TargetIsContainer 
+  		return rootfolder.Localization.messageTab[lang,75]
+  	else
+  		return rootfolder.Localization.messageTab[lang,78]
+  	end
+  end
+
+ ShowInTooltip: false
+-
+ Name: getPartStation
+ ID: 73
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  returns the partstation and the parameter of the partstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: the partstation
+  			  pos1: position of the sensor for line and track
+  			  activate: when will the sensor be activated for track
+  			  ctrl: user control
+  
+  Called By	: user
+  Calls		: checkSensorID, getSensorPosition
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  10.10.2007  PS  Localization
+  11.10.2007  KM  return value activate only german or english
+  03.02.2011  KM  use UserInterfaceLanguage
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param byref pos1 : length, byref activate : string, byref ctrl : string, byref lane : string -> object
+  
+  var callingObj : object
+  var iC,act : integer
+  var lang : integer
+  
+  callingObj := self.~
+  
+  pos1 := 0.0
+  activate := ""
+  ctrl := ""
+  lane := ""
+  
+  if callingObj.PartStation /= void and existsObject(to_str(callingObj.PartStation)) 
+  	iC := callingObj.getInternalClassType(callingObj.PartStation)
+  	if (iC >0) 
+  		if callingObj.checkSensorID(1,makePathRelative(callingObj, callingObj.PartStation)) 
+  			pos1 := callingObj.getSensorPosition(1)
+  			if iC > 1 
+  				act := callingObj.getSensorActivate(1)
+  				lang := UserInterfaceLanguage + 1
+  				if lang > 2 
+  					lang := 2
+  				end
+  				activate := rootfolder.Localization.messageTab[lang,220+act]
+  			end
+  			if iC = 3 
+  				lane := callingObj.laneIntToString(callingObj.PartSensorLane)
+  			end
+  		end
+  	end
+  	ctrl := callingObj.UserPartExitCtrl
+  	return callingObj.PartStation
+  else
+  	-- no station defined
+  	return void
+  end
+
+ ShowInTooltip: false
+-
+ Name: getTargetStation
+ ID: 74
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  returns the targetstation and the parameter of the targetstation.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: the targetstation
+  			  pos1: position of the sensor for line and track
+  			  activate: when will the sensor be activated for track
+  			  ctrl: user control
+  
+  Called By	: user
+  Calls		: checkSensorID, getSensorPosition
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  31.01.2006  KM	user control for line and track
+  15.02.2006  KM  Nw2Way allowed
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  10.10.2007  PS  Localization
+  11.10.2007  KM  return value activate only german or english
+  11.10.2007  KM  wrong call of getSensorActivate corrected
+  03.02.2011  KM  use UserInterfaceLanguage
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param byref pos1 : length, byref activate : string, byref ctrl : string, byref lane : string -> object
+  
+  var callingObj : object
+  var iC,act : integer
+  var lang : integer
+  
+  callingObj := self.~
+  
+  pos1 := 0.0
+  activate := ""
+  ctrl := ""
+  lane := ""
+  
+  if callingObj.TargetStation /= void and existsObject(to_str(callingObj.TargetStation)) 
+  	iC := callingObj.getInternalClassType(callingObj.TargetStation)
+  	if (iC >0) 
+  		if callingObj.checkSensorID(2,makePathRelative(callingObj, callingObj.TargetStation)) 
+  			pos1 := callingObj.getSensorPosition(2)
+  			if iC > 1 
+  				act := callingObj.getSensorActivate(2)
+  				lang := UserInterfaceLanguage + 1
+  				if lang > 2 
+  					lang := 2
+  				end
+  				activate := rootfolder.Localization.messageTab[lang,220+act]
+  			end
+  			if iC = 3 
+  				lane := callingObj.laneIntToString(callingObj.TargetSensorLane)
+  			end
+  		end
+  	end
+  	ctrl := callingObj.UserTargetExitCtrl
+  	return callingObj.TargetStation
+  else
+  	-- no station defined
+  	return void
+  end
+
+ ShowInTooltip: false
+-
+ Name: TypeSpecific
+ ID: 75
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: TypeTable
+ ID: 76
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  ColumnIndex: [string,3,~,"Part Type","Container Type"]
+  Columns:
+ ShowInTooltip: false
+-
+ Name: Containertype
+ ID: 77
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: checkLength
+ ID: 78
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks length of the target object when vehicle with loadbay
+  _________________________________________________________________________________
+  Parameters	: p: Part, which should be moved to target
+  			  target: target of load or reload (may be NULL)
+  ReturnValues: false when part is longer than the free length of target
+  
+  Called By	: parttypeToStation
+  Calls		:
+  
+  Author		: Karola Mock, Siemens PLM
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  25.08.2010  KM	MatrixLoadBay -> LoadbayType
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param p,target : object -> boolean		-- p always /= void
+  
+  var station : object
+  var i,j : integer
+  var found : boolean
+  var freelength : length
+  
+  if target /= void and target.internalClassType = "Transporter" and
+     target.LoadbayType /= "Store" and target.LoadbayType /= "Lager"
+  	-- vehicle with loadbaylength
+  	freelength := target.loadBayLength - target.occupiedLength
+  	if p.length > freelength
+  		return false
+  	end
+  end
+  
+  return true
+ ShowInTooltip: false
+-
+ Name: createSensor
+ ID: 79
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  creates a sensor
+  _________________________________________________________________________________
+  Parameters	: type = 1, sensor on partstation; type = 2, sensor on targetstation
+  			  pos1, position of the sensor
+  			  act, activate always the sensor (if way)
+  			  lane if twolanetrack  (1:lane A, 2:lane B, 3:A+B,pos1 on A, 4:A+B,pos1 on B
+  ReturnValues: sensorID
+  
+  Called By	: setPartStation, setTargetStation
+  Calls		: 
+  
+  Author		: Karola Mock, Siemens PLM Software
+  Date		: 23.02.2005
+  
+  _________________________________________________________________________________
+  History:
+  
+  15.02.2006  KM  Nw2Way allowed
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, pos1 : length, act : string, lane : integer -> integer
+  
+  var callingObj : object
+  var station: object
+  var ctrl : string
+  var sttype,id : integer
+  var maxL : length
+  var dest : object
+  var ctrlFront : boolean
+  var ctrlRear  : boolean
+  var lightBarrier : boolean
+  
+  callingObj := self.~
+  
+  ctrlFront := true
+  ctrlRear := false
+  lightBarrier := false
+  
+  if type = 1 
+  	station := callingObj.PartStation
+  	ctrl := makePathRelative(callingObj,station) + ".PartSensorControl"
+  elseif type = 2 
+  	station := callingObj.TargetStation
+  	ctrl := makePathRelative(callingObj,station) + ".TargetSensorControl"
+  	if not callingObj.TargetIsContainer 
+  		ctrlFront := false
+  		ctrlRear := true
+  		lightBarrier := true
+  	end
+  else
+  	return 0
+  end
+  
+  sttype := callingObj.getInternalClassType(station)
+  
+  if pos1 < 0.0 
+  	pos1 := 0.0
+  end
+  maxL := callingObj.getStationLength(station,lane)
+  if pos1 > maxL 
+  	pos1 := maxL
+  end
+  if sttype = 1 
+  	-- Line
+  	id := station.createSensor(pos1, "Length", ctrl, ctrlFront, ctrlRear, void, false, lightBarrier)
+  elseif sttype > 1 
+  	switch act
+  	case "Nur wenn Ziel","Only when Destination" 
+  		dest := makePathRelative(callingObj,station)
+  	else
+  		dest := void
+  	end
+  	if sttype > 2 
+  		-- Nw2Way
+  		if lane = 1 or lane = 3 
+  			id := station.A.createSensor(pos1, "Length", ctrl, ctrlFront, ctrlRear, dest, lane=3, lightBarrier)
+  		else
+  			id := station.B.createSensor(pos1, "Length", ctrl, ctrlFront, ctrlRear, dest, lane=4, lightBarrier)
+  		end
+  	else
+  		-- Way	
+  		id := station.createSensor(pos1, "Length", ctrl, ctrlFront, ctrlRear, dest, false, lightBarrier)
+  	end
+  end
+  return id
+
+ ShowInTooltip: false
+-
+ Name: readyPartStation
+ ID: 80
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  checks if on the PartStation is a part ready for load
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: true if on the PartStation is a part ready for load
+  
+  Called By	: successfulExit
+  Calls		: getInternalClassType, getSensorPosition
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 19.04.2005
+  
+  _________________________________________________________________________________
+  History:
+  15.02.2006  KM  Nw2Way allowed
+  08.01.2016  KM 	breakpoint at line 38 removed
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  -> boolean
+  var station : object
+  var spos : length
+  var t : table
+  var i,type : integer
+  
+  station := self.~
+  type := station.getInternalClassType(station.PartStation)
+  if type = 0 
+  	if station.PartStation.ready 
+  		return true
+  	end
+  elseif type > 0 
+  	if station.PartSensorID /= 0 
+  		t := station.getContentsList(station.PartStation,station.PartSensorLane)
+  		spos := station.getSensorPosition(1)
+  		for i := 1 to t.YDim 
+  			if t[3,1] = spos and t[1,1].stopped 
+  				return true
+  			end
+  		next
+  	end
+  end
+  return false
+
+ ShowInTooltip: false
+-
+ Name: WaitTime
+ ID: 81
+ DataType: time
+ Value: 10
+ ShowInTooltip: false
+-
+ Name: ReadyTargets
+ ID: 82
+ DataType: list
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: object
+   MaxXDim: 1
+   ShowDataType: true
+  Column:
+ ShowInTooltip: false
+-
+ Name: getInternalClassType
+ ID: 83
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  checks the internalClassName
+  _________________________________________________________________________________
+  Parameters	: s : partstation or targetstation
+  ReturnValues: 	type = -1: s undefined
+  				type = 1: line			(with sensor)
+  				type = 2: NW_Way		(with sensor and activate)
+  				type = 3: Nw2Way		(with sensor and activate and 2 lanes)
+  				type = 0: all others	(point-oriented)
+  
+  Called By	: Init, stopObject, getParameterTable
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param s : object -> integer
+  
+  var type : integer
+  
+  if s = void
+  	type := -1
+  elseif s.internalClassType = "Conveyor"
+  	type := 1
+  elseif s.internalClassType = "Track"
+  	type := 2
+  elseif s.internalClassType = "TwoLaneTrack"
+  	type := 3
+  else
+  	type := 0
+  end
+  
+  return type
+ ShowInTooltip: false
+-
+ Name: getSensorPosition
+ ID: 84
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  returns the position of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  ReturnValues: sensorposition
+  
+  Called By	: checkNumberOfPartsWithType, exitStation, Init, dialogInit,
+  			  getPartStation, getTargetStation, readyPartStation,
+  			  setPartStation, setTargetStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer -> length
+  
+  var pos1 : length
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return 0.0
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		pos1 := station.A.sensorID(id).position
+  	else
+  		pos1 := station.B.sensorID(id).position
+  	end
+  else
+  	pos1 := station.sensorID(id).position
+  end
+  return pos1
+ ShowInTooltip: false
+-
+ Name: getStationLength
+ ID: 85
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  returns the length of the station
+  _________________________________________________________________________________
+  Parameters	: station : partstation or targetstation
+  			  lane for Nw2Way
+  ReturnValues: length
+  
+  Called By	: createSensor, DragDropDialog.DialogInit, DragDropDialog.callback
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param station : object, lane : integer -> length
+  
+  var pos1 : length
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		pos1 := station.A.length
+  	else
+  		pos1 := station.B.length
+  	end
+  else
+  	pos1 := station.length
+  end
+  return pos1
+ ShowInTooltip: false
+-
+ Name: getSensorActivate
+ ID: 86
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  returns the state of activation of the sensor
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  ReturnValues: index in combobox of activation
+  
+  Called By	: dialogInit, getParameterTable, getPartStation, getTargetStation,
+  			  OnRename, setPartStation, setTargetStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer -> integer
+  
+  var act : string
+  var index : integer
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return 1
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		act := station.A.sensorID(id).Activate
+  	else
+  		act := station.B.sensorID(id).Activate
+  	end
+  else
+  	act := station.sensorID(id).Activate
+  end
+  if act ~= "Immer" or act ~= "Always"
+  	index := 1
+  else
+  	index := 2
+  end
+  return index
+ ShowInTooltip: false
+-
+ Name: TargetSensorLane
+ ID: 87
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: PartSensorLane
+ ID: 88
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: laneStringToInt
+ ID: 89
+ DataType: method
+ Value: |+1
+  param lane : string -> integer
+  
+  if lane = "B" 
+  	return 2
+  elseif lane = "A+B" 
+  	return 3
+  elseif lane = "B+A" 
+  	return 4
+  else
+  	return 1
+  end
+
+ ShowInTooltip: false
+-
+ Name: setSensorPosition
+ ID: 90
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the position of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  			  pos1: new position of the sensor
+  ReturnValues: none
+  
+  Called By	: setPartStation, setTargetStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, pos1 : length
+  
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		station.A.sensorID(id).position := pos1
+  	else
+  		station.B.sensorID(id).position := pos1
+  	end
+  else
+  	station.sensorID(id).position := pos1
+  end
+ ShowInTooltip: false
+-
+ Name: setSensorActivate
+ ID: 91
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the activation and destination of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  			  act: new Activation of the sensor
+  ReturnValues: none
+  
+  Called By	: setPartStation, setTargetStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, act : string
+  
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		station.A.sensorID(id).Activate := act
+  	elseif lane = 2 or lane = 4
+  		station.B.sensorID(id).Activate := act
+  	end
+  else
+  	station.sensorID(id).Activate := act
+  end
+  
+  if act /= "Immer" and act /= "Always"
+  	trstation.setSensorDestination(type,trstation)
+  end
+ ShowInTooltip: false
+-
+ Name: setSensorCtrl
+ ID: 92
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the control of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  			  act: new control of the sensor
+  ReturnValues: none
+  
+  Called By	: setTargetStation, OnRename, setStationType
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  13.07.2018  KM  Attributname "Ctrl" durch neuen Namen "Control" ersetzt
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, act : string
+  
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  var sensor : any
+  var ctrlFront : boolean
+  var ctrlRear  : boolean
+  var lightBarrier : boolean
+  
+  trstation := self.~
+  
+  ctrlFront := true
+  ctrlRear := false
+  lightBarrier := false
+  
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  	if not trstation.TargetIsContainer
+  		ctrlFront := false
+  		ctrlRear := true
+  		lightBarrier := true
+  	end
+  else
+  	return
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		sensor := station.A.sensorID(id)
+  	elseif lane = 2 or lane = 4
+  		sensor := station.B.sensorID(id)
+  	end
+  else
+  	sensor := station.sensorID(id)
+  end
+  sensor.Control := act
+  sensor.Front := ctrlFront
+  sensor.Rear := ctrlRear
+  sensor.LightBarrierMode := lightBarrier
+ ShowInTooltip: false
+-
+ Name: setSensorDestination
+ ID: 93
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the destination of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  			  act: new destination of the sensor
+  ReturnValues: none
+  
+  Called By	: setSensorActivate, OnRename
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 15.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, obj : object
+  
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		station.A.sensorID(id).Destination := makePathRelative(obj,station)
+  	elseif lane = 2 or lane = 4
+  		station.B.sensorID(id).Destination := makePathRelative(obj,station)
+  	end
+  else
+  	station.sensorID(id).Destination := makePathRelative(obj,station)
+  end
+ ShowInTooltip: false
+-
+ Name: deleteSensor
+ ID: 94
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  deletes a sensor
+  _________________________________________________________________________________
+  Parameters	: type = 1, sensor on partstation; type = 2, sensor on targetstation
+  			  pos1, position of the sensor
+  			  act, activate always the sensor (if way)
+  			  lane if twolanetrack  (1:lane A, 2:lane B, 3:A+B,pos1 on A, 4:A+B,pos1 on B
+  ReturnValues: sensorID
+  
+  Called By	: setPartStation, setTargetStation
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 23.02.2005
+  
+  _________________________________________________________________________________
+  History:
+  
+  15.02.2006  KM  Nw2Way allowed
+  12.04.2016  KM	use new syntax in executeSilent
+  13.07.2018  KM  Attributname "Ctrl" durch neuen Namen "Control" ersetzt
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer
+  
+  var callingObj : object
+  var stationAttr : string
+  var station: object
+  var sttype,id : integer
+  var r : integer
+  var lane : integer
+  
+  callingObj := self.~
+  
+  if type = 1 
+  	lane := callingObj.PartSensorLane
+  	id := callingObj.PartSensorID
+  	stationAttr := "PartStation"
+  elseif type = 2 
+  	lane := callingObj.TargetSensorLane
+  	id := callingObj.TargetSensorID
+  	stationAttr := "TargetStation"
+  else
+  	return
+  end
+  
+  station := callingObj.getAttribute(stationAttr)
+  sttype := callingObj.getInternalClassType(station)
+  
+  if sttype = 3 
+  	if lane = 1 or lane = 3 
+  		r := executeSilent("param o:object, ti:integer -> integer; o.A.deleteSensor(ti); return 1",station, id)
+  		if r /= 1 
+  			-- delete sensor not possible
+  			station.A.sensorID(id).Front := false
+  			station.A.sensorID(id).Rear := false
+  			station.A.sensorID(id).Position := 0
+  			station.A.sensorID(id).Control := ""
+  		end
+  	else
+  		r := executeSilent("param o:object, ti:integer -> integer; o.B.deleteSensor(ti); return 1",station, id)
+  		if r /= 1 
+  			-- delete sensor not possible
+  			station.B.sensorID(id).Front := false
+  			station.B.sensorID(id).Rear := false
+  			station.B.sensorID(id).Position := 0
+  			station.B.sensorID(id).Control := ""
+  		end
+  	end
+  else		
+  	r := executeSilent("param o:object, ti:integer -> integer; o.deleteSensor(ti); return 1",station, id)
+  	if r /= 1 
+  		-- delete sensor not possible
+  		station.sensorID(id).Front := false
+  		station.sensorID(id).Rear := false
+  		station.sensorID(id).Position := 0
+  		station.sensorID(id).Control := ""
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: laneIntToString
+ ID: 95
+ DataType: method
+ Value: |+1
+  param lane : integer -> string
+  
+  switch lane
+  case 2 
+  	return "B"
+  case 3 
+  	return "A+B"
+  case 4 
+  	return "B+A"
+  else
+  	return "A"
+  end
+
+ ShowInTooltip: false
+-
+ Name: getContentsList
+ ID: 96
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  returns the contentslist of the station
+  _________________________________________________________________________________
+  Parameters	: station : partstation or targetstation
+  			  lane for Nw2Way
+  ReturnValues: table with contentsList
+  
+  Called By	: checkNumberOfPartsWithType, readyPartStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 23.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param station : object, lane : integer -> table
+  
+  var t : table
+  
+  t.create
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		station.A.contentsList(t)
+  	else
+  		station.B.contentsList(t)
+  	end
+  else
+  	station.contentsList(t)
+  end
+  return t
+ ShowInTooltip: false
+-
+ Name: setSensorLane
+ ID: 97
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  sets the lane of the sensor on partstation or targetstation
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  			  lane1: new lane of the sensor
+  ReturnValues: none
+  
+  Called By	: setPartStation, setTargetStation
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 27.02.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer, lane1 : integer
+  
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  var newLane : string
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane1 = 1
+  		newLane := "Lane A"
+  	elseif lane1 = 2
+  		newLane := "Lane B"
+  	else
+  		newLane := "Both Lanes"
+  	end
+  	if lane = 1 or lane = 3
+  		station.A.sensorID(id).Lanes := newLane
+  	else
+  		station.B.sensorID(id).Lanes := newLane
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: getSensorOrigin
+ ID: 98
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  returns true if the sensor on partstation or targetstation has an origin
+  _________________________________________________________________________________
+  Parameters	: type : 1 = partstation, 2 = targetstation
+  ReturnValues: true if the sensor has an origin
+  
+  Called By	: dialogInit of DragDropDialog and TransferStationDialog
+  Calls		:
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 03.03.2006
+  
+  _________________________________________________________________________________
+  History:
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer -> boolean
+  
+  var ret : boolean
+  var station,trstation : object
+  var id : integer
+  var lane : integer
+  
+  trstation := self.~
+  if type = 1
+  	station := trstation.PartStation
+  	id := trstation.PartSensorID
+  	lane := trstation.PartSensorLane
+  elseif type = 2
+  	station := trstation.TargetStation
+  	id := trstation.TargetSensorID
+  	lane := trstation.TargetSensorLane
+  else
+  	return false
+  end
+  
+  if station.internalClassType = "TwoLaneTrack"
+  	if lane = 1 or lane = 3
+  		ret := station.A.sensorID(id).origin /= void
+  	else
+  		ret := station.B.sensorID(id).origin /= void
+  	end
+  else
+  	ret := station.sensorID(id).origin /= void
+  end
+  return ret
+ ShowInTooltip: false
+-
+ Name: StopPartsForFailure
+ ID: 99
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: StopTargetsForFailure
+ ID: 100
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: tooltip
+ ID: 101
+ DataType: method
+ Value: |+1
+  -> string
+  var text : string
+  
+  if self.~.class = VOID 
+  	return ""
+  else
+  	text := rootfolder.Localization.getText(19) + ": " + self.~.getStationtype + strChr(10)
+  	text := text + rootfolder.Localization.getText(20) + ": " + to_str(self.~.PartStation) + strChr(10)
+  	text := text + rootfolder.Localization.getText(21) + ": " + to_str(self.~.TargetStation)
+  	return text
+  end
+ ShowInTooltip: false
+-
+ Name: checkSensorIDForUnload
+ ID: 102
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  checks whether the sensorID on the targetstation exists and has the right control
+  _________________________________________________________________________________
+  Parameters	: name, path of the transferstation
+  ReturnValues: true if correct sensor
+  
+  Called By	: Init
+  Calls		: 
+  
+  Author		: Karola Mock, Siemens PLM Software
+  Date		: 16.09.2011
+  
+  _________________________________________________________________________________
+  History:
+  
+  16.09.2011  KM  create rear triggered sensor control when unloading to line/track to
+  				avoid periodic try to unload the part when first unload wasn't possible
+  29.08.2013  KM  beim Ablegen auf Förderstrecke oder Weg wird der Sensor als heckgetriggerter
+  				Lichtschrankensensor konfiguriert (nötig für update von 10.0 Modellen)
+  13.07.2018  KM  Attributname "Ctrl" durch neuen Namen "Control" ersetzt
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param name : string -> boolean
+  
+  var station : object
+  var sensorstation : object
+  var ctrl : string
+  var iC : integer
+  var lane,newlane,id : integer
+  var a,b : boolean
+  var laneAttr : string
+  var sensor : any
+  
+  station := self.~
+  
+  sensorstation := station.TargetStation
+  lane := station.TargetSensorLane
+  laneAttr := "TargetSensorLane"
+  id := station.TargetSensorID
+  ctrl := name + ".TargetSensorControl"
+  	
+  iC := station.getInternalClassType(sensorstation)
+  if iC = 3 
+  	-- Nw2Way
+  	if sensorstation.A.existsSensorID(id) 
+  		sensor := sensorstation.A.sensorID(id)
+  		sensor.Control := ctrl
+  		sensor.Front := false
+  		sensor.Rear := true
+  		sensor.LightBarrierMode := true
+  		a := true
+  	else
+  		a := false
+  	end
+  	if sensorstation.B.existsSensorID(id) 
+  		sensor := sensorstation.B.sensorID(id)
+  		sensor.Control := ctrl
+  		sensor.Front := false
+  		sensor.Rear := true
+  		sensor.LightBarrierMode := true
+  		b := true
+  	else
+  		b := false
+  	end
+  	if a or b 
+  		if a and b 
+  			if lane = 1 or lane = 3 
+  				newlane := 3
+  			else
+  				newlane := 4
+  			end
+  		elseif a 
+  			newlane := 1
+  		else
+  			newlane := 2
+  		end
+  		if newlane /= lane 
+  			station.setAttribute(laneAttr, newlane)
+  		end
+  		return true
+  	else
+  		return false
+  	end
+  else
+  	if sensorstation.existsSensorID(id) 
+  		sensor := sensorstation.sensorID(id)
+  		sensor.Control := ctrl
+  		sensor.Front := false
+  		sensor.Rear := true
+  		sensor.LightBarrierMode := true
+  		return true
+  	else
+  		return false
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectDEU
+ ID: 103
+ DataType: string
+ Value: "::/TransferStation.html"
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectENU
+ ID: 104
+ DataType: string
+ Value: "::/id86723.html"
+ ShowInTooltip: false
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: 0
+ Duration: 0
+$ProcImp:
+ Active: false
+ Services:
+ - ["Alternative1",["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ CommonResources: true
+$FailImp:
+ Active: false
+ Services:
+ - ["Alternative1",["StandardService",1]]
+ Priority: 0
+ Interruptiple: false
+ ReleaseAllServices: true
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+$TransportImp:
+ Active: false
+ Services:
+ Priority: 0
+ Interruptiple: false
+ BrokerPath: ""
+ RequestCtrl: null
+ ReceiveCtrl: null
+ ReleaseCtrl: null
+ MUTarget: ""
+ MaxDwellTime: 0
+ WaitForFreeTarget: false

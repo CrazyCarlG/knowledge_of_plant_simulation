@@ -1,0 +1,15 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Origin: 01a0236c-0546-7008-99f6-1c336670d6fa
+RandomSeed: 70
+UUID: 01a0236c-0546-7149-b6f8-04d1f6841316
+Width: 1
+$Successors:
+-
+ $Succ: 01a0236c-0546-714e-92a5-0ec9ba4b108c
+ Name: Connector13
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-714f-b852-7d5470cdd971
+$Predecessors:
+- 01a0236c-0546-7151-9fbc-31271999e2ee
+InheritEntranceExitLockedOnReset: false

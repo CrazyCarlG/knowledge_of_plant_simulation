@@ -1,0 +1,19 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70f2-a70e-94fdadda5eb0
+RandomSeed: 1073747758
+UUID: 01a0236c-0546-7428-ab68-7be5960cdef5
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: tmpTables
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+$Data:

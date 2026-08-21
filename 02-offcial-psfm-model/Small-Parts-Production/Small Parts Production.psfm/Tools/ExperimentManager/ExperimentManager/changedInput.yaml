@@ -1,0 +1,117 @@
+InternalClassType: Method
+Coordinate3D: [8,-6.2,0]
+Name: changedInput
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- recognize changed input values
+ -- called by: Start
+ 
+ -> boolean -- input changed AND it is desired to save input values AND the answer of the query is "Yes".
+ 
+ if NOT restore_Inputvalues
+ 	return false
+ end -- no question ...
+ 
+ var obj:object := Kind_Input
+ 
+ -- Maybe the input values are not yet stored. In this case no question is necessary.
+ var bb:boolean := true
+ for var j := 1 to obj.yDim
+ 	bb := bb and obj[2,j].void
+ next -- j
+ 
+ if bb
+ 	return true -- no question and save input values
+ end
+ 
+ var n:integer
+ var s,attrStr:string
+ for var j := 1 to obj.yDim
+ 	attrStr := obj[0,j] -- technical notation, like "root.Process.proctime.beta"
+ 	var eps:real := 1e-5
+ 	var dataTypeStr:string := recogDataType(attrStr)
+ 	switch dataTypeStr
+ 	case "time"
+ 		bb := (abs(str_to_time(obj[2,j]) - readValue(attrStr)) < eps)
+ 	case "integer","real","length","speed","weight","acceleration","money"
+ 		bb := (abs(str_to_num(obj[2,j]) - readValue(attrStr)) < eps)
+ 	case "boolean"
+ 		bb := (str_to_bool(obj[2,j]) = readValue(attrStr))
+ 	case "string"
+ 		bb := (obj[2,j] = readValue(attrStr))
+ 	end
+ 
+ 	var o:object
+ 	var AttrName,str:string -- like "proctime"
+ 	if strLpos("[",attrStr) = 0 -- no DataTable or 1D-list
+ 		str := attrStr
+ 		while NOT existsObject(str)
+ 			var p:integer := strRpos(".",str)
+ 			AttrName := strCopy(str,p+1,strLen(str))
+ 			str := strCopy(str,1,p-1)
+ 		end
+ 		o := str
+ 
+ 		var Inherited:boolean := false
+ 		var CanInherit:boolean
+ 		if strLpos("(",AttrName) > 0 -- creationTable(1) or erzeugungsTabelle(1)
+ 			if o.InternalClassType = "WorkerPool"
+ 				o.getCreationTable(void,Inherited) -- Determine the inheritance of the creation table of a WorkerPool
+ 			end
+ 		else
+ 			if o.InternalClassType = "Variable"
+ 				AttrName := "Value"
+ 			end
+ 			o.getAttribute(AttrName,Inherited,CanInherit) -- detect the inheritance of the attribute
+ 		end
+ 		bb := bb AND (Inherited = obj[3,j])
+ 	end                   -- no DataTable or 1D-list
+ 
+ 	if NOT bb
+ 		if n < 5
+ 			s := to_str(s," '",ValueDescriptions.get(attrStr),"',") -- user description (alias)
+ 		elseif n = 5
+ 			s := to_str(s," ... ") -- user description (alias)
+ 		else
+ 			-- no change of the string s
+ 		end
+ 		n += 1
+ 	end -- change of the iniput value was detected
+ next -- j
+ 
+ s := strOmit(s,strLen(s),1)
+ -- prepare the query:
+ var k:integer
+ switch n
+ case 0
+ 	return false
+ case 1  -- messageBox with yes/no buttons
+ 	-- The input value 'Alias' has changed.
+ 	-- Do you want to save the current values before you start the experiment run?
+ 	k := messageBox(to_str(Rootfolder.Localization.getMessage(50,s,"","")," ",
+ 		Rootfolder.Localization.getText(52)),48,12)
+ else
+ 	-- The input values 'Alias' have changed.
+ 	-- ...
+ 	k := messageBox(to_str(Rootfolder.Localization.getMessage(51,s,"","")," ",
+ 		Rootfolder.Localization.getText(52)),48,12)
+ end
+ result := (k=16) -- answer YES: The user want to save the values and start the study
+ -- answer NO: The user does not want to save the values and start the study
+RandomSeed: 180
+UUID: 45a83641-e509-44b5-833f-eedba2fd628a
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

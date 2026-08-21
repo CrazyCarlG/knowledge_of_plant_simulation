@@ -1,0 +1,22 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-7090-bdba-c865b5e1f739
+UUID: 01a0236c-0546-73c6-ab40-c53e403ca4cf
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: numberOfOutputValues
+ ID: 1
+ $DataType: integer
+ Value: 1
+$Data:
+ ShowComment: true
+ ColumnIndex: [string,3,"Target value","evaluated by","High Values are Better"]
+ Columns:
+ - [0,string,1,"root.Drain.statDeleted"]
+ - [1,string,1,"Tab"]
+ - [2,boolean,1,1]

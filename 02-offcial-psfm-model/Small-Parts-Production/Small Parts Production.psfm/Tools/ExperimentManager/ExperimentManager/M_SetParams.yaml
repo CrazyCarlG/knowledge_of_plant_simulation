@@ -1,0 +1,101 @@
+InternalClassType: Method
+Coordinate3D: [22.150000000000002,-16.85,0]
+Name: M_SetParams
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- callback for distributed simulation
+ -- called ONLY when using remote simulations
+ param eMPlant: any, Job :integer -> boolean
+ result := true -- meaning: The parameters have been set.
+ var localExp:integer := JobsTable[1,job]
+ var localRun:integer := JobsTable[2,job]
+ 
+ var infoStr, AttrStr:string
+ if UsingTables
+ 	-- fills also InputValues on the controlling computer
+ 	-- needed for the evuation of condition of rules
+ 	evalExpTable(localExp)
+ 	
+ 	var col:integer := 2
+ 	while ExpTable[col,0]/=void  -- consider the input values
+ 		var b:boolean
+ 		var AttrVal:any
+ 		var str:string := ExpTable[col,0]
+ 		AttrStr := ValueDescriptions.getOrig(str)
+ 
+ 		if ExpTable[col, localExp] /= void
+ 			AttrVal := ExpTable[col, localExp] -- the any variable gets its datatype
+ 			var stmt:string := to_str("param a:any -> boolean ",AttrStr," := a; return true")
+ 			b := eMPlant.executeSimTalk(stmt, AttrVal)
+ 			if NOT b
+ 				infoStr := to_str("Error ",AttrStr," := ",a," for Exp=",localExp," Run=",localRun)
+ 				Recording.append(infoStr)
+ 			end
+ 		end -- of ExpTable[col, localExp] /= void
+ 
+ 		forget AttrVal
+ 		col += 1
+ 	end -- next AttrStr from 'ExpTable'
+ 
+ 	infoStr := to_str("Experiment=",localExp," Run=",localRun)
+ 	Recording.append(infoStr)
+ 	--stmt := to_str("-> string result := ",p,".readValue(\\"_Protocol[2,",localExp,"]\\")")
+ 	--_Protocol[2,localExp] := eMPlant.executeSimTalk(stmt)
+ end
+ 
+ if strLen(UserConfigMethod) > 0
+ 	stmt := to_str("-> any ",~,".", UserConfigMethod,"(",localExp,"); return 1")
+ 	var a:any := eMPlant.executeSimTalk(stmt)
+ 	if isInteger(a) AND a = 1
+ 		infoStr := to_str("User configuration for Exp=",localExp," Run=",localRun,": OK")
+ 	else
+ 		infoStr := to_str("User configuration for Exp=",localExp," Run=",localRun,": ERROR")
+ 		DistributedSimulation.MachinesTable.addLogging(infoStr, Job, MachineIndex, true) -- true: mark the error in Machinestable
+ 	end
+ 
+ 	Recording.append(infoStr)
+ 	--_Protocol[3,localExp] := rootfolder.localization.getText(366) -- "Used" (Configuration method)
+ end
+ 
+ if UsingRules
+ 	evalRules(localExp)
+ 	p := to_str(self.~.~) -- use only absolute pathes for remote access
+ 	var j:integer := 1
+ 	while InputValues[j,0]/= void
+ 		AttrStr := InputValues[j,0]
+ 		if kind_Input[1,AttrStr] = "Rule"
+ 			AttrStr := strOmit(AttrStr,1,4)
+ 			AttrStr := to_str(p,AttrStr)
+ 			AttrStr := to_str(AttrStr," := ",InputValues[j,localExp])
+ 			stmt := to_str("-> integer ",AttrStr,"; return 1")
+ 			if eMPlant.executeSimTalk(stmt) = 1
+ 				Recording.append(to_str("Exp=",localExp," Run=",localRun," Rule action: ",AttrStr))
+ 			else
+ 				Recording.append(to_str("ERROR by setting input: ",AttrStr))
+ 			end
+ 		end
+ 		j += 1
+ 	end
+ end
+ -- for all object generating events during the _reset phase: Additional INIT_ + RESET_
+ 
+ var EvCtrlStr:string := to_str(rootframe,".eventController")
+ eMPlant.ResetSimulation(EvCtrlStr)
+RandomSeed: 269
+UUID: b8441244-b45c-49a0-ad61-5065bcad64f8
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

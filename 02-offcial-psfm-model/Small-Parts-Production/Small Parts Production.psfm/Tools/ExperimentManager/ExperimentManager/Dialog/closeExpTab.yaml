@@ -1,0 +1,97 @@
+InternalClassType: Method
+Coordinate3D: [-14,4,0]
+Name: closeExpTab
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: interaction plausibility of ExpTable, reset the wizard,
+ -- close tables of experimental design
+ 
+ var expT:object := ~.ExpTable
+ 
+ -- determine the number n of experiments:
+ for var row := expT.yDim downto 1
+ 	var EntryFound:boolean := false;
+ 	for var col := 2 to expT.xDim
+ 		if expT[col,row] /= void
+ 			EntryFound := true
+ 			exitloop
+ 		end
+ 	next
+ 	if NOT EntryFound then
+ 		expT.cutRow(row); -- empty row deleted
+ 	end;
+ next -- row
+ var n:integer := expT.yDim;
+ 
+ if ~.UsingRules
+ 	n := max(n, ~.NumRulesExp) -- set in Advances Dialog (tab Rules)
+ 	~.ReportRules.delete({0,1}..{*,*}) -- save rules names
+ end
+ --expT.delete({1,n+1}..{*,*})
+ 
+ ~.DetailedResults.delete({0,n+1}..{*,*})
+ ~.Results.delete({0,n+1}..{*,*})
+ --~._Protocol.delete({0,n+1}..{*,*})
+ ~.InputValues.delete({0,n+1}..{*,*})
+ ~.OutputValues.delete({0,n+1}..{*,*})
+ 
+ expT.RowIndex := true -- configuration by simtalk and old Experimentmanager
+ if expT.getDataType(0) /= "string"
+ 	expT.setDataType(0, "string")
+ end
+ 
+ if expT[0,0] = void
+ 	expT[0,0] := Rootfolder.Localization.getText(103) -- "Experiments"
+ end
+ 
+ var ExpStr:string
+ for var j:=1 to n
+ 	if expT[1,j] = void AND j <= expT.yDim
+ 		expT[1,j]:= true
+ 	end
+ 
+ 	ExpStr :=  expT.getExpID(j)  -- used as row index, like "Exp 01" or user-defined
+ 
+ 	~.DetailedResults[0,j]  := ExpStr
+ 	~.Results[0,j]          := ExpStr
+ 	~.InputValues[0,j]      := ExpStr
+ 	~.OutputValues[0,j]     := ExpStr
+ 	~.ReportRules[0,j]      := ExpStr
+ next
+ 
+ expT.setAlignmentColumn(1,"center")
+ for var j := 2 to expT.xDim
+ 	expT.setAlignmentColumn(j,"right")
+ next
+ 
+ if ?.name /= "resetWizard"
+ 	~.ExpRunFromGeneralDesign := false
+ end
+ 
+ expT.refillDialog
+ ~.DetailedResults.refillDialog
+ ~.Results.refillDialog
+ ~.InputValues.refillDialog
+ ~.OutputValues.refillDialog
+ 
+ if ?.name /= "resetWizard"
+ 	~.checkExpParameters
+ end
+RandomSeed: 321
+UUID: e324f92c-c29c-474c-8996-f8850d128ef7
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

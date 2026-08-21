@@ -1,0 +1,25 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [24.05,-2,0]
+Length: 7.1415926535897931
+Name: F5
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 106
+ResStatOn: true
+UUID: 01a0236c-0546-7026-8914-5b77ac4fd821
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [90,4,0]
+  - [0,90,2,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-707f-8990-7b80cd94bfa6
+ Name: Connector1
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7080-a586-157bfdd47918
+$Predecessors:
+- 01a0236c-0546-7062-aab7-174d59c60c5e
+InheritEntranceExitLockedOnReset: false

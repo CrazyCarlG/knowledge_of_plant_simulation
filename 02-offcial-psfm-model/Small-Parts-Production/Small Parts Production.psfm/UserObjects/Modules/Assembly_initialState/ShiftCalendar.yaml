@@ -1,0 +1,24 @@
+InternalClassType: ShiftCalendar
+Active: true
+Coordinate3D: [8,2,0]
+Label: "ShiftCalendar"
+Name: ShiftCalendar
+Origin: f98d8b0d-91fb-4dde-a1d9-f86e1e3412ce
+UUID: 01a0236c-0546-7039-973f-c2128e7f6eae
+$Resources:
+- 01a0236c-0546-7038-96f3-68dfc69ec7d0
+- 01a0236c-0546-7032-9027-d6fb25933b35
+- 01a0236c-0546-7020-bdaf-04d4ed1ad41e
+- 01a0236c-0546-7156-800a-3d0d804868be
+- 01a0236c-0546-704c-bc87-2e4577a292d6
+- 01a0236c-0546-704f-886c-55086f55f145
+- 01a0236c-0546-7052-bbf6-f49c331da9ee
+- 01a0236c-0546-7053-b336-8173036c541f
+- 01a0236c-0546-704b-8d37-b76606303ae7
+- 01a0236c-0546-7161-827e-40050296c141
+- 01a0236c-0546-7144-a0a5-7f2be8c126c8
+- 01a0236c-0546-7145-892e-43babc9f97d3
+- 01a0236c-0546-7150-adaf-52ea57f3526c
+$ShiftPlan:
+- ["Shift-1",6:00:00,14:00:00,true,true,true,true,true,true,null,"9:00-9:15; 12:00-12:45"]
+- ["Shift-2",14:00:00,22:00:00,true,true,true,true,true,null,null,"18:00-18:30; 20:30-21:00"]

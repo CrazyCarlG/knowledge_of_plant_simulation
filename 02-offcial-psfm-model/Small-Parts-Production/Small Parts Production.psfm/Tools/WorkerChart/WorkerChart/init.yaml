@@ -1,0 +1,29 @@
+InternalClassType: Method
+Coordinate3D: [15.8,-6,0]
+Name: init
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- check whether the workerPool under consideration is defined
+ if VarObj /= void  
+ 	GetWorkersFromPool
+ 	switchRadioButton(current)
+ 	Refresh
+ end
+
+RandomSeed: 40
+UUID: 5083aa06-cb39-4e57-9c66-5f20d5d6dafc
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["init"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

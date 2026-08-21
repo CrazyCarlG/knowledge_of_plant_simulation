@@ -1,0 +1,63 @@
+InternalClassType: Method
+Coordinate3D: [-8.05,13,0]
+Name: ValidExp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- The current experment number is compared with the input string
+ -- called by: 'evalRules' via "execute"
+ param s:string -> boolean
+  -- s:=" 1;2;4-6;  8; 10; 12 - 14; 18"
+ var currExp:integer := ~.currExpNo
+ 
+ var a:integer[] := splitStringToNum(s,";")
+ if strLen(s) < 1 OR splitStringToNum(s,";").contains(currExp)
+ 	return true
+ end
+ -- currExp := 15
+ 
+ 
+ while strLpos("-",s) > 0
+ 	var s1:string := strCopy(s,1,strLpos("-",s)-1)
+ 	a := splitStringToNum(s1,";")
+ 	if a.contains(currExp)
+ 		result := true
+ 		exitloop
+ 	else
+ 		var f:integer := a[a.dim]
+ 		s := strCopy(s, strLpos("-",s)+1, strLen(s))
+ 		a := splitStringToNum(s,";")
+ 		if a.contains(currExp)
+ 			result := true
+ 			exitloop
+ 		end
+ 		var t:integer := a[1]
+ 		if f < currExp AND currExp < t
+ 			result := true
+ 			exitloop
+ 		end
+ 	end
+ end
+ 
+ if strLen(s) < 1 OR splitStringToNum(s,";").contains(currExp)
+ 	result := true
+ end
+ --print currExp," ", result
+ --print
+RandomSeed: 296
+UUID: 7b433fdc-e570-4d5d-b40d-80245a5af4a0
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,88 @@
+InternalClassType: Method
+Coordinate3D: [68,-36,0]
+Name: CreateResultsReport
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param pResultsFolder:string, bSaveReport:boolean := true
+ /*
+ 1. Read_all files like "Exp2_Obs3.txt" in the folder pResultsFolder
+ 2. Fill the tablefile Experimentmanager.DetailedResults
+ 3. Statistical evaluation and preparation of the Report
+ 4. Save the report
+ */
+ var tab: table[string,string,string] -- Path of the Output Value, Data Type, Value
+ var FileName, OutputStr:string;
+ var ObsTab:table;
+ var col:integer
+ 
+ SingleRun := true
+ tab.create
+ resetWizard
+ for var ExpNo := 1 to ExpTable.yDim
+ 	evalExpTable(ExpNo)
+ 	prepExp(ExpNo) -- create subtables
+ 	for var ObsNo := 1 to NumRuns
+ 		FileName := to_str(pResultsFolder,"\\\\Exp",ExpNo,"_Obs",ObsNo,".txt") -- like Exp211_Obs13.txt
+ 		if existsFile(FileName)
+ 			tab.readFile(FileName)
+ 			for var OutNo := 1 to tab.yDim
+ 				OutputStr := ValueDescriptions.get(tab[1,OutNo])
+ 				col := DetailedResults.getColumnNo(OutputStr)
+ 				ObsTab := DetailedResults[col + 6, ExpNo]
+ 				switch tab[2,OutNo]
+ 				case "time"
+ 					ObsTab[1,ObsNo] := str_to_time(tab[3,OutNo])
+ 				else
+ 					ObsTab[1,ObsNo] := str_to_num(tab[3,OutNo])
+ 				end
+ 			next -- OutNo
+ 		end
+ 	next -- ObsNo
+ 	CalcStatistics4Exp(ExpNo)
+ next -- ExpNo
+ 
+ --if Kind_Output.numberOfOutputValues > 0 then
+ --	Dialog.Dialog.setSensitive("Chart_but", true);
+ --end
+ 
+ if Design4FactorialAnalysis
+ 	FactorialAnalysis(FactorDesignValue)
+ end
+ T_Test(pValues)
+ 
+ -- execute UserEvalMethod
+ if strLen(UserEvalMethod) > 0
+ 	if strLpos(".",UserEvalMethod) = 1
+ 		str_to_method(UserEvalMethod).execute(self.~)
+ 	else
+ 		str_to_method(to_str(~,".",UserEvalMethod)).execute(self.~)
+ 	end
+ end
+ 
+ -- open the Report
+ ReportCreationDate := sysDate
+ prepReport
+ 
+ if bSaveReport
+ 	ReportObject.save(to_str(pResultsFolder,"\\Report.htm"))
+ end
+ 
+ SingleRun := false
+RandomSeed: 638
+UUID: ce8322b4-dc17-4ef5-9c62-3b2cfba33479
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,16 @@
+InternalClassType: DataTable
+Origin: 9580ced3-4a98-4e10-87c9-44ec86b00f0d
+UUID: 01a0236c-0546-7511-a07a-095562681feb
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,4,"Input values","set by","Original Value","Technical Notation"]
+ Columns:
+ - [0,string,1,"Capacity of buffer"]
+ - [1,string,1,"Tab"]
+ - [2,string,1,"6"]
+ - [3,string,1,"root.Buffer1.capacity"]

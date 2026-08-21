@@ -1,0 +1,111 @@
+InternalClassType: DataTable
+CloseCtrl: "self.OnClose"
+Coordinate3D: [4.5,13,0]
+Name: EnergyConsumers
+Origin: 3ebf8d2b-61b2-4f7b-92c8-b51b39d21535
+RandomSeed: 60
+UUID: 92baf2a0-ea31-4f39-8f87-8dfe1d876e6c
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$CustomAttributes:
+-
+ Name: isOpen
+ ID: 1
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: OnClose
+ ID: 2
+ DataType: method
+ Value: |+1
+  param changed : boolean
+  
+  @.isOpen := false
+
+ ShowInTooltip: false
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 9
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   DataType: string
+   FastIndexAccess: true
+   Width: 24
+  -
+   Index: 1
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 12
+  -
+   Index: 2
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+  -
+   Index: 3
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 22
+  -
+   Index: 4
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 8
+  -
+   Index: 5
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 8
+  -
+   Index: 6
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 11
+  -
+   Index: 7
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 8
+  -
+   Index: 8
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 8
+  -
+   Index: 9
+   Color: 0xffffff
+   Alignment: "Right"
+   DataType: real
+   FormatString: "-15.2"
+   Width: 8
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+ ColumnIndex: [string,10,"Energy Consumers","Energy [kWh]","Energy operational [kWh]","Current power input [kW]","Working","Setting-up","Operational","Failed","Standby","Off"]
+ Columns:

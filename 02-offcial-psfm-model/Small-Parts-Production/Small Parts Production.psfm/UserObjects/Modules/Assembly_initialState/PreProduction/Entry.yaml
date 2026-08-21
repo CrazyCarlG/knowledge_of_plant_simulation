@@ -1,0 +1,16 @@
+InternalClassType: Interface
+Coordinate3D: [-14,4.6,0]
+Name: Entry
+Origin: 6a518501-cb32-4a3e-89e8-73ee25c0c55c
+Position: 40
+RandomSeed: 585
+Side: "Top"
+UUID: 01a0236c-0546-7154-96b7-80d43d64afd1
+$Successors:
+-
+ $Succ: 01a0236c-0546-7152-9ee5-3949cd237836
+ Name: Connector14
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7155-8964-dc7973837b43
+$Predecessors:
+- 01a0236c-0546-706a-b077-4da7be2563ca

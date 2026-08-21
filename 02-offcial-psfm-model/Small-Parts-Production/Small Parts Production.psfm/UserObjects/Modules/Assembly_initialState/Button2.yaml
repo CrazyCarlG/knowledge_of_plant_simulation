@@ -1,0 +1,21 @@
+InternalClassType: Button
+Control: "self.OnClicked"
+Coordinate3D: [-13.65,2.15,0]
+Label: "Reset"
+Name: Button2
+Origin: 109099cc-349f-4dfa-af40-5e0bc5305ec2
+RandomSeed: 1073746727
+UUID: 01a0236c-0546-7071-b419-d5146f2f07b4
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	eventController.reset;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false

@@ -1,0 +1,66 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70f2-a70e-94fdadda5eb0
+RandomSeed: 1073747166
+UUID: 01a0236c-0546-728d-b059-095f67fd62e5
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: tmpTables
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  EditorReadOnly: true
+  MaxXDim: 2
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+   Width: 8
+  -
+   Index: 1
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Right"
+   DataType: integer
+   Width: 16
+  -
+   Index: 2
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Right"
+   DataType: real
+   Width: 10
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+  -
+   Index: 2
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+ ColumnIndex: [string,3,"Experiments","Number of pallets","Throughput"]
+ Columns:

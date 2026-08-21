@@ -1,0 +1,31 @@
+InternalClassType: DataTable
+Coordinate3D: [45,-0.8,0]
+Name: ChartTable
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+UUID: 8aa9bbdd-2e45-4df5-b8b5-29d3995ed1c4
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 3
+    FontColor: 0x0
+ Columns:

@@ -1,0 +1,25 @@
+InternalClassType: Method
+Origin: 428aabd1-c83c-4ae9-9d2b-8c2329a6e6ff
+RandomSeed: 1073746890
+UUID: 01a0236c-0546-709b-853e-bb7a3a6273fd
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: infoBoxOpen
+ ID: 1
+ $DataType: boolean
+ Value: false

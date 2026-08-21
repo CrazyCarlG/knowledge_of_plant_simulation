@@ -1,0 +1,137 @@
+InternalClassType: Container
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DistributeCosts: false
+DragDropCtrl:
+EntranceCtrl:
+EntranceLocked: false
+ExitCtrl:
+ExitCtrlFront: true
+ExitCtrlOnce: false
+ExitCtrlRear: false
+FillWholeLayer: false
+InitCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.144
+MULength: 1
+MUWidth: 0.8
+Name: Carrier
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RandomSeed: 33
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+ResourceType: "Transport"
+ResStatOn: true
+RouteWeightingAttr: ""
+SelectCtrl:
+ShiftcalendarObject:
+UUID: 8f06e171-b4e7-420d-b453-6b72090a89f6
+WorkpieceCarrierActive: false
+XDim: 1
+YDim: 2
+ZDim: 1
+3D:
+ AnimationObject: ""
+ GraphicGroupNames: ["default","Operational","Waiting"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 3381708
+ MaterialDiffuseColor: 3381708
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.267
+ MaterialSpecularColor: 5855577
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ MUAnimationAreaAbsoluteCenter: [0,0,0.144]
+ MUAnimationAreaAbsoluteSize: [1,0.8]
+ MUAnimationAreaEnabled: true
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimationAreaShowMUsAsCuboids: false
+ MUAnimations:
+ MUSideToAttach: "Center bottom"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ ScaleAutomatically: false
+ ShowContent: true
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Operational"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [21,21]
+ Pixels:
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5ugIAAgIAAgIAAbm5ubm5ubm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5uAAAAAAAAAAAAbm5uAAAAbm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+ - bm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5uAAAAAAAAAAAAbm5ubm5ubm5u
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [21,21]
+ Pixels:
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//gIAAgIAAgIAAAP//AP//AP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//AAAAAAAAAAAAAP//AAAAAP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+ - AP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//AAAAAAAAAAAAAP//AP//AP//
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: 0
+ Duration: 0

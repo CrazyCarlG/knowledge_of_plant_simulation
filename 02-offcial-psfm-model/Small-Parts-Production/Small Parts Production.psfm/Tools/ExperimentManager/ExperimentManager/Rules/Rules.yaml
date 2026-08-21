@@ -1,0 +1,169 @@
+InternalClassType: DataTable
+Coordinate3D: [-13.25,13,0]
+Name: Rules
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 302
+UUID: c9d9464b-6841-4a59-862c-0c928d7ce0e9
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: con
+ ID: 1
+ DataType: method
+ Value: ""
+ ShowInTooltip: false
+$Data:
+ Comment: |+1
+  This table shows all rules, which you defined.\r
+  Do not make any changes here.
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 9
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: integer
+   FormatString: "-9"
+   Width: 8
+  -
+   Index: 2
+   Width: 9
+  -
+   Index: 3
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnIndex: true
+     ColumnWidth: 20
+     DataType: string
+     MaxXDim: 9
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      Width: 6
+     -
+      Index: 2
+      Width: 5
+     -
+      Index: 3
+      DataType: object
+      Width: 8
+     -
+      Index: 4
+      Width: 8
+     -
+      Index: 5
+      Width: 7
+     -
+      Index: 6
+      DataType: real
+      FormatString: "-15.2"
+      Width: 8
+     -
+      Index: 7
+      FontSize: 0
+      FontColor: 0x0
+      Color: 0xffffff
+      ReadOnly: false
+      Alignment: "Left"
+      Hidden: false
+      DataType: object
+      Width: 8
+     -
+      Index: 8
+      FontSize: 0
+      FontColor: 0x0
+      Color: 0xffffff
+      ReadOnly: false
+      Alignment: "Left"
+      Hidden: false
+      DataType: string
+      Width: 7
+     -
+      Index: 9
+      Width: 8
+     -
+      Index: 11
+      FontSize: 0
+      FontColor: 0x0
+      Color: 0xffffff
+      ReadOnly: false
+      Alignment: "Left"
+      Hidden: false
+      DataType: string
+      Width: 8
+     RowFormat:
+     -
+      Index: 0
+      Hidden: false
+    ColumnIndex: [string,12,~,"Verknüpfung","KlammernAuf","Object","Attribut","Operator","Wert","Object","Attribut","KlammernZu",~,"KlammernZu"]
+    Columns:
+   Width: 13
+  -
+   Index: 4
+   DataType: object
+   Width: 14
+  -
+   Index: 5
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnIndex: true
+     ColumnWidth: 20
+     DataType: string
+     MaxXDim: 4
+     ShowDataType: true
+     ColumnFormat:
+     -
+      Index: 1
+      DataType: object
+     -
+      Index: 3
+      Width: 6
+     -
+      Index: 4
+      DataType: real
+      FormatString: "-15.2"
+      Width: 7
+     RowFormat:
+     -
+      Index: 0
+      Hidden: false
+    ColumnIndex: [string,5,~,"Objekt","Attribut","Operator","Wert"]
+    Columns:
+   Width: 11
+  -
+   Index: 6
+   DataType: object
+   Width: 15
+  -
+   Index: 7
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 17
+  -
+   Index: 8
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 7
+  -
+   Index: 9
+   Width: 15
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,10,~,"Prio","Rules name","Condition in Table","Condition in Method","Action in Table","Action in Method","Experiment study on ","Init-Rule","Valid for Experiments"]
+ Columns:

@@ -1,0 +1,49 @@
+InternalClassType: Dialog
+Label: "Energy Analyzer in the Frame 'Assembly2'"
+Origin: 2cd81dd3-451e-43a7-864d-3e5d3cc22de1
+RandomSeed: 1073747447
+UUID: 01a0236c-0546-7574-b1af-b1f55be481cc
+$CustomAttributes:
+-
+ Name: VisualizationON
+ ID: 3
+ $DataType: boolean
+ Value: false
+-
+ Name: PlotterON
+ ID: 4
+ $DataType: boolean
+ Value: false
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate_Menu"
+-
+ Type: Menu
+ Name: "ToolsMenu"
+-
+ Type: Menu
+ Name: "Help_men"
+-
+ Type: TabControl
+ Name: "tabs"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "evaluate"
+ -
+  Type: TabPage
+  Name: "objects"
+  $Elements:
+  -
+   Type: ListView
+   Name: "table_objects"
+   SelectionIndex: 29
+ -
+  Type: TabPage
+  Name: "Settings"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "showDisplayPanel_CB"
+   IsChecked: true

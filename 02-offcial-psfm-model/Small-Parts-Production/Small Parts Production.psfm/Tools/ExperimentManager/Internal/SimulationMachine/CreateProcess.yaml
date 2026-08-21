@@ -1,0 +1,112 @@
+InternalClassType: Method
+Coordinate3D: [6.45,-2.15,0]
+DestructorCtrl:
+Name: CreateProcess
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- start the remote process (has errorHandler)
+ -- called by: DistributedSimulation.StartMachine_
+ param Test:boolean
+ var MachinesTab:object := ~.MachinesTable
+ var Sim3D:boolean := ~.~.SimulateWith3D
+ var RemoteMachineName:string := MachinesTab[1,MachineIndex]
+ var LicType:string := MachinesTab[4,MachineIndex]
+ if rootfolder.Localization.MessageTab.find({*,441},~.~.RemoteLicType) -- Highest Available
+ 	LicType := "HIGHESTAVAILABLE" -- the LicType can be used like the start option /L
+ end
+ 
+ var SmallModel:string := to_str(Applicationhome,"Examples\\Demo\\Small Parts Production.spp")
+ if Test AND existsFile(SmallModel) -- Button Test of the dialog Advanced Settings
+ 	eMPlantHandle := CreateRemoteProcess(RemoteMachineName, &EventSink, SmallModel, LicType, NOT Sim3D) -- try with a small model file
+ else
+ 	eMPlantHandle := CreateRemoteProcess(RemoteMachineName, &EventSink, modelFile, LicType, NOT Sim3D) -- try with the current spp-file
+ end
+ 
+ if Sim3D
+ 	MachinesTab.addLogging("Remote process is running with 3D.", JobId, MachineIndex, false)
+ else
+ 	MachinesTab.addLogging("Remote process is running without 3D.", JobId, MachineIndex, false)
+ end
+ 
+ if eMPlantHandle /= 0 -- if remote process started
+ 	var eMPlant:any := getInterfaceOfRemoteProcess(eMPlantHandle)
+ 	eMPlant.SetTrustModels(true)
+ 	eMPlant.SetPathContext(to_str(~.~))
+ 
+ 	var CPUCoreAssignment := ~.~.CPUCoreAssignment
+ 	for var row := 1 to CPUCoreAssignment.Dim
+ 		if CPUCoreAssignment.asString(row) = RemoteMachineName
+ 			var l := CPUCoreAssignment[row]
+ 			if l /= void and l.Dim > 0
+ 				var cpuRow := MachineIndex mod l.Dim
+ 				print "Machine ", MachineIndex, " on ", RemoteMachineName, " using CPU  ", l[cpuRow]
+ 				eMPlant.ExecuteSimTalk(to_str("setProcessAffinityMask(", to_str(l[cpuRow]),")"))
+ 			end
+ 		end
+ 	next
+ 
+ 	if  eMPlant.ExecuteSimTalk( to_str("-> any return 1"))=1
+ 		-- "Remote process was started by '",~.~,"'"
+ 		MachinesTab.addLogging(to_str("Remote process was started by the Experimentmanager '",~.~,"'"), JobId, MachineIndex, false)
+ 		var InstallFolder:string := to_str("ApplicationHome '",eMPlant.ExecuteSimTalk("-> any return ApplicationHome"),"'")
+ 		MachinesTab.addLogging(InstallFolder, JobId, MachineIndex, false)
+ 	else
+ 		MachinesTab.addLogging("Remote process does not work correctly.", JobId, MachineIndex, false)
+ 	end
+ 
+ 	if Test OR ~.~.RemoteMachinesVisible -- Test = true: test button on tab distribution in the dialog 'Advanced Settings'
+ 		eMPlant.setVisible(true)
+ 	end
+ 
+ 	var t:time := ~.~.QuitAfterTime -- setting of the dialog
+ 	if t > 0
+ 		eMPlant.QuitAfterTime(1000 * t) -- The number of milliseconds must be < 2^31. Null means infty lifespan of the prozess.
+ 		MachinesTab.addLogging("Start the 'Terminate after time' anew.", JobId, MachineIndex, false)
+ 		-- else the remote process is never terminated
+ 	end
+ 
+ 	if Test
+ 		eMPlant.ExecuteSimTalk("-> integer return 69")
+ 		infobox("",false)
+ 		~.~.dialog.CB_ShowError
+ 		eMPlant.quit
+ 		return
+ 
+ 	else -- if eMPlantHandle /= 0
+ 		-- A simualtion machine was successful started.
+ 		var p:string := to_str(self.~.~) -- path or location
+ 		var str:string := to_str(p,".prepareRemoteProcess")
+ 		eMPlant.executeSimTalk(str)
+ 
+ 		p := to_str(self.~.~.~) -- isSimulationMachine is a custom attribute of the Network of the Experimentmanager
+ 		str := to_str(p,".isSimulationMachine := true")
+ 		eMPlant.executeSimTalk(str)
+ 	end
+ 
+ else -- if remote process started
+ 	MachinesTab.addLogging("Impossible to start remote process", JobId, MachineIndex, false)
+ end
+RandomSeed: 347
+UUID: 2e8b56cf-c51a-424d-b729-959218af3724
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: ErrorHandler
+ ID: 1
+ DataType: object
+ Value: "ErrorHandler"
+ ShowInTooltip: false

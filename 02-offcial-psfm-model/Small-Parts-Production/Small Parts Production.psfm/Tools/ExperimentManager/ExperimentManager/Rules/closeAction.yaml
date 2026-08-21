@@ -1,0 +1,63 @@
+InternalClassType: Method
+Coordinate3D: [3.4000000000000004,10,0]
+Name: closeAction
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by interaction plausibility of the table file "Action"
+ var Stmt,obj_str:string;var i,j,RuNo:integer;var t:table[object,string,string,real];var res:any
+ 
+ RuNo := Action.RuleNo
+ Rules[5,RuNo].delete 
+ 
+ if Action.Ydim > 0 
+ 	~.ReplaceRootstr(Action,1)-- column 1: object string
+ 	for i:=1 to Action.Ydim 
+ 		if Action[1,i]=void
+ 		 -- There is a missing item in row
+ 			messageBox(to_str(rootfolder.Localization.getText(376)," ",i),1,1)
+ 			return
+ 		end
+ 		-- object string into the tablefile "InputValues"
+ 		Action[2, i] := strTrim(Action[2, i])-- 90
+ 		obj_str := Action.asstring(1,i)	-- Object, 90
+ 		if strLen(Action[2, i])>0  -- Attribut
+ 			if strCopy(Action[2, i],1,1) = "[" 
+ 				obj_str := to_str(obj_str,Action[2,i]) -- like:  root.tab[1,1]
+ 			else
+ 				obj_str := to_str(obj_str,".",Action[2,i])
+ 			end
+ 		end
+ 	next-- i: action
+ 	t.create
+ 	t.insertList(1,1, Action.copy({1,1}..{*,*}))
+ 	Stmt := evalAction(t)-- Build the statement
+ 	res := executeSilent(Stmt)
+ 	for i:=1 to Action.Ydim 
+ 		Action[1,i].updateDialog
+ 	next-- i: action
+ 	if isBoolean(res) AND res 
+ 		Rules[5,RuNo].insertList(1,1, Action.copy({1,1}..{*,*}))
+ 	else--The action is not correct.
+ 		messageBox(rootfolder.Localization.getText(375),1,1)
+ 		return-- 90
+ 	end
+ end
+ Rules2History
+ --print "Action for rule ",RuNo;print Stmt;
+RandomSeed: 300
+UUID: 813b4b17-82ab-4f96-8b4d-0e754464b362
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

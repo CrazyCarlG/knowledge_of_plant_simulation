@@ -1,0 +1,23 @@
+InternalClassType: HtmlReport
+Origin: 01a0236c-0546-710d-be8e-7120b91ae389
+RandomSeed: 1073748329
+UUID: 01a0236c-0546-7443-be05-f99773612b9d
+$CustomAttributes:
+-
+ Name: active
+ ID: 1
+ $DataType: boolean
+ Value: false
+-
+ Name: title
+ ID: 3
+ $DataType: string
+ Value: "\"\""
+-
+ Name: DisplayedOutputValues
+ ID: 4275829041
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+  - [1,string,1,"root.Drain.statDeleted"]

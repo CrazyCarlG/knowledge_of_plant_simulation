@@ -1,0 +1,19 @@
+InternalClassType: Drain
+Origin: 01a0236c-0546-702e-b053-3b66914c2c38
+RandomSeed: 155
+TypeStatOn: true
+UUID: 01a0236c-0546-7364-8968-65e77c2b115d
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf0f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Predecessors:
+- 01a0236c-0546-7366-98e6-d07acfb60ccd
+InheritEntranceExitLockedOnReset: false

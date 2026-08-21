@@ -1,0 +1,28 @@
+InternalClassType: Station
+Coordinate3D: [-0.850000012665987,0.70000001043081284,0]
+Label: "AS8"
+Name: AS8
+Origin: 682dd7c7-6d7b-4233-b7d5-86c4aedbccd2
+RandomSeed: 55
+UUID: 01a0236c-0546-7004-ad3d-e1131d9b98d0
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-701b-8b62-6c0ea63ae85b
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-701c-9f15-7321f7cd1700
+$Predecessors:
+- 01a0236c-0546-7009-8e19-59045df10a6a
+InheritEntranceExitLockedOnReset: false

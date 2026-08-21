@@ -1,0 +1,245 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-20.05,0]
+Name: resetWizard
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- delete all results of the previous study (tables Results, detailedResults)
+ -- called by: dialog, button'Reset', context menu,_autoexecLoadObj
+ /*if ResetIsInProgress
+ 	return
+ else
+ 	ResetIsInProgress := true
+ end*/
+ 
+ if DS_
+ 	DS_Output.delete
+ 	DS_ObservValues.delete
+ end
+ 
+ &M_NewJobId.infoBoxOpen := false
+ 
+ var DLGobj:object := dialog.dialog
+ deleteSuspendedMethods
+ 
+ if getActiveContr(current)/=void
+ 	return
+ end
+ 
+ selected := false
+ infobox("",false)
+ 
+ Recording.delete
+ Recording.localErrors := 0
+ Recording.remoteErrors := false
+ 
+ var InputOutputOK:boolean := self.check_InputValues_OutputValues
+ DLGobj.setSensitive("Start_But",InputOutputOK)
+ 
+ -- close all active charts
+ var obj:object := Report
+ if obj.active
+ 	Report.close
+ 	obj.active := false;
+ end
+ 
+ -- prepare the column 0 for the tables Results, detailedResults, InputValues and OutputValues (like "Exp 10")
+ Dialog.closeExpTab
+ 
+ -- Check all output values
+ 
+ var numOutput:integer := Output.yDim
+ 
+ if numOutput > 0 AND DetailedResults.XDimIndex < 1
+ 	OutputChanged -- set attribute ExpMgr.OK_output
+ end
+ 
+ if expTable.yDim = 0
+ 	DLGobj.setCheckBox("UseInputValues_CB",false)
+ 	DLGobj.&callback.execute("UseInputValues_CB",DLGobj,DLGobj) -- set UsingTables
+ end
+ 
+ --if NOT self.check_InputValues_OutputValues
+ --	return
+ --end
+ 
+ if eventController/=void
+ 	eventController.stop
+ 	if State = "running" or State = "SimStopped"
+ 		dialog.changeUserSettings("restore")
+ 	end
+ 	EventController.ExperimentManager := void	-- distributed and non-distributed simulation
+ 	EventController.reset
+ end
+ State := "ready" -- not running
+ IsRunning := false
+ 
+ --TotalSimulationRuns := 0 -- Both attributes will use for a progress bar in an upcoming version.
+ CurrentTaskNo := 0
+ 
+ NumExp := getNumExp
+ 
+ DetailedResults.closeDialog
+ Results.closeDialog
+ 
+ DistributedSimulation.removeDistrSim
+ 
+ -- determine numCores of the current computer (distributed simulation is running on different computers, localhost is changed)
+ var RemoteTab:object := dialog.RemoteTable
+ for var j := 1 to RemoteTab.yDim
+ 	if RemoteTab[1,j] ~= "localhost" and RemoteTab[3,j]
+ 		RemoteTab[2,j] := getNumberOfCPUCores
+ 	end
+ next
+ terminateRemoteProcesses
+ isSimulationMachine := false
+ 
+ -- now_we have Output.yDim > 0
+ if ok_output
+ 	Results.reg -- contains _Results.delete({1,0}..{*,*});
+ end
+ 
+ DetailedResults.delete
+ DetailedResults.deleteCellFormat
+ if ApplicationVersion >= 25004000
+ 	for var i := 0 to DetailedResults.XDimIndex
+ 		DetailedResults.setFontColorColumn(i, -1)
+ 	next
+ end
+ 
+ DetailedResults.ResultTablesFormatted := false
+ DetailedResults.ExperimentExecuted.delete
+ --DetailedResults.ExperimentExecuted.init_ialize({1,1}..{1,*},false)
+ Dialog.StudyExecuted := false
+ 
+ --_Protocol.delete
+ InputValues.delete
+ OutputValues.delete
+ pValues.delete({0,0}..{*,*})
+ 
+ JobsTable.delete
+ ProgressTable.InheritFormat := true
+ ProgressTable.deleteCellFormat
+ ProgressTable.deleteContents
+ 
+ -- reset the Report
+ Charts.deleteVoidEntries
+ currIcon := "Default"
+ if _3D.exists
+ 	_3D.VisibleGraphicGroups := makeArray("default", "deco")
+ end
+ ReportObject.content := ""
+ UserReport.content := ""
+ 
+ obj := ExpTable
+ for var j := obj.ydim downto 1
+ 	if obj[1,j]=void
+ 		obj.cutRow(j)
+ 	end
+ next
+ 
+ currIcon := "Default"
+ if _3D.exists
+ 	_3D.VisibleGraphicGroups := makeArray("default")
+ end
+ 
+ DLGobj.setCaption("currObs", " ")-- text: Current Experiment:
+ DLGobj.setCaption("currExp", " ")-- text: Observation:
+ 
+ DLGobj.setSensitive("Chart_but", false)
+ DLGobj.setSensitive("HTML_but", false)
+ 
+ if numOutput = 1
+ 	var tab:table := Report.DisplayedOutputValues
+ 	tab.delete
+ 	tab[1,1] := Output[1,1]
+ end
+ dialog.RemoteMachines.delete({0,1}..{*,*}) -- for the Report (as entire tablefile)
+ 
+ SVGofCharts.delete({0,0}..{*,*})
+ SVGofEffectTables.delete({0,1}..{*,*})
+ SVGofCharts.removeSVGtables -- in case of Charts4AllObservations = true and numRuns > 1
+ 
+ tmpCharts.removeTmpCharts
+ UserReport.content := "" -- delete user defined_report
+ 
+ pValues.deleteTmpTables
+ BestParam.deleteTmpTables
+ 
+ JobsTable.AllJobs4Rules.delete -- needed for the report of a distributed simulation if UsingRules
+ JobsTable.CopyFormatTo(JobsTable.AllJobs4Rules)
+ 
+ --ResetIsInProgress := false
+ DLGobj.setSensitive("Reset_But",true)
+RandomSeed: 247
+UUID: db2218f7-3850-44cb-b9a8-b99fc1f3e1e1
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: check_InputValues_OutputValues
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- called by: buttons Apply_and Reset (calls resetWizard), condition for DOE
+  -- Without side effects, only check
+  -- Run the code for testing Output.yDim > 0 earlier in the method_resetWizard 
+  -> boolean
+  var obj:object := Output
+  var str:string
+  result := true
+  if obj.yDim = 0 	
+  	str:= rootfolder.Localization.getText(224)
+  	--messageBox(rootfolder.Localization.getText(224),1,4) 
+  	infoBox(str,false) -- Please specify result values as the target of the simulation study.
+  	sleep(1.5, false)
+  	infoBox("", false)
+  	obj.inheritContents := false
+  	if rootfolder /= ~
+  		obj.openDialogBox(true)
+  	end
+  	--Dialog.Dialog.setSensitive("DefineInputValues_but", false) -- for open table ExpTable
+  	result := false
+  --else
+  	--Dialog.Dialog.setSensitive("DefineInputValues_but", true) -- for open table ExpTable
+  end
+  
+  -- Check all output values
+  kind_Output.numberOfOutputValues := 0
+  for var j := 1 to Output.yDim 
+  	str := obj[1,j]
+  	if NOT testAttributeString(str)  -- Incorrect output value
+  		messageBox(to_str(current,": ",strChr(10),rootfolder.Localization.getText(222)," \\"",str,"\\"."), 1, 3) -- warning
+  		result := false
+  	end
+  	if NOT isOutTable(str) 
+  		kind_Output.numberOfOutputValues := kind_Output.numberOfOutputValues + 1
+  	end
+  next
+  
+  -- Check all input values
+  if usingTables AND (NOT result)
+  	obj := Input
+  	for var j := 1 to obj.yDim 
+  		str := obj[1,j]
+  		if NOT testAttributeString(str) OR NOT testInputString(str) 
+  			-- Incorrect input value
+  			messageBox(to_str(current,": ",strChr(10),rootfolder.Localization.getText(223)," \\"",str,"\\"."), 1, 3) -- warning
+  			--return false
+  		end
+  	next 
+  end -- if usingTables
+ ShowInTooltip: false

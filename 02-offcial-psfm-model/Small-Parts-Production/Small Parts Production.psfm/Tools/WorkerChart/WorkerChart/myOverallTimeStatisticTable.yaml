@@ -1,0 +1,193 @@
+InternalClassType: DataTable
+Coordinate3D: [5.9,-15.200000000000001,0]
+Name: myOverallTimeStatisticTable
+Origin: 9acac8c1-3a98-4ab6-a0f5-1c168cd4b004
+UUID: fec0300a-640b-4860-b1ac-e0c6a85a31f0
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: "This table is copied to the table 'mystatisticTable' as an action of the checkboxes 'Occupance with respect to'"
+ ShowComment: true
+ ListFormat:
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 14
+  -
+   Index: 1
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 12
+  -
+   Index: 2
+   Width: 29
+  -
+   Index: 3
+   DataType: string
+   Width: 4
+  -
+   Index: 4
+   DataType: string
+   Width: 3
+  -
+   Index: 5
+   Width: 5
+  -
+   Index: 6
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Center"
+   Hidden: false
+   DataType: string
+   Width: 4
+  -
+   Index: 7
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 9
+  -
+   Index: 8
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 28
+  -
+   Index: 9
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Center"
+   Hidden: false
+   DataType: string
+   Width: 3
+  -
+   Index: 10
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 9
+  -
+   Index: 11
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 22
+  -
+   Index: 12
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 20
+  -
+   Index: 13
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "+;-;*;/;*(;)/;"
+   Width: 10
+  -
+   Index: 14
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 9
+  -
+   Index: 15
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 20
+  -
+   Index: 16
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "+;-;*;/;"
+   Width: 10
+  -
+   Index: 17
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 9
+  -
+   Index: 18
+   FontSize: 0
+   FontColor: 0x0
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+   DataType: string
+   Width: 20
+ Columns:
+ - [0,string,10,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed","Paused","Unplanned"]
+ - [1,string,10,"Worker","Worker","Worker","Worker","Worker","Worker","Worker","Worker","Worker","Worker"]
+ - [2,string,10,".statServicesSetupPortion",".statServicesWorkingPortion",".statServicesRepairingPortion",".statServicesTransportingPortion",".statServicesEnRouteToJobPortion",".statServicesWaitingImpPortion",".statServicesWaitingMUPortion",".statExporterFailedPortion",".statExporterPausedPortion",".statExporterUnplannedPortion"]
+ - [3,string,7,"*(","*(","*(","*(","*(","*(","*("]
+ - [5,string,7,"1","1","1","1","1","1","1"]
+ - [6,string,7,"-","-","-","-","-","-","-"]
+ - [7,string,7,"Worker","Worker","Worker","Worker","Worker","Worker","Worker"]
+ - [8,string,7,".statExporterUnplannedPortion",".statExporterUnplannedPortion",".statExporterUnplannedPortion",".statExporterUnplannedPortion",".statExporterUnplannedPortion",".statExporterUnplannedPortion",".statExporterUnplannedPortion"]
+ - [9,string,7,"-","-","-","-","-","-","-"]
+ - [10,string,7,"Worker","Worker","Worker","Worker","Worker","Worker","Worker"]
+ - [11,string,7,".statExporterPausedPortion",".statExporterPausedPortion",".statExporterPausedPortion",".statExporterPausedPortion",".statExporterPausedPortion",".statExporterPausedPortion",".statExporterPausedPortion"]
+ - [12,string,7,")",")",")",")",")",")",")"]

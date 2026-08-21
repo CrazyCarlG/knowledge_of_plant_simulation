@@ -1,0 +1,26 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [12,-8,0]
+ExitLocked: false
+Label: ""
+Length: 10
+Name: F8
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 104
+ResStatOn: true
+UUID: 01a0236c-0546-7028-86a9-593262e943e6
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [180,10,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-704b-8d37-b76606303ae7
+ Name: Connector16
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7056-918b-a50cb0e529fd
+$Predecessors:
+- 01a0236c-0546-7029-a4c2-5a6b17c55547
+InheritEntranceExitLockedOnReset: false

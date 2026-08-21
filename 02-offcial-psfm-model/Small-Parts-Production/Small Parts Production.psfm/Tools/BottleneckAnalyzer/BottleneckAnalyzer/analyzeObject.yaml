@@ -1,0 +1,191 @@
+InternalClassType: Method
+Coordinate3D: [10.1,-2.1999999999999993,0]
+Name: analyzeObject
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ -- called by:_analyzeFrame (once)
+ -- parameter: basic object with statistics
+ param obj:object-> list[real]
+ 
+ var factor_working,factor_setup,factor_wait,factor_block,factor_powering, factor_fail, factor_stopped, factor_pause: real
+ var tmpStr:string
+ 
+ var isPipe:boolean := (obj.internalclassname = "NwPipe")
+ 
+ var isFluid:boolean
+ switch obj.internalclassname
+ case "NwTank","NwFluidSource","NwFluidDrain","NwMixer","NwPipe" 
+ 	isFluid := true -- statStoppedPortion does not exist
+ end
+ 
+ result.create
+ 
+ if NOT isFluid 
+ 	if obj.resStatOn and
+ 	   -- Is statistics desired?  evaluate the resource types, defined on the second tab of the dialog
+ 	   ( ( (obj.resourceType = "Production" or obj.resourceType = "Produktion") and Production ) or
+ 		    (obj.resourceType = "Transport" and Transport) or
+ 		    ((obj.resourceType = "Storage" or obj.resourceType = "Lagerung") and Storage) )
+ 	
+ 		if scale_icon > 1 
+ 			draw_Scale(obj)
+ 		end
+ 	
+ 		factor_working := obj.statWorkingPortion
+ 		result.insert(1,factor_working)
+ 		if factor_working > 0 
+ 			drawBar(obj,"work",factor_working)
+ 		end
+ 	
+ 		factor_setup := obj.statSetupPortion
+ 		result.insert(2,factor_setup)
+ 		if factor_setup > 0 
+ 			drawBar(obj,"setup",factor_setup)
+ 		end
+ 
+ 		factor_wait := obj.statWaitingPortion
+ 		result.insert(3,factor_wait)
+ 		if factor_wait > 0 
+ 			drawBar(obj,"wait",factor_wait)
+ 		end
+ 
+ 		factor_block := obj.statBlockingPortion
+ 		result.insert(4,factor_block)
+ 		if factor_block > 0 
+ 			drawBar(obj,"block",factor_block)
+ 		end
+ 
+ 		factor_powering := obj.statPoweringUpDownPortion
+ 		result.insert(5,factor_powering)
+ 		if factor_powering > 0 
+ 			drawBar(obj,"PoweringUpDown",factor_powering)
+ 		end
+   
+ 		factor_fail := obj.statFailPortion
+ 		result.insert(6,factor_fail)
+ 		if factor_fail > 0 
+ 			drawBar(obj,"fail",factor_fail)
+ 		end
+ 		
+ 		factor_stopped := obj.statStoppedPortion
+ 		result.insert(7,factor_stopped)
+ 		if factor_stopped > 0 
+ 			drawBar(obj,"stop",factor_stopped)
+ 		end
+ 		
+ 		factor_pause := obj.statPausingPortion + obj.statUnplannedPortion
+ 		result.insert(8,factor_pause)
+ 		if factor_pause > 0 
+ 			drawBar(obj,"pause",factor_pause)
+ 		end
+ 		
+ 		tmpStr := insRootStr(to_str(obj),to_str(obj.rootframe)) -- path with root
+ 		resourceStats.writeRow(1,resourceStats.yDim+1,tmpStr,factor_working*100,factor_setup*100,factor_wait*100,factor_block*100,factor_powering*100,factor_fail*100,factor_stopped*100,factor_pause*100)
+ 		if is3Dopen and obj._3D.exists 
+ 			obj._3D.createStatistics(makearray(factor_working, factor_setup, factor_wait, factor_block, factor_powering, factor_fail, factor_stopped, factor_pause))
+ 		end
+ 	else -- no statistics is desired for this object
+ 		result.insert(1,0)
+ 		result.insert(2,0)
+ 		result.insert(3,0)
+ 		result.insert(4,0)
+ 		result.insert(5,0)
+ 	end
+ 	
+ else -- if_isFluid
+ 
+ 		if scale_icon > 1 
+ 			draw_Scale(obj)
+ 		end
+ 	
+ 		factor_working := obj.statWorkingPortion -- Fluid
+ 		result.insert(1,factor_working)
+ 		if factor_working > 0 
+ 			drawBar(obj,"work",factor_working)
+ 		end
+ 	
+ 		factor_setup := obj.statSetupPortion -- Fluid
+ 		result.insert(2,factor_setup)
+ 		if factor_setup > 0 
+ 			drawBar(obj,"setup",factor_setup)
+ 		end
+ 
+ 		factor_wait := obj.statWaitingPortion -- Fluid
+ 		result.insert(3,factor_wait)
+ 		if factor_wait > 0 
+ 			drawBar(obj,"wait",factor_wait)
+ 		end
+ 
+ 		if isPipe   -- Fluid
+ 			factor_block := 0
+ 		else
+ 			factor_block := obj.statBlockingPortion
+ 		end
+ 		result.insert(4,factor_block)
+ 		if factor_block > 0 
+ 			drawBar(obj,"block",factor_block)
+ 		end
+ 			
+ 		if isPipe  -- Fluid
+ 			factor_powering := 0
+ 		else
+ 			factor_powering := obj.statPoweringUpDownPortion
+ 		end
+ 		result.insert(5,factor_powering)
+ 		if factor_powering > 0 
+ 			drawBar(obj,"PoweringUpDown",factor_powering)
+ 		end
+   
+ 		if isPipe  -- Fluid
+ 			factor_fail := 0
+ 		else
+ 			factor_fail := obj.statFailPortion
+ 		end
+ 		result.insert(6,factor_fail)
+ 		if factor_fail > 0 
+ 			drawBar(obj,"fail",factor_fail)
+ 			end
+ 		
+ 		factor_stopped := 0  -- Fluid
+ 		/*factor_stopped := obj.statStoppedPortion;
+ 			result.insert(7,factor_stopped);
+ 			if factor_stopped > 0 then
+ 				drawBar(obj,"stop",factor_stopped);
+  			end;*/	
+ 			
+ 		if isPipe   -- Fluid
+ 			factor_pause := 0
+ 		else
+ 			factor_pause := obj.statPausingPortion + obj.statUnplannedPortion
+ 		end
+ 		result.insert(8,factor_pause)
+ 		if factor_pause > 0 
+ 			drawBar(obj,"pause",factor_pause)
+ 		end
+ 		
+ 		tmpStr := insRootStr(to_str(obj),to_str(obj.rootframe)) -- path with root (new in 90)
+ 		resourceStats.writeRow(1,resourceStats.yDim+1,tmpStr,factor_working*100,factor_setup*100,factor_wait*100,factor_block*100,factor_powering*100,factor_fail*100,factor_stopped*100,factor_pause*100)
+ 		if is3Dopen and obj._3D.exists 
+ 			obj._3D.createStatistics(makearray(factor_working, factor_setup, factor_wait, factor_block, factor_powering, factor_fail, factor_stopped, factor_pause))
+ 		end
+ 
+ end -- if_isFluid
+RandomSeed: 77
+UUID: 7fcaaee7-8af2-4970-baad-9d5d04978cf3
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

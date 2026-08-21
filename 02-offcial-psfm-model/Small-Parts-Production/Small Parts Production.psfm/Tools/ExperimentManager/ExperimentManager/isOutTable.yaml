@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [12.5,-24.1,0]
+Name: isOutTable
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- detect a tablefile as output value
+ -- called by: plausibility interaction, testAttributeString,_recogDataType, readValue
+ param attrStr:string->boolean
+ 
+ var stmt:string := to_str("-> boolean var obj:object := ",attrStr,";result := (obj.internalClassName = \\"NwList2D\\")")
+ 
+ var res:any := executeSilent(stmt)
+ 
+ result := isBoolean(res) AND res
+RandomSeed: 220
+UUID: d294b1cd-35f2-445f-ad45-edcf8db4de86
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

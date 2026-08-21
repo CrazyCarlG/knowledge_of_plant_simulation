@@ -1,0 +1,22 @@
+InternalClassType: DataTable
+Coordinate3D: [-9.65,11,0]
+Name: Context
+Origin: 9eaccf44-9c66-4a43-83ef-488614ff0662
+UUID: d2064d50-c8cd-457e-992f-f2aeba1d5042
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ListFormat:
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 2
+  ShowDataType: true
+ Columns:
+ - [1,string,5,"Analyze","Remove","Ranking","Configure","Help"]
+ - [2,string,5,"dialog.analyzeModel","dialog.removeStats","dialog.showStats","dialog.openConfig","dialog.openHelp"]

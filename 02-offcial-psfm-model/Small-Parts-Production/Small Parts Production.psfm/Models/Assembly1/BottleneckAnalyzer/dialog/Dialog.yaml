@@ -1,0 +1,29 @@
+InternalClassType: Dialog
+Label: "Bottleneck Analyzer"
+Origin: 01a0236c-0546-71b2-a74f-f7194affb905
+RandomSeed: 1073747043
+UUID: 01a0236c-0546-7335-9350-c7a3229f92c7
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate_Menu"
+-
+ Type: Menu
+ Name: "Help_men"
+-
+ Type: TabControl
+ Name: "Register"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Analyze"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Remove_txt"
+  -
+   Type: Button
+   Name: "remove_but"
+ -
+  Type: TabPage
+  Name: "Configuration"

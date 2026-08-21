@@ -1,0 +1,73 @@
+InternalClassType: Method
+Coordinate3D: [62,-36,0]
+Name: SingleRunFinished
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- only internal, called by endsim via executeNewCallChain in case of Experimentmanager.SingleRun = TRUE
+ -- Write a file like Exp211_Obs13.txt
+ -- Terminate Plant Simulation
+ var j:integer; var res:any; var str,AttrStr:string
+ var tab : table[string,string,string] -- Path of the Output Value, Data Type, Value
+ var t1, ObservTab:table
+ var TabObj:object
+ tab.create
+ 
+ j:=1 -- read_an output values:
+ while DetailedResults[j,0]/=void
+ 	str := DetailedResults[j,0]
+ 	AttrStr := ValueDescriptions.getOrig(str)
+ 	if NOT isOutTable(AttrStr)
+ 		res := readValue(AttrStr)
+ 		tab.writeRow(1,tab.yDim+1, AttrStr, getSimTalkTypename(res), to_str(res))
+ 		forget res
+ 		j:=j+7
+ 
+ 	else -- read_an output table
+ 			TabObj := AttrStr -- str => object
+ 			ObservTab := DetailedResults[j+4,rowResTab]
+ 
+ 			if ObservTab[1,currRunNo] = void
+ 				ObservTab[0,currRunNo] := to_str("Obs",currRunNo)
+ 				ObservTab.createNestedList(1,currRunNo)
+ 				ObservTab[1,currRunNo].Name := to_str("R",currRunNo)
+ 			end;
+ 
+ 			t1 := ObservTab[1,currRunNo]
+ 			copyTableFile(TabObj, t1)
+ 			j:=j+5
+ 	end
+ end
+ 
+ if strlen(ResultsFolder) > 0
+ 	var FileName:string := to_str(ResultsFolder,"\\\\Exp",currExpNo,"_Obs",currRunNo,".txt")
+ 	tab.writeFile(FileName,true,"ANSI") -- like Exp211_Obs13.txt
+ end
+ 
+ SingleRunResult := tab
+ 
+ SingleRun := false
+ IsRunning := false
+ 
+ print "Experiment ", currExpNo, ", Observation ", currRunNo, " finished."
+ 
+ if ExitAfterSingleRun
+ 	ExitApplication
+ end
+RandomSeed: 210
+UUID: 71da77b6-5660-4e99-9de2-437cf1a8dc68
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

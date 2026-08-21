@@ -1,0 +1,228 @@
+InternalClassType: Method
+Coordinate3D: [10,-3.1,0]
+Name: prepExp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- prepare an experiment
+ -- called by: Start (NOT UsingTable), M_ReadResult_, M_TreatError_(distributed simulation)
+ param ExpNo:integer -- 'ExpNo': number in ExpTable
+ 
+ var i,ResNo,j:integer
+ var typeStr:string
+ var tab, obsTab:table
+ var formatTab:table
+ 
+ var noStr:string  := ExpTable.getExpString(ExpNo)
+ var ExpStr:string := ExpTable.getExpID(ExpNo) -- to_str("Exp",noStr)
+ 
+ var prec:integer := ResultsPrecision
+ var FormatStr:string
+ if prec < 1 OR prec > 14
+ 	FormatStr := ""
+ 	ResultsPrecision := -1
+ else
+ 	FormatStr := to_str("-15.",prec)
+ end
+ 
+ var _Mean_ :string   := rootfolder.localization.getText(274) -- Mean
+ var _Run_  :string   := rootfolder.localization.getText(275) -- Run
+ var _StdDev_ :string := rootfolder.localization.getText(370) -- StdDev
+ var _Min_ :string    := rootfolder.localization.getText(371)
+ var _Max_  :string   := rootfolder.localization.getText(372)
+ var _Obs_  :string   := rootfolder.localization.getText(373) -- "Table", "Tabelle"
+ var _TabObs_ :string := rootfolder.localization.getText(374) -- "Tab Obs"
+ 
+ -- preparing the Observation column of the Results table file:
+ DetailedResults.delete({1,ExpNo}..{*,ExpNo}) -- delete the single row for the experiment
+ DetailedResults[0,ExpNo] := ExpStr
+ 
+ if UsingTables
+ 	Results.delete({Input.yDim + 1,ExpNo}..{*,ExpNo})
+ else
+ 	Results.delete({1,ExpNo}..{*,ExpNo})
+ end
+ 
+ var AttrStr,str:string
+ var FormatTab3:table[real,string]
+ FormatTab3.create
+ FormatTab3.columnIndex := true
+ FormatTab3.Alignment   := "right"
+ FormatTab3.columnWidth := 12
+ 
+ i := 1
+ while DetailedResults[i,0] /= void
+ 	str := DetailedResults[i,0]
+ 	AttrStr := ValueDescriptions.getOrig(str)
+ 
+ 	if NOT isOutTable(attrStr)  -- numerical output value
+ 		attrStr := ValueDescriptions.getOrig(DetailedResults[i,0])
+ 		typeStr := recogDataType(attrStr)
+ 		FormatTab3.setDataType(1,typeStr)
+ 		FormatTab3.setDataType(2,"string")
+ 		FormatTab3.setAlignmentColumn(2,"left")
+ 		if NOT DetailedResults.ResultTablesFormatted
+ 			switch typeStr
+ 			case "integer","time"
+ 			else
+ 				FormatTab3.setFormatString(1, "") -- instead of FormatStr = "-15.2", observation with max precision
+ 			end;
+ 			--                                             "Observations", "Messages of the simulation runs"
+ 			FormatTab3.writeRow(1,0, RootFolder.Localization.getText(296), RootFolder.Localization.getText(408))
+ 			DetailedResults.setCommonFormatData(FormatTab3, i+6)
+ 
+ 			switch typeStr
+ 			case "time"
+ 			case "integer"
+ 				for var k := 0 to 5
+ 					switch k
+ 					case 0,1,4,5
+ 						DetailedResults.setFormatString(i+k, FormatStr) -- mean, stdev, left & right bound  like "-15.2"
+ 					else
+ 						DetailedResults.setFormatString(i+k, "") -- min, max
+ 					end
+ 				next
+ 			else
+ 				for var k := i to i+5 loop
+ 					DetailedResults.setFormatString(k, FormatStr) -- like "-15.2"
+ 				next
+ 				ResNo := Results.getColumnNo(str)
+ 				Results.setFormatString(ResNo, FormatStr) -- like "-15.2"
+ 			end
+ 		end
+ 
+ 		DetailedResults.createNestedList(i+6,ExpNo)
+ 		DetailedResults[i+6,ExpNo].Name := to_str(_Obs_,noStr)
+ 
+ 		i += 7
+ 
+ 	else -- output table:
+ 		var outTab:object := AttrStr -- tablefile object
+ 		var FormatTab2, FormatTab2min:table
+ 		FormatTab2.create
+ 		FormatTab2min.create
+ 		-- FormatTab2.set_FormatData(outTab); 	FormatTab2min.set_FormatData(outTab)
+ 		outTab.copyFormatTo(FormatTab2)
+ 		outTab.copyFormatTo(FormatTab2min)
+ 
+ 		var m:integer
+ 		if FormatTab2.ColumnIndex
+ 			m := FormatTab2.XdimIndex
+ 			--if FormatTab2.RowIndex_
+ 			--	m := m - 1
+ 			--end
+ 			m :=  max(m, outTab.xDim)
+ 		else
+ 			m := outTab.xDim
+ 		end
+ 
+ 		for var k := 1 to m
+ 			switch FormatTab2.getDataType(k)
+ 			case "integer"
+ 				FormatTab2.setDataType(k,"real")
+ 				FormatTab2.setFormatString(k, FormatStr)
+ 
+ 			case "acceleration","length","speed","real","weight","money"
+ 				FormatTab2.setFormatString(k, FormatStr) -- like "-15.2"
+ 				FormatTab2min.setFormatString(k, FormatStr)
+ 			else -- like "table"
+ 			end
+ 		next -- k
+ 
+ 		ResNo := Results.getColumnNo(str)
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			Results.setCommonFormat(ResNo,true)
+ 			Results.setCommonFormatData(FormatTab2, ResNo) -- format the subtable for mean values of table 'Results'
+ 		end
+ 
+ 		Results.createNestedList(ResNo,ExpNo)
+ 		Results[ResNo,ExpNo].Name:=to_str(_Obs_,noStr)
+ 
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			DetailedResults.setCommonFormat(i,true)
+ 			DetailedResults.setCommonFormatData(FormatTab2, i) -- format the subtable for mean values of table 'DetailedResults'
+ 		end
+ 
+ 		DetailedResults.createNestedList(i,ExpNo)
+ 		DetailedResults[i,ExpNo].Name:=to_str(_Mean_,noStr)
+ 
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			DetailedResults.setCommonFormat(i+1,true)
+ 			DetailedResults.setCommonFormatData(FormatTab2, i+1) -- format the subtable for stdDevs of table 'DetailedResults'
+ 		end
+ 
+ 		DetailedResults.createNestedList(i+1,ExpNo)
+ 		DetailedResults[i+1,ExpNo].Name:=to_str(_StdDev_,noStr)
+ 
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			DetailedResults.setCommonFormat(i+2,true)
+ 			DetailedResults.setCommonFormatData(FormatTab2min, i+2) -- format the subtable for min values of table 'DetailedResults'
+ 		end
+ 
+ 		DetailedResults.createNestedList(i+2,ExpNo)
+ 		DetailedResults[i+2,ExpNo].Name:=to_str(_Min_,noStr)
+ 
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			DetailedResults.setCommonFormat(i+3,true)
+ 			DetailedResults.setCommonFormatData(FormatTab2min, i+3) -- format the subtable for max values of table 'DetailedResults'
+ 		end
+ 
+ 		DetailedResults.createNestedList(i+3,ExpNo)
+ 		DetailedResults[i+3,ExpNo].Name:=to_str(_Max_,noStr)
+ 
+ 		if NOT DetailedResults.ResultTablesFormatted then
+ 			formatTab.create
+ 			formatTab.setDataType(1, "table")
+ 			formatTab.setDataType(2, "string")
+ 			formatTab.MaxXDim := 2
+ 			formatTab.ColumnIndex := true
+ 			formatTab[1,0] := _Obs_
+ 			formatTab.setAlignmentRow(0,"center")
+ 			formatTab.setAlignmentColumn(1,"center")
+ 
+ 			DetailedResults.setCommonFormat(i+4,true)
+ 
+ 			formatTab.columnIndex := true              -- "Observations", "Messages of the simulation runs"
+ 			formatTab.writeRow(1,0, RootFolder.Localization.getText(296), RootFolder.Localization.getText(408))
+ 			DetailedResults.setCommonFormatData(formatTab, i+4) -- format the subtable (1 column) of observations
+ 		end
+ 
+ 		DetailedResults.createNestedList(i+4,ExpNo) -- observations of the output table file
+ 		DetailedResults[i+4,ExpNo].Name:=to_str(_TabObs_,noStr)
+ 
+ 		tab := DetailedResults[i+4,ExpNo]
+ 		tab.setCommonFormat(1,true)
+ 		tab.setCommonFormatData(FormatTab2min, 1) -- set the format the subtable tab (?)
+ 
+ 		for j := 1 to numRuns
+ 			tab.createNestedList(1,j)
+ 			tab[1,j].Name:=to_str("M ",j)
+ 		next
+ 
+ 		i += 5
+ 	end -- output table
+ end -- while DetailedResults[i,0] /= void
+ 
+ if UsingRules
+ 	ReportRules[0,ExpNo] := ExpStr
+ end
+ 
+ if NOT DetailedResults.ResultTablesFormatted
+ 	DetailedResults.ResultTablesFormatted := true
+ end
+RandomSeed: 183
+UUID: 911d042b-5883-4a00-a7a6-784c5159c480
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

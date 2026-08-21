@@ -1,0 +1,156 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Chart"
+ChangePathCtrl:
+ChartType: "Stacked Columns"
+CloseCtrl:
+CollectData: true
+ConstructorCtrl:
+Coordinate3D: [3,-2.9999999999999996,0]
+CreateIn3D: true
+DataInColumn: false
+DataRange: "{1,1}..{*,*}"
+DataSource: "Input Channels"
+DataTable:
+DestructorCtrl:
+DisplayInFrame: false
+DragDropCtrl:
+Effect: "(None)"
+FeedRate: 6
+FirstInterval: 0
+GapWhenNull: true
+GraphTable: "Graph"
+Height: 15
+ImageQuality3D: "Balanced"
+InitCtrl:
+InputChannels:
+ Comment: ""
+ EditorPermissions: 0
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   ReadOnly: false
+   Hidden: false
+   Width: 18
+  RowFormat:
+  -
+   Index: 0
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+ Columns:
+Label: ""
+LegendLocation: "(Off)"
+ListOfPools: []
+Mode: "Watch"
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: Chart
+NullValue: -999999
+NumIntervals: 0
+NumValues: 1000
+OpenCtrl:
+PlausibilityCtrl:
+RelabelCtrl:
+RenameCtrl:
+Rotation: 180
+SampleInterval: 1:00
+Scrollbar: false
+SelectCtrl:
+SizeInFrame: [0.8,0.8]
+StepCurve: false
+StepSize: 1
+Subtitle: ""
+Title: ""
+UseMetricPrefix: true
+UUID: 4c6eeafc-6b04-4db3-ab2c-f111813f335b
+WorkerGroup: "Pool"
+WorkerOccupancy: "Operational + Failed"
+XGrid: true
+XGridLines: 25
+XLabel: ""
+XLog: false
+XRange: 1:00:00
+XScaleMax: -1
+XScaleMin: -1
+YGrid: true
+YGridLineInterval: 0
+YLabel: ""
+YLog: false
+YScaleMax: -1e+308
+YScaleMin: 0
+ZLabel: ""
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default","histogram","plotter"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAA3urxktLvoe32YNbzHLrvB6LnIY7cSXrRZ2zJaXOMztTc
+ - gIAAgIAAgIAAgIAAgIAAkdLuq/D3c931KcLwB6jpGJPfQH7UYm/KVmmCtLOugIAA
+ - gIAAgIAAgIAAgIAA3urxktLvheP1O8nxCa7rEJjiNYPXW3LNOVN3tbe6gIAAgIAA
+ - gIAAgIAAgIAAgIAAkdDulej2TdDzELPtCp3lK4jZU3XON1F3s7S1gIAAgIAAgIAA
+ - gIAAgIAAgIAA3urxl9bvYdbzHLvuB6PnIY7cSnrRN1F2rrO4gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAk9Puc930KcHwB6jpGJPfQH7TN1F3m6m5gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAxNfkkdXvcNz0V9HxXc7xaNHwaNHwSc3xL7vsHpDeKTZ4gIAAgIAAgIAA
+ - gIAAgIAAaZy2N2iHN2iHN2iHN2iHTZOxRb7hF63qHo/dGChycoGsgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA3urxqcnHJL/vH7HqHo/eHkWrYnCjgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAfbfcJL/vH7HqHY/dCj+2gJfDgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA3urxc6vcRsLuHo/dDUW+gJfDgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgr3kRsLuM57hJF7GaoO4gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAA1OTubKvZVLTnI1/JYX64gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAeLniU7ToElbZfZjHgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAc6vcMlm9dJHFgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAMlm9dJHFgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$Annotations:
+$Colors:
+- 0xa0a0a0
+- 0xf4f4f4
+- 0xffffff
+- 0x0
+- [0xff,0,3]
+- [0xe100,0,5]
+- [0xff4628,0,7]
+- [0xdafa,0,9]
+- [0xffd200,0,11]
+- [0xff00ff,0,1]
+- [0xde00af,0,0]
+- [0x1e6ea5,0,2]
+- [0x96ff,0,4]
+- [0x969696,0,6]
+- [0x8000,0,8]
+- [0x96c000,0,10]
+- [0x7e7e00,0,98]
+- [0x8080,0,94]
+$MarkerSize: "Large"
+$LabelFont: ["Arial",5,false,false]
+$TitleFont: ["Arial",5,false,false]
+$SubtitleFont: ["Arial",5,false,false]
+$TableFont: ["Arial",5,false,false]
+$StatisticsWizard: [0xffffffff,0x7,0,0,true,false]
+$WindowRect: [50,50,420,380]

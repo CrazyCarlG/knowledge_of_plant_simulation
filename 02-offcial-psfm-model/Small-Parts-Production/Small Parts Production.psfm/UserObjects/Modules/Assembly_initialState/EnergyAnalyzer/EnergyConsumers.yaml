@@ -1,0 +1,14 @@
+InternalClassType: DataTable
+Origin: 92baf2a0-ea31-4f39-8f87-8dfe1d876e6c
+RandomSeed: 1073746640
+UUID: 01a0236c-0546-7180-b63f-df3f85499ab5
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ColumnIndex: [string,11,"Energy Consumers","Energy [kWh]","Current Power [kW]","Maximal Power [kW]","Peak Time","Working","Setting_up","Operational","Failed","Standby","Off"]
+ Columns:
+ - [0,string,17,"AS1","AS2","AS3","AS4","AS5","MS1","MS2","MS4","MS5","PreProduction.AS6","PreProduction.AS7","PreProduction.AS8","PreProduction.F0","PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.MS6"]

@@ -1,0 +1,139 @@
+InternalClassType: Method
+Coordinate3D: [0.5,-30.85,0]
+Name: CalcStatistics4Exp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- an single experiment is finished: determine confidence intervals
+ -- Called by : endsim, NewJobId
+ param row:integer -- row in tables 'Results_' and 'DetailedResults'
+ 
+ var col,n:integer
+ var my,sigma,maxV,minV,width,zValue:real
+ var AttrStr,str:string
+ 
+ if UsingTables
+ 
+ 	for n := 1 to Input.yDim
+ 		AttrStr := Input[1,n]
+ 		str     := ValueDescriptions.get(attrStr)
+ 		col := Results.getColumnNo(str)
+ 		if col > 0
+ 			if InputValues.getColumnNo(AttrStr) = -1
+ 				InputValues[InputValues.xDimIndex + 1,0] := AttrStr
+ 			end
+ 			Results[col,row] := InputValues[AttrStr,row]
+ 		else
+ 			Recording.append(to_str("ERROR for statistics for input value ",str))
+ 			return
+ 		end
+ 	next
+ end
+ 
+ var ErrorStr:string := to_str(numRuns," ",rootfolder.Localization.getText(85)) -- like "10 Errors"
+ 
+ col := 1
+ while col <= DetailedResults.xDim
+ 	str := DetailedResults[col,0]
+ 	AttrStr := ValueDescriptions.getOrig(str)
+ 	if NOT isOutTable(AttrStr) -- numerical output value
+ 
+ 		if DetailedResults[col+6,row] /= void  -- 7, 14,...
+ 			var tab:table := DetailedResults[col+6,row]
+ 			if tab.xDim > 1
+ 				n := 0 -- number of valid observations (if errors: n < tab.yDim)
+ 				for var k := 1 to numRuns
+ 					if tab[2,k] = void
+ 						n += 1
+ 					else
+ 						tab[1,k] := void -- delete invalid numerical output value
+ 					end
+ 				next
+ 			else
+ 				n := tab.yDim
+ 			end
+ 
+ 			if n = 0
+ 				DetailedResults[col+6,row].name := ErrorStr
+ 				DetailedResults.writeRow(col,row, void,void,void,void,void,void)
+ 			else -- number of valid observations n > 0
+ 				if n < numRuns AND strLpos(to_str(" (",n,")"), DetailedResults[col+6,row].name) = 0
+ 					DetailedResults[col+6,row].name := to_str(DetailedResults[col+6,row].name," (",n,")")
+ 				end
+ 
+ 				my := tab.meanValue({1,1}..{1,*})
+ 				DetailedResults[col,row] := my
+ 				Results[str,row]  := my
+ 				OutputValues[AttrStr,row] := my
+ 
+ 				sigma := tab.standardDeviation({1,1}..{1,*})
+ 				DetailedResults[col+1,row] := sigma -- show exact values of sigma
+ 
+ 				if n > 1 AND sigma > 0 -- (  (sigma>0 AND ResultsPrecision = -1) OR (ResultsPrecision > 0 AND round(sigma, ResultsPrecision) > 0)  )
+ 
+ 					minV := tab.min({1,1}..{1,*})
+ 					DetailedResults[col+2,row] := minV
+ 
+ 					maxV := tab.max({1,1}..{1,*})
+ 					DetailedResults[col+3,row] := maxV
+ 
+ 					zValue := quantil_t(1 - alpha /2, n-1)
+ 					width := zValue * sigma / sqrt(n)
+ 					DetailedResults[col+4,row] := my - width
+ 					DetailedResults[col+5,row] := my + width
+ 
+ 				else -- sigma ~= 0, that is, all observations are approx. equal.
+ 					-- min,max, both bounds of the confidence interval
+ 					DetailedResults.writeRow(col+2,row, void,void,void,void)
+ 				end
+ 			end -- number of valid observations n > 0
+ 
+ 		end
+ 		col += 7 -- it was a numerical output value
+ 	else
+ 		col += 5 -- it was a DataTable output value
+ 	end
+ 
+ end -- while
+ 
+ if UsingRules
+ 	for n:=1 to Results4Rules.xDim
+ 		AttrStr := Results4Rules[n,0]
+ 		if OutputValues.getColumnNo(AttrStr) = -1
+ 			OutputValues[OutputValues.XDimIndex + 1,0] := AttrStr
+ 		end
+ 		OutputValues[AttrStr, row] := Results4Rules.meanValue({n,1}..{n,*})
+ 	next
+ end
+ 
+ if UsingTables
+ 	col := 2
+ 	while ExpTable[col,0] /= void
+ 		str := ExpTable[col,0]
+ 		AttrStr := ValueDescriptions.getOrig(str)
+ 		if ExpTable[col, row] /= void
+ 			InputValues[AttrStr,row] := ExpTable[col, row]
+ 		end
+ 		col += 1
+ 	end
+ end
+ 
+ Results.refillDialog
+ DetailedResults.refillDialog
+RandomSeed: 281
+UUID: 9f27183a-0b85-4b41-b249-b98b4e9f1ae6
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

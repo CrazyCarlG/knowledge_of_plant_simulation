@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [2.45,-7.45,0]
+Name: ErrorHandler
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param byref Text: string, MethodName: string, LineNumber: integer ->any
+ 
+ var machTab:object := ~.MachinesTable
+ -- display the last error
+ machTab.writeRow(11,MachineIndex, true, MethodName, LineNumber, Text)
+ machTab.addLogging(to_str("Method ",MethodName,"(line ",LineNumber,"): ",Text), JobId, MachineIndex, true)
+ 
+ -- resetting is necessary (catching the exception)
+ -- if not, the error is given to the calling method, therefore the calling method continues
+ Text := ""
+ 
+ var sema:object := ~.~.rootfolder.Internal.&sema
+ sema.value := false
+ return void
+RandomSeed: 354
+UUID: 2e784eb9-b748-4a5c-a399-cd76da3e6f35
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

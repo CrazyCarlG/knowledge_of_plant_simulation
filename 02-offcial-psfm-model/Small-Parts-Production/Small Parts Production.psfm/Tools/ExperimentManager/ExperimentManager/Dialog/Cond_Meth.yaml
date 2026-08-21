@@ -1,0 +1,34 @@
+InternalClassType: Method
+Coordinate3D: [-7,4,0]
+Name: Cond_Meth
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- submethod of Experiments.callback, button Condition Method pressed
+ var rName:string;var rTab:object;var row:integer
+ 
+ rName := @.activeRuleName
+ rTab := ~.Rules.Rules
+ rTab.setCursor(2,1)
+ rTab.find({2,1}..{2,*},rName)
+ row := rTab.cursorY
+ -- 22.03.04 8.0.0 (jek): ref is not necessary here
+ ~.Rules.Rules[4,row].openDialog
+
+RandomSeed: 322
+UUID: d3ccda65-6316-4644-97eb-fa5b1524c8e0
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

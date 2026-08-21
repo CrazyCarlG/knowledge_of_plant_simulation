@@ -1,0 +1,85 @@
+InternalClassType: Method
+Coordinate3D: [27.9,-39.55,0]
+Name: evalRules
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Called by:_DefExperiments (non-distributed simulation)
+ -- M_SetParams (distributed simulation)
+ param localExp:integer
+ 
+ var RuleSequence:table[integer,string]
+ 
+ Recording.append("Rule based settings")
+ var RulesTab:object := Rules.Rules
+ RuleSequence.create
+ RuleSequence.insertList(1,1, RulesTab.copy({1,1}..{2,*}))
+ RuleSequence.sort(1,"down") -- rules with great priority will firstly evaluate
+ for var i:=1 to RuleSequence.ydim
+ 	var RuleName:string := RuleSequence[2,i]
+ 	Recording.append(to_str("Investigate the rule \\"",RuleName,"\\" in the experiment ",localExp))
+ 	RulesTab.setCursor(2,1)
+ 	RulesTab.find({2,1}..{2,*},RuleName)
+ 	var rNo: integer := RulesTab.cursorY
+ 
+ 	if RulesTab[7,rNo] -- active rule
+ 		if localExp = 1
+ 			-- perform all init rules
+ 			if RulesTab[8,rNo] -- if init-rule
+ 				Recording.append(to_str("Perform the init rule \\"",RuleName,"\\" (prio ",RuleSequence[1,i],")"))
+ 				--str := rootfolder.Localization.getText(385) -- overwrite with "Init rule"
+ 				performRule(rNo,localExp)
+ 				--seqStr := to_str(seqStr,"\\"",RuleName,"\\" (prio ",RuleSequence[1,i],")")
+ 				--ReportRules[RuleName,localExp] := to_str(ReportRules[RuleName,localExp]," (prio ",RuleSequence[1,i],")" )
+ 
+ 			else -- not init rule
+ 				Recording.append(to_str("Do not perform the rule \\"",RuleName,"\\", since it is not an init rule."))
+ 				ReportRules[RuleName,localExp] := rootfolder.Localization.getText(383) -- No init rule
+ 			end -- not init rule
+ 
+ 		else -- localExp > 1, perform non-init rules
+ 			if RulesTab[8,rNo] -- if init-rule
+ 				ReportRules[RuleName,localExp] := rootfolder.Localization.getText(385) -- Init rule
+ 
+ 			else -- not an init-rule
+ 				if executeSilent( "param s:string -> boolean result := Rules.validExp(s)",RulesTab[9,rNo]) -- column "Valid for Experiments" in DataTable Rules.Rules
+ 					Recording.append(to_str("Perform the valid rule \\"",RuleName,"\\" (prio ",RuleSequence[1,i],")"))
+ 					performRule(rNo,localExp)
+ 					--ReportRules[RuleName,localExp] := to_str(ReportRules[RuleName,localExp]," (prio ",RuleSequence[1,i],")")
+ 
+ 				else -- rule is NOT valid for the current experiment
+ 					Recording.append(to_str("Do not perform the non-valid rule \\"",RuleName,"\\""))
+ 					ReportRules[RuleName,localExp] := rootfolder.Localization.getText(384) -- Not valid
+ 				end
+ 			end
+ 		end -- localExp > 1
+ 
+ 	else -- not active
+ 		Recording.append(to_str("Do not perform the inactive rule \\"",RuleName,"\\""))
+ 	end -- active
+ next -- i: row of RuleSequence
+ 
+ for var col := 1 to InputValues.xDim
+ 	if InputValues[col,localExp].void
+ 		InputValues[col,localExp] := InputValues[col, localExp - 1]
+ 	end
+ next
+ 
+ --_Protocol[4, localExp] := rootfolder.Localization.getMessage(189,countRules,"","") -- $1 rules were applied.
+RandomSeed: 283
+UUID: dee6a79f-80cc-41cb-bc36-b93a08d149a8
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

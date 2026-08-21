@@ -1,0 +1,45 @@
+InternalClassType: Method
+Coordinate3D: [17.25,-0.1,0]
+Name: reset
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- non-distributed simulation: DefExperiments_ after _reset
+ -- for a distributed simulation the remote_process has_State = "ready"
+ if NOT UsingRemote AND state /="ready" -- AND currRunNo = 1
+ 	if firstReset AND currRunNo = 1 then
+ 		&DefExperiments.executeNewCallChain
+ 		StartCPUTime := ProcessTime
+ 		-- set input values for the next experiment
+ 		-- calls eventController.reset with firstReset := false
+ 	else
+ 		StartCPUTime := ProcessTime
+ 		eventController.start --WithoutAnimation
+ 	end;
+ 	if numRuns = currRunNo
+ 		firstReset := true
+ 	end;
+ end
+ if dialog.restoring
+ 	&restoreParam.executeNewCallChain
+ 	dialog.restoring := false
+ end
+ if SingleRun
+ 	&SingleRunSetParameter.executeNewCallChain
+ end
+RandomSeed: 185
+UUID: 06c1a3fb-0e2f-4ec8-aed8-4513e2deb251
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

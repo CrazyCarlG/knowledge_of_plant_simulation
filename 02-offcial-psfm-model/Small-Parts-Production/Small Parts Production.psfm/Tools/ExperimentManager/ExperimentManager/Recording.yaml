@@ -1,0 +1,38 @@
+InternalClassType: DataList
+Coordinate3D: [29.9,-24.1,0]
+Name: Recording
+Origin: f8b8fac6-d0c1-4d3c-97ff-ec9e2cf6ab56
+UUID: 8b0633bd-a16c-495e-bc56-616c6d45efdc
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: isOpen
+ ID: 1
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: remoteErrors
+ ID: 2
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: localErrors
+ ID: 3
+ DataType: integer
+ Value: 0
+ ShowInTooltip: false
+ StatisticsActive: true
+$Data:
+ ListFormat:
+  ColumnWidth: 62
+  DataType: string
+  MaxXDim: 1
+  ShowDataType: true
+ Column:

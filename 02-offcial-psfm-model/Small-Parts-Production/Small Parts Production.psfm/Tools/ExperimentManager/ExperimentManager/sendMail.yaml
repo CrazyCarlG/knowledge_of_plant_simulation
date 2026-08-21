@@ -1,0 +1,38 @@
+InternalClassType: Method
+Coordinate3D: [3.6999999999999993,-24.1,0]
+Name: sendMail
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: EndOfAllExperiments
+ -- non-distribute simulation and distribute simulation
+ var subject:string := to_str(rootfolder.Localization.getText(125),strToUpper(getenv("COMPUTERNAME"))) -- Experiment study on 
+ 
+ var ModfileStr:string := rootfolder.Localization.getText(78) -- "Model file [*.spp]:"
+ ModfileStr := strOmit(ModfileStr, strLpos("[*.spp]", ModfileStr),8) -- remove "[*.spp]"
+ ModfileStr := to_str(strTrim(ModfileStr),": ",modelFile) -- Model file: 
+ 
+ var body:string := to_str(rootfolder.Localization.getText(121),strChr(10),--The experiment run is finished.
+ 	rootfolder.Localization.getMessage(122,RunningTime,"",""),strChr(10), -- The running time was $1.
+ 	ModfileStr, strChr(10),-- Model file: 
+ 	rootfolder.Localization.getText(416),": ",current) -- Experimentmanager:
+ 
+ -- local body:string := rootfolder.Localization.getText(121);--The experiment run is finished.
+ sendSMTPMail(MailServer,MailReceiver,subject,body)
+RandomSeed: 230
+UUID: 3af8d5d6-f414-4743-9db6-25bd7e5e4c43
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

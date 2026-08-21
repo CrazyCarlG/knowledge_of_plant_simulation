@@ -1,0 +1,27 @@
+InternalClassType: Display
+Active: true
+Color: 33023
+Comment: ""
+Coordinate3D: [5.8000000000000007,-5.2,0]
+Font: 4
+Name: DisplayEnergy
+Origin: 01c4c8a6-0ac4-4fed-b8d4-e8d200c48593
+Path: "self.calc"
+RandomSeed: 1073746603
+SmpPeriod: 10:00
+Transparent: true
+UUID: 01a0236c-0546-708b-9171-39eb85cc9029
+$CustomAttributes:
+-
+ Name: calc
+ ID: 1
+ DataType: method
+ Value: |+1
+  :string
+  is
+  do
+  	result := to_str(round(MS5.statEnergyTotalConsumption,1));
+      result := when strLpos(".",result) = 0 then to_str(result,".0 kWh") else to_str(result," kWh");
+  end;
+ UsingNewSyntax: false
+ ShowInTooltip: false

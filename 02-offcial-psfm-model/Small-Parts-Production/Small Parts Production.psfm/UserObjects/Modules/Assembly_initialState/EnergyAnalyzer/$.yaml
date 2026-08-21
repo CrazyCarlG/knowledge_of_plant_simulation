@@ -1,0 +1,41 @@
+InternalClassType: Frame
+Coordinate3D: [10,13.5,0]
+Label: "Energy Analyzer"
+LockStructure: true
+Name: EnergyAnalyzer
+Origin: 016f6240-8976-4424-9593-a1bb891da450
+RandomSeed: 1073746614
+UUID: 01a0236c-0546-7088-9740-4904f58b425a
+$CustomAttributes:
+-
+ Name: Consumption
+ ID: 2
+ $DataType: real
+ Value: 0
+-
+ Name: maxPowerConsumption
+ ID: 4
+ $DataType: real
+ Value: 0
+-
+ Name: powerConsumption
+ ID: 5
+ $DataType: real
+ Value: 0
+-
+ Name: ObjectsWithObserver
+ ID: 12
+ $DataType: list
+ Value:
+  CommonFormat: false
+  Column: [object,17,01a0236c-0546-704c-bc87-2e4577a292d6,01a0236c-0546-704f-886c-55086f55f145,01a0236c-0546-7052-bbf6-f49c331da9ee,01a0236c-0546-7053-b336-8173036c541f,01a0236c-0546-704b-8d37-b76606303ae7,01a0236c-0546-7046-af76-45569b40eefd,01a0236c-0546-7043-a206-0df40cc4fb7d,01a0236c-0546-7049-a5df-e9350fb02a64,01a0236c-0546-7042-bcf4-2a3a4f1e13fd,01a0236c-0546-7161-827e-40050296c141,01a0236c-0546-7144-a0a5-7f2be8c126c8,01a0236c-0546-7145-892e-43babc9f97d3,01a0236c-0546-7146-bde9-5ad6a3c43802,01a0236c-0546-7148-930c-a181aca5b444,01a0236c-0546-7149-b6f8-04d1f6841316,01a0236c-0546-7152-9ee5-3949cd237836,01a0236c-0546-7143-87e4-fd2c2dbbde5a]
+-
+ Name: ConsumptionOperational
+ ID: 14
+ $DataType: real
+ Value: 0
+-
+ Name: PeakTime
+ ID: 17
+ $DataType: time
+ Value: 0

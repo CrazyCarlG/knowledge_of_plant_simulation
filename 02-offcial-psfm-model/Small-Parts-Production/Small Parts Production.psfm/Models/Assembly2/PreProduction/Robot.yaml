@@ -1,0 +1,48 @@
+InternalClassType: PickAndPlace
+Capacity: 1
+Origin: 01a0236c-0546-715e-bf3c-ba78b27a66f1
+RandomSeed: 121
+UUID: 01a0236c-0546-7494-9115-f3955e28da90
+3D:
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.9,0.9,0.02]
+  HorizontalStatesScale: [0.5,0.335,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.9,0.9,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+ $Objects:
+ -
+  Origin: df692791-8012-4381-8e8f-dd897866ce6a
+  UUID: 30addd05-fc79-4079-98d5-99e7d0381578
+  $Objects:
+  -
+   Origin: 3c15fc7c-d6a3-4bc4-aab8-dfae0d8fb847
+   UUID: 92835df3-b546-482d-b011-4a9d7aa7bb36
+   $Objects:
+   -
+    Origin: 72b02dd4-bc50-44b5-805a-a71b06d86a9b
+    UUID: a6402bbd-26d5-4fe5-8ead-e01ea83ac788
+    $Objects:
+    -
+     Origin: c35c90b5-9f1d-4c48-ab19-803f9625903e
+     UUID: d1fc36f9-1591-442d-ac53-374e7b138f40
+     $Objects:
+     -
+      Origin: 25d0835f-5abf-4a69-b2be-a0c3b4769587
+      UUID: e240b6f7-a69a-4f49-bf8c-02d79b188a24
+      $Objects:
+      -
+       Origin: a033d80e-4d49-40eb-a954-bb5526fcdeca
+       UUID: 48fef88d-0d44-4ff2-83ba-cea1bc07e7f9
+$Successors:
+-
+ $Succ: 01a0236c-0546-7486-8e7a-e9abdeb7ba32
+ Origin: 01a0236c-0546-7160-bb1c-b69a05d78170
+ UUID: 01a0236c-0546-7496-ae7f-f5fbe3fa7349
+$Predecessors:
+- 01a0236c-0546-7495-907e-7130f9f542c0
+InheritEntranceExitLockedOnReset: false

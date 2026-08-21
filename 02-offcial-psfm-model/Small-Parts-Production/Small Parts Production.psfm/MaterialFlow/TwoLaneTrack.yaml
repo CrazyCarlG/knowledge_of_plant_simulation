@@ -1,0 +1,194 @@
+InternalClassType: TwoLaneTrack
+Capacity: -1
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [-7,-3,0]
+CreateIn3D: true
+CycleTime: 0
+DestListA:
+DestListB:
+DestructorCtrl:
+DragDropCtrl:
+FailCtrl:
+FailureActive: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: TwoLaneTrack
+OpenCtrl:
+PauseCtrl:
+PlausibilityCtrl:
+RandomSeed: 27
+RecoveryTime: 0
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Transport"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+TrackPitch: 1
+Traffic: "Right-hand Traffic"
+TransferLengthToObject: true
+UnplannedCtrl:
+UUID: 970bc4e0-d180-4e9b-a3d4-23b3a1024e1f
+Width: 2.1
+$BasicObject: true
+3D:
+ AniGravityMode: false
+ AnimationObject: ""
+ AnimationOffset: [0,0,0]
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ AniSmoothRotation: false
+ BaseHeight: 0
+ ExcludeFromShowContentOfLocation: false
+ ExtConfiguration:
+ -
+  Name: "Legs_1"
+  Extrusion Profile: [[-0.5,-0.1],[-0.3,-0.1],[-0.3,0.1],[-0.5,0.1],[-0.5,-0.1]]
+  Configuration Type: 20
+  Offsets: [-0.1,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa4a0a0,0x292929,0x0,0x0,0,0]
+ -
+  Name: "Legs_2"
+  Extrusion Profile: [[0.30000000000000004,-0.1],[0.5,-0.1],[0.5,0.1],[0.3,0.1],[0.30000000000000004,-0.1]]
+  Configuration Type: 20
+  Offsets: [-0.1,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0xa4a0a0,0x292929,0x0,0x0,0,0]
+ -
+  Name: "Lanes"
+  Extrusion Profile: [[-0.5,-0.1],[0.5,-0.1],[0.5,0],[-0.5,0],[-0.5,-0.1]]
+  Configuration Type: 2
+  Offsets: [0,0]
+  Repetition Interval: 0
+  Graphic Group ID: 0
+  Material: [0x808080,0x808080,0x0,0x0,0,0]
+ -
+  Name: "LaneMarkers_1"
+  Extrusion Profile: [[-0.125,-0.005859375],[0.125,-0.005859375],[0.125,0.001953125],[-0.125,0.001953125],[-0.125,-0.005859375]]
+  Configuration Type: 15
+  Offsets: [-0.015625,0.015625]
+  Repetition Interval: 0.5
+  Graphic Group ID: 0
+  Material: [0xffffff,0xffffff,0xffffff,0x0,0,0]
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimations:
+ MUSideToAttach: "Bottom"
+ NameLabelEnabled: false
+ NameLabelPosition: [0,-1.05,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: true
+ ShowMaterialFlowDirection: true
+ ShowSensors: true
+ StatesForColoring: 0x50f
+ StatesOrientation: "(Off)"
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+ $ExtSegments:
+  - 0
+  - [0,2,0]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAf39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBgYGBg////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBglpaW////YGBglpaWlpaWlpaWlpaWlpaWlpaW////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////////////YGBglpaWlpaWlpaWlpaWlpaWlpaW////////////////////////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBgYGBg////lpaWlpaWlpaWlpaWlpaWlpaWlpaW////////YGBgYGBgYGBgYGBgYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBglpaW////YGBglpaWlpaWlpaWlpaWlpaWlpaWaWlp////YGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////////////YGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWYGBgYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaWYGBgYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaW////////////////lpaWlpaW////////////////lpaWlpaW////////////////lpaWlpaW////////////////lpaWlpaW////////////////lpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWYGBgYGBgYGBgYGBglpaWlpaWYGBgYGBgYGBgYGBglpaWlpaWYGBgYGBgYGBgYGBglpaWlpaWYGBgYGBgYGBgYGBglpaWlpaWYGBgYGBgYGBgYGBglpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaWlpaW////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBgYGBg////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBglpaW////YGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////////////////YGBglpaWlpaWlpaWlpaWlpaW////////////////////////////lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBgYGBg////YGBglpaWlpaWlpaWlpaWlpaWlpaWYGBgYGBgYGBg////////YGBgYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBglpaW////YGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaW////YGBgYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAlpaWlpaWlpaW////YGBglpaW////YGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWYGBglpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMYGBgjIyMjIyMYGBgjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAf39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+InheritEntranceExitLockedOnReset: false
+$LaneA:
+ BwEntranceCtrl: null
+ BwEntranceCtrlFront: false
+ BwEntranceCtrlRear: true
+ BwExitCtrl: null
+ BwExitCtrlFront: false
+ BwExitCtrlRear: true
+ EntranceCtrl: null
+ EntranceCtrlFront: true
+ EntranceCtrlRear: false
+ EntranceLocked: false
+ ExitCtrl: null
+ ExitCtrlFront: true
+ ExitCtrlOnce: false
+ ExitCtrlRear: false
+ ExitLocked: false
+ Length: 2
+ PullCtrl: null
+$LaneB:
+ BwEntranceCtrl: null
+ BwEntranceCtrlFront: false
+ BwEntranceCtrlRear: true
+ BwExitCtrl: null
+ BwExitCtrlFront: false
+ BwExitCtrlRear: true
+ EntranceCtrl: null
+ EntranceCtrlFront: true
+ EntranceCtrlRear: false
+ EntranceLocked: false
+ ExitCtrl: null
+ ExitCtrlFront: true
+ ExitCtrlOnce: false
+ ExitCtrlRear: false
+ ExitLocked: false
+ Length: 2
+ PullCtrl: null

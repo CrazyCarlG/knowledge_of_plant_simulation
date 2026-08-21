@@ -1,0 +1,88 @@
+InternalClassType: Method
+Coordinate3D: [26.150000000000002,-19.85,0]
+Name: readRemoteTable
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param eMPlant: any,obj:object,tab:table
+ var p:string := to_str(self.~)
+ 
+ -- read_the dimension of the remote table
+ var stmt:string := to_str("-> integer result := ",obj,".xDim")
+ var xDimRemote:integer := eMPlant.executeSimTalk(stmt)
+ stmt := to_str("->  integer result := ",obj,".yDim")
+ var yDimRemote:integer := eMPlant.executeSimTalk(stmt)
+ 
+ -- read_the user defined index and the format of columns from the local table object
+ var withColIndex:boolean := obj.ColumnIndex
+ tab.ColumnIndex := withColIndex
+ var withRowIndex:boolean := obj.RowIndex
+ tab.RowIndex := withRowIndex
+ 
+ var currDataType:string
+ if withColIndex 
+ 	currDataType := obj.DataTypeColumnIndex
+ 	tab.DataTypeColumnIndex  := currDataType
+ 	for var col := 1 to xDimRemote -- range {1,0}..{*,0}
+ 		stmt := to_str("-> boolean result := (",obj,"[",col,",0] = void)")
+ 		if NOT eMPlant.executeSimTalk(stmt)  -- read_not void cells
+ 			stmt := to_str("-> ",currDataType," result := ",obj,"[",col,",0]")
+ 			tab[col,0] := eMPlant.executeSimTalk(stmt)
+ 		end -- no void cell
+ 	next
+ 	
+ 	if withRowIndex -- cell [0,0]
+ 		stmt := to_str("-> boolean result := (",obj,"[0,0] = void)")
+ 		if NOT eMPlant.executeSimTalk(stmt)  -- read_not void cells
+ 			stmt := to_str("-> ",currDataType," result := ",obj,"[0,0]")
+ 			tab[0,0] := eMPlant.executeSimTalk(stmt)
+ 		end -- no void cell		
+ 	end	-- cell [0,0]
+ end -- if withColIndex
+ 
+ if withRowIndex 
+ 	currDataType := obj.getDataType(0)
+ 	tab.setDataType(0, currDataType)
+ 	for var row := 1 to yDimRemote -- range {0,1}..{0,*}
+ 		stmt := to_str("-> boolean result := (",obj,"[0,",row,"] = void)")
+ 		if NOT eMPlant.executeSimTalk(stmt)  -- read_not void cells
+ 			stmt := to_str("-> ",currDataType," result := ",obj,"[0,",row,"]")
+ 			tab[0,row] := eMPlant.executeSimTalk(stmt)
+ 		end -- no void cell		
+ 	next
+ end
+ 
+ for var col := 1 to xDimRemote -- range {1,1}..{*,*}
+ 	currDataType := obj.getDataType(col)
+ 	
+ 	switch currDataType
+ 	case "list","table" -- ignore these datatypes
+ 	else
+ 		if currDataType = "integer" then currDataType := "real" end
+ 		tab.setDataType(col, currDataType)
+ 		for var row := 1 to yDimRemote 
+ 			stmt := to_str("-> boolean result := (",obj,"[",col,",",row,"] = void)")
+ 			if NOT eMPlant.executeSimTalk(stmt)  -- read_not void cells
+ 				stmt := to_str("-> ",currDataType," result := ",obj,"[",col,",",row,"]")
+ 				tab[col,row] := eMPlant.executeSimTalk(stmt)
+ 			end -- no void cell
+ 		next
+ 	end -- switch
+ next
+RandomSeed: 216
+UUID: 3eb7e09e-2640-4180-8eea-581aef3daadf
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

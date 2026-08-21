@@ -1,0 +1,37 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [0,-8.0000001,0]
+Length: 8.1415926535897931
+Name: F11
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 102
+UUID: 01a0236c-0546-702b-bd15-10a70acc09c5
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [180,90,1.9999999999999998,0]
+  - [0,5,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-7021-8420-1cbbacc7bc38
+ Name: Connector22
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-702c-bbbb-82e30f76f955
+$Predecessors:
+- 01a0236c-0546-7055-a65d-6a4f66c2ba75
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 2
+ $CreatedHere: true
+ PositionAbs: 5.2
+ FromEnd: false
+ Control: "TransferStation.PartSensorControl"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false

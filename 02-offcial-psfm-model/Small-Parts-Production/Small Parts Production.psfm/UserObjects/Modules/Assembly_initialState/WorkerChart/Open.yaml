@@ -1,0 +1,69 @@
+InternalClassType: Method
+Origin: 349c2f49-fa00-44b4-83ac-8c50e94a68db
+Program: |+1
+ -- interaction open, drag & drop
+ is
+ 	DialogValue:string;
+ do
+ 	switchRadioButton(current);
+ 
+ 	if VarObj /= void then -- if an object is entered, it must be correct:
+ 		DialogValue := makePathRelative(VarObj, ~);
+ 		Dialog.setCaption("WorkerPool_Inp",DialogValue);
+ 	end;
+ 	Dialog.setCaption("TextBoxInterval", to_str(VarInterval));-- sample interval
+ 
+ 	if (VarChartType = "Columns") or (VarChartType = "Stacked Columns") then
+ 		Dialog.setIndex("ChartType", 1);
+ 	else
+ 		Dialog.setIndex("ChartType", 2);
+ 	end;
+ 
+ 	if (VarPointOfView = "Worker") then
+ 		Dialog.setIndex("PointOfView", 1);
+ 	else
+ 		Dialog.setIndex("PointOfView", 2);
+ 	end;
+ 
+ 	inspect VarStatisticGroup -- RadioButton 'Grouping'
+ 	when "Worker" then
+ 		Dialog.setCheckBox("Worker",true);
+ 	when "Group" then
+ 		Dialog.setCheckBox("Group",true);
+ 	when "Pool" then
+ 		Dialog.setCheckBox("Pool",true);
+ 	end;
+ 
+ 	if ~ /= rootfolder then 
+ 		GetWorkersFromPool;	-- fill the table 'myWorkerTable' with all worker
+ 		Refresh;
+ 	end;
+ 
+ -- remove for demo:	Dialog.open;
+ -- the program of this method is not inherited
+ 	if myWorkerTable.ydim=0 then
+ 			-- "No data has been recorded."
+ 		messageBox(rootfolder.Localization.getText(65),1,1);
+ 	else
+ 		Chart.Active := true; 
+ 	end;
+ end; 
+
+RandomSeed: 1073746651
+UUID: 01a0236c-0546-7166-ade3-a1fd51d18833
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+UsingNewSyntax: false

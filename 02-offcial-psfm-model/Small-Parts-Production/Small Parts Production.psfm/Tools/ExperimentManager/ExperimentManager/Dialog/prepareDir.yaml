@@ -1,0 +1,30 @@
+InternalClassType: Method
+Coordinate3D: [-7,11,0]
+Name: prepareDir
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ ->string
+ var queryStr:string
+ 
+ queryStr := rootfolder.Localization.getText(211)--"Please select a folder."
+ 
+ 	result := to_str(browseForFolder(queryStr),"\\\\")
+
+RandomSeed: 320
+UUID: ee9d4ee8-48b4-46fc-b95e-b8b9e26ab01d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,33 @@
+InternalClassType: Station
+Label: "MS6"
+Name: MS6
+Origin: 01a0236c-0546-7002-942b-c953d488ecef
+PowerInputFailed: 0.4
+PowerInputOperational: 0.4
+PowerInputStandby: 0.1
+PowerInputWorking: 1.5
+RandomSeed: 76
+UUID: 01a0236c-0546-7143-87e4-fd2c2dbbde5a
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7144-a0a5-7f2be8c126c8
+ Origin: 01a0236c-0546-700b-b294-db9c8dab37b4
+ UUID: 01a0236c-0546-714c-954d-f1a5a08fca00
+$Predecessors:
+- 01a0236c-0546-7163-b933-03948d6ee19d
+InheritEntranceExitLockedOnReset: false
+$EnergyActive: true
+$ProcImp:
+ Active: true
+ BrokerPath: "~.Broker"

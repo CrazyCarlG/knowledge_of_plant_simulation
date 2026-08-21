@@ -1,0 +1,59 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-7096-a7f4-4e9e3b6d599f
+UUID: 01a0236c-0546-73cc-8f4c-c664bca2eb2f
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: AllJobs4Rules
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ListFormat:
+   Alignment: "Right"
+   ColumnIndex: true
+   ColumnWidth: 6
+   DataType: integer
+   MaxXDim: 7
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Width: 9
+   -
+    Index: 2
+    Width: 9
+   -
+    Index: 3
+    DataType: string
+    Width: 12
+   -
+    Index: 4
+    DataType: string
+    Width: 20
+   -
+    Index: 5
+    DataType: datetime
+    Width: 20
+   -
+    Index: 6
+    DataType: datetime
+    Width: 20
+   -
+    Index: 7
+    DataType: time
+    Width: 12
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,8,~,"Experiment","Observation","State","Simulation machine (No)","Start","End","Running time "]
+  Columns:
+$Data:
+ ColumnIndex: [string,8,~,"Experiment","Observation","State","Simulation machine (No)","Start","End","Running time "]
+ Columns:

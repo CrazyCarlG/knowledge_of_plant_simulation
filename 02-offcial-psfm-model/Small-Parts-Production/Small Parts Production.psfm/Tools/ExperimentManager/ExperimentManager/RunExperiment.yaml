@@ -1,0 +1,68 @@
+InternalClassType: Method
+Coordinate3D: [55,-33,0]
+Name: RunExperiment
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param pExpNum:integer, pObsNum:integer, pWaituntilFinished:boolean
+ 
+ -- This process is started for the simulation of a single observation.
+ SingleRun := true
+ 
+ UsingRemote := true
+ dialog.restoring := false
+ UsingRules := false
+ --UserEvalMethod_:= "" -- User defined evaluation method is impossible since the observation is already computed.
+ UsingTables := true
+ MailAtEnd := false
+ saveHTMLatEnd := false
+ showRuntimeAtEnd := false
+ saveExcelatEnd := false
+ 
+ if pExpNum < 0 -- If negative the experiment number is the nth active experiment
+ 	var expCount:integer
+ 
+ 	for var i := 1 to ExpTable.yDim
+ 		if ExpTable[1,i]
+ 			expCount += 1
+ 
+ 			if expCount = pExpNum
+ 				currExpNo := i
+ 				exitloop
+ 			end
+ 		end
+ 	next
+ else
+ 	currExpNo := pExpNum
+ end
+ 
+ currRunNo := pObsNum
+ 
+ animation(false)
+ EventController.Realtime := false
+ 
+ IsRunning := true
+ 
+ EventController.reset
+ 
+ if pWaituntilFinished
+ 	.ExperimentManager.ExitAfterSingleRun := false
+ 	waituntil not .ExperimentManager.SingleRun
+ end
+RandomSeed: 559
+UUID: 7da8ee5e-5db1-4c01-ac89-8b66072975af
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

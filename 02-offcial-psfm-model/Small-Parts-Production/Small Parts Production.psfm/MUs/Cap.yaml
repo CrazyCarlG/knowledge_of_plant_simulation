@@ -1,0 +1,66 @@
+InternalClassType: Part
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DragDropCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.1
+MULength: 0.4
+MUWidth: 0.4
+Name: Cap
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+RouteWeightingAttr: ""
+SelectCtrl:
+UUID: 3c5359ba-e79c-4acf-ada3-d16ff9238853
+3D:
+ GraphicGroupNames: ["default","Operational","Waiting"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ ScaleAutomatically: false
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Operational"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [8,8]
+ Pixels:
+ - gIAAgIAAAL//AL//AL//AL//gIAAgIAA
+ - gIAAAL//AL//AL//AL//AL//AL//gIAA
+ - AL//AL//AL//AL//AL//AL//AL//AL//
+ - AL//AL//AL//AL//AL//AL//AL//AL//
+ - AL//AL//AL//AL//AL//AL//AL//AL//
+ - AL//AL//AL//AL//AL//AL//AL//AL//
+ - gIAAAL//AL//AL//AL//AL//AL//gIAA
+ - gIAAgIAAAL//AL//AL//AL//gIAAgIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [8,8]
+ Pixels:
+ - gIAAgIAAAP//AP//AP//AP//gIAAgIAA
+ - gIAAAP//AP//AP//AP//AP//AP//gIAA
+ - AP//AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//AP//AP//AP//AP//AP//AP//
+ - AP//AP//AP//AP//AP//AP//AP//AP//
+ - gIAAAP//AP//AP//AP//AP//AP//gIAA
+ - gIAAgIAAAP//AP//AP//AP//gIAAgIAA

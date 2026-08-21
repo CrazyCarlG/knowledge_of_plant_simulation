@@ -1,0 +1,242 @@
+InternalClassType: Method
+Coordinate3D: [14.05,-34.650000000000006,0]
+Name: prepChart4Report
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- prepare the ChartObj for the HTML_report
+ -- quartile and median: look at http://kortenkamps.net/material/stochastik/Quartile.html
+ -- called by: prepReport_via ShowReport (dialog), EndOfAllExperiments
+ param AttrStr:string -> string -- output value to be displayed
+ 
+ var my:real
+ var i,rowRes,n,m,u: integer
+ 
+ var delta:real := 0.08
+ var cNo:integer := 1 -- blue, color for the intervals
+ var k:integer := tmpCharts.yDim + 1
+ /*var ChartObj:object := Chart.duplicate(current)
+ ChartObj.Coordinate3D := makearray(56 + 3 * k, -0.4, 0.0)*/
+ 
+ //tmpCharts[1,k] := makePathRelative(ChartObj,current)
+ 
+ var OutChartTab:table := Report.meanValueTable
+ //var AnnotationsTab:table := ChartObj.Annotationstable
+ OutChartTab.delete({0,0}..{*,*})
+ //AnnotationsTab.delete
+ ChartTable.delete
+ 
+ var detailRes:object := DetailedResults
+ 
+ var str:string := ValueDescriptions.get(AttrStr)
+ var colRes:integer := detailRes.getColumnNo(str)
+ if colRes < 0
+ 	print "Please check the output value \\"",AttrStr,"\\" (\\"",str,"\\")."
+ 	return
+ end
+ var isAttrTime:boolean := (detailRes.getDataType(colRes) = "time")
+ 
+ k := 0
+ for i := 1 to ExpTable.yDim
+ 	if ExpTable[1,i] AND (detailRes[1,i] /= void)  -- if active experiment with results
+ 		k += 1
+ 		OutChartTab[0,k] := detailRes[0,i]
+ 	end
+ next
+ if UsingRules
+ 	while i < NumRulesExp
+ 		i += 1
+ 		k += 1
+ 		OutChartTab[0,k] := ExpTable.getExpID(i)
+ 	end
+ else
+ 	if OutChartTab.YdimIndex = 0
+ 		OutChartTab[0,1] := detailRes[0,1]
+ 	end
+ end
+ 
+ colRes := detailRes.getColumnNo(AttrStr)
+ if colRes > 0
+ 	OutChartTab.dataType := detailRes.getDataType(AttrStr)
+ 	--unitStr := getunit(detailRes[colRes,1]);  -- Note that tablefile[1,1]/m/s is confusing
+ end
+ 
+ /*-- Title of the ChartObj
+ if ChartType = "MinMaxDiagram"
+ 	-- Min-max intervals
+ 	if MinMaxWithQuartiles
+ 		str := rootfolder.Localization.getText(229) -- Min-Max intervals with quartiles
+ 	else
+ 		str := rootfolder.Localization.getText(230) -- Min-Max intervals
+ 	end
+ else -- Confidence intervals
+ 	str := rootfolder.Localization.getText(345)
+ end
+ ChartObj.Title := str*/
+ 
+ /*ChartObj.legendLocation := "(Off)"
+ ChartObj.yLabel  := AttrStr --  when strLen(unitStr)>0 then to_str(AttrStr,"/",unitStr) else AttrStr;*/
+ OutChartTab[1,0] := AttrStr
+ 
+ -- calc conf int
+ n := numRuns -- sample size (# observations)
+ k := 1
+ 
+ //var showConf:boolean := (ChartType = "ConfidenceDiagram")
+ var showQuartiles:boolean := MinMaxWithQuartiles AND (n > 3)
+ 
+ var yScaleMin:real := 1E300
+ var yScaleMax:real := -1E300
+ 
+ var timeData : boolean := false
+ 
+ for var ExpNo := 1 to OutChartTab.YDimIndex
+ 	rowRes := detailRes.getRowNo(OutChartTab[0,ExpNo])
+ 	if detailRes[colRes+6,rowRes]/=void  -- no results for this experiment
+ 
+ 		var oTab:table := detailRes[colRes+6,rowRes].copy -- all observations
+ 		if oTab.yDim>0
+ 			if isAttrTime
+ 				if detailRes[colRes,rowRes]=void then my :=0 else
+ 					my := str_to_time(detailRes.asString(colRes,rowRes))
+ 				end
+ 			else
+ 				my := str_to_num(detailRes.asString(colRes,rowRes))
+ 			end
+ 			var stdDev:real := detailRes[colRes+1,rowRes]
+ 			var multipleObs := stdDev > 0
+ 			yScaleMax := max(yScaleMax,my)
+ 			yScaleMin := min(yScaleMin,my)
+ 			OutChartTab[k,ExpNo] := detailRes[colRes,rowRes] -- main curve
+ 			var meanVal := OutChartTab[k,ExpNo]
+ 			timeData := isTime(meanVal)
+ 			if stdDev > 0
+ 
+ 		  		var minVal,maxVal,Q1,Q2,Q3, std:real
+ /*				if showConf
+ 					if isAttrTime
+ 						minVal := str_to_time(detailRes.asString(colRes+4,rowRes))-- left conf
+ 						maxVal := str_to_time(detailRes.asString(colRes+5,rowRes))-- right conf
+ 					else
+ 						minVal := str_to_num(detailRes.asString(colRes+4,rowRes))-- left conf
+ 						maxVal := str_to_num(detailRes.asString(colRes+5,rowRes))-- right conf
+ 					end
+ 
+ 					yScaleMax := max(yScaleMax,maxVal)
+ 					yScaleMin := min(yScaleMin,minVal)
+ 
+ 					ChartTable.writeRow(1, ChartTable.ydim + 1, minVal, meanVal, maxVal)*/
+ 
+ 				//else -- min-max
+ 					if isAttrTime
+ 						minVal := str_to_time(detailRes.asString(colRes+2,rowRes))-- min
+ 						--std := str_to_time(detailRes.asString(colRes+1,rowRes))-- standard deviation
+ 						maxVal := str_to_time(detailRes.asString(colRes+3,rowRes))-- max
+ 						var minConf := str_to_time(detailRes.asString(colRes+4,rowRes))-- left conf
+ 						var maxConf := str_to_time(detailRes.asString(colRes+5,rowRes))-- right conf
+ 					else
+ 						minVal := str_to_num(detailRes.asString(colRes+2,rowRes))-- min
+ 						--std := str_to_num(detailRes.asString(colRes+1,rowRes))-- standard deviation
+ 						maxVal := str_to_num(detailRes.asString(colRes+3,rowRes))-- max
+ 						minConf := str_to_num(detailRes.asString(colRes+4,rowRes))-- left conf
+ 						maxConf := str_to_num(detailRes.asString(colRes+5,rowRes))-- right conf
+ 					end
+ 
+ 					if maxVal >= maxConf
+ 						yScaleMax := max(yScaleMax,maxVal)
+ 					else
+ 						yScaleMax := max(yScaleMax,maxConf)
+ 					end
+ 					if minVal <= minConf
+ 						yScaleMin := min(yScaleMin,minVal)
+ 					else
+ 						yScaleMin := min(yScaleMin,minConf)
+ 					end
+ 
+ 					if showQuartiles
+ 						for var g := oTab.ydim downto 1
+ 							if oTab[1,g]=void
+ 								oTab.cutrow(g)
+ 							end
+ 						next
+ 						n := oTab.ydim
+ 
+ 						oTab.sort(1,"up")
+ 						m := n div 2
+ 						u := n div 4
+ 
+ 						if isAttrTime
+ 							switch n mod 4
+ 							case 0 	-- 4,8,12
+ 								Q2 := (str_to_time(oTab.asString(1,m))   + str_to_time(oTab.asString(1,m+1)))/2
+ 								Q1 := (str_to_time(oTab.asString(1,u))   + str_to_time(oTab.asString(1,u+1)))/2
+ 								Q3 := (str_to_time(oTab.asString(1,m+u)) + str_to_time(oTab.asString(1,m+u+1)))/2
+ 							case 1  -- 5,9
+ 								Q2 := str_to_time(oTab.asString(1,m+1))
+ 								Q1 := (str_to_time(oTab.asString(1,u))     + str_to_time(oTab.asString(1,u+1)))/2
+ 								Q3 := (str_to_time(oTab.asString(1,m+u+1)) + str_to_time(oTab.asString(1,m+u+2)))/2
+ 							case 2  -- 6,10
+ 								Q2 := (str_to_time(oTab.asString(1,m)) + str_to_time(oTab.asString(1,m+1)))/2
+ 								Q1 := str_to_time(oTab.asString(1,u+1))
+ 								Q3 := str_to_time(oTab.asString(1,m+u+1))
+ 							case 3  -- 3,7,11
+ 								Q2 := str_to_time(oTab.asString(1,m+1))
+ 								Q1 := str_to_time(oTab.asString(1,u+1))
+ 								Q3 := str_to_time(oTab.asString(1,m+u+2))
+ 							end
+ 						else
+ 							switch n mod 4
+ 							case 0 	-- 4,8,12
+ 								Q2 := (str_to_num(oTab.asString(1,m))   + str_to_num(oTab.asString(1,m+1)))/2
+ 								Q1 := (str_to_num(oTab.asString(1,u))   + str_to_num(oTab.asString(1,u+1)))/2
+ 								Q3 := (str_to_num(oTab.asString(1,m+u)) + str_to_num(oTab.asString(1,m+u+1)))/2
+ 							case 1  -- 5,9
+ 								Q2 := str_to_num(oTab.asString(1,m+1))
+ 								Q1 := (str_to_num(oTab.asString(1,u))     + str_to_num(oTab.asString(1,u+1)))/2
+ 								Q3 := (str_to_num(oTab.asString(1,m+u+1)) + str_to_num(oTab.asString(1,m+u+2)))/2
+ 							case 2  -- 6,10
+ 								Q2 := (str_to_num(oTab.asString(1,m)) + str_to_num(oTab.asString(1,m+1)))/2
+ 								Q1 := str_to_num(oTab.asString(1,u+1))
+ 								Q3 := str_to_num(oTab.asString(1,m+u+1))
+ 							case 3  -- 3,7,11
+ 								Q2 := str_to_num(oTab.asString(1,m+1))
+ 								Q1 := str_to_num(oTab.asString(1,u+1))
+ 								Q3 := str_to_num(oTab.asString(1,m+u+2))
+ 							end
+ 						end
+ 
+ 						ChartTable.writeRow(1, ChartTable.ydim + 1, minVal, meanVal, maxVal, Q1, Q2, Q3, minConf, maxConf)
+ 
+ 					else -- min-max without boxplots:
+ 						ChartTable.writeRow(1, ChartTable.ydim + 1, minVal, meanVal, maxVal, 0, 0 ,0, minConf, maxConf)
+ 					end
+ 				//end
+ 			else -- stDev = 0, only a single value or no value available
+ 				yScaleMax := max(yScaleMax, meanVal + meanVal*0.1)
+ 				yScaleMin := min(yScaleMin, meanVal - meanVal*0.1)
+ 				ChartTable.writeRow(1, ChartTable.ydim + 1, meanVal, meanVal, meanVal)
+ 			end -- if stdDev > 0
+ 		end
+ 
+ 	end -- no results for this experiment
+ next -- ExpNo
+ 
+ 
+ return Report.GenerateSVGChart(yScaleMax, yScaleMin, multipleObs, false, timeData, showQuartiles, str, "")
+RandomSeed: 195
+UUID: 2b42578a-0e55-4c8b-b26e-9b272c8c876b
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

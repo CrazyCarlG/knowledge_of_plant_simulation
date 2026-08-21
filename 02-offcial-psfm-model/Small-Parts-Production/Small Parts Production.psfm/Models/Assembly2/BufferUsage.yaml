@@ -1,0 +1,44 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Histogram"
+ChartType: "Columns"
+Coordinate3D: [5.65,13.5,0]
+DataInColumn: false
+DataSource: "Input Channels"
+FirstInterval: 0
+Height: 15
+InputChannels:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ Columns:
+ - [0,string,1,"Buffer1"]
+ - [1,string,1,"Buffer1.numMU"]
+Label: "BufferUsage"
+LegendLocation: "Right"
+Mode: "Watch"
+Name: BufferUsage
+NumIntervals: 0
+Origin: c838d038-52ec-4a0f-903e-0d5aa2241744
+Rotation: 0
+StepCurve: false
+StepSize: 1
+Subtitle: ""
+Title: "Occupancy"
+UUID: 01a0236c-0546-73c3-83aa-3f50dc69524e
+XLabel: "Number of MUs"
+XScaleMax: -1
+XScaleMin: -1
+YLabel: "Time Portion [%]"
+YScaleMax: 102
+YScaleMin: 0
+$WindowRect: [50,50,420,380]

@@ -1,0 +1,541 @@
+InternalClassType: Dialog
+ArgumentForApply: "Apply"
+ArgumentForClose: "Close"
+ArgumentForOpen: "Open"
+CallbackMethod: "self.Callback"
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [6,-6,0]
+CreateIn3D: true
+DestructorCtrl:
+DialogX: -1
+DialogY: -1
+DragDropCtrl:
+InitCtrl:
+Label: ".Models.Frame8.SingleProc"
+Locked: false
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: DragDropDialog
+OpenCtrl:
+OpenModal: true
+PlausibilityCtrl:
+RandomSeed: 6652
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowStandardButtons: true
+UUID: 4318e5d1-3f9f-49a8-bee5-356b558acdf4
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAA////////5ubm////////AAAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA2NjY////////5ubmAAAA5ubm////////2NjYAAAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA////////5ubmAAAAAAAAAAAA5ubm////////AAAAgIAAgIAA
+ - gIAAgIAAAAAA////////vr6+vr6+////AAAA////vr6+vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+////////AAAA////////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+////////////////////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+/v7+zpKCzpKCzpKC////vr6+////////AAAAgIAA
+ - gIAAgIAAAAAA////////vr6+vr6+zpKCzpKCzpKCvr6+vr6+////////AAAAgIAA
+ - gIAAgIAAgIAAAAAA/////////v7+zpKCzpKCzpKC////////////AAAAgIAAgIAA
+ - gIAAgIAAgIAAAAAA2NjY/////v7+zpKCzpKCzpKC////////2NjYAAAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAAAAAAAA////////////////////AAAAAAAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAAAAAAAAAAAAAAAAAAAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  callback of the DragDropDialog
+  _________________________________________________________________________________
+  Parameters	: 
+  ReturnValues: none
+  
+  Called By	: OnDragDrop
+  Calls		: getStationLength
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  02.05.2005  KM	translate dialog before opendialog
+  15.02.2006  KM  Nw2Way allowed
+  04.04.2013  KM  setText -> setCaption
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param action : string
+  
+  var dialog : object
+  var callingObj : object
+  var pos1 : length
+  var act : integer
+  var unit : string
+  
+  dialog := self.~
+  callingObj := dialog.openedBy
+  if callingObj = void 
+  	return
+  end
+  
+  switch action
+  case "Open" 
+  	dialog.dialogInit
+  /* --------------------------------------------------- */
+  case "Apply" 
+  	if dialog.getCheckbox("Partstation") 
+  		dialog.dialogApply(1)
+  	elseif dialog.getCheckbox("Targetstation") 
+  		dialog.dialogApply(2)
+  	end
+  /* --------------------------------------------------- */
+  case "Close" 
+  	callingObj.OpenedDialog := void
+  /* --------------------------------------------------- */
+  case "Lanes" 
+  	act := dialog.getIndex("Lanes")
+  	pos1 := callingObj.getStationLength(dialog.dropObject, act)
+  	unit := getUnit(pos1)
+  	dialog.setCaption("Length","[ 0 - "+to_str(pos1)+" "+unit+" ]")
+  /* --------------------------------------------------- */
+  end
+
+ ShowInTooltip: false
+-
+ Name: dialogApply
+ ID: 2
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  Set the partstation or the targetstation of the TransferStation.
+  _________________________________________________________________________________
+  Parameters	: type = 1, partstation; type = 2, targetstation
+  ReturnValues: none
+  
+  Called By	: 
+  Calls		: getInternalClassType, setPartStation, setTargetStation
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  24.02.2005  KM	don't change inheritance if value isn't changed;
+  				set sensor.Activate always english
+  27.06.2005  KM	don't change inheritance if value isn't changed (Activate);
+  15.02.2006  KM  Nw2Way allowed, call of setPartStation and setTargetStation
+  21.03.2006  KM  don't use PartExitControl or TargetExitControl as UserControl, if
+  				station was dragged and dropped again
+  27.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  10.10.2007  PS Localization
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param type : integer
+  
+  var callingObj,dialog : object
+  var stationtype : integer
+  var ctrl : string
+  var oldexitctrl : string
+  var newexitctrl : string
+  var station: object
+  var str : string
+  var sensorPos:length
+  var act : integer
+  var newBool : boolean
+  var oldpos : length
+  var actnew : string
+  var lane : string
+  var sttype : integer
+  
+  dialog := self.~
+  	callingObj := dialog.openedBy
+  	
+  -- TODO: Änderungen während der Simulation ??
+  
+  if dialog.getCheckbox("Load") 
+  	stationtype := 1
+  elseif dialog.getCheckbox("Unload") 
+  	stationtype := 2
+  elseif dialog.getCheckbox("Transfer") 
+  	stationtype := 3
+  else
+  	stationtype := 4
+  end
+  newBool := (stationtype = 2 or stationtype = 3)
+  if callingObj.unloadPartcontainer /= newBool 
+  	callingObj.unloadPartcontainer := newBool
+  end
+  newBool := (stationtype = 1 or stationtype = 3)
+  if callingObj.TargetIsContainer /= newBool 
+  	callingObj.TargetIsContainer := newBool
+  end
+  
+  station := dialog.dropObject
+  sttype := callingObj.getInternalClassType(station)
+  
+  sensorPos := str_to_length(dialog.getValue("SensorPos1"))
+  act := dialog.getIndex("ActivateP")
+  actnew := rootfolder.Localization.MessageTab[2,220+act]	-- always english
+  act := dialog.getIndex("Lanes")
+  lane := callingObj.laneIntToString(act)
+  ctrl := ""
+  if sttype = 0 and (type = 1 or callingObj.TargetIsContainer) 
+  	oldexitctrl := to_str(station.exitCtrl)
+  	if type = 1 
+  		newexitctrl := makePathRelative(callingObj, station) + ".PartExitControl"
+  	else
+  		newexitctrl := makePathRelative(callingObj, station) + ".TargetExitControl"
+  	end
+  	if oldexitctrl ~= "VOID" 
+  		ctrl := ""
+  	elseif oldexitctrl ~= newexitctrl 
+  		if type = 1 
+  			ctrl := callingObj.UserPartExitCtrl
+  		else
+  			ctrl := callingObj.UserTargetExitCtrl
+  		end
+  	else
+  		str := strCopy(oldexitctrl,1,5)
+  		if str ~= "self." 
+  			oldexitctrl := strOmit(oldexitctrl,1,4)
+  			oldexitctrl := strIncl(to_str(station),oldexitctrl,1)
+  		else
+  			oldexitctrl := strIncl(to_str(station.~)+".",oldexitctrl,1)
+  		end
+  		ctrl := makePathRelative(oldexitctrl,callingObj.~)
+  	end
+  end
+  if type = 1 
+  	callingObj.setPartStation(station,sensorPos,actnew,ctrl,lane)
+  elseif type = 2 
+  	callingObj.setTargetStation(station,sensorPos,actnew,ctrl,lane)
+  else
+  	return
+  end
+ ShowInTooltip: false
+-
+ Name: DialogElements
+ ID: 3
+ DataType: table
+ Value:
+  Comment: "MessageTab.Ydim + 11"
+  ShowComment: true
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  ColumnIndex: [string,3,~,"dialogelement","Comment"]
+  Columns:
+  - [1,string,10,"SensorPos1Text","Load","Unload","Transfer","Parttransfer","ActivateTextP","Length","group","Partstation","Targetstation"]
+  - [2,string,10,"Sensor position:","Load","Unload","Reload","Move","Activate:","[ ]","Station type","Part station","Target station"]
+ ShowInTooltip: false
+-
+ Name: dialogInit
+ ID: 4
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks:
+  init of the DragDropDialog.
+  _________________________________________________________________________________
+  Parameters	: none
+  ReturnValues: none
+  
+  Called By	:
+  Calls		: getInternalClassType, getSensorPosition, getStationLength,
+  			  getSensorActivate
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  24.02.2005  KM	init sensorpos and activate if same station
+  04.04.2005  KM	init sensorpos with the right unit
+  08.07.2005  KM	Source allowed for partstation, drain for targetstation
+  02.12.2005  KM  use attribute length only for line-oriented objects
+  15.02.2006  KM  Nw2Way allowed
+  03.03.2006  KM  change of lane not allowed for inherited sensors
+  19.05.2006  KM  NwAssembler as part station allowed
+  22.09.2006  KM  allow part or targetstation in other frame than the transferStation
+  07.05.2012  KM	cut length of object
+  04.04.2013  KM  setText -> setCaption
+  12.11.2015  KM  DePortioner allowed as targetstation for unload or parttransfer and Portioner allowed as partStation
+  26.06.2023  KM  outdated Attribute "InternalClassName" replaced with "InternalClassType
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  var callingObj,station : object
+  var dialog : object
+  var unit : string
+  var pos1T : string
+  var pos1 : length
+  var index,indexL : integer
+  var iCN : string
+  var type : integer
+  var enable : boolean
+  
+  dialog := self.~
+  callingObj := dialog.openedBy
+  station := dialog.dropObject
+  if callingObj /= void
+  
+  	dialog.setCheckbox("Load",not callingObj.unloadPartcontainer and callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Unload",callingObj.unloadPartcontainer and not callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Parttransfer",not callingObj.unloadPartcontainer and not callingObj.TargetIsContainer)
+  	dialog.setCheckbox("Transfer",callingObj.unloadPartcontainer and callingObj.TargetIsContainer)
+  
+  	iCN := station.internalClassType
+  
+  	if (callingObj.PartStation = void and iCN /= "Drain" and iCN /= "Store" and iCN /= "DePortioner") or
+  	    	 callingObj.PartStation = station
+  		dialog.setCheckbox("Partstation",true)
+  	else
+  		dialog.setCheckbox("Targetstation",true)
+  	end
+  
+  	dialog.setSensitive("Targetstation", iCN /= "Source" and iCN /= "AssemblyStation" and iCN /= "Portioner")
+  	dialog.setSensitive("Partstation", iCN /= "Drain" and iCN /= "Store" and iCN /= "DePortioner")
+  
+  	type := callingObj.getInternalClassType(station)
+  	pos1T := ""
+  	index := 1
+  	indexL := 1
+  	enable := type = 3
+  	if type > 0
+  		if callingObj.PartStation = station
+  			if callingObj.checkSensorID(1,makePathRelative(callingObj, station))
+  				pos1 := callingObj.getSensorPosition(1)
+  				pos1T := to_str(pos1)
+  				indexL := callingObj.PartSensorLane
+  				if type > 1
+  					index := callingObj.getSensorActivate(1)
+  				end
+  				if type = 3
+  					enable := not callingObj.getSensorOrigin(1)
+  				end
+  			end
+  		elseif callingObj.TargetStation = station
+  			if callingObj.checkSensorID(2,makePathRelative(callingObj, station))
+  				pos1 := callingObj.getSensorPosition(2)
+  				pos1T := to_str(pos1)
+  				indexL := callingObj.TargetSensorLane
+  				if type > 1
+  					index := callingObj.getSensorActivate(2)
+  				end
+  				if type = 3
+  					enable := not callingObj.getSensorOrigin(2)
+  				end
+  			end
+  		end
+  
+  		pos1 := callingObj.getStationLength(station, indexL)
+  		unit := getUnit(pos1)
+  		dialog.setCaption("Length","[ 0 - "+num_to_str(pos1, 6)+" "+unit+" ]")
+  	end
+  
+  	dialog.setCaption("SensorPos1",pos1T)
+  	dialog.setIndex("ActivateP",index)
+  	dialog.setIndex("Lanes",indexL)
+  
+  	dialog.setSensitive("SensorPos1Text",type > 0)
+  	dialog.setSensitive("SensorPos1",type > 0)
+  	dialog.setSensitive("Length",type > 0)
+  
+  	dialog.setSensitive("Lanes",enable)
+  
+  	dialog.setSensitive("ActivateTextP",type > 1)
+  	dialog.setSensitive("ActivateP",type > 1)
+  
+  end
+ ShowInTooltip: false
+-
+ Name: dialogTranslate
+ ID: 5
+ DataType: method
+ Value: |+1
+  /*
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+  Method Tasks: 
+  translate of the DragDropDialog.
+  _________________________________________________________________________________
+  Parameters	: tab: table with DialogElements
+  ReturnValues: none
+  
+  Called By	: OnDragDrop
+  Calls		: 
+  
+  Author		: Karola Mock, Tecnomatix
+  Date		: 01.09.2004
+  
+  _________________________________________________________________________________
+  History:
+  15.02.2006  KM  Nw2Way allowed
+  10.10.2007  PS Localization
+  04.04.2013  KM  setText -> setCaption
+  
+  ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*/
+  param tab : table
+  
+  var j	 : integer
+  var l,l1    : list
+  var dialog : object
+  
+  dialog := self.~-- drag&drop dialog
+  
+  for j := tab.ydim downto 1 
+  	dialog.setCaption(tab[1,j],rootfolder.Localization.getText(j+11))
+  next
+  
+  l.create
+  l.insert(1, rootfolder.Localization.getText(2))-- "Always"
+  l.insert(2, rootfolder.Localization.getText(3))-- "Only when Destination"
+  
+  /*PS for j := 1 to dialog.ComboTextActivate.ydim loop
+  		l[j] := dialog.ComboTextActivate[lang+1,j];
+  	next;*/
+  dialog.setList("ActivateP",l)
+  
+  l1.create -- "Lane A", "Lane B", "Lane A + Lane B", "Lane B + Lane A"
+  for j := 1 to 4 
+  	l1.insert(j, rootfolder.Localization.getText(j+5))
+  next
+  
+  /*PS for j := 1 to dialog.ComboTextLanes.ydim loop
+  		l1[j] := dialog.ComboTextLanes[lang+1,j];
+  	next;*/
+  dialog.setList("Lanes",l1)
+  
+  -- of the method
+ ShowInTooltip: false
+-
+ Name: dropObject
+ ID: 6
+ DataType: string
+ Value: ".Models.Frame8.SingleProc"
+ ShowInTooltip: false
+-
+ Name: openedBy
+ ID: 7
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+$Elements:
+-
+ Type: GroupBox
+ Name: "group"
+ Caption: "Station type"
+ Rect: [0,0,59,3]
+ $Elements:
+ -
+  Type: RadioButton
+  Name: "Load"
+  Caption: "Load"
+  Rect: [5,0,0,0]
+  GroupID: 0
+  IsSelected: true
+ -
+  Type: RadioButton
+  Name: "Unload"
+  Caption: "Unload"
+  Rect: [30,0,0,0]
+  GroupID: 0
+ -
+  Type: RadioButton
+  Name: "Transfer"
+  Caption: "Reload"
+  Rect: [5,1,0,0]
+  GroupID: 0
+ -
+  Type: RadioButton
+  Name: "Parttransfer"
+  Caption: "Move"
+  Rect: [30,1,0,0]
+  GroupID: 0
+-
+ Type: RadioButton
+ Name: "Partstation"
+ Caption: "Part station"
+ Rect: [0,3,0,0]
+ GroupID: 1
+ IsSelected: true
+-
+ Type: RadioButton
+ Name: "Targetstation"
+ Caption: "Target station"
+ Rect: [0,4,0,0]
+ GroupID: 1
+-
+ Type: StaticText
+ Name: "SensorPos1Text"
+ Caption: "Sensor position:"
+ Rect: [0,5,0,0]
+ Enable: false
+-
+ Type: EditText
+ Name: "SensorPos1"
+ Rect: [15,5,10,0]
+ Enable: false
+ DataType: 13
+ Password: false
+-
+ Type: StaticText
+ Name: "Length"
+ Caption: "[ ]"
+ Rect: [27,5,0,0]
+ Enable: false
+-
+ Type: Drop-Down
+ Name: "Lanes"
+ Caption: ["Lane A","Lane B","Lane A + Lane B","Lane B + Lane A"]
+ Rect: [44,5,15,0]
+ CallbackArgument: "Lanes"
+ Enable: false
+ SelectionIndex: 1
+-
+ Type: StaticText
+ Name: "ActivateTextP"
+ Caption: "Activate:"
+ Rect: [0,6,0,0]
+ Enable: false
+-
+ Type: Drop-Down
+ Name: "ActivateP"
+ Caption: ["Always","Only when Destination"]
+ Rect: [15,6,24,0]
+ Enable: false
+ SelectionIndex: 1

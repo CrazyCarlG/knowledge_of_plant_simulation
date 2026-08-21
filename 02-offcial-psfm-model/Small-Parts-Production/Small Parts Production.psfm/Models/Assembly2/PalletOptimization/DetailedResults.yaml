@@ -1,0 +1,337 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70dc-a418-9425c224db2e
+RandomSeed: 1073747788
+UUID: 01a0236c-0546-7412-838b-d9a2a4c0d481
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: ExperimentExecuted
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+-
+ Name: ResultTablesFormatted
+ ID: 3
+ $DataType: boolean
+ Value: false
+$Data:
+ Comment: "To open a subtable, select the cell and press F2."
+ ShowComment: true
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+   Width: 8
+  -
+   Index: 1
+   FontSize: 1
+   FontColor: 0xff0000
+   Alignment: "Right"
+   DataType: real
+   Width: 10
+  -
+   Index: 2
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 15
+  -
+   Index: 3
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 8
+  -
+   Index: 4
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 8
+  -
+   Index: 5
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 16
+  -
+   Index: 6
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 16
+  -
+   Index: 7
+   FontColor: 0x0
+   Alignment: "Center"
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 16
+  -
+   Index: 8
+   FontSize: 1
+   FontColor: 0xff0000
+   Alignment: "Right"
+   DataType: real
+   Width: 22
+  -
+   Index: 9
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 15
+  -
+   Index: 10
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 13
+  -
+   Index: 11
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 13
+  -
+   Index: 12
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 16
+  -
+   Index: 13
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Right"
+   DataType: real
+   Width: 16
+  -
+   Index: 14
+   FontColor: 0x0
+   Alignment: "Center"
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: real
+     ShowDataType: true
+    Columns:
+   Width: 16
+  -
+   Index: 15
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 16
+   DataType: string
+   Width: 15
+  -
+   Index: 17
+   DataType: string
+   Width: 6
+  -
+   Index: 18
+   DataType: string
+   Width: 6
+  -
+   Index: 19
+   DataType: string
+   Width: 16
+  -
+   Index: 20
+   DataType: string
+   Width: 16
+  -
+   Index: 21
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 22
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 23
+   DataType: string
+   Width: 15
+  -
+   Index: 24
+   DataType: string
+   Width: 6
+  -
+   Index: 25
+   DataType: string
+   Width: 6
+  -
+   Index: 26
+   DataType: string
+   Width: 16
+  -
+   Index: 27
+   DataType: string
+   Width: 16
+  -
+   Index: 28
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 29
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 30
+   DataType: string
+   Width: 15
+  -
+   Index: 31
+   DataType: string
+   Width: 6
+  -
+   Index: 32
+   DataType: string
+   Width: 6
+  -
+   Index: 33
+   DataType: string
+   Width: 16
+  -
+   Index: 34
+   DataType: string
+   Width: 16
+  -
+   Index: 35
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 36
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 37
+   DataType: string
+   Width: 15
+  -
+   Index: 38
+   DataType: string
+   Width: 6
+  -
+   Index: 39
+   DataType: string
+   Width: 6
+  -
+   Index: 40
+   DataType: string
+   Width: 16
+  -
+   Index: 41
+   DataType: string
+   Width: 16
+  -
+   Index: 42
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+  -
+   Index: 43
+   FontSize: 1
+   FontColor: 0xff0000
+   DataType: string
+   Width: 4
+  -
+   Index: 44
+   DataType: string
+   Width: 15
+  -
+   Index: 45
+   DataType: string
+   Width: 6
+  -
+   Index: 46
+   DataType: string
+   Width: 6
+  -
+   Index: 47
+   DataType: string
+   Width: 16
+  -
+   Index: 48
+   DataType: string
+   Width: 16
+  -
+   Index: 49
+   DataType: table
+   Prototype:
+    EditorPermissions: 12
+    ListFormat:
+     ColumnWidth: 5
+     DataType: string
+     ShowDataType: true
+    Columns:
+   Width: 10
+ ColumnIndex: [string,8,"Experiment","Throughput","Standard Deviation","Minimum","Maximum","Left interval bound","Right interval bound","Observations"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Requirement","Exp 5","Exp 6","Exp 7","Exp 8"]

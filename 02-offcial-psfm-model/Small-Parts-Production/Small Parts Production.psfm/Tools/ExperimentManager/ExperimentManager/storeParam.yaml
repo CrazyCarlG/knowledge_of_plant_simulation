@@ -1,0 +1,69 @@
+InternalClassType: Method
+Coordinate3D: [0.69999999999999929,-24.1,0]
+Name: storeParam
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- store the current values of all input values in column 2 of tablefile 'Kind_Input'
+ -- called by: menu 'Tools' of the dialog, Start (after the query)
+ var obj:object := Kind_input
+ var s,AttrName:string
+ var p:integer
+ var o:object
+ 
+ --print "Store the current values of ",obj.yDim," input values."
+ for var j := 1 to obj.yDim
+ 	var orgStr:string := obj[0,j] -- technical notation
+ 	obj[2,j] := to_str(readValue(orgStr))
+ 	if strLpos("[",orgStr) = 0 -- no DataTable or 1D-list
+ 		s := orgStr
+ 		while NOT existsObject(s)
+ 			p := strRpos(".",s)
+ 			AttrName := strCopy(s,p+1,strLen(s))
+ 			s := strCopy(s,1,p-1)
+ 		end
+ 
+ 		o := s
+ 		var CanInherit :boolean := false
+ 		var Inherited  :boolean := false
+ 		if strLpos("(",AttrName) > 0 -- creationTable(1) or erzeugungsTabelle(1)
+ 			if o.InternalClassType = "WorkerPool"
+ 				o.getCreationTable(void,Inherited) -- Determine the inheritance of the creation table of a WorkerPool
+ 				CanInherit := true
+ 			end
+ 
+ 		else
+ 			if o.InternalClassType = "Variable"
+ 				AttrName := "Value"
+ 			end
+ 			o.getAttribute(AttrName,Inherited,CanInherit) -- detect the inheritance of the attribute
+ 		end
+ 
+ 		if CanInherit
+ 			if Inherited
+ 				obj[3,j] := true
+ 			else
+ 				obj[3,j] := false
+ 			end
+ 		else
+ 			obj[3,j] := void
+ 		end
+ 	end -- no DataTable or 1D-list
+ next -- j input value
+RandomSeed: 219
+UUID: cf618141-ad9a-4470-bed7-ccca49de6373
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,23 @@
+InternalClassType: Chart
+Label: "Confidence intervals"
+Origin: 01a0236c-0546-70ca-81ff-5192c26ffbb2
+RandomSeed: 1073747220
+Subtitle: "of the output value '$1' of the experiment $2."
+Title: "The width of the confidence interval"
+UUID: 01a0236c-0546-7265-be80-d73308ef9499
+XLabel: "Number of Observations (The observed confidence interval is marked.)"
+$CustomAttributes:
+-
+ Name: data
+ ID: 1
+ $DataType: table
+ Value:
+  CommonFormat: false
+  ColumnIndex: [integer,5,~,3,4,5,6]
+  Columns:
+  - [0,string,3,"Mean value","Left interval bound","Right interval bound"]
+  - [1,time,3,5,1,9]
+  - [2,time,3,5,3,7]
+  - [3,time,3,5,4,6]
+  - [4,time,3,5,4.5,5.5]
+$WindowRect: [1547,144,414,491]

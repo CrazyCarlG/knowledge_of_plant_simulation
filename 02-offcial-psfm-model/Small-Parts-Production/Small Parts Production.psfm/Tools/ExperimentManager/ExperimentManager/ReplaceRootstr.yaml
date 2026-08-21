@@ -1,0 +1,40 @@
+InternalClassType: Method
+Coordinate3D: [17.25,-27.5,0]
+Name: ReplaceRootstr
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param TabObj:object,col:integer
+ 
+ var root_str:string := to_str(TabObj.rootframe)
+ var j:integer:= 1
+ while TabObj[col,j]/=void 
+ 	var obj_str:string := to_str(TabObj[col,j])
+ 	
+ 	while strLpos(" ",obj_str)>0 
+ 		obj_str := strOmit(obj_str, strLpos(" ",obj_str),1)
+ 	end
+ 	
+ 	if strLen(obj_str)>0	
+ 		TabObj[col,j] := insRootStr(obj_str,root_str)
+ 	end
+ 	j += 1
+ end
+ TabObj.refillDialog
+RandomSeed: 236
+UUID: 048c3c43-2c62-4531-8a61-b663a6a77564
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

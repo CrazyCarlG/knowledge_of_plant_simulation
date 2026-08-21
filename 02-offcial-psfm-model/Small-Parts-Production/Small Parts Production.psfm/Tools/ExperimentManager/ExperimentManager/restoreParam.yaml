@@ -1,0 +1,86 @@
+InternalClassType: Method
+Coordinate3D: [22,-24.1,0]
+Name: restoreParam
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- restore the original values of all input values (Column 2 of 'Kind_Input')
+ -- called by: EndOfAllExperiments (depending on the check box in the dialog advanced setting), menu of the dialog
+ root.deleteMovables
+ var obj:object := Kind_Input
+ var stmt,s,AttrName:string
+ var p:integer
+ var o:object
+ --print "Restore the saved values of ",obj.yDim," input values.";
+ for var j := 1 to obj.ydim
+ 	var orgStr:string := obj[0,j] -- technical notation
+ 	if strLen(obj[2,j])>0
+ 
+ 		switch recogDataType(orgStr)
+ 		case "string"
+ 			stmt := to_str("-> boolean ",orgStr," := \\"",obj[2,j],"\\";result := true")
+ 		case "time","real"
+ 			stmt := to_str("-> boolean ",orgStr," := str_to_time(\\"",obj[2,j],"\\");result := true")
+ 		case "length"
+ 			stmt := to_str("-> boolean ",orgStr," := str_to_length(\\"",obj[2,j],"\\");result := true")
+ 		case "speed"
+ 			stmt := to_str("-> boolean ",orgStr," := str_to_speed(\\"",obj[2,j],"\\");result := true")
+ 		case "acceleration"
+ 			stmt := to_str("-> boolean ",orgStr," := str_to_acceleration(\\"",obj[2,j],"\\");result := true")
+ 		case "weight"
+ 			stmt := to_str("-> boolean ",orgStr," := str_to_weight(\\"",obj[2,j],"\\");result := true")
+ 		else
+ 			stmt := to_str("-> boolean ",orgStr," := ",obj[2,j],";result := true")
+ 		end
+ 		if NOT executeSilent(stmt)
+ 			Recording.append(to_str( "Error restoring '",orgStr,"'"))
+ 		end
+ 		if obj[3,j] AND strLpos("[",orgStr) = 0 -- Inherited AND no DataTable or 1D-list
+ 			s := orgStr
+ 			while NOT existsObject(s)
+ 				p := strRpos(".",s)
+ 				AttrName := strCopy(s,p+1,strLen(s))
+ 				s := strCopy(s,1,p-1)
+ 			end
+ 			o := s
+ 			if o.InternalClassType = "Variable"
+ 				AttrName := "Value"
+ 			end
+ 			if o /= void -- Inherited since obj[3,j] = true
+ 				if o.InternalClassType = "WorkerPool"
+ 					o.setCreationTable(void) -- switch ON the inheritance of the creationtable of a WorkerPool
+ 				else
+ 					o.inheritAttribute(AttrName) -- switch ON the inheritance
+ 				end
+ 			end -- if o /= void
+ 		end -- Inherited AND ...
+ 
+ 	end -- if strLen(obj[2,j])>0
+ next
+ 
+ if strLen(UserConfigMethod) > 0
+ 	-- Execution of UserConfigMethod for the purpose of restoring original input values.
+ 	--str_to_method(to_str(~,".",UserConfigMethod)).execute(1)
+ 	if strLpos(".",UserConfigMethod) = 1
+ 		str_to_method(UserConfigMethod).execute(1)
+ 	else
+ 		str_to_method(to_str(~,".",UserConfigMethod)).execute(1)
+ 	end
+ end
+RandomSeed: 248
+UUID: 9dae9f94-b7ef-44cd-8c0c-37a44a93e28a
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,48 @@
+InternalClassType: Method
+Coordinate3D: [4,11,0]
+Name: NumberRepresentation
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: open the tablefiles
+ -- Experiemntmanager: ExpTable, Results, DetailedResults
+ -- GAWizard: Fitness, IntermediateResults, bestIndividuals, StatisticalEvaluation, ProblemDefinition 
+ param Tab:any
+ 
+ var decSep:string := ~.decimalSeparator
+ 
+ switch decSep
+ case ".", "," 	
+ else -- non reasonable value
+ 	decSep := "."
+ 	~.decimalSeparator := decSep
+ end
+ 
+ Tab.decimalSeparator := decSep
+ 
+ for var j := 1 to Tab.xDim 
+ 	if Tab.getDataType(j) = "table" 
+ 		for var k := 1 to Tab.yDim 
+ 			if Tab[j,k] /= void 
+ 				NumberRepresentation(Tab[j,k])
+ 			end
+ 		next
+ 	end -- if column of type 'table'
+ next
+RandomSeed: 307
+UUID: 31f24d50-4655-41fb-bf48-f4827bfd2fe0
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

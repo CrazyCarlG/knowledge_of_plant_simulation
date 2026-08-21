@@ -1,0 +1,292 @@
+InternalClassType: WorkerPool
+BrokerPath:
+ChangePathCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+EntranceCtrl:
+ExitCtrl:
+GetJobOrdersAtHomeOnly: true
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: WorkerPool
+OpenCtrl:
+PartsBuffer:
+PauseCtrl:
+PlausibilityCtrl:
+RandomSeed: 30
+RelabelCtrl:
+RenameCtrl:
+ResourceType: "Production"
+ResStatOn: true
+SelectCtrl:
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: c4df8693-ef02-40fa-8d6f-fedcb6e161cf
+WorkersCanWorkRemotely: true
+WorkersTravelMode: "Beam to workplace"
+$BasicObject: true
+3D:
+ AnimationObject: ""
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: false
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 13395507
+ MaterialDiffuseColor: 13395507
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0.267
+ MaterialSpecularColor: 5855577
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ MUAnimationAreaAbsoluteCenter: [0,0,0.005]
+ MUAnimationAreaAbsoluteSize: [1.627694,1.627694]
+ MUAnimationAreaEnabled: false
+ MUAnimationAreaMURotation: [0,0,0,-1]
+ MUAnimationAreaOrientation: "XY plane"
+ MUAnimations:
+ -
+  Name: "#0#0"
+  AnchorPoints:
+  - [0,0.5,0.005,90,0,0,-1,~]
+ -
+  Name: "#0#1"
+  AnchorPoints:
+  - [0.5,0,0.005,180,0,0,-1,~]
+ -
+  Name: "#0#2"
+  AnchorPoints:
+  - [-0.5,0,0.005,0,0,0,1,~]
+ -
+  Name: "#0#3"
+  AnchorPoints:
+  - [0,-0.5,0.005,90,0,0,1,~]
+ -
+  Name: "#0#4"
+  AnchorPoints:
+  - [0,1.1,0.005,90,0,0,-1,~]
+ -
+  Name: "#0#5"
+  AnchorPoints:
+  - [1.1,0,0.005,180,0,0,-1,~]
+ -
+  Name: "#0#6"
+  AnchorPoints:
+  - [0,-1.1,0.005,-90,0,0,-1,~]
+ -
+  Name: "#0#7"
+  AnchorPoints:
+  - [-1.1,0,0.005,0,0,0,-1,~]
+ -
+  Name: "#0#8"
+  AnchorPoints:
+  - [0.8,0.79999999999999993,0.005,135,0,0,-1,~]
+ -
+  Name: "#0#9"
+  AnchorPoints:
+  - [0.8,-0.79999999999999982,0.005,-135,0,0,-1,~]
+ -
+  Name: "#0#10"
+  AnchorPoints:
+  - [-0.8,-0.8,0.005,-45,0,0,-1,~]
+ -
+  Name: "#0#11"
+  AnchorPoints:
+  - [-0.8,0.8,0.005,45,0,0,-1,~]
+ -
+  Name: "#0#12"
+  AnchorPoints:
+  - [0,1.8,0.05,90,0,0,-1,~]
+ -
+  Name: "#0#13"
+  AnchorPoints:
+  - [1.8,0,0.005,180,0,0,-1,~]
+ -
+  Name: "#0#14"
+  AnchorPoints:
+  - [0,-1.8,0.005,-90,0,0,-1,~]
+ -
+  Name: "#0#15"
+  AnchorPoints:
+  - [-1.8,0,0.005,0,0,0,-1,~]
+ -
+  Name: "#0#16"
+  AnchorPoints:
+  - [1.2999999999999998,1.3,0.005,135,0,0,-1,~]
+ -
+  Name: "#0#17"
+  AnchorPoints:
+  - [1.3,-1.2999999999999998,0.005,-135,0,0,-1,~]
+ -
+  Name: "#0#18"
+  AnchorPoints:
+  - [-1.3,-1.3,0.005,-45,0,0,-1,~]
+ -
+  Name: "#0#19"
+  AnchorPoints:
+  - [-1.2999999999999998,1.2999999999999998,0.005,45,0,0,-1,~]
+ -
+  Name: "#0#20"
+  AnchorPoints:
+  - [0.7,1.7,0.005000000000000001,112,0,0,-1,~]
+ -
+  Name: "#0#21"
+  AnchorPoints:
+  - [1.6999999999999997,0.7,0.0049999999999999992,157,0,0,-1,~]
+ -
+  Name: "#0#22"
+  AnchorPoints:
+  - [1.6999999999999997,-0.69999999999999984,0.005,-153,0,0,-1,~]
+ -
+  Name: "#0#23"
+  AnchorPoints:
+  - [0.7,-1.7,0.0049999999999999992,-115.99999999999999,0,0,-1,~]
+ -
+  Name: "#0#24"
+  AnchorPoints:
+  - [-0.7,-1.7,0.005,-65,0,0,-1,~]
+ -
+  Name: "#0#25"
+  AnchorPoints:
+  - [-1.7,-0.7,0.005,-20,0,0,-1,~]
+ -
+  Name: "#0#26"
+  AnchorPoints:
+  - [-1.7,0.7,0.005,27,0,0,-1,~]
+ -
+  Name: "#0#27"
+  AnchorPoints:
+  - [-0.7,1.7000000000000002,0.005,64,0,0,-1,~]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowContent: false
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Vertical"
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.345,0.115,2.1]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [38,38]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAjIyMUhkpUhkpUhkpUhkpUhkpUhkpUhkpUhkpjIyMgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAjIyMUhkpUhkpUhkpUhkpUhkpUhkpUhkpUhkpjIyMgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAjIyMUhkpUhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAAjIyM7OzsgIAAgIAAjIyMUhkpUhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAAgIAA
+ - gIAAgIAAjIyMUhkpUhkp/wAA/wAA////EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAjIyM7OzsgIAAjIyMUhkpUhkp/wAA/wAA////EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAA
+ - gIAAgIAAUhkpUhkp/wAA/wAA////EI//EI//EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAjIyM7OzsgIAAUhkpUhkp/wAA/wAA////EI//EI//EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAA
+ - gIAAgIAAUhkp/wAA/wAAUhkp////////EI//EI//EI//CAt7/////wAA/wAAUhkpUhkpgIAAjIyM7OzsgIAAUhkp/wAA/wAAUhkp////////EI//EI//EI//CAt7/////wAA/wAAUhkpUhkpgIAAgIAA
+ - gIAAgIAA/wAA/wAAUhkpUlJSvb29c529////EI//UlJSgIAAgIAA/////wAA/wAAUhkpgIAAjIyM7OzsgIAA/wAA/wAAUhkpUlJSvb29c529////EI//UlJSgIAAgIAA/////wAA/wAAUhkpgIAAgIAA
+ - gIAAgIAA/////wAA/wAAUhkpUlJSvb29c529c529gIAAgIAA/////wAA/wAAUhkpUlJSgIAAjIyM7OzsgIAA/////wAA/wAAUhkpUlJSvb29c529c529gIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAA
+ - gIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAjIyM7OzsgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA/////wAAc529UlJSgIAAc529/wAAUhkpUlJSgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAA/////wAAc529UlJSgIAAc529/wAAUhkpUlJSgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAc529c529UlJSgIAAc529c529UlJSgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAc529c529UlJSgIAAc529c529UlJSgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAA////////gIAAgIAA////////gIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAA////////gIAAgIAA////////gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMvr6+jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAA
+ - gIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozsvr6+7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAjIyMUhkpUhkpUhkpUhkpUhkpUhkpUhkpUhkpjIyMgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAjIyMUhkpUhkpUhkpUhkpUhkpUhkpUhkpUhkpjIyMgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAjIyMUhkpUhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAAjIyM7OzsgIAAgIAAjIyMUhkpUhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAAgIAA
+ - gIAAgIAAjIyMUhkpUhkp/wAA/wAA////EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAjIyM7OzsgIAAjIyMUhkpUhkp/wAA/wAA////EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAAgIAA
+ - gIAAgIAAUhkpUhkp/wAA/wAA////EI//EI//EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAjIyM7OzsgIAAUhkpUhkp/wAA/wAA////EI//EI//EI//EI//CAt7/wAA/wAAUhkpUhkpjIyMgIAAgIAA
+ - gIAAgIAAUhkp/wAA/wAAUhkp////////EI//EI//EI//CAt7/////wAA/wAAUhkpUhkpgIAAjIyM7OzsgIAAUhkp/wAA/wAAUhkp////////EI//EI//EI//CAt7/////wAA/wAAUhkpUhkpgIAAgIAA
+ - gIAAgIAA/wAA/wAAUhkpUlJSvb29c529////EI//UlJSgIAAgIAA/////wAA/wAAUhkpgIAAjIyM7OzsgIAA/wAA/wAAUhkpUlJSvb29c529////EI//UlJSgIAAgIAA/////wAA/wAAUhkpgIAAgIAA
+ - gIAAgIAA/////wAA/wAAUhkpUlJSvb29c529c529gIAAgIAA/////wAA/wAAUhkpUlJSgIAAjIyM7OzsgIAA/////wAA/wAAUhkpUlJSvb29c529c529gIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAA
+ - gIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAjIyM7OzsgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAA/////wAA/wAAUhkpUlJSgIAA/////wAA/wAAUhkpUlJSgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA/////wAAc529UlJSgIAAc529/wAAUhkpUlJSgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAA/////wAAc529UlJSgIAAc529/wAAUhkpUlJSgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAc529c529UlJSgIAAc529c529UlJSgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAc529c529UlJSgIAAc529c529UlJSgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAA////////gIAAgIAA////////gIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAA////////gIAAgIAA////////gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAjIyM7OzsgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [40,41]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozsvr6+gIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+jIyMjIyMjIyMjIyMvr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+jIyMjIyMjIyMjIyMvr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+jIyMjIyMUhkpUhkpUhkpUhkpjIyMjIyMvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+jIyMjIyMUhkpUhkpUhkpUhkpjIyMjIyMvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+/7AA/wAA/wAACAt7CAt7/wAA/wAA/wAAvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+Uhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+/7AA/wAA/wAAAL//EI//EI//CAt7/wAA/wAA/wAAvr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+Uhkp/wAA/wAAAL//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+/7AA/wAA/wAAAL//EI//EI//EI//EI//CAt7/wAA/wAA/wAAvr6+vr6+jIyM7Ozsvr6+vr6+Uhkp/wAA/wAAAL//EI//EI//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+/7AA/wAA/wAAUhkpAL//AL//EI//EI//EI//CAt7/7AA/wAA/wAAjIyMvr6+jIyM7Ozsvr6+Uhkp/wAA/wAAUhkpAL//AL//EI//EI//EI//CAt7/7AA/wAA/wAAjIyMvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+/wAA/wAAUhkpvr6+vr6+AL//AL//EI//CAt7vr6+vr6+/wAA/wAAUhkpvr6+jIyM7Ozsvr6+/wAA/wAAUhkpvr6+vr6+AL//AL//EI//CAt7vr6+vr6+/wAA/wAAUhkpvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+/wAA/wAA/wAAUhkpvr6+vr6+c529c529vr6+vr6+/7AA/wAA/wAAjIyMvr6+jIyM7Ozsvr6+/7AA/wAA/wAAUhkpvr6+vr6+c529c529vr6+vr6+/7AA/wAA/wAAjIyMvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+/wAA/wAA/wAAUhkpvr6+vr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+jIyM7Ozsvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+/wAA/wAA/wAAUhkpvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+/wAA/wAAc529UlJSvr6+c529/wAAUhkpvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+/7AA/wAAc529UlJSvr6+c529/wAAUhkpvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+c529c529UlJSvr6+c529c529vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+c529c529UlJSvr6+c529c529vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7OzsjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMvr6+jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMQEBAgIAAgIAA
+ - gIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozsvr6+7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsQEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+jIyMjIyMjIyMjIyMvr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+jIyMjIyMjIyMjIyMvr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+jIyMjIyMUhkpUhkpUhkpUhkpjIyMjIyMvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+jIyMjIyMUhkpUhkpUhkpUhkpjIyMjIyMvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+Uhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+Uhkp/wAA/wAACAt7CAt7/wAA/wAAUhkpvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+Uhkp/wAA/wAAAL//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+Uhkp/wAA/wAAAL//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+Uhkp/wAA/wAAAL//EI//EI//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+jIyM7Ozsvr6+vr6+Uhkp/wAA/wAAAL//EI//EI//EI//EI//CAt7/wAA/wAAUhkpvr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+Uhkp/wAA/wAAUhkpAL//AL//EI//EI//EI//CAt7/7AA/wAA/wAAjIyMvr6+jIyM7Ozsvr6+Uhkp/wAA/wAAUhkpAL//AL//EI//EI//EI//CAt7/7AA/wAA/wAAjIyMvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+/wAA/wAAUhkpvr6+vr6+AL//AL//EI//CAt7vr6+vr6+/wAA/wAAUhkpvr6+jIyM7Ozsvr6+/wAA/wAAUhkpvr6+vr6+AL//AL//EI//CAt7vr6+vr6+/wAA/wAAUhkpvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+/7AA/wAA/wAAUhkpvr6+vr6+c529c529vr6+vr6+/7AA/wAA/wAAjIyMvr6+jIyM7Ozsvr6+/7AA/wAA/wAAUhkpvr6+vr6+c529c529vr6+vr6+/7AA/wAA/wAAjIyMvr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+jIyM7Ozsvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+/7AA/wAA/wAAUhkpvr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+/7AA/wAAc529UlJSvr6+c529/wAAUhkpvr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+/7AA/wAAc529UlJSvr6+c529/wAAUhkpvr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+c529c529UlJSvr6+c529c529vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+c529c529UlJSvr6+c529c529vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+jIyM7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAA
+ - gIAAgIAAvr6+QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: 0
+ Duration: 0
+$WorkersToCreate:
+- [4be7ee7b-aa62-4434-aa0a-7da3be24a5a6,1,~,-1,-1,"",[]]

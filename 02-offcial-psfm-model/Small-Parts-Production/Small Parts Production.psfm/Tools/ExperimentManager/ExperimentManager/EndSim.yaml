@@ -1,0 +1,32 @@
+InternalClassType: Method
+Coordinate3D: [4,-16.8,0]
+Name: EndSim
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- for a non-distributed simulation make the evaluations of the run
+ -- distributed simulation the remote process has State = "ready", that is, it is not called
+ 
+ if (NOT usingRemote) AND (state ="running" OR state ="wait4stop")  
+ 	&endOfSim.executeNewCallChain(false) -- not stopped experiment
+ end
+ 
+ if SingleRun 
+ 	&SingleRunFinished.executeNewCallChain
+ end
+RandomSeed: 188
+UUID: 317a38e3-c26e-431b-9498-7886092cc276
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,52 @@
+InternalClassType: Method
+Coordinate3D: [16,7,0]
+Name: delVisualize
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- button 'Remove', reset, showVisualization
+ Dialog.VisualizationON := false
+ 
+ for var j := EnergyConsumers.YDimIndex downto 1 
+ 	var obj:object  := EnergyConsumers[0,j]
+ 	if obj /= void
+ 		EnergyConsumers[0,j] := makePathRelative(obj,~)
+ 	end
+ 	
+ 	obj := to_str("~.",EnergyConsumers[0,j])
+ 	if obj = void 
+ 		EnergyConsumers.cutRow(j)
+ 	else -- if obj /= void
+ 		var objLoc:object := obj.~
+ 		objLoc.eraselayer(layer)
+ 		
+ 		if objLoc._3D.exists -- with 3D	
+             /* if objLoc._3D.getObject(GrGroupName).exists
+ 				objLoc._3D.getObject(GrGroupName).delete
+ 			end	
+ 			if objLoc._3D.GraphicGroupNames.find(GrGroupName) > 0
+ 				objLoc._3D.deleteGraphicGroup(GrGroupName)
+ 			end*/
+ 			
+ 			if objLoc._3D.existsObject(GrGroupName)
+ 				objLoc._3D.getObject(GrGroupName).delete 
+ 			end
+ 		end -- with 3D
+ 	end -- if obj /= void
+ next -- j
+RandomSeed: 48
+UUID: c5b30137-5812-4cdb-a9b1-9633e4799194
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

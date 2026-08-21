@@ -1,0 +1,198 @@
+InternalClassType: DataTable
+ChangePathCtrl:
+CloseCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CreateIn3D: true
+DestructorCtrl:
+DragDropCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: MessageTab
+OpenCtrl:
+PlausibilityCtrl:
+RelabelCtrl:
+RenameCtrl:
+SelectCtrl:
+UUID: eef2f9b1-587d-4bc7-a389-357321f845b1
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default","Icon1"]
+ LockedGraphicGroups: []
+ MaterialActive: true
+ MaterialAmbientColor: 0
+ MaterialDiffuseColor: 11842740
+ MaterialEmissiveColor: 0
+ MaterialShininess: 0
+ MaterialSpecularColor: 0
+ MaterialTransparency: 0
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Default"]
+$IconArray:
+-
+ Name: "Default"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6+gr6AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+/v7++gr6/v7+AQEBAQEBAQEBAQEB/v7+/v7+AQEBAQEBAQEBAQEB/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEB/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7++gr6/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+AQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+/v7+iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIvr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: string
+   Width: 31
+  -
+   Index: 2
+   DataType: string
+   Width: 32
+  -
+   Index: 3
+   DataType: string
+   Width: 20
+  -
+   Index: 4
+   DataType: string
+   Width: 20
+  -
+   Index: 5
+   DataType: string
+   Width: 20
+  -
+   Index: 6
+   DataType: string
+   Width: 4
+  -
+   Index: 7
+   DataType: string
+   Width: 5
+  -
+   Index: 8
+   DataType: string
+   Width: 5
+  -
+   Index: 9
+   DataType: string
+   Width: 20
+  -
+   Index: 10
+   DataType: string
+   Width: 20
+  -
+   Index: 11
+   DataType: string
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ ColumnIndex: [string,10,~,"DEU","ENU","JPN","CHS","RUS","ESN","PLK","TRK","HUN"]
+ Columns:
+ - [1,string,85,"Navigieren","Standort öffnen","?","Inhalt","Index","Energieverbrauch überwachen","Auswertung","Objekte","Objekt","Tabelle der ausgewerteten Objekte:","Öffnen","Plot der Leistungsaufnahme:","Anzeigen","Diagramm des Energieverbrauchs:","Anzeigen","Visualisierung:","Anzeigen","Ausblenden","Energieanalyse","Energieanalyse im Netzwerk '$1'","Anzeigetafel","Extras","Alle hinzufügen","Energieverbraucher:","Ergebnistabelle anzeigen","Plotter anzeigen","Diagramm anzeigen","Visualisierung anzeigen","Visualisierung ausblenden",~,"Leistungsaufnahme","Verbrauchsprofile","Energieverbrauch ausgewählter Ressourcen",~,"Die Energiesimulation kann für das Objekt '$1' nicht ausgeführt werden oder ist nicht aktiviert.",~,"Hauptbelastungszeit","Energieverbraucher","Auswerten","Energiezustände","Energieverbraucher","Energie [kWh]","Energie betriebsbereit [kWh]","Aktuelle Leistungsaufnahme [kW]","Arbeitend","Rüstend","Betriebsbereit","Gestört","Standby","Aus","Auswerten",~,"Die Energieanalyse von '$1' ist nicht aktiviert.","Die Energieanalyse '$1' wird durch den '$2' deaktiviert.","Die untersuchten Objekte haben keinen Energieverbrauch.","Das Objekt '$1' wurde für den Assistenten '$2' nicht korrekt registriert.","Farbe","Hilfe für das Objekt",~2,"Standardfarben festlegen","Farben festlegen","Das Objekt '$1' ist unbekannt.","Die Aufzeichnung aller Änderungen des Energieverbrauchs von $1 Objekten durch den Assistenten '$2' im Netzwerk $3 kann die Laufzeit des Modells beeinträchtigen.",~,"Grafik","Grafik in Ebene:","Radius:","Einstellungen",~,"Rot","Grün","Blau","Deckkraft","Energie [kWh]:","Betriebsbereit [kWh]:","Leistungsaufnahme [kW]:","Maximum [kW]:",~,"Energie","Verbrauch über die Zeit","Detaillierter Verbrauch",~,"Bitte setzen Sie einen Ereignisverwalter ein.","Wertet Energieverbräuche aus."]
+ - [2,string,85,"Navigate","Open Location","Help","Contents","Index","Monitor energy consumption","Evaluate","Objects","Object","Table of all evaluated objects:","Open","Plot of the power input:","Show","Diagram of the energy consumption:","Show","Visualization:","Show","Hide","Energy Analyzer","Energy Analyzer in the Frame '$1'","Display panel","Tools","Add All","Energy consumers:","Show Results Table","Show Plotter","Show Chart","Show Visualization","Hide Visualization",~,"Power Input","Usage Profiles","Energy Consumption of the Selected Resources",~,"Energy simulation cannot be executed or not active for the object '$1'.",~,"Peak Time","Energy Consumers","Evaluate","Energy states","Energy Consumers","Energy [kWh]","Energy operational [kWh]","Current power input [kW]","Working","Setting-up","Operational","Failed","Standby","Off","Evaluate",~,"The energy analysis of '$1' is not active.","The energy analysis '$1' was deactivated by the '$2'.","The investigated objects have no energy consumption.","The object '$1' was not registered correctly for the wizard '$2'.","Color","Help on Object",~2,"Set Default Colors","Set Colors","The object '$1' is unknown.","Monitoring all changes of $1 objects by the wizard '$2' in the frame $3 may have negative effects on run time of your model.",~,"Graphics","Graphics in layer:","Radius:","Settings",~,"Red","Green","Blue","Opacity","Energy [kWh]:","Operational [kWh]:","Power input [kW]:","Maximum [kW]:",~,"Energy","Consumption over time","Detailed consumption",~,"Please insert an eventcontroller.","Evaluates energy usages."]
+ - [3,string,85,"ナビゲート","上層を開く","ヘルプ","項目","索引","エネルギー消費を監視","評価","オブジェクト","オブジェクト","評価された全オブジェクトのテーブル:","開く","電源入力のプロット:","表示","エネルギー消費のダイアグラム:","表示","ビジュアリゼーション:","表示","非表示","Energy Analyzer","フレーム'$1'のEnergy Analyzer","ディスプレイパネル","ツール","すべて追加","エネルギー消費者:","結果テーブルを表示","プロッタを表示","チャートを表示","ビジュアリゼーションを表示","ビジュアリゼーションを非表示",~,"電源入力","使用プロファイル","選択したリソースのエネルギー消費",~,"エネルギーシミュレーションを実行できないか、またはオブジェクト'$1'に対して無効です。",~,"ピーク時間","エネルギー消費者","評価","エネルギー状態","エネルギー消費者","エネルギー[kWh]","使用可能エネルギー[kWh]","現在の電源入力[kW]","作業中","セットアップ中","使用可能","故障状態","スタンバイ","オフ","評価",~,"$1'のエネルギー解析は無効です。","エネルギー解析'$1'は、'$2'が無効にしました。","調査したオブジェクトにはエネルギー消費がありません。","オブジェクト'$1'はウィザード'$2'に対して正しく登録されていませんでした。","色","オブジェクトのヘルプ",~2,"デフォルトの色を設定","色を設定","オブジェクト'$1'が不明です。","$1オブジェクトへのウィザード'$2'によるフレーム$3での変更すべてを監視すると、モデルのランタイムでのナビゲートに影響があるかもしれません。",~,"グラフィック","レイヤ内のグラフィック:","半径:","設定",~,"赤","緑","青","不透明","エネルギー[kWh]:","使用可能[kWh]:","電源入力[kW]:","最大[kW]:",~,"エネルギー","消費超過時間","消費の詳細",~,"イベントコントローラを挿入してください。","エネルギ使用を評価します。"]
+ - [4,string,85,"导航","打开位置","帮助","目录","索引","监控能耗","评估","对象","对象","所有已评估对象的表:","打开","能量输入图:","显示","能耗图:","显示","可视化:","显示","隐藏","能耗分析仪","框架 '$1' 中的能耗分析仪","显示面板","工具","全部添加","能耗对象:","显示结果表","显示绘图者","显示图表","显示可视化","隐藏可视化",~,"能量输入","使用概要表","所选资源的能耗",~,"对于对象 '$1'，能源仿真无法执行或不处于活动状态。",~,"高峰期","能耗对象","评估","能量状态","能耗对象","能量 [kWh]","运行能量 [kWh]","当前能量输入 [kW]","工作中","设置中","运行","失败","备份","关","评估",~,"$1' 的能量分析不处于活动状态。","能量分析 '$1' 因 '$2' 而停用。","调查对象没有能耗。","对象 '$1' 没有为向导 '$2' 正确注册。","颜色","对象帮助",~2,"设置默认颜色","设置颜色","对象 '$1' 是未知的。","监视 $1 对象的所有变化（通过向导 '$2'，在框 $3 中）可能对模型的运行时产生负面影响。",~,"图形","以下图层中的图形:","半径:","设置",~,"红","绿","蓝","不透明","能量 [kWh]:","运行 [kWh]:","能量输入 [kW]:","最大 [kW]:",~,"能量","按时间的能耗","详细能耗",~,"请插入事件控制器。","估算能量使用率。"]
+ - [5,string,85,"Навигация","Открыть местоположение","Справка","Содержание","Указатель","Отслеживать энергопотребление","Оценить","Объекты","Объект","Таблица учтенных объектов:","Открыть","График потребляемой мощности:","Показать","График энергопотребления:","Показать","Визуализация:","Показать","Скрыть","Анализ энергоэффективности","Анализ энергоэффективности во фрейме '$1'","Информационная панель","Инструменты","Добавить все","Потребители энергии:","Показать таблицу результатов","Показать график","Показать диаграмму","Показать визуализацию","Скрыть визуализацию",~,"Входные мощности","Профили использования","Энергопотребление выбранных ресурсов",~,"Симуляция энергопотребления для объекта '$1' не может быть выполнена или неактивна.",~,"Время пика","Потребители энергии","Оценить","Энергетические уровни","Потребители энергии","Энергия [кВтч]","При простое [кВтч]","Текущая входная мощность [кВ]","Работает","Наладка","Готов к работе","Сбой","Ожидание","Выключено","Оценить",~,"Энергоанализ '$1' неактивен.","Энергоанализ '$1' деактивирован с помощью '$2'.","Исследуемые объекты не потребляют энергии.","Объект '$1' не был корректно зарегистрирован в мастере '$2'.","Цвет","Справка по объекту",~2,"Установить цвета по умолчанию","Установить цвета","Объект '$1' неизвестен.","Контроль всех изменений в объектах $1 с помощью мастера '$2' во фрейме $3 может отрицательно повлиять на время выполнения модели.",~,"Графика","Графика в слое:","Радиус:","Настройка",~,"Красный","Зеленый","Синий","Непрозрачность","Энергия [кВтч]:","В простое [кВтч]:","Входная мощность [кВт]:","Максимальная [кВт]:",~,"Энергия","Потребление по времени","Подробные данные о потреблении",~,"Необходимо вставить контроллер событий.","Оценивает использование энергии."]
+ - [9,string,85,"Navigálás","Hely megnyitása","Súgó","Tartalom","Tárgymutató","Energia felhasználás monitorozása","Kiértékelés","Objektumok","Objektum","A kiértékelésben szereplő objektumok:","Megnyitás","Energia bemeneti grafikon:","Mutat","Energia felhasználás diagramja:","Mutat","Vizualizáció:","Mutat","Törlés","Energia analízis","Energia analízis a '$1' vázlaton","Megjelenítő panel","Eszközök","Mindent hozzáad","Energia felhasználók:","Eredmények táblázat","Plotter mutatása","Grafikon mutatása","Vizualizáció mutatása","Vizualizáció törlése",~,"Energia bemenet","Használati profilok","Kiválasztott erőforrások energia felhasználása",~,"Energia szimuláció nem hajtható végre vagy nem aktív a(z) '$1' objektumra.",~,"Csúcs idő","Energia felhasználók","Kiértékelés","Energia állapotok","Energia felhasználók","Energia [kWh]","Működési energia [kWh]","Jelenlegi energia bemenet [kW]","Dolgozik","Átállás","Működik","Hibás","Készenlét","Kikapcsolt","Kiértékelés",~,"A(z) '$1' energia analízise nem aktív.","A(z) '$1' energia analízise deaktiválva lett a(z)  '$2' által.","Az objektumoknak nincs energia felhasználása.","A(z) '$1' objektum nincs megfelelően regisztrálva a(z) '$2' varázslóhoz.","Szín","Objektum súgó","Zöld","Kék","Alapszínek beállítása","Színek beállítása","A(z) '$1' objektum ismeretlen.","A(z) $1 objektumok összes változásának követése a(z) '$2' varázslóval a(z) $3 vázlaton lassíthatja  a modell futását.",~,"Grafika","Grafika fóliája:","Sugár:","Beállítások",~,"Piros","Zöld","Kék","Átlátszóság","Energia [kWh]:","Működés [kWh]:","Bemenet [kW]:","Maximum [kW]:",~,"Energia","Fogyasztás az idő függvényében","Detaillierter Verbrauch",~,"Illesszen be egy eseményvezérlőt","Energia felhasználás kiértékelése."]

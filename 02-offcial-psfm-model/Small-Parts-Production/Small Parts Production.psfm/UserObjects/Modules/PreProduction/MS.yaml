@@ -1,0 +1,31 @@
+InternalClassType: Station
+Coordinate3D: [5.15000007674098,6.70000009983778,0]
+Label: "MS"
+Name: MS
+Origin: 54049e8a-1824-44ef-87d8-6d677c3a9773
+RandomSeed: 57
+UUID: 01a0236c-0546-7002-942b-c953d488ecef
+3D:
+ Mirror: [false,false,false]
+ Rotation: [90,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7003-a723-41985f5a97e2
+ Name: Connector8
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-700b-b294-db9c8dab37b4
+$Predecessors:
+- 01a0236c-0546-700c-bcf2-b394b92cec86
+InheritEntranceExitLockedOnReset: false
+$ProcImp:
+ Active: false

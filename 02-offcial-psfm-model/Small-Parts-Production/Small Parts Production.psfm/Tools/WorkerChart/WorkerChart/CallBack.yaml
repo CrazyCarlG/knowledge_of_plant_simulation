@@ -1,0 +1,137 @@
+InternalClassType: Method
+Coordinate3D: [6,-6,0]
+Name: CallBack
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- handle the interactions in the dialog
+ param item : string
+ 
+ var AppObj : Object := @.~
+ 
+ switch item
+ case "Open"
+ 	var tab: Object := DialogElements
+ 	for var j := 1 to tab.ydim  -- translate all dialog elements
+ 		@.setCaption(tab[0,j],rootfolder.Localization.getText(tab[1,j]))
+ 	next
+ 	switchRadioButton(AppObj)
+ 
+ case "ButtonViewChart"  -- button View Chart
+ 	if myWorkerTable.ydim=0
+ 		-- "No data has been recorded."
+ 		messageBox(rootfolder.Localization.getText(65),1,3)
+ 	else
+ 		Chart.Active := true
+ 	end
+ 	-- action of the radio buttons 'Grouping'
+ case "RadioButtonWorker"  -- handling of RadioButton "Worker"
+ 	VarStatisticGroup := "Worker"
+ 	switchRadioButton(current)
+ 	Refresh
+ case "RadioButtonGroup"  -- handling of RadioButton "Classes"
+ 	VarStatisticGroup := "Group"
+ 	switchRadioButton(current)
+ 	Refresh
+ case "RadioButtonPool" 	-- handling of RadioButton "Pool"
+ 	VarStatisticGroup := "Pool"
+ 	switchRadioButton(current)
+ 	Refresh
+ 
+ 	-- action of the radio buttons 'Occupancy with respect to'
+ case "RadioButtonWorkingTime"  -- handling of RadioButton "Working Time"
+ 	myStatisticTable.delete({0,1}..{*,*})
+ 	myWorkingTimeStatisticTable.copyRangeTo({0,1}..{*,*}, myStatisticTable, 0,1)
+ 	varOccupancyRel := "Working time"
+ 	switchRadioButton(current)
+ 	Refresh
+ case "RadioButtonOverallTime"  -- handling of RadioButton "Overall Time"
+ 	myStatisticTable.delete({0,1}..{*,*})
+ 	myOverallTimeStatisticTable.copyRangeTo({0,1}..{*,*}, myStatisticTable, 0,1)
+ 	varOccupancyRel := "Overall time"
+ 	switchRadioButton(current)
+ 	Refresh
+ 
+ case "ButtonOpenStatTable" 	-- button 'Open table...'
+ 	mySTatisticTable.openDialog
+ 
+ 	-- Group 'Chart Configuration'
+ case "ChartType"  -- handle changes of 'Charttype'
+ 	ChartTypeRefresh
+ 	switchRadioButton(current)
+ 	Refresh
+ case "PointOfView"  -- handle changes of 'PointOfView'
+ 	ChartTypeRefresh
+ 	switchRadioButton(current)
+ 	Refresh
+ 
+ case "Apply"  -- the 'Apply'-button tests whether the entered Pool object is ok
+ 	if eventController/=void AND eventController.isRunning
+ 		-- No changes during a simulation run.
+ 		MessageBox(rootfolder.Localization.getText(37), 1, 13)
+ 		return
+ 	end
+ 
+ 	var DialogValue:string := strTrim(@.getValue("WorkerPool_Inp"))
+ 	if strLpos(".",dialogValue)=1 AND existsObject(DialogValue)
+ 		VarObj := DialogValue -- absolute path was entered.
+ 	else
+ 		VarObj := to_str(~,".",DialogValue)
+ 	end
+ 	VarInterval := str_to_time( @.getvalue("TextBoxInterval")) -- The kind of characters of the Edit Text Box: time.
+ 	@.setCaption("TextBoxInterval",to_str(VarInterval))
+ 	if VarObj = void
+ 		MessageBox(to_str(
+ 			rootfolder.Localization.getText(31),strChr(10),strChr(13),
+ 			rootfolder.Localization.getText(33)), 1, 13)
+ 		@.setCaption("WorkerPool_Inp","")
+ 		VarObj := void
+ 	else
+ 
+ 		if VarObj.internalClassName = "NwWorkerPool"
+ 			DialogValue := makePathRelative(VarObj, AppObj.~)
+ 			VarObj := makePathRelative(VarObj, AppObj)
+ 			@.setCaption("WorkerPool_Inp",DialogValue)
+ 			GetWorkersFromPool	-- fill the table 'myWorkerTable' with all worker
+ 		else
+ 			MessageBox(to_str(
+ 				rootfolder.Localization.getText(31),strChr(10),strChr(13),
+ 				rootfolder.Localization.getText(33)), 1, 13)
+ 			@.setCaption("WorkerPool_Inp","")
+ 			VarObj := void
+ 		end
+ 		switchRadioButton(current)
+ 		Refresh
+ 	end
+ 	-- "?"-menu:
+ case "Contents_Menu"
+ 	HTMLHelp("")
+ case "Index_Menu"
+ 	HTMLHelp("","")
+ case "info_Menu"
+ 	openBox
+ case "HelpObject_Menu"
+ 	HTMLHelp(HelpOnObjectENU) -- HTMLHelp("::/id21473.html")
+ case "OpenLoc_Menu"
+ 	~.openDialog
+ case "OpenWorkerPool_menu"
+ 	if VarObj/=void
+ 		VarObj.openDialog
+ 	end
+ end
+RandomSeed: 37
+UUID: 6cf85b8e-ea9a-4087-ac92-0137a3ab861d
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

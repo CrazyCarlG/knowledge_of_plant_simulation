@@ -1,0 +1,54 @@
+InternalClassType: Method
+Coordinate3D: [13,-3,0]
+Name: GetWorkersFromPool
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- read all worker of the pool
+ -- and fill it into the table 'myWorkerTable'
+ -- called by: Apply of dialog, init
+ var k,n:integer
+ var w,wc:object
+ 
+ myWorkerTable.delete
+ myWorkerClasses.delete({1,0}..{*,*})
+ myWorkerClassCount.delete({1,0}..{*,*})
+ 
+ var numTab:table[integer]
+ numTab.create
+ if VarObj /= void 
+ 	VarObj.getAssignedWorkersTable(myWorkerTable)
+ 	-- myWorkerTable.sort(1,"up");
+ 	for var j := 1 to myWorkerTable.ydim 
+ 		w := myWorkerTable[1,j]
+ 		wc:= w.class
+ 		k := myWorkerClasses.getColumnNo(wc)
+ 		if k = -1 then k := myWorkerClasses.xDim + 1
+ 			myWorkerClasses[k,0] := wc
+ 			myWorkerClassCount[k,0] := wc
+ 			myWorkerClassCount[k,1] := 0
+ 		end
+ 		n := numTab[1,k] + 1
+ 		numTab[1,k] := n
+ 		myWorkerClasses[k,n] := w
+ 		myWorkerClassCount[k,1] := myWorkerClassCount[k,1] + 1
+ 	next -- j
+ end
+RandomSeed: 35
+UUID: 2e52b0d3-af30-4417-ab36-7ca27de3a34a
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

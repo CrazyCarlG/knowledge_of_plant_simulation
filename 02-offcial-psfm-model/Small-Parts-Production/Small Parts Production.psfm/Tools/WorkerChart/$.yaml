@@ -1,0 +1,40 @@
+InternalClassType: Folder
+ChangePathCtrl:
+Coordinate3D: [0,0,0]
+DestructorCtrl:
+MoveToFolderCtrl:
+Name: WorkerChart
+PermitDeleteCtrl:
+RenameCtrl:
+RootFolder: true
+UUID: d3076a0d-2877-435a-aa0b-2c4902cbca89
+3D:
+ BackgroundColor: -1
+Password:
+LibInfo:
+ Name: "Worker Chart"
+ Version: "16.0.1"
+ Description: |+1
+  Visualizes the statistics\r
+  of the workers of a WorkerPool.\r
+  $German$Werkerdiagramm\r
+  Visualisiert die Statistik\r
+  der Werker eines Werkerpools.\r
+  $Japanese$ワーカーチャート\r
+  WorkerPoolのワーカーの\r
+  統計を可視化します。\r
+  $Chinese$工人图表\r
+  可视化工人池中工人\r
+  的统计信息。\r
+  $Russian$WorkerChart\r
+  Визуализация статичтики\r
+  рабочих WorkerPool.\r
+  $Hungarian$DolgozóGrafikon\r
+  Dolgozó csoport statisztika\r
+  vizuális megjelenítése.
+ AlternativePaths: "$German$.Tools.Werkerdiagramm"
+ ProhibitAccess: true
+$Nodes:
+- 0f4f45ec-9871-47c7-9b9c-09e556e0cff2
+- 4eb20cfc-ef8b-4f2a-bd1c-e55a12275aa9
+- e2fa174f-4197-414b-9c47-a6251c4971c1

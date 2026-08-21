@@ -1,0 +1,22 @@
+InternalClassType: DataTable
+Coordinate3D: [33.25,-7.7,0]
+Name: myBufferTable
+Origin: 89124604-5872-4e98-b37d-0ca8d0b72b42
+UUID: b15f19fc-9d95-4762-b7ff-2ec0357cd1f3
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ListFormat:
+  ColumnWidth: 20
+  DataType: string
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+ Columns:

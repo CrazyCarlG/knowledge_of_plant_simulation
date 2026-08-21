@@ -1,0 +1,25 @@
+InternalClassType: DataTable
+Origin: 4e5ab202-2377-4b9b-a9f2-ffeec3cc58cd
+UUID: 01a0236c-0546-758d-8a67-10aac56ea215
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 1
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Alignment: "Right"
+   DataType: object
+   Width: 24
+ ColumnIndex: [string,2,~,"Worker"]
+ Columns:

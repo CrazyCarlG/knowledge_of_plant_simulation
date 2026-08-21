@@ -1,0 +1,66 @@
+InternalClassType: Method
+Coordinate3D: [10,7,0]
+Name: updateConsumption
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- called by: showChart (dialog), open table EnergyConsumers (dialog), init and endsim
+ -> string
+ 
+ if EventController=void  -- Please insert an eventcontroller.
+ 	messageBox(rootfolder.Localization.getText(84), 1, 1) -- error
+ 	return
+ end
+ 
+ var ConsumerTab:object := EnergyConsumers
+ var tab:table := UsageProfile.UtilizationTable
+ 
+ for var j := 1 to ConsumerTab.YDimIndex
+ 	var obj:object := to_str("~.",ConsumerTab[0,j])
+ 
+ 	if obj /= void AND obj.EnergyActive
+ 		var X1:real := obj.statEnergyWorkingConsumption
+ 		var X2:real := obj.statEnergySetupConsumption
+ 		var X3:real := obj.statEnergyOperationalConsumption
+ 		var X4:real := obj.statEnergyFailConsumption
+ 		var X5:real := obj.statEnergyStandbyConsumption
+ 		var X6:real := obj.statEnergyOffConsumption
+ 
+ 		tab[j,1] := X1
+ 		tab[j,2] := X2
+ 		tab[j,3] := X3
+ 		tab[j,4] := X4
+ 		tab[j,5] := X5
+ 		tab[j,6] := X6
+ 
+ 		ConsumerTab.writeRow(1,j, obj.statEnergyTotalConsumption, obj.statEnergyOperationalConsumption, obj.PowerInput, X1,X2,X3,X4,X5,X6)
+ 	end
+ next
+ 
+ Consumption            := ConsumerTab.sum({1,1}..{1,*}) -- SUM Energy [kWh] >>> cust attr
+ ConsumptionOperational := ConsumerTab.sum({2,1}..{2,*}) -- SUM Energy operational [kW] >>> cust attr
+ powerConsumption       := ConsumerTab.sum({3,1}..{3,*}) -- SUM Current Power [kW] >>> cust attr
+ refEnergy.value := to_str(round(Consumption,1)," kWh")
+ 
+ if MonitoringActive AND (maxPowerConsumption < powerConsumption)  -- new record
+ 	maxPowerConsumption := powerConsumption
+ 	PeakTime := eventController.simTime
+ end
+RandomSeed: 39
+UUID: 93c1ff6d-3ab4-42b0-a6f3-6de950519908
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

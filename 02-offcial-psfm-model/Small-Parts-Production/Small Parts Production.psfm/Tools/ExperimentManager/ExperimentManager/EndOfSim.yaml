@@ -1,0 +1,132 @@
+InternalClassType: Method
+Coordinate3D: [7,-16.8,0]
+Name: EndOfSim
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: 'endsim' via executeNewCallChain, non-distributed simulation
+ param stopExp:boolean  -- stopExp = true call of extern via EndOfExperiment although currRunNo < numRuns
+ var AttrStr,str:string
+ var res:any
+ var ObservTab,t1,t2:table
+ var TabObj:object
+ 
+ var rowResTab:integer := currExpNo
+ /*if rowResTab < 1
+ 	rowResTab := currExpNo
+ 	prepExp(currExpNo) -- create subtable if necessary
+ end*/
+ 
+ if DS_
+ 	DS_Results
+ end
+ 
+ var j:integer :=1 -- read_output values:
+ while DetailedResults[j,0]/=void
+ 	str := DetailedResults[j,0]
+ 	AttrStr := ValueDescriptions.getOrig(str)
+ 	if NOT isOutTable(AttrStr)
+ 		res := readValue(AttrStr)
+ 		if DetailedResults[j+6,rowResTab].void
+ 			prepExp(rowResTab)
+ 		end
+ 		ObservTab := DetailedResults[j+6,rowResTab]-- insert into subtable
+ 
+ 		ObservTab[1,currRunNo] := res
+ 		Recording.append(to_str("Output: ",AttrStr," = ",res))
+ 
+ 		forget res
+ 		j += 7
+ 
+ 	else -- read_an output table:
+ 		TabObj := AttrStr -- str => object
+ 		ObservTab := DetailedResults[j+4,rowResTab]
+ 
+ 		t1 := ObservTab[1,currRunNo]
+ 		TabObj.copyRangeTo({1,1}..{*,*}, t1, 1,1)
+ 		recording.append(to_str("Output table: ",AttrStr))
+ 
+ 		j += 5
+ 	end
+ end
+ 
+ if UsingRules
+ 	j:=1 -- read_output values for rules_:
+ 	while Results4Rules[j,0]/=void
+ 		AttrStr := Results4Rules[j,0]
+ 		res := readValue(AttrStr)
+ 
+ 		Results4Rules[j,currRunNo] := res
+ 		recording.append(to_str("Output for rules: ",AttrStr," = ",res))
+ 
+ 		forget res
+ 		j += 1
+ 	end
+ end -- if UsingRules
+ 
+ makeReport -- store the pictures of charts of the first observation of each experiment for a non-distributed simulation
+ 
+ Dialog.showProgressByIcon(currExpNo,currRunNo)
+ TotalSimulationRuns += 1 -- The number of performed observations is registered for a non-distributed simulation.
+ --_CurrentTaskNo += 1
+ 
+ if currRunNo = numRuns OR stopExp -- stopExp = true call of extern via EndOfExperiment although currRunNo < numRuns
+ 
+ 	-- The last observation of an experiment with no rowResTab is finished.
+ 	CalcStatistics4Exp(rowResTab)-- Table 'Results' is filled ( determine confidence intervals)
+ 	calcTableStatistics4Exp(rowResTab)
+ 
+ 	DetailedResults.ExperimentExecuted[1,rowResTab] := true
+ 
+ /*	if strLen(UserEvalMethod_) > 0 --_UsingEvalMethod
+ 	--_UserEvaluation(currExpNo,currRunNo)
+ 	str_to_method(to_str(~,".",UserEvalMethod_)).execute(currExpNo,currRunNo)
+ 	Recording.append(to_str("User evaluation for Exp=",currExpNo," Observ=",currRunNo))
+ 	end*/
+ 
+ 	if stopExp
+ 		Dialog.ChangeUserSettings("restore")
+ 	end
+ 
+ 	EndOfExp -- A single experiment is finished.
+ 
+ else -- next run
+ 
+ 	/*if strLen(UserEvalMethod_) > 0 --_UsingEvalMethod
+ 	--_UserEvaluation(currExpNo,currRunNo)
+ 	str_to_method(to_str(~,".",UserEvalMethod_)).execute(currExpNo,currRunNo)
+ 	Recording.append(to_str("User evaluation for Exp=",currExpNo," Run=",currRunNo))
+ 	end*/
+ 	LastSimulationCPUTime := ProcessTime - StartCPUTime
+ 	TotalCPUTime += LastSimulationCPUTime
+ 	currRunNo += 1
+ 	DefSeed4Run(currExpNo,currRunNo)
+ 
+ 	if DS_
+ 		DS_Experiment  := currExpNo
+ 		DS_Observation := currRunNo
+ 	end
+ 
+ 	Dialog.Dialog.setCaption("currObs", to_str(currRunNo)+"/"+to_str(GetNumberOfObservations))
+ 
+ 	eventController.reset
+ 	eventController.start -- WithoutAnimation
+ end
+ 
+ -- DetailedResults.refillDialog -- It is not needed since refilldialog is already done in CalcStatistics4Exp and calcTableStatistics4Exp
+RandomSeed: 186
+UUID: 1badb133-c185-4a04-8857-d09ba72ddb9f
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

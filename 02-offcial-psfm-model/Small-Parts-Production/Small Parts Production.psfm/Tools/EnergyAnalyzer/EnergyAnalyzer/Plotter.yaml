@@ -1,0 +1,128 @@
+InternalClassType: Chart
+Accumulated: false
+Category: "Plotter"
+ChartType: "Line"
+CloseCtrl: "self.OnClose"
+Coordinate3D: [21.35,13,0]
+DataSource: "Input Channels"
+FeedRate: 6
+InputChannels:
+ Comment: ""
+ EditorPermissions: 0
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   ReadOnly: false
+   Hidden: false
+   Width: 18
+  RowFormat:
+  -
+   Index: 0
+   ReadOnly: false
+   Alignment: "Left"
+   Hidden: false
+ Columns:
+ - [0,string,1,"Consumption [kW]"]
+ - [1,string,1,"powerConsumption"]
+Label: "Energy Analyzer in the Frame 'EnergyAnalyzer'"
+Mode: "Watch"
+Name: Plotter
+NumValues: 10000
+Origin: 4c6eeafc-6b04-4db3-ab2c-f111813f335b
+RandomSeed: 50
+SampleInterval: 1:00:00
+Scrollbar: true
+SizeInFrame: [2,2]
+StepCurve: true
+Title: "Power Input"
+UUID: a896629c-2e73-4d10-b466-44d76347fc5a
+XGrid: false
+XGridLines: 25
+XRange: 1D
+YGrid: false
+YGridLineInterval: 0
+YLabel: "kW"
+$IconArray:
+-
+-
+ Name: "Icon1"
+ Transparent: true
+ Size: [40,40]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////////vr6+////////////////vr6+////////////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////vr6+////////////////vr6+////////////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////////vr6+////////////////AAubAAubAAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////vr6+////////////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+vr6+vr6+vr6+vr6+vr6+AA//AA//AA//AAubvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////////AIAAAIAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub////////vr6+////////////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////////wAA/wAA/wAA////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+AOAAAOAAAOAAAIAAvr6+AA//AA//AA//AAubvr6+/7AA/7AA/7AA/wAAvr6+vr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////////vr6+////////AAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////////tARktARktARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAvr6+AOAAAOAAAOAAAIAAvr6+AA//AA//AA//AAubvr6+/7AA/7AA/7AA/wAAvr6+tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAAAAA////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAA////////AOAAAOAAAOAAAIAA////AA//AA//AA//AAub/////7AA/7AA/7AA/wAA////tAS0tAS0tAS0tARkAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+AAAAvr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+AAAAvr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+fX19vr6+vr6+vr6+fX19vr6+vr6+vr6+fX19vr6+fX19vr6+vr6+fX19vr6+fX19vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7Ozsvr6+vr6+vr6+vr6+vr6+vr6+fX19fX19vr6+fX19vr6+vr6+fX19fX19vr6+vr6+fX19fX19vr6+fX19vr6+vr6+fX19vr6+vr6+vr6+vr6+vr6+vr6+QEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA7OzsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+DifferentNumberOfIcons: 1
+$CustomAttributes:
+-
+ Name: OnClose
+ ID: 1
+ DataType: method
+ Value: |+1
+  Dialog.PlotterON := false
+
+ ShowInTooltip: false
+$Colors:
+- 0xa0a0a0
+- 0xffffff
+- 0xffffff
+- 0x0
+- [0xff,0,3]
+- [0xe100,0,5]
+- [0xff4628,0,7]
+- [0xdafa,0,9]
+- [0xffd200,0,11]
+- [0xff00ff,0,1]
+- [0xde00af,0,0]
+- [0x1e6ea5,0,2]
+- [0x96ff,0,4]
+- [0x969696,0,6]
+- [0x8000,0,8]
+- [0x96c000,0,10]
+- [0x7e7e00,0,98]
+- [0x8080,0,94]
+$WindowRect: [50,50,420,380]

@@ -1,0 +1,35 @@
+InternalClassType: AssemblyStation
+AssemblyMode: "Attach MUs"
+AssemblyTableMode: "Predecessors"
+Coordinate3D: [-7.0000001043081284,0.70000001043081284,0]
+Label: "AS9"
+Name: AS9
+Origin: 134cdde7-07e4-46e4-8ff8-035de5fdeb6a
+ProcTime: [Uniform,58,1:02]
+RandomSeed: 49
+UUID: 01a0236c-0546-700f-beaf-8cf548a99f1c
+3D:
+ Mirror: [true,false,false]
+ Rotation: [0,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,0.5,0.15]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7008-99f6-1c336670d6fa
+ Name: Connector4
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7010-80f3-642128d004ab
+$Predecessors:
+- 01a0236c-0546-7012-be04-e36cf5e434e7
+- 01a0236c-0546-701d-a8e1-9203339fc256
+InheritEntranceExitLockedOnReset: false
+$AssemblyTable:
+- [2,6]

@@ -1,0 +1,37 @@
+InternalClassType: Method
+Coordinate3D: [9.8,-16.8,0]
+Name: DefSeed4Run
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ param ExpNo,ObservNo:integer -> string -- explanation
+ 
+ if strLen(UserSeedValueMethod) > 0 
+ 	if strLpos(".",UserSeedValueMethod) = 1
+ 		str_to_method(UserSeedValueMethod).execute(ExpNo,ObservNo)
+ 	else
+ 		str_to_method(to_str(~,".",UserSeedValueMethod)).execute(ExpNo,ObservNo)
+ 	end
+ 	
+ else
+ 	if eventController /= void 
+ 		eventController.RandomNumbersVariant := ObservNo
+ 	end
+ end
+RandomSeed: 252
+UUID: b6e2cdbf-3bf5-44dd-8cdb-2913f30defb6
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

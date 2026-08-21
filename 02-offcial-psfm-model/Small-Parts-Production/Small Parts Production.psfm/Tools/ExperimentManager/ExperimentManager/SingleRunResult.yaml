@@ -1,0 +1,18 @@
+InternalClassType: Variable
+Comment: "Attention: only used when using rules!!!"
+Coordinate3D: [68,-33,0]
+DataType: table
+Font: 2
+HasInitValue: false
+Name: SingleRunResult
+Origin: 6ac5a7b6-cbd6-4a3c-906a-06066033b9bf
+ShowDataType: false
+UUID: 0de58c93-fc0e-468f-978b-adecf8f61978
+Value:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnWidth: 20
+  DataType: string
+  ShowDataType: true
+ Columns:

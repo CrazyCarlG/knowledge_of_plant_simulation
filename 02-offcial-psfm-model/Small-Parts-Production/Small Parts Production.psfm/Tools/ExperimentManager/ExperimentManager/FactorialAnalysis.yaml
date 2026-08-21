@@ -1,0 +1,92 @@
+InternalClassType: Method
+Coordinate3D: [50,-26.25,0]
+Name: FactorialAnalysis
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: EndOfAllExperiments_method (endSim)
+ param TechnAttrName:string -- factorDesignValue
+ var str,col1,col2:string--pStr:string;
+ var a:any := executeSilent(to_str("-> any return ", ValueDescriptions.getOrig(TechnAttrName)))
+ var isOutputTime:boolean := getSimTalkTypename(a) = "time"
+ var j,k,k1,colRes,sk,sk1:integer
+ var s:real
+ var t:time
+ var prec:integer := ResultsPrecision
+ 
+ var resTab:object := Results
+ var effTab:object := Effects; effTab.delete
+ var dTab:object := Design
+ var nExp:integer := resTab.yDim
+ var nInp:integer := dTab.xdim
+ 
+ str := ValueDescriptions.get(TechnAttrName)
+ colRes := resTab.getColumnNo(str) -- column in the table 'Results'
+ if colRes < 0
+ 	print "The output value \\"",TechnAttrName,"\\" is unknown."
+ end
+ 
+ for k:=1 to nInp 
+ 	col1 := dTab[k,0] --pStr := "";
+ 	effTab[k,0] := col1; effTab[0,k] := col1
+ 	
+ 	s:=0 --print;print "Main effect of ",col1;
+ 	for j:=1 to nExp 
+ 		if resTab[col1,j] = dTab[col1,1] then sk := -1;else sk := 1;end
+ 		s := s + sk* resTab[colRes,j] --pStr := to_str(pStr, " ",sk);
+ 	next
+ 	s := 2*s/nExp   --print pStr;
+ 	if isOutputTime
+ 		t := s
+ 		effTab[k,k] := to_str("  H",k," = ", t)
+ 	else
+ 		if prec = -1
+ 			effTab[k,k] := to_str("  H",k," = ", num_to_str(s,4))
+ 		else
+ 			effTab[k,k] := to_str("  H",k," = ", round(s,prec))
+ 		end
+ 	end
+ next -- k
+ 
+ for k:=1 to nInp 
+ 	col1 := dTab[k,0]
+ 	for k1 := k+1 to nInp 
+ 		col2 := dTab[k1,0]
+ 		s := 0 --pStr := ""; print "Interaction effect ",k,",",k1," of ",col1," and ",col2;
+ 		for j:=1 to nExp 
+ 			if resTab[col1,j] = dTab[col1,1] then sk :=-1;else sk :=1;end
+ 			if resTab[col2,j] = dTab[col2,1] then sk1:=-1;else sk1:=1;end
+ 			s := s + sk * sk1 * resTab[colRes,j] --pStr := to_str(pStr, " ",sk*sk1);
+ 		next
+ 		s := 2*s/nExp
+ 		--print pStr;
+ 		if isOutputTime
+ 			t := s
+ 			effTab[k1,k] := to_str("  W",k,",",k1," = ", t)		
+ 		else
+ 			if prec = -1
+ 				effTab[k1,k] := to_str("  W",k,",",k1," = ", num_to_str(s,4))
+ 			else
+ 				effTab[k1,k] := to_str("  W",k,",",k1," = ",  round(s,prec))
+ 			end		
+ 		end
+ 	next -- k1
+ next -- k
+ --effTab.opendialog
+RandomSeed: 272
+UUID: 200a897c-8370-4546-9b58-54f5e17b94e2
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

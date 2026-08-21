@@ -1,0 +1,24 @@
+InternalClassType: Conveyor
+Coordinate3D: [-12.000000357627869,10.600000226497651,0]
+Length: 13.141592849414783
+Name: F3
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 48
+UUID: 01a0236c-0546-7011-b597-973acdb1325e
+Width: 1.0000000149011612
+3D:
+ BaseHeight: 1.0000000149011612
+ $ExtSegments:
+  - 0
+  - [0,3.0000000447034836,0]
+  - [0,90.000000000000028,2.0000000298023215,0]
+  - [0,7.0000001043081284,0]
+$Successors:
+-
+ $Succ: 01a0236c-0546-700f-beaf-8cf548a99f1c
+ Name: Connector11
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7012-be04-e36cf5e434e7
+$Predecessors:
+- 01a0236c-0546-7014-b629-52f29c31e274
+InheritEntranceExitLockedOnReset: false

@@ -1,0 +1,71 @@
+InternalClassType: Method
+Coordinate3D: [12,4,0]
+Name: CB_ShowError
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- shows the error for one remote machine
+ var sel,j,errRow,numProcesses: integer
+ var str,machName : string	-- display text
+ 
+ var mt: object := ~.DistributedSimulation.MachinesTable --?.~.~.DistributedSimulation.MachinesTable;
+ if mt.yDim = 0 
+ 	-- No simulation machines defined.
+ 	messageBox(~.rootFolder.Localization.getText(213),1,4) -- info
+ 	return
+ end
+ 
+ sel := ~.Dialog.AdvancedSettings.getIndex("RemotesList") -- selected remote machine
+ machName := RemoteTable[1,sel] -- "Remote Machine"
+ 
+ var numberCrashes:integer
+ var errorFound:boolean
+ for j := 1 to mt.yDim 
+ 	if machName = mt[1,j] -- detect computer name
+ 		numProcesses := numProcesses + 1
+ 		numberCrashes := numberCrashes + mt[18,j]
+ 		
+ 		if mt["Error Occurred",j] 
+ 			errorFound := true
+ 			errRow := j
+ 		end
+ 	end
+ next
+ 
+ if numberCrashes > 0 
+ 	-- "The simulation machine \\"",machName,"\\" was_started ",numberCrashes + 1," times."
+ 	messageBox(rootfolder.Localization.getMessage(173,machName,numberCrashes + numProcesses,""),1,4) -- info
+ 	return
+ end
+ 	
+ if errorFound  -- results from column "Error Occurred",  Merge to a single message: 177, 175, 176
+ 	str := to_str(
+ 		rootfolder.Localization.getText(177),-- "Error"
+ 		" '",mt["ErrorString",errRow],"'",strChr(10), -- ErrorString
+ 		rootfolder.Localization.getText(175),--found in Method
+ 		" '",mt["ErrorMethod",errRow],"'",strChr(10), --"ErrorMethod"
+ 		rootfolder.Localization.getText(176),--at line
+ 		" ",mt["ErrorLine",errRow],".")
+ 
+ 	messageBox(str,1,1) -- error
+ 	
+ else
+  	messageBox(rootfolder.Localization.getText(174),1,4)-- info: No error found
+ end
+RandomSeed: 317
+UUID: 6553997a-a2ca-4566-8d2a-e5c2b3cb188b
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

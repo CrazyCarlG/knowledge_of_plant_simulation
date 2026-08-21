@@ -1,0 +1,134 @@
+InternalClassType: DataTable
+Coordinate3D: [17.2,-3.25,0]
+Name: Results
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 243
+UUID: 1c08795b-ce38-41f2-83b6-3772b7774b50
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: reg
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- delete table Results and fill row 0
+  -- called by:_InputChanged,_OutputChanged,_resetWizard
+  if NOT (OK_input AND OK_output) then return end
+  
+  var obj:object := Results
+  obj.maxXdim := -1
+  obj.delete({1,0}..{*,*})
+  var numInput:integer
+  if UsingTables
+  	numInput  := Input.yDim
+  end
+  
+  var str,attrStr,dataTypeStr,stmt:string
+  for var j := 1 to numInput  -- add input values to the table Results
+  	attrStr := Input[1,j]
+  	--InputValues[j,0] := attrStr;
+  	str := ValueDescriptions.get(attrStr) -- description
+  	obj[j,0] := str -- descriptions of the input value
+  	obj.setEditorRightsColumn(j,false) -- Input values should not edit here (true), but backgroundcolor is also grey
+  
+  	stmt := to_str("-> boolean ",AttrStr,"; return true")
+  	if executeSilent(stmt)
+  		stmt := to_str("-> any result := ",AttrStr)
+  		var a:any  := executeSilent(stmt)  -- also for a NwData
+  		dataTypeStr := getSimTalkTypename(a)
+  		forget a
+  
+  		switch dataTypeStr
+  		case "integer","real","time","length","speed","weight","acceleration","boolean","string","money"
+  		else
+  			dataTypeStr := "Not allowed" -- result: if NwData of type object then result is "void" or "object".
+  		end
+  	else
+  		dataTypeStr := "Not allowed"
+  	end
+  	if dataTypeStr /= "Not allowed"
+  		obj.setDataType(j, dataTypeStr)
+  		obj.setAlignmentColumn(j,"right")
+  		obj.setBackgroundColorColumn(j, makeRGBValue(255, 255, 255)) -- light_grey for input values (248)
+  		obj.setBackgroundColorCells({j,0}..{j,0}, makeRGBValue(255,255,255))
+  	end
+  next  -- add input values to the table Results
+  
+  var numOutput:integer := Output.yDim
+  for var j := 1 to numOutput  -- add output values to the table 'Results'
+  	var k:integer := numInput + j
+  	attrStr := Output[1,j]
+  	str := ValueDescriptions.get(attrStr) -- descriptions
+  	--outputValues[j,0] := attrStr;
+  
+  	obj[k,0] := str -- in Results_
+  	obj.setEditorRightsColumn(k,false)
+  
+  	if isOutTable(attrStr)
+  		obj.setDataType(k, "table")
+  		obj.setAlignmentColumn(k,"center")
+  	else
+  		dataTypeStr := outputValues.getDataType(attrStr)
+  		if dataTypeStr ~= "integer" then dataTypeStr := "real";end
+  		if obj.getDataType(k) /= dataTypeStr
+  			obj.setDataType(k, dataTypeStr)
+  		end
+  
+  		switch dataTypeStr
+  		case "real","length","speed","weight","acceleration","money"
+  			obj.setFormatString(k, when ResultsPrecision < 1 or ResultsPrecision > 14 then "" else to_str("-15.", ResultsPrecision))
+  		end
+  
+  		obj.setAlignmentColumn(k,"right")
+  	end
+  	obj.setBackgroundColorColumn(k, makeRGBValue(255, 255, 255)) -- white for output values
+  	obj.setBackgroundColorCells({k,0}..{k,0}, makeRGBValue(255,255,255))
+  next
+  
+  if numOutput > 0
+  	obj.maxXdim := numInput + numOutput
+  else
+  	obj.maxXdim := -1
+  end
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  EditorReadOnly: true
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+   Width: 9
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+   -
+    Index: 1
+  -
+   Index: 2
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+ ColumnIndex: [string,1,"Experiment"]
+ Columns:

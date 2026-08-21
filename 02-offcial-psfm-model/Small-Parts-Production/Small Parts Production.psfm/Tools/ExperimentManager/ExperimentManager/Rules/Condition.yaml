@@ -1,0 +1,102 @@
+InternalClassType: DataTable
+Coordinate3D: [-2.6500000000000004,13,0]
+Name: Condition
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+PlausibilityCtrl: "closeCondition"
+UUID: 9dba260c-bf58-40cb-8b2f-bae7c2d81297
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: RuleNo
+ ID: 1
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: isOpen
+ ID: 2
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 9
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   Alignment: "Center"
+   DataType: string
+   FormatString: "AND;OR"
+   Width: 12
+  -
+   Index: 2
+   FontSize: 1
+   FontColor: 0xff
+   Alignment: "Center"
+   DataType: string
+   FormatString: ";(;( (;( ( (;( ( ( ("
+   Width: 14
+  -
+   Index: 3
+   DataType: object
+   Width: 26
+  -
+   Index: 4
+   Width: 18
+  -
+   Index: 5
+   FontColor: 0xff0000
+   Alignment: "Center"
+   DataType: string
+   FormatString: "=;<;>;~=;/="
+   Width: 7
+  -
+   Index: 6
+   DataType: real
+   FormatString: "-15.2"
+   Width: 6
+  -
+   Index: 7
+   FontSize: 0
+   FontColor: 0x0
+   Alignment: "Left"
+   DataType: object
+   Width: 11
+  -
+   Index: 8
+   Width: 13
+  -
+   Index: 9
+   FontSize: 1
+   FontColor: 0xff
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Center"
+   Hidden: false
+   DataType: string
+   FormatString: ";);) );) ) );) ) ) )"
+   Width: 14
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 1
+    ReadOnly: true
+    Alignment: "Center"
+ ColumnIndex: [string,10,~,"Boolean operation","Opening Parenthesis","Object","Attribute","Operator","Value","Object","Attribute","Closing Parenthesis"]
+ Columns:

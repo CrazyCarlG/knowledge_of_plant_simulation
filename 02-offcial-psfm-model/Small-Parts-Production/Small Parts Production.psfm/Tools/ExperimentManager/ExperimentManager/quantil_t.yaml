@@ -1,0 +1,60 @@
+InternalClassType: Method
+Coordinate3D: [31.450000000000003,-30.85,0]
+Name: quantil_t
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Exact quantil of the Student-t-tDistribution for confidence intervals
+ -- ExpMgr 15.2.8 and Statistical Tools 15.2.6 
+ -- Regula falsi, Interval Bisection Method / Intervallhalbierungsverfahren
+ param p, df:real -> real
+ --like p := 0.975; df := 4 results 2.77644510521539 after 57 steps
+ var eps:real := 1e-14
+ var numSteps:integer
+ 
+ var low, upp, mid, f_low, f_upp, f_mid:real -- f_ = error function of the probability
+ low := 0.0
+ upp := 1000 -- betai = 0.999999999997 ~ (1 - 3e-12) 
+ -- clearConsole 
+ var h:real := sqrt(low * low + df)
+ f_low :=  p - betai(df/2, df/2, (low + h)/(2 * h))
+ 
+ h := sqrt(upp * upp + df)
+ f_upp :=  p - betai(df/2, df/2, (upp + h)/(2 * h))
+ 
+ repeat
+ 	numSteps += 1
+ 	mid := (low + upp)/2
+ 	h := sqrt(mid * mid + df)
+ 	f_mid := p - betai(df/2, df/2, (mid + h)/(2 * h))
+ 	
+ 	if f_mid * f_low < 0
+ 		upp := mid
+ 		f_upp := f_mid
+ 	else
+ 		low := mid
+ 		f_low := f_mid
+ 	end
+ 	--print "Check after ",numSteps," steps: ",f_low * f_upp < 0,"  ",upp - low
+ 	
+ until  upp - low < eps OR f_low * f_upp >= 0 OR numSteps > 100
+ 
+ -- print mid," after ",numSteps," steps"
+ return mid
+RandomSeed: 290
+UUID: 2db19f1f-8d3b-42f4-b81b-9d5ec2eb74c4
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

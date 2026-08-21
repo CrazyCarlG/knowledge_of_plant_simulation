@@ -1,0 +1,43 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70b6-968d-3fc5b59b6049
+RandomSeed: 1073747270
+UUID: 01a0236c-0546-7251-b5d1-3fffc6dc27ce
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: |+1
+  Enter the input values for each experiment.\r
+  If you want to run single experiments and preserve already simulated experiments, mark the experiments with true and false, respectively.
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 9
+  -
+   Index: 1
+   Alignment: "Center"
+   DataType: boolean
+   FormatString: "AAAAA"
+   Width: 5
+  -
+   Index: 2
+   Alignment: "Right"
+   DataType: integer
+   Width: 15
+ ColumnIndex: [string,3,"Experiments","Active","Number of pallets"]
+ Columns:
+ - [0,string,4,~3,"Requirement"]
+ - [1,boolean,8,1,1,1,1,1,1,1,1]
+ - [2,integer,8,15,20,25,30,35,40,45,50]

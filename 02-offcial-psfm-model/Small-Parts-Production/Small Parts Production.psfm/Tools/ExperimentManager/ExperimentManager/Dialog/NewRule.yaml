@@ -1,0 +1,87 @@
+InternalClassType: Method
+Coordinate3D: [-3,11,0]
+Name: NewRule
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ var rulesTab,obj:object
+ var ruleNo,k:integer
+ var RuleName,stmt:string
+ var lst:list[string]
+ 
+ -- Please enter the name of the new rule.
+ RuleName := Prompt(rootfolder.Localization.getText(216))
+ stmt := to_str("-> boolean result :=  ~.Rules.Methods.createAttr(\\"Test_",RuleName,"\\",\\"string\\")")
+ --	print stmt;
+ if (strLen(RuleName) <1) OR NOT executeSilent(stmt) 
+ 	-- Non-valid name!
+ 	messageBox(rootfolder.Localization.getText(218),1,1) -- return!
+ else -- valid object name:
+ 	~.Rules.Methods.deleteAttr(to_str("Test_",RuleName))
+ 	rulesTab := ~.Rules.Rules
+ 	rulesTab.setCursor(2,1)
+ 	if rulesTab.find({2,1}..{2,*},RuleName) 
+ 		-- The Name already exists.
+ 		messageBox(rootfolder.Localization.getText(217),1,4) -- info and return
+ 	else
+ 		-- now_the rule can be generated:
+ 		ruleNo := rulesTab.yDim + 1
+ 		rulesTab[2,ruleNo]:= RuleName
+ 		@.activeRuleName := RuleName
+ 	
+ 		lst.create
+ 		lst.insertList(1, rulesTab.copy({2,1}..{2,*}))
+ 		@.setList("Ruleselect_Pop",lst)
+ 		@.setIndex("Ruleselect_Pop",ruleNo)
+ 	
+ 		rulesTab[8,ruleNo]:= false
+ 		@.setCheckBox("AsInit_CB",rulesTab[8,ruleNo])
+ 	
+ 		rulesTab[7,ruleNo]:=true
+ 		@.setCheckBox("ActiveRule_CB",rulesTab[7,ruleNo])
+ 		@.setCaption("Valid_Inp","")-- rulesTab[9,ruleNo]		
+ 		@.setCaption("Prio_Input","")-- rulesTab[1,ruleNo]
+ 		
+ 		rulesTab.createNestedList(3,ruleNo)-- condition
+ 		rulesTab[3,ruleNo].Name:=to_str("Cond_",RuleName)
+ 		rulesTab.createNestedList(5,ruleNo)-- action
+ 		rulesTab[5,ruleNo].Name:=to_str("Act_",RuleName)
+ 		
+ 		obj := rootFolder.BasicObjects.InformationFlow.&Method.duplicate(~.Rules.Methods)
+ 		obj.Coordinate3D := makeArray(-13,13,0.0)
+ 		obj.name := to_str("Cond_",RuleName)-- condition
+ 		rulesTab[4,ruleNo] := to_str("~.Rules.Methods.Cond_",RuleName)
+ 
+ 		obj.program := to_str("/* Condition for the Rule: '",RuleName,"'",strChr(10), "description:",strChr(10),"*/", strChr(10),"-> boolean result := TRUE")
+ 	
+ 		obj := rootfolder.BasicObjects.InformationFlow.&Method.duplicate(~.Rules.Methods)
+ 		obj.Coordinate3D := makeArray(-5,13,0.0)
+ 		obj.name := to_str("Act_",RuleName) -- action
+ 		rulesTab[6,ruleNo] := to_str("~.Rules.Methods.Act_",RuleName)
+ 		obj.program := to_str("/*",strChr(10),"Method for the Rule: '",RuleName,"'",strChr(10), "description:",strChr(10),"*/")
+ 	
+ 		for var j:=1 to rulesTab.ydim 
+ 			k := 10 + 100*(j-1)
+ 			rulesTab[4,j].xPos := k
+ 			rulesTab[6,j].xPos := k
+ 		next
+ 		@.RuleSpecified
+ 	end
+ end
+RandomSeed: 327
+UUID: f0b913ef-e216-4aa3-8dbc-d1293eec2349
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

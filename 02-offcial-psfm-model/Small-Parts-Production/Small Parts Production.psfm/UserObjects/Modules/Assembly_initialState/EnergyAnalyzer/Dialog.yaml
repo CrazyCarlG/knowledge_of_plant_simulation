@@ -1,0 +1,11 @@
+InternalClassType: Dialog
+Label: "Energy Analyzer in the Frame 'Assembly_initialState'"
+Origin: 2cd81dd3-451e-43a7-864d-3e5d3cc22de1
+RandomSeed: 1073746633
+UUID: 01a0236c-0546-7186-a60e-91902f55e7ff
+$CustomAttributes:
+-
+ Name: VisualizationON
+ ID: 3
+ $DataType: boolean
+ Value: false

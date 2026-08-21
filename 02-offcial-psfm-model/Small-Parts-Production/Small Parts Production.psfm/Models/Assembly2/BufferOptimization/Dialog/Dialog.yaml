@@ -1,0 +1,39 @@
+InternalClassType: Dialog
+Label: "BufferOptimization"
+Origin: 72c8d9a8-7cd7-4236-b55c-2627cb5a4177
+RandomSeed: 1073747565
+UUID: 01a0236c-0546-7569-bd4a-803b739202e3
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate_Menu"
+-
+ Type: Menu
+ Name: "Tools_Menu"
+-
+ Type: Menu
+ Name: "Help_Menu"
+-
+ Type: Button
+ Name: "Start_but"
+-
+ Type: TabControl
+ Name: "Tabs"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Def_Tab"
+  $Elements:
+  -
+   Type: CheckBox
+   Name: "UseInputValues_CB"
+   IsChecked: true
+  -
+   Type: Button
+   Name: "DefineInputVariables_but"
+  -
+   Type: Button
+   Name: "DefineInputValues_but"
+ -
+  Type: TabPage
+  Name: "Evaluation_tab"

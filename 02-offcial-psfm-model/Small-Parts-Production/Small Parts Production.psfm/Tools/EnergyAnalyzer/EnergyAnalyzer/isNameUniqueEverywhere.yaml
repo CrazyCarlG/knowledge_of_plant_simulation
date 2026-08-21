@@ -1,0 +1,36 @@
+InternalClassType: Method
+Coordinate3D: [10,10,0]
+Name: isNameUniqueEverywhere
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- called by: visualize
+ param frame : object, nameToCheck : string -> boolean
+ 
+ if not frame.isNameUnique(nameToCheck) then
+ 	return false
+ end
+ 
+ for var i := 1 to frame.numNodes
+ 	var n : object := frame.node(i)
+ 	if n.InternalClassName = "Network" AND (not isNameUniqueEverywhere(n, nameToCheck)) then
+ 		return false
+ 	end
+ next
+ return true
+RandomSeed: 35
+UUID: 9b2c7cca-660a-4686-b9d5-df1e975ee0bf
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

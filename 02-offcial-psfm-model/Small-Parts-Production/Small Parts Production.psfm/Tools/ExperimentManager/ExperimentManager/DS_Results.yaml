@@ -1,0 +1,38 @@
+InternalClassType: Method
+Coordinate3D: [41.85,-18.85,0]
+Name: DS_Results
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Distributed Simulation Interface
+ -> string
+ -- called by: endOfSim if DS_ = true
+ -- The meaning of the columns: ExpNo; ObservNo; OutputVal_1; ..., OutputVal_n;
+ -- n is the number of output values
+ var res:any
+ result := to_str(DS_Experiment,";",DS_Observation,";")
+ for var j := 1 to Output.yDim  
+ 	var AttrStr:string := Output[1,j] 
+ 	res := readValue(AttrStr) -- read both attributes and cells of tablefiles
+ 	result := to_str(result,res,";")
+ 	forget res
+ next
+ -- result := strCopy(result,1,strLen(result)-1) -- truncate the last ";"
+ DS_Output.appendRow(result)
+RandomSeed: 189
+UUID: d6ef41b9-1407-42b7-b984-1e76dd81ecda
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

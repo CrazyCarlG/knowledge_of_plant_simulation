@@ -1,0 +1,59 @@
+InternalClassType: DataTable
+Origin: 1c08795b-ce38-41f2-83b6-3772b7774b50
+RandomSeed: 1073747507
+UUID: 01a0236c-0546-7506-86ac-cd6a3d0981f9
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: "To open a subtable, select the cell and press F2."
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 2
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+   Hidden: false
+   Width: 8
+  -
+   Index: 1
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Right"
+   DataType: integer
+   Width: 17
+  -
+   Index: 2
+   Color: 0xffffff
+   ReadOnly: false
+   Alignment: "Right"
+   DataType: real
+   Width: 10
+  RowFormat:
+  -
+   Index: 0
+   Alignment: "Center"
+  CellFormat:
+  -
+   Index: 1
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+  -
+   Index: 2
+   Rows:
+   -
+    Index: 0
+    Color: 0xffffff
+ ColumnIndex: [string,3,"Experiment","Capacity of buffer","Throughput"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Exp 4","Exp 5","Exp 6","Exp 7","Exp 8"]

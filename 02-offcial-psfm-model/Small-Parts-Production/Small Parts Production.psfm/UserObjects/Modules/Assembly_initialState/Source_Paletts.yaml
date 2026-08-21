@@ -1,0 +1,46 @@
+InternalClassType: Source
+Coordinate3D: [-4,-1,0]
+Interval: 20
+MUSelection: "Constant"
+Name: Source_Paletts
+Number: 35
+Origin: fbfa098c-71b5-49fa-af3c-7d2bb0995986
+Path: ".MUs.Carrier"
+RandomSeed: 98
+ResourceType: "Storage"
+ShiftcalendarObject: "ShiftCalendar"
+TimeOfGeneration: "Number Adjustable"
+UUID: 01a0236c-0546-7032-9027-d6fb25933b35
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0x90f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: init
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	self.~.Number := Quantity;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7021-8420-1cbbacc7bc38
+ Name: Connector24
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7033-95ec-009d6bc42197
+InheritEntranceExitLockedOnReset: false

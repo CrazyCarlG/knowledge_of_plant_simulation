@@ -1,0 +1,21 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [14,-8,0]
+ExitCtrl: "self.transfer2test"
+Origin: 01a0236c-0546-7027-9e9d-734aa58d130f
+RandomSeed: 160
+TransferLengthToObject: false
+UUID: 01a0236c-0546-735d-af2c-d441be20ebde
+Width: 1
+$Successors:
+-
+ $Succ: 01a0236c-0546-735e-b2d4-960bdb6e93d8
+ Origin: 01a0236c-0546-7029-a4c2-5a6b17c55547
+ UUID: 01a0236c-0546-735f-9b08-4280aba0bdd0
+-
+ $Succ: 01a0236c-0546-7354-a5f5-4afd6325b43d
+ Origin: 01a0236c-0546-7085-9452-32d16003a698
+ UUID: 01a0236c-0546-73b5-ba70-044bf4d4b35e
+$Predecessors:
+- 01a0236c-0546-7389-ae43-6a7f3317dbae
+InheritEntranceExitLockedOnReset: false

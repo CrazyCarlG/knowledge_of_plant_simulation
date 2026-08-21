@@ -1,0 +1,94 @@
+InternalClassType: DataTable
+CloseCtrl: "self.OnClose"
+Coordinate3D: [0.5,-6.5,0]
+Name: Output
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+PlausibilityCtrl: "OutputChanged"
+RandomSeed: 280
+UUID: 91d626e2-3d41-4950-84db-f20b4e889310
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: WarningGiven
+ ID: 1
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false
+-
+ Name: OnClose
+ ID: 2
+ DataType: method
+ Value: |+1
+  param bb:boolean
+  
+  if Output.WarningGiven 
+  	Output.WarningGiven := false
+  else
+  	if NOT OK_output  -- Incorrect output value.
+  		messageBox(to_str(rootfolder.Localization.getText(222),"."),1,1) -- error
+  	end
+  end
+ ShowInTooltip: false
+-
+ Name: getListOfNumericOutput
+ ID: 3
+ DataType: method
+ Value: |+1
+  -- called by: Dialog.cxallback
+  param lst:list[string] -- list of description/alias of output values
+  
+  lst.insertList(1, ValueDescriptions.copy({1,1}..{1,*}))
+  for var j := lst.dim downto 1 
+  	if (ValueDescriptions[2,j]="Input") OR isOutTable(ValueDescriptions[0,j]) 
+  		lst.remove(j)
+  	end
+  next
+ ShowInTooltip: false
+$Data:
+ Comment: "Specify the output values for the simulation study."
+ ShowComment: true
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 3
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+  -
+   Index: 1
+   Width: 47
+  -
+   Index: 2
+   Width: 27
+  -
+   Index: 3
+   Alignment: "Center"
+   DataType: boolean
+   Width: 17
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+  CellFormat:
+  -
+   Index: 2
+   Rows:
+   -
+    Index: 0
+    Alignment: "Center"
+  -
+   Index: 3
+   Rows:
+   -
+    Index: 0
+    Alignment: "Center"
+ ColumnIndex: [string,4,~,"Output Values","Description","High Values are Better"]
+ Columns:

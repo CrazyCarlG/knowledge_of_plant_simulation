@@ -1,0 +1,20 @@
+InternalClassType: Track
+Origin: 01a0236c-0546-701e-8c68-d440bfc461e3
+RandomSeed: 169
+TransferLengthToObject: false
+UUID: 01a0236c-0546-7354-a5f5-4afd6325b43d
+Width: 1
+$CustomAttributes:
+-
+ Name: ready4Loading
+ ID: 4
+ $DataType: boolean
+ Value: true
+$Successors:
+-
+ $Succ: 01a0236c-0546-7360-9784-d5f706afb246
+ Origin: 01a0236c-0546-7083-ac49-68a190cf81a9
+ UUID: 01a0236c-0546-73b3-a9d1-ccbea0b4ad50
+$Predecessors:
+- 01a0236c-0546-73b5-ba70-044bf4d4b35e
+InheritEntranceExitLockedOnReset: false

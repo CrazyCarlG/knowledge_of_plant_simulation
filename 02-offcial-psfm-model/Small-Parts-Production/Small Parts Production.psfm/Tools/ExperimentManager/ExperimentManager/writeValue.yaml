@@ -1,0 +1,28 @@
+InternalClassType: Method
+Coordinate3D: [3.3999999999999986,-27.5,0]
+Name: writeValue
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- set AttrStr := Values
+ -- called by:_evalExpTable
+ param AttrStr:string, newVal:any -> boolean
+ 
+ return executeSilent(to_str("param a:any -> boolean ",AttrStr,":= a; return true"), newVal)
+RandomSeed: 250
+UUID: 89f53378-f9d4-4f1b-a785-baeef61f73a4
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

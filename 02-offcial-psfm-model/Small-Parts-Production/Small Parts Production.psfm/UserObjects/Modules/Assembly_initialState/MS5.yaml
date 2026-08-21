@@ -1,0 +1,65 @@
+InternalClassType: Station
+Coordinate3D: [7.5,-3,0]
+ExitCtrl: "self.OnExit"
+ExitCtrlFront: false
+ExitCtrlRear: true
+ExitLocked: false
+Label: "MS5"
+Name: MS5
+Origin: 54049e8a-1824-44ef-87d8-6d677c3a9773
+PowerInputFailed: 0.5
+PowerInputOperational: 0.5
+PowerInputSettingUp: 0.7
+PowerInputStandby: 0.1
+PowerInputWorking: 2
+ProcTime: [Normal,1:00,15,40,1:25]
+RandomSeed: 91
+ShiftcalendarObject:
+UUID: 01a0236c-0546-7042-bcf4-2a3a4f1e13fd
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$CustomAttributes:
+-
+ Name: OnExit
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	if EnergySavingMeasures.Value
+      then
+  		?.EnergyTargetState := "Standby";
+  	end;
+  end;
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-705c-af59-93ee8aa2682d
+ Name: Connector26
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-705d-beaa-d7b472a265fe
+$Predecessors:
+- 01a0236c-0546-704a-a1e0-f25e92ba824a
+InheritEntranceExitLockedOnReset: false
+$EnergyActive: true
+$Failures:
+-
+ $Name: Failure
+ ID: 1
+ Interval: [Negexp,2:26:59.9999999999927]
+ Duration: [Erlang,3:00,2:07.27922061357856]
+$ProcImp:
+ Services:
+ - [~,["test",1]]

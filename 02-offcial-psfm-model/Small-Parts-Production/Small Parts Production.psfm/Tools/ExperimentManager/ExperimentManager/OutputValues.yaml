@@ -1,0 +1,39 @@
+InternalClassType: DataTable
+Coordinate3D: [13,-6.0499999999999989,0]
+Name: OutputValues
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+UUID: 4867cac0-085c-4f94-a649-b7da41c4118e
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 10
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 11
+  -
+   Index: 1
+   Width: 10
+  -
+   Index: 2
+   Width: 10
+  -
+   Index: 3
+   Width: 10
+  -
+   Index: 4
+   Width: 10
+ ColumnIndex: [string,1,"Target value"]
+ Columns:

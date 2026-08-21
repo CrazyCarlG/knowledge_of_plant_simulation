@@ -1,0 +1,16 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70ce-8bf6-823cfa5e642f
+RandomSeed: 1073747804
+UUID: 01a0236c-0546-7404-8680-a8f3fe5d50bc
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,3,"Path of the Value","Description","Type of the value"]
+ Columns:
+ - [0,string,2,"root.Quantity","root.Drain.statDeleted"]
+ - [1,string,2,"Number of pallets","Throughput"]
+ - [2,string,2,"Input","Output"]

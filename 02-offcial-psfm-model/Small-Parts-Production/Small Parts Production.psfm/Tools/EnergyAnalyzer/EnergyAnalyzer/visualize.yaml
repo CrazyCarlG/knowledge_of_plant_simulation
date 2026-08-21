@@ -1,0 +1,44 @@
+InternalClassType: Method
+Coordinate3D: [4.5,10,0]
+Name: visualize
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- button 'Show', showVisualization
+ 
+ GrGroupName := to_str("_",name,"_",abs(layer))
+ repeat
+ 	GrGroupName += "_"
+ until isNameUniqueEverywhere(root,GrGroupName) -- frequently unique in the root frame
+ 
+ Dialog.VisualizationON := true
+ 
+ var MaxCons:real := EnergyConsumers.max({1,1}..{1,*})
+ 
+ if MaxCons = 0 
+ 	-- The investigated objects have no energy consumption.
+ 	messageBox(rootfolder.localization.getText(55),1,3)
+ 	return
+ end
+ 
+ -- consumptions registered (that is MaxCons > 0)
+ for var objNo := 1 to EnergyConsumers.yDim  
+ 	var relScaling:real := EnergyConsumers[1,objNo]/MaxCons -- in [0,1]
+ 	visObject(objNo, relScaling)
+ next
+RandomSeed: 49
+UUID: 950aa230-aef6-4cd0-a7fe-97ba34203359
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

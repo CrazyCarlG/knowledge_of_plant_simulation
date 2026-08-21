@@ -1,0 +1,76 @@
+InternalClassType: Method
+Coordinate3D: [-7.1000000000000005,10,0]
+Name: observeEnergyState
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- the observer of 'EnergyCurrentState' 'PowerInput'
+ param valueName:string, oldValue:any
+ 
+ if (NOT @.Energyactive) OR (eventController = void) 
+ 	return
+ end
+ var objStr:string := makePathRelative(@,~)
+ var row:integer := EnergyConsumers.getRowNo(objStr)
+ if row < 1  -- For instance the object was renamed.
+ 	if @.rootframe /= root 
+ 		return -- should not happened
+ 	end
+ 
+ 	if NOT &observeEnergyState.InfoWasGiven 
+ 		-- The object '$1' was not registered correctly for the library '$2'.
+ 		messageBox(rootFolder.localization.getMessage(56, @,name,""),1,1) -- error
+ 		&observeEnergyState.InfoWasGiven := true
+ 		eventController.stop
+ 	end
+ 	return
+ end
+ 
+ var r:real := @.statEnergyTotalConsumption
+ --                                  Consumption in the state 'operational',     Current Power [kW]
+ EnergyConsumers.writeRow(1,row,  r, r * @.statEnergyOperationalConsumptionPortion, @.PowerInput)
+ -- update cust att
+ Consumption            := EnergyConsumers.sum({1,1}..{1,*}) -- SUM_Energy [kWh]
+ ConsumptionOperational := EnergyConsumers.sum({2,1}..{2,*}) -- SUM_Energy operational [kW]	
+ powerConsumption       := EnergyConsumers.sum({3,1}..{3,*}) -- SUM Current Power [kW] (shown in the plotter)
+ 
+ refEnergy.value := to_str(round(Consumption,1)," kWh")
+ 	
+ if maxPowerConsumption < powerConsumption  -- A new record is detected.
+ 	maxPowerConsumption := powerConsumption
+ 	PeakTime := eventController.simTime
+ end
+ 
+ /*if abs(@.statEnergyOperationalConsumption - EnergyConsumers[2,objStr]) > 0.01	
+ 	print "Powerinput: ",oldValue," >>> ",@.Powerinput
+ 	print @.statEnergyOperationalConsumption
+ 	print EnergyConsumers[2,objStr]
+ 	debug
+ end*/
+ 
+ if EnergyConsumers.isOpen OR UsageProfile.active  -- The opened table and the diagram, which must be updated.
+ 	updateConsumption
+ end
+RandomSeed: 56
+UUID: af84f52c-e885-45cd-a516-e05ade6f6bb3
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: InfoWasGiven
+ ID: 1
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false

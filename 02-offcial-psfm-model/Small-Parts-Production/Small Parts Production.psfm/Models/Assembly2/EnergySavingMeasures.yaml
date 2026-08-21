@@ -1,0 +1,14 @@
+InternalClassType: Checkbox
+Origin: 01a0236c-0546-708a-adad-44fe37a7e592
+RandomSeed: 1073747657
+UUID: 01a0236c-0546-73b8-b9a6-2cb049ad03c7
+Value: true
+$CustomAttributes:
+-
+ Name: allConveyors
+ ID: 2
+ $DataType: table
+ Value:
+  CommonFormat: false
+  Columns:
+  - [1,object,17,"PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.F0","F0","F1","F2","F3","F4","F5","F7","F8","F9","F10","F11","Line1","Line2"]

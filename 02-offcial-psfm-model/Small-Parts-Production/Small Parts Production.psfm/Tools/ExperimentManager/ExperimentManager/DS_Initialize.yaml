@@ -1,0 +1,36 @@
+InternalClassType: Method
+Coordinate3D: [42,-15.850000000000001,0]
+Name: DS_Initialize
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Distributed Simulation Interface
+ param ExpNo,ObsNo: integer 
+ 
+ DS_Experiment := ExpNo
+ DS_Observation := ObsNo
+ 
+ DefSeed4Run(ExpNo, ObsNo)
+ evalExpTable(ExpNo) -- ExpNo is the row of the tablefile 'ExpTable'
+ 
+ if strLen(UserConfigMethod) > 0 
+ 	var stmt:string  := to_str(~,".", UserConfigMethod,"(", ExpNo,")")
+ 	execute(stmt)
+ end
+RandomSeed: 191
+UUID: a8b9aed2-4e9f-4168-bd78-d58aa01b6a75
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

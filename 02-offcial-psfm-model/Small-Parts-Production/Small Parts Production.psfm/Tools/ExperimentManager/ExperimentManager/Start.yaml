@@ -1,0 +1,301 @@
+InternalClassType: Method
+Coordinate3D: [8,-3.1,0]
+Name: Start
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- State_(for experiment handling: "stopped", "wait4stop", "running", "ready")
+ -- called by: Button 'Start'
+ var str,ExpStr:string
+ 
+ LastSimulationCPUTime := 0
+ StartCPUTime := 0
+ TotalCPUTime := 0
+ SimulationRunEndTime := 0
+ LastBenchmarkCPUTime := Benchmark
+ SimulationRunEndTime := root.EventController.End
+ 
+ if saveExcelatEnd OR saveHTMLatEnd OR MailAtEnd
+ 	if NOT DistributedSimulation.M_isComputerAccessPermitted("Check the dialog Advanced Settings: \\"Save report\\",  \\"Save results\\", \\"Send e-mail\\".")
+ 		return
+ 	end
+ end
+ 
+ if not checkExpParameters
+ 	return
+ end
+ 
+ 
+ if UsingRemote
+ 	-- For the distributed simulation the ExperimentManager requires access to the computer.
+ 	-- Für die verteilte Simulation benötigt der ExperimentManager Zugriff auf den Computer.
+ 	if NOT DistributedSimulation.M_isComputerAccessPermitted("Check the dialog Advanced Settings: \\"Use distributed simulation\\".") -- tip in the console
+ 		return
+ 	end
+ 
+ 	if DistributedSimulation.MachinesTable.ydim < 1
+ 		-- Please define simulation machines.
+ 		messageBox(Rootfolder.Localization.getText(32),1,1) -- error
+ 		return
+ 	end
+ end
+ 
+ SingleRun := false
+ 
+ if ~.InternalClassType = "Folder" OR -- work only on instances
+ 	getActiveContr(current)/=void
+ 	return
+ end
+ --_infobox("",false)
+ var expDLG:object := Dialog.Dialog
+ var ApPObj:object := current
+ ApPObj.selected := false
+ --expDLG.callback("APPLY")
+ 
+ if EventController=void --"Please insert an eventcontroller."
+ 	messageBox(Rootfolder.Localization.getText(265),1,4) -- info
+ 	return
+ end
+ if EventController.end = 0 -- new in 15.2: The end time is needed for distribute and non-distribute simulation.
+ 	messageBox(Rootfolder.Localization.getText(47), 1, 1) -- error
+ 	-- The Eventcontroller does not contain an End time. Please enter a time under Settings > End.
+ 	return
+ end
+ 
+ if NOT ValueDescriptions.reg
+ 	return
+ end
+ 
+ dialog.changeUserSettings("read") -- resetInitBox(false)
+ 
+ EventController.ExperimentManager := current	-- distributed and non-distributed simulation
+ 
+ switch State -- 2 cases: "stopped", "ready"
+ case "stopped"  -- the single exp is finished =>> Start the next exp (only non-distributed simulation)
+ 	State := "running"
+ 	IsRunning := true
+ 
+ 	expDLG.setSensitive("Start_But",false)
+ 
+ 	Recording.append(to_str("CONTINUE the Experimentmanager at ",sysdate))
+ 
+ 	currIcon := "Icon0"
+ 	if _3D.exists
+ 		_3D.VisibleGraphicGroups := makeArray("icon0")
+ 	end
+ 
+ 	CurrRunNo := 1
+ 	CurrExpNo := getNextExpNo
+ 	--_CurrentTaskNo := (CurrExpNo - 1) * NumRuns + CurrRunNo
+ 
+ 	eventController.reset
+ 	DefSeed4Run(currExpNo,currRunNo)
+ 	-- end of_state = "stopped"
+ 	--_NumExp := -1 -- no_info in the dialog like "Current experiment: 3/6"
+ 
+ case "ready"  -- START the experiment study
+ 
+ 	if OnStartCallback /= void AND OnStartCallback.InternalClassType = "Method"
+ 		OnStartCallback.execute
+ 	end
+ 
+ 	expDLG.setCaption("currObs", " ") -- text: Current Experiment:
+ 	expDLG.setCaption("currExp", " ") -- text: Observation:
+ 	expDLG.setSensitive("Start_But",false)
+ 
+ 	if Output.yDim=0 --"Please specify result values as the target of the simulation study."
+ 		messageBox(Rootfolder.Localization.getText(351),1,4) -- info
+ 		Output.openDialogBox(true) -- open as dialog
+ 		return
+ 	end
+ 	if usingTables and NOT OK_input  --"Please check the input values of the simulation study."
+ 		messageBox(Rootfolder.Localization.getText(352),1,1) -- error
+ 		return
+ 	end
+ 	if NOT OK_output --"Please check the output values of the simulation study."
+ 		messageBox(Rootfolder.Localization.getText(353),1,1) -- error
+ 		return
+ 	end
+ 
+ 	if changedInput  -- if there are changes and checkbox "Restore values" is selected then a query is shown.
+ 		storeParam -- save the current input values in the table 'Kind_Input'
+ 	end
+ 
+ 	Dialog.startDateExpRun := sysdate -- custum attribute
+ 
+ 	TotalSimulationRuns := 0 -- Show the number of performed observations in the dialog.
+ 
+ 	-- prepare_DetailedResults, _Protocol for all experiments
+ 	var ExpNo:integer
+ 	if UsingTables
+ 
+ 		for ExpNo := 1 to ExpTable.yDim
+ 			for var j := 1 to Input.yDim
+ 				if Results[j, ExpNo]  /= ExpTable[j+1,ExpNo]  -- detect changes of input values
+ 					Results[j, ExpNo] := ExpTable[j+1,ExpNo] -- transfer all values of input values
+ 					Results.delete({Input.yDim + 1,ExpNo}..{*,ExpNo})
+ 					DetailedResults.delete({1,ExpNo}..{*,ExpNo})
+ 				end
+ 			next
+ 
+ 			if UsingRules OR (ExpTable[1,ExpNo] AND (NOT DetailedResults.ExperimentExecuted[1,ExpNo]))
+ 				prepExp(ExpNo)
+ 			end
+ 		next -- ExpNo
+ 
+ 	else -- NOT UsingTables:
+ 		factorDesignValue := ""
+ 		Design4FactorialAnalysis := false
+ 
+ 		if NOT UsingRules
+ 			-- that is, only 1 experiment
+ 			ExpNo := 1
+ 
+ 			if strLen(DetailedResults[0,1]) < 1
+ 				ExpStr :=  "Exp 1"
+ 
+ 				DetailedResults[0,1]  := ExpStr-- as row index
+ 				Results[0,1]          := ExpStr-- as row index
+ 				--_Protocol[0,1]         := ExpStr-- increase the dimension (used in rules)
+ 				InputValues[0,1]      := ExpStr-- as row index
+ 				OutputValues[0,1]     := ExpStr-- as row index
+ 			end
+ 			DetailedResults.delete({0,2}..{0,*})
+ 			Results.delete({0,2}..{0,*})
+ 
+ 			prepExp(ExpNo)
+ 		end
+ 	end
+ 	-- ExpNo experiments are scheduled, but more experiments are desired because of rules_
+ 	if UsingRules
+ 		while ExpNo < NumRulesExp
+ 			ExpNo := ExpNo + 1
+ 
+ 			for var j := 1 to Input.yDim
+ 				if Results[j, ExpNo]  /= ExpTable[j+1,ExpNo]  -- detect changes of input values
+ 					Results[j, ExpNo] := ExpTable[j+1,ExpNo] -- transfer all values of input values
+ 					Results.maxXdim := -1
+ 					Results.delete({Input.yDim + 1,ExpNo}..{*,ExpNo})
+ 					DetailedResults.delete({1,ExpNo}..{*,ExpNo})
+ 				end
+ 			next
+ 
+ 			prepExp(ExpNo);
+ 		end
+ 	end
+ 
+ 	results4Rules.delete-- contains the observations of all output values of the current experiment
+ 
+ 	if UsingRemote -- distributed simulation
+ 		if Results[0,1] = void
+ 			-- Please press the Reset button.
+ 			messageBox(Rootfolder.Localization.getText(396),1,4) -- info
+ 			state := "ready"
+ 			return
+ 		end
+ 
+ 		makeJobTable(1)
+ 		self.~.ProgressTable.setXYWH(800, 300, 150 + self.~.GetNumberOfObservations*26, min(66 + self.~.GetNumberOfExperiments*20, 700))
+ 		-- self.~.ProgressTable.openDialogBox // ProgressTable does not open automatically upon start of simulation run
+ /*		if UsingRules
+ 			--str := Rootfolder.Localization.getText(30) -- Current experiment:
+ 			--expDLG.setCaption("CurrExp_txt", to_str(str," ",currExpNo))
+ 			expDLG.setCaption("CurrExp", to_str(currExpNo))
+ 		end*/
+ 		if askForSaveModel
+ 			--"The experiments are executed with the saved model."
+ 			--"Do you want to save the current model?"
+ 			switch messagebox(to_str(
+ 				Rootfolder.Localization.getText(354),strChr(10),strChr(13),
+ 				Rootfolder.Localization.getText(355)),50,12)
+ 			case 16  -- save model, answer yes
+ 				-- dialog.changeUserSettings("restore") eventcontroller.speed = 100 is set, do not restore like eventcontroller.speed = 60
+ 				var dt:datetime := sysdate
+ 				str := modelFile
+ 				if EventController/=void
+ 					EventController.ExperimentManager := void
+ 				end
+ 
+ 				saveModel
+ 
+ 				DistributedSimulation.updateMachinesTable(Dialog.RemoteTable)
+ 				Recording.append(to_str("Save the model \\"",str,"\\", needed real time: ",sysdate - dt,"."))
+ 				Recording.append(to_str("Start the experiment study at ",sysdate))
+ 			case 32  -- save model, answer no
+ 				DistributedSimulation.updateMachinesTable(Dialog.RemoteTable) -- save as model with a new name and start distr sim
+ 				Recording.append(to_str("Do not save the model \\"",str,"\\"."))
+ 				Recording.append(to_str("Start the experiment study at ",sysdate))
+ 			else -- cancel
+ 				return
+ 			end-- inspect ask "Save ?"
+ 
+ 		else -- NOT askForSaveModel for distr sim
+ 			Recording.append(to_str("Do not save the model \\"",str,"\\"."))
+ 			Recording.append(to_str("Start the experiment study at ",sysdate))
+ 		end
+ 		--print;print "START EXPERIMENT STUDY";
+ 		State := "running"-- The experimentmanager controls the simulation
+ 		IsRunning := true
+ 
+ 		currIcon := "Icon0"
+ 		if _3D.exists
+ 			_3D.VisibleGraphicGroups := makeArray("icon0")
+ 		end
+ 
+ 		DistributedSimulation.Start
+ 		-- continues with the callbacks
+ 		-- 1. M_NewJobId_
+ 		-- 2. M_setParams_,
+ 		-- 3._M_ReadResult
+ 
+ 	else -- non-distributed simulation
+ 		State := "running"-- The experimentmanager controls the simulation.
+ 		IsRunning := true
+ 
+ 		currIcon := "Icon0"
+ 		if _3D.exists
+ 			_3D.VisibleGraphicGroups := makeArray("icon0")
+ 		end
+ 
+ 		currRunNo := 1
+ 		if UsingTables
+ 			currExpNo := 0 -- NwData
+ 			repeat
+ 				currExpNo := currExpNo + 1
+ 			until ExpTable.ydim < currExpNo OR UsingRules OR (ExpTable[1, currExpNo] AND (NOT DetailedResults.ExperimentExecuted[1,currExpNo]))
+ 		else
+ 			currExpNo := 1
+ 		end
+ 
+ 		if ExpNo < currExpNo then print "All experiments have been carried out."; state := "ready";return end
+ 
+ 		expDLG.setCaption("currExp", to_str(currExpNo))
+ 		DefSeed4Run(currExpNo,currRunNo)
+ 		-- Do not delete results tables during an experiment run:
+ 		-- Dialog.Experiments.setSensitive("Reset_But",false);
+ 		eventController.reset
+ 		firstReset := true
+ 
+ 		if Charts4AllObservations AND numRuns > 1
+ 			SVGofCharts.prepareTables
+ 		end
+ 		--_CurrentTaskNo := (CurrExpNo - 1) * NumRuns + CurrRunNo
+ 	end -- non-distributed simulation
+ 
+ end -- inspect State = "ready"
+RandomSeed: 187
+UUID: 7ff075c5-8da9-473b-b4cb-7db967bc3607
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

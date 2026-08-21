@@ -1,0 +1,100 @@
+InternalClassType: Dialog
+Label: "Advanced Settings in  'Assembly2'"
+Origin: 01a0236c-0546-713e-b495-2c259b9b03ea
+RandomSeed: 1073747844
+UUID: 01a0236c-0546-7474-9d01-03fb375ff622
+$CustomAttributes:
+-
+ Name: ExpNo
+ ID: 10
+ $DataType: integer
+ Value: 1
+-
+ Name: ObservNo
+ ID: 11
+ $DataType: integer
+ Value: 1
+$Elements:
+-
+ Type: TabControl
+ Name: "Tab"
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Settings"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "UserMethods_Gr"
+   $Elements:
+   -
+    Type: Button
+    Name: "ConfigMethod_but"
+   -
+    Type: Button
+    Name: "SeedValues_but"
+   -
+    Type: Button
+    Name: "EvalMethod_but"
+  -
+   Type: GroupBox
+   Name: "reliability_Gr"
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "BoxPlot_CB"
+  -
+   Type: GroupBox
+   Name: "restore_GR"
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "restore_CB"
+    IsChecked: true
+ -
+  Type: TabPage
+  Name: "Validation"
+ -
+  Type: TabPage
+  Name: "DistSim"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "DistSim_Gr"
+   $Elements:
+   -
+    Type: EditText
+    Name: "QuitAfterTime"
+    Caption: "5:00.0000"
+    Enable: false
+   -
+    Type: Drop-Down
+    Name: "LicType"
+    Enable: false
+    SelectionIndex: 1
+ -
+  Type: TabPage
+  Name: "Rules"
+ -
+  Type: TabPage
+  Name: "Report"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "Descript_Gr"
+   $Elements:
+   -
+    Type: EditText
+    Name: "ProjName_Inp"
+    Caption: "Small Parts Production"
+  -
+   Type: GroupBox
+   Name: "ResultsReport_Gr"
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "ReportAtEnd_CB"
+    IsChecked: true
+   -
+    Type: EditText
+    Name: "FolderHTML_inp"

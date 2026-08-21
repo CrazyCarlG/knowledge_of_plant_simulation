@@ -1,0 +1,77 @@
+InternalClassType: Method
+Coordinate3D: [3.4000000000000004,4.3,0]
+Name: DoActionExp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by:_PerformRule
+ param ActTab:table,ExpNo:integer,RuleName:string
+ var newVal:real
+ --var is1Dlist:boolean
+ 
+ var InValues:object := ~.InputValues
+ 
+ for var i:=1 to ActTab.Ydim
+ 	var obj_str:string := to_str(ActTab.asString(1,i))	-- "Object"
+ 	if strLen(ActTab[2,i]) > 0
+ 		-- "Attribut"
+ 		var attrStr:string := ActTab[2,i]
+ 		--is1Dlist := (strLpos("[",attrStr)>0) AND (strLpos(",",attrStr)=0)
+ 		if  strLpos("[",attrStr)>0
+ 			obj_str := obj_str + attrStr
+ 		else
+ 			obj_str := to_str(obj_str,".",attrStr)
+ 		end
+ 	else
+ 		-- obj_str is an Variable object
+ 	end
+ 	-- examples for obj_str: SingleProc12.proctime, tab[2,3], lst[6]
+ 	var r:real := ActTab[4,i]
+ 	switch ActTab[3,i] -- "Operator"
+ 	case "="
+ 		newVal := r
+ 	case "+"
+ 		newVal:= InValues[obj_str,ExpNo-1] + r
+ 	case "-"
+ 		newVal := InValues[obj_str,ExpNo-1] - r
+ 	case "+%"
+ 		newVal := InValues[obj_str,ExpNo-1] * (100 + r)/100
+ 	case "-%"
+ 		newVal := InValues[obj_str,ExpNo-1] * (100 - r)/100
+ 	end
+ 
+ 	if InValues.getColumnNo(obj_str) < 1
+ 		InValues[InValues.XdimIndex,0] := obj_str
+ 	end
+ 
+ 	InValues[obj_str,ExpNo] := newVal
+ 	var stmt:string := to_str("-> boolean ",obj_str,":=",newVal,";return true")
+ 	if executeSilent(stmt)
+ 		var str:string := to_str(obj_str," := ",newVal)
+ 		~.Recording.append(str)
+ 		if ~.ReportRules[RuleName,ExpNo].void
+ 			~.ReportRules[RuleName,ExpNo] := to_str(~.ReportRules[RuleName,ExpNo]," ",str)
+ 		end
+ 		InValues[obj_str,ExpNo] := newVal
+ 	else
+ 		~.Recording.append(to_str("ERROR by setting rule action: ",obj_str," := ",newVal))
+ 	end
+ 
+ next -- row in Action (ActTab)
+RandomSeed: 293
+UUID: dd52549a-6249-483f-8fa1-14b2e252df55
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

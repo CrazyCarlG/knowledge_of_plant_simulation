@@ -1,0 +1,40 @@
+InternalClassType: Method
+Coordinate3D: [31.900000000000002,-5,0]
+Name: ErrorHandling
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Error handler for non-distributed simulation
+ param byref error : string,
+ method_path : string,
+ line_number : integer
+ 
+ var message:string
+ if line_number = 0
+ 		-- The error was in a formular.
+ 		message := to_str("in formular '",makePathRelative(method_path,~), "': ",error)
+ else
+ 		-- The error was in a method.
+ 		message := to_str("in method '",makePathRelative(method_path,~), "' in line ",line_number,": ",error)
+ end
+ 
+ 
+ TreatError(currExpNo, currRunNo, message)
+ error := "" -- catch the error
+RandomSeed: 167
+UUID: 6cac4820-ba26-4299-b4ca-ba539abac565
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

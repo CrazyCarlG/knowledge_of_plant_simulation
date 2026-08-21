@@ -1,0 +1,39 @@
+InternalClassType: Station
+Coordinate3D: [14,6,0]
+Label: "AS2"
+Name: AS2
+Origin: 682dd7c7-6d7b-4233-b7d5-86c4aedbccd2
+PowerInputFailed: 0.5
+PowerInputOperational: 0.7
+PowerInputStandby: 0.3
+PowerInputWorking: 2.5
+RandomSeed: 85
+ShiftcalendarObject: "ShiftCalendar"
+UUID: 01a0236c-0546-704f-886c-55086f55f145
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7024-9861-3cca23fac404
+ Name: Connector30
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7051-8df7-151bdc94bd85
+$Predecessors:
+- 01a0236c-0546-7050-a5b0-34488ac0ccbd
+InheritEntranceExitLockedOnReset: false
+$EnergyActive: true
+$Failures:
+-
+ $Name: Failure
+ ID: 1
+ Interval: [Negexp,8:15:00]
+ Duration: [Erlang,5:00,3:32.13203435596424]

@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: b5b81d3c-025c-4190-9f0f-187bf04579db
+UUID: 01a0236c-0546-716c-a8bb-8231daf6acdd
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ColumnIndex: [string,13,~,"Worker:1","Worker_Round:1","Worker_Round:2","Worker_Round:3","Worker_Round:4","Adjuster:1","Worker:2","Worker_Round:5","Worker_Round:6","Worker_Round:7","Worker_Round:8","Adjuster:2"]
+ Columns:
+ - [0,string,10,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed","Paused","Unplanned"]

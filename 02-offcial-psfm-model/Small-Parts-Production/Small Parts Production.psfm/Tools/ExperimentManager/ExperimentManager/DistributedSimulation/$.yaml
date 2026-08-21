@@ -1,0 +1,13 @@
+InternalClassType: Frame
+Coordinate3D: [20.05,-13.85,0]
+Name: DistributedSimulation
+Origin: 1a0e667a-761f-4569-8d93-072f65effc57
+UUID: 94c104a0-32e6-49fa-9255-0bded82bdb83
+3D:
+ ShowContent: false
+$CustomAttributes:
+-
+ Name: mainDialog
+ ID: 1
+ $DataType: object
+ Value: "~.Dialog.Dialog"

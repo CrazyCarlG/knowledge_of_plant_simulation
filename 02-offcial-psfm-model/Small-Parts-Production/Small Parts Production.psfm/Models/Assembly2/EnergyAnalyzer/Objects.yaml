@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: 45318a15-8aea-48bb-909b-7ba9d1006f96
+UUID: 01a0236c-0546-757e-8d30-d6ab20c6bf0d
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ColumnIndex: [string,2,~,"30 Objects"]
+ Columns:
+ - [1,string,30,"F0","F1","F2","F3","F4","F5","F7","F8","F9","F11","MS5","MS2","MS1","MS4","AS5","AS1","AS2","AS3","AS4","F10","PreProduction.MS6","PreProduction.AS7","PreProduction.AS8","PreProduction.F0","PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.AS6","Line1","Line2"]

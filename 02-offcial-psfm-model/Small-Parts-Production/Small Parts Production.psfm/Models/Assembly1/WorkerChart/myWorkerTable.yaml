@@ -1,0 +1,13 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-716b-b51c-3ef4fba7a0f1
+UUID: 01a0236c-0546-7306-aa35-56e7b5f68119
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ShowComment: true
+ ColumnIndex: [string,2,~,"Worker"]
+ Columns:

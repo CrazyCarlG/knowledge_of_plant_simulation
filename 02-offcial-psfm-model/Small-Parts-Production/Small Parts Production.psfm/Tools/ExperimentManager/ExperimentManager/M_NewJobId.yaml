@@ -1,0 +1,156 @@
+InternalClassType: Method
+Coordinate3D: [18.25,-16.85,0]
+Name: M_NewJobId
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Find the next jobs, which is described by the result
+ param eMPlant:any, oldJobId:integer -> integer
+ -- callback for Distributed simulation
+ -- return values (JobId):
+ -- > 0 ... continue with job initialization
+ -- = 0 ... no more jobs available, end the remote process
+ -- < 0 ... wait, this is used when the results of other jobs are necessary to continue
+ 
+ var localExp,localRun:integer
+ var p,ExpStr,str:string
+ 
+ var SimMachine:object := ?.~ -- ? is the method RunProcess
+ 
+ if eMPlant /= void
+ 	var t:time := QuitAfterTime -- custom attribute of the Experimentmanager
+ 	if t > 0 -- The number of milliseconds must be < 2^31. Null means infty lifespan of the prozess.
+ 		eMPlant.QuitAfterTime(1000 * t)
+ 		-- "Start the 'Terminate after time' anew."
+ 		DistributedSimulation.MachinesTable.addLogging("Start the 'Terminate after time' anew.", SimMachine.JobId, SimMachine.MachineIndex,false)
+ 	end
+ end
+ 
+ var JobTab:object := JobsTable
+ var col:integer := 3
+ if oldJobId > 0 AND JobTab[col,oldJobId] = "process" then return -1; end
+ 
+ JobTab.setCursor(col,1)
+ if JobTab.find({col,1}..{col,*}, "open")
+ 	result := JobTab.cursorY -- there are not scheduled observations
+ 	JobTab[col,result] := "process"
+ 	JobTab[5,result] := sysdate -- register start date time
+ 	var row, col_: integer
+ 	row := JobTab[1,result]
+ 	col_ := result mod GetNumberOfObservations
+ 	if col_ = 0
+ 		col_ := GetNumberOfObservations
+ 	end
+ 
+ 	ProgressTable.setFontColorCells({col_,row}, white)
+ 	ProgressTable.setBackgroundColorCells({col_,row},orange)
+ 	ProgressTable.writeRow(col_,row,strChr(9203))
+ 	ProgressTable.refillDialog
+ 
+ /*	if NOT self.infoBoxOpen
+ 		infobox(rootfolder.localization.getText(422),false) -- The simulation study is running ...
+ 		self.infoBoxOpen := true
+ 	end*/
+ 
+ else -- now_no opened job
+ 	JobTab.setCursor(col,1)
+ 	if JobTab.find({col,1}..{col,*}, "process")
+ 		result := -1 -- wait for the results of the simulation machines
+ 	else -- all jobs are "ready" or "cancelled"
+ 		if UsingRules -- otherwise: end of experiment run
+ 			localExp := currExpNo
+ 			ExpStr :=  ExpTable.getExpID(localExp)
+ 			CalcStatistics4Exp(localExp)
+ 
+ 			var JobsOfExp:Table := JobTab.AllJobs4Rules -- needed for the report of the distributed simulation
+ 			JobTab.copyRangeTo({1,1}..{*,*}, JobsOfExp,1,JobsOfExp.yDim + 1)
+ 
+ 			repeat -- find the next active experiment
+ 				localExp += 1
+ 			until (localExp > ExpTable.yDim) OR ExpTable[1,localExp]
+ 			if localExp <= NumRulesExp
+ 				makeJobTable(localExp) -- built the new JobsTable
+ 				Dialog.Dialog.setCaption("currExp", to_str(localExp)+"/"+to_str(GetNumberOfExperiments))-- show current exp No
+ 				Dialog.Dialog.setCaption("currObs", " ")
+ 				if State = "wait4stop" OR State = "stopped"
+ 					State := "stopped"
+ 					result := 0
+ 				else
+ 					result := 1
+ 					JobTab[col,result] := "process"
+ 
+ 					row := JobTab[1,result]
+ 					col_ := result mod GetNumberOfObservations
+ 					if col_ = 0
+ 						col_ := GetNumberOfObservations
+ 					end
+ 
+ 					ProgressTable.setFontColorCells({col_,row}, white)
+ 					ProgressTable.setBackgroundColorCells({col_,row},orange)
+ 					ProgressTable.writeRow(col_,row,strChr(9203))
+ 					ProgressTable.refillDialog
+ 
+ 					currExpNo := localExp
+ 				end
+ 			else
+ 				result := 0
+ 			end
+ 		else -- all "ready" and no rules
+ 			result := 0
+ 		end
+ 	end -- not found "proces"
+ end-- not found "open"
+ 
+ if result > 0
+ 	var stmt:string := to_str("-> string return getenv(\\"COMPUTERNAME\\")")
+ 	var compName:string := eMPlant.executeSimTalk(stmt)
+ 	JobTab[4,result] := to_str(compName," (",?.~.eMPlantHandle,")")
+ 
+ 	localExp := JobTab[1,result]
+ 	localRun := JobTab[2,result]
+ 
+ 	p := to_str(self.~)
+ 	stmt := to_str("-> string ",p,".DefSeed4Run(",localExp,",",localRun,")") -- in the past:_setSeed
+ 	eMPlant.executeSimTalk(stmt)
+ 
+ 	if localRun=2
+ 		ExpStr := ExpTable.getExpID(localExp)
+ 	end
+ 
+ 	var infoStr:string
+ 	infoStr := to_str(compName," SEED Exp=",localExp," Run=",localRun,": ",infoStr)
+ 	Recording.append(infoStr)
+ 
+ elseif result = 0
+ 	if NOT UsingRules
+ 		for var j := 1 to DetailedResults.yDim
+ 			CalcStatistics4Exp(j)
+ 			DetailedResults.ExperimentExecuted[1,j] := true
+ 		next
+ 	end
+ 	&EndOfAllExperiments.executeNewCallChain
+ end
+RandomSeed: 270
+UUID: 428aabd1-c83c-4ae9-9d2b-8c2329a6e6ff
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: infoBoxOpen
+ ID: 1
+ DataType: boolean
+ Value: false
+ ShowInTooltip: false

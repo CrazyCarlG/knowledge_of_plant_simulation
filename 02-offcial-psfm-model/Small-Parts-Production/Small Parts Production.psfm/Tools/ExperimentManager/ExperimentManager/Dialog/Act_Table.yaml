@@ -1,0 +1,38 @@
+InternalClassType: Method
+Coordinate3D: [-3,7,0]
+Name: Act_Table
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ var rulesTab:object := ~.Rules.Rules
+ var actTab:object := ~.Rules.Action
+ actTab.delete
+ var rName:string := @.activeRuleName
+ rulesTab.setCursor(2,1); rulesTab.find({2,1}..{2,*},rName)
+ var row:integer := rulesTab.cursorY
+ actTab.insertList(1,1, rulesTab[5,row].copy({1,1}..{*,*}))
+ actTab.RuleNo := row
+ if rulesTab[8,row]  
+ 	actTab.setFormatString(3,"=")-- init_rule
+ else
+ 	actTab.setFormatString(3,"+;-;+%;-%;=")
+ end
+ actTab.openDialogBox(true)
+ print "Open action for rule ",rName," in row ",row
+RandomSeed: 324
+UUID: 665624e7-ea6a-42a9-aa7e-c9ee5346cbb7
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

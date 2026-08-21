@@ -1,0 +1,1367 @@
+InternalClassType: Dialog
+ArgumentForApply: "APPLY"
+ArgumentForClose: "CANCEL"
+ArgumentForOpen: "OPEN"
+CallbackMethod: "self.Callback"
+Coordinate3D: [-14,14,0]
+DialogX: -1
+DialogY: -1
+Label: "Advanced Settings"
+Locked: false
+Name: AdvancedSettings
+Origin: 00be09fe-ec99-4568-9511-a89844f9ebd7
+RandomSeed: 335
+ShowStandardButtons: true
+UUID: 520bde3e-70c0-4bb9-99f8-2fdc29373acb
+3D:
+ Mirror: [false,false,false]
+$CustomAttributes:
+-
+ Name: activeRuleName
+ ID: 1
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: callback
+ ID: 2
+ DataType: method
+ Value: |+1
+  param action : string
+  
+  var obj:object
+  var str, newctrl:string
+  var bb:boolean
+  switch action
+  case "OPEN"
+  	rootfolder.Internal.translate(self.~)
+  	dialog.checkDistrSim
+  
+  	@.setCaption("QuitAfterTime",to_str(~.QuitAfterTime))
+  
+  	-- set current user-defined methods
+  	@.setCaption("ConfigMethod_Inp", ~.UserConfigMethod)
+  	@.setCaption("EvalMethod_Inp",   ~.UserEvalMethod)
+  	@.setCaption("SeedValues_Inp",   ~.UserSeedValueMethod)
+  
+  	@.setCheckBox("BoxPlot_CB", ~.MinMaxWithQuartiles)
+  
+  	@.setCheckBox("showRuntimeAtEnd_CB", ~.showRuntimeAtEnd)
+  	@.setCheckBox("Excel_CB", ~.saveExcelAtEnd)
+  
+  	bb := ~.showHTMLatEnd
+  	@.setCheckBox("ReportAtEnd_CB",  bb)
+  	@.setSensitive("FolderHTML_but", bb)
+  	@.setSensitive("FolderHTML_inp", bb)
+  
+  	@.setCheckBox("restore_CB", ~.Restore_Inputvalues)
+  	-- @.setCheckBox("UserDefinedExpNames_CB", ~.ExpTable.Rowindex_)
+  
+  	--@.setCaption("FolderHTML_inp",~.HTML_.Report_.SaveToDirectory_);
+  	@.setCaption("FolderHTML_inp",~.ReportObject.SaveToDirectory)
+  
+  	bb := ~.MailAtEnd-- send an email
+  	@.setCheckBox("SendMail_CB", bb)
+  
+  	@.setSensitive("Receiver_Txt", true)
+  	@.setSensitive("Mailserver_Txt", bb)
+  	@.setSensitive("Receiver_Inp", true)
+  	@.setSensitive("Mailserver_Inp", bb)
+  	@.setCaption("Receiver_Inp",   ~.MailReceiver)
+  	@.setCaption("Mailserver_Inp", ~.MailServer)
+  
+  	@.setCaption("ConfLevel_I", to_str(~.ConfLevel))
+  
+  	bb := ~.save_model
+  	@.setCheckBox("savemod_CB", bb)
+  	@.setSensitive("file_inp",  bb)
+  	@.setCaption("file_inp", ~.savefile)
+  	@.setSensitive("modelDir_but", bb)
+  	@.setSensitive("modelDir_Inp", bb)
+  	@.setSensitive("file_Txt", bb)
+  	@.setCaption("modelDir_Inp",~.ModelDir)
+  	-- in previous_version these elements can be deactivated (depending on ~.saveHTMLatEnd).
+  	@.setSensitive("FolderHTML_but", true)
+  	@.setSensitive("FolderHTML_inp", true)
+  
+  	-- Model parametrization according to ExpNo and ObservNo
+  	@.setCaption("ExpNo_inp",to_str(@.ExpNo))
+  	@.setCaption("ObsNo_inp",to_str(@.ObservNo))
+  
+  	var t:table := ~.ReportObject.Informations
+  	@.setCaption("ProjName_Inp",   t[1,1])
+  	--@.setCaption("ProjVersion_Inp",t[1,2]);
+  	@.setCaption("ProjPers_Inp",   t[1,2])
+  	@.setCaption("Receiver_Inp", ~.MailReceiver)
+  
+  	bb := ~.SimulateWith3D
+  	@.setCheckBox("SimulateWith3D_CB", bb)
+  
+  	-- rules_
+  	@.setCheckBox("Title_Rules", ~.UsingRules)
+  	self.~.initRulesTab
+  	self.~.RuleSpecified
+  
+  	if ~.DistrSimAvailable
+  		RemoteTable.setRemoteInDialog
+  	end
+  
+  	var LicenseTypes: list[string]
+  	LicenseTypes.create
+  	LicenseTypes.insert(1,"Professional")
+  	LicenseTypes.insert(2,"Standard")
+  	LicenseTypes.insert(3,"Application")
+  	LicenseTypes.insert(4,"Runtime")
+  	LicenseTypes.insert(5,"Research")
+  	LicenseTypes.insert(6,"Educational")
+  	LicenseTypes.insert(7,"Simulation")
+  	LicenseTypes.insert(8, rootfolder.Localization.getText(441)) -- Höchste verfügbare/Highest Available
+  	@.setList("LicType",LicenseTypes)
+  	if rootfolder.Localization.MessageTab.find({*,441},~.RemoteLicType)
+  		~.RemoteLicType := "Highest Available"
+  		~.RemoteLicTypeNo := 8
+  	else
+  		LicenseTypes.setCursor(1)
+  		LicenseTypes.find(~.RemoteLicType)
+  		~.RemoteLicTypeNo := LicenseTypes.cursor
+  	end
+  	@.setIndex("licType", ~.RemoteLicTypeNo)
+  	-- end of case "OPEN"
+  case "CANCEL"
+  
+  case "Param_but"
+  	@.ExpNo    := str_to_num(@.getValue("ExpNo_inp"))
+  	@.ObservNo := str_to_num(@.getValue("ObsNo_inp"))
+  	--@.RunNo_  := str_to_num(@.getValue("Run_inp_"));
+  	if @.ExpNo < 1
+  		@.setCaption("ExpNo_inp","1")
+  		@.ExpNo := 1
+  	end
+  	if @.ObservNo < 1
+  		@.setCaption("ObsNo_inp","1")
+  		@.ObservNo := 1
+  	end
+  
+  	if ~.UsingRules
+  		-- If rules are used it is impossible to set the parameter of a certain experiment
+  		-- without performing the entire experiment study.
+  		MessageBox(rootfolder.Localization.getText(56), 1, 4) -- info
+  		return
+  	else
+  		var success := ~.setParameter(@.ExpNo,@.ObservNo)
+  		-- The parameters of experiment $1,and observation $2 were set.
+  		if success
+  			MessageBox(rootfolder.Localization.getMessage(54,@.ExpNo,@.ObservNo,""), 1, 4) -- info
+  		end
+  	end
+  
+  case "APPLY","Apply"
+  	--~.ResetIsInProgress := false
+  	Dialog.setSensitive("Reset_But",true)
+  
+  	-- set user defined methods
+  	self.~.setUserMethod("Configuration")
+  	self.~.setUserMethod("Evaluation")
+  	self.~.setUserMethod("SeedValues")
+  
+  	-- send an email
+  	~.MailAtEnd    := @.getCheckBox("SendMail_CB")
+  	~.MailReceiver := @.getValue("Receiver_Inp")
+  	~.MailServer   := @.getValue("Mailserver_Inp")
+  
+  	t := ~.Reportobject.Informations
+  
+  	t[1,1] := @.getValue("ProjName_Inp")
+  	--t[1,2] := @.getValue("ProjVersion_Inp");
+  	t[1,2] := @.getValue("ProjPers_Inp")
+  
+  	-- set conf level (first tab)
+  	var r:real := str_to_num(@.getValue("ConfLevel_I"))
+  	if r<=0 OR r>=100
+  		-- Please choose a confidence level between 0 and 100.
+  		messageBox(rootfolder.Localization.getText(209),1,1) -- error
+  		@.setCaption("ConfLevel_I","90")
+  		~.ConfLevel := 90
+  	else
+  		~.ConfLevel := r
+  	end
+  	~.alpha:= 1 - ~.ConfLevel/100
+  
+  	if ~.OK_input AND ~.OK_output AND (~.DetailedResults.yDim > 0)
+  		-- not performed before an experiment run (cf. 'Start' method)
+  		for var j:=1 to ~.OutputValues.yDim   -- use the number of already finished experiments
+  			~.CalcStatistics4Exp(j)-- after change the confidence level
+  		next
+  		~.Report.close
+  		if ~.Report.active
+  			~.prepChart(true)
+  		else
+  			~.prepChart(false)
+  		end
+  	end
+  
+  	if ~.NumObservChart.active
+  		~.NumObservChart.prepData
+  	end
+  
+  	-- model path (tab 2)
+  	str := @.getValue("modelDir_Inp")
+  	if existsFile(str)
+  		~.ModelDir := str
+  	else
+  		if ~.save_model  -- Wrong model directory
+  			messageBox(rootfolder.Localization.getText(210),1,4) -- info
+  		end
+  		@.setCaption("modelDir_Inp","")
+  		~.ModelDir := ""
+  	end
+  	~.savefile:= @.getValue("file_inp") -- like "SimulationRun".spp
+  
+  	if ~.DistrSimAvailable
+  		str := @.getValue("QuitAfterTime") -- The kind of characters of the Edit Text Box: time.
+  		var testTime:time := str_to_time(str)
+  		var minTime:time := str_to_time("5:00")
+  		var maxTime:time := str_to_time("12:00:00:00") -- 24:20:31:23.6470 = (2^31-1)/1000
+  		if 	(testTime <= maxTime AND testTime >= minTime) OR testTime = 0
+  			~.QuitAfterTime := testTime -- set new time
+  		else
+  			if ~.UsingRemote -- checkbox
+  				if testTime > maxTime
+  					-- Please choose a time smaller than 12:00:00:00
+  					messageBox(rootfolder.Localization.getMessage(215,maxTime,"",""),1,1) -- error
+  				else -- Please choose a time greater than 1.23.
+  					messageBox(rootfolder.Localization.getMessage(212,minTime,"",""),1,1) -- error
+  				end
+  			end -- if UsingRemote (checkbox)
+  		end -- if DistrSimAvailable
+  
+  		-- set the old value OR the time in correct format
+  		@.setCaption("QuitAfterTime",to_str(~.QuitAfterTime))
+  
+  		~.RemoteLicType   := @.getValue("licType") -- attributes of the Experiment Manager
+  		~.RemoteLicTypeNo := @.getIndex("licType")
+  		~.RemoteLowerPrio := @.getCheckBox("LowPrio_CB")
+  
+  		-- set the old value OR the time in correct format
+  		-- RemotesList is saved immediately when pressing add or remove button
+  		~.DistributedSimulation.updateMachinesTable(RemoteTable)
+  	end
+  	@.updateRules
+  
+  	-- end of_Apply
+  case "CB_AddAddress"
+  	obj := ~.DistributedSimulation.dialog
+  	rootfolder.internal.translate(obj)
+  	obj.label := rootfolder.Localization.getText(98) -- Simulation Machine
+  	obj.setCaption("CompName_Inp","localhost")
+  	obj.setCaption("numParallelProc_Inp","")
+  	obj.open -- define computer name and number of processes
+  
+  case "RemotesList" 	-- double click a row of the ListBox 'RemotesList'
+  	obj := ~.DistributedSimulation.dialog
+  	var sel:integer := AdvancedSettings.getIndex("RemotesList")
+  	obj.setCaption("CompName_Txt",rootfolder.localization.getText(96)) -- Computername:
+  	obj.setCaption("CompName_Inp", RemoteTable[1,sel])
+  	obj.setCaption("numParallelProc_Txt",rootfolder.localization.getText(97)) -- Anzahl parallelen Prozesse:
+  	obj.setCaption("numParallelProc_Inp", to_str(RemoteTable[2,sel]))
+  	obj.label := rootfolder.localization.getText(98) -- Simulationsmaschine
+  	obj.open -- define computer name and number of processes
+  
+  case "CB_RemoveAddress"
+  	CB_RemoveAddress
+  
+  case "SimulateWith3D_CB"
+  	bb := ~.SimulateWith3D
+  	~.SimulateWith3D := @.getCheckBox("SimulateWith3D_CB")
+  
+  case "TestConnection_But"
+  	if NOT ~.DistributedSimulation.M_isComputerAccessPermitted("Check the dialog Advanced Settings: \\"Use distributed simulation\\".") -- Shown as tip in the console
+  			return
+  	else
+  		TestConnection_But
+  	end
+  
+  case "Recording"
+  	~.DistributedSimulation.MachinesTable.openDialog
+  
+  case "ConfigMethod_but"
+  	newctrl := openObjectSelectBox("Method", ~.~)
+  	if newctrl /= ""
+  		@.setCaption("ConfigMethod_Inp", newctrl)
+  	end
+  
+  case "EvalMethod_but"
+  	newctrl := openObjectSelectBox("Method", ~.~)
+  	if newctrl /= ""
+  		@.setCaption("EvalMethod_Inp", newctrl)
+  	end
+  
+  case "SeedValues_but"
+  	newctrl := openObjectSelectBox("Method", ~.~)
+  	if newctrl /= ""
+  		@.setCaption("SeedValues_Inp", newctrl)
+  	end
+  
+  	-- second group on tab 'Report_'
+  case "ReportAtEnd_CB"
+  	~.showHTMLatEnd := @.getCheckBox("ReportAtEnd_CB")
+  case "showRuntimeAtEnd_CB"
+  	~.showRuntimeAtEnd := @.getCheckBox("showRuntimeAtEnd_CB")
+  case "saveHTMLatEnd"
+  	~.saveHTMLatEnd := @.getCheckBox("saveHTMLatEnd")
+  case "Excel_CB"
+  	~.saveExcelatEnd := @.getCheckBox("Excel_CB")
+  /*case "Protocol_but"
+  	obj := ~._Protocol
+  	if obj.yDim>0
+  		~._Protocol.openDialogBox(true)
+  	else -- There are no recordings.
+  		messageBox(rootfolder.Localization.getText(208),1,4) -- info
+  	end*/
+  
+  case "Recording_but"
+  	obj := ~.recording
+  	if obj.dim>0
+  		obj.openDialog--Box;
+    	else -- There are no recordings.
+  		messageBox(rootfolder.Localization.getText(208),1,4) -- info
+  	end
+  
+  case "openHTMLPath"  -- button "HTML_Folder"
+  	str := PrepareDir -- opens browseForFolder
+  	if strLen(str)>1
+  		~.ReportObject.SaveToDirectory := str
+  		@.setCaption("FolderHTML_inp",str)
+  	end
+  
+  case "modelDir_but"  -- button "Model Folder"
+  	str := PrepareDir
+  	if strLen(str)>1
+  		~.ModelDir := str
+  		@.setCaption("modelDir_Inp",str)
+  	end
+  case "savemod_CB"
+  	bb := @.getCheckBox("savemod_CB")
+  	~.save_model := bb
+  	@.setSensitive("file_inp", bb)
+  	@.setSensitive("modelDir_but", bb)
+  	@.setSensitive("modelDir_Inp", bb)
+  	@.setSensitive("file_Txt", bb)
+  
+  case "SendMail_CB"
+  	bb := @.getCheckBox("SendMail_CB")
+  	~.MailAtEnd := bb
+  	--@.setSensitive("Receiver_Txt", bb);
+  	@.setSensitive("Mailserver_Txt", bb)
+  	--@.setSensitive("Receiver_Inp", bb);
+  	@.setSensitive("Mailserver_Inp", bb)
+  
+  case "useRules"
+  	~.UsingRules := @.getCheckBox("Title_Rules")
+  	@.RuleSpecified
+  
+  case "NewRule" ;    NewRule -- botton new rule
+  	-- buttons for action and conditions
+  case "Act_Table" ;    Act_Table
+  case "Act_Meth" ;    Act_Meth
+  case "Cond_Table" ;    Cond_Table
+  case "Cond_Meth" ;    Cond_Meth
+  
+  case "LowPrio_CB" ;    ~.RemoteLowerPrio := @.getCheckBox("LowPrio_CB")
+  case "openRules" ;     ~.Rules.Rules.openDialog--Box;
+  case "DeleteRule" ;    DeleteRule
+  case "RuleSelected" ;    @.RuleSelected
+  case "ActiveRule_CB","AsInit_CB" ;    self.~.updateRules
+  
+  case "BoxPlot_CB"
+  	~.MinMaxWithQuartiles := @.getCheckBox("BoxPlot_CB")
+  	dialog.ChangeChart
+  
+  case "DistrSim_CB"
+  	bb := @.getCheckBox("DistrSim_CB") -- distributed simulation tab
+  	~.UsingRemote := bb
+  	dialog.setCheckBox("DistrSim_CB",bb)
+  	dialog.useRemote(bb)
+  	if bb AND (RemoteTable.yDim = 0)
+  		CB_AddAddress(@,"localhost",-1,true)
+  	end
+  case "restore_CB"
+  	~.Restore_Inputvalues := @.getCheckbox("restore_CB")
+  
+  /*case "UserDefinedExpNames_CB" -- "User-defined experiment names"
+  	obj := ~.ExpTable
+  	bb := @.getCheckbox("UserDefinedExpNames_CB")
+  	if bb
+  		if NOT obj.Rowindex_
+  			obj.Rowindex_ := true
+  			if obj[0,0] = void
+  				obj[0,0] := Rootfolder.Localization.getText(103) -- "Experiments"
+  			end
+  			obj.openDialogBox(true)
+  		end
+  
+  	else -- deacivate user-defined experiment names
+  		var hasUserNames:boolean := false
+  		for var i := 1 to obj.yDim
+  			if NOT obj[0,i].void
+  				hasUserNames := true
+  				exitloop
+  			end
+  		next
+  		if hasUserNames
+  			if messageBox(rootfolder.Localization.getText(446), 48, 3) = 16 -- Yes/No: Do you want to delete existing user-defined experiment names?
+  				@.setCheckbox("UserDefinedExpNames_CB", false) -- "Yes" was pressed
+  				obj.Rowindex_ := false
+  				print "Delete user-defined experiment names in \\"",~,"\\""
+  
+  			else
+  				@.setCheckbox("UserDefinedExpNames_CB", true)
+  			end
+  		else
+  			obj.Rowindex_ := false
+  		end
+  	end -- deacivate user-defined experiment names
+  	-- obj.refillDialog -- obj is ExpTable: Do not do this because changes of the user will be lost
+    */
+  else
+  	print "Unknown dialog callback argument '",Action,"' of '",~.name,"'."
+  end
+ ShowInTooltip: false
+-
+ Name: DialogElements
+ ID: 3
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 2
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 2
+    DataType: integer
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+  ColumnIndex: [string,3,~,"element","Index"]
+  Columns:
+  - [1,string,60,"UserMethods_Gr","reliability_Gr","ConfLevel_ITxt","Recording_but","Rules","Settings","Validation","Reports_Group","savemod_CB","file_Txt","modelDir_but","DistSim","HeaderTxt","DistrSim_CB","AddAddress","TestConnection_But","RemoveAddress","Recording","quitAfterTimeTxt","LicTypeTxt","LowPrio_CB","Rules_GR","Title_Rules","NumExp_Txt","RuleSelect_C","ActiveRule_CB","AsInit_CB","forExp_Txt","Prio_C","TableCond_B","MethCond_B","TableAction_B","MethAction_B","NewRules_B","DeleteRule_B","allRules_B","Descript_Gr","DescrProjectName_Txt","DescProjectPers_Txt","saveHTMLatEnd","ResultsReport_Gr","FolderHTML_but","ReportAtEnd_CB","showRuntimeAtEnd_CB","Param_but","Param_Group","ExpNo_txt","ObsNo_txt","SendMail_CB","Receiver_Txt","Mailserver_Txt","BoxPlot_CB","Report","restore_CB","Excel_CB","SimulateWith3D_CB","Configure","SeedValues","Evaluate","restore_GR"]
+  - [2,integer,60,65,66,67,70,71,72,73,74,76,78,77,199,79,29,81,82,83,84,86,87,88,89,90,91,92,93,94,95,181,182,184,183,185,186,187,188,190,191,193,194,195,196,197,200,201,202,203,204,226,227,228,229,35,126,389,419,59,61,60,447]
+ ShowInTooltip: false
+-
+ Name: VersionStr
+ ID: 4
+ DataType: method
+ Value: |+1
+  ->string
+  var a,b,c:integer
+  
+  a:= applicationVersion div 1000000
+  c:= applicationVersion mod 1000000
+  b:=c div 1000
+  c:=c mod 1000
+  result := to_str(a,".",b,".",c)
+
+ ShowInTooltip: false
+-
+ Name: isNumber
+ ID: 5
+ DataType: method
+ Value: |+1
+  param s:string->boolean
+  
+  var j,p:integer
+  
+  result := true
+  for j := 1 to strLen(s) 
+  	p := strAscii(strCopy(s,j,1))
+  	if 48 > p OR p > 58 
+  		result := false
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: updateRules
+ ID: 6
+ DataType: method
+ Value: |+1
+  var rName,inp,last,str:string;var ruleNo,a,j:integer;var rulesTab,obj:object;var bb:boolean
+  
+  a := str_to_num(@.getValue("NumExp_Inp"))
+  if a>0 
+  	~.NumRulesExp := a
+  else
+  	@.setCaption("NumExp_Inp",to_str(~.NumRulesExp))
+  end
+  if NOT ~.UsingRules then return end
+  
+  rulesTab := ~.Rules.Rules
+  
+  if rulesTab.yDim > 0 
+  	ruleNo := @.getIndex("Ruleselect_Pop")
+  	rName := rulesTab[2,ruleNo]
+  	@.activeRuleName := rName
+  	--	~.Rules.Rules2History_;
+  
+  	--print "Rule ",rName," in row ",ruleNo;
+  		
+  	rulesTab[8,ruleNo] := @.getCheckBox("AsInit_CB")
+  	inp := @.getValue("Valid_Inp")
+  	while strLpos(" ",inp)>0 
+  		inp := strOmit(inp,strLpos(" ",inp),1)
+  	end
+  	last := inp; @.setCaption("Valid_Inp",inp)
+  	bb := true
+  	while strLpos(";",last)>0 
+  		a := strLpos(";",last)
+  		str := strCopy(last,1,a-1)
+  		last:= strOmit(last,1,a)
+  		if strLpos("-",str) > 0 
+  			a := strLpos("-",str)
+  			bb := bb AND self.~.isNumber(strCopy(str,1,a-1))
+  			bb := bb AND self.~.isNumber(strOmit(str,1,a))
+  		else
+  			bb := bb AND self.~.isNumber(str)
+  		end
+  	end
+  	if strLpos("-",last) > 0 
+  		a := strLpos("-",last)
+  		bb := bb AND self.~.isNumber(strCopy(last,1,a-1))
+  		bb := bb AND self.~.isNumber(strOmit(last,1,a))
+  	else
+  		bb := bb AND self.~.isNumber(last)
+  	end
+  	
+  	if bb then rulesTab[9,ruleNo] := inp;else
+  		--The string entered on tab 'Rules' is not correct:
+  		messageBox(to_str(rootfolder.Localization.getText(220)," ",inp), 1,1) -- error
+  		print "Error: ",inp
+  	end
+  	
+  	rulesTab[7,ruleNo] := @.getCheckBox("ActiveRule_CB")
+  	
+  	str := @.getValue("Prio_Input")
+  	if strLen(str)>0 then rulesTab[1,ruleNo] := str_to_num(str);end
+  	@.RuleSpecified
+  end
+  --
+  obj := ~.ReportRules
+  obj.delete({1,0}..{*,0})
+  for j := 1 to rulesTab.yDim 
+  	obj[j,0] := rulesTab[2,j] -- Rules name
+  next
+ ShowInTooltip: false
+-
+ Name: RuleSpecified
+ ID: 7
+ DataType: method
+ Value: |+1
+  /*
+  called by: checkbox "Title_Rules"
+  */
+  var RulesInsAndUsing,isInitRule:boolean;var RulesTabObj,workTabObj:object
+  var tab:table;var j,k,m,col:integer
+  var attrStr,RuleName:string
+  
+  RulesTabObj := ~.Rules.Rules
+  RulesInsAndUsing := (RulesTabObj.yDim > 0) AND ~.UsingRules
+  RuleName := @.activeRuleName
+  
+  @.setSensitive("NumExp_Txt",RulesInsAndUsing)
+  @.setSensitive("NumExp_Inp",RulesInsAndUsing)
+  @.setSensitive("RuleSelect_C",RulesInsAndUsing)
+  @.setSensitive("Ruleselect_Pop",RulesInsAndUsing)
+  @.setSensitive("ActiveRule_CB",RulesInsAndUsing)
+  @.setSensitive("AsInit_CB",RulesInsAndUsing)
+  @.setSensitive("forExp_Txt",RulesInsAndUsing)
+  @.setSensitive("ActiveRule_CB",RulesInsAndUsing)
+  @.setSensitive("TableCond_B",RulesInsAndUsing)
+  @.setSensitive("TableAction_B",RulesInsAndUsing)
+  @.setSensitive("MethCond_B",RulesInsAndUsing)
+  @.setSensitive("MethAction_B",RulesInsAndUsing)
+  @.setSensitive("Prio_C",RulesInsAndUsing)
+  @.setSensitive("Prio_Input",RulesInsAndUsing)
+  
+  @.setSensitive("Ruleselect_Pop",RulesInsAndUsing)
+  @.setSensitive("allRules_B",RulesInsAndUsing)
+  @.setSensitive("DeleteRule_B",RulesInsAndUsing)
+  @.setSensitive("Valid_Inp",RulesInsAndUsing)
+  
+  RulesTabObj.setCursor(2,1)
+  if RulesTabObj.find({2,1}..{2,*},RuleName)
+  
+  	isInitRule := RulesTabObj[8,RulesTabObj.cursorY]
+  end
+  
+  @.setSensitive("MethCond_B",NOT isInitRule AND RulesInsAndUsing)
+  @.setSensitive("TableCond_B",NOT isInitRule AND RulesInsAndUsing)
+  	
+  @.setSensitive("NewRules_B",~.UsingRules)
+
+ ShowInTooltip: false
+-
+ Name: RuleSelected
+ ID: 8
+ DataType: method
+ Value: |+1
+  var rulesTab:object;var ruleNo:integer;var rName:string;var initRule:boolean
+  
+  rulesTab := ~.Rules.Rules
+  ruleNo := @.getIndex("Ruleselect_Pop")
+  rName := rulesTab[2,ruleNo]
+  @.activeRuleName := rName
+  --	print "Rule: ",rName," in row ",ruleNo;
+  initRule := rulesTab[8,ruleNo]
+  	@.setCheckBox("AsInit_CB",initRule)
+  @.setSensitive("MethCond_B",NOT initRule)
+  @.setSensitive("TableCond_B",NOT initRule)
+  @.setCheckBox("ActiveRule_CB",rulesTab[7,ruleNo])
+  if rulesTab[1,ruleNo]=void
+   -- prio
+  	@.setCaption("Prio_Input","")
+  else
+  	@.setCaption("Prio_Input",to_str(rulesTab[1,ruleNo]))
+  end
+  @.setCaption("Valid_Inp",rulesTab[9,ruleNo])
+
+ ShowInTooltip: false
+-
+ Name: initRulesTab
+ ID: 9
+ DataType: method
+ Value: |+1
+  var rulesTab,DlgObj:object;var rulesNames:list[string];var ruleNo:integer;var isInitRule:boolean
+  
+  DlgObj := self.~ -- AdvancedSettings
+  rulesTab := ~.Rules.Rules
+  
+  rulesNames.create-- for DialogObj.setList
+  if rulesTab.ydim >0 
+  	rulesNames.insertList(1, rulesTab.copy({2,1}..{2,*}))
+  	DlgObj.setList("Ruleselect_Pop",rulesNames)
+  	
+  	rulesTab.setCursor(2,1); rulesTab.find({2,1}..{2,*}, DlgObj.activeRuleName)
+  	ruleNo := rulesTab.cursorY
+  	
+  	if ruleNo > 0 
+  		DlgObj.setIndex("Ruleselect_Pop",ruleNo)
+  	else
+  		ruleNo := 1
+  		DlgObj.setIndex("Ruleselect_Pop",1)
+  		DlgObj.activeRuleName := rulesTab[2,1]
+  	end
+  --	print "Selected Rule: ",DlgObj.activeRuleName," in row ",ruleNo;
+  	isInitRule := rulesTab[8,ruleNo]
+  	DlgObj.setCheckBox("AsInit_CB",isInitRule)
+  	DlgObj.setCheckBox("ActiveRule_CB",rulesTab[7,ruleNo])
+  	--		DlgObj.setSensitive("if_C",NOT isInitRule AND APPObj.UsingRules);
+  	--		DlgObj.setSensitive("and_cond_C",NOT isInitRule AND APPObj.UsingRules);
+  	DlgObj.setSensitive("MethCond_B",NOT isInitRule AND ~.UsingRules)
+  	DlgObj.setSensitive("TableCond_B",NOT isInitRule AND ~.UsingRules)
+  	if rulesTab[1,ruleNo]=void 
+  		DlgObj.setCaption("Prio_Input","")
+  	else
+  		DlgObj.setCaption("Prio_Input",to_str(rulesTab[1,ruleNo]))
+  	end
+  	DlgObj.setCaption("Valid_Inp",rulesTab[9,ruleNo])
+  else
+  	rulesNames.insert(1, rootfolder.Localization.getText(220))-- "No rule"
+  	DlgObj.setList("Ruleselect_Pop",rulesNames)
+  	
+  	DlgObj.setCaption("Valid_Inp","")
+  end
+  DlgObj.setSensitive("DeleteRule_B",rulesTab.ydim>0)
+  
+
+ ShowInTooltip: false
+-
+ Name: ExpNo
+ ID: 10
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: ObservNo
+ ID: 11
+ DataType: integer
+ Value: 1
+ ShowInTooltip: false
+-
+ Name: setUserMethod
+ ID: 12
+ DataType: method
+ Value: |+1
+  -- set user defined methods
+  param kind:string -- Possible values: "Configuration", "Evaluation", "SeedValues"
+  var DLG:object := self.~
+  var newctrl:string
+  if @ = DLG -- #################################### called by the dialog
+  	switch kind
+  	case "Configuration" -- Configuration method
+  		newctrl := DLG.getValue("ConfigMethod_Inp")
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl,~.~)
+  			DLG.setCaption("ConfigMethod_Inp",newctrl)
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			~.userConfigMethod := newctrl
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(42)
+  				print "The configuration method must have the signature: param localExp:integer"
+  				if messageBox(to_str(newctrl,": ",rootfolder.Localization.getText(62)),48,12) = 16 -- Would you like to format the method?
+  					str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  					str_to_method(to_str(~.~,".",newctrl)).program := ~.&userConfigMethodTemplate.program -- insert template with new syntax
+  				end
+  			end
+  		else
+  			@.setCaption("ConfigMethod_Inp","")
+  			~.userConfigMethod := ""
+  		end
+  		-- end of dialog call "Configuration"
+  
+  	case "Evaluation" -- Evaluation method
+  		newctrl := DLG.getValue("EvalMethod_Inp")
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl,~.~)
+  			DLG.setCaption("EvalMethod_Inp",newctrl)
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			~.userEvalMethod := newctrl
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(~)
+  				print "The evaluation method must have the signature: param ExperimentManager:object"
+  				if messageBox(to_str(newctrl,": ",rootfolder.Localization.getText(62)),48,12) = 16 -- Would you like to format the method?
+  					str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  					str_to_method(to_str(~.~,".",newctrl)).program := ~.&userEvalMethodTemplate.program -- insert template with new syntax
+  				end
+  			end
+  		else
+  			DLG.setCaption("EvalMethod_Inp","")
+  			~.userEvalMethod := ""
+  		end
+  		-- end of dialog call "Evaluation"
+  
+  	case "SeedValues" -- SeedValueMethod "SeedValues_Inp"
+  		newctrl := DLG.getValue("SeedValues_Inp")
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl,~.~)
+  			DLG.setCaption("SeedValues_Inp",newctrl)
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			~.userSeedValueMethod := newctrl
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(1,2)
+  				print "The Seed values method must have the signature: param ExpNo,ObservNo:integer"
+  				if messageBox(to_str(newctrl,": ",rootfolder.Localization.getText(62)),48,12) = 16 -- Would you like to format the method?
+  					str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  					str_to_method(to_str(~.~,".",newctrl)).program := ~.&userSeedValueMethodTemplate.program -- insert template with new syntax
+  				end
+  			end
+  		else
+  			DLG.setCaption("SeedValues_Inp","")
+  			~.userSeedValueMethod := ""
+  		end
+  	end -- end of dialog call "SeedValues"
+  	-- switch kind "Configuration", "Evaluation", "SeedValues" of call by the dialog
+  
+  else -- #################################### called by SimTalk
+  	switch kind
+  	case "Configuration"
+  		newctrl := ~.userConfigMethod
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl, ~.~)
+  			~.userConfigMethod := newctrl
+  			print "Set relative path of the configuration method."
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(42)
+  				str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  				str_to_method(to_str(~.~,".",newctrl)).program := ~.&userConfigMethodTemplate.program -- insert template with new syntax
+  				print "Use template of the configuration method."
+  			end
+  			~.userConfigMethod := newctrl
+  		else
+  			~.userConfigMethod := ""
+  		end
+  		DLG.setCaption("ConfigMethod_Inp", ~.userConfigMethod)
+  		-- end of SimTalk call "Configuration"
+  
+  	case "Evaluation"
+  		newctrl := ~.userEvalMethod
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl, ~.~)
+  			DLG.setCaption("EvalMethod_Inp",newctrl)
+  			~.userEvalMethod := newctrl
+  			print "Set relative path of the evaluation method."
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(~)
+  				str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  				str_to_method(to_str(~.~,".",newctrl)).program := ~.&userEvalMethodTemplate.program -- insert template with new syntax
+  				print "Use template of the evaluation method."
+  			end
+  			~.userEvalMethod := newctrl
+  		else
+  			~.userEvalMethod := ""
+  		end
+  		DLG.setCaption("EvalMethod_Inp", ~.userEvalMethod)
+  		-- end of SimTalk call "Evaluation"
+  
+  	case "SeedValues"
+  		newctrl := ~.userSeedValueMethod
+  		if strLpos(".",newCtrl) = 1 -- absolute path
+  			newctrl := makePathRelative(newctrl, ~.~)
+  			DLG.setCaption("SeedValues_Inp",newctrl)
+  			~.userSeedValueMethod := newctrl
+  			print "Set relative path of the seed values method."
+  		end
+  		if existsMethod(to_str(~.~,".",newctrl))
+  			if NOT str_to_method(to_str(~.~,".",newctrl)).checkArguments(1,2)
+  				str_to_method(to_str(~.~,".",newctrl)).UsingNewSyntax := true
+  				str_to_method(to_str(~.~,".",newctrl)).program := ~.&userSeedValueMethodTemplate.program -- insert template with new syntax
+  				print "Use template of the seed values method."
+  			end
+  		end
+  		~.userSeedValueMethod := newctrl
+  	else
+  		~.userSeedValueMethod := ""
+  	end
+  	DLG.setCaption("SeedValues_Inp", ~.userSeedValueMethod)
+  	-- end of SimTalk call "SeedValues"
+  	-- switch kind "Configuration", "Evaluation", "SeedValues" of call by SimTalk
+  end -- else called by SimTalk
+ ShowInTooltip: false
+$Elements:
+-
+ Type: TabControl
+ Name: "Tab"
+ Rect: [0,0,53,15]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Settings"
+  Caption: "Settings"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "UserMethods_Gr"
+   Caption: " User-defined methods "
+   Rect: [0,0,47,4]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "Configure"
+    Caption: "Configuration:"
+   -
+    Type: EditText
+    Name: "ConfigMethod_Inp"
+    Rect: [15,0,24,0]
+    DataType: 1
+    Password: false
+   -
+    Type: Button
+    Name: "ConfigMethod_but"
+    Caption: " ... "
+    Rect: [39,0,5,0]
+    CallbackArgument: "ConfigMethod_but"
+   -
+    Type: StaticText
+    Name: "SeedValues"
+    Caption: "Seed values:"
+    Rect: [0,1,0,0]
+   -
+    Type: EditText
+    Name: "SeedValues_Inp"
+    Rect: [15,1,24,0]
+    DataType: 1
+    Password: false
+   -
+    Type: Button
+    Name: "SeedValues_but"
+    Caption: " ..."
+    Rect: [39,1,5,0]
+    CallbackArgument: "SeedValues_but"
+   -
+    Type: StaticText
+    Name: "Evaluate"
+    Caption: "Evaluation:"
+    Rect: [0,2,0,0]
+   -
+    Type: EditText
+    Name: "EvalMethod_Inp"
+    Rect: [15,2,24,0]
+    DataType: 1
+    Password: false
+   -
+    Type: Button
+    Name: "EvalMethod_but"
+    Caption: " ..."
+    Rect: [39,2,5,0]
+    CallbackArgument: "EvalMethod_but"
+  -
+   Type: GroupBox
+   Name: "reliability_Gr"
+   Caption: " Statistical reliability "
+   Rect: [0,5,47,3]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "ConfLevel_ITxt"
+    Caption: "Confidence level (%):"
+   -
+    Type: EditText
+    Name: "ConfLevel_I"
+    Caption: "95"
+    Rect: [37,0,5,0]
+    DataType: 9
+    Password: false
+   -
+    Type: CheckBox
+    Name: "BoxPlot_CB"
+    Caption: "Min-Max intervals with quartiles"
+    Rect: [0,1,0,0]
+    CallbackArgument: "BoxPlot_CB"
+  -
+   Type: GroupBox
+   Name: "restore_GR"
+   Caption: " More settings "
+   Rect: [0,9,47,2]
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "restore_CB"
+    Caption: "Restore original input values"
+    CallbackArgument: "restore_CB"
+ -
+  Type: TabPage
+  Name: "Validation"
+  Caption: "Validation"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "Reports_Group"
+   Caption: " Parametrization of the model "
+   Rect: [0,0,47,2]
+   $Elements:
+   -
+    Type: Button
+    Name: "Recording_but"
+    Caption: "All Recordings"
+    Rect: [5,0,25,0]
+    CallbackArgument: "Recording_but"
+  -
+   Type: GroupBox
+   Name: "Save_Group"
+   Rect: [0,3,47,4]
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "savemod_CB"
+    Caption: "Save models after experiments"
+    CallbackArgument: "savemod_CB"
+   -
+    Type: StaticText
+    Name: "file_Txt"
+    Caption: "Model file: "
+    Rect: [0,1,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "file_inp"
+    Caption: "SimulationRun"
+    Rect: [23,1,20,0]
+    Enable: false
+    DataType: 1
+    Password: false
+   -
+    Type: Button
+    Name: "modelDir_but"
+    Caption: "Model Folder"
+    Rect: [0,2,20,0]
+    CallbackArgument: "modelDir_but"
+    Enable: false
+   -
+    Type: EditText
+    Name: "modelDir_Inp"
+    Caption: "C:\\TEMP"
+    Rect: [23,2,20,0]
+    Enable: false
+    DataType: 1
+    Password: false
+  -
+   Type: GroupBox
+   Name: "Param_Group"
+   Caption: " Model parametrization "
+   Rect: [0,8,47,3]
+   Enable: false
+   $Elements:
+   -
+    Type: StaticText
+    Name: "ExpNo_txt"
+    Caption: "Experiment:"
+   -
+    Type: EditText
+    Name: "ExpNo_inp"
+    Caption: "1"
+    Rect: [13,0,5,0]
+    DataType: 4
+    Password: false
+   -
+    Type: StaticText
+    Name: "ObsNo_txt"
+    Caption: "Observation:"
+    Rect: [24,0,0,0]
+   -
+    Type: EditText
+    Name: "ObsNo_inp"
+    Caption: "1"
+    Rect: [38,0,5,0]
+    DataType: 4
+    Password: false
+   -
+    Type: Button
+    Name: "Param_but"
+    Caption: "Set Parameters"
+    Rect: [20,1,23,0]
+    CallbackArgument: "Param_but"
+ -
+  Type: TabPage
+  Name: "DistSim"
+  Caption: "Distribution"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "DistSim_Gr"
+   Rect: [0,0,47,13]
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "DistrSim_CB"
+    Caption: "Use distributed simulation"
+    CallbackArgument: "DistrSim_CB"
+   -
+    Type: StaticText
+    Name: "HeaderTxt"
+    Caption: "Computer and number of parallel processes:"
+    Rect: [0,1,0,0]
+    Enable: false
+   -
+    Type: ListBox
+    Name: "RemotesList"
+    Caption: [" "]
+    Rect: [0,2,27,5]
+    CallbackArgument: "RemotesList"
+    Enable: false
+    SelectionIndex: 1
+   -
+    Type: Button
+    Name: "AddAddress"
+    Caption: "Insert"
+    Rect: [30,2,12,0]
+    CallbackArgument: "CB_AddAddress"
+    Enable: false
+   -
+    Type: Button
+    Name: "TestConnection_But"
+    Caption: "Test"
+    Rect: [30,3,12,0]
+    CallbackArgument: "TestConnection_But"
+    Enable: false
+   -
+    Type: Button
+    Name: "RemoveAddress"
+    Caption: "Remove"
+    Rect: [30,4,12,0]
+    CallbackArgument: "CB_RemoveAddress"
+    Enable: false
+   -
+    Type: Button
+    Name: "Recording"
+    Caption: "Protocol"
+    Rect: [30,5,12,0]
+    CallbackArgument: "Recording"
+    Enable: false
+   -
+    Type: CheckBox
+    Name: "SimulateWith3D_CB"
+    Caption: "Simulate with 3D"
+    Rect: [0,8,0,0]
+    CallbackArgument: "SimulateWith3D_CB"
+    Enable: false
+    IsChecked: true
+   -
+    Type: StaticText
+    Name: "quitAfterTimeTxt"
+    Caption: "Terminate after [time]:"
+    Rect: [0,9,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "QuitAfterTime"
+    Caption: "5:00.0000"
+    Rect: [25,9,18,0]
+    Enable: false
+    DataType: 10
+    Password: false
+   -
+    Type: StaticText
+    Name: "LicTypeTxt"
+    Caption: "Remote license:"
+    Rect: [0,10,0,0]
+    Enable: false
+   -
+    Type: Drop-Down
+    Name: "LicType"
+    Caption: ["Professional","Standard","Application","Runtime","Research","Educational","Simulation","Highest Available"]
+    Rect: [21,10,22,0]
+    Enable: false
+    SelectionIndex: 1
+   -
+    Type: CheckBox
+    Name: "LowPrio_CB"
+    Caption: "Lower priority"
+    Rect: [0,11,0,0]
+    CallbackArgument: "LowPrio_CB"
+    Enable: false
+    IsChecked: true
+ -
+  Type: TabPage
+  Name: "Rules"
+  Caption: "Rules"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "Rules_GR"
+   Caption: " Rule-based settings "
+   Rect: [0,0,47,11]
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "Title_Rules"
+    Caption: "Use rules"
+    CallbackArgument: "useRules"
+   -
+    Type: StaticText
+    Name: "NumExp_Txt"
+    Caption: "Number of experiments:"
+    Rect: [0,1,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "NumExp_Inp"
+    Caption: "1"
+    Rect: [32,1,11,0]
+    Enable: false
+    DataType: 4
+    Password: false
+   -
+    Type: StaticText
+    Name: "RuleSelect_C"
+    Caption: "Select rule:"
+    Rect: [0,2,0,0]
+    Enable: false
+   -
+    Type: Drop-Down
+    Name: "Ruleselect_Pop"
+    Caption: ["No rule"]
+    Rect: [28,2,15,0]
+    CallbackArgument: "RuleSelected"
+    Enable: false
+    SelectionIndex: 1
+   -
+    Type: CheckBox
+    Name: "ActiveRule_CB"
+    Caption: "Rule is active"
+    Rect: [0,3,0,0]
+    CallbackArgument: "ActiveRule_CB"
+    Enable: false
+    IsChecked: true
+   -
+    Type: CheckBox
+    Name: "AsInit_CB"
+    Caption: "Use for first simulation run"
+    Rect: [20,3,0,0]
+    CallbackArgument: "AsInit_CB"
+    Enable: false
+   -
+    Type: StaticText
+    Name: "forExp_Txt"
+    Caption: "Valid for experiment (e.g.  5; 8-12):"
+    Rect: [0,4,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "Valid_Inp"
+    Rect: [32,4,11,0]
+    Enable: false
+    DataType: 1
+    Password: false
+   -
+    Type: StaticText
+    Name: "Prio_C"
+    Caption: "Priority of the rule:"
+    Rect: [0,5,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "Prio_Input"
+    Rect: [32,5,11,0]
+    Enable: false
+    DataType: 4
+    Password: false
+   -
+    Type: Button
+    Name: "TableCond_B"
+    Caption: "Table Condition"
+    Rect: [0,6,20,0]
+    CallbackArgument: "Cond_Table"
+    Enable: false
+   -
+    Type: Button
+    Name: "MethCond_B"
+    Caption: "Method Condition"
+    Rect: [22,6,21,0]
+    CallbackArgument: "Cond_Meth"
+    Enable: false
+   -
+    Type: Button
+    Name: "TableAction_B"
+    Caption: "Table Action"
+    Rect: [0,7,20,0]
+    CallbackArgument: "Act_Table"
+    Enable: false
+   -
+    Type: Button
+    Name: "MethAction_B"
+    Caption: "Method Action"
+    Rect: [22,7,21,0]
+    CallbackArgument: "Act_Meth"
+    Enable: false
+   -
+    Type: Button
+    Name: "NewRules_B"
+    Caption: "Create New Rule"
+    Rect: [0,8,20,0]
+    CallbackArgument: "NewRule"
+    Enable: false
+   -
+    Type: Button
+    Name: "allRules_B"
+    Caption: "Show All Rules"
+    Rect: [22,8,21,0]
+    CallbackArgument: "openRules"
+    Enable: false
+   -
+    Type: Button
+    Name: "DeleteRule_B"
+    Caption: "Delete Displayed Rule"
+    Rect: [0,9,25,0]
+    CallbackArgument: "DeleteRule"
+    Enable: false
+ -
+  Type: TabPage
+  Name: "Report"
+  Caption: "Report"
+  $Elements:
+  -
+   Type: GroupBox
+   Name: "Descript_Gr"
+   Caption: " The report shows the information you enter "
+   Rect: [0,0,47,4]
+   $Elements:
+   -
+    Type: StaticText
+    Name: "DescrProjectName_Txt"
+    Caption: "Name of the project:"
+   -
+    Type: EditText
+    Name: "ProjName_Inp"
+    Rect: [23,0,20,0]
+    DataType: 1
+    Password: false
+   -
+    Type: StaticText
+    Name: "DescProjectPers_Txt"
+    Caption: "Person in charge:"
+    Rect: [0,1,0,0]
+   -
+    Type: EditText
+    Name: "ProjPers_Inp"
+    Rect: [23,1,20,0]
+    DataType: 1
+    Password: false
+   -
+    Type: StaticText
+    Name: "Receiver_Txt"
+    Caption: "E-mail recipient:"
+    Rect: [0,2,0,0]
+   -
+    Type: EditText
+    Name: "Receiver_Inp"
+    Rect: [23,2,20,0]
+    DataType: 1
+    Password: false
+  -
+   Type: GroupBox
+   Name: "ResultsReport_Gr"
+   Caption: " Behavior at the end of the experiment run "
+   Rect: [0,5,47,6]
+   $Elements:
+   -
+    Type: CheckBox
+    Name: "showRuntimeAtEnd_CB"
+    Caption: "Show run time"
+    CallbackArgument: "showRuntimeAtEnd_CB"
+    IsChecked: true
+   -
+    Type: CheckBox
+    Name: "ReportAtEnd_CB"
+    Caption: "Show report"
+    Rect: [23,0,0,0]
+    CallbackArgument: "ReportAtEnd_CB"
+    IsChecked: true
+   -
+    Type: CheckBox
+    Name: "saveHTMLatEnd"
+    Caption: "Save report"
+    Rect: [0,1,0,0]
+    CallbackArgument: "saveHTMLatEnd"
+   -
+    Type: CheckBox
+    Name: "Excel_CB"
+    Caption: "Save results"
+    Rect: [23,1,0,0]
+    CallbackArgument: "Excel_CB"
+   -
+    Type: Button
+    Name: "FolderHTML_but"
+    Caption: "Folder"
+    Rect: [0,2,16,0]
+    CallbackArgument: "openHTMLPath"
+   -
+    Type: EditText
+    Name: "FolderHTML_inp"
+    Rect: [17,2,26,0]
+    DataType: 1
+    Password: false
+   -
+    Type: CheckBox
+    Name: "SendMail_CB"
+    Caption: "Send e-mail"
+    Rect: [0,3,0,0]
+    CallbackArgument: "SendMail_CB"
+   -
+    Type: StaticText
+    Name: "Mailserver_Txt"
+    Caption: "E-mail server:"
+    Rect: [0,4,0,0]
+    Enable: false
+   -
+    Type: EditText
+    Name: "Mailserver_Inp"
+    Rect: [17,4,26,0]
+    Enable: false
+    DataType: 1
+    Password: false

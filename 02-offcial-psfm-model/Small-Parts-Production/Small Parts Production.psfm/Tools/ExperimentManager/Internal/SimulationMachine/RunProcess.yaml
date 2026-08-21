@@ -1,0 +1,84 @@
+InternalClassType: Method
+Coordinate3D: [13.100000000000001,-7.45,0]
+Name: RunProcess
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- CONTROL THE PROCESS ON THE REMOTE MACHINE
+ -- The treatment of a single job
+ -- called by: ConnectProcess_ (StartMachine_), itself in a single callChain
+ /* has AN ErrorHandler, errors should NOT !! open the debugger. */
+ 
+ if NOT existsObject(to_str(self)) then
+ 	return  -- during detection (Reset distributed simulation)
+ end
+ 
+ var MachTab:object := ~.MachinesTable
+ var MachNo:integer := MachineIndex -- row of the MachinesTable
+ var JobTab:object := ~.~.JobsTable
+ 
+ if JobId = 0 then
+ 	return
+ end
+ 
+ var sema:object := rootfolder.Internal.&sema
+ waituntil sema.value = false prio 1
+ sema.value := true
+ 
+ var eMPlant:any := getInterfaceOfRemoteProcess(eMPlantHandle) -- this method has an error handler
+ 
+ if JobId < 0
+ 	var newJobId:integer := ~.~.M_NewJobId(eMPlant,JobId) -- code depends of the wizard (Experimentmanager or GAwizard)
+ 
+ 	if newJobId > 0
+ 		JobId := newJobId
+ 		startDateTime := sysdate-- register the start time of a simulation run in a custom attribute
+ 		JobTab[5,JobId] := startDateTime
+ 
+ 		var p:string := to_str(self.~.~.~) -- use only absolute paths for remote access
+ 		var stmt:string := to_str(p,".CurrentTaskNo := ",JobId) --_CurrentTaskNo is the row of JobsTable (=JobTab)
+ 		eMPlant.executeSimTalk(stmt)
+ 		
+ 		stmt := to_str(p,".currExpNo := ",JobTab[1,JobId]) 
+ 		eMPlant.executeSimTalk(stmt)
+ 		
+ 		stmt := to_str(p,".currRunNo := ",JobTab[2,JobId]) 
+ 		eMPlant.executeSimTalk(stmt)
+ 		
+ 
+ 		StartReplication -- error handler
+ 
+ 		/*if NOT &Observer.alreadyRunning
+ 			&Observer.executeNewCallChain -- generates periodical calls
+ 		end*/
+ 
+ 		MachTab[10,MachNo] := "busy"
+ 		-- if JobId = -1: wait for the results of the other simulation machines
+ 	end
+ 
+ end -- if JobId < 0
+ 
+ sema.value := false
+RandomSeed: 350
+UUID: 6d8d9809-cdf6-44f1-8368-6109a81f5fc1
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: ErrorHandler
+ ID: 1
+ DataType: object
+ Value: "ErrorHandler"
+ ShowInTooltip: false

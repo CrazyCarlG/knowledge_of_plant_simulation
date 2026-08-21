@@ -1,0 +1,32 @@
+InternalClassType: DataTable
+Coordinate3D: [-7.1000000000000005,7,0]
+Name: Objects
+Origin: 3ebf8d2b-61b2-4f7b-92c8-b51b39d21535
+UUID: 45318a15-8aea-48bb-909b-7ba9d1006f96
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: ~
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 50
+  DataType: string
+  MaxXDim: 1
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 20
+  -
+   Index: 1
+   Width: 31
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+ ColumnIndex: [string,2,~,"Objects"]
+ Columns:

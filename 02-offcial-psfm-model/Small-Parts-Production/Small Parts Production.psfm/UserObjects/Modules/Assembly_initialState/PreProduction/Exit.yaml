@@ -1,0 +1,19 @@
+InternalClassType: Interface
+Coordinate3D: [-14,0.7,0]
+Name: Exit
+Origin: 6a518501-cb32-4a3e-89e8-73ee25c0c55c
+Position: 60
+RandomSeed: 586
+UUID: 01a0236c-0546-714e-92a5-0ec9ba4b108c
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+$Successors:
+-
+ $Location: 65505aaf-9a26-446a-8f79-f3db62b99e4a
+ $Succ: 01a0236c-0546-7065-b736-190a78811a73
+ Name: Connector32
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7069-8627-706d1302f927
+$Predecessors:
+- 01a0236c-0546-714f-b852-7d5470cdd971

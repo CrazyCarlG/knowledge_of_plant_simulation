@@ -1,0 +1,28 @@
+InternalClassType: Method
+Coordinate3D: [-7.1000000000000005,13,0]
+Name: init
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- fill table EnergyConsumers according to the selection
+ if MonitoringActive 
+ 	prepareObserver(true)
+ end
+ updateConsumption
+
+RandomSeed: 59
+UUID: b8422f31-618a-453a-bed4-45b10cde953f
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["init"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

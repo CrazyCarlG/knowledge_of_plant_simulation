@@ -1,0 +1,30 @@
+InternalClassType: HtmlReport
+Content: ""
+Coordinate3D: [1.6499999999999986,-35.900000000000006,0]
+Label: "ExperimentManager"
+Name: ReportObject
+Origin: afe35984-2024-4174-b233-73aec13cb7a7
+RandomSeed: 207
+TocLevels: 3
+UUID: 06a06a96-a36d-43e8-9726-e7d668524194
+$CustomAttributes:
+-
+ Name: SaveToDirectory
+ ID: 3
+ DataType: string
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: Informations
+ ID: 4
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  Columns:
+ ShowInTooltip: false
+$WindowSize: [861,482]

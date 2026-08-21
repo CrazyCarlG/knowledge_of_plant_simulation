@@ -1,0 +1,16 @@
+InternalClassType: DataTable
+Origin: b955ab6d-01de-44b8-8c63-f78279fd32cb
+RandomSeed: 1073747521
+UUID: 01a0236c-0546-74fa-97b3-965b7efcf71a
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,3,"Path of the Value","Description","Type of the value"]
+ Columns:
+ - [0,string,2,"root.Buffer1.capacity","root.Drain.statDeleted"]
+ - [1,string,2,"Capacity of buffer","Throughput"]
+ - [2,string,2,"Input","Output"]

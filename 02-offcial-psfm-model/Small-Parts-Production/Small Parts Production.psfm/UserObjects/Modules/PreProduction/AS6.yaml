@@ -1,0 +1,29 @@
+InternalClassType: Station
+Coordinate3D: [7.1500001065433025,8.7000001296401024,0]
+Label: "AS6"
+Name: AS6
+Origin: 682dd7c7-6d7b-4233-b7d5-86c4aedbccd2
+RandomSeed: 58
+UUID: 01a0236c-0546-7001-a378-d1e808c9cf55
+3D:
+ Mirror: [false,false,false]
+ Rotation: [90,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,1,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7002-942b-c953d488ecef
+ Name: Connector7
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-700c-bcf2-b394b92cec86
+$Predecessors:
+- 01a0236c-0546-700d-a54b-c558e5e004e0
+InheritEntranceExitLockedOnReset: false

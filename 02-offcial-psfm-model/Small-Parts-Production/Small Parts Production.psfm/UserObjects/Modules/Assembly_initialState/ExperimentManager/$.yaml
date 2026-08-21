@@ -1,0 +1,137 @@
+InternalClassType: Frame
+Coordinate3D: [28.5,13.5,0]
+Label: "ExperimentManager"
+Name: ExperimentManager
+Origin: 7ab33acf-b70f-4892-9b47-cce85ae610c4
+RandomSeed: 1073746742
+UUID: 01a0236c-0546-705a-a05d-da430c21820e
+3D:
+ PlanningView: true
+ ShowBasePlate: true
+ ShowConnections: true
+ ShowContent: false
+ ShowExternalGraphics: false
+ ShowGrid: false
+ ShowLabels: false
+ ShowMaterialFlowDirections: true
+ ShowNames: true
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+$CustomAttributes:
+-
+ Name: Alpha
+ ID: 1
+ $DataType: real
+ Value: 0.099999999999999978
+-
+ Name: ConfLevel
+ ID: 2
+ $DataType: real
+ Value: 90
+-
+ Name: CurrRunNo
+ ID: 3
+ $DataType: integer
+ Value: 10
+-
+ Name: ModelDir
+ ID: 6
+ $DataType: string
+ Value: ""
+-
+ Name: NumRuns
+ ID: 7
+ $DataType: integer
+ Value: 10
+-
+ Name: Save_model
+ ID: 9
+ $DataType: boolean
+ Value: false
+-
+ Name: Savefile
+ ID: 10
+ $DataType: string
+ Value: "SimulationRun"
+-
+ Name: SaveHTMLatEnd
+ ID: 11
+ $DataType: boolean
+ Value: false
+-
+ Name: DistrSimAvailable
+ ID: 12
+ $DataType: boolean
+ Value: true
+-
+ Name: UsingRules
+ ID: 15
+ $DataType: boolean
+ Value: false
+-
+ Name: UsingTables
+ ID: 16
+ $DataType: boolean
+ Value: true
+-
+ Name: UsingRemote
+ ID: 18
+ $DataType: boolean
+ Value: false
+-
+ Name: RemoteLicType
+ ID: 19
+ $DataType: string
+ Value: "Professional"
+-
+ Name: RemoteLowerPrio
+ ID: 20
+ $DataType: boolean
+ Value: true
+-
+ Name: OK_input
+ ID: 23
+ $DataType: boolean
+ Value: true
+-
+ Name: OK_output
+ ID: 24
+ $DataType: boolean
+ Value: true
+-
+ Name: MailReceiver
+ ID: 29
+ $DataType: string
+ Value: ""
+-
+ Name: MailServer
+ ID: 30
+ $DataType: string
+ Value: ""
+-
+ Name: MailAtEnd
+ ID: 31
+ $DataType: boolean
+ Value: false
+-
+ Name: CurrentTaskNo
+ ID: 38
+ $DataType: integer
+ Value: 0
+-
+ Name: NumExp
+ ID: 49
+ $DataType: integer
+ Value: 11
+-
+ Name: IsRunning
+ ID: 65
+ $DataType: boolean
+ Value: false
+-
+ Name: isSimulationMachine
+ ID: 68
+ $DataType: boolean
+ Value: false

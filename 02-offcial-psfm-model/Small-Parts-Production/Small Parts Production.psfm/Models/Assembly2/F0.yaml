@@ -1,0 +1,23 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Origin: 01a0236c-0546-7021-8420-1cbbacc7bc38
+RandomSeed: 166
+TransferLengthToObject: false
+UUID: 01a0236c-0546-7357-8a5b-41c0273e835f
+Width: 1
+$Successors:
+-
+ $Succ: 01a0236c-0546-737b-b13f-b4be79a95f88
+ Origin: 01a0236c-0546-7047-bff1-b763bdb1f88d
+ UUID: 01a0236c-0546-737c-ba2e-579f089f6c33
+$Predecessors:
+- 01a0236c-0546-7362-b59f-d116ee93e49c
+- 01a0236c-0546-7369-ab55-bad57af49dcb
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ Control: "LoadStation.TargetSensorControl"
+ Front: true
+ Rear: false
+ LightBarrierMode: false

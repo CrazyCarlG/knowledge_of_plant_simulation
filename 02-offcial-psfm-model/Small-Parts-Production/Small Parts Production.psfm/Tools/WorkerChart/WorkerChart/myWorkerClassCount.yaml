@@ -1,0 +1,23 @@
+InternalClassType: DataTable
+Coordinate3D: [14,-19,0]
+Name: myWorkerClassCount
+Origin: 89124604-5872-4e98-b37d-0ca8d0b72b42
+UUID: 66982b5b-7fd3-4e34-b871-c3988c630090
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: integer
+  ShowDataType: true
+  RowFormat:
+  -
+   Index: 0
+   Hidden: false
+   DataType: object
+ Columns:

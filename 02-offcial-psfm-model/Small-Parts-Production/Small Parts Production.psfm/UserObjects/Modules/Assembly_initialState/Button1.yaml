@@ -1,0 +1,21 @@
+InternalClassType: Button
+Control: "self.OnClicked"
+Coordinate3D: [-13.65,4.15,0]
+Label: "Stop"
+Name: Button1
+Origin: 109099cc-349f-4dfa-af40-5e0bc5305ec2
+RandomSeed: 1073746728
+UUID: 01a0236c-0546-7070-be1c-795589945360
+$CustomAttributes:
+-
+ Name: OnClicked
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	eventController.stop;
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false

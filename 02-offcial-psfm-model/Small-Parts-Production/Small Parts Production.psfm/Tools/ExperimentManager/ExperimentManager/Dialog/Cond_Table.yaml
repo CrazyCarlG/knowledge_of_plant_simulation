@@ -1,0 +1,35 @@
+InternalClassType: Method
+Coordinate3D: [-7,7,0]
+Name: Cond_Table
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ var rulesTab,condTab:object;var rName:string;var row:integer
+ 
+ rulesTab := ~.Rules.Rules
+ condTab := ~.Rules.Condition-- table for input
+ condTab.delete
+ rName:= @.activeRuleName
+ rulesTab.setCursor(2,1); rulesTab.find({2,1}..{2,*},rName)
+ row := rulesTab.cursorY
+ condTab.insertList(1,1, rulesTab[3,row].copy({1,1}..{*,*}))
+ condTab.RuleNo := row
+ condTab.openDialogBox(true)
+ print "Open Cond-Tab for rule ",rName," in row ",row
+RandomSeed: 325
+UUID: 19f4fe34-f203-4161-84ad-53f2206b0b60
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

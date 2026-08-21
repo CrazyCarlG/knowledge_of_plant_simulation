@@ -1,0 +1,59 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [14,-8,0]
+ExitCtrl: "self.transfer2test"
+ExitStrategy: "Percentage"
+ExitStrategyPercentageValues: [60,40]
+Length: 2
+Name: F7
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 105
+ResStatOn: true
+UUID: 01a0236c-0546-7027-9e9d-734aa58d130f
+Width: 1
+3D:
+ BaseHeight: 1
+ $ExtSegments:
+  - 0
+  - [180,2,0]
+$CustomAttributes:
+-
+ Name: transfer2test
+ ID: 1
+ DataType: method
+ Value: |+1
+  is
+  do
+  	if z_uniform(1,0,100) < 40 then -- 40 % will be tested
+  		local CT:object := ?.succ(2); -- Cross transfer
+  		if CT.ready4Loading then -- custom attribute of the CSC
+  			local CSC:object := CT.cont; -- cross-cliding car
+  			@.move(CSC); -- load
+  			CT.ready4Loading := false;
+  			CSC.backwards := false;
+  			CSC.stopped := false;
+  		else
+  			@.stopped := true;
+  		end;
+  	else
+  		@.move(1);	
+  	end;
+  	
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7028-86a9-593262e943e6
+ Name: Connector15
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7029-a4c2-5a6b17c55547
+-
+ $Succ: 01a0236c-0546-701e-8c68-d440bfc461e3
+ Name: Connector4
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7085-9452-32d16003a698
+$Predecessors:
+- 01a0236c-0546-7054-92bb-0046739aa152
+InheritEntranceExitLockedOnReset: false

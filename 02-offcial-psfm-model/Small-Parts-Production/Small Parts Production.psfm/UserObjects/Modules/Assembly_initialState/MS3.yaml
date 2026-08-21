@@ -1,0 +1,50 @@
+InternalClassType: AssemblyStation
+AssemblyMode: "Attach MUs"
+AssemblyTableMode: "Predecessors"
+Coordinate3D: [24.05,-1,0]
+Label: "MS3"
+Name: MS3
+Origin: 134cdde7-07e4-46e4-8ff8-035de5fdeb6a
+ProcTime: [Normal,1:00,15,40,1:25]
+RandomSeed: 79
+ResourceType: "Transport"
+ResStatOn: true
+ShiftcalendarObject:
+UUID: 01a0236c-0546-7060-9951-a205ef72d2b7
+3D:
+ Mirror: [false,false,false]
+ Rotation: [90,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,0.5,0.15]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7026-8914-5b77ac4fd821
+ Name: Connector28
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7062-aab7-174d59c60c5e
+$Predecessors:
+- 01a0236c-0546-7061-baf0-92a8d74e578f
+- 01a0236c-0546-706b-9955-3ea6365dcb69
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ $Name: Failure
+ ID: 1
+ Mode: ProcessingTime
+ Interval: [Negexp,2:26:59.9999999999927]
+ Duration: [Erlang,3:00,2:07.27922061357856]
+$ProcImp:
+ Active: true
+ Services:
+ - [~,["assemble",1]]
+ BrokerPath: "Broker"
+$AssemblyTable:
+- [2,1]

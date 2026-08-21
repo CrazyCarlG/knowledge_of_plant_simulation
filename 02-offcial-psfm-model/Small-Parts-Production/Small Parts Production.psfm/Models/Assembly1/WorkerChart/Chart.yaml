@@ -1,0 +1,61 @@
+InternalClassType: Chart
+InputChannels:
+ Comment: ~
+ CommonFormat: false
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  MaxXDim: 12
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 1
+   DataType: string
+  -
+   Index: 2
+   DataType: string
+  -
+   Index: 3
+   DataType: string
+  -
+   Index: 4
+   DataType: string
+  -
+   Index: 5
+   DataType: string
+  -
+   Index: 6
+   DataType: string
+  -
+   Index: 7
+   DataType: string
+  -
+   Index: 8
+   DataType: string
+  -
+   Index: 9
+   DataType: string
+  -
+   Index: 10
+   DataType: string
+  -
+   Index: 11
+   DataType: string
+  -
+   Index: 12
+   DataType: string
+  RowFormat:
+  -
+   Index: 0
+   DataType: string
+ ColumnIndex: [string,13,~,"Worker:1","Worker_Round:1","Worker_Round:2","Worker_Round:3","Worker_Round:4","Adjuster:1","Worker:2","Worker_Round:5","Worker_Round:6","Worker_Round:7","Worker_Round:8","Adjuster:2"]
+ Columns:
+ - [0,string,10,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed","Paused","Unplanned"]
+Label: "Utilization of workers"
+Origin: 01a0236c-0546-717c-92a5-1f120201d3f4
+SampleInterval: 0
+Title: "All workers of the pool 'WorkerPool'"
+UUID: 01a0236c-0546-7317-addf-35d8a730299f
+$WindowRect: [260,398,880,434]

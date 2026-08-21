@@ -1,0 +1,14 @@
+InternalClassType: Variable
+Comment: |+1
+ Needed in methods:\r
+ 1. StartMachine (at the begiinning of a distributed simulation)\r
+ 2. CheckRemote\r
+ 3. StartReplication
+Coordinate3D: [11.850000000000001,-1.8,0]
+DataType: string
+Font: 2
+HasInitValue: false
+Name: StartNetwork
+Origin: 6ac5a7b6-cbd6-4a3c-906a-06066033b9bf
+UUID: dc81e06d-ac30-4ab0-971f-9858fd70dab8
+Value: ""

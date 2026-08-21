@@ -1,0 +1,32 @@
+InternalClassType: DataTable
+Origin: 76dc5e22-d2d1-43fd-9b44-798ecec400f4
+RandomSeed: 1073747629
+UUID: 01a0236c-0546-74c4-9037-b3668ced2d11
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ Comment: ~
+ ShowComment: true
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 12
+  -
+   Index: 1
+   DataType: integer
+   Width: 17
+ ColumnIndex: [string,2," Input value","Capacity of buffer"]
+ Columns:
+ - [0,string,3," Lower level"," Upper level"," Increment"]
+ - [1,integer,3,2,16,2]

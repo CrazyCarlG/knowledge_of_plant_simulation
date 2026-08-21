@@ -1,0 +1,25 @@
+InternalClassType: AttributeExplorer
+Comment: "Automatic Stations"
+Coordinate3D: [-4.25,13.5,0]
+Label: "AutoParameters"
+Name: AttributExplorer3
+Origin: 4d42f082-53ca-4eac-b071-8a1bf822a8d9
+RandomSeed: 1073746725
+UUID: 01a0236c-0546-7073-b0aa-160dacc8ad3d
+$Objects:
+- ["AS1"]
+- ["AS2"]
+- ["AS3"]
+- ["AS4"]
+- ["AS5"]
+- ["PreProduction.AS6"]
+- ["PreProduction.AS7"]
+- ["PreProduction.AS8"]
+- ["PreProduction.AS9"]
+$Attributes:
+- ["procTime.type","Cycle time type"]
+- ["procTime.start","Min. Cycle time"]
+- ["procTime.stop","Max. Cycle time"]
+- ["Availability","Availability"]
+- ["MTTR","Mean time to repair"]
+$ColumnWidths: [15]

@@ -1,0 +1,379 @@
+InternalClassType: HtmlReport
+Content: |+1
+ ## Min-Max Diagram 
+ <<
+ <div style="text-align: left">
+ <figure>
+ <svg style="border:1px solid black; width: 760px; border-radius: 5px; height: 50px; box-shadow: 10px 10px 6px -6px #777;">
+ <rect x="0" y="0" height=50 width=760 fill="#dcdcdc"/>
+ <rect x="0" y="0" height=50 width=100 fill="#dcdcdc"/>
+ <line x1="0" y1=50 x2=760 y2=50 stroke="black" stroke-width="1" />
+ <line x1=100 y1="0" x2=100 y2=50 stroke="black" stroke-width="1" />
+ <text fill="black" font-size="14" font-weight="bold" x="12" y="32">Experiment</text>
+ <g transform="translate(110,0)">
+ <text fill="black" font-size="12"transform="translate(2,42) rotate(-60)">1e+300</text>
+ <line x1=0 y1="45" x2=0 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=0 y1="50" x2=0 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=12 y1="50" x2=12 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=24 y1="50" x2=24 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=36 y1="50" x2=36 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=48 y1="50" x2=48 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(62,42) rotate(-60)">8e+299</text>
+ <line x1=60 y1="45" x2=60 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=60 y1="50" x2=60 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=72 y1="50" x2=72 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=84 y1="50" x2=84 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=96 y1="50" x2=96 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=108 y1="50" x2=108 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(122,42) rotate(-60)">6e+299</text>
+ <line x1=120 y1="45" x2=120 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=120 y1="50" x2=120 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=132 y1="50" x2=132 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=144 y1="50" x2=144 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=156 y1="50" x2=156 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=168 y1="50" x2=168 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(182,42) rotate(-60)">4e+299</text>
+ <line x1=180 y1="45" x2=180 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=180 y1="50" x2=180 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=192 y1="50" x2=192 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=204 y1="50" x2=204 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=216 y1="50" x2=216 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=228 y1="50" x2=228 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(242,42) rotate(-60)">2e+299</text>
+ <line x1=240 y1="45" x2=240 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=240 y1="50" x2=240 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=252 y1="50" x2=252 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=264 y1="50" x2=264 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=276 y1="50" x2=276 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=288 y1="50" x2=288 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(302,42) rotate(-60)">0</text>
+ <line x1=300 y1="45" x2=300 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=300 y1="50" x2=300 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=312 y1="50" x2=312 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=324 y1="50" x2=324 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=336 y1="50" x2=336 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=348 y1="50" x2=348 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(362,42) rotate(-60)">-2e+299</text>
+ <line x1=360 y1="45" x2=360 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=360 y1="50" x2=360 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=372 y1="50" x2=372 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=384 y1="50" x2=384 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=396 y1="50" x2=396 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=408 y1="50" x2=408 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(422,42) rotate(-60)">-4e+299</text>
+ <line x1=420 y1="45" x2=420 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=420 y1="50" x2=420 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=432 y1="50" x2=432 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=444 y1="50" x2=444 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=456 y1="50" x2=456 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=468 y1="50" x2=468 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(482,42) rotate(-60)">-6e+299</text>
+ <line x1=480 y1="45" x2=480 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=480 y1="50" x2=480 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=492 y1="50" x2=492 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=504 y1="50" x2=504 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=516 y1="50" x2=516 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=528 y1="50" x2=528 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(542,42) rotate(-60)">-8e+299</text>
+ <line x1=540 y1="45" x2=540 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=540 y1="50" x2=540 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=552 y1="50" x2=552 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=564 y1="50" x2=564 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=576 y1="50" x2=576 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=588 y1="50" x2=588 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <text fill="black" font-size="12"transform="translate(602,42) rotate(-60)">-1e+300</text>
+ <line x1=600 y1="45" x2=600 y2="50" style="stroke:black;stroke-width:1" />
+ <line x1=600 y1="50" x2=600 y2=50 style="stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5" />
+ <line x1=612 y1="50" x2=612 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=624 y1="50" x2=624 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=636 y1="50" x2=636 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ <line x1=648 y1="50" x2=648 y2=50 style="stroke:#c8c8c8;stroke-width:1;" />
+ </g>
+ </svg>
+ </figure>
+ <br>
+ <figure>
+ </div>
+ >>
+
+Coordinate3D: [50.900000000000006,-1.6,0]
+Name: Report
+Origin: d99089f9-a9d5-471b-87c7-b7a199694ce4
+RandomSeed: 141
+TocLevels: 0
+UUID: caef01dc-f55e-45af-a5c0-2563498c4bd7
+$CustomAttributes:
+-
+ Name: active
+ ID: 1
+ DataType: boolean
+ Value: false
+ HasInitValue: true
+ InitValue: false
+ ShowInTooltip: false
+-
+ Name: GenerateSVGChart
+ ID: 2
+ DataType: method
+ Value: |+1
+  param MaxNum, MinNum: real, multipleObs:boolean, show:boolean, timeData:boolean, showQuartiles:boolean, description:string:= "", header : string := "##"  -> string
+  
+  var Report := self.~
+  var TableOfExperiments := self.~.~.ExpTable
+  var OriginRange := (MaxNum-MinNum)
+  var NumberOfTicks := 10
+  var NumericIntervalForTicks := OriginRange/NumberOfTicks
+  var PixelIntervalForTicks := 60
+  var longDataString := false
+  if timeData
+  	var maxTimeNum : time := MaxNum
+  	var maxTimeStringArr := splitString(to_str(maxTimeNum),".")
+  	var maxTimeString := maxTimeStringArr[1]
+  	if strLen(maxTimeString) >= 6
+  		longDataString := true
+  	end
+  else
+  	var maxStringArr := splitString(to_str(MaxNum),".")
+  	var maxString := maxStringArr[1]
+  	if strLen(maxString) >= 4
+  		longDataString := true
+  	end
+  end
+  
+  -- Parametrize Width of Chart
+  var MaxStringLength := 0
+  var NewStringLength := 0
+  for var k := 1 to TableOfExperiments.YDim
+  	NewStringLength := strLen(TableOfExperiments[0,k])
+  	if NewStringLength > MaxStringLength
+  		MaxStringLength := NewStringLength
+  	end
+  next
+  
+  var LetterWidth := 7  -- Width of a single letter used in experiment names
+  var WidthUpperBox := 100 -- Width of the grey box in the upper left corner
+  var LongestWordWidth := LetterWidth*MaxStringLength
+  if LongestWordWidth > WidthUpperBox
+  	WidthUpperBox := LongestWordWidth
+  end
+  
+  var FirstTickPosInPixels := WidthUpperBox + LetterWidth // * 1.1
+  var Width := WidthUpperBox + PixelIntervalForTicks*(NumberOfTicks + 1)
+  if longDataString
+  	Width *= 1.03
+  end
+  -- Parametrize Height of Chart
+  var RowHeightInPixels := 18
+  var numExperiments := ChartTable.yDim
+  var HeightUpperBox := 50 -- Height of the grey box in the upper left corner
+  var Height := HeightUpperBox + RowHeightInPixels * numExperiments
+  
+  Report.Content := ""
+  var title:string
+  if description /= ""
+  	description := ": " + strToHtml(description)
+  end
+  /*if showConf
+  	title := "Confidence Intervals"
+  else
+  	title := "Min-Max Diagram"
+  end*/
+  Report.append(header)
+  Report.appendPlainText("Confidence Interval Chart")
+  Report.appendLine(" ")
+  Report.appendLine("<<")
+  Report.appendLine("<figure style=\\"display: block; margin-bottom: 20px;\\">")
+  Report.appendLine("<svg xmlns=\\"http://www.w3.org/2000/svg\\" style=\\"font-family: 'Segoe UI'; border:2px solid black; width: "+num_to_str(Width)+"px; height: "+num_to_str(Height)+"px; box-shadow: 10px 10px 6px -6px #777;\\">")
+  Report.appendLine("<rect x=\\"0\\" y=\\"0\\" height=\\""+num_to_str(HeightUpperBox)+"\\" width=\\""+num_to_str(Width)+"\\" fill=\\"#dcdcdc\\"/>") // Upper right grey square
+  Report.appendLine("<rect x=\\"0\\" y=\\"0\\" height=\\""+num_to_str(Height)+"\\" width=\\""+num_to_str(WidthUpperBox)+"\\" fill=\\"#dcdcdc\\"/>") // Left grey square extending towards the lower end
+  Report.appendLine("<line x1=\\"0\\" y1=\\""+num_to_str(HeightUpperBox)+"\\" x2=\\""+num_to_str(Width)+"\\" y2=\\""+num_to_str(HeightUpperBox)+"\\" stroke=\\"black\\" stroke-width=\\"1\\" />") // Upper horizontal line
+  Report.appendLine("<line x1=\\""+num_to_str(WidthUpperBox)+"\\" y1=\\"0\\" x2=\\""+num_to_str(WidthUpperBox)+"\\" y2=\\""+num_to_str(Height)+"\\" stroke=\\"black\\" stroke-width=\\"1\\" />") // Left vertical line
+  
+  var Text := "Experiment"
+  Report.appendLine("<text fill=\\"black\\" font-size=\\"14\\" font-weight=\\"bold\\" x=\\"12\\" y=\\"32\\">"+Text+"</text>") // Text visible in the upper left box
+  
+  
+  var FontSize := "\\"12\\""
+  var InitialPixelOffsetForTicks := 2 -- Text for a tick should have a slight offset since it otherwise is not positioned centrally above the line.
+  
+  var rotationAngle := -60
+  if longDataString
+  	rotationAngle := -25
+  end
+  
+  Report.appendLine("<g transform=\\"translate("+num_to_str(FirstTickPosInPixels)+",0)\\">")
+  for var i := 0 to NumberOfTicks -- Plus one as additional line needs to be drawn, since 10 bins are created and to seperate them 11 lines are necessary
+  	var xPos := num_to_str(PixelIntervalForTicks*i)
+  	var TickTextXPos := num_to_str(InitialPixelOffsetForTicks+PixelIntervalForTicks*i)
+  	if NumericIntervalForTicks > 0
+  		if timeData
+  			var totalSeconds : time := MinNum + NumericIntervalForTicks*i
+  			var timeDataStringArr := splitString(to_str(totalSeconds),".")
+  			var TickText := timeDataStringArr[1]
+  			var lengthOfTimeString := strLen(TickText)
+  			if lengthOfTimeString < 3
+  				if lengthOfTimeString < 2
+  					TickText := "0:0"+TickText
+  				else
+  					TickText := "0:"+TickText
+  				end
+  			end
+  		else
+  			TickText := num_to_str(round(MinNum + NumericIntervalForTicks*i,2))
+  		end
+  	else
+  		TickText := ""
+  	end
+  
+  	Report.appendLine("<text fill=\\"black\\" font-size=" + FontSize + " transform=\\"translate(" + TickTextXPos + ",42) rotate("+ num_to_str(rotationAngle) +")\\">" + TickText + "</text>")
+  	Report.appendLine("<line x1=\\"" + xPos + "\\" y1=\\"45\\" x2=\\"" + xPos + "\\" y2=\\"50\\" style=\\"stroke:black;stroke-width:1\\" />")
+  	Report.appendLine("<line x1=\\"" + xPos + "\\" y1=\\"50\\" x2=\\"" + xPos + "\\" y2=\\""+num_to_str(Height)+"\\" style=\\"stroke:#c8c8c8;stroke-width:1;\\" />")
+  	for var j := 1 to 4
+  		var xPosInBetween := num_to_str(PixelIntervalForTicks*(i+j/5))
+  		Report.appendLine("<line x1=\\"" + xPosInBetween + "\\" y1=\\"50\\" x2=\\"" + xPosInBetween + "\\" y2=\\""+num_to_str(Height)+"\\" style=\\"stroke:#c8c8c8;stroke-width:1;stroke-dasharray: 5 5\\" />")
+  	next
+  next
+  Report.appendLine("</g>")
+  
+  
+  var ExperimentBoxSize := 18
+  var StartTranslation := 52
+  
+  /*
+  (targmax-targmin)(m-orgmin)/(orgmax-orgmin) + targmin
+  */
+  
+  /*
+  (m1-orgmin/orgmax-orgmin * (targmax)) - (m2-orgmin/orgmax-orgmin * (targmax))
+  = ((m1-orgmin) - (m2-orgmin)) * (targmax)/(orgmax-orgmin)
+  = (m1-orgmin - m2+orgmin) * (targmax)/(orgmax-orgmin)
+  = (m1 - m2) * (targmax)/(orgmax-orgmin)
+   */
+  
+  if OriginRange > 0
+  	var MaximumPixelRange := PixelIntervalForTicks*NumberOfTicks -- targmax-targmin
+  	var ScalingFactor := MaximumPixelRange/ OriginRange -- (targmax-targmin)/(orgmax-orgmin)
+  	var Offset := FirstTickPosInPixels -- targmin
+  	var ChartIndex := 1 -- ChartTable does not contain entries for experiments that haven't been conducted, but TableOfExperiments contains entries for all experiment names, also those inactive
+  	for var i := 1 to TableOfExperiments.yDim
+  		if not TableOfExperiments[1,i]
+  			continue
+  		end
+  		var ExpName : string := TableOfExperiments[0,i]
+  		if ExpName = ""
+  			ExpName := "Exp "+ num_to_str(i)
+  		end
+  
+  		Report.appendLine("<g transform=\\"translate(0,"+num_to_str(StartTranslation+(ChartIndex-1)*ExperimentBoxSize)+")\\">")
+  		Report.appendLine("<text fill=\\"black\\" font-size=\\"14\\" font-weight=\\"bold\\" x=\\"0\\" y=\\"14\\">"+ ExpName +"</text>")
+  		if multipleObs
+  			var leftWhisker := num_to_str((ChartTable[1,ChartIndex]-MinNum) * ScalingFactor  + Offset)
+  			var rightWhisker := num_to_str((ChartTable[3,ChartIndex]-MinNum) * ScalingFactor  + Offset)
+  			var BoxEnd := num_to_str(abs(ChartTable[3,ChartIndex]-ChartTable[1,ChartIndex]) * ScalingFactor)
+  			var ConfMin := ChartTable[7,ChartIndex]
+  			var ConfMax := ChartTable[8,ChartIndex]
+  			var ConfStart := num_to_str((ConfMin-MinNum) * ScalingFactor  + Offset)
+  			var ConfEnd := num_to_str(abs(ConfMax-ConfMin) * ScalingFactor)
+  			var MeanValueLine := num_to_str((ChartTable[2,ChartIndex]-MinNum) * ScalingFactor + Offset)
+  			Report.appendLine("<line x1=\\""+rightWhisker+"\\" y1=\\"5\\" x2=\\""+rightWhisker+"\\" y2=\\"13\\" style=\\"stroke:blue;stroke-width:1\\" />") -- vertical line of right whisker
+  			Report.appendLine("<line x1=\\""+leftWhisker+"\\" y1=\\"5\\" x2=\\""+leftWhisker+"\\" y2=\\"13\\" style=\\"stroke:blue;stroke-width:1\\" />") -- vertical line of left whisker
+  			Report.appendLine("<rect fill=\\"#598DFF\\" x=\\""+ConfStart+"\\" y=\\"7\\" width=\\""+ConfEnd+"\\" height=\\"4\\"></rect>") -- Confidence Interval
+  			Report.appendLine("<line x1=\\""+MeanValueLine+"\\" y1=\\"5\\" x2=\\""+MeanValueLine+"\\" y2=\\"13\\" style=\\"stroke:red;stroke-width:1\\" />") -- vertical line indicating the mean
+  			if showQuartiles
+  				var leftBoxEnd := num_to_str((ChartTable[4,ChartIndex]-MinNum) * ScalingFactor + Offset)
+  				var Median := num_to_str((ChartTable[5,ChartIndex]-MinNum) * ScalingFactor + Offset)
+  				var rightBoxEnd := num_to_str((ChartTable[6,ChartIndex]-MinNum) * ScalingFactor + Offset) ------------!!!!!! void returns zero value from table
+  				Report.appendLine("<line x1=\\""+leftBoxEnd+"\\" y1=\\"5\\" x2=\\""+leftBoxEnd+"\\" y2=\\"13\\" style=\\"stroke:blue;stroke-width:1\\" />") -- vertical line of left end of box
+  				Report.appendLine("<line x1=\\""+leftBoxEnd+"\\" y1=\\"5\\" x2=\\""+rightBoxEnd+"\\" y2=\\"5\\" style=\\"stroke:blue;stroke-width:1\\" />") -- horizontal upper line of box
+  				Report.appendLine("<line x1=\\""+leftBoxEnd+"\\" y1=\\"13\\" x2=\\""+rightBoxEnd+"\\" y2=\\"13\\" style=\\"stroke:blue;stroke-width:1\\" />") -- horizontal lower line of box
+  				Report.appendLine("<line x1=\\""+rightBoxEnd+"\\" y1=\\"5\\" x2=\\""+rightBoxEnd+"\\" y2=\\"13\\" style=\\"stroke:blue;stroke-width:1\\" />") -- vertical line of right end of box
+  				Report.appendLine("<line x1=\\""+rightBoxEnd+"\\" y1=\\"9\\" x2=\\""+rightWhisker+"\\" y2=\\"9\\" style=\\"stroke:blue;stroke-width:1\\" />") -- line from right end of box to whisker
+  				Report.appendLine("<line x1=\\""+leftWhisker+"\\" y1=\\"9\\" x2=\\""+leftBoxEnd+"\\" y2=\\"9\\" style=\\"stroke:blue;stroke-width:1\\" />")  -- line from left whisker to left end of box
+  				--Report.appendLine("<line x1=\\""+leftWhisker+"\\" y1=\\"9\\" x2=\\""+rightWhisker+"\\" y2=\\"9\\" style=\\"stroke:blue;stroke-width:1\\" />") -- line from left whisker to right whisker
+  				Report.appendLine("<line x1=\\""+Median+"\\" y1=\\"5\\" x2=\\""+Median+"\\" y2=\\"13\\" style=\\"stroke:black;stroke-width:1\\" />") -- vertical line of the median
+  			else
+  				Report.appendLine("<line x1=\\""+leftWhisker+"\\" y1=\\"9\\" x2=\\""+rightWhisker+"\\" y2=\\"9\\" style=\\"stroke:blue;stroke-width:1\\" />")  -- line from left whisker to right whisker
+  			end
+  		else
+  			var minVal := ChartTable[1,ChartIndex]
+  			var meanVal := ChartTable[2,ChartIndex]
+  			var maxVal := ChartTable[3,ChartIndex]
+  			if minVal = maxVal and  maxVal = meanVal
+  				var color := "blue"
+  			else
+  				color := "black"
+  			end
+  			var BoxStart := num_to_str((minVal-MinNum) * ScalingFactor  + Offset)
+  			BoxEnd := num_to_str(abs(maxVal-minVal) * ScalingFactor)
+  			MeanValueLine := num_to_str((meanVal-MinNum) * ScalingFactor + Offset)
+  			Report.appendLine("<rect fill=\\"#598DFF\\" x=\\""+BoxStart+"\\" y=\\"7\\" width=\\""+BoxEnd+"\\" height=\\"4\\"></rect>")
+  			Report.appendLine("<line x1=\\""+MeanValueLine+"\\" y1=\\"5\\" x2=\\""+MeanValueLine+"\\" y2=\\"13\\" style=\\"stroke:"+"red"+";stroke-width:1\\" />")
+  		end
+  		ChartIndex += 1
+  		Report.appendLine("<line x1=\\"0\\" y1=\\"18\\" x2=\\""+num_to_str(Width)+"\\" y2=\\"18\\" stroke=\\"black\\" stroke-width=\\"1\\" />") -- Line seperating bars from one another
+  		Report.appendLine("</g>")
+  	next
+  end
+  
+  Report.appendLine("</svg>")
+  Report.appendLine("</figure>")
+  Report.appendLine(">>")
+  --Report.show
+  --Report.save(".\\report.html")
+  if show
+  	if Report.active
+  		Report.close
+  	end
+  	Report.active := true
+  	Report.show
+  end
+  
+  return Report.Content
+ ShowInTooltip: false
+-
+ Name: title
+ ID: 3
+ DataType: string
+ Value: ""
+ HasInitValue: true
+ InitValue: "\"\""
+ ShowInTooltip: false
+-
+ Name: meanValueTable
+ ID: 4
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: real
+   FormatString: "-15.2"
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    Hidden: false
+   RowFormat:
+   -
+    Index: 0
+    Hidden: false
+    DataType: string
+    FastIndexAccess: true
+  Columns:
+ ShowInTooltip: false
+-
+ Name: DisplayedOutputValues
+ ID: 4275829041
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: string
+   ShowDataType: true
+  Columns:
+ ShowInTooltip: false

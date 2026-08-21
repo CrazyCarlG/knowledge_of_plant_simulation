@@ -1,0 +1,38 @@
+InternalClassType: Chart
+Label: "Usage Profiles"
+Origin: d2d1bdef-d41a-4eab-aaa8-4d7e6141431f
+RandomSeed: 1073747439
+Title: "Energy Consumption of the Selected Resources"
+UUID: 01a0236c-0546-757a-8880-6b7b86d9528b
+$CustomAttributes:
+-
+ Name: UtilizationTable
+ ID: 1
+ $DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: real
+   FormatString: "-15.2"
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    ReadOnly: false
+    Hidden: false
+    Width: 18
+   RowFormat:
+   -
+    Index: 0
+    Alignment: "Left"
+    Hidden: false
+    DataType: string
+  ColumnIndex: [string,31,~,"F0","F1","F2","F3","F4","F5","F7","F8","F9","F11","MS5","MS2","MS1","MS4","AS5","AS1","AS2","AS3","AS4","F10","PreProduction.MS6","PreProduction.AS7","PreProduction.AS8","PreProduction.F0","PreProduction.F1","PreProduction.F2","PreProduction.F3","PreProduction.AS6","Line1","Line2"]
+  Columns:
+  - [0,string,11,"Setting-up","Operational","Failed","Standby","Off","Evaluate","","","","",""]
+  - [1,real,6,~5,0]
+$WindowRect: [1483,320,420,380]

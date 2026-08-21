@@ -1,0 +1,38 @@
+InternalClassType: Method
+Coordinate3D: [-1.3,13,0]
+Name: findConsumers
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- called by: open the dialog
+ param FrameObj:object
+ 
+ var absPathOfMethod:string := to_str(&observeEnergyState)
+ for var j := 1 to FrameObj.numNodes 
+ 	var o:object := FrameObj.node(j)        
+ 	if o.internalclassname = "Network" 
+ 		findConsumers(o)
+ 	else
+ 		if detectEnergyobjects(o) 
+ 			Objects[1,Objects.ydim+1] := makePathRelative(o,~)
+ 		end -- if detectEnergyobjects            
+ 	end
+ next -- object o
+RandomSeed: 58
+UUID: 02a58578-761b-4a2b-9d66-05c5123a68f7
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

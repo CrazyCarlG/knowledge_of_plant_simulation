@@ -1,0 +1,148 @@
+InternalClassType: Method
+Coordinate3D: [4.5,7,0]
+Name: VisObject
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- called by:_visualize
+ param objNo:integer, relScaling:real -- relScaling in [0,1]
+ 
+ var x,y,width,height,color,cr,x_curr,layerNo,nr,circleWidth:integer
+ 
+ var obj:object := to_str("~.",EnergyConsumers[0,objNo])
+ var objLoc:object := obj.~
+ var Consumpt:real :=  EnergyConsumers[1,objNo]
+ --	if Consumpt = 0 then return end;
+ cr := floor(relScaling * 255)
+ if relScaling < 0.9 
+ 	if relScaling < 0.7 
+ 		if relScaling < 0.4 
+ 			circleWidth := 1 -- the minimal resource ( < 40 % )
+ 			cr := 0
+ 		else
+ 			circleWidth := 3 -- 40 - 70 %
+ 			cr := 127
+ 		end
+ 	else
+ 		circleWidth := 5 -- 70 - 90 %  
+ 		cr := 190
+ 	end
+ else
+ 	circleWidth := 7 -- the top 10 %
+ 	cr := 255
+ end
+ color := makeRGBValue(cr,0,255 - cr)
+ 
+ var stmt:string := "param obj:object->boolean; result := obj.curveActive"
+ var isCurve:boolean := executeSilent(stmt,obj)
+ if isCurve 
+ 	--var tab:table := obj.SegmentsTable
+ 	var tabNew:table
+ 	obj.getCurveSegments(tabNew)
+ 	var O:real[2] := objLoc.axesOrigin
+ 	var sf:real   := objLoc.ScalingFactor
+ 	var mx,my:real
+ 	-- px: coordinate, mx: meter coordinate
+ 	-- px =  mx /sf + Ox
+ 	-- py = -my /sf + Oy	
+ 	mx := round( 1/sf * (tabNew[7,1] + tabNew[7,2])/2 + O[1]);
+ 	my := round(-1/sf * (tabNew[8,1] + tabNew[8,2])/2 + O[2]);
+ 		
+ 	var phi:real := 0.5 * pi * tabNew[3,2]/180 -- > 0 means right turn
+ 	if phi = 0 				
+ 		width  := -sf * (tabNew[8,2] - tabNew[8,1]) + O[2] -- delta y
+ 		height := obj.curvewidth
+ 	else
+ 		var Vx,Vy:real
+ 
+ 		var Cx:real :=  tabNew[7,1]/sf + O[1]
+ 		var Cy:real := -tabNew[8,1]/sf + O[2]
+ 		var dr:real := tabNew[4,2]
+ 		var w:real  := - pi * (obj.ObjectAngle + tabNew[1,2])/180 -- tangetial angle of the start point
+ 		--if obj.name="Line2" then debug end
+ 		var Tx:real := cos(w)/sf * dr -- tangential vector measured in pixel (red)
+ 		var Ty:real := -sin(w)/sf * dr	
+ 					
+ 		if phi > 0 -- right turn
+ 			Vx := Ty -- radius vector measured in pixel
+ 			Vy := -Tx			
+ 		else -- left turn
+ 			Vx := sin(w)/sf * dr -- radius vector measured in pixel
+ 			Vy := cos(w)/sf * dr			
+ 		end	
+ 		var c:real := cos(phi)
+ 		var s:real := sin(phi)
+ 		mx := cx - Vx + c * Vx - s * Vy
+ 		my := cy - Vy + s * Vx + c * Vy
+ 	end
+ 	
+ --	objLoc.drawLine(layer,-Vx+Cx,-Vy+Cy, Cx,Cy, makeRGBValue(0, 128, 0),1,-2) -- radius (green)
+ --	objLoc.drawLine(layer, Cx,Cy, Tx+Cx,Ty+Cy, makeRGBValue(255, 0, 0),1,-2) -- tangential vector
+ 
+ else
+ 	obj.getBoundingBox(x,y,width,height)
+ 	mx := round(x + width /2)
+ 	my := round(y + height/2)
+ end
+ Vx := 2*Radius -- diameter of the ellipse
+ objLoc.drawellipse(layer, mx - Radius, my - Radius, Vx, Vx,  color,circleWidth) -- size of the circles in 2D is defined by the real attribute Radius of the wizard
+ 	
+ var barLength:real := 40 -- show the bar for the energy states
+ x_curr :=  round(mx - barLength/2)
+ y := my - Radius - 10
+ var colorRGB:table := Colors.RGB
+ for var j := 1 to 6   -- small bars for the energy states: Working, Setting_up, Operational, Failed, Standby, Off
+ 	if Consumpt > 0 then cr := round(barLength * EnergyConsumers[j + 3, objNo]/Consumpt) else cr := 0 end
+ 	objLoc.drawRectangle(layer,x_curr, y, cr, 6, colorRGB[1,j],-1,0)
+ 	x_curr := x_curr + cr
+ next
+ objLoc.drawRectangle(layer,round(mx - barLength/2),y, barLength,6,makeRGBValue(0,0,0),0) -- no gradient, 1 px line
+ var scalFrame:real := objLoc.scalingFactor
+ var orig :real[2] := objLoc.axesOrigin
+ 
+ if obj._3D.exists  -- therefore objLoc.createIn3D= true	
+ 	var coord:real[3]
+ 	coord := obj._3D.position
+ 	if isCurve 
+ 		coord[1] := (mx - orig[1]) * scalFrame
+ 		coord[2] := (orig[2] - my) * scalFrame
+ 	end
+ 	coord[3] := coord[3] + z3D_lowerSurface
+ 	
+ 	var analysis:any
+ 	if objLoc._3D.existsObject(GrGroupName) then
+ 		analysis := objLoc._3D.getObject(GrGroupName)
+ 	else
+ 		analysis := objLoc._3D.addObject(GrGroupName) -- create animatable object
+ 	end
+ 
+ 	-- usage of the 3D access of version 15.0
+ 	var cylinder : any := analysis.getGraphic("default").createConeFrustum(1, 1, when relScaling > 0 then relScaling * (z3D_upperSurface - z3D_lowerSurface) else 0.1)
+ 	cylinder.Position := coord
+ 
+ 	cylinder.MaterialActive        := true
+ 	cylinder.MaterialDiffuseColor  := color
+ 	cylinder.MaterialAmbientColor  := makeRGBValue(20,20,20)
+ 	cylinder.MaterialSpecularColor := makeRGBValue(25,25,25)
+ 	cylinder.MaterialEmissiveColor := makeRGBValue(15,15,15)
+ 	cylinder.MaterialTransparency  := 0.6
+ 	cylinder.MaterialShininess     := 0.1	
+ end -- if with 3D
+RandomSeed: 44
+UUID: c033738c-808d-4807-b541-ca36efdea291
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

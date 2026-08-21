@@ -1,0 +1,28 @@
+InternalClassType: Frame
+Coordinate3D: [-6,6,0]
+Name: Assembly2
+Origin: 65505aaf-9a26-446a-8f79-f3db62b99e4a
+UUID: f0b696bf-328f-4795-ba14-f3072aaffc28
+3D:
+ PlanningView: true
+ ShowBasePlate: true
+ ShowConnections: true
+ ShowContent: false
+ ShowExternalGraphics: false
+ ShowGrid: false
+ ShowLabels: true
+ ShowMaterialFlowDirections: true
+ ShowNames: false
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+$BlockedOrigins:
+- 01a0236c-0546-7040-a213-f7685b1bc309
+- 01a0236c-0546-706c-928b-d2da4f0eecc0
+- 01a0236c-0546-707f-8990-7b80cd94bfa6
+- 01a0236c-0546-7080-a586-157bfdd47918
+- 01a0236c-0546-7081-b28d-e2c3a5201a84
+- 01a0236c-0546-7082-a7fd-d806b1c3e345
+- 01a0236c-0546-7087-8f90-d6e7374b03ea
+- 01a0236c-0546-7088-9740-4904f58b425a

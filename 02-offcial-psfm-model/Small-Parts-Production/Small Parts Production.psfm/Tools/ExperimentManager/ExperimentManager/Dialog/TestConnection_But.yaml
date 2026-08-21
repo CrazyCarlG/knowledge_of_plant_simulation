@@ -1,0 +1,59 @@
+InternalClassType: Method
+Coordinate3D: [17,4,0]
+Name: TestConnection_But
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- Test the connection to a simulation machine, which is currently selected.
+ -- called by the dialog (@ = dialog object) button 'Test'
+ var rowDLG,row,numItems:integer
+ var remoteTab,machTab,DistrSimObj:object
+ 
+ terminateRemoteProcesses
+ 
+ DistrSimObj := ~.DistributedSimulation
+ DistrSimObj.removeDistrSim
+ machTab := DistrSimObj.MachinesTable
+ machTab.delete({7,1}..{*,*}) -- handle
+ 
+ rowDLG := @.getIndex("RemotesList")
+ remoteTab := RemoteTable-- "Comp Name", "Num Processes"
+ numItems := remoteTab.yDim
+ 
+ if rowDLG < 1 OR numItems = 0 
+ 	-- No simulation machines defined.
+ 	messageBox(~.rootFolder.Localization.getText(213),1,4) -- info
+ 	return
+ end
+ 
+ ~.DistributedSimulation.updateMachinesTable(remoteTab)
+ 
+ if rowDLG = 1 
+ 	row := 1
+ else
+ 	row := remoteTab.sum({2,1}..{2,rowDLG - 1}) + 1
+ end
+ 
+ if row > 0 
+ 	-- "Test connection to '",~.DistributedSimulation.MachinesTable[1,rowDLG],"'"
+ 	infoBox(to_str(~.rootFolder.Localization.getMessage(214,machTab[1,row],"","")),false)
+ 	~.DistributedSimulation.StartMachine(row,true,true)
+ 	infoBox("",false)
+ end
+RandomSeed: 316
+UUID: 189a2b34-9c13-4177-8c18-3a649faea43d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

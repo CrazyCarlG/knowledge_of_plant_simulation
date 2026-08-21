@@ -1,0 +1,87 @@
+InternalClassType: Method
+Coordinate3D: [21,-6.5500000000000007,0]
+Name: Refresh
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ -- evaluate the table 'myStatisticTable'
+ -- fill 'InputChannels' according to the dialog settings 'Grouping the workers'
+ var WorkerNo, sNo, numWorkers: Integer
+ var s:string
+ var numberWorkerClasses, i, x, y : Integer;var WorkerClassAlreadyFound : boolean
+ var ClassOfWorker, TableOfClass, channelTab, workerObj,workerClass: Object
+ 	if (varObj = void) OR (myWorkerTable.yDim = 0)then return;end-- print "#######################################################";
+ Chart.SampleInterval := VarInterval -- SampleIntervall of the Chart
+ Transpose(myStatisticTable, myBufferTable) -- Transpose the WorkerTable => 'myBufferTable'
+ channelTab := myInputChannelsTable; channelTab.delete({1,0}..{*,*}) -- will be sent to table 'Chart.InputChannels'
+ switch VarStatisticGroup -- dialog setting 'Grouping'
+ case "Worker" 
+ 	for WorkerNo := 1 to myWorkerTable.ydim 
+ 		workerObj := myWorkerTable[1,WorkerNo]
+ 		for sNo := 1 to mystatisticTable.ydim 
+ 			s := MakeString(myBufferTable.copy({sNo,1}..{sNo,*}), workerObj, VarObj)
+ 			channelTab[WorkerNo, sNo] := s --print;print workerObj," '",channelTab[0, sNo],"'"; print s;
+ 		next-- sNo
+ 		if workerObj.class.numChildren > 1 
+ 			channelTab[WorkerNo,0] := to_str(workerObj.name,":",workerObj.ID)
+ 		else
+ 			channelTab[WorkerNo,0] := workerObj.name
+ 		end
+ 	next-- WorkerNo
+ case "Group" 
+ 	for i := 1 to myWorkerClasses.xDim  -- all classes
+ 		workerClass := myWorkerClasses[i,0]
+ 		for sNo := 1 to mystatisticTable.ydim 	-- loop all Statistic channels
+ 			for WorkerNo := 1 to myWorkerClassCount[workerClass,1] 
+ 				workerObj := myWorkerClasses[workerClass,WorkerNo]
+ 				if WorkerNo = 1 
+ 					s := MakeString(myBufferTable.copy({sNo,1}..{sNo,*}), workerObj, VarObj)
+ 					channelTab[i, sNo] := s
+ 				else
+ 					s := to_str(s,"+",MakeString(myBufferTable.copy({sNo,1}..{sNo,*}), workerObj, VarObj))
+ 				end
+ 			next -- WorkerNo
+ 			if (VarChartType = "Columns") or (VarChartType = "Stacked Columns")  -- kein Pie Chart? then
+ 				s := to_str("(",s,")/", myWorkerClassCount[workerClass,1])
+ 			end
+ 			channelTab[i, sNo] := s --print;print workerClass," '",channelTab[0, sNo],"'";print s;
+ 		next -- sNo
+ 		channelTab[i,0] := workerClass.name
+ 	next -- i class
+ case "Pool" 
+ 	channelTab[1,0] := VarObj.name
+ 	numWorkers := myWorkerTable.ydim--print "Pool ",VarObj.name," with ",numWorkers," workers";
+ 	for sNo := 1 to mystatisticTable.ydim 
+ 		for WorkerNo := 1 to numWorkers 
+ 			workerObj := myWorkerTable[1,WorkerNo]
+ 			if WorkerNo = 1 
+ 				s := to_str("(",MakeString(myBufferTable.copy({sNo,1}..{sNo,*}), workerObj, VarObj))
+ 			else -- insert the sum into the table 'InputChannelTabelle':
+ 				s := to_str(s," + ",MakeString(myBufferTable.copy({sNo,1}..{sNo,*}), workerObj, VarObj))
+ 			end
+ 		next-- WorkerNo
+ 		s := to_str(s,")") -- PS 7.6.2 (June 2006)
+ 		if (VarChartType = "Columns") or (VarChartType = "Stacked Columns")  -- no Pie Chart?
+ 			s := to_str(s,"/",numWorkers)
+ 		end
+ 		channelTab[1, sNo] := s
+ 	next -- sNo
+ end
+ Chart.InputChannels := channelTab.copy({0,0}..{*,*})
+ Chart.update
+RandomSeed: 36
+UUID: 5de28221-ce0d-467e-9a3b-136479dd93dc
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

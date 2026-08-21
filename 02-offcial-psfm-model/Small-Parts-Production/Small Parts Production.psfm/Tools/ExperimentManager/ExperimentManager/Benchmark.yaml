@@ -1,0 +1,28 @@
+InternalClassType: Method
+Coordinate3D: [55,-39,0]
+Name: Benchmark
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -> time
+ var start = getHighResolutionClock
+ for var i := 1 to 10000000
+ 	sin(i)
+ next
+ return getHighResolutionClock - start
+RandomSeed: 1073746382
+UUID: ee329e35-c3f6-466e-a960-8b6f71fd7834
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

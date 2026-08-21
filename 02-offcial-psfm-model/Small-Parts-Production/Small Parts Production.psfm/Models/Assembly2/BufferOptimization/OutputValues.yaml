@@ -1,0 +1,36 @@
+InternalClassType: DataTable
+Origin: 4867cac0-085c-4f94-a649-b7da41c4118e
+UUID: 01a0236c-0546-74dd-b281-66f59b9b1544
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ListFormat:
+  ColumnIndex: true
+  ColumnWidth: 10
+  DataType: real
+  FormatString: "-15.2"
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Hidden: false
+   Width: 39
+  -
+   Index: 1
+   DataType: real
+   Width: 10
+  -
+   Index: 2
+   DataType: real
+   Width: 10
+  -
+   Index: 3
+   Width: 10
+ ColumnIndex: [string,3,"Target value","root.Drain.statDeleted","root.MS5.statEnergyTotalConsumption"]
+ Columns:
+ - [0,string,8,"Exp 1","Exp 2","Exp 3","Exp 4","Exp 5","Exp 6","Exp 7","Exp 8"]

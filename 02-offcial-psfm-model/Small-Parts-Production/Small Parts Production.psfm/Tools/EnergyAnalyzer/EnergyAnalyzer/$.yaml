@@ -1,0 +1,674 @@
+InternalClassType: Frame
+ChangePathCtrl:
+CloseCtrl:
+ConnectCtrl:
+ConstructorCtrl:
+Coordinate3D: [-2,5,0]
+CreateIn3D: true
+DestructorCtrl: "self.OnDelete"
+DragDropCtrl: "self.OnDragDrop"
+FailCtrl:
+InitCtrl:
+Label: ""
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: EnergyAnalyzer
+OpenCtrl: "self.OnOpen"
+PauseCtrl:
+PermitDeleteCtrl:
+RandomSeed: 34
+RelabelCtrl:
+RenameCtrl:
+ReplacementMode: "merge"
+SelectCtrl:
+ShiftcalendarObject:
+UnplannedCtrl:
+UUID: 016f6240-8976-4424-9593-a1bb891da450
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ BackgroundColor: -1
+ CameraAnimations:
+ ExcludeFromShowContentOfLocation: false
+ ExternalGraphicGroups: ["default"]
+ GraphicGroupNames: ["default"]
+ InternalGraphicGroups: []
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ MovementInterruptible: false
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1.15,0]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ ObstacleForWorker: "(None)"
+ PlanningView: true
+ PointCloudPath: ""
+ PointCloudPosition: [0,0,0]
+ PointCloudRotation: [0,0,0,-1]
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ ShowBasePlate: true
+ ShowConnections: false
+ ShowContent: true
+ ShowExternalGraphics: true
+ ShowGrid: true
+ ShowLabels: false
+ ShowMaterialFlowDirections: false
+ ShowNames: true
+ ShowPointClouds: false
+ ShowShadows: false
+ ShowSky: false
+ ShowUserDefinedAttributes: true
+ StatesForColoring: 0x30d
+ StatesOrientation: "Color"
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,2]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.96,0.96,2]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$IconArray:
+-
+ Name: "ToolboxIcon"
+ Transparent: true
+ Size: [39,39]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2+/1kbrTmcDZmcHZm8Lam8Lam8LamcHZl7/Zlr/ZlL/Yk77YkL7Xj7zXj7zXeK7Mg6O6gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAi7/amtLmo+n2p+v2q+z3q+z3p+v2per2oun2oej2nuf1nOb1muX1l+T1jdfubI6kdae+gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAv97qi7vZn+r1nej1o+r2pev2neb1kd/zhtfwes/ubcbsX73qUrTnRazlOqPgZYmgeae9gIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwg7bVnNrun+v2oe32oe32m+j1kuLzh9nxe9Hub8fsYb7pVLTnR6rkPKPhWYeoeae8gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAmcfdlc3hnej1oe32oe32muj1keLzh9rwe9HubsjrYb3pU7PmR6rkPqPhVISmeKS7gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA0ujwgbXVn+j0oe32oe32muj0kuLzh9rwe9HubsjsYb3pU7TnR6rkPqPhUH+jdKC4gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwgbfVndjqnur2oe32muj0keLzh9rwe9HvbsfrYb7pU7TmR6rkP6PhTHuicp+3gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAArdLjjsfeoOr2oe32muj1kuHzh9nxe9HvbsfsYb7pVLPnR6rkP6PhSHigcZy1gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwe7LSouLyoe32m+j0kuLyh9nxe9HubsjsYb3pVLPmRqvkP6TiRHSdbpq0gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAi73Xm9Tnnuj1muj1kuLzh9nwe9DubsfsYb3pU7PmR6rkP6ThQXGdYpKwgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAxN7phrraoOf1m+j1keHzh9rwe9DubsfsYb7pVLPmR6rkP6TiPW6aY5OvgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAxN7pebLSoOLwm+f1keLzh9nxe9HvbsjsYb7pVLPmR6vkP6PiPH+vXJGvgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAm8fclM7jmuT1keLzh9nxe9HubsjrYb3pVLTnR6rkO6HiSKnlULTqWLnpbsTsYL7rWrvpTKHSEzd2ebvWgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwf7XVour1keHzh9rwgdPveszubMPrYLnpVbLmS6vkP6PjN53hO6DiQqTkQaTkT5reO4fQGD18RI6/gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAbK7QXoyxVImwXYyxYo6xXoyxV4mwWouwWYqwWYqwU4iwVIivUoivYajWXabjQ5LbLHzOFj+CQoSwgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAw+fyt+Lxr9/wrd/wsOHwtePxtuPxt+HurNrpktLoh8jjaavRisrtZq7lUJreN4PSGkWJRoWwgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAibrUptLqcrnqW6LhQIrVH0mNSIWwgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAudbkjb/dh8fuY6njSpHXI1KVS4WxgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwd7DSotXxbLDmVZrbK1qcToWygIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAiLnUp9LqebrpYKLfMWGjTYOwgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAsNHhi7/ej8nuaKniOWmqUIWygIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwe7PTqNXxcbHlQHKxUoWzgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAhrjUqNPsgbzoRnq3Voa1gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAsdLijsHfl8nuTIK+V4a1gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwf7XUrNXwU4rFW4m5gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwjLvVrdTsX5TKXou8gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAutXjlMPfb5/QYI2+gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA2enwhLfVeqbSZZHBgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAkLzUeaPObZXDgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAg7nYb5fGgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Active"
+ Transparent: true
+ Size: [39,39]
+ Pixels:
+ - ////7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+x8fHzuLohK3GjLPMjLTMjrXNjrXNjrXNjLTMirLMibLMh7LLhrHLg7HKgq/Kgq/Ka6G/dpatvr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7u7ui7/amtLmo+n2p+v2q+z3q+z3p+v2per2oun2oej2nuf1nOb1muX1l+T1jdfubI6kdae+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+1NTUv97qi7vZn+r1nej1o+r2pev2neb1kd/zhtfwes/ubcbsX73qUrTnRazlOqPgZYmgeae94uLivr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+wsLC6/L0g7bVnNrun+v2oe32oe32m+j1kuLzh9nxe9Hub8fsYb7pVLTnR6rkPKPhWYeoeae84eHhvr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+5OTkmcfdlc3hnej1oe32oe32muj1keLzh9rwe9HubsjrYb3pU7PmR6rkPqPhVISmeKS739/fvr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+y8vL0efvgbXVn+j0oe32oe32muj0kuLzh9rwe9HubsjsYb3pU7TnR6rkPqPhUH+jdKC43d3dvr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7vDxgbfVndjqnur2oe32muj0keLzh9rwe9HvbsfrYb7pU7TmR6rkP6PhTHuicp+329vbvr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+2dnZrdLjjsfeoOr2oe32muj1kuHzh9nxe9HvbsfsYb7pVLPnR6rkP6PhSHigcZy12dnZvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+xMTE5e/ze7LSouLyoe32m+j0kuLyh9nxe9HubsjsYb3pVLPmRqvkP6TiRHSdbpq02NjYvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+6Ojoi73Xm9Tnnuj1muj1kuLzh9nwe9DubsfsYb3pU7PmR6rkP6ThQXGdYpKw1tbWvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+0dHRxN7phrraoOf1m+j1keHzh9rwe9DubsfsYb7pVLPmR6rkP6TiPW6aY5Kv1tbWvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+v7+/6u7xebLSoOLwm+f1keLzh9nxe9HvbsjsYb7pVLPmR6vkP6PiPH+vXJCv0dPTvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+39/fm8fclM7jmuT1keLzh9nxe9HubsjrYb3pVLTnR6rkO6HiSKnlULTqWLnpbsTsYL7rWrvpTKHSEzd2d7nUv7+/vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+1eXrf7XVour1keHzh9rwgdPveszubMPrYLnpVbLmS6vkP6PjN53hO6DiQqTkQaTkT5reO4fQGD18RI6/4Ofpv7+/vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+bK7QXoyxVImwXYyxYo6xXoyxV4mwWouwWYqwWYqwU4iwVIivUoivYajWXabjQ5LbLHzOFj+CQoSw5OnqwMDAvr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+wMDAvr6+vr6+vr6+ut7pt+Lxr9/wrd/wsOHwtePxtuPxt+HurNrpktLoh8jjaavRisrtZq7lUJreN4PSGkWJRoWw5errwMDAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+wcHB3NzcibrUptLqcrnqW6LhQIrVH0mNSIWw6+3uwMDAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+xMTEs9Hfjb/dh8fuY6njSpHXI1KVS4Wx6+3twMDAvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+1+Dkd7DSotXxbLDmVZrbK1qcToWy6+7uwcHBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+3d7eiLnUp9LqebrpYKLfMWGjTYOw7O7uwcHBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+zs7OsNDgi7/ej8nuaKniOWmqUIWy7u/vwcHBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+w8PD2+fte7PTqNXxcbHlQHKxUoWz7e7vwcHBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+6+vshrjUqNPsgbzoRnq3Voa17u/vwcHBvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+3d3dsdLijsHfl8nuTIK+V4a18PHxwsLCvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+zc3N5O7zf7XUrNXwU4rFW4m57u/wwsLCvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+w8PD9PX2jLvVrdTsX5TKXou87u/ww8PDvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+7OzsutXjlMPfb5/QYI2+7u/xw8PDvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+y8vL5+/0hLfVeqbSZZHB7u/ww8PDvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+0dHSkLzUeaPObZXD7vDxw8PDvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+09TVg7nYb5fG7u/xxMTEvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7Ozsvr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+vr6+iIiI
+ - 7OzsiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiI
+-
+ Name: "ClassLibrary"
+ Transparent: true
+ Size: [16,16]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAA3urxktLvoe32YNbzHLrvB6LnIY7cSXrRZ2zJaXOMztTc
+ - gIAAgIAAgIAAgIAAgIAAkdLuq/D3c931KcLwB6jpGJPfQH7UYm/KVmmCtLOugIAA
+ - gIAAgIAAgIAAgIAA3urxktLvheP1O8nxCa7rEJjiNYPXW3LNOVN3tbe6gIAAgIAA
+ - gIAAgIAAgIAAgIAAkdDulej2TdDzELPtCp3lK4jZU3XON1F3s7S1gIAAgIAAgIAA
+ - gIAAgIAAgIAA3urxl9bvYdbzHLvuB6PnIY7cSnrRN1F2rrO4gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAk9Puc930KcHwB6jpGJPfQH7TN1F3m6m5gIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAxNfkkdXvcNz0V9HxXc7xaNHwaNHwSc3xL7vsHpDeKTZ4gIAAgIAAgIAA
+ - gIAAgIAAaZy2N2iHN2iHN2iHN2iHTZOxRb7hF63qHo/dGChycoGsgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAA3urxqcnHJL/vH7HqHo/eHkWrYnCjgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAfbfcJL/vH7HqHY/dCj+2gJfDgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAA3urxc6vcRsLuHo/dDUW+gJfDgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgr3kRsLuM57hJF7GaoO4gIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAA1OTubKvZVLTnI1/JYX64gIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAeLniU7ToElbZfZjHgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAc6vcMlm9dJHFgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAMlm9dJHFgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAAgIAA
+$CustomAttributes:
+-
+ Name: MonitoringActive
+ ID: 1
+ DataType: boolean
+ Value: true
+ ShowInTooltip: false
+-
+ Name: Consumption
+ ID: 2
+ DataType: real
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: OnOpen
+ ID: 3
+ DataType: method
+ Value: |+1
+  for var n := 1 to Translations.yDim 
+  	var Dialog_elem:string := Translations[0,n]
+  	Dialog.setCaption(Dialog_elem,rootfolder.Localization.getText(Translations[1,n]))
+  next
+  
+  var str:string := rootfolder.Localization.getText(80) -- "Energy"
+  refEnergy.name := str
+  refEnergy := str
+  
+  if @.~ = rootfolder 
+   	@.Dialog.label := rootfolder.Localization.getText(19)
+  else
+  	@.Dialog.label := rootfolder.Localization.getMessage(20, @.~.name,"","")
+  end
+  objects[1,0] := rootfolder.Localization.getText(8) -- "Objects"
+  Plotter.title := rootfolder.Localization.getText(31) -- Power Input
+   
+  UsageProfile.label := rootfolder.Localization.getText(32) -- Usage Profiles
+  UsageProfile.title := rootfolder.Localization.getText(33) -- Energy consumption of selected resources
+   
+  for var j := 1 to 10 
+  	EnergyConsumers[j-1,0] := rootfolder.Localization.getText(j + 40)
+  next
+  ConsumersSelection[1,0] :=  rootfolder.Localization.getText(41) -- Energy Consumers
+    
+  var tab:table := UsageProfile.UtilizationTable
+  for var j := 1 to 6 
+  	tab[0,j] := rootfolder.Localization.getText(j + 45)
+  next
+  var b:boolean := Dialog.getCheckBox("showDisplayPanel_CB")
+  DisplayPanel.active := b
+  if refEnergy._3D.Exists
+  	if b 
+  		refEnergy._3D.inheritAttribute("VisibleGraphicGroups")
+  	else
+  		refEnergy._3D.VisibleGraphicGroups := makeArray() -- VisibleGraphics
+  	end
+  end
+  
+  
+  Dialog.open
+ ShowInTooltip: false
+-
+ Name: maxPowerConsumption
+ ID: 4
+ DataType: real
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: powerConsumption
+ ID: 5
+ DataType: real
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: openTable
+ ID: 6
+ DataType: method
+ Value: |+1
+  updateConsumption
+  EnergyConsumers.isOpen := true
+     EnergyConsumers.opendialog
+
+ ShowInTooltip: false
+-
+ Name: openPlotter
+ ID: 7
+ DataType: method
+ Value: |+1
+      Plotter.active := true
+
+ ShowInTooltip: false
+-
+ Name: showChart
+ ID: 8
+ DataType: method
+ Value: |+1
+  -- called by. button 'ChartBut', context menu
+  UsageProfile.translate
+  updateConsumption
+  UsageProfile.active := true
+  
+
+ ShowInTooltip: false
+-
+ Name: Layer
+ ID: 9
+ DataType: integer
+ Value: -556
+ ShowInTooltip: false
+-
+ Name: OnDragDrop
+ ID: 10
+ DataType: method
+ Value: |+1
+  -- interaction drag&drop
+  param draggedObjects: object[]
+  
+  var obj : object;var relPath:string
+  
+  if EventController=void  -- Please insert an eventcontroller.
+  	messageBox(rootfolder.Localization.getText(84),1,3)
+  	return
+  end
+  	
+  if MonitoringActive  -- else return (The energy analysis of '$1' is not active.)
+  	for var i := 1 to draggedObjects.dim 
+  		obj := draggedObjects[i] --print obj;
+  
+  		switch obj.internalClassName
+  		case "NwArc","NwData","Comment","NwCheckbox","NwButton","NwDropDownList","EventCtl" 
+  		else
+  			relPath := makePathRelative(obj,~)
+  			if detectEnergyobjects(obj) 
+  				Objects.setCursor(1,1)
+  				if NOT Objects.find({1,1}..{1,*}, relPath) 
+  					Objects[1,Objects.yDim+1] := relPath
+  				end
+  			else
+  	   			-- Energy_simulation is impossible or not active for the object '$1', respectively.
+  				messageBox(rootfolder.Localization.getMessage(35,relPath,"",""),1,1) -- error
+  			end -- if detectEnergyobjects       
+  		end
+  	next-- i
+  	Objects.sort(1,"up")
+  	Objects.copyRangeTo({1,1}..{1,*}, ConsumersSelection, 1,1)
+  	ConsumersSelection.refillDialog
+  	Dialog.setObjectTable
+  	
+  	--EnergyConsumers.setBackgroundColorCells({0,1}..{*,*},makeRGBValue(255,255,255));
+  	EnergyConsumers.delete({0,1}..{*,*})
+  	Objects.copyrangeTo({1,1}..{1,*}, EnergyConsumers,0,1)
+  	Frames.reg
+  
+  	prepareObserver(true)
+  else
+  	messageBox(rootfolder.localization.getMessage(53,@.name,"",""),1,1) -- error: The energy analysis of '$1' is not active.
+  end -- if_MonitoringActive
+ ShowInTooltip: false
+-
+ Name: Translations
+ ID: 11
+ DataType: table
+ Value:
+  Comment: "Translation of Help_men.Index_Menu row 5"
+  ShowComment: true
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    Alignment: "Center"
+    DataType: integer
+    Width: 5
+   -
+    Index: 2
+    Width: 23
+   RowFormat:
+   -
+    Index: 0
+    Alignment: "Center"
+  ColumnIndex: [string,3,"dialogelement","No","Comment"]
+  Columns:
+  - [0,string,27,"Navigate_Menu","Navigate_Menu.OpenLoc_Menu","Help_men","Help_men.Contents_Menu","Active","openTable_txt","openTable","Plotter_txt","ShowPlotter","Chart_txt","ChartBut","Visualization","ShowVisualization","RemoveVisualization","showDisplayPanel_CB","ToolsMenu","setDefaultColors","defineColors","evaluate","objects","but_addAll","txt_addAll","Graphics_Gr","Layer_txt","Radius_txt","Settings","HelpObject_Menu"]
+  - [1,integer,27,1,2,3,4,6,10,11,12,13,14,15,16,17,18,21,22,61,62,7,8,23,24,66,67,68,69,58]
+  - [2,string,27,"Navigate","Open Location","Help","Contents","Monitoring Energy Consumption","Table of all evaluated objects:","Open","Plotter of the power Consumption:","Show","Diagram of the energy Consumption:","Show","Visualization:","Show","Remove","Display Panel","Tools/Extras","setDefaultColors","defineColors","tab 1","tab 2",~5,"tab Settings","Help on Object"]
+ ShowInTooltip: false
+-
+ Name: ObjectsWithObserver
+ ID: 12
+ DataType: list
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnWidth: 20
+   DataType: object
+   MaxXDim: 1
+   ShowDataType: true
+   RowFormat:
+   -
+    Index: 0
+    ReadOnly: true
+  Column:
+ ShowInTooltip: false
+-
+ Name: objType
+ ID: 13
+ DataType: string
+ Value: "EnergyAnalyzer"
+ ShowInTooltip: false
+-
+ Name: ConsumptionOperational
+ ID: 14
+ DataType: real
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: OnDelete
+ ID: 15
+ DataType: method
+ Value: |+1
+  reset -- deleted all observer in all objects
+
+ ShowInTooltip: false
+-
+ Name: OnCreate
+ ID: 16
+ DataType: method
+ Value: |+1
+  -- constructor of the analyser
+      ConsumersSelection.delete({0,1}..{*,*})
+     findConsumers(~)
+     ConsumersSelection.sort(0,"up")
+
+ ShowInTooltip: false
+-
+ Name: PeakTime
+ ID: 17
+ DataType: time
+ Value: 0
+ ShowInTooltip: false
+-
+ Name: Radius
+ ID: 18
+ DataType: real
+ Value: 30
+ ShowInTooltip: false
+-
+ Name: DisplayPanel_noMaximum
+ ID: 19
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 13
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: string
+    Width: 20
+   -
+    Index: 2
+    DataType: integer
+    Width: 5
+   -
+    Index: 3
+    DataType: integer
+    Width: 5
+   -
+    Index: 4
+    DataType: string
+    Width: 11
+   -
+    Index: 5
+    DataType: string
+    Width: 9
+   -
+    Index: 6
+    DataType: integer
+    Width: 7
+   -
+    Index: 7
+    DataType: boolean
+    FormatString: "AAAAA"
+    Width: 9
+   -
+    Index: 8
+    DataType: integer
+    Width: 6
+   -
+    Index: 9
+    DataType: integer
+    Width: 5
+   -
+    Index: 10
+    DataType: string
+    Width: 7
+   -
+    Index: 11
+    DataType: real
+    FormatString: "-15.2"
+    Width: 9
+   -
+    Index: 12
+    DataType: boolean
+    FormatString: "AAAAA"
+    Width: 8
+   -
+    Index: 13
+    DataType: integer
+    Width: 12
+  ColumnIndex: [string,14,~,"Value","X","Y","Type","Alignment","Color","Transparent","Length","Width","Direction","Max. Value","Percentage","Decimal Places"]
+  Columns:
+  - [1,string,6,"Consumption","powerConsumption","Power input [kW]:","Energy [kWh]:","Operational [kWh]:","ConsumptionOperational"]
+  - [2,integer,6,160,160,4,4,10,160]
+  - [3,integer,6,4,36,36,4,20,20]
+  - [4,string,6,"Text","Text","Static Text","Static Text","Static Text","Text"]
+  - [5,string,6,"Right","Right","Left","Left","Left","Right"]
+  - [6,integer,6,0,0,0,0,0,0]
+  - [7,boolean,6,0,0,0,0,0,0]
+  - [12,boolean,6,0,0,~3,0]
+  - [13,integer,6,1,1,~3,1]
+ ShowInTooltip: false
+-
+ Name: DisplayPanel_withMaximum
+ ID: 20
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   MaxXDim: 13
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 1
+    DataType: string
+    Width: 15
+   -
+    Index: 2
+    DataType: integer
+    Width: 5
+   -
+    Index: 3
+    DataType: integer
+    Width: 5
+   -
+    Index: 4
+    DataType: string
+    Width: 11
+   -
+    Index: 5
+    DataType: string
+    Width: 9
+   -
+    Index: 6
+    DataType: integer
+    Width: 7
+   -
+    Index: 7
+    DataType: boolean
+    FormatString: "AAAAA"
+    Width: 9
+   -
+    Index: 8
+    DataType: integer
+    Width: 6
+   -
+    Index: 9
+    DataType: integer
+    Width: 5
+   -
+    Index: 10
+    DataType: string
+    Width: 7
+   -
+    Index: 11
+    DataType: real
+    FormatString: "-15.2"
+    Width: 9
+   -
+    Index: 12
+    DataType: boolean
+    FormatString: "AAAAA"
+    Width: 8
+   -
+    Index: 13
+    DataType: integer
+    Width: 12
+  ColumnIndex: [string,14,~,"Value","X","Y","Type","Alignment","Color","Transparent","Length","Width","Direction","Max. Value","Percentage","Decimal Places"]
+  Columns:
+  - [1,string,8,"Consumption","powerConsumption","maxPowerConsumption","Maximum [kW]:","Power input [kW]:","Energy [kWh]:","Operational [kWh]:","ConsumptionOperational"]
+  - [2,integer,8,160,160,160,4,4,4,10,160]
+  - [3,integer,8,4,36,52,52,36,4,20,20]
+  - [4,string,8,"Text","Text","Text","Static Text","Static Text","Static Text","Static Text","Text"]
+  - [5,string,8,"Right","Right","Right","Left","Left","Left","Left","Right"]
+  - [6,integer,8,0,0,0,0,0,0,0,0]
+  - [7,boolean,8,0,0,0,0,0,0,0,0]
+  - [12,boolean,8,0,0,0,~4,0]
+  - [13,integer,8,1,1,1,~4,1]
+ ShowInTooltip: false
+-
+ Name: z3D_lowerSurface
+ ID: 21
+ DataType: real
+ Value: 2
+ ShowInTooltip: false
+-
+ Name: z3D_upperSurface
+ ID: 22
+ DataType: real
+ Value: 12
+ ShowInTooltip: false
+-
+ Name: numPlottedValues
+ ID: 23
+ DataType: integer
+ Value: 10000
+ ShowInTooltip: false
+-
+ Name: showVisualization
+ ID: 24
+ DataType: method
+ Value: |+1
+  -- called by the context menu and two buttons on the first tab
+  delVisualize
+  updateConsumption
+  visualize
+
+ ShowInTooltip: false
+-
+ Name: removeAllPowerInputObserver
+ ID: 25
+ DataType: method
+ Value: |+1
+  param FrameObj:object
+  
+  var absPathOfMethod:string := to_str("*",&observeEnergyState)
+  var obj:object
+  for var j := 1 to FrameObj.numNodes 
+  	obj := FrameObj.node(j)
+  	if obj.internalClassName = "Network" 
+  		removeAllPowerInputObserver(obj)
+  	else
+  		obj.removeObserver("EnergyCurrentState", absPathOfMethod) 
+  		obj.removeObserver("PowerInput", absPathOfMethod)
+  		obj.removeObserver("PowerInput", void)
+  	end
+  next
+ ShowInTooltip: false
+-
+ Name: refEnergy
+ ID: 26
+ DataType: object
+ Value: "Energy"
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectDEU
+ ID: 27
+ DataType: string
+ Value: "::/EnergyAnalyzer.html"
+ ShowInTooltip: false
+-
+ Name: HelpOnObjectENU
+ ID: 28
+ DataType: string
+ Value: "::/id19144.html"
+ ShowInTooltip: false
+$UserPopupMenu:
+ Active: true
+ $Entries:
+ - ["?rootfolder.Localization.getText(25)","openTable"]
+ - ["?rootfolder.Localization.getText(26)","openPlotter"]
+ - ["?rootfolder.Localization.getText(27)","showChart"]
+ - ["-",""]
+ - ["?rootfolder.Localization.getText(28)","showVisualization"]
+ - ["?rootfolder.Localization.getText(29)","delVisualize"]

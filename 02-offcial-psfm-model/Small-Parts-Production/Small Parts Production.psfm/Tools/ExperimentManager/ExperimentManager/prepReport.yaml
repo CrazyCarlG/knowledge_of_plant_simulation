@@ -1,0 +1,467 @@
+InternalClassType: Method
+Coordinate3D: [10.1,-34.650000000000006,0]
+Name: prepReport
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: EndOfAllExperiments, CreateResultsReport, ShowReport (via dialog and the context menu)
+ var report:object := ReportObject
+ for var j:=1 to root.numNodes loop root.node(j).selected := false;next
+ report.close
+ report.content := ""
+ /* DOCUMENTATION: If you would like to show the logo of your company in the Report,
+ create a new icon in the ExperimentManager and name it_Header.
+ Then paste the logo of your company to this icon. */
+ report.appendLine("[!current, header, *]")
+ 
+ report.append(to_str("# ",Report.Informations[1,1],strChr(10)))-- Group "General Information"
+ var str:string := strCopy(modelFile, strRpos("\\\\",modelFile)+1, strLen(modelFile))
+ report.appendline(to_str("* ", rootfolder.Localization.getText(78), str)) -- "Model file: abc.spp"
+ report.appendline(to_str("* ", rootfolder.Localization.getText(416),": ",current)) -- ExperimentManager:
+ var t:table := Report.Informations -- 192 (version_removed)
+ str := t[1,2]
+ if strLen(str) > 0
+ 	if strLen(MailReceiver) > 0  -- Responsible/Ersteller as Email link
+ 		str := to_str("* ",rootfolder.Localization.getText(193)," <a style=\\"color:blue\\" href=\\"mailto:", MailReceiver," ?subject=Simulation%20Report\\">", str,"</a>")
+ 	else -- Responsible/Ersteller as text
+ 		str := to_str("* ",rootfolder.Localization.getText(193)," ",str) -- Responsible/Ersteller
+ 	end
+ 	report.appendline(str)
+ else
+ 	if strLen(MailReceiver) > 0
+ 		str := to_str("* ",rootfolder.Localization.getText(417),": <a style=\\"color:blue\\" href=\\"mailto:", MailReceiver," ?subject=Simulation%20Report\\">", MailReceiver,"</a>") -- Contact
+ 		report.appendline(str)
+ 	end
+ end
+ str := to_str("* ",rootfolder.Localization.getText(418),": ",getDate(ReportCreationDate)) -- Generated on (see method EndOfAllExperiments)
+ report.appendline(str)
+ /*str := to_str("* ",rootfolder.Localization.getMessage(122,RunningTime,"",""))
+ report.appendline(str)*/
+ report.append(strChr(10))
+ 
+ if ApplicationVersion > 23002000
+ 	if isConsoleApplication and is3DOpen then ReportHasModelPicture := true else ReportHasModelPicture := false end
+ else
+ 	ReportHasModelPicture := true
+ end
+ 
+ if ReportHasModelPicture
+ 	report.append(to_str("## ",rootfolder.Localization.getText(232),strChr(10))) -- Theme "Model"
+ 	report.append(to_str("[",root,",*]",strChr(10))) -- scroll according Display of your monitor
+ end
+ 
+ report.appendLine(to_str("## ",rootfolder.Localization.getText(234))) -- Theme "Overview"
+ 
+ -- Overview of all executed experiments, their parametrizations and the mean values of the target values
+ report.append(to_str(rootfolder.Localization.getText(207),strChr(10)))
+ report.append(to_str(rootfolder.Localization.getMessage(439,ResultsPrecision,"",""),strChr(10)))
+ report.append(to_str("[",Results,"]",strChr(10)))
+ 
+ report.append(rootfolder.Localization.getText(268)) -- Simulation effort
+ var nExp:integer -- := max(1, ExpTable.yDim)
+ for var j := 1 to DetailedResults.yDim
+ 	if DetailedResults[0,j] /= void and ExpTable[1,j] then nExp += 1 end
+ next
+ --if usingRules then 	nExp := max(nExp, NumRulesExp) end
+ -- like: Simulation effort: 8 experiments with 16 simulation runs
+ report.appendLine(to_str(": ",nExp," ",rootfolder.Localization.getText(269)," ",rootfolder.Localization.getText(270)," ",numRuns * nExp," ",rootfolder.Localization.getText(271)))
+ -- end of Simulation effort
+ 
+ if NOT SingleRun  -- some explanations about userdefined charts
+ 	if Charts.yDim = 0
+ 		report.appendLine(rootfolder.Localization.getText(261)) -- "No special charts"
+ 	elseif UsingRemote
+ 		report.appendLine(rootfolder.Localization.getText(259)) -- User-defined charts are not shown when distributed simulation is used.
+ 	end
+ end --if NOT SingleRun
+ 
+ var StrOutputTable:string := rootfolder.Localization.getText(324) -- "Output table"
+ var StrMeanValues:string := rootfolder.Localization.getText(323) -- "Mean values of the output table "
+ for var column := 1 to Results.xDim
+ 	str := Results[column,0]
+ 	var AttrStr := ValueDescriptions.getOrig(str)
+ 	if isOutTable(AttrStr)
+ 		report.appendline(" ")
+ 		report.appendline(to_str("### ",StrMeanValues," '",str,"'"))-- subtheme "Mean values of the output table ", Description of the output table
+ 		for var row := 1 to Results.yDim
+ 			if Results[column,row] /= void -- There is a subtable.
+ 				setNumberformat(Results[column,row]) -- setFormatString like "-15.3"
+ 				--report.appendLine(to_str(StrOutputTable," **",row,"**")); -- "Output table"
+ 				report.appendLine(to_str("[",Results,"[",column,",",row,"], \\"",to_str(StrOutputTable,row),"\\"]"))
+ 				--report.appendLine(" ");
+ 			end
+ 		next
+ 	end
+ next
+ 
+ 
+ if Input.yDim > 0 OR Kind_Output.yDim > 0
+ 
+ 	report.append(to_str("## ",rootfolder.Localization.getText(272),strChr(10))) -- Theme "Values of experiments"
+ 	var valStr:string
+ 	if Input.yDim > 0
+ 		report.append(to_str("### ",rootfolder.Localization.getText(242),strChr(10))) -- InputValues (Model parameter)
+ 		Report_Input.delete({0,0}..{*,*})-- "Control Value","set by", "Original Value", "Inherited", "Technical notation"
+ 		Report_Input.writeRow(0,0, rootfolder.Localization.getText(144),rootfolder.Localization.getText(145), rootfolder.Localization.getText(146), rootfolder.Localization.getText(338), rootfolder.Localization.getText(337))
+ 		for var j := 1 to Kind_Input.yDim
+ 			valStr := Kind_Input[0,j]  -- description of input value, set by,          Original Value,  Inherited,                                                     Technical Notation
+ 			Report_Input.writeRow(0,j, ValueDescriptions.get(valStr), Kind_Input[1,j], Kind_Input[2,j], when Kind_Input[3,j]=void then "" else to_str(Kind_Input[3,j]),valStr)
+ 		next
+ 		report.append(to_str("[",Report_Input,"]",strChr(10)))
+ 		-- The input values are set by either the Table <b>ExpTable</b> or by actions of rules.
+ 		report.append(to_str(rootfolder.Localization.getText(244),strChr(10)))
+ 		report.append(strChr(10))
+ 	end
+ 
+ 	if Kind_Output.yDim > 0
+ 		-- Output values (Results of the simulation study)
+ 		report.append(to_str("### ",rootfolder.Localization.getText(246),strChr(10))) -- Output values (Results of the simulation study)
+ 		Report_Output.delete({0,0}..{*,*})-- "Target value","evaluated by", "Technical notation", "High Values are Better"
+ 		Report_Output.writeRow(0,0, rootfolder.Localization.getText(142),rootfolder.Localization.getText(143),rootfolder.Localization.getText(337),rootfolder.Localization.getText(63))
+ 		for var j := 1 to Kind_Output.yDim
+ 			valStr := Kind_output[0,j]
+ 			Report_Output.writeRow(0,j, ValueDescriptions.get(valStr), Kind_output[1,j], valStr, when NOT Kind_Output[2,j].void then to_str(Kind_Output[2,j]) else void)
+ 		next
+ 		report.append(to_str("[",Report_Output,"]",strChr(10)))
+ 
+ 		-- The Output values are evaluated by the table <b>DetailedResults</b> or by conditions of rules.
+ 		report.appendLine(to_str(rootfolder.Localization.getText(248),strChr(10)))
+ 	end -- if Kind_Output.yDim > 0
+ 
+ end -- Input.yDim > 0 OR Kind_Output.yDim > 0 (Theme "Values of experiments")
+ 
+ 
+ if UsingTables AND ExpRunFromGeneralDesign
+ 	report.appendLine(to_str("## ",rootfolder.Localization.getText(266))) -- Theme "Multi-level experimental design"
+ 	report.appendLine(to_str(rootfolder.Localization.getText(267))) -- Design table of the experiment run
+ 	report.appendLine(to_str("[",GeneralDesign,"]"))
+ end
+ 
+ if ExpRunFromRandomDesign
+ 	report.appendLine(rootfolder.Localization.getText(299)) -- Random experimental design
+ 	report.appendLine(to_str("[",RandomDesign,"]"))
+ end
+ 
+ if Design4FactorialAnalysis
+ 	str := factorDesignValue
+ 	report.appendLine(to_str("##",rootfolder.Localization.getText(262)))-- theme Factorial analysis
+ 
+ 	report.appendLine(to_str("* ",rootfolder.Localization.getText(263))) -- Design table of the experiment run
+ 	-- For selected output value the <b>Factorial design</b> lower and upper level of all input values were defined.
+ 	report.appendLine(rootfolder.Localization.getText(264))
+ 	report.appendLine(to_str("[",Design,"]"))
+ 
+ 	/* Effects explanation in row 265:
+ 	For the <b>factorial design</b> has determined the <b>main effects</b>
+ 	H1,... and the <b>interaction effects</b> W12,...
+ 	H1,... = Average change due to moving the factor from the lower to the upper level.
+ 	W12,... = Average change due to simultaneously moving of 2 factors.
+ 	*/
+ 	report.appendLine(rootfolder.Localization.getText(265))
+ 	report.appendLine("")
+ 
+ 	for var j := 1 to Output.yDim
+ 		var Attr:string := Output[1,j]
+ 		if NOT isOutTable(Attr)
+ 			Effects.comment := to_str(Rootfolder.Localization.getText(331), ValueDescriptions.get(Attr), strChr(13),strChr(10),
+ 				Rootfolder.Localization.getText(332),strChr(13),strChr(10),
+ 				Rootfolder.Localization.getText(333))
+ 				-- Output values (Results of the simulation study): Alias (246)
+ 				-- Output value (152)
+ 				report.appendLine(to_str("* ",rootfolder.Localization.getText(152),": *",self.ProtectCharacters(ValueDescriptions.get(Attr)),"*")) -- italic
+ 				FactorialAnalysis(Attr)
+ 				SVGofEffectTables.writeRow(0,j, Attr, to_str("<<",Effects.getHtmlCode(),">>"))
+ 				--report.appendLine(to_str("[",Effects,"]"))
+ 				Report.appendLine(to_str("[",SVGofEffectTables,"[1,",j,"]]"))
+ 		end -- not an output table
+ 	next -- j output value
+ 
+ 	if strLen(str) > 0
+ 		factorDesignValue := str -- set the user defined output value for factor analysis
+ 		FactorialAnalysis(str)
+ 	end
+ end
+ 
+ var obj:object
+ if UsingRules
+ 	var predResults:string := rootfolder.Localization.getText(388) -- Results of the previous experiment
+ 	var ActionStr:string := rootfolder.Localization.getText(387)  -- Action
+ 	report.appendLine(to_str("## ",rootfolder.Localization.getText(89))) -- Rule-based settings
+ 	report.appendLine(rootfolder.Localization.getText(386)) -- Result of the evaluation of the rules (dynamic parameterization)
+ 
+ 	obj := ReportRules
+ 	for var j := 1 to obj.yDim
+ 		report.appendLine(to_str("* **",obj[0,j],"**")) -- like "Exp 03"
+ 
+ 		if j>1  -- Results of the previous experiment
+ 			report.appendLine(to_str("*",predResults,":*")) -- Results of the previous experiment
+ 			for var i := 1 to OutputValues.xDim
+ 				--report.appendLine(to_str(ValueDescriptions.get( OutputValues[i,0])," = ", OutputValues[i,j-1]))
+ 				report.appendLine(to_str(OutputValues[i,0]," = ", OutputValues[i,j-1])) -- rules use the "Technical Notation"
+ 			next
+ 		end
+ 
+ 		report.appendLine(to_str("*",ActionStr,":*")) -- Actions
+ 		for var i := 1 to obj.xDim  -- for all rules show the actions
+ 			--report.appendLine( to_str(ValueDescriptions.get(obj[i,0]),": ",obj[i,j])) -- italic
+ 			report.appendLine( to_str(obj[i,0],": ",obj[i,j])) -- rules use the "Technical Notation"
+ 		next
+ 		report.appendLine(" ")
+ 	next
+ end -- if UsingRules
+ 
+ var tab := DetailedResults
+ if tab.ydim <= MaxNumExpForDetailedReport -- 1000
+ 
+ 	report.appendLine(to_str("#", rootfolder.Localization.getText(249))) -- Group "Statistical Evaluations"
+ 	report.appendLine(to_str("* ",rootfolder.Localization.getText(236)))-- Statistical reliability
+ 	report.appendLine(to_str(rootfolder.Localization.getText(237)," ", NumRuns)) -- dialogelement "NumOfSimRuns_Txt": Observations per experiment:
+ 	report.appendLine(to_str(rootfolder.Localization.getText(240)," ", ConfLevel)) -- Confidence level (%):
+ 	report.append(strChr(10))
+ 
+ 	if Kind_Output.numberOfOutputValues > 0
+ 		report.appendLine(to_str("##",rootfolder.Localization.getText(258))) -- theme Statistics of output values
+ 
+ 		--report.appendLine(to_str("##", rootfolder.Localization.getText(250))); -- Theme "Visualization"
+ 		tmpCharts.removeTmpCharts
+ 		pValues.deleteTmpTables
+ 		var resValue, AliasStr:string
+ 		var colStart:integer
+ 
+ 		for var j := 1 to Kind_Output.yDim  -- Show the chart for all output values
+ 			if Kind_Output[1,j] = "Tab"  -- "Rule" output values are not visualized.
+ 				resValue := Kind_Output[0,j]
+ 				AttrStr := ValueDescriptions.get(resValue)
+ 				report.appendLine(to_str("### ",rootfolder.Localization.getText(253)," '",self.ProtectCharacters(AttrStr),"'")) -- Evaluations of the output value "alias"
+ 
+ 				var ReportString := prepChart4Report(AttrStr)-- result is the temp_chart object
+ 				if ReportString /= void -- Maybe "AttrStr" is not an output value.
+ 					//report.appendLine(to_str("[",obj,", 150, 100]"))
+ 					report.appendLine(ReportString)
+ 				end
+ 
+ 				if NOT isOutTable(resValue)
+ 					AliasStr := ValueDescriptions.get(resValue)
+ 					colStart := tab.getColumnNo(AliasStr)
+ 
+ 					report.appendLine("Detailed Results")
+ 					-- Show a table with the complete statistics of this (numerical) Output value.
+ 					report.appendLine(to_str("[",tab,", 0,", colStart,"..",colStart + 5,"]")) -- Exp No in DetailedResults
+ 
+ 					if (NumExp4Pvalues > 1 OR NumExp4Pvalues < 0) -- p values are desired (analysis of variance) else process next output value
+ 						pValues.OutputValue := resValue
+ 						if T_Test(pValues)
+ 							-- Table of the p-values of the T-test of the output value "alias" (as $1 'alias')
+ 							report.appendLine(rootfolder.Localization.getMessage(53,to_str("'",self.ProtectCharacters(AliasStr),"'"),"",""))
+ 							t := pValues.tmpTables
+ 							obj := pValues.duplicate(current)
+ 							obj.Coordinate3D := makeArray(56 + 3 * j, -4.7, 0.0)
+ 							if NumExp4Pvalues > 1 AND NumExp4Pvalues < obj.yDim -- only 10 experiments (default) with p-values in the report
+ 								obj.delete({NumExp4Pvalues,0}..{*,*})
+ 								obj.delete({0,NumExp4Pvalues}..{*,*})
+ 								-- To open the entire table of p-values, select Tools > Analysis of Variance.
+ 								report.appendLine(rootfolder.Localization.getText(440))
+ 							end
+ 
+ 							report.appendLine(to_str("[",obj,"]")) -- store pValues in a new instance
+ 							t[1,t.yDim+1] := makePathRelative(obj, current)
+ 							-- Explanation:, row 360
+ 							-- If the p-value is smaller than a given level of significance (probability of error, for instance 0.05), 	row 361
+ 							-- then can presume with a probability of 95 % that the mean values are different.		 					row 362
+ 							-- report.appendLine(to_str("**",rootfolder.Localization.getText(360),"** ",rootfolder.Localization.getText(361)," ",rootfolder.Localization.getText(362),strChr(10)))
+ 						else
+ 							report.appendLine(rootfolder.Localization.getText(58)) -- The analysis of variance is impossible.
+ 							report.appendLine(rootfolder.Localization.getMessage(57,self.ProtectCharacters(AliasStr),"","")) -- At least two experiments with random output for 'outputValue' are needed.
+ 						end
+ 					end -- if NumExp4Pvalues > 1 then analysis of variance
+ 				end -- if NOT isOutTable
+ 
+ 			end
+ 		next -- j: output values
+ 
+ 		--report.appendLine(rootfolder.Localization.getText(400)) -- The p-values for all pairs of experiments can be obtained from the menu of the dialog of the Experiment Manager.
+ 	end
+ 
+ end -- if tab.ydim > MaxNumExpForDetailedReport
+ 
+ Kind_Output.setCursor(2,1)
+ if Kind_Output.find({2,1}..{2,*},true) OR Kind_Output.find({2,1}..{2,*},false)
+ 	-- best parametrization is desired
+ 	report.appendLine(to_str("#",rootfolder.Localization.getText(179))) -- Group "Best Parametrizations of the Model"
+ 	var numInput:integer  := Input.yDim
+ 	var numOutput:integer  := Kind_Output.yDim
+ 	BestParam.delete({0,0}..{*,0}) -- delete column index
+ 	--Results.copyRangeTo({numInput + 1,0}..{*,0},BestParam,2,0)
+ 	Results.copyFormatTo(BestParam,true) -- with indexes
+ 	for var i := 1 to BestParam.xDimIndex
+ 		--BestParam[i,0] := Results[i,0] -- Name of the input value
+ 		BestParam.setDataType(i, Results.getDataType(i))
+ 	next
+ 	BestParam[0,0] := rootfolder.Localization.getText(103) -- Experiments
+ 	BestParam.delete({0,1}..{*,*}) -- do not delete column index
+ 	BestParam.deleteTmpTables
+ 	t := BestParam.tmpTables
+ 
+ 	for var j := 1 to Kind_Output.yDim
+ 		obj := BestParam.duplicate(current)
+ 		obj.Coordinate3D := [56.2 + 3.5 * j, -15.0, 0.0]
+ 		t[1,t.yDim+1] := makePathRelative(obj, current)
+ 
+ 		--BestParam.delete({0,1}..{*,*}) -- do not delete column index
+ 		AttrStr := Kind_Output[0,j]
+ 		str := ValueDescriptions.get(AttrStr) -- description like "Throughput [jph]"
+ 		-- Best Parametrizations of the Model
+ 		if (not Kind_Output[2,j].void)
+ 			-- Best parametrization for the output value 'alias'
+ 			-- report.appendLine(to_str("### ",rootfolder.Localization.getText(436)," '",self.ProtectCharacters(str),"'"))
+ 			var HighBetter:boolean := Kind_Output[2,j]
+ 			var colOutput:integer := Results.getColumnNo(str)
+ 			--BestParam.setDataType(1,Results.getDataType(colOutput))
+ 			var bestValue:any
+ 			var numBest:integer := 0
+ 			if HighBetter -- search max
+ 				bestValue := Results.max({colOutput,1}..{colOutput,*})
+ 				-- The maximum of the output value '$2' is $2.
+ 				report.appendLine(to_str("## ",rootfolder.Localization.getMessage(437,self.ProtectCharacters(str), when ResultsPrecision > 0 then round(bestValue,ResultsPrecision) else bestValue,"")))
+ 			else -- search min
+ 				bestValue := Results.min({colOutput,1}..{colOutput,*})
+ 				-- The minimum of the output value '$2' is $2.
+ 				report.appendLine(to_str("## ",rootfolder.Localization.getMessage(438,self.ProtectCharacters(str), when ResultsPrecision > 0 then round(bestValue,ResultsPrecision) else bestValue,"")))
+ 			end
+ 			for var ExpNo := 1 to Results.yDim
+ 				if (NOT Results[colOutput,ExpNo].void) AND bestValue = Results[colOutput,ExpNo]
+ 					numBest += 1
+ 					--obj[0,numBest] := Results[0,ExpNo]
+ 					Results.copyRangeTo({0,ExpNo}..{*,ExpNo}, obj, 0,numBest)
+ 					if UsingRules
+ 						InputValues.copyRangeTo({1,ExpNo}..{*,ExpNo}, obj, 1,numBest)
+ 						InputValues.copyRangeTo({1,0}..{*,0},         obj, 1,0) -- user defined index of Inputvalues of rules (only "Technical Notation")
+ 					end
+ 				end
+ 			next
+ 			report.appendLine(to_str("[",obj,"]")) -- store BestParam in a new instance
+ 			forget bestValue
+ 		end
+ 	next -- j Best parametrization
+ end	-- best parametrization is desired
+ 
+ if Kind_Output.numberOfOutputValues > 0
+ 	if NOT SingleRun
+ 		if Charts.yDim > 0
+ 
+ 			if NOT UsingRemote
+ 				-- USER DEFINED CHARTS
+ 				report.appendLine(to_str("#",rootfolder.Localization.getText(257))) -- Group "Charts of the Experiments"
+ 				if (NOT Charts4AllObservations) AND (numRuns > 1)
+ 					report.appendLine(rootfolder.Localization.getText(154)) -- Showing the results of the first observation of each experiment
+ 				end
+ 				--local ChartFirstObjStr:string := rootfolder.Localization.getText(276); -- Chart of the first observation
+ 
+ 				--var SVGtab:object
+ 				--local ExpStr:string;
+ 				nExp := max(1, Results.yDim) -- The number of performed experiments is not ExpTable.yDim (in case of "UseInputValues_CB" is deactivated.)
+ 				for var expNo := 1 to nExp
+ 					if ExpTable[1,expNo] OR (ExpTable.yDim = 0)
+ 						--if SVGofCharts[1,expNo] /= void
+ 						report.appendLine(to_str("## ",rootfolder.Localization.getText(153)," ",expNo)) -- like "Experiment 3"
+ 						--ExpStr := InputValues[0,expNo];
+ 						for var chartNo := 1 to Charts.yDim
+ 							var ChartObj:object := Charts[1,chartNo]
+ 							str := ChartObj.label; if strLen(str) < 2 then str := ChartObj.name;end
+ 							str := self.ProtectCharacters(str)
+ 							str := to_str("###",rootfolder.Localization.getText(260)," ",chartNo," '",str,"'")
+ 							report.appendLine(str) -- like "Chart 1 'Histogram Label'"
+ 
+ 							--Report.appendLine(to_str("[",SVGofCharts,"[",col,",",expNo,"]]")) -- "<<" and ">>" are already contained
+ 
+ 							for var run := 1 to numRuns
+ 								if Charts4AllObservations OR run = 1
+ 									--var ObservChartsTab :table := SVGofCharts.tmpTables
+ 									--for var j := 1 to SVGofCharts.yDim -- numRuns - 1
+ 									--SVGtab := ObservChartsTab[1,j]
+ 									--print "Exp ",expNo," Chart ",chartNo
+ 									var col:integer := chartNo + numRuns * (run - 1)
+ 									Report.appendLine(to_str("[",SVGofCharts,"[",col,",",expNo,"]]"))
+ 									--next
+ 								end
+ 							next
+ 
+ 						next -- chartNo
+ 						--end
+ 					end
+ 				next -- expNo
+ 			end-- if NOT UsingRemote
+ 		end
+ 	end -- if NOT SingleRun
+ end -- if Kind_Output.numberOfOutputValues > 0
+ 
+ if UsingRemote AND NOT SingleRun --AND NOT UsingRules
+ 	-- If UsingRules (dynamic settings) the JobsTable contains only the simulation runs of the current experiment.
+ 	-- TODO: A history of all variants of the JobsTable for all experiments is needed.
+ 	report.appendLine(to_str("# ",rootfolder.Localization.getText(363))) -- Distributed simulation
+ 	report.appendLine(rootfolder.Localization.getText(415)) -- "Usage of remote simulation machines"
+ 	--report.appendLine(to_str("* ",rootfolder.Localization.getText(364))); -- Used computers
+ 	report.appendLine(to_str("[",dialog.RemoteMachines,"]"))
+ 	if Recording.remoteErrors
+ 		report.appendLine(rootfolder.Localization.getText(414)) -- message: An error occurred on a remote computer.
+ 	end
+ 
+ 	/*report.appendLine(to_str("* ",rootfolder.Localization.getText(365)));  -- Simulation tasks
+ 	report.appendLine(to_str("[",JobsTable,"]"));
+ 
+ 	obj := _ModelMessages;
+ 	if obj.dim > 0 then
+ 	report.appendLine(rootfolder.Localization.getText(408)); -- Messages of the simulation runs
+ 	report.appendLine(rootfolder.Localization.getMessage(410,obj.dim, "","")); -- There are $1 messages.
+ 	report.appendLine(to_str("[",obj,"]"));
+ 	end*/
+ end
+ 
+ -- Add User-defined Entries to the Report
+ report.appendLine(to_str("[",userReport,"]"))
+RandomSeed: 205
+UUID: 336200e4-7b31-4618-baee-28cb7a120582
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+$CustomAttributes:
+-
+ Name: ProtectCharacters
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- called by: prepareReport_(see index "Protect Characters")
+  -- [ object selection, - comment, hor.line, < HTML Tag
+  -- 1. title: Evaluations of the output_value "alias"
+  -- 2. The p-values of the T-test of the output value "alias"
+  -- 3. Factorial analysis Output_values (Results of the simulation study): Alias
+  param s:string -> string
+  
+  for var i := strlen(s) downto 1 
+  	switch strAscii(s, i)
+  	case 92,	 -- \\
+  	     35,	 -- #
+  	    -- 37,     -- %
+  	     91,	 -- [ 
+  	     93,	 -- ]
+  	     45,	 -- - 
+  	     46,	 -- .
+  	     60,	 -- <
+  	     62  -- >
+  		s := strIncl("\\\\", s, i)
+  	end
+  next
+  
+  return s
+ ShowInTooltip: false

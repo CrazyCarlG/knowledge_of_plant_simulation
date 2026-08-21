@@ -1,0 +1,38 @@
+InternalClassType: Folder
+ChangePathCtrl:
+Coordinate3D: [0,0,0]
+DestructorCtrl:
+MoveToFolderCtrl:
+Name: TransferStation
+PermitDeleteCtrl:
+RenameCtrl:
+RootFolder: true
+UUID: 093895af-3ad0-4078-8556-dfdb8c5ebdc0
+3D:
+ BackgroundColor: -1
+Password:
+LibInfo:
+ Name: "Transfer Station"
+ Version: "2404.0004"
+ Description: |+1
+  Loads, unloads or transfers parts\r
+  onto or from a Container, Transporter or Conveyor.\r
+  $German$Umladestation\r
+  Lädt Teile auf ein Förderhilfsmittel,\r
+  Fahrzeug oder Förderband auf, oder\r
+  lädt Teile davon ab oder um.\r
+  $Japanese$\r
+  偼Container傗Transporter傗Converyor偺忋傊晹昳傪儘乕僪丄傾儞儘乕僪偟偨傝傑偨偼晹昳傪偦傟傜偵儘乕僪丄傾儞儘乕僪偟偨傝偟傑偡丅丅\r
+  $Chinese$\r
+  将零件加载、卸载或传送到容器、小车或传送带，或从容器、小车或传送带对零件进行加载、卸载或传送。\r
+  $Russian$\r
+  Загружает, разгружает детали на/с контейнера, транспортера или конвейера.\r
+  $Hungarian$\r
+  Darabok fel vagy le vagy átrakodása kontrénerbe, szállítóeszközbe vagy szállítószalagra.\r
+
+ AlternativePaths: "$German$.Tools.Umladestation"
+ ProhibitAccess: false
+$Nodes:
+- e4aecf63-91e6-4dc3-9b4d-dbac5ba4227d
+- 734f94bc-7af6-4a13-8bf5-553233face53
+- 584e07e4-a39a-47a8-b1a4-ec6fc322c662

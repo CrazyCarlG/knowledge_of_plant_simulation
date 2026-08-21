@@ -1,0 +1,44 @@
+InternalClassType: Variable
+Alignment: "Left"
+BackgroundColor: 16777215
+ChangePathCtrl:
+Color: 0
+Comment: ""
+ConstructorCtrl:
+Coordinate3D: [1,-1,0]
+CreateIn3D: true
+DataType: object
+DecimalPlaces: -1
+DestructorCtrl:
+DragDropCtrl:
+Font: 1
+HasInitValue: false
+InitCtrl:
+IntegerPlaces: -1
+MoveInFrameCtrl:
+MoveToFolderCtrl:
+Name: ExperimentManager
+OpenCtrl:
+PlausibilityCtrl:
+RenameCtrl:
+SelectCtrl:
+ShowDataType: false
+ShowUnit: true
+StatisticsActive: false
+Transparent: false
+UUID: 1963cff8-bccc-4f3d-b9b5-407e2f841c1b
+3D:
+ AniRotationAxis: [0,0,-1]
+ AniRotationCenter: [0,0,0]
+ ExcludeFromShowContentOfLocation: true
+ GraphicGroupNames: ["default"]
+ LockedGraphicGroups: []
+ Mirror: [false,false,false]
+ ObstacleForWorker: "(None)"
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ SelfAnimations:
+ SynchronizedJoints: false
+ VisibleGraphicGroups: ["default"]
+Value: 01a0236c-0546-71f5-be86-175b378f8acc

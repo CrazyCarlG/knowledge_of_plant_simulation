@@ -1,0 +1,21 @@
+InternalClassType: DataTable
+Origin: 0ce17732-826c-42a0-9d8f-b162fca1e950
+UUID: 01a0236c-0546-7090-bdba-c865b5e1f739
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: numberOfOutputValues
+ ID: 1
+ $DataType: integer
+ Value: 1
+$Data:
+ ShowComment: true
+ ColumnIndex: [string,2,"Target value","evaluated by"]
+ Columns:
+ - [0,string,1,"root.Drain.statDeleted"]
+ - [1,string,1,"Tab"]

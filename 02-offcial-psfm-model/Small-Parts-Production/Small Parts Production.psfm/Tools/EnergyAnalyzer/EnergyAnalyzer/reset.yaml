@@ -1,0 +1,48 @@
+InternalClassType: Method
+Coordinate3D: [-10,13,0]
+Name: reset
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ -- remove observer of all object with activated energy simulation
+ -- also of objects which are not selected by the user
+ delVisualize -- like the button 'Remove' visualization
+ prepareObserver(false) -- remove observer
+  
+ --EnergyConsumers.setBackgroundColorCells({0,1}..{*,*},makeRGBValue(255,255,255))
+ EnergyConsumers.delete -- do not delete the selected objects
+ 
+ UsageProfile.UtilizationTable.delete
+ UsageProfile.UtilizationTable[1,6] := 0
+    
+ Consumption := 0
+ ConsumptionOperational := 0
+ powerConsumption := 0
+ maxPowerConsumption := 0
+ PeakTime := 0
+ 
+ refEnergy.value := ""
+    
+ &observeEnergyState.InfoWasGiven := false
+ 
+ if numPlottedValues > 999 AND numPlottedValues < 100001 
+ 	Plotter.numValues := numPlottedValues
+ else
+ 	numPlottedValues := 10000 -- default value
+ end
+RandomSeed: 57
+UUID: 3ce9fe2e-c547-40f3-9295-c66905c34699
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["reset"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

@@ -1,0 +1,40 @@
+InternalClassType: Method
+Coordinate3D: [1.6999999999999993,-2.1999999999999993,0]
+Name: analyzeModel
+Origin: ee53cd29-ce7a-4a7a-bdbc-d2f4be74d69f
+Program: |+1
+ -- called by: dialog (also showStats)
+ if current.class /= void 
+ 	removeStats
+ 	-- animIcon(TRUE) -- removed since there is no reason for it
+ 	
+ 	analyzeFrame(~)
+ 	
+ 	if is3Dopen and current._3D.exists  
+ 		current._3D.deleteStatistics
+ 	end
+ 	-- current.sendMessage("statistics", "0");
+ 	
+ 	Analyzed := true
+ else
+ 	-- The Bottlenck Analyzer must be inserted before use.
+ 	messagebox(rootfolder.Localization.getText(9),1,11)
+ end
+  -- markBottleneckObject
+RandomSeed: 76
+UUID: 610e4f83-98d5-4258-8f2e-cd2dff9d146c
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

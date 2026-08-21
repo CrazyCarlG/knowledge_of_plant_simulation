@@ -1,0 +1,28 @@
+InternalClassType: Track
+Coordinate3D: [2.5500000000000003,-3.4000000000000004,0]
+Length: 4
+Name: CrossTransferFromTest
+Origin: 69d8f4de-f435-47f8-8dab-a9b6047b8808
+RandomSeed: 113
+UUID: 01a0236c-0546-701f-a370-8da2238ad50a
+Width: 1.2000000000000002
+3D:
+ BaseHeight: 0
+ $ExtSegments:
+  - 0
+  - [90,4,0]
+$CustomAttributes:
+-
+ Name: ready4Loading
+ ID: 4
+ $DataType: boolean
+ Value: true
+$Successors:
+-
+ $Succ: 01a0236c-0546-704b-8d37-b76606303ae7
+ Name: Connector5
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7086-bc59-f0f890d0170d
+$Predecessors:
+- 01a0236c-0546-7084-ae47-97ca5a803de3
+InheritEntranceExitLockedOnReset: false

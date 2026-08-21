@@ -1,0 +1,37 @@
+InternalClassType: DataTable
+Coordinate3D: [5.8500000000000005,-12.100000000000001,0]
+Name: myWorkingTimeStatisticTable
+Origin: 9acac8c1-3a98-4ab6-a0f5-1c168cd4b004
+UUID: 91777848-445d-4783-a2e7-513ad8f5ee52
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ VisibleGraphicGroups: ["Icon1"]
+$Data:
+ Comment: "This table is copied to the table 'mystatisticTable' as an action of the checkboxes 'Occupance with respect to'"
+ ShowComment: true
+ ListFormat:
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 14
+  -
+   Index: 1
+   DataType: string
+   FormatString: "Pool;Worker;"
+   Width: 12
+  -
+   Index: 2
+   Width: 26
+ Columns:
+ - [0,string,8,"Setting-up","Working","Repairing","Carrying","Walking to Job","Waiting for Importers","Waiting for Mus","Failed"]
+ - [1,string,8,"Worker","Worker","Worker","Worker","Worker","Worker","Worker","Worker"]
+ - [2,string,8,".statServicesSetupPortion",".statServicesWorkingPortion",".statServicesRepairingPortion",".statServicesTransportingPortion",".statServicesEnRouteToJobPortion",".statServicesWaitingImpPortion",".statServicesWaitingMUPortion",".statServicesFailedPortion"]

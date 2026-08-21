@@ -1,0 +1,135 @@
+InternalClassType: Method
+Coordinate3D: [6.75,-30.85,0]
+Name: CalcTableStatistics4Exp
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- called by: EndOfSim_(in case of the termination of the last observation of an experiment)
+ -- called by: EndOfAllExperiments for a distributed simulation
+ param ExpNo:integer
+ 
+ var str,typeStr:string
+ var x,y,k,colDetail,xDimTable,yDimTable:integer
+ var avgTab,stdTab,minTab,maxTab,obsTab:table
+ 
+ var ErrorStr:string := to_str(numRuns," ",rootfolder.Localization.getText(85)) -- "Errors"
+ var observTab:table[real]
+ observTab.create
+ var ExpStr:string := to_str("Exp", ExpTable.getExpString(ExpNo))
+ var n:integer := numRuns
+ var col:integer := 1
+ 
+ while col <= DetailedResults.xDim
+ 	str := DetailedResults[col,0]
+ 	var AttrStr:string := ValueDescriptions.getOrig(str)
+ 	var outputTab:object := AttrStr -- convert from string to object
+ 	if isOutTable(AttrStr) -- else do nothing in this method
+ 		-- DataTable as an output value
+ 		str := ValueDescriptions.get(AttrStr)
+ 
+ 		avgTab := DetailedResults[col,  ExpNo]
+ 		stdTab := DetailedResults[col+1,ExpNo]
+ 		minTab := DetailedResults[col+2,ExpNo]
+ 		maxTab := DetailedResults[col+3,ExpNo]
+ 		obsTab := DetailedResults[col+4,ExpNo]
+ 
+ 		n := 0 -- determine the number of valid observations
+ 		for var m := 1 to numRuns
+ 			if obsTab[2,m] = void
+ 				n += 1
+ 			end
+ 		next
+ 		if n = 0
+ 			DetailedResults[col+4,ExpNo].name := ErrorStr
+ 			for var j := col to col+3
+ 				DetailedResults[j,ExpNo] := void
+ 			next
+ 			--obsTab.delete({1,1}..{1,*})
+ 
+ 		elseif n < numRuns
+ 			DetailedResults[col+4,ExpNo].name := to_str(DetailedResults[col+4,ExpNo].name," (",n,")")
+ 		end
+ 
+ 		xDimTable := obsTab[1,1].xDim
+ 		yDimTable := obsTab[1,1].yDim
+ 
+ 		for x := 1 to xDimTable
+ 			typeStr := outputTab.getDataType(x)
+ 			if typeStr = "integer" then typeStr := "real";end
+ 			switch typeStr
+ 			case  "weight","speed","length","acceleration","real","time","money"
+ 
+ 				/*avgTab.setDataType(x,typeStr) -- prepare format -> prepExp
+ 				stdTab.setDataType(x,typeStr)
+ 				minTab.setDataType(x,typeStr)
+ 				maxTab.setDataType(x,typeStr)*/
+ 				for y := 1 to yDimTable
+ 					if obsTab[1,1][x,y] /= void
+ 
+ 						if x = 1 AND outputTab.rowIndex then
+ 							avgTab[0,y] := obsTab[1,1][0,y] -- copy row index
+ 							stdTab[0,y] := obsTab[1,1][0,y]
+ 							minTab[0,y] := obsTab[1,1][0,y]
+ 							maxTab[0,y] := obsTab[1,1][0,y]
+ 						end
+ 
+ 						-- calc the statistic value for the cell [x,y], which is not empty
+ 						observTab.delete -- all observations of a cell of the output table
+ 						for k := 1 to numRuns
+ 							if obsTab[2,k].void -- valid observation
+ 								observTab[1,k] := obsTab[1,k][x,y]
+ 							end
+ 						next
+ 						-- all observations of the cell [x,y] are in the first 'real' column of the local table 'observTab'
+ 						avgTab[x,y] := observTab.meanValue
+ 						stdTab[x,y] := observTab.standardDeviation
+ 						minTab[x,y] := observTab.min
+ 						maxTab[x,y] := observTab.max
+ 					end-- non-empty cell
+ 				next -- y
+ 				-- column x with numerical data
+ 
+ 			case "string"
+ 				for  y := 1 to yDimTable
+ 					var s:string := obsTab[1,1][x,y] -- outputTab[x,y] issue with displaying results for distributed simulations--obsTab[1,1][x,y] -- using the observation 1, in the past it was the original DataTable 'outputTab[x,y]'
+ 					avgTab[x,y] :=  s
+ 					stdTab[x,y] :=  s
+ 					minTab[x,y] :=  s
+ 					maxTab[x,y] :=  s
+ 				next
+ 
+ 			end
+ 		next -- x
+ 
+ 		var StartCol:integer := 0
+ 		if NOT outputTab.rowIndex
+ 			StartCol := 1
+ 		end
+ 		avgTab.copyRangeTo({StartCol,1}..{*,*}, Results[str,ExpNo],StartCol,1) -- get data
+ 		Results[str,ExpNo].Name:=to_str("Obs",ExpStr)
+ 
+ 		col += 5
+ 	else
+ 		col += 7
+ 	end
+ end -- while col <= DetailedResults.xDim
+ 
+ Results.refillDialog
+ DetailedResults.refillDialog
+RandomSeed: 218
+UUID: 0bc5fe1b-4292-42ef-bbda-b1f19d42638d
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

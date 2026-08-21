@@ -1,0 +1,24 @@
+InternalClassType: Method
+Coordinate3D: [-4,13,0]
+Name: endSim
+Origin: 55f89536-d424-4263-b218-ca4cc1df4361
+Program: |+1
+ updateConsumption
+
+RandomSeed: 46
+UUID: 1191214e-9323-4cb2-8eb9-d9ad038300f3
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["endsim"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

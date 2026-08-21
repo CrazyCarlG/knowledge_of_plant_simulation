@@ -1,0 +1,103 @@
+InternalClassType: Method
+Coordinate3D: [6.9,-2.75,0]
+Name: switchRadioButton
+Origin: 02e78bf3-fb5d-4d61-868d-7c0df4df55a6
+Program: |+1
+ param AppObj:object
+ 
+ var Lan:integer := UserInterfaceLanguage+1
+ if strLen(rootfolder.Localization.messageTab[Lan,1])=0 
+ 	Lan := 2
+ end
+ 
+ var WorkerPoolObj:object := AppObj.varObj
+ var DlgObj:object := AppObj.dialog
+ 
+ var diagrStr:string := rootfolder.Localization.getText(27) --"Utilization of workers"
+ var titleStr:string := rootfolder.Localization.getText(25) --"Worker chart of "
+ var chartObj:object := AppObj.chart
+ chartObj.label := diagrStr --"Utilization of workers"
+ 
+ var lst:list[string]
+ lst.create
+ lst.insert(1, rootfolder.Localization.getText(52))-- Bar Chart
+ lst.insert(2, rootfolder.Localization.getText(53))-- Pie Chart
+ DlgObj.setList("ChartType", lst)
+ 
+ lst.delete
+ lst.insert(1, rootfolder.Localization.getText(55))-- Worker
+ lst.insert(2, rootfolder.Localization.getText(56))-- Activity
+ DlgObj.setList("PointOfView", lst)
+ 
+ if WorkerPoolObj /= void 
+ 	DlgObj.label := to_str(titleStr," '",WorkerPoolObj.name,"'")
+ 	switch AppObj.VarStatisticGroup
+ 	case "Worker" 
+ 		-- "All workers of the pool '",WorkerPoolObj.name,"'"
+ 		chartObj.Title := rootfolder.Localization.getMessage(58,WorkerPoolObj.name,"","")
+ 		
+ 	case "Group" 
+ 		-- "The workers of the pool '",WorkerPoolObj.name,"' summarized by classes"
+ 		chartObj.Title := rootfolder.Localization.getMessage(59,WorkerPoolObj.name,"","")
+ 
+ 	case "Pool" 
+ 		--"Mean values of the workers of the pool '",WorkerPoolObj.name,"'"
+ 		chartObj.Title := rootfolder.Localization.getMessage(60,WorkerPoolObj.name,"","")
+ 	end
+ else
+ 	DlgObj.label := diagrStr
+ end
+ 
+ -- translate notations of statistic values
+ var tab:object := dialogElements
+ tab := AppObj.myOverallTimeStatisticTable
+ tab.delete({0,1}..{0,*})
+ tab.insertList(0,1, rootfolder.Localization.messageTab.copy({Lan,41}..{Lan,47}))
+ --tab[0, 8] := rootfolder.Localization.getText(51); -- "Failed (S)"
+ tab[0, 8] := rootfolder.Localization.getText(48) -- "Failed"
+ tab[0, 9] := rootfolder.Localization.getText(49) -- "Paused"
+ tab[0,10] := rootfolder.Localization.getText(50) -- "Unplanned"
+ 
+ tab := AppObj.myWorkingTimeStatisticTable
+ tab.delete({0,1}..{0,*})
+ tab.insertList(0,1, rootfolder.Localization.messageTab.copy({Lan,41}..{Lan,47}))
+ tab[0, 8] := rootfolder.Localization.getText(48) -- 51 "Failed (S)" => 48 "Failed"
+ 
+ tab := AppObj.myInputChannelsTable
+ tab.delete({0,1}..{0,*})
+ if AppObj.varOccupancyRel = "Working time" 
+ 	tab.insertList(0,1, rootfolder.Localization.messageTab.copy({Lan,41}..{Lan,47}))
+ 	tab[0, 8] := rootfolder.Localization.getText(48) -- 51 "Failed (S)" => 48 "Failed"
+ 	
+ 	AppObj.myStatisticTable.delete({0,1}..{*,*})
+ 	AppObj.myWorkingTimeStatisticTable.copyRangeTo({0,1}..{*,*}, AppObj.myStatisticTable, 0,1)
+ 
+ else
+ 	tab.insertList(0,1, rootfolder.Localization.messageTab.copy({Lan,41}..{Lan,47}))
+ 	--tab[0, 8] := rootfolder.Localization.getText(51); -- "Failed (S)"
+ 	tab[0, 8] := rootfolder.Localization.getText(48) -- "Failed"
+ 	tab[0, 9] := rootfolder.Localization.getText(49) -- "Paused"
+ 	tab[0,10] := rootfolder.Localization.getText(50) -- "Unplanned"
+ 	
+ 	AppObj.myStatisticTable.delete({0,1}..{*,*})
+ 	AppObj.myOverallTimeStatisticTable.copyRangeTo({0,1}..{*,*}, AppObj.myStatisticTable, 0,1)	
+ end
+RandomSeed: 30
+UUID: 120d70d9-b6f3-4cad-99c0-b89e31522295
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [-1,-1,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ Rotation: [0,0,0,-1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Standard"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

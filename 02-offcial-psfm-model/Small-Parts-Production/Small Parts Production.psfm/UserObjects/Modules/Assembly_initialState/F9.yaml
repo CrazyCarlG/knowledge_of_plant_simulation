@@ -1,0 +1,67 @@
+InternalClassType: Conveyor
+AutomaticStop: true
+Coordinate3D: [13,-3,0]
+ExitLocked: false
+Length: 4.5
+Name: F9
+Origin: 2424c07f-cc7a-4128-b441-6b4e3b7abfa9
+RandomSeed: 103
+ResStatOn: true
+UUID: 01a0236c-0546-702a-bc75-b924d41e94bb
+Width: 1
+3D:
+ BaseHeight: 1
+ Mirror: [true,false,false]
+ Rotation: [0,0,0,-1]
+ $ExtSegments:
+  - 0
+  - [180,4.5,0]
+$CustomAttributes:
+-
+ Name: waitingCarrier
+ ID: 1
+ DataType: object
+ Value: ""
+ ShowInTooltip: false
+-
+ Name: pickUpCarrier
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- sensor control F9
+  is
+  do
+  	if ?.waitingCarrier /= void then
+  		local CSC:object := ?.waitingCarrier.~;
+  		?.waitingCarrier.move(?);
+  		?.waitingCarrier := void;
+  		CSC.stopped := false;
+  		CSC.backwards := true;
+  	end;
+  
+  end;
+
+ UsingNewSyntax: false
+ ShowInTooltip: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-7042-bcf4-2a3a4f1e13fd
+ Name: Connector18
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-704a-a1e0-f25e92ba824a
+$Predecessors:
+- 01a0236c-0546-7083-ac49-68a190cf81a9
+InheritEntranceExitLockedOnReset: false
+$Sensors:
+-
+ Id: 1
+ $CreatedHere: true
+ Position: 0.6
+ FromEnd: false
+ Control: "self.pickUpCarrier"
+ Destination: null
+ Front: true
+ Rear: false
+ BookPosition: false
+ IfDestination: true
+ LightBarrierMode: false

@@ -1,0 +1,403 @@
+InternalClassType: DataTable
+CloseCtrl: "self.closeDesignTab"
+Coordinate3D: [41,-26.25,0]
+Name: GeneralDesign
+Origin: 9bb901da-537e-430c-bf35-4c4aedbb779f
+RandomSeed: 256
+UUID: 76dc5e22-d2d1-43fd-9b44-798ecec400f4
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$CustomAttributes:
+-
+ Name: closeDesignTab
+ ID: 1
+ DataType: method
+ Value: |+1
+  -- interaction Close of table 'GeneralDesign'
+  -- called by: interaction close of the table file 'GeneralDesign'
+  -- otherwise called by an external method
+  param bb:boolean
+  
+  self.~.generateDesign(true)
+ ShowInTooltip: false
+-
+ Name: openDesignTab
+ ID: 2
+ DataType: method
+ Value: |+1
+  -- Prepare the table 'GeneralDesign'
+  -- called by: Menu MultiLevel
+  if Input.yDim < 1 
+  	-- Input values are needed for a multi-level experimental design.
+  	messageBox(rootfolder.Localization.getText(280),1,4) -- info
+  	return
+  end
+  
+  self.~.prepDesignTab(true)-- true calledByDialog
+ ShowInTooltip: false
+-
+ Name: generateDesign
+ ID: 3
+ DataType: method
+ Value: |+1
+  -- interaction Close of table 'GeneralDesign'
+  -- called by: interaction close of the table file 'GeneralDesign'
+  param calledByInteraction:boolean
+  
+  var j,k,n,m:integer
+  var queryStr,lostStr,strNum,dataTypeStr,str:string
+  
+  var desTab:object := GeneralDesign
+  if calledByInteraction
+  	if strLen(desTab.comment) = 0
+  		return -- "Cancel" pressed
+  	end
+  	desTab.comment := ""
+  	if (NOT OK_input) OR (NOT OK_output)
+  		--The input and output values are not correctly defined.
+  		messageBox(rootfolder.Localization.getText(300),1,1) -- error
+  		return
+  	end
+  	if desTab.yDim = 0 then return;end
+  end
+  var expTab:object := ExpTable
+  var numInVal:integer := desTab.XdimIndex
+  
+  var Levels:table[integer,integer] -- Levels[2,X]: number of levels of the Xth input value
+  Levels.create
+  
+  var nExp:integer := 1
+  var rExp:real := 1
+  
+  if calledByInteraction
+  	queryStr := rootfolder.Localization.getText(310)--"Do you want to generate the experimental design?";
+  	lostStr  := rootfolder.Localization.getText(311)--"Already defined experiments are lost.";
+  	strNum   := rootfolder.Localization.getText(312)--" experiments will be executed.";
+  end
+  
+  for k := 1 to numInVal  -- plausibility checks
+  	dataTypeStr := desTab.getDataType(k)
+  	switch dataTypeStr
+  	case "string"
+  		m := 1; while desTab[k,m]/=void loop m := m + 1;end
+  		m := m-1
+  		for var a := 2 to m
+  			for var b := 1 to a-1
+  				if desTab[k,a] = desTab[k,b]
+  					-- "The values of \\"",desTab[k,0],"\\" must be different."
+  					str:= rootfolder.Localization.getMessage(315,desTab[k,0],"","")
+  					messageBox(str,1,1) -- error
+  					return
+  				end
+  			next
+  		next
+  
+  	case "boolean"
+  		m := 2
+  		if desTab[k,1] = desTab[k,2]
+  			-- "The values of \\"",desTab[k,0],"\\" must be different."
+  			str:= rootfolder.Localization.getMessage(315,desTab[k,0],"","")
+  			messageBox(str,1,1) -- error
+  			return
+  		end
+  
+  	else -- numerical input values:
+  		if (desTab[k,1] > desTab[k,2])  -- lower level <= upper level
+  			--"The lower level of \\"",desTab[k,0],"\\" must be smaller than the upper level."
+  			str:= rootfolder.Localization.getMessage(316,desTab[k,0],"","")
+  			messageBox(str,1,1) -- error
+  			return
+  		end
+  
+  		if (desTab[k,3]=void OR desTab[k,3] < 1e-12)  -- increment > 0, (desTab[k,3] = void): 2-level design.
+  			--"The increment of \\"",desTab[k,0],"\\" must be positive."
+  			str:= rootfolder.Localization.getMessage(317,desTab[k,0],"","")
+  			messageBox(str,1,1) -- error
+  			return
+  		end
+  
+  		m := 0
+  		if dataTypeStr = "integer"
+  			while desTab[k,1] + m * desTab[k,3] <= desTab[k,2]
+  				m := m + 1
+  			end
+  		else
+  			var intVal:real := desTab[k,3]
+  
+  			var eps:real := 1e-12 * intVal
+  			while desTab[k,1] + m * intVal < desTab[k,2] + eps
+  				m := m + 1
+  			end
+  		end
+  	end -- inspect dataTypeStr
+  	Levels[2,k] := m
+  	print "	Input value \\"",desTab[k,0],"\\" has ",m," levels"
+  	rExp := rExp * m
+  next -- k: input value
+  
+  if rExp > MaxNumExp  -- default: MaxNumExp = 100 Mill
+  	str:= rootfolder.Localization.getText(328) -- The experimental design leads to a great number of experiments.
+  	print "The experimental design leads to ",rExp," experiments."
+  	messageBox(to_str(str,strChr(10),rootfolder.Localization.getText(329)),1,3) -- The experiment study will not be generated. (warning)
+  	return
+  end
+  nExp := rExp
+  
+  strNum := to_str(nExp,strNum)
+  
+  if (calledByInteraction AND messageBox(to_str(queryStr,strChr(10),strNum,strChr(10),strChr(10),lostStr),48,12)=16) OR
+  	(NOT calledByInteraction)
+   -- 12 => question mark, buttons YES/NO
+  	Recording.append(to_str("Generate experimental design. The experiment table with static settings for ",expTab.ydim," experiments is deleted."))
+  
+  	expTab.delete -- After the question the ExpTable is deleted.
+  	--UserDefSeed_:= false;
+  	--UsingRules := false;  both is possible: Exp Design and Rules-bassed settings
+  	--_UserUserMethod  The configuration method is needed , for instance to set the creation table of the workerpool
+  	var DLGobj:object := Dialog.Dialog
+  	DLGobj.setCheckBox("UseInputValues_CB",true)
+  	DLGobj.&callback.execute("UseInputValues_CB",DLGobj,DLGobj) -- set usingTables := true
+  	UsingTables := true
+  
+  	-- generate the EXPERIMENTAL DESIGN (fill the tablefile ExpTable)
+  	expTab.insertList(2,1, desTab.copy({1,1}..{numInVal,1})) -- insert the start values of all input values into the first row of expTab
+  	Levels.initialize({1,1}..{1,numInVal}, 1)
+  	--expTab.openDialog;Levels.openDialog;
+  	for n := 2 to nExp  -- n = row in ExpTable
+  		expTab.insertList(2,n, expTab.copy({2,n-1}..{numInVal+1,n-1})) -- copy the last row of expTab = ExpTable
+  
+  		-- GO FORWARD
+  		k := numInVal
+  		while (k>0) AND Levels[1,k] = Levels[2,k] loop k := k - 1 end
+  		-- determine the next value of the k th input value
+  		Levels.increment(1,k)
+  		dataTypeStr := desTab.getDataType(k)
+  		switch dataTypeStr
+  		case "boolean","string"
+  			expTab[k+1,n] := desTab[k, Levels[1,k]]
+  		else
+  			expTab[k+1,n]:= desTab[k,1] + (Levels[1,k] - 1) * desTab[k,3] -- lower bound + No Level * increment
+  		end
+  
+  		for j := k+1 to numInVal
+  			expTab[j+1,n]:= desTab[j,1] -- go back to the lower bound
+  			Levels[1,j] := 1
+  		next
+  	next -- n
+  
+  	n := expTab.yDim -- The Datatable ExpTable is ready
+  	for j := 1 to n loop
+  		expTab[1,j]:=true -- set first column "Active"
+  	next
+  	/*if expTab.rowIndex_
+  		expTab.rowIndex_ := false -- User-defined experiment-IDs are removed.
+  	end*/
+  	Dialog.closeExpTab -- plausibility control of Exptable (set ExpRunFromGeneralDesign to false)
+  
+  	ExpRunFromGeneralDesign := true
+  	ExpRunFromRandomDesign := false
+  	factorDesignValue := ""
+  	Design4FactorialAnalysis := false
+  
+  	Results.delete
+  	Results.delete({0,n+1}..{*,*})
+  	DetailedResults.delete
+  	DetailedResults.delete({0,n+1}..{*,*})
+  
+  	--expTab.init(`[1,*],true);-- all exp. are active
+  	if calledByInteraction
+  		expTab.openDialogBox(true) -- show all (newly generated) input values for all experiments
+  	end
+  
+  	desTab.LastDesign.delete({0,0}..{*,*})
+  	desTab.copyFormatTo(desTab.LastDesign)
+  	desTab.LastDesign.maxXdim := -1
+  	desTab.copyRangeTo({1,1}..{*,*}, desTab.LastDesign,1,1)
+  
+  else -- answer was 'NO'
+  	ExpRunFromGeneralDesign := false
+  end
+ ShowInTooltip: false
+-
+ Name: prepDesignTab
+ ID: 4
+ DataType: method
+ Value: |+1
+  -- Prepare the table 'GeneralDesign'
+  -- using the format of the table 'ExpTable'
+  param calledByDialog:boolean
+  
+  var str:string
+  var changeDone:boolean
+  
+  if Input.yDim < 1  -- Model parameters are needed for a multi-level experimental design.
+  	messageBox(Rootfolder.Localization.getText(280),1,4) -- info
+  	return
+  end
+  var ExpTab:object := ExpTable
+  var desTab:object := GeneralDesign
+  
+  desTab.maxXdim := -1
+  
+  var j:integer := 1
+  while ExpTab[j+1,0]/=void 
+  	str := ExpTab[j+1,0]
+  	changeDone := changeDone OR (strTrim(desTab[j,0]) /= strTrim(str))
+  	desTab[j,0]:= str
+  	desTab.setDataType(j,ExpTab.getDataType(j+1))
+  	j += 1
+  end
+  
+  desTab.delete({j,0}..{*,*}) -- also delete the column index
+  
+  j -= 1
+  if j>0 
+  	desTab.maxXdim := j
+  end
+  if changeDone 
+  	for var k := 1 to j 
+  		var colLastDesign:integer := desTab.LastDesign.getColumnNo(desTab[k,0])
+  		if colLastDesign > 0 AND desTab.LastDesign[colLastDesign,1] /= void
+  			desTab.LastDesign.copyRangeTo({colLastDesign,1}..{colLastDesign,*}, desTab,k,1)
+  		else -- set default design values	
+  			switch desTab.getDataType(k)
+  			case "string" 			
+  				desTab[k,1]:= "A"
+  				desTab[k,2]:= "B"
+  				desTab[k,3]:= void 				
+  			case "boolean" 
+  				desTab[k,1]:= true
+  				desTab[k,2]:= false
+  				desTab[k,3]:= void
+  			case "time" 
+  				desTab[k,1]:= 60
+  				desTab[k,2]:= 300
+  				desTab[k,3]:= 60
+  			case "length" 	
+  				desTab[k,1]:= str_to_length("1")
+  				desTab[k,2]:= str_to_length("5")
+  				desTab[k,3]:= str_to_length("1")
+  			case "speed" 	
+  				desTab[k,1]:= str_to_speed("1")
+  				desTab[k,2]:= str_to_speed("5")
+  				desTab[k,3]:= str_to_speed("1")
+  			case "acceleration" 	
+  				desTab[k,1]:= str_to_acceleration("1")
+  				desTab[k,2]:= str_to_acceleration("5")
+  				desTab[k,3]:= str_to_acceleration("1")
+  			case "weight" 	
+  				desTab[k,1]:= str_to_weight("1")
+  				desTab[k,2]:= str_to_weight("5")
+  				desTab[k,3]:= str_to_weight("1")
+  			
+  			else
+  				desTab[k,1]:= 1
+  				desTab[k,2]:= 5
+  				desTab[k,3]:= 1 -- default increment
+  			end
+  		end -- set default design values
+  	next -- k
+  end -- if changeDone
+  
+  /* For the multi-level experimental design you define
+  the lower and upper level of the ",j," input values and the increments.
+  Please close this table before you continue.
+  */
+  str:=to_str(Rootfolder.Localization.getText(305),
+  	strChr(13),strChr(10),Rootfolder.Localization.getMessage(306,j,"",""),
+  	strChr(13),strChr(10),Rootfolder.Localization.getText(307))
+  		
+  desTab[0,0]:=Rootfolder.Localization.getText(301)--" Input value";
+  desTab[0,1]:=Rootfolder.Localization.getText(302)--" Lower level";
+  desTab[0,2]:=Rootfolder.Localization.getText(303)--" Upper level";
+  desTab[0,3]:=Rootfolder.Localization.getText(304)--" Increment";
+  	
+  if calledByDialog 
+  	desTab.comment := str
+  	desTab.openDialogBox(true) -- open the table 'Design'
+  	desTab.comment := ""-- detect whether "OK" or "Cancel" was pressed.
+  end
+ ShowInTooltip: false
+-
+ Name: LastDesign
+ ID: 5
+ DataType: table
+ Value:
+  Comment: ~
+  CommonFormat: false
+  ListFormat:
+   Alignment: "Right"
+   ColumnIndex: true
+   ColumnWidth: 20
+   DataType: string
+   RowIndex: true
+   ShowDataType: true
+   ColumnFormat:
+   -
+    Index: 0
+    Width: 9
+   -
+    Index: 1
+    DataType: integer
+    FormatString: "-9"
+    Width: 10
+   -
+    Index: 2
+    DataType: integer
+    FormatString: "-9"
+    Width: 14
+   -
+    Index: 3
+    DataType: integer
+    FormatString: "-9"
+    Width: 19
+   -
+    Index: 4
+    DataType: integer
+    FormatString: "-9"
+    Width: 12
+  ColumnIndex: [string,1," Eingabewert"]
+  Columns:
+  - [0,string,3," Untere Stufe"," Obere Stufe"," Schrittweite"]
+ ShowInTooltip: false
+$Data:
+ Comment: ~
+ ShowComment: true
+ ListFormat:
+  Alignment: "Right"
+  ColumnIndex: true
+  ColumnWidth: 20
+  DataType: string
+  RowIndex: true
+  ShowDataType: true
+  ColumnFormat:
+  -
+   Index: 0
+   Width: 9
+  -
+   Index: 1
+   DataType: integer
+   FormatString: "-9"
+   Width: 10
+  -
+   Index: 2
+   DataType: integer
+   FormatString: "-9"
+   Width: 14
+  -
+   Index: 3
+   DataType: integer
+   FormatString: "-9"
+   Width: 19
+  -
+   Index: 4
+   DataType: integer
+   FormatString: "-9"
+   Width: 12
+ ColumnIndex: [string,1," Eingabewert"]
+ Columns:
+ - [0,string,3," Untere Stufe"," Obere Stufe"," Schrittweite"]

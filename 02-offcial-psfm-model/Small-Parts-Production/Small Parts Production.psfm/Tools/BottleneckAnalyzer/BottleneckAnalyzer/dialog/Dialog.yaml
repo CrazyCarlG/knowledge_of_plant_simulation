@@ -1,0 +1,183 @@
+InternalClassType: Dialog
+ArgumentForApply: "APPLY"
+ArgumentForClose: "CANCEL"
+ArgumentForOpen: "OPEN"
+CallbackMethod: "self.Callback"
+Coordinate3D: [-13,14,0]
+DialogX: 300
+DialogY: 300
+Label: "Bottleneck Analyzer"
+Locked: false
+Name: Dialog
+Origin: 946f1cb6-5314-49f4-95b6-dac1ccd924f9
+RandomSeed: 71
+ShowStandardButtons: true
+UUID: 32bc7205-3adf-42fe-936a-cd019d00527b
+3D:
+ Mirror: [false,false,false]
+ Rotation: [0,0,0,-1]
+$CustomAttributes:
+-
+ Name: callback
+ ID: 1
+ DataType: method
+ Value: |+1
+  param argument:string
+  
+  switch argument
+  case "analyze" 
+  	~.analyzeModel
+  case "OPEN" 
+  case "removestats" 
+  	~.removeStats
+  case "showstats" 
+  	showstats
+  	
+  case "Contents_Menu"
+  	HTMLHelp("")
+  case "Index_Menu"
+  	HTMLHelp("","")
+  case "HelpObject_Menu"
+  	if ApplicationVersion < 15002000
+  		if UserInterfaceLanguage = 0
+  			HTMLHelp(~.HelpOnObjectDEU)
+  		else
+  			HTMLHelp(~.HelpOnObjectENU) 
+  		end
+  	else
+  		HTMLHelp(~.HelpOnObjectENU) 	
+  	end
+  	
+  case "About_Menu"
+  	~.openBox
+  	
+  case "openBB" 
+  	~.openDialog
+  case "production" 
+  	~.production := self.~.holeCheckBox("prod_chk")
+  case "transport" 
+  	~.transport := self.~.holeCheckBox("transp_chk")
+  case "storage" 
+  	~.storage := self.~.holeCheckBox("stor_chk")
+  case "display" 
+  	~.scale_icon := self.~.getIndex("display_pop")
+  case "OpenLoc_Menu"
+  	~.~.openDialog
+  end
+  dialog.setSensitive("Remove_txt", ~.Analyzed)
+  dialog.setSensitive("remove_but", ~.Analyzed)
+ ShowInTooltip: false
+$Elements:
+-
+ Type: Menu
+ Name: "Navigate_Menu"
+ Caption: "Navigate"
+ $Elements:
+ -
+  Type: Menu
+  Name: "OpenLoc_Menu"
+  Caption: "Open Location"
+  CallbackArgument: "OpenLoc_Menu"
+-
+ Type: Menu
+ Name: "Help_men"
+ Caption: "Help"
+ $Elements:
+ -
+  Type: Menu
+  Name: "Contents_Menu"
+  Caption: "Content"
+  CallbackArgument: "Contents_Menu"
+ -
+  Type: Menu
+  Name: "HelpObject_Menu"
+  Caption: "Help on Object"
+  CallbackArgument: "HelpObject_Menu"
+-
+ Type: TabControl
+ Name: "Register"
+ Rect: [0,0,45,5]
+ $Elements:
+ -
+  Type: TabPage
+  Name: "Analyze"
+  Caption: "Analyze"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "Analyze_txt"
+   Caption: "Model:"
+   Rect: [1,0,0,0]
+  -
+   Type: Button
+   Name: "analyze_but"
+   Caption: "Analyse"
+   Rect: [23,0,0,0]
+   CallbackArgument: "analyze"
+  -
+   Type: StaticText
+   Name: "Remove_txt"
+   Caption: "All charts:"
+   Rect: [1,1,0,0]
+   Enable: false
+  -
+   Type: Button
+   Name: "remove_but"
+   Caption: "Remove"
+   Rect: [23,1,0,0]
+   CallbackArgument: "removestats"
+   Enable: false
+  -
+   Type: StaticText
+   Name: "Ranking_txt"
+   Caption: "Ranking table:"
+   Rect: [1,2,0,0]
+  -
+   Type: Button
+   Name: "ranking_but"
+   Caption: "Open"
+   Rect: [23,2,0,0]
+   CallbackArgument: "showstats"
+ -
+  Type: TabPage
+  Name: "Configuration"
+  Caption: "Configure"
+  $Elements:
+  -
+   Type: StaticText
+   Name: "header2_com"
+   Caption: "Which resource types are viewed?"
+   Rect: [1,0,0,0]
+  -
+   Type: CheckBox
+   Name: "prod_chk"
+   Caption: "Production"
+   Rect: [1,1,0,0]
+   CallbackArgument: "production"
+   IsChecked: true
+  -
+   Type: CheckBox
+   Name: "transp_chk"
+   Caption: "Transport"
+   Rect: [17,1,0,0]
+   CallbackArgument: "transport"
+   IsChecked: true
+  -
+   Type: CheckBox
+   Name: "stor_chk"
+   Caption: "Storage"
+   Rect: [30,1,0,0]
+   CallbackArgument: "storage"
+   IsChecked: true
+  -
+   Type: StaticText
+   Name: "display_txt"
+   Caption: "Display:"
+   Rect: [1,2,0,0]
+  -
+   Type: Drop-Down
+   Name: "display_pop"
+   Caption: ["Only Bars","Plus Scale","Plus Background"]
+   Rect: [17,2,23,0]
+   CallbackArgument: "display"
+   SelectionIndex: 3

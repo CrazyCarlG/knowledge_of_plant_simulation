@@ -1,0 +1,16 @@
+InternalClassType: DataTable
+Origin: 01a0236c-0546-70e5-b420-c719d8c9cad8
+UUID: 01a0236c-0546-741b-8e11-bd0694a19d87
+3D:
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ VisibleGraphicGroups: ["Default"]
+$Data:
+ ColumnIndex: [string,4,"Input values","set by","Original Value","Technical Notation"]
+ Columns:
+ - [0,string,1,"Number of pallets"]
+ - [1,string,1,"Tab"]
+ - [2,string,1,"35"]
+ - [3,string,1,"root.Quantity"]

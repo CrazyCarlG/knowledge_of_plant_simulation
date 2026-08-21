@@ -1,0 +1,28 @@
+InternalClassType: DismantleStation
+Origin: 01a0236c-0546-7064-8574-942a3a4a92f9
+RandomSeed: 120
+ResourceType: "Transport"
+UUID: 01a0236c-0546-7399-aacf-04a8e1322745
+3D:
+ ShowContent: true
+ StatesForColoring: 0xf7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [0.9,0.5,0.15]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-739c-9df2-b95a34f2e16f
+ Origin: 01a0236c-0546-7068-b539-b6d8ee7ead48
+ UUID: 01a0236c-0546-739d-b3b5-83ca1a025748
+-
+ $Succ: 01a0236c-0546-7395-b4d5-0ac90390d3d8
+ Origin: 01a0236c-0546-706b-9955-3ea6365dcb69
+ UUID: 01a0236c-0546-73a0-bd1b-5533ad826e4f
+$Predecessors:
+- 01a0236c-0546-739b-bed8-23fdf5a56a7f
+InheritEntranceExitLockedOnReset: false

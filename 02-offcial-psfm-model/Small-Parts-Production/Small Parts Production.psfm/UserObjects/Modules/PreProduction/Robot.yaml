@@ -1,0 +1,68 @@
+InternalClassType: PickAndPlace
+Capacity: 1
+Coordinate3D: [-4.4500000663101673,0.65000000968575478,0]
+Origin: b88c8925-c1b0-4f4b-93da-4c76ec6e796e
+RandomSeed: 46
+UUID: 01a0236c-0546-701b-8b62-6c0ea63ae85b
+3D:
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-0.9,0.9,0.02]
+  HorizontalStatesScale: [0.5,0.335,0.1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-0.9,0.9,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true
+ $Objects:
+ -
+  Origin: 3cedd2fe-70ec-41a6-bcc4-939287627ed1
+  UUID: 0730e4bf-6ee8-4a45-a572-3f937dfdbc23
+  $Objects:
+  -
+   Origin: f06c38c7-9980-454b-96fe-4463cdbd5781
+   UUID: bf29612f-daad-4b65-94a3-46d90b4ab5c4
+   $Objects:
+   -
+    Origin: 608489ef-14fe-468d-82f4-8afb2f1c59de
+    UUID: 93d7b948-9679-4ba7-9c58-46ece48d899d
+    $Objects:
+    -
+     Origin: f97f1a6a-0d2e-4c8d-ade0-f7c35e10fc4b
+     UUID: d45e04d0-b423-442c-8cea-c949d9ff7fc3
+     $Objects:
+     -
+      Origin: 77cba8a1-8f87-42b0-afb3-ad82ccacef86
+      UUID: cd05ad0c-b543-4a40-a95a-b6dfd9e3ea9e
+      $Objects:
+      -
+       Origin: 15d1aab3-5d5f-425a-aa81-214f2f9ceee1
+       UUID: a68b3e72-b152-4e1a-9508-e64ce9bc8a95
+$Successors:
+-
+ $Succ: 01a0236c-0546-700f-beaf-8cf548a99f1c
+ Name: Connector1
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-701d-a8e1-9203339fc256
+$Predecessors:
+- 01a0236c-0546-701c-9f15-7321f7cd1700
+InheritEntranceExitLockedOnReset: false
+$Failures:
+-
+ Name: Failure
+ ID: 1
+ Active: true
+ Mode: SimulationTime
+ AvailabilityOn: true
+ Start: 0
+ Stop: 0
+ Interval: [Negexp,1D56M59.999999999913]
+ Duration: [Erlang,3:00,2:07.27922061357856]
+$Angles:
+- ["AS8",0]
+- ["AS9",180]
+$Times:
+- [0,0,2]
+- [0,0,2]
+- [0,12,0]

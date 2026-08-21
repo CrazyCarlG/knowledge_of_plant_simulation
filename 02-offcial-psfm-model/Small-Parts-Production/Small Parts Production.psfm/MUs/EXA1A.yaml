@@ -1,0 +1,84 @@
+InternalClassType: Part
+AutomaticRouting: false
+BookPntHRelative: 0
+BookPntLRelative: 0.5
+BookPntWRelative: 0.5
+ChangePathCtrl:
+ConstructorCtrl:
+Coordinate3D: [0,0,0]
+CostingActive: false
+CreateIn3D: true
+Destination:
+DestructorCtrl:
+DragDropCtrl:
+Label: ""
+MoveToFolderCtrl:
+MUHeight: 0.1
+MULength: 0.4
+MUWidth: 0.4
+Name: EXA1A
+OpenCtrl:
+PlausibilityCtrl:
+ProdStatOn: true
+RelabelCtrl:
+RenameCtrl:
+ResetDestinationWhenAtDestination: false
+RouteWeightingAttr: ""
+SelectCtrl:
+UUID: a26c7fac-3d4a-4d5b-8c8e-7f21b2ac7197
+3D:
+ GraphicGroupNames: ["default","Operational","Waiting"]
+ LockedGraphicGroups: []
+ MaterialActive: false
+ Mirror: [false,false,false]
+ Poses:
+ Rotation: [0,0,0,-1]
+ Scale: [1,1,1]
+ ScaleAutomatically: false
+ SynchronizedJoints: true
+ VisibleGraphicGroups: ["Operational"]
+$IconArray:
+-
+ Name: "Operational"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAtARktARktARktARktARkgIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAtARktARktAS0tAS0tAS0tAS0tAS0tARktARkgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAtARktAS0tAS0tAS0tAS0tAS0tAS0tAS0tAS0tAS0tARkgIAAgIAAgIAA
+ - gIAAgIAAtARktAS0tAS0tAS0tARktARktARktARktARktAS0tAS0tAS0tARkgIAAgIAA
+ - gIAAtARktAS0tAS0tAS0tARktARktARktARktARktARktARktAS0tAS0tAS0tARkgIAA
+ - gIAAtARktAS0tAS0tARktARktARktARktARktARktARktARktARktAS0tAS0tARkgIAA
+ - tARktAS0tAS0tARktARktARktARktAS0tAS0tAS0tARktARktARktARktAS0tAS0tARk
+ - tARktAS0tAS0tARktARktARktAS0tARktAS0tARktAS0tARktARktARktAS0tAS0tARk
+ - tARktAS0tAS0tARktARktARktAS0tAS0tARktAS0tAS0tARktARktARktAS0tAS0tARk
+ - tARktAS0tAS0tARktARktARktAS0tARktAS0tARktAS0tARktARktARktAS0tAS0tARk
+ - tARktAS0tAS0tARktARktARktARktAS0tAS0tAS0tARktARktARktARktAS0tAS0tARk
+ - gIAAtARktAS0tAS0tARktARktARktARktARktARktARktARktARktAS0tAS0tARkgIAA
+ - gIAAtARktAS0tAS0tAS0tARktARktARktARktARktARktARktAS0tAS0tAS0tARkgIAA
+ - gIAAgIAAtARktAS0tAS0tAS0tARktARktARktARktARktAS0tAS0tAS0tARkgIAAgIAA
+ - gIAAgIAAgIAAtARktAS0tAS0tAS0tAS0tAS0tAS0tAS0tAS0tAS0tARkgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAtARktARktAS0tAS0tAS0tAS0tAS0tARktARkgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAtARktARktARktARktARkgIAAgIAAgIAAgIAAgIAAgIAA
+-
+ Name: "Waiting"
+ Transparent: true
+ Size: [17,17]
+ Pixels:
+ - gIAAgIAAgIAAgIAAgIAAgIAAAL//AL//AL//AL//AL//gIAAgIAAgIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAL//AL//AP//AP//AP//AP//AP//AL//AL//gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAAL//AP//AP//AP//AP//AP//AP//AP//AP//AP//AL//gIAAgIAAgIAA
+ - gIAAgIAAAL//AP//AP//AP//AL//AL//AL//AL//AL//AP//AP//AP//AL//gIAAgIAA
+ - gIAAAL//AP//AP//AP//AL//AL//AL//AL//AL//AL//AL//AP//AP//AP//AL//gIAA
+ - gIAAAL//AP//AP//AL//AL//AL//AL//AL//AL//AL//AL//AL//AP//AP//AL//gIAA
+ - AL//AP//AP//AL//AL//AL//AL//AP//AP//AP//AL//AL//AL//AL//AP//AP//AL//
+ - AL//AP//AP//AL//AL//AL//AP//AL//AP//AL//AP//AL//AL//AL//AP//AP//AL//
+ - AL//AP//AP//AL//AL//AL//AP//AP//AL//AP//AP//AL//AL//AL//AP//AP//AL//
+ - AL//AP//AP//AL//AL//AL//AP//AL//AP//AL//AP//AL//AL//AL//AP//AP//AL//
+ - AL//AP//AP//AL//AL//AL//AL//AP//AP//AP//AL//AL//AL//AL//AP//AP//AL//
+ - gIAAAL//AP//AP//AL//AL//AL//AL//AL//AL//AL//AL//AL//AP//AP//AL//gIAA
+ - gIAAAL//AP//AP//AP//AL//AL//AL//AL//AL//AL//AL//AP//AP//AP//AL//gIAA
+ - gIAAgIAAAL//AP//AP//AP//AL//AL//AL//AL//AL//AP//AP//AP//AL//gIAAgIAA
+ - gIAAgIAAgIAAAL//AP//AP//AP//AP//AP//AP//AP//AP//AP//AL//gIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAAL//AL//AP//AP//AP//AP//AP//AL//AL//gIAAgIAAgIAAgIAA
+ - gIAAgIAAgIAAgIAAgIAAgIAAAL//AL//AL//AL//AL//gIAAgIAAgIAAgIAAgIAAgIAA

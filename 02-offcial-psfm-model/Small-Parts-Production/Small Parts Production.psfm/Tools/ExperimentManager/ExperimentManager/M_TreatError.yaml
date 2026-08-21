@@ -1,0 +1,118 @@
+InternalClassType: Method
+Coordinate3D: [30.200000000000003,-16.85,0]
+Name: M_TreatError
+Origin: fed7ab31-047a-4a54-af6f-c7c0051dc6eb
+Program: |+1
+ -- callback for distributed simulation in case of an error
+ -- called back: SimulationMachine.EventSink
+ param job: integer, message:string -> integer
+ 
+ var stateCol:integer := JobsTable.stateColumnNo
+ JobsTable[stateCol,     job] := "cancelled"
+ JobsTable[stateCol + 3, job] := sysdate -- column "End"
+ JobsTable[stateCol + 4, job] := JobsTable[stateCol + 3, job] - JobsTable[stateCol + 2, job] -- column "Running time"
+ 
+ TotalSimulationRuns += 1 -- Show the number of performed observations in the dialog.
+ 
+ JobsTable[3,job] := "cancelled"
+ 
+ var row, col: integer
+ row := JobsTable[1,job]
+ col := job mod GetNumberOfObservations
+ if col = 0
+ 	col := GetNumberOfObservations
+ end
+ 
+ ProgressTable.setFontColorCells({col,row}, white)
+ ProgressTable.setBackgroundColorCells({col,row},red)
+ ProgressTable.writeRow(col,row,strChr(10008))
+ ProgressTable.refillDialog
+ 
+ 
+ var localExp:integer := JobsTable[1,job]
+ var localRun:integer := JobsTable[2,job]
+ 
+ if DetailedResults[0,localExp].void
+ 	prepExp(localExp)
+ end
+ 
+ Recording.append(to_str("ERROR in Exp ",localExp," observation: ",localRun," (job: ",job,")"))
+ Recording.remoteErrors := true
+ 
+ var j:integer
+ if UsingRules
+ 	j := totalRuns mod numRuns
+ 	if j=0 then j := numRuns end
+ 	Dialog.Dialog.setCaption("currObs", to_str(j)+"/"+to_str(GetNumberOfObservations))
+ else
+ 	Dialog.Dialog.setCaption("currObs", to_str(totalRuns)+"/"+to_str(GetNumberOfObservations*GetNumberOfExperiments))
+ end
+ 
+ var AttrStr: string
+ var n,colMean:integer
+ for j := 1 to Output.yDim
+ 	AttrStr := Output[1,j]
+ 	var str:string := ValueDescriptions.get(AttrStr)
+ 	colMean := DetailedResults.getColumnNo(str)
+ 	var ObservTab:table
+ 	if isOutTable(AttrStr)  -- OutputTable
+ 		ObservTab := DetailedResults[colMean + 4, localExp]
+ 		ObservTab[2, localRun] := message
+ 
+ 		n := 0 -- determine the number of already detected error messages
+ 		for var k := 1 to ObservTab.yDim
+ 			if ObservTab[2,k] /= void
+ 				n += 1
+ 			end
+ 		next
+ 
+ 	else -- numerical output vakue
+ 		ObservTab := DetailedResults[colMean + 6, localExp]-- insert into subtable
+ 		ObservTab[1, localRun] := void
+ 		ObservTab[2, localRun] := message
+ 
+ 		n := 0 -- determine the number of already detected error messages
+ 		for var k := 1 to ObservTab.yDim
+ 			if ObservTab[2,k] /= void
+ 				n += 1
+ 			end
+ 		next
+ 	end
+ next -- j: output value
+ 
+ if UsingRules
+ 	j:=1 -- output values for rules:
+ 	while strLen(Results4Rules[j,0])>0
+ 		AttrStr := Results4Rules[j,0]
+ 		Results4Rules[j,localRun] := 0
+ 		j += 1
+ 	end
+ end -- if UsingRules
+ 
+ Dialog.showProgressByIcon(localExp,localRun)
+ redraw
+ 
+ DetailedResults.refillDialog
+ 
+ JobsTable[6,job] := sysdate
+ JobsTable[7,job] := JobsTable[6,job] - JobsTable[5,job]
+ 
+ result := job
+RandomSeed: 192
+UUID: d4170fa4-00e3-4376-ad96-bad5f7894310
+3D:
+ Mirror: [false,false,false]
+ NameLabelEnabled: true
+ NameLabelPosition: [0,-2,0.02]
+ NameLabelRotation: [0,0,0,-1]
+ NameLabelScale: [1,1,1]
+ StatesForColoring: 0xffffffff
+ StatesOrientation: "Horizontal"
+ VisibleGraphicGroups: ["Default"]
+ $StatesTransformations:
+  HorizontalStatesPosition: [0,0,0.02]
+  HorizontalStatesScale: [0.46,0.5,0.05]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [0,0,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: true

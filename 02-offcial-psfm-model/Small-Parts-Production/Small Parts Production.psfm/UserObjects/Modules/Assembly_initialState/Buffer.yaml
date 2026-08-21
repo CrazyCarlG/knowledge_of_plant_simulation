@@ -1,0 +1,28 @@
+InternalClassType: Buffer
+Capacity: 2
+Coordinate3D: [-7,-4,0]
+Name: Buffer
+Origin: 294a58de-c6b5-4504-aa87-a26d68cb216b
+ProcTime: 0
+RandomSeed: 99
+UUID: 01a0236c-0546-702f-ad73-dff6af41fdd1
+3D:
+ Mirror: [false,false,false]
+ Rotation: [180,0,0,-1]
+ ShowContent: true
+ StatesForColoring: 0xd7f
+ StatesOrientation: "Horizontal"
+ $StatesTransformations:
+  HorizontalStatesPosition: [-1,1,0.02]
+  HorizontalStatesScale: [1,1,1]
+  HorizontalStatesScaleWithObject: true
+  VerticalStatesPosition: [-1,1,0.02]
+  VerticalStatesScale: [1,1,1]
+  VerticalStatesScaleWithObject: false
+$Successors:
+-
+ $Succ: 01a0236c-0546-702e-b053-3b66914c2c38
+ Name: Connector23
+ Origin: f58e507c-3e3e-4fb4-a722-12ca1b402a13
+ UUID: 01a0236c-0546-7030-863e-4df5b0030c1c
+InheritEntranceExitLockedOnReset: false
