@@ -4,9 +4,9 @@ import sys
 from pathlib import Path
 
 # -------------------------- 配置常量，集中修改 --------------------------
-EXCEL_FILE = Path("/root/knowledge_of_plant_simulation/scripts/pdf-to-knowledge/objects-pdf/all-objects-sections.xlsx")
-SCRIPT_PATH = Path("/root/knowledge_of_plant_simulation/scripts/pdf-to-knowledge/process/openclaude_readme_session.py")
-BASE_DIR = Path("/root/knowledge_of_plant_simulation/01-plant-simulation-help")
+EXCEL_FILE = Path(r"C:\Users\z004bjuu\Downloads\all-objects-sections_allobjects.xlsx")
+SCRIPT_PATH = Path(r"C:\Users\z004bjuu\Documents\knowledge_of_plant_simulation\scripts\pdf-to-knowledge\process\openclaude_readme_session.py")
+BASE_DIR = Path(r"C:\Users\z004bjuu\Documents\knowledge_of_plant_simulation\01-plant-simulation-help")
 DEBUG_BREAK_AFTER_FIRST_ROW = False   # True只跑第一行调试；False批量跑全部行
 # ------------------------------------------------------------------------
 
