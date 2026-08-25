@@ -1,0 +1,1894 @@
+You can query the values of the read-only attributes, but you cannot set them as Plant Simulation
+computes the value for the point-in-time at which you query it. In most cases a read-only attribute
+corresponds to an unavailable dialog item on one of the tabs of the object, for example on the tab
+Statistics.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+To query the value of a read-only attribute, you might, for example, type:
+print Source.Empty
+_Read-Only Attributes of All Objects
+11-732 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+~ [SimTalk] (tilde) - material flow objects
+Returns the object located directly above the object designated by <Path> in the hierarchy of the objects.
+Remarks
+The location of the MU is the object on which it is currently located. All other objects return the Frame in
+which they are located as the location.
+Type
+Read-only attribute
+Syntax
+<Path>.~ -> object
+<Path>.Location -> object
+Watchable
+The attribute is watchable.
+Return Value
+The return value has the data type object.
+VOID if the Worker or the AGV are on their way to their destination.
+Examples
+print "shaft is located on:", @.~
+print "shaft is located on:", @.Location
+print Preparing.~ -- Preparing is the name of a Conveyor
+-- returns .Models.MyCarAssembly.PaintShop.PaintLine1
+-- PaintLine1 is the name of the Frame
+print .MUs.Part:9.~ -- location of Part 9
+-- returns .Models.MyCarAssembly.PaintShop.PaintLine1.Preparing
+-- Preparing is the name of a Conveyor
+SimTalk
+LocationInFrame [SimTalk]
+~ [SimTalk] (tilde) - material flow objects
+Plant Simulation Help 11-733
+Unpublished work. © 2026 Siemens
+See also
+Open Location [described]
+ on the Home Ribbon Tab
+~ [SimTalk] (tilde) - material flow objects
+11-734 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Class [SimTalk] - read-only attribute
+Returns the class in the Class Library from which the object designated by <Path> was derived or
+instantiated, possibly over several levels.
+Remarks
+Compare this example: We copied the object Frame three times and named it Frame1, Frame2,
+and Frame3. Then, we insert Frame1 into Frame2, and Frame2 into Frame3. When we
+call .Frame3.Frame2.Frame1.Class the result will be .Frame1 because .Frame1 is the object in the
+Class Library from which .Frame3.Frame2.Frame1 was derived.
+If you use Class for an instance of an object, Plant Simulation moves up in the inheritance structure until it
+reaches an object in the Class Library. It then opens this object.
+Type
+Read-only attribute
+Syntax
+<Path>.Class → object
+Return Value
+The return value has the data type object.
+Example
+if class_change
+   current.Class.openDialog
+end
+See also
+Class [general description]
+Open Class [described]
+Go to Class [described]
+Class [SimTalk] - read-only attribute
+Plant Simulation Help 11-735
+Unpublished work. © 2026 Siemens
+InternalClassType [SimTalk]
+Returns the unique built-in English object name that describes the type of the object designated by
+<Path>.
+Remarks
+Note
+The InternalClassType is not the localized object name that some of the localized versions of Plant
+Simulation show, but the English object name which we assigned.
+Return Value
+English Object Name
+(Information Only
+Respective German Object Name)
+ActiveX ActiveX
+AngularConverter Eckumsetzer
+AssemblyStation Montagestation
+AttributeExplorer AttributExplorer
+Basis Basis
+Broker Broker
+Buffer Puffer
+Button Schaltfläche
+Chart Diagramm
+Checkbox Kontrollkästchen
+Comment Kommentar
+Connector Kante
+Container Förderhilfsmittel
+Converter Umsetzer
+Conveyor Förderstrecke
+Cycle Takt
+DataList Kartei
+DataStack Stapel
+DataTable Tabelle
+DatatQueue Warteschlange
+InternalClassType [SimTalk]
+11-736 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Return Value
+English Object Name
+(Information Only
+Respective German Object Name)
+DePortioner Entportionierer
+Dialog Dialog
+DismantleStation Demontagestation
+Display Display
+Drain Senke
+DropDownList Dropdownliste
+EventController Ereignisverwalter
+Exporter Exporter
+FileInterface Dateischnittstelle
+FileLink Dateiverknüpfung
+FlowControl Flusssteuerung
+FluidDrain Flüssigkeitssenke
+FluidSource Flüssigkeitsquelle
+Folder Ordner
+FootPath Fußweg
+Frame Netzwerk
+GanttChart GanttDiagramm
+GAOptimization GAOptimierung
+GARangeAllocation GABereichszuordnung
+GASelection GASelektion
+GASequence GAReihenfolge
+GASetAllocation GAMengenzuordnung
+Generator Generator
+Interface Übergang
+LockoutZone Schutzkreis
+Method Methode
+Mixer Mixer
+InternalClassType [SimTalk]
+Plant Simulation Help 11-737
+Unpublished work. © 2026 Siemens
+Return Value
+English Object Name
+(Information Only
+Respective German Object Name)
+MQTT MQTT
+ODBC ODBC
+OPCClassicInterface OPCClassicSchnittstelle
+OPCUAInterface OPCUASchnittstelle
+Oracle Oracle
+ParallelStation Parallelstation
+Part Fördergut
+PatchMatrix PatchMatrix
+PickAndPlace PickAndPlace
+Pipe Rohr
+PlaceBuffer PlatzPuffer
+Portioner Portionierer
+Report Bericht
+ShiftCalendar Schichtkalender
+SIMIT SIMIT-Schnittstelle
+Socket Socket
+Sorter Sortierer
+Source Quelle
+SQLite SQLite
+Station Einzelstation
+Store Lager
+Tank Tank
+Teamcenter Teamcenter
+TimeSequence Zeitleiste
+Toolbar Symbolleiste
+Track Weg
+Transporter Fahrzeug
+InternalClassType [SimTalk]
+11-738 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Return Value
+English Object Name
+(Information Only
+Respective German Object Name)
+Trigger Trigger
+Turnplate Drehplatte
+Turntable Drehtisch
+TwoLaneTrack ZweispurigerWeg
+Variable Variable
+Worker Werker
+WorkerPool WerkerPool
+Workplace Arbeitsplatz
+XMLInterface XMLSchnittstelle
+Type
+Read-only attribute
+Syntax
+<Path>.InternalClassType → string
+Return Value
+The return value has the data type string.
+Examples
+print MyStation.InternalClassType 
+// returns "Station", works for a Station, which you inserted into a Frame
+print .UserObjects.MyStation.InternalClassType 
+// returns "Station"
+SimTalk
+_3D.InternalClassType [SimTalk]
+typeOf [SimTalk]
+InternalClassType [SimTalk]
+Plant Simulation Help 11-739
+Unpublished work. © 2026 Siemens
+See also
+Show Attributes and Methods [described]
+InternalClassType [SimTalk]
+11-740 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Location [SimTalk] - material flow objects
+Returns the object located directly above the object designated by <Path> in the hierarchy of the objects.
+Remarks
+Instead of Location you can also type the tilde ~.
+The location of the MU is the object on which it is currently located. All other objects return the Frame in
+which they are located as the location.
+Type
+Read-only attribute
+Syntax
+<Path>.Location -> object
+<Path>.~ -> object
+Watchable
+The attribute is watchable.
+Return Value
+The return value has the data type object.
+VOID if the Worker or the AGV are on their way to their destination.
+Location [SimTalk] - material flow objects
+Plant Simulation Help 11-741
+Unpublished work. © 2026 Siemens
+Examples
+print "shaft is located on:", @.Location
+print "shaft is located on:", @.~
+print Preparing.Location -- Preparing is the name of a Conveyor
+-- returns .Models.MyCarAssembly.PaintShop.PaintLine1
+-- PaintLine1 is the name of the Frame
+print Preparing.Location -- Preparing is the name of a Conveyor
+-- returns .Models.MyCarAssembly.PaintShop.PaintLine1
+-- PaintLine1 is the name of the Frame
+print .MUs.Part:9.Location -- location of Part 9
+-- returns .Models.MyCarAssembly.PaintShop.PaintLine1.Preparing
+-- Preparing is the name of a Conveyor
+See also
+Open Location [described]
+ on the Home Ribbon Tab
+LocationInFrame [SimTalk]
+Location [SimTalk] - material flow objects
+11-742 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+NumAttr [SimTalk]
+Returns the number of user-defined attributes of the object designated by <Path>.
+Remarks
+The first user-defined attribute has the number 1.
+Type
+Read-only attribute
+Syntax
+<Path>.NumAttr
+Return Value
+The return value has the data type integer.
+Is 0 if no user-defined attributes exist.
+Example
+var index: integer
+for index := 1 to MyStation.NumAttr 
+    print MyStation.getAttrName(index)
+next
+See also
+User-defined Attributes [general description]
+New [user-defined attribute]
+NumAttr [SimTalk]
+Plant Simulation Help 11-743
+Unpublished work. © 2026 Siemens
+NumChildren [SimTalk]
+Returns the number of children of the object designated by <Path> and which inherit their settings from it.
+Type
+Read-only attribute
+Syntax
+<Path>.NumChildren → integer
+Return Value
+The return value has the data type integer.
+Example
+print MyStation.NumChildren
+print Transporter.NumChildren
+SimTalk
+childNo [SimTalk]
+See also
+Instance [general description]
+NumChildren [SimTalk]
+11-744 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Origin [SimTalk] - general description
+Returns the object from which the object designated by <Path> was derived most recently.
+Remarks
+Compare this example: We copied the object Frame three times and named it Frame1, Frame2,
+and Frame3. Then, we insert Frame1 into Frame2, and Frame2 into Frame3. When we
+call .Frame3.Frame2.Frame1.Origin the result will be .Frame2.Frame1, as .Frame2.Frame1 is the
+object from which .Frame3.Frame2.Frame1 was derived most recently.
+Type
+Read-only attribute
+Syntax
+<Path>.Origin → object
+Return Value
+The return value has the data type object.
+Example
+if local_change
+   current.openDialog
+else
+   current.Origin.openDialog
+end
+SimTalk
+OriginRoot [SimTalk]
+See also
+Show Origin [class library]
+Open Origin [described]
+Go to Origin [described]
+ on the Home Ribbon Tab
+Origin [SimTalk] - general description
+Plant Simulation Help 11-745
+Unpublished work. © 2026 Siemens
+OriginRoot [SimTalk]
+Returns the root object of the inheritance chain if the object designated by <Path> was inherited across
+several levels.
+Type
+Read-only attribute
+Syntax
+<Path>.OriginRoot → object
+Return Value
+The return value has the data type object.
+Example
+print Station2111111.OriginRoot // might return .MaterialFlow.Station2
+SimTalk
+Origin [SimTalk] - general description
+OriginRoot [SimTalk]
+11-746 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+RootFrame [SimTalk]
+Returns the root frame of the object designated by <Path>.
+Remarks
+The root frame is the Frame that is located highest up in the hierarchy of Frames. The root frame is always
+located in a folder.
+Type
+Read-only attribute
+Syntax
+<Path>.RootFrame → object
+Return Value
+The return value has the data type object.
+VOID if no root frame for the object exists. This applies to all classes that are not of type Frame.
+Example
+print MyDialog.RootFrame 
+// might return .Models.Model
+RootFrame [SimTalk]
+Plant Simulation Help 11-747
+Unpublished work. © 2026 Siemens
+UUID [SimTalk]
+Returns the UUID (Universally Unique Identifier) of the object designated by <Path> which it keeps during
+its entire lifetime.
+Type
+Read-only attribute
+Syntax
+<Path>.UUID → string
+Return Value
+The return value has the data type string.
+Example
+print Station.UUID 
+// returns 3daf7c80-9411-4671-966f-f3ecd2c0f478 for example
+See also
+What is a Folder Model?
+Attributes of All Objects
+Attributes of All Objects
+The objects in the Class Library have predefined attributes controlling their behavior or representing their
+state.
+• In the dialog windows of the objects you select or enter settings with the check boxes, the text boxes
+and the drop-down lists on the tabs of the object.
+• In SimTalk you can assign values to the respective attributes.
+For most attributes you can set and get their values.
+• To set the value of an attribute, you might, for example, type:
+MyStation.Pause := true
+UUID [SimTalk]
+11-748 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+• To get the value of an attribute, you might, for example, type:
+print MyStation.Pause
+posit := MyStation.Cont.XPos
+Some attributes are read-only, i.e., you can only get (query) their value. You can filter the displayed
+attributes and methods with the buttons on the toolbar 
+ . The
+filter 
+  shows the read-only attributes.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+See also
+_General Attributes
+_Attributes of the Controls
+_Attributes of User-defined Attributes
+Attributes of All Objects
+Plant Simulation Help 11-749
+Unpublished work. © 2026 Siemens
+Data Held in Tabular Form in Attributes [material flow objects]
+Plant Simulation does not save the data of most of the attributes of data type table in a full-fledged table
+internally.
+If you get the value of such an attribute, the internally held data is copied to a table and Plant Simulation
+returns this table. If you change the returned table, the internal data is not changed! To change the
+internal data of the attribute, assign such a table to the attribute. Then the data is copied to the attribute.
+This applies, for example, to the lists and tables on the tab Exit of the material flow objects, to the tabs
+Exit Strategy and Entry Strategy of the FlowControl and to a number of other tables, which you can open
+by clicking the button Open List/Open Table.
+Example
+var t:table[string,string,integer] 
+t := MyStation.ExitStrategyMUAttributeList
+t.appendRow("Name", "A", 1)                 // the internal data remains 
+unchanged
+MyStation.ExitStrategyMUAttributeList := t  // writes data back to table
+General Attributes
+_General Attributes
+The objects provide the general attributes listed in the table of contents to the left.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+Data Held in Tabular Form in Attributes [material flow objects]
+11-750 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+• To set the value of an attribute, you might, for example, type:
+MyStation.Pause := true
+• To get the value of an attribute, you might, for example, type:
+print MyStation.Pause
+posit := MyStation.Cont.XPos
+_General Attributes
+Plant Simulation Help 11-751
+Unpublished work. © 2026 Siemens
+Coordinate3D [SimTalk] - general description
+Sets the 3D coordinate of the object designated by <Path>.
+Remarks
+The attribute is not inherited.
+You cannot query the value of Coordinate3D for MU instances.
+Type
+Attribute
+Syntax
+<Path>.Coordinate3D:array
+Assignment Value
+You can assign an array of data type length with three values.
+Example
+MyStation.Coordinate3D := [-10, 11, 0]
+print MyStation.Coordinate3D // returns [-10, 11, 0]
+SimTalk
+_3D.inheritAttribute [SimTalk]
+_3D.getPositionOfObject [SimTalk]
+_3D.getWorldCoordinate [SimTalk]
+Coordinate3D [SimTalk] - MUs
+Coordinate3D [SimTalk] - general description
+11-752 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+CreateIn3D [SimTalk]
+Sets if Plant Simulation creates the object designated by <Path> in 3D (true) or not (false) .
+Remarks
+By default, we activated this feature for all simulation-relevant objects, such as the material flow objects,
+the fluid objects, the moving objects, the resource objects, and the tools.
+When you then insert an instance of this object into the 3D Scene, it shows the icon of the object.
+Note
+If you deactivate the attribute for an object class and reactivate it again, Plant Simulation restores the
+built-in state of the object. It discards all changes which you made in the class of the 3D simulation
+object.
+Note
+If the attribute CreateIn3D has the value false in the origin of an object, then the attribute CreateIn3D
+also has the value false in the object itself and cannot be set to true.
+Type
+Attribute
+Syntax
+<Path>.CreateIn3D:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.CreateIn3D := true
+See also
+Show Non-Simulation-Relevant Objects
+CreateIn3D [SimTalk]
+Plant Simulation Help 11-753
+Unpublished work. © 2026 Siemens
+Label [SimTalk]
+Sets the label of the object designated by <Path>.
+Remarks
+You can type in letters, numbers, blanks, and special characters.
+Use the label to display objects with the same functionality with the same identifier in the Frame. The
+Name of the object, on the other hand, has to be unique!
+Plant Simulation shows the label when you select Options > Show Object Labels on the View ribbon tab
+of the Frame.
+Plant Simulation shows the label which you enter for the objects Report, Dialog, AttributeExplorer, and
+Chart in the title bar of their display windows. If you do not enter a label, the title bar shows the name of
+the object.
+The same applies to a toolbar you add to the Toolbox. Select New > Toolbar, then select the toolbar in the
+structure, press F2 and enter a Label into the dialog Rename.
+Type
+Attribute
+Syntax
+<Path>.Label:string
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type string.
+Label [SimTalk]
+11-754 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Example
+print MyStation.Label
+Station1.Label := "Lathe left"
+See also
+Label [general description]
+Label [SimTalk]
+Plant Simulation Help 11-755
+Unpublished work. © 2026 Siemens
+Name [SimTalk] - general description
+Sets the name of the object designated by <Path>.
+Remarks
+The name has to be unique within the name space of the Frame.
+You can specify a combination of letters, digits, and underscore (_) characters, for example MyStation,
+MyStation1, or My_Station_1.
+The name of an object cannot start with a digit, i.e., you cannot specify 1Station.
+Note
+You cannot change the name of the objects EventController and Connector.
+Note
+After renaming the object, you can only address it with the new name.
+Type
+Attribute
+Syntax
+<Path>.Name:string
+Watchable
+The attribute is watchable.
+Assignment Value
+You can assign a value of data type string.
+Example
+print MyStation.Name
+Station1.name := "shaft"
+Name [SimTalk] - general description
+11-756 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+SimTalk
+setName [SimTalk]
+isNameUnique [SimTalk] - identifier
+See also
+Name [general description]
+Namespace
+Name [SimTalk] - general description
+Plant Simulation Help 11-757
+Unpublished work. © 2026 Siemens
+RootFolder [SimTalk] - attribute
+Sets if the anonymous identifier rootFolder takes the folder designated by <Path> into account when
+searching the Class Library (true) or not (false).
+Remarks
+RootFolder sets which folder Plant Simulation uses as the root folder. Plant Simulation adds an upper-case
+R to the icon of the folder 
+  in the Class Library.
+You can also set the RootFolder in the window Show Attributes and Methods.
+Type
+Attribute
+Syntax
+<Path>.RootFolder:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+.ApplicationObjects.Transport.RootFolder := true
+See also
+Set the Root Folder for Your Simulation Model
+rootfolder [SimTalk] - anonymous identifier
+Attributes of the Controls
+_Attributes of the Controls
+Most objects provide some or all of the attributes listed in the table of contents to the left to access
+control methods.
+The data type of the method, which you assign, is method.
+RootFolder [SimTalk] - attribute
+11-758 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+The expressions &Method or PathToMethod.&Method both assign an object reference to a method. Use
+a string to assign the relative path to a method. Specify void to deactivate a control.
+Not all objects provide all controls.
+To view all of the methods, read-only attributes, and attributes of the object, open the window Show
+Attributes and Methods. The figure below illustrates the information using the example of the object
+Station.
+You can:
+• Select Show Attributes and Methods on the context menu of the Class Library to show the methods,
+read-only attributes, and attributes of the selected Class [general description].
+• Press the F8 key or click Show Attributes and Methods on the Home ribbon tab of the Frame into
+which you inserted an instance to show the methods, read-only attributes, and attributes of the
+selected Instance [general description].
+You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes
+and drop-down lists in the dialog windows or by assigning values to the respective attributes.
+To set the value of an attribute, you might, for example, type:
+MyStation.Pause := true
+To get the value of an attribute, you might, for example, type:
+print MyStation.Pause
+posit := MyStation.Cont.XPos
+See also
+Edit Controls [material flow objects]
+_Attributes of the Controls
+Plant Simulation Help 11-759
+Unpublished work. © 2026 Siemens
+AvailableCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever the state of the Exporter or the Worker designated by <Path>
+changes to available.
+Within the control you can use the anonymous identifier ? to access the object that triggered the method.
+Type
+Attribute
+Syntax
+<Path>.AvailableCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyExporter.AvailableCtrl := &myAvailableCtrl
+See also
+Available Control [Exporter]
+AvailableCtrl [SimTalk]
+11-760 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+ChangePathCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation executes the Change Path Control:
+• When the name of the Folder or the Frame designated by <Path> changes. The control is called for all
+objects contained in the Folder or Frame. The anonymous identifier @ points to the renamed object.
+• When you move the Folder or the Frame designated by <Path>. The control is called for all objects
+contained in the Folder or Frame.
+Within the Method you can access the moved object with the anonymous identifier question mark ?.
+Note
+Not each Move action actually moves the object. When you move an object from one Frame to
+another, Plant Simulation deletes the object from its source Frame and creates a new object in the
+target Frame. Specify an empty string "" as the location to interpret this as the top level in the
+hierarchy of objects, as the object basis.
+Type
+Attribute
+Syntax
+<Path>.ChangePathCtrl:method
+Parameters
+Plant Simulation passes three parameters to the Method that is called:
+• The parameter oldPath of data type string designates the previous location of the object.
+• The parameter newPath of data type string designates the new location of the object.
+• The parameter manually of data type boolean indicates if you change the path of the object manually
+(true) or with a Method (false).
+A change path control might look like this:
+param oldPath,newPath: string, manually: boolean
+print oldPath
+ChangePathCtrl [SimTalk]
+Plant Simulation Help 11-761
+Unpublished work. © 2026 Siemens
+print newPath
+print manually
+Assignment Value
+You can assign a value of data type method.
+Example
+ParallelStation.ChangePathCtrl := &myChangePathCtrl
+See also
+Change Path Control
+ChangePathCtrl [SimTalk]
+11-762 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+CloseCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you close the window of the object designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.CloseCtrl:method
+Parameter
+Plant Simulation passes a parameter of data type boolean to the Method that is called. The parameter
+shows if the contents of the object window has changed or not.
+Assignment Value
+You can assign a value of data type method.
+Example
+MyFrame.CloseCtrl := &myCloseCtrl
+See also
+Close Control
+CloseCtrl [SimTalk]
+Plant Simulation Help 11-763
+Unpublished work. © 2026 Siemens
+ConnectCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you connect the object designated by <Path> with another object
+with a Connector and when you delete the connection between two objects.
+Note
+When you insert a Connector, Plant Simulation first calls the Connect Control for the Connector before
+calling the Connect Controls for the objects you are connecting.
+When you delete a Connector, Plant Simulation first calls the Connect control for the connected objects
+before calling the Destructor Control.
+Type
+Attribute
+Syntax
+<Path>.ConnectCtrl:method
+Parameters
+The method has to define three parameters:
+• The parameter predecessor of data type object designates the source object where the connection
+starts.
+• The parameter successor of data type object designates the destination object where the connection
+ends.
+• The parameter connector of data type object indicates if the connection is going to be created or
+deleted. If the Connector is going to be created, it is assigned to the parameter. If the Connector is going
+to be deleted, VOID is assigned.
+Example
+param ConnectionStart, ConnectionEnd: object, 
+ConnectionEstablishedDeleted: boolean
+if ConnectionEstablishedDeleted
+   print "New"
+else
+   print "Deleted"
+end
+ConnectCtrl [SimTalk]
+11-764 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+   print "from:",ConnectionStart," to:",ConnectionEnd
+end
+Note
+If you externally connect an Interface of a Frame, the Interface is passed to the parameter predecessor/
+successor.
+The standard connect control as a user-defined attribute looks like this:
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.ConnectCtrl := &myConnectCtrl
+See also
+Connect Control
+Destructor Control
+ConnectCtrl [SimTalk]
+Plant Simulation Help 11-765
+Unpublished work. © 2026 Siemens
+ConstructorCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you duplicate, derive, or instantiate the object designated by
+<Path> (i.e., insert it into a Frame or a simulation model).
+Type
+Attribute
+Syntax
+<Path>.ConstructorCtrl:method
+Parameter
+If you declare the Constructor Control with the optional parameter onCreate3D of data type boolean, the
+Constructor Control will not only be called for the events described above with false, but a second time
+when the 3D part of an object is created. In this case the parameter is true.
+Note
+The object already exists, when Plant Simulation calls the Constructor Control.
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.ConstructorCtrl := &myConstructorMethod
+See also
+Constructor Control
+ConstructorCtrl [SimTalk]
+11-766 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+DestructorCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you delete the object designated by <Path>. When a Frame
+contains Sub-Frames and objects, Plant Simulation will call Destructor Controls in these Frames as well.
+When the Plant Simulation calls the control of the object, the object still exists.
+Note
+Plant Simulation calls a Connect Control before it calls a Destructor Control.
+Type
+Attribute
+Syntax
+<Path>.DestructorCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.DestructorCtrl := &myDestructorMethod
+See also
+Destructor Control
+Connect Control
+DestructorCtrl [SimTalk]
+Plant Simulation Help 11-767
+Unpublished work. © 2026 Siemens
+DragDropCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method for the object designated by <Path>, which you drag onto another
+object and drop there. The dropped object can be an object or text.
+Note
+You cannot use the Drag-and-drop Control in the Class Library by dragging and dropping an object
+onto another object. The Drag-and-drop Control only works when you drag an object onto another
+object in a Frame and drop it onto another object there.
+Type
+Attribute
+Syntax
+<Path>.DragDropCtrl:method
+Parameter for point-oriented objects
+The standard drag-and-drop control for point-oriented objects looks like this:
+The parameter draggedObjects is an array of data type object that designates the path of the dragged and
+dropped objects.
+Parameters for length-oriented objects
+The standard drag-and-drop control for length-oriented objects looks like this:
+DragDropCtrl [SimTalk]
+11-768 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+• The parameter draggedObjects is an array of data type object and designates the path of the dragged
+and dropped objects.
+• Plant Simulation sets the data types of the optional parameters for length-oriented objects when the
+Drag-and-drop Control is called.
+◦ For a length-oriented object the optional parameter dropPosition of data type length designates the
+position starting at the beginning of the length-oriented object at which the object was dropped.
+◦ For the TwoLaneTrack the optional parameter dropLane of data type string designates the lane on the
+TwoLaneTrack on which the mouse button was released when dropping the object.
+Drag-and-drop Control for Sensors
+A Drag-and-drop Control for creating sensors on a length-oriented object and on a TwoLaneTrack might
+look like this.
+param droppedObjects: object[], dropPosition: any := void, lane: any := 
+void 
+// @,?: drop target
+if lane = void
+   if dropPosition /= void // length-oriented object
+       ?.createSensor(dropPosition, "Length", void, true, false) 
+   end
+else                       // TwoLaneTrack
+   if lane = "A"
+       ?.A.createSensor(dropPosition, "Length", void, true, false)
+   else
+       ?.B.createSensor(dropPosition, "Length", void, true, false)
+   end
+end
+Assignment Value
+You can assign a value of data type method.
+DragDropCtrl [SimTalk]
+Plant Simulation Help 11-769
+Unpublished work. © 2026 Siemens
+Examples
+MyStation.DragDropCtrl := &myDragAndDrop
+param draggedObjects: object[] 
+// one-dimensional array with n objects 
+// the size of which can change
+var obj: object
+// @,?: drop target
+for var i := 1 to draggedObjects.dim
+   obj := draggedObjects[i]
+   // enter your source code here
+   print i, ": ", draggedObjects[i] 
+   // prints the dragged objects to the Console
+next
+See also
+Drag-and-Drop Control
+Use a Drag-and-Drop Control for Several Objects
+DragDropCtrl [SimTalk]
+11-770 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+FailCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever the Failed-state of the object designated by <Path> changes.
+You can change the state in the dialog box of the object by selecting 
+  or by assigning the value true
+or false to the attribute Failed.
+Within the control you can use the anonymous identifier question mark ? to access the object which
+triggered the control.
+Type
+Attribute
+Syntax
+<Path>.FailCtrl:method
+Parameters
+Plant Simulation passes two optional parameters to the Method that is called:
+• The optional parameter FailureStartEnd of data type boolean indicates if the failures starts (true) or
+ends (false).
+• The optional parameter FailureProfileName of data type string designates the name of the failure profile
+that caused the failure.
+Note
+If the Fail Control declares both parameters, it will not only be called when the object changes to the
+Failed-state or when the Failed-state ends, but also each time when a failure profile is failed or when
+the failure is removed.
+Let’s say failure profile 1 is already failed, and then you also fail failure profile 2 in addition, then the Fail
+Control will still be called, although the object remains in the Failed-state.
+Note
+A Fail Control, which does not expect a parameter or only expects a single parameter, will only be called
+if the state of the object actually changes, meaning it will not be called when another failure profile is
+already failed. A Fail Control, which expects the name of the failure profile as the second parameter,
+will, by contrast, always be called when a failure profile is failed or when the failure is removed.
+FailCtrl [SimTalk]
+Plant Simulation Help 11-771
+Unpublished work. © 2026 Siemens
+Assignment Value
+You can assign a value of data type method.
+Example
+.MUs.Transporter.FailCtrl := &myFailCtrl
+if ?.failed 
+    if ?.occupied and (NOT ?.cont.finished) 
+        ?.imp.releaseExporters
+    end
+else
+    if ?.occupied and (NOT ?.cont.finished) 
+        ?.imp.import
+    end
+end
+See also
+Fail Control [material flow objects]
+Failed [state - material flow objects]
+Failed [check box] - material flow objects
+Failed [check box] - material flow objects
+FailCtrl [SimTalk]
+11-772 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+InitCtrl [SimTalk] - general description
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method once at the beginning of the simulation run during the init phase. It is
+called before the object designated by <Path> is initialized and before the init controls are being executed.
+Within the Init Control you can, for example, initialize the Transporter with suitable values and assign
+user-defined attributes or change the Workers to Create table of the WorkerPool for the next simulation
+run. This cannot be accomplished in an init method as this method would be called too late in time.
+You can also initialize attributes which affect event generation, for example the Availability. Here the Init
+Controls are executed before events are computed. The normal init methods are executed after the initial
+events have been computed.
+Type
+Attribute
+Syntax
+<Path>.InitCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+.MUs.Transporter.InitCtrl := &myInitCtrl
+M1.setupFor("C",false)
+M2.setupFor("B",false)
+M3.setupFor("A",false)
+M1._3D.getObject("SetupType").setGraphicMaterial([1], 
+~.UserObjects.C._3D.MaterialDiffuseColor, 0, 0, 0, 0, 0)
+M2._3D.getObject("SetupType").setGraphicMaterial([1], 
+~.UserObjects.B._3D.MaterialDiffuseColor, 0, 0, 0, 0, 0)
+M3._3D.getObject("SetupType").setGraphicMaterial([1], 
+~.UserObjects.A._3D.MaterialDiffuseColor, 0, 0, 0, 0, 0)
+InitCtrl [SimTalk] - general description
+Plant Simulation Help 11-773
+Unpublished work. © 2026 Siemens
+SimTalk
+init [SimTalk] - predefined name
+See also
+Init Control [general description]
+Init Control [Transporter]
+Init Control [EventController]
+Init Control [WorkerPool]
+Workers to Create
+InitCtrl [SimTalk] - general description
+11-774 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+MoveInFrameCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when the object designated by <Path> actually changes the position in
+the Frame into which you inserted it, meaning that it is moved within its Frame.
+Within the control you can access the moved object with the anonymous identifier question mark ?.
+Type
+Attribute
+Syntax
+<Path>.MoveInFrameCtrl:method
+Parameters
+Plant Simulation passes two parameters to the Method that is called:
+• The parameter old is an array of data type length with three parameters. They designate the x-
+coordinate, the y-coordinate, and the z-coordinate of the previous position of the object in the Frame.
+• The parameter new is an array of data type length with three parameters. They designate the x-
+coordinate, the y-coordinate, and the z-coordinate of the new position of the object in the Frame.
+Assignment Value
+You can assign a value of data type method.
+Examples
+MyStation.MoveInFrameCtrl := &myMoveInFrameCtrl
+param old, new: length[3]
+print "xv:",previous[1]," yv:",previous[2]," zv:",previous[3], 
+"xn:",new[1]," yn:",new[2]," zn:",new[3]
+See also
+Move in Frame Control
+MoveInFrameCtrl [SimTalk]
+Plant Simulation Help 11-775
+Unpublished work. © 2026 Siemens
+MoveToFolderCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you move the object designated by <Path> from a folder or a
+Frame to a different folder.
+Within the control you can access the moved object with the anonymous identifier question mark ? and the
+new location with the anonymous identifier @.
+Type
+Attribute
+Syntax
+<Path>.MoveToFolderCtrl:method
+Parameters
+Plant Simulation passes three parameters to the Method that is called:
+• The parameter oldFolder of data type string designates the previous location (Frame or folder) of the
+object.
+• The parameter newFolder of data type string designates the new location of the object.
+• The parameter manually of data type boolean shows the user if the object is manually moved to a folder
+(true) or with a Method (false).
+Assignment Value
+You can assign a value of data type method.
+Examples
+MySource.MoveToFolderCtrl := &MoveToFolderCtrl
+param oldFolder, newFolder: string, manually: boolean
+// @: new folder
+// ?: moved object
+// ?: the object for which the control was called 
+MoveToFolderCtrl [SimTalk]
+11-776 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+See also
+Move to Folder Control
+MoveToFolderCtrl [SimTalk]
+Plant Simulation Help 11-777
+Unpublished work. © 2026 Siemens
+NotAvailableCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever the state of the Exporter or the Worker designated by <Path>
+changes to not available.
+Within the control you can use the anonymous identifier ? to access the object that triggered the control.
+Type
+Attribute
+Syntax
+<Path>.NotAvailableCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyExporter.NotAvailableCtrl := &myNotAvailableCtrl
+See also
+Not Available Control [Exporter]
+NotAvailableCtrl [SimTalk]
+11-778 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+OpenCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation does not open the dialog of the object though, but calls and runs the source code of the
+Open Control. Opening the dialog box is now completely controlled by the source code you specified.
+Note
+If Plant Simulation cannot open the dialog of the object any longer because of a faulty Method, create
+another Method and open the object from there with the method openDialog.
+If you use a user-defined attribute of data type method as the Open Control, and if this Method is
+encrypted, you cannot open the respective object any longer. Only the Open Control itself, and any other
+Method that has been encrypted with the same password as the Open Control, can open the object.
+If you specified an Open Control for a subtable, and if you then try to open this subtable, Plant Simulation
+runs the control without opening the subtable. This also applies to tables that are part of the object
+Variable. This also applies to an object of data type table which you inserted into a Frame.
+To prevent the Open Control from being executed, hold down Alt while double-clicking the icon of the
+object. Instead, you can also select the command Open Without Control on the context menu of the
+object in the Frame.
+When you click the button Open Location 
+  or Open Origin 
+  on the Home Ribbon Tab, you can hold
+down the Alt key while you click the button to prevent the Open Control of the class or of the origin to be
+executed respectively.
+Note
+To prevent the Open Control from being bypassed by holding down the Alt key, you can use an
+encrypted user-defined attribute of data type method as the Open Control.
+If you want to remove the Open Control, you have to decrypt the Method beforehand. As you cannot
+open the object in the regular way, you can accomplish this with one of these procedures:
+• Decrypt the model as a whole, this also decrypts all Open Controls.
+• Click Stop on Controls on the Debugger ribbon tab and then double-click the object. This opens the
+Debugger for the Open Control. Select the menu command Tools > Decrypt.
+• Call the method decrypt. You might, for example, specify
+Frame5.OnOpen.decrypt("MyPassword123")
+OpenCtrl [SimTalk]
+Plant Simulation Help 11-779
+Unpublished work. © 2026 Siemens
+Note
+If you specify a user-defined attribute of data type method which you encrypted, you cannot delete or
+rename the attribute any longer. You have to decrypt the Method beforehand.
+Note
+If you open an object from the Method Debugger window, Plant Simulation will not execute the Open
+Control. This applies, for example, when you select Open Object on the context menu, or when you
+click Open Location 
+  or Open Origin 
+ .
+Type
+Attribute
+Syntax
+<Path>.OpenCtrl:method
+Parameters for all Objects Except for DataList and DataTable
+You can declare these parameters:
+• If you declare the Open Control with the parameter from3D of data type boolean, the value of the
+parameter will be set to true, if the object is opened from within a 3D window.
+• If you declare the Open Control with the parameter inLockedFolder of data type boolean, the value of
+the parameter will be set to true, if the object is located within a locked library or a locked folder. If you
+do not declare the parameter, i.e., the Open Control expects none or only one parameter, and if the
+object to be opened is located within a locked library or a locked folder, the Open Control will not be
+called. Instead, Plant Simulation shows an error message letting you know that you are not allowed to
+modify the object.
+Assignment Value
+You can assign a value of data type method.
+Examples
+MyStation.OpenCtrl := VOID // delete entry
+MyParallelStation.OpenCtrl := &myOpenControl
+param from3D: boolean
+var passwordHash:string := computeSHA1Hash(prompt("Password:"))
+if passwordHash = "686483805ac47ca14e03514f7481a7973b401762" 
+OpenCtrl [SimTalk]
+11-780 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+// password "abc" specified?
+if from3D 
+   ?._3D.openWindow
+else
+   ?.openDialog
+end
+param from3D, inLockedFolder: boolean
+if inLockedFolder
+   if messageBox("The object is inside a locked folder."+strChr(10)+"Do you 
+want to open the object anyway?", 48, 2) = 32 // "No"?
+       return
+   end
+end
+?.openDialog
+See also
+Open Control
+OpenCtrl [SimTalk]
+Plant Simulation Help 11-781
+Unpublished work. © 2026 Siemens
+PauseCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever you change the paused state of the object designated by
+<Path>, when you either select an entry in the drop-down list Paused/Planned/Unplanned 
+  or
+you assign another value to the attribute Pause.
+When you get the paused state within the Method, it shows the state after the change.
+The standard pause control as a user-defined attribute looks like this:
+Type
+Attribute
+Syntax
+<Path>.PauseCtrl:method
+Parameters
+You can specify the following parameters:
+• The parameter Duration of data type real sets the length of the pause. If the length of the pause is
+unknown, Plant Simulation passes -1. The same happens when the control is called at the end of the
+pause.
+• The parameter NewValue of data type boolean sets that the control will only be called if the
+ShiftCalendar changes the state of the object.
+In addition, the object will not be put in the desired state. The Pause Control has to do this. The desired
+value is passed in the parameter NewValue.
+The part still can be processed in its entirety before the object changes to the state paused.
+Within the control you can access the paused object with the anonymous identifier ?.
+PauseCtrl [SimTalk]
+11-782 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Note
+If the Pause Control has the parameters listed above, then the ShiftCalendar will not automatically
+change the state paused. This is useful to complete processing of a part and then pause the shift
+manually by setting the attribute Pause of the object to true.
+Compare this example:
+param Duration: real, NewValue: boolean
+if ?.Cont /= void
+   wait ?.Cont.RemainingProcTime
+end
+?.Pause := NewValue
+Note
+If the Pause Control does not have any parameters, Plant Simulation always calls the Pause Control
+when the state paused changes.
+If the Pause Control has the parameters listed above, Plant Simulation only calls the Pause Control
+when the state paused is changed by the ShiftCalendar. This prevents that the Pause Control calls itself
+when the paused state is set manually.
+Assignment Value
+You can assign a value of data type method.
+Examples
+Transporter.PauseCtrl := &myPauseCtrl
+print "Current pause ", current.pause
+MyStation.pause := current.pause
+var shift := root.ShiftCalendar.GetCurrShift
+print "Current shift: ", shift
+   
+if not current.unplanned 
+       
+if current.pause
+   current.currIcon := "pause"
+else
+   current.currIcon := "working"
+end
+PauseCtrl [SimTalk]
+Plant Simulation Help 11-783
+Unpublished work. © 2026 Siemens
+See also
+Paused [state, material flow objects]
+Pause [SimTalk] - material flow objects
+Pause Control [material flow objects]
+Pause Control [Transporter]
+PauseCtrl [SimTalk]
+11-784 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+PermitDeleteCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Note
+The Permit Delete Control only applies to the Frame and to the Folder.
+Plant Simulation calls Method for the Frame or the Folder designated by <Path>, when you attempt to
+delete the object for which you programmed the control.
+• If the method returns false, Plant Simulation does not delete the object.
+• If the method returns true, Plant Simulation deletes the object and calls a Destructor Control method,
+provided you entered one.
+Type
+Attribute
+Syntax
+<Path>.PermitDeleteCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+Frame.PermitDeleteCtrl := &myPermitDeleteCtrl
+See also
+Permit Delete Control
+Destructor Control
+PermitDeleteCtrl [SimTalk]
+Plant Simulation Help 11-785
+Unpublished work. © 2026 Siemens
+PlausibilityCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you click OK or Apply in the dialog of the object designated by
+<Path> or in the windows of list objects to apply the changes you made there.
+At this point in time the control checks if the entries are plausible, or it interprets them.
+Type
+Attribute
+Syntax
+<Path>.PlausibilityCtrl:method
+Parameters for Lists and Tables
+You can declare these parameters:
+• If the Plausibility Control has no parameters, Plant Simulation only calls it, when you close the list or
+table after making a change. Plant Simulation also considers loading a file into a table as a change. This
+way Plant Simulation can check the entry and display an error message if the entry was wrong.
+• If the Plausibility Control has two optional parameters of data type integer, Plant Simulation also calls
+the control after you edited a cell.
+The parameter ColumnNumber of data type integer designates the column number of the edited cell.
+The parameter RowNumber of data type integer designates the row number of the edited cell.
+When you close the list or table, which you changed, or when you make any changes in any cell, Plant
+Simulation calls the Plausibility Control with the values-1 for the column and -1 for the row.
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.PlausibilityCtrl := &myPlausibilityCtrl
+param column,row: integer
+switch column
+PlausibilityCtrl [SimTalk]
+11-786 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+case 1 
+// column-specific action
+end
+See also
+Plausibility Control
+PlausibilityCtrl [SimTalk]
+Plant Simulation Help 11-787
+Unpublished work. © 2026 Siemens
+RelabelCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever you change the Label 
+  of
+the object designated by <Path>.
+Plant Simulation first calls the control for the relabeled object and then for the inheriting objects.
+Type
+Attribute
+Syntax
+<Path>.RelabelCtrl:method
+Parameters
+Plant Simulation passes three parameters to the Method that is called:
+• The parameter CurrentLabel of data type string designates the current label of the object.
+• The parameter NewLabel of data type string designates the new label.
+• The parameter ManualRename of data type boolean indicates if the object is relabeled by the user
+(true) or by assigning a value to the attribute Label (false).
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.RelabelCtrl := void
+param CurrentLabel, NewLabel: string, ManualRename: boolean
+print currentLabel
+print newLabel
+print manualRename
+RelabelCtrl [SimTalk]
+11-788 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+See also
+Relabel Control
+Label [general description]
+Label [SimTalk]
+RelabelCtrl [SimTalk]
+Plant Simulation Help 11-789
+Unpublished work. © 2026 Siemens
+RenameCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you change the Name 
+  of the
+object designated by <Path>.
+Plant Simulation calls the control first for the renamed object and then for the inheriting objects.
+Type
+Attribute
+Syntax
+<Path>.RenameCtrl:method
+Parameters
+Plant Simulation passes three parameters to the Method that is called:
+• The parameter CurrentName of data type string designates the current name of the object.
+• The parameter NewName of data type string designates the new name of the object.
+• The parameter ManualRename of data type boolean indicates if the object is renamed by the user (true)
+or by assigning a value to the attribute Name (false).
+Note
+Plant Simulation does not call the control when you insert the object into a Frame and then assign it a
+different name.
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.RenameCtrl := &myRenameCtrl
+param CurrentName, NewName: string, ManualRename: boolean
+print CurrentName
+RenameCtrl [SimTalk]
+11-790 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+print NewName
+print ManualRename
+See also
+Rename Control
+Name [general description]
+Name [SimTalk] - general description
+RenameCtrl [SimTalk]
+Plant Simulation Help 11-791
+Unpublished work. © 2026 Siemens
+SelectCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method when you click the object designated by <Path> with the left mouse
+button. Plant Simulation then does not select the object.
+Instead, the control you entered has to take the appropriate actions, for example by opening the object, or
+by confirming the selection with the attribute Selected, etc.
+3D models also support the Select Control. Plant Simulation calls the Method when the user clicks the
+mouse button. You can prevent calling the method by holding down the Ctrl key when clicking the mouse
+button.
+Type
+Attribute
+Syntax
+<Path>.SelectCtrl:method
+Assignment Value
+You can assign a value of data type method.
+Example
+MyStation.SelectCtrl := .Tools.&mySelectCtrl
+print @.Selected
+@.Selected := true
+See also
+Select Control
+_3D.Selected [SimTalk]
+SelectCtrl [SimTalk]
+11-792 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+UnplannedCtrl [SimTalk]
+Designates a Method object of the object designated by <Path>.
+Remarks
+Plant Simulation calls the Method whenever the Unplanned state of the object designated by <Path>
+changes, i.e., whether the object is not scheduled to work during the time, which you typed into the
+ShiftCalendar or whether it is scheduled to work.
+You can change the state in the dialog of the object by selecting an entry in the drop-down list Paused/
+Planned/Unplanned 
+  or by assigning another value to the attribute Unplanned.
+Note
+The ShiftCalendar uses the attribute Unplanned to designate the time period during which the object is
+not planned to work during a shift.
+Type
+Attribute
+Syntax
+<Path>.UnplannedCtrl:method
+Parameters
+You can specify the following parameters:
+• The parameter Duration of data type real sets the length of the shift pause. If the length of the shift
+pause is unknown, Plant Simulation passes -1, as well as when the control is called at the end of the
+shift pause.
+• The parameter NewValue of data type boolean sets that controls will only be called if the ShiftCalendar
+changes the state of the object.
+In addition the object will not be put in the desired state. The Unplanned Control has to do this. The
+desired value is passed in the parameter NewValue.
+The part still can be processed in its entirety before the object changes to the state unplanned.
+Within the control you can access the object with the anonymous identifier ?.
+UnplannedCtrl [SimTalk]
+Plant Simulation Help 11-793
+Unpublished work. © 2026 Siemens
+Note
+If the unplanned control has the parameters listed above, then the ShiftCalendar will not automatically
+change the state unplanned. This is useful to complete processing of a part and then end the shift
+manually by setting the attribute Unplanned of the object to true.
+Compare this example:
+param Duration: real, NewValue: boolean
+if ?.Cont /= void
+   wait ?.Cont.RemainingProcTime
+end
+?.Unplanned := NewValue
+Note
+If the Unplanned Control does not have any parameters, Plant Simulation always calls the Unplanned
+Control when the state unplanned changes.
+If the Unplanned Control has the parameters listed above, Plant Simulation only calls the Unplanned
+Control when the state unplanned is changed by the ShiftCalendar. This prevents that the Unplanned
+Control calls itself when the state unplanned is set manually.
+The standard unplanned control as a user-defined attribute looks like this:
+Assignment Value
+You can assign a value of data type method.
+Examples
+MyStation.SelectCtrl := &myUnplannedCtrl
+print "Frame unplanned: ", current.unplanned
+MyStation.unplanned := current.unplanned
+if current.unplanned 
+   current.currIcon := "unplanned"
+else
+   if current.pause 
+UnplannedCtrl [SimTalk]
+11-794 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+      current.currIcon := "pause"
+   else
+      current.currIcon := "working"
+   end
+end
+See also
+Unplanned Control
+Unplanned [state, material flow objects]
+Unplanned [SimTalk] - material flow objects
+Attributes of User-defined Attributes
+_Attributes of User-defined Attributes
+The objects provide the attributes listed in the table of contents to the left for working with their user-
+defined attributes, which you define on the tab User-defined.
+Plant Simulation addresses the attributes of user-defined attributes as sub-attributes of the respective
+user-defined attribute.
+MyStation.myAttribute.Alignment := "Left"
+The window Show Attributes and Methods shows the user-defined attribute itself and its value.
+See also
+User-defined Attributes [general description]
+Create a User-defined Attribute Manually
+Create a User-defined Attribute During the Simulation
+Attributes of User-defined Attributes
+Plant Simulation Help 11-795
+Unpublished work. © 2026 Siemens
+_Methods of User-defined Attributes
+_Attributes of User-defined Attributes
+11-796 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Alignment [SimTalk] - user-defined attribute
+Sets the Alignment of the specified user-defined attribute of the object designated by <Path> with its
+insertion point.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Alignment:string
+Assignment Value
+You can assign a value of data type string.
+You can specify "Left", "Name", "Value", or "Right".
+Example
+MyStation.myAttribute.Alignment := "Left"
+See also
+Alignment [user-defined attribute]
+Alignment [SimTalk] - user-defined attribute
+Plant Simulation Help 11-797
+Unpublished work. © 2026 Siemens
+asString [SimTalk] - user-defined attribute
+Returns the value of the user-defined attribute as a string.
+Remarks
+Having the value as a string is especially useful for user-defined attributes of data type object. If the
+user-defined attribute contains a relative path, asString returns the relative path.
+Type
+Read-only attribute
+Syntax
+<Path>.<UserDefinedAttribute>.asString → string
+Return Value
+The return value has the data type string.
+Example
+Station5.ObjAttribute := "~.ProdMgr.prodplan" 
+var a1 := Station5.ObjAttribute              // 
+assigns .Models.Model.ProdMgr.prodplan
+var a2 := Station5.&ObjAttribute.asString    // assigns "~.ProdMgr.prodplan"
+See also
+User-defined Attributes [general description]
+asString [SimTalk] - user-defined attribute
+11-798 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+BackgroundColor [SimTalk] - user-defined attribute
+Sets the background color of the user-defined attribute of the object designated by <Path> in 3D.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.BackgroundColor:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyStation.myAttribute.BackgroundColor := makeRGBValue(100,100,100)
+MyStation.myAttribute.BackgroundColor := 6579300 // is the same as the 
+color above
+SimTalk
+makeRGBValue [SimTalk]
+Color [SimTalk] - user-defined attribute
+BackgroundColor [SimTalk] - user-defined attribute
+Plant Simulation Help 11-799
+Unpublished work. © 2026 Siemens
+Color [SimTalk] - user-defined attribute
+Sets the color for displaying the values which the user-defined attribute of the object designated by <Path>
+visualizes in 3D.
+Remarks
+Set the RGB values of the color with the method makeRGBValue.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Color:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyStation.myAttribute.Color := makeRGBValue(0,255,0)
+SimTalk
+makeRGBValue [SimTalk]
+See also
+Font Color [user-defined attribute]
+Color [SimTalk] - user-defined attribute
+11-800 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+DataType [SimTalk] - user-defined attribute
+Sets the data type of a non-inherited user-defined attribute of the object designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.DataType:string
+Assignment Value
+You can assign a value of data type string.
+Example
+MyStation.myAttribute.DataType := "String"
+SimTalk
+getAttrType [SimTalk]
+setAttrType [SimTalk]
+DataType [SimTalk] - user-defined attribute
+Plant Simulation Help 11-801
+Unpublished work. © 2026 Siemens
+See also
+User-defined Attributes [general description]
+New [user-defined attribute]
+DataType [SimTalk] - user-defined attribute
+11-802 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+DecimalPlaces [SimTalk] - user-defined attribute
+Sets the number of decimal places which the specified user-defined attribute of the object designated by
+<Path> shows in 3D.
+Remarks
+The user-defined attribute can show up to 15 decimal places. The default setting -1 shows all existing
+places.
+Specify a positive value to show the number of decimal places, which you entered, in the Frame.
+Note
+This setting only applies to the Data Types > real, length, money, weight, time, speed, and
+acceleration.
+The number of decimal places for the data type time affects values differently than for the data type real.
+The value -1 for the data type time means that the default time display format is displayed with four
+decimal places. A positive value means that Plant Simulation shows the number of decimal places that you
+entered at most.
+Type
+Attribute
+Syntax
+Path.<UserDefinedAttribute>.DecimalPlaces:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyStation.myAttribute.DecimalPlaces := 8
+SimTalk
+& [SimTalk] - Variable
+DecimalPlaces [SimTalk] - user-defined attribute
+Plant Simulation Help 11-803
+Unpublished work. © 2026 Siemens
+See also
+Data Type [user-defined attribute]
+Decimal Places [text box] - Variable
+DecimalPlaces [SimTalk] - user-defined attribute
+11-804 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Font [SimTalk] - user-defined attribute
+Sets the font size of the text of the user-defined attribute of the object designated by <Path> in 3D.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Font:integer
+Assignment Value
+You can assign a value of data type integer.
+You can specify 1 for Small, 2 for Medium, 3 for Large, or4 for Extra Large.
+Example
+MyStation.myAttribute.Font := 2
+See also
+Font Size [user-defined attribute]
+Font [SimTalk] - user-defined attribute
+Plant Simulation Help 11-805
+Unpublished work. © 2026 Siemens
+HasInitValue [SimTalk] - user-defined attribute
+Sets if the user-defined attribute of the object designated by <Path> has an initial value (true) or not
+(false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.HasInitValue:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.DataType := "integer"
+MyStation.myAttribute.HasInitValue := true
+SimTalk
+inheritAttribute [SimTalk] - user-defined attribute
+getAttribute [SimTalk] - user-defined attribute
+setAttribute [SimTalk] - user-defined attribute
+See also
+Initial Value [user-defined attribute]
+HasInitValue [SimTalk] - user-defined attribute
+11-806 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+InitValue [SimTalk] - user-defined attribute
+Resets a value, which the user-defined attribute of the object designated by <Path> recorded during a
+simulation run.
+Remarks
+Plant Simulation resets the value during the reset and the init phase of the next simulation run.
+Note
+For the data types table, list, stack, queue, randTime, and method you cannot specify an Initial Value.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.InitValue:any
+Assignment Value
+You can assign a value of data type any.
+Example
+MyStation.myAttribute.DataType := "integer"
+MyStation.myAttribute.InitValue := 12
+SimTalk
+HasInitValue [SimTalk] - user-defined attribute
+inheritAttribute [SimTalk] - user-defined attribute
+getAttribute [SimTalk] - user-defined attribute
+setAttribute [SimTalk] - user-defined attribute
+See also
+Initial Value [user-defined attribute]
+InitValue [SimTalk] - user-defined attribute
+Plant Simulation Help 11-807
+Unpublished work. © 2026 Siemens
+IntegerPlaces [SimTalk] - user-defined attribute
+Sets the number of integer places, which the user-defined attribute of the object designated by <Path>
+shows in 3D.
+Remarks
+The user-defined attribute can show up to 15 integer places.
+The default setting -1 means that Plant Simulation applies no minimum on the number of integer places.
+Specify a positive value to fill up the space before the decimal point with blank spaces until the specified
+number of places has been reached if the user-defined attribute is shown in 3D.
+Note
+This setting only applies to the Data Types > integer, real, length, money, weight, time, speed,
+acceleration, and randTime.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.IntegerPlaces:integer
+Assignment Value
+You can assign a value of data type integer.
+Example
+MyStation.myAttribute.IntegerPlaces := 6
+-- The value "123"     will show as "   123"
+-- The value "123456"  will show as "123456"
+-- The value "1234567" will show as "1234567"
+See also
+Decimal Places [text box] - Display
+Data Type [user-defined attribute]
+IntegerPlaces [SimTalk] - user-defined attribute
+11-808 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Name [SimTalk] - user-defined attribute
+Sets the name of a not-inherited user-defined attribute of the object designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Name
+Assignment Value
+You can assign a value of data type string.
+Example
+MyStation.myAttribute.Name := "MyNewName"
+See also
+Tab User-defined
+New [user-defined attribute]
+Name [user-defined attribute]
+Name [SimTalk] - user-defined attribute
+Plant Simulation Help 11-809
+Unpublished work. © 2026 Siemens
+Position [SimTalk] - user-defined attribute
+Sets the position of the user-defined attribute of the object designated by <Path>.
+Remarks
+The position does not apply to MU instances and to Connector instances.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Position:length[3]
+Assignment Value
+You can assign an array with three values of data type length.
+The values specify the position on the X-axis, the Y-axis, and the Z-axis.
+Example
+MyStation.myAttribute.Position := [5,3,0]
+See also
+Settings for the Position [user-defined attribute]
+Position [SimTalk] - user-defined attribute
+11-810 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+Rotation [SimTalk] - user-defined attribute
+Sets the rotation of the user-defined attribute of the object designated by <Path>.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Scale:real/real[4]
+Assignment Value
+You can specify:
+• A number which defines the rotation around the negative z-axis at the position at which you inserted
+the object.
+• An array with four items, which defines the rotation around the specified axis (values 2 to 4) at the
+position at which you inserted the object.
+If you get the attribute, Plant Simulation returns an array with four items.
+Examples
+var a : any := MyStation.myAttribute.Rotation
+// returns an array of 4 values
+MyStation.myAttribute.Rotation := 30
+// rotates the user-defined attribute by 30 degrees
+MyStation.myAttribute.Rotation := [45, 0, 1, 0]
+// rotates the user-defined attribute by 45 degrees around the Y axis
+See also
+Settings for the Rotation [user-defined attribute]
+Rotation [SimTalk] - user-defined attribute
+Plant Simulation Help 11-811
+Unpublished work. © 2026 Siemens
+Scale [SimTalk] - user-defined attribute
+Sets the scaling of the user-defined attribute of the object designated by <Path>.
+Remarks
+Scaling does not apply to Connectors.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Scale:real/real[3]
+Assignment Value
+You can assign a value of data type real to achieve uniform scaling.
+You can also assign an array with three values of data type real to use different scaling factors for the three
+axes.
+Examples
+MyStation.myAttribute.Scale := 1           // uniform scaling
+MyStation.myAttribute.Scale := [1, 4, 9]   // different scaling factors for 
+the x-axis, y-axis and z-axis
+See also
+Settings for the Scale [transformation]
+Scale [SimTalk] - user-defined attribute
+11-812 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+ShowDataType [SimTalk] - user-defined attribute
+Shows the data type of the user-defined attribute of the object designated by <Path> in the 3D Frame, into
+which you inserted the object to which it belongs (true) or hides it (false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowDataType:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.ShowDataType := false
+See also
+Show Data Type [user-defined attribute]
+ShowDataType [SimTalk] - user-defined attribute
+Plant Simulation Help 11-813
+Unpublished work. © 2026 Siemens
+ShowExternally [SimTalk] - user-defined attribute
+Shows the user-defined attribute of the object designated by <Path> in the outside representation of the
+object (true) or not (false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowExternally:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify false to show the user-defined attribute in the inside representation of the object to which it
+belongs. This is the view that Plant Simulation shows when you open the object with the commands Open
+in 3D or Open.
+Example
+MyStation.myAttribute.ShowExternally := false
+See also
+Show Externally
+Open in 3D [object class]
+Open [simulation object]
+ShowExternally [SimTalk] - user-defined attribute
+11-814 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+ShowIn3D [SimTalk] - user-defined attribute
+Shows the user-defined attribute of the object designated by <Path> in 3D (true) or hides it (false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowIn3D:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.ShowIn3D := true
+See also
+Show in 3D [user-defined attribute]
+ShowIn3D [SimTalk] - user-defined attribute
+Plant Simulation Help 11-815
+Unpublished work. © 2026 Siemens
+ShowInTooltip [SimTalk]
+Shows the Name and the Value of the user-defined attribute in the tooltip of the object, when you hover
+the mouse of the object.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowInTooltip:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.ShowInTooltip := true
+See also
+Show in Tooltip
+Name [SimTalk] - user-defined attribute
+setAttrValue [SimTalk]
+ShowInTooltip [SimTalk]
+11-816 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+ShowName [SimTalk] - user-defined attribute
+Shows the name of the user-defined attribute of the object designated by <Path> (true) or hides it
+(false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowName:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.ShowName := true
+See also
+Show Name [user-defined attribute]
+ShowName [SimTalk] - user-defined attribute
+Plant Simulation Help 11-817
+Unpublished work. © 2026 Siemens
+ShowUnit [SimTalk] - user-defined attribute
+Sets if the user-defined attribute of the object designated by <Path> shows the units of the values (true)
+or not (false) in the Frame into which you inserted it.
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.ShowUnit:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.ShowUnit := true
+See also
+Show Units [user-defined attribute]
+ShowUnit [SimTalk] - user-defined attribute
+11-818 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+StatisticsActive [SimTalk] - user-defined attribute
+Sets if the user-defined attribute of the object designated by <Path> collects statistics values (true) or not
+(false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.StatisticsActive:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Example
+MyStation.myAttribute.StatisticsActive := true
+See also
+User-defined Attributes [general description]
+Active [check box] - user-defined attribute
+StatisticsActive [SimTalk] - user-defined attribute
+Plant Simulation Help 11-819
+Unpublished work. © 2026 Siemens
+Transparent [SimTalk] - user-defined attribute
+Makes the background of the user-defined attribute of the object designated by <Path> transparent in 3D
+(true) or not transparent (false).
+Type
+Attribute
+Syntax
+<Path>.<UserDefinedAttribute>.Transparent:boolean
+Assignment Value
+You can assign a value of data type boolean.
+Specify true to show the space around the text in the color of the background of the Frame.
+Specify false to show the space around the text in white.
+Example
+MyStation.myAttribute.Transparent := true
+See also
+Transparent [user-defined attribute]
+Methods of the Material Flow Objects
+Methods of the Material Flow Objects
+All material flow objects share the methods described below. The sub-chapters about the objects list
+additional methods for these objects.
+A method
+• gets information from an object and returns a value.
+• computes a value.
+• starts one or several actions that control the behavior of the object.
+Transparent [SimTalk] - user-defined attribute
+11-820 Plant Simulation Help
+Unpublished work. © 2026 Siemens
