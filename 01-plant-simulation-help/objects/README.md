@@ -6,6 +6,9 @@
 
 | 子目录 | 说明 |
 |---|---|
+| `common-attributes` | 对象的通用属性（Common Attributes）—— 所有对象共有的属性，包括通用属性、控件属性、用户自定义属性等。 |
+| `common-methods` | 对象的通用方法（Common Methods）—— 所有对象共有的方法，包括通用方法、对象图标方法、继承管理方法、属性管理方法等。 |
+| `common-read-only-attributes` | 对象的通用只读属性（Common Read-Only Attributes）—— 所有对象共有的只读属性，如 `Class`、`InternalClassType`、`UUID`、`Origin` 等。 |
 | `fluid-objects` | 流体对象（fluid-objects） |
 | `information-flow-objects` | 信息流对象（information-flow-objects） |
 | `material-flow-objects` | 物料流对象（material-flow-objects） |
