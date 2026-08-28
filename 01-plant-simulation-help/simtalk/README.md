@@ -1,28 +1,31 @@
-# SimTalk（SimTalk 编程语言）目录总结
+# SimTalk (SimTalk Programming Language) — Table of Contents
 
-本目录是 Plant Simulation 帮助文档中 **SimTalk**（SimTalk 编程语言）相关内容的分类目录，包含以下子主题，每个子主题均有独立的 `README.md` 总结。
+This directory is a categorized index of the **SimTalk** (SimTalk programming
+language) content in the Plant Simulation Help. Each subtopic has its own
+`README.md` summary.
 
-## 子目录一览
+## Subdirectories
 
-| 子目录 | 内容 |
+| Subdirectory | Content |
 |---|---|
-| `language-fundamentals` | 语言基础 |
-| `data-types-expressions` | 数据类型与表达式 |
-| `control-flow-error-handling` | 控制流与错误处理 |
-| `predefined-functions-i-os-math-string-datetime` | 预定义函数 I：操作系统、数学、字符串与日期时间 |
-| `predefined-functions-ii-http-utilities` | 预定义函数 II：HTTP 通信与工具函数 |
-| `predefined-functions-iii-type-query-inputoutput-conversion-debug` | 预定义函数 III：类型查询、输入输出、类型转换与调试 |
-| `overview-migration` | 概述与迁移 |
-| `3d-animation-motion-control` | 3D 动画与运动控制 |
-| `3d-api-fundamentals-window-object-appearance` | 3D API 基础：窗口、对象与外观 |
-| `3d-graphics-modeling-worker-shapes-properties` | 3D 图形建模：Worker 形状与属性 |
-| `3d-graphics-advanced-graphics-groups-state-pointcloud-video` | 3D 图形高级：图形组、状态、点云与视频 |
-| `deprecated-unsupported-names` | 已弃用/不再支持的名称 |
-| `access-to-toolbox-and-folder-library` | Toolbox 与 Class Library 文件夹访问 |
+| `language-fundamentals` | Language fundamentals |
+| `data-types-expressions` | Data types and expressions |
+| `control-flow-error-handling` | Control flow and error handling |
+| `predefined-functions-i-os-math-string-datetime` | Predefined functions I: OS, math, strings, date/time |
+| `predefined-functions-ii-http-utilities` | Predefined functions II: HTTP and utility functions |
+| `predefined-functions-iii-type-query-inputoutput-conversion-debug` | Predefined functions III: type queries, I/O, type conversion, debugging |
+| `overview-migration` | Overview and migration |
+| `3d-animation-motion-control` | 3D animation and motion control |
+| `3d-api-fundamentals-window-object-appearance` | 3D API fundamentals: windows, objects, and appearance |
+| `3d-graphics-modeling-worker-shapes-properties` | 3D graphics modeling: worker shapes and properties |
+| `3d-graphics-advanced-graphics-groups-state-pointcloud-video` | 3D graphics advanced: groups, states, point clouds, video |
+| `deprecated-unsupported-names` | Deprecated / unsupported names |
+| `access-to-toolbox-and-folder-library` | Access to the Toolbox and Class Library folders |
 
-## 目录说明
+## Notes
 
-- 每个子目录内含对应的 `.md` 源文件（部分含 `.txtx` 文本提取文件）与 `README.md` 总结。
-- 本 README 为分类索引，具体内容见各子目录。
+- Each subdirectory contains the corresponding `.md` source file (some also
+  include a `.txtx` raw-text extraction) plus a `README.md` summary.
+- This README is the top-level index; refer to each subdirectory for details.
 
-*来源：Plant Simulation Help — "SimTalk"。Unpublished work. © 2026 Siemens.*
+*Source: Plant Simulation Help — "SimTalk". Unpublished work. © 2026 Siemens.*
