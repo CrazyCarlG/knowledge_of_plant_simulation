@@ -18,6 +18,7 @@
 | `3d-graphics-modeling-worker-shapes-properties` | 3D 图形建模：Worker 形状与属性 |
 | `3d-graphics-advanced-graphics-groups-state-pointcloud-video` | 3D 图形高级：图形组、状态、点云与视频 |
 | `deprecated-unsupported-names` | 已弃用/不再支持的名称 |
+| `access-to-toolbox-and-folder-library` | Toolbox 与 Class Library 文件夹访问 |
 
 ## 目录说明
 
