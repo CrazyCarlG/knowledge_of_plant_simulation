@@ -1,0 +1,624 @@
+Compiling the C Program
+The compilation process of the C program itself depends on the C compiler employed and environment the
+C Interface is to be used in.
+Remarks
+When you use the C Interface to link a DLL, which you yourself programmed, this DLL has to be compiled
+as a 64-bit version.
+To create a DLL, allowing access to C functions from within Plant Simulation, execute these steps:
+1. Create a new project in your C++ development environment and select Dynamic-Link Library as type.
+2. Copy the Header files cwinfunc.h and cinterf.cpp from the Plant Simulation installation folder,
+subfolder Plant Simulation/C‑Interface, into your project folder.
+3. Include the file cwinfunc.h into the C file, which is to contain functions to be called from within Plant
+Simulation: #include "cwinfunc.h"
+4. Add the function you defined.
+Note
+When you dynamically link the MFC libraries while creating your DLL, these libraries have to be present
+on the computer on which the application runs.
+The Plant Simulation installation folder contains an executable example in the subfolder Plant Simulation/
+C-Interface. Check out the file example.cpp, to get an idea on how to define your functions.
+COM
+COM
+Use the object COM for controlling Plant Simulation from other applications
+by entering Tecnomatix.PlantSimulation.RemoteControl. This starts the most
+recent version. If you have installed several versions, you can also specify
+the version with Tecnomatix.PlantSimulation.RemoteControl.<Major>.<Minor>, for example
+Tecnomatix.PlantSimulationRemote.Control.26.0.
+Remarks
+You might, for example, start a simulation run in Plant Simulation from Microsoft Excel and then write the
+results into an Excel table. You can use the COM Interface to control Plant Simulation from any application
+that can address COM objects. This includes all Office applications, the Windows Scripting Host, and many
+other applications.
+Compiling the C Program
+14-210 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+The type of the interface is IRemoteControl:
+interface IRemoteControl : IDispatch
+{
+     HRESULT NewModel();
+     HRESULT LoadModel(BSTR);
+     HRESULT SaveModel(BSTR);
+     HRESULT CloseModel();
+     HRESULT StartSimulation(BSTR);
+     HRESULT StopSimulation();
+     HRESULT ResetSimulation(BSTR);
+     HRESULT IsSimulationRunning([out,retval]VARIANT_BOOL*);
+     HRESULT SetPathContext(BSTR);
+     HRESULT ExecuteSimTalk(BSTR,[optional]VARIANT,[out,retval]VARIANT*);
+     HRESULT GetValue(BSTR,[out,retval]VARIANT*);
+     HRESULT SetValue(BSTR,VARIANT);
+     HRESULT Quit();
+};
+Note
+The COM Interface is part of the Plant Simulation Interface Package.
+See also
+Functions of the COM Interface
+Events of the COM Interface
+Functions of the COM Interface
+Functions of the COM Interface
+The COM Interface provides the functions listed in the table of contents to the left.
+The examples below are for the Windows Scripting Host using the syntax of JScript. They assume that Plant
+Simulation was initialized with:
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+Functions of the COM Interface
+Plant Simulation Help 14-211
+Unpublished work. © 2026 Siemens
+
+CloseModel [SimTalk] - active model
+Closes the active simulation model.
+Remarks
+This corresponds to the command Close Model on the Quick Access Toolbar.
+Note
+You can also define a Method with the name onCloseModel in any folder in the Class Library, including
+the Basis folder. This method is being executed when you close the model or when you exit the
+application. You can, for example, program clean-up tasks, delete temporary files, etc.
+The method onCloseModel has to declare the boolean parameter onExitApplication. Plant
+Simulation sets this parameter to false when onCloseModel is called when you close the model. Plant
+Simulation sets this parameter to true when onCloseModel is called when you exit Plant Simulation.
+You can also program several onCloseModel methods and place them into different folders. Plant
+Simulation then calls all existing onCloseModel method classes in the Class Library when you close
+the model or exit the application.
+Type
+Function
+Syntax
+PlantSim.CloseModel
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.CloseModel("C:\\Models\\MyCOMTest.spp")
+See also
+Close Model
+CloseModel [SimTalk] - active model
+14-212 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ExecuteSimTalk [SimTalk]
+Executes the source code, which you specify, in a Method.
+Type
+Function
+Syntax
+PlantSim.ExecuteSimTalk(SourceCode:string[, Parameter1, Parameter2, 
+Parameter3]) -> any
+Parameters
+You can specify the following parameters.
+• The parameter SourceCode of data type string designates the source code, which is going to be
+executed in the Method.
+When the source code of the method contains a parameter, you can enter this as the second parameter
+into the method ExecuteSimTalk. The method ExecuteSimTalk then will return the return value of the
+method.
+• The optional parameters Parameter1, Parameter2 and Parameter3 allow to pass up to three arguments
+to the SimTalk method contained in the first argument.
+Return Value
+The return value has the data type any.
+It is the return value of the Method.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.ExecuteSimTalk("->real; return 3.14159")
+PlantSim.ExecuteSimTalk("param r:real->real; return r*r", 3.14159)
+ExecuteSimTalk [SimTalk]
+Plant Simulation Help 14-213
+Unpublished work. © 2026 Siemens
+
+GetValue [SimTalk] - COM
+Returns the value of the specified attribute of the designated Plant Simulation object.
+Type
+Function
+Syntax
+PlantSim.GetValue(ObjectName:string) -> any
+Parameter
+The parameter ObjectName of data type string designates the name of the Plant Simulation object and the
+name of the attribute.
+Return Value
+The return value has the data type any.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.GetValue(".Models.Model.MyStation.ProcTime")
+See also
+SetValue [SimTalk]
+Show Comment [AttributeExplorer]
+GetValue [SimTalk] - COM
+14-214 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+IsSimulationRunning [SimTalk]
+Returns if the simulation is running at the moment (true) or if it is not running (false).
+Type
+Function
+Syntax
+PlantSim.IsSimulationRunning -> boolean
+Return Value
+The return value has the data type boolean.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.IsSimulationRunning
+IsSimulationRunning [SimTalk]
+Plant Simulation Help 14-215
+Unpublished work. © 2026 Siemens
+
+LoadModel [SimTalk] - COM
+Loads the specified Plant Simulation simulation model.
+Remarks
+LoadModel corresponds to the command Open Model on the Quick Access Toolbar.
+The function LoadModel does not load call chains.
+Type
+Function
+Syntax
+PlantSim.LoadModel(ModelName:string[, Password:string])
+Parameters
+You can specify the following parameters.
+• The parameter ModelName of data type string designates the name of the model that you want to
+open.
+• The optional parameter Password of data type string designates the password that is used for loading an
+encrypted model.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.LoadModel("C:\\Modely\MyCOMTest.spp")
+See also
+Open Model File
+LoadModel [SimTalk] - COM
+14-216 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+NewModel [SimTalk]
+Creates a new simulation model.
+Remarks
+NewModel corresponds to the command New Model on the Quick Access Toolbar.
+Type
+Function
+Syntax
+PlantSim.NewModel(FilePath:string)
+Parameter
+The parameter FilePath of data type string designates the name of the new model.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.NewModel("C:\\Models\MyCOMModel.spp")
+See also
+New Model
+NewModel [SimTalk]
+Plant Simulation Help 14-217
+Unpublished work. © 2026 Siemens
+
+OpenConsoleLogFile [SimTalk]
+Routes the output of the Plant Simulation Console to a file.
+Remarks
+To terminate routing to the file, specify an empty string "".
+Type
+Function
+Syntax
+PlantSim.OpenConsoleLogFile(FilePath:string)
+Parameter
+The parameter FilePath of data type string designates the path to the file into which the Console output is
+going to be written.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.OpenConsoleLogFile("C:\\temp\\MyConsoleProtocolFile.txt")
+OpenConsoleLogFile [SimTalk]
+14-218 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+Quit [SimTalk]
+Exits Plant Simulation.
+Remarks
+Quit corresponds to the command Exit on the Quick Access Toolbar.
+Type
+Function
+Syntax
+PlantSim.Quit
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.Quit
+See also
+Exit Application
+Quit [SimTalk]
+Plant Simulation Help 14-219
+Unpublished work. © 2026 Siemens
+
+QuitAfterTime [SimTalk]
+Exits Plant Simulation after the specified time in milliseconds has passed.
+Type
+Function
+Syntax
+PlantSim.QuitAfterTime(Time:integer)
+Parameter
+The parameter Time of data type integer designates the time after which Plant Simulation will be
+terminated.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.QuitAfterTime(10)
+QuitAfterTime [SimTalk]
+14-220 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+ResetSimulation [SimTalk]
+Resets the EventController.
+Remarks
+ResetSimulation corresponds to the Reset Simulation button of the EventController.
+Type
+Function
+Syntax
+PlantSim.ResetSimulation(PathOfEventController:string)
+Parameter
+The parameter PathOfEventController of data type string designates the path of the EventController.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.ResetSimulation(".Models.Model.EventController")
+See also
+Reset Simulation [EventController]
+ResetSimulation [SimTalk]
+Plant Simulation Help 14-221
+Unpublished work. © 2026 Siemens
+
+SaveModel [SimTalk]
+Saves the active simulation model with the name you specify.
+Remarks
+SaveModel corresponds to the command Save Model on the Quick Access Toolbar.
+Type
+Function
+Syntax
+PlantSim.SaveModel(ModelName:string)
+Parameter
+The parameter ModelName of data type string designates the name of the model.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SaveModel("Plant Cedar Rapids, Iowa")
+See also
+Save Model File
+SaveModel [SimTalk]
+14-222 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SetLicenseType [SimTalk]
+Sets the license type that is going to be used for Plant Simulation.
+Type
+Function
+Syntax
+PlantSim.SetLicenseType(LicenseType:string)
+Parameter
+The parameter LicenseType of data type string designates the license type.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetLicenseType("Professional")
+See also
+Start Plant Simulation with Different Kinds of Licenses
+Plant Simulation License Types
+SetLicenseType [SimTalk]
+Plant Simulation Help 14-223
+Unpublished work. © 2026 Siemens
+
+SetNoMessageBox [SimTalk]
+Shows a message box (true) or hides it (false).
+Type
+Function
+Syntax
+PlantSim.SetNoMessageBox(Value:boolean)
+Parameter
+The parameter Value of data type boolean sets if Plant Simulation shows a message box (true) or not
+(false).
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetNoMessageBox(true)
+SetNoMessageBox [SimTalk]
+14-224 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SetPathContext [SimTalk]
+Sets where a relative path starts.
+Type
+Function
+Syntax
+PlantSim.SetPathContext(StartOfRelativePath:string)
+Parameter
+The parameter StartOfRelativePath of data type string designates the start of the relative path.
+Note
+The function only applies to the methods getValue and setValue.
+Example
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetPathContext(".Models.Study1")
+PlantSim.GetValue("MyStation.ProcTime") 
+// accesses .Models.Study1.MyStation.ProcTime
+See also
+Object Paths in SimTalk
+GetValue [SimTalk] - COM
+SetValue [SimTalk]
+SetPathContext [SimTalk]
+Plant Simulation Help 14-225
+Unpublished work. © 2026 Siemens
+
+SetSuppressStartOf3D [SimTalk]
+Sets if Plant Simulation suppresses starting 3D or not.
+Type
+Function
+Syntax
+PlantSim.SetSuppressStartOf3D(Value:boolean)
+Parameter
+The parameter Value of data type boolean sets if Plant Simulation suppresses starting of 3D (true) or not
+(false).
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetSuppressStartOf3D(true)
+SetSuppressStartOf3D [SimTalk]
+14-226 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SetTrustModels [SimTalk]
+Sets if the COM Interface permits models to have access to the computer or not.
+Type
+Function
+Syntax
+PlantSim.SetTrustModels(Trust:boolean)
+Parameter
+The parameter Trust of data type boolean sets if the COM Interface permits models to have access to the
+computer (true) or not (false).
+Specifying true corresponds to the start option /TrustModels, meaning that general access to the
+computer is permitted and that model-specific or library-specific settings are overridden.
+Example
+// JScipt
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetVisible(true)
+PlantSim.SetTrustModels(true)
+See also
+Specifying Start Options
+Prohibit Access to the Computer [model settings]
+SetTrustModels [SimTalk]
+Plant Simulation Help 14-227
+Unpublished work. © 2026 Siemens
+
+SetValue [SimTalk]
+Assigns a value to an attribute of a Plant Simulation object.
+Type
+Function
+Syntax
+eMPlant.SetValue(NameOfObject:string, AttributeValue:any)
+Parameters
+You can specify the following parameters.
+• The parameter NameOfObject of data type string designates the name of the object and its attribute.
+• The parameter AttributeValue of data type any designates the value of the attribute.
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetValue("Station.Proctime",120)
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetValue(".Models.Model.MyDataTable[2,1]", 3)
+See also
+GetValue [SimTalk] - COM
+Show Comment [AttributeExplorer]
+SetValue [SimTalk]
+14-228 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SetVisible [SimTalk]
+Makes the application Plant Simulation visible (true) or invisible (false).
+Remarks
+If Plant Simulation is created as a COM server it is invisible by default. You can use SetVisible to make Plant
+Simulation visible.
+Type
+Function
+Syntax
+eMPlant.SetVisible(Visible:boolean)
+Parameter
+The parameter Visible of data type boolean sets if the application Plant Simulation is visible (true) or
+invisible (false).
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.SetVisible(true)
+SetVisible [SimTalk]
+Plant Simulation Help 14-229
+Unpublished work. © 2026 Siemens
+
+StartSimulation [SimTalk]
+Starts the simulation with the EventController.
+Remarks
+StartSimulation corresponds to the Start/Stop Simulation button.
+Type
+Function
+Syntax
+eMPlant.StartSimulation(PathOfEventController:string[, 
+SimulationWithoutAnimation:boolean])
+Parameters
+You can specify the following parameters.
+• The parameter PathOfEventController of data type string designates the path of the EventController.
+• The optional parameter SimulationWithoutAnimation of data type boolean sets if the simulation is
+going to be executed without animation (true) or with animation (false).
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.StartSimulation(".Models.Model.EventController")
+See also
+Start/Stop Simulation [EventController]
+StartSimulation [SimTalk]
+14-230 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+StopSimulation [SimTalk]
+Stops the running simulation.
+Remarks
+StopSimulation corresponds to the Start/Stop Simulation button in the EventController.
+Type
+Function
+Syntax
+eMPlant.StopSimulation
+Example
+// JScript
+var PlantSim = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl")
+PlantSim.StopSimulation
+See also
+Start/Stop Simulation [EventController]
+Events of the COM Interface
+Events of the COM Interface
+The COM Interface provides the events named SimulationFinished and FireSimTalkMessage.
+Note
+Consult the documentation that came with your programming application for instructions on how to
+connect to these events.
+See also
+SimulationFinished [SimTalk]
+FireSimTalkMessage [SimTalk]
+StopSimulation [SimTalk]
+Plant Simulation Help 14-231
+Unpublished work. © 2026 Siemens
+
+FireSimTalkMessage [SimTalk]
+Triggers the event SimTalkMessage from within SimTalk.
+Remarks
+The name of the function, which will be triggered, depends on the programming language you use, such
+as Visual Basic, JavaScript, etc. Check the documentation that came with your programming application for
+details.
+Note
+You have to specify a parameter of data type string.
+Example
+fireSimTalkMessage("The buffer is full.")
+See also
+Example of a JScript
+FireSimTalkMessage [SimTalk]
+14-232 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+SimulationFinished [SimTalk]
+At the end of a simulation run Plant Simulation triggers the event SimulationFinished. You can use it to
+read the results of a simulation run.
+SimulationFinished [SimTalk]
+Plant Simulation Help 14-233
+Unpublished work. © 2026 Siemens
+
+Example of a JScript
+A JScript might look as follows:
+var vbOKCancel = 1;
+var vbCancel = 2;
+var vbInformation = 64;
+var Finished=false;
+var WSHShell = new ActiveXObject("WScript.Shell");
+var simple = 
+WScript.CreateObject("Tecnomatix.PlantSimulation.RemoteControl1", 
+"RemoteControl_");
+simple.SetLicenseType("Runtime");
+try
+{
+// Enter the path to a model file!
+simple.LoadModel("C:\\Models\\Test.spp");
+}
+catch (e)
+{
+WScript.Echo("Could not load Model!");
+WScript.Quit();
+}
+try
+{
+simple.SetValue(".Models.Model.Buffer.ProcTime", 700.0); } catch (e) {
+r=WSHShell.Popup(e.description, 0, "Continue?", vbOKCancel + vbInformation);
+if (r == vbCancel)
+{
+    simple.CloseModel();
+    WScript.Quit();
+}
+}
+simple.StartSimulation(".Models.Model.EventController");
+if (simple.IsSimulationRunning())
+WScript.Echo("Simulation is running!");
+// Wait until simulation is finished
+while (!Finished) WScript.Sleep(2000);
+simple.CloseModel();
+simple.Quit();
+WScript.Quit();
+function RemoteControl_SimulationFinished()
+{
+Example of a JScript
+14-234 Plant Simulation Help
+Unpublished work. © 2026 Siemens
+
+WScript.Echo("Simulation Finished!");
+Finished = true;
+}
+function RemoteControl_SimTalkMessage(str) {
+WScript.Echo(str);
+}
+Example of a JScript
+Plant Simulation Help 14-235
+Unpublished work. © 2026 Siemens
+
+Example of a Python Script
+A Python script might look as follows:
+# Install pywin32 with this command:
+# pip install pywin32
+import win32com.client
+import time
+PlantSim = 
+win32com.client.Dispatch("Tecnomatix.PlantSimulation.RemoteControl.25.4")
+PlantSim.SetVisible(True)
+PlantSim.LoadModel("D:/Test.spp")
+PlantSim.StartSimulation(".Models.Model");
+time.sleep(10)
+PlantSim.StopSimulation()
+PlantSim.Quit()
+See also
+PythonModule
+OPCUA
+OPCUA
+Use the object OPCUA for accessing and exchanging data between Plant Simulation and control and
+automation technology systems. The OPCUA Interface enables access to process monitors, such as PLC
+controls via the OPC Unified Architecture. The OPCUA Interface acts as a client and can read and write
+control variables and the signals of PLC controls. OPC stands for Open Platform Communications.
+Image
+Description
+It enables access to process monitors, such as PLC controls via the OPC Unified Architecture. The OPCUA
+Interface acts as a client and can read and write control variables and the signals of PLC controls.
+Note
+We recommend to always use OPCUA and the OPCUA Interface if at all possible.
+Example of a Python Script
+14-236 Plant Simulation Help
+Unpublished work. © 2026 Siemens

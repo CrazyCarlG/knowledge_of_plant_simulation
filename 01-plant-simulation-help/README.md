@@ -9,6 +9,7 @@
 | `getting-to-know-plant-simulation` | 认识 Plant Simulation |
 | `objects` | 对象参考 |
 | `simtalk` | SimTalk 编程语言 |
+| `communication-interface` | 通信接口（COM、Socket、MQTT） |
 | `step-by-step` | 分步指南 |
 
 ## 目录说明
